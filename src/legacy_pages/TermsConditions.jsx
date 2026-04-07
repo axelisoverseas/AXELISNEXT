@@ -58,7 +58,7 @@ const TermsConditions = () => {
                   <h2 className="text-3xl font-bold text-gray-900">1. Exclusive Engagement</h2>
                 </div>
                 <p className="text-gray-700 leading-relaxed text-lg">
-                  While under the <span className="font-semibold text-blue-700">Zero Consultation Fee Charter</span>, students must not simultaneously engage with another consultancy for the same applications.
+                  While under the <span className="font-semibold text-blue-700">Zero Consultation Fee Student Plan</span>, students must not simultaneously engage with another consultancy for the same applications.
                 </p>
               </div>
 
@@ -75,7 +75,7 @@ const TermsConditions = () => {
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-blue-200 hover:shadow-xl transition-shadow">
                     <div className="flex items-center mb-4">
                       <CheckCircle className="w-6 h-6 text-blue-600 mr-3" />
-                      <h3 className="font-bold text-gray-900 text-lg">Zero Consultation Fee Charter</h3>
+                      <h3 className="font-bold text-gray-900 text-lg">Zero Consultation Fee Student Plan</h3>
                     </div>
                     <div className="bg-blue-50 p-4 rounded-lg">
                       <div className="mb-3">
@@ -95,7 +95,7 @@ const TermsConditions = () => {
                   <div className="bg-white p-6 rounded-xl shadow-lg border border-green-200 hover:shadow-xl transition-shadow">
                     <div className="flex items-center mb-4">
                       <CheckCircle className="w-6 h-6 text-green-600 mr-3" />
-                      <h3 className="font-bold text-gray-900 text-lg">Zero Tuition Fee Charter</h3>
+                      <h3 className="font-bold text-gray-900 text-lg">Zero Tuition Fee Student Plan</h3>
                     </div>
                     <div className="bg-green-50 p-4 rounded-lg">
                       <div className="mb-3">

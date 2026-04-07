@@ -10,7 +10,8 @@ const CTAButton = ({
   className = '',
   icon = 'arrow',
   onModalOpen = null,
-  directCalendly = false
+  directCalendly = false,
+  actionType = 'modal' // 'modal', 'calendly', 'apply'
 }) => {
 
   const getIcon = () => {
@@ -92,7 +93,13 @@ const CTAButton = ({
       return;
     }
 
-    if (showModal) {
+    if (actionType === 'apply') {
+      console.log('🚀 Redirecting to Student Plans for auto-checkout...');
+      window.location.href = '/products?redirect=zcf';
+      return;
+    }
+
+    if (showModal || actionType === 'modal') {
       if (onModalOpen) {
         onModalOpen('cta');
         console.log('Lead modal should open');
@@ -128,20 +135,22 @@ const CTAButton = ({
 // Predefined CTA variants for common use cases
 export const StartJourneyCTA = (props) => (
   <CTAButton
-    text="Get FREE Consultation"
+    text="Apply Now - Start Journey"
     variant="warning"
     size="large"
     icon="arrow"
+    actionType="apply"
     {...props}
   />
 );
 
 export const BookConsultationCTA = (props) => (
   <CTAButton
-    text="Book Free Consultation"
+    text="Enroll in Student Plan"
     variant="secondary"
     size="large"
     icon="calendar"
+    actionType="apply"
     {...props}
   />
 );

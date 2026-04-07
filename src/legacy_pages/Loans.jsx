@@ -66,11 +66,11 @@ const Loans = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                to="/contact"
+                to="/products?redirect=zcf"
                 className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-cyan-400 to-blue-500 text-black hover:from-cyan-500 hover:to-blue-600 font-bold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg border border-cyan-400/20 hover:border-blue-400/40"
                 style={{ boxShadow: '0 0 15px rgba(59, 130, 246, 0.3)' }}
               >
-                Get Free Loan Consultation
+                Apply Now - Start Journey
                 <ArrowRight className="ml-2" size={20} />
               </Link>
               <a
@@ -223,11 +223,11 @@ const Loans = () => {
                       Our loan experts will help you find the perfect financing solution for your education goals
                     </p>
                     <Link
-                      to="/contact"
+                      to="/products?redirect=zcf"
                       className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 font-bold rounded-xl transition-all duration-300 transform hover:scale-105 border border-blue-500/20 hover:border-cyan-400/40"
                       style={{ boxShadow: '0 0 15px rgba(59, 130, 246, 0.3)' }}
                     >
-                      Get Free Loan Consultation
+                      Enroll in Student Plan
                       <ArrowRight className="ml-2" size={20} />
                     </Link>
                   </div>
@@ -283,7 +283,7 @@ const Loans = () => {
               Our trusted financial partners for your education loan needs
             </p>
             <Link
-              to="/contact"
+              to="/products?redirect=zcf"
               className="inline-flex items-center px-8 py-3 bg-black dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-200 text-white dark:text-black font-semibold rounded-lg transition-colors shadow-mono dark:shadow-mono-dark"
             >
               Get Started Today
@@ -470,16 +470,14 @@ const Loans = () => {
             Get started with your free loan consultation today and take the first step toward your study abroad dreams
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="https://calendly.com/axelisoverseas/counsellingsession"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/products?redirect=zcf"
               className="inline-flex items-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 font-semibold rounded-lg transition-colors border border-blue-500/20 hover:border-cyan-400/40"
               style={{ boxShadow: '0 0 15px rgba(59, 130, 246, 0.3)' }}
             >
-              Schedule Free Consultation
+              Apply Now - Start Journey
               <ArrowRight className="ml-2" size={20} />
-            </a>
+            </Link>
             <a
               href={`tel:${siteInfo.contact.phones[0]}`}
               className="inline-flex items-center px-8 py-4 bg-transparent border-2 border-white hover:bg-white hover:text-slate-800 font-semibold rounded-lg transition-colors"

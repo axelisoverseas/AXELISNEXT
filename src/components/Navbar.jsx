@@ -115,7 +115,7 @@ const Navbar = () => {
                 className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/products') ? 'text-blue-700' : 'text-slate-600 hover:text-blue-600'
                   }`}
               >
-                <span>Charter Programs</span>
+                <span>Student Plans</span>
               </Link>
 
               <Link
@@ -146,7 +146,7 @@ const Navbar = () => {
             {/* Desktop Navigation - Menu & CTA */}
             <div className="hidden md:flex items-center space-x-4">
               <Link
-                href="/contact"
+                href="/products?redirect=zcf"
                 className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
               >
                 Apply Now
@@ -214,7 +214,7 @@ const Navbar = () => {
               className="flex items-center p-3 rounded-lg text-slate-700 hover:bg-blue-50 hover:text-blue-700 font-medium transition-colors"
             >
               <Package size={18} className="mr-3" />
-              Charter Programs
+              Student Plans
             </Link>
             <Link
               href="/scholarships"
@@ -252,7 +252,7 @@ const Navbar = () => {
 
           <div className="mt-auto p-6 border-t border-gray-100 bg-slate-50 flex flex-col gap-4">
             <Link
-              href="/contact"
+              href="/products?redirect=zcf"
               onClick={() => setIsOpen(false)}
               className="block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-md"
             >

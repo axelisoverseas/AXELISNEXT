@@ -216,16 +216,14 @@ const LoanDocumentCTA = () => {
               <div className="mt-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-6 text-white text-center">
                 <h3 className="text-xl font-bold mb-2">Need Help with Your Loan Application?</h3>
                 <p className="mb-4 text-orange-100">Our loan experts will guide you through the entire process</p>
-                <a
-                  href="https://calendly.com/axelisoverseas/counsellingsession"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  to="/products?redirect=zcf"
                   onClick={closeModal}
                   className="bg-white text-orange-600 hover:bg-gray-100 px-6 py-3 rounded-lg font-bold transition-colors inline-flex items-center gap-2"
                 >
-                  <ExternalLink size={18} />
-                  Schedule Loan Consultation
-                </a>
+                  <ArrowRight size={18} />
+                  Apply Now - Start Journey
+                </Link>
               </div>
             </div>
           </div>

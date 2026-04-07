@@ -1,6 +1,8 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
+import { useEffect, Suspense } from 'react';
 import { ArrowRight, CheckCircle, Shield, Award, Globe2, TrendingUp } from 'lucide-react';
 import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
@@ -21,7 +23,22 @@ const staggerContainer = {
     }
 };
 
-export default function ProductsPage() {
+function ProductsContent() {
+    const searchParams = useSearchParams();
+
+    useEffect(() => {
+        const redirect = searchParams.get('redirect');
+        if (redirect === 'zcf') {
+            // Log for tracking, then redirect to ZCF Razorpay
+            console.log('🚀 Auto-redirecting to ZCF Student Plan checkout...');
+            window.location.href = "https://pages.razorpay.com/pl_Rk1qpiuEJifDx1/view";
+        } else if (redirect === 'ztf') {
+            // Log for tracking, then redirect to ZTF Razorpay
+            console.log('🚀 Auto-redirecting to ZTF Student Plan checkout...');
+            window.location.href = "https://pages.razorpay.com/pl_Rk1J9M0s2qvgUz/view";
+        }
+    }, [searchParams]);
+
     return (
         <div className="min-h-screen bg-slate-50">
             {/* Clean Hero Section */}
@@ -257,5 +274,17 @@ export default function ProductsPage() {
 
 
         </div>
+    );
+}
+
+export default function ProductsPage() {
+    return (
+        <Suspense fallback={
+            <div className="min-h-screen bg-slate-900 flex items-center justify-center">
+                <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-blue-500"></div>
+            </div>
+        }>
+            <ProductsContent />
+        </Suspense>
     );
 }
