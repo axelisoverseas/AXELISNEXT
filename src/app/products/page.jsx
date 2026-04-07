@@ -206,19 +206,16 @@ function ProductsContent() {
                                     </div>
 
                                     <div className="mt-8 mb-8">
-                                        <div className="h-7 mb-2"></div> {/* Spacer */}
+                                        <div className="flex items-center justify-center gap-3 mb-2">
+                                            <span className="text-slate-400 line-through text-lg font-medium">₹39,998</span>
+                                            <span className="bg-cyan-500/20 text-cyan-400 px-3 py-1 rounded-full text-xs font-bold tracking-wide shadow-sm border border-cyan-500/30">50% OFF</span>
+                                        </div>
                                         <div className="text-5xl font-extrabold text-white tracking-tight mb-2 drop-shadow-md">₹19,999</div>
-                                        <p className="text-slate-400 font-medium text-sm uppercase tracking-wider">Onboarding Fee</p>
+                                        <p className="text-slate-400 font-medium text-sm uppercase tracking-wider">Service Fee</p>
                                     </div>
 
-                                    <div className="bg-slate-800/80 backdrop-blur-md rounded-xl p-4 border border-slate-700 shadow-inner space-y-3">
-                                        <div>
-                                            <p className="font-bold text-cyan-300 mb-1">+ ₹1,80,000 Success Fee</p>
-                                            <p className="text-sm text-slate-300 font-medium leading-snug">Payable only once you accept an offer from a tuition-free public university.</p>
-                                        </div>
-                                        <div className="pt-3 border-t border-slate-700/50">
-                                            <p className="text-xs text-slate-400 font-medium">₹19,999 fee is refundable if no offers are received.</p>
-                                        </div>
+                                    <div className="bg-slate-800/80 backdrop-blur-md rounded-xl p-4 border border-slate-700 shadow-inner">
+                                        <p className="text-sm text-slate-300 font-medium">₹19,999 fee is refundable if no offers are received.</p>
                                     </div>
                                 </div>
 

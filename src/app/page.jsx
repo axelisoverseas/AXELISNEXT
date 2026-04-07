@@ -65,9 +65,6 @@ export default function Home() {
           animate="visible"
           className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center"
         >
-          <motion.span variants={fadeInUp} className="inline-flex items-center px-4 py-1.5 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-sm font-medium mb-8">
-            Study Abroad Experts
-          </motion.span>
 
           <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-8 max-w-4xl">
             Your Gateway to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Global Education</span>

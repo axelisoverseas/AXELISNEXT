@@ -11,7 +11,7 @@ const PlanComparison = () => {
     {
       feature: "Payment Model",
       zcf: { value: "Full refund on visa approval or no offer", highlight: true, icon: <CheckCircle className="text-green-500" size={20} /> },
-      ztf: { value: "₹1.8L Success Fee after offer", highlight: true, icon: <CheckCircle className="text-green-500" size={20} /> }
+      ztf: { value: "50% Discounted Service Fee", highlight: true, icon: <CheckCircle className="text-green-500" size={20} /> }
     },
     {
       feature: "Risk Protection",
@@ -166,11 +166,11 @@ const PlanComparison = () => {
             <ul className="space-y-3 text-cyan-700">
               <li className="flex items-start gap-2">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span>Refundable ₹19,999 Onboarding Fee</span>
+                <span>₹19,999 Service Fee (Discounted from ₹39,998)</span>
               </li>
               <li className="flex items-start gap-2">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span>Success Fee ONLY after receiving your offer</span>
+                <span>One-time Service Fee Structure</span>
               </li>
               <li className="flex items-start gap-2">
                 <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>

@@ -13,6 +13,9 @@ const montserrat = Montserrat({
 
 export const metadata = {
   metadataBase: new URL('https://overseeducation.com'),
+  icons: {
+    icon: '/favicon.png',
+  },
   title: {
     template: '%s | Axelis Overseas Education',
     default: 'Axelis Overseas | Study Abroad Consultancy — 70+ Universities, 6 Countries',
