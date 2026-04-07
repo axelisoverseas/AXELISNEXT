@@ -141,10 +141,10 @@ export default function ScholarshipsPage() {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-blue-50 rounded-3xl p-12 border border-blue-100">
                     <h2 className="text-3xl font-bold text-slate-900 mb-6">Let's Secure Your Funding Together</h2>
                     <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
-                        Don't let financial constraints stop your study abroad dream. Our Zero Consultation Fee Charter covers dedicated scholarship and financial aid assistance.
+                        Don't let financial constraints stop your study abroad dream. Our Zero Consultation Fee Student Plan covers dedicated scholarship and financial aid assistance.
                     </p>
                     <Link href="/products" className="inline-flex items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-md">
-                        Explore Our Charters <ArrowRight size={20} className="ml-2" />
+                        Explore Our Student Plans <ArrowRight size={20} className="ml-2" />
                     </Link>
                 </div>
             </section>

@@ -79,16 +79,16 @@ export default function Home() {
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Link
-              href="/contact"
+              href="/products?redirect=zcf"
               className="inline-flex justify-center items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all shadow-[0_0_40px_-10px_rgba(37,99,235,0.4)] hover:shadow-[0_0_60px_-15px_rgba(37,99,235,0.6)]"
             >
-              Start Free Consultation
+              Apply Now - Start Journey
             </Link>
             <Link
               href="/products"
               className="inline-flex justify-center items-center px-8 py-4 bg-transparent border border-slate-700 hover:border-slate-500 text-slate-300 hover:text-white font-semibold rounded-xl transition-all"
             >
-              View Charter Programs
+              View Student Plans
             </Link>
           </motion.div>
 
@@ -233,10 +233,10 @@ export default function Home() {
               <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight relative z-10">Ready to Start Your Journey?</h2>
               <p className="text-xl text-slate-300 mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Connect with our expert counselors today and take the first step towards your global education with zero hidden fees.</p>
               <Link
-                href="/contact"
+                href="/products?redirect=zcf"
                 className="inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold rounded-xl transition-all shadow-[0_0_40px_-10px_rgba(6,182,212,0.5)] hover:shadow-[0_0_60px_-15px_rgba(6,182,212,0.7)] text-lg hover:-translate-y-1 relative z-10 group"
               >
-                Contact Us Now
+                Apply Now - Start Journey
                 <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
               </Link>
             </div>

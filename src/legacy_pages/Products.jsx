@@ -5,18 +5,14 @@ import Layout from '../components/Layout';
 import AnimatedSection from '../components/AnimatedSection';
 import InstagramSuccessStories from '../components/InstagramSuccessStories';
 import AnimatedCounter from '../components/AnimatedCounter';
-import CharterComparison from '../components/CharterComparison';
-import VisualTestimonialCarousel from '../components/VisualTestimonialCarousel';
-import { products, productBenefits, siteInfo, allCountries, europeanCountries } from '../data/siteData';
-import { BookDirectCTA } from '../components/CTAButton';
-import { assets } from '../assets/exweb/index.js';
 import RazorpayEmbed from '../components/RazorpayEmbed';
+import PlanComparison from '../components/PlanComparison';
 
 const Products = () => {
   return (
     <Layout
-      title="Products & Services"
-      description="Explore our Zero Consultation Fee Charter and Zero Tuition Fee Charter. Transparent pricing, guaranteed results, and comprehensive study abroad support."
+      title="Student Plans"
+      description="Explore our Zero Consultation Fee Student Plan and Zero Tuition Fee Student Plan. Transparent pricing, guaranteed results, and comprehensive study abroad support."
       keywords="study abroad packages, zero consultation fee, zero tuition fee, education charter, study abroad services, university admission"
     >
       {/* Hero Section - Space Theme */}
@@ -46,7 +42,7 @@ const Products = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight animate-fadeInUp">
               Choose Your Study Abroad{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-300 drop-shadow-lg">
-                Charter
+                Student Plan
               </span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-100 max-w-3xl mx-auto animate-fadeInUp delay-200">
@@ -92,7 +88,7 @@ const Products = () => {
                 onClick={() => document.getElementById('charter-comparison')?.scrollIntoView({ behavior: 'smooth' })}
                 className="border-2 border-white text-white hover:bg-white hover:text-black px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                Compare Charters
+                Compare Plans
               </button>
             </div>
           </div>
@@ -116,10 +112,10 @@ const Products = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Our Charter Programs
+              Our Student Plans
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto animate-fadeInUp">
-              Choose the perfect package for your study abroad journey. Both charters come with our success guarantee, comprehensive support, and no hidden charges.
+              Choose the perfect package for your study abroad journey. Both plans come with our success guarantee, comprehensive support, and no hidden charges.
             </p>
 
             {/* Key Value Proposition */}
@@ -266,7 +262,7 @@ const Products = () => {
 
                   {/* CTA Buttons */}
                   <div className="space-y-3">
-                    {/* Razorpay Payment Button - For Zero Consultation Fee Charter */}
+                    {/* Razorpay Payment Button - For Zero Consultation Fee Student Plan */}
                     {product.popular && (
                       <div className="w-full flex flex-col">
                         <RazorpayEmbed url="https://pages.razorpay.com/pl_Rk1qpiuEJifDx1/view" text={"Pay Now - ₹9,999"} />
@@ -276,7 +272,7 @@ const Products = () => {
                       </div>
                     )}
 
-                    {/* Razorpay Payment Button - For Zero Tuition Fee Charter */}
+                    {/* Razorpay Payment Button - For Zero Tuition Fee Student Plan */}
                     {product.premium && (
                       <div className="w-full flex flex-col">
                         <RazorpayEmbed url="https://pages.razorpay.com/pl_Rk1J9M0s2qvgUz/view" text={"Pay Now - ₹19,999"} />
@@ -306,7 +302,7 @@ const Products = () => {
         </div>
       </AnimatedSection>
 
-      {/* Zero Consultation Fee Charter Enrollment Section */}
+      {/* Zero Consultation Fee Student Plan Enrollment Section */}
       <AnimatedSection className="py-20 bg-gradient-to-r from-blue-50 via-indigo-50 to-blue-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-2xl p-8 md:p-12 border-2 border-blue-200">
@@ -315,7 +311,7 @@ const Products = () => {
                 START YOUR JOURNEY
               </div>
               <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-                Zero Consultation Fee Charter Enrollment
+                Zero Consultation Fee Student Plan Enrollment
               </h2>
               <p className="text-lg text-gray-700 max-w-3xl mx-auto mb-8">
                 Begin your study abroad journey with our zero consultation fee. Get comprehensive guidance, university shortlisting, application support, and visa assistance—all with a 100% refundable deposit.
@@ -391,12 +387,12 @@ const Products = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Zero Consultation Fee Charter Countries */}
+            {/* Zero Consultation Fee Student Plan Enrollment Section */}
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-blue-200">
               <div className="text-center mb-8">
                 <div className="text-4xl mb-4">🎓</div>
                 <h3 className="text-2xl font-bold text-black mb-2">
-                  Zero Consultation Fee Charter
+                  Zero Consultation Fee Student Plan
                 </h3>
                 <p className="text-gray-600 mb-4">
                   All Countries Including English-Speaking Destinations
@@ -422,12 +418,12 @@ const Products = () => {
               </div>
             </div>
 
-            {/* Zero Tuition Fee Charter Countries */}
+            {/* Zero Tuition Fee Student Plan Enrollment Section */}
             <div className="bg-white rounded-2xl shadow-xl p-8 border border-cyan-200">
               <div className="text-center mb-8">
                 <div className="text-4xl mb-4">🏆</div>
                 <h3 className="text-2xl font-bold text-black mb-2">
-                  Zero Tuition Fee Charter
+                  Zero Tuition Fee Student Plan
                 </h3>
                 <p className="text-gray-600 mb-4">
                   European Countries with Tuition-Free Universities
@@ -461,10 +457,10 @@ const Products = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
-              Why Choose Our Charters?
+              Why Choose Our Student Plans?
             </h2>
             <p className="text-xl text-gray-700 max-w-3xl mx-auto animate-fadeInUp">
-              Our charter programs are designed with your success in mind, offering transparency, support, and guaranteed results.
+              Our student plans are designed with your success in mind, offering transparency, support, and guaranteed results.
             </p>
           </div>
 
@@ -489,9 +485,9 @@ const Products = () => {
         </div>
       </AnimatedSection>
 
-      {/* Charter Comparison Section */}
-      <div id="charter-comparison">
-        <CharterComparison />
+      {/* Student Plan Comparison Section */}
+      <div id="student-plan-comparison">
+        <PlanComparison />
       </div>
 
       {/* Visual Testimonial Carousel */}
@@ -526,7 +522,7 @@ const Products = () => {
             ?
           </h2>
           <p className="text-xl mb-8 text-gray-100 animate-fadeInUp max-w-3xl mx-auto">
-            Join <AnimatedCounter end={2000} suffix="+" className="text-cyan-400 font-bold" /> students who have successfully started their study abroad journey with our charter programs.
+            Join <AnimatedCounter end={2000} suffix="+" className="text-cyan-400 font-bold" /> students who have successfully started their study abroad journey with our student plans.
           </p>
 
           {/* Enhanced CTA Buttons */}

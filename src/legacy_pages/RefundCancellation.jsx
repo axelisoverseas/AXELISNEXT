@@ -48,7 +48,7 @@ const RefundCancellation = () => {
 
             {/* Student Plan Sections */}
             <div className="space-y-12">
-              {/* Zero Consultation Fee Charter */}
+              {/* Zero Consultation Fee Student Plan */}
               <div>
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
@@ -92,7 +92,7 @@ const RefundCancellation = () => {
                 </div>
               </div>
 
-              {/* Zero Tuition Fee Charter */}
+              {/* Zero Tuition Fee Student Plan */}
               <div>
                 <div className="flex items-center mb-6">
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-4">

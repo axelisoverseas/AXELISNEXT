@@ -157,7 +157,7 @@ const BlogPost = () => {
                 <h3 class="text-2xl font-bold mb-4">🚀 Ready to Start Your UK Journey?</h3>
                 <p class="text-lg mb-6">Join 500+ students who've successfully made it to top UK universities with Axelis guidance!</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="/contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Book Free Consultation</a>
+                  <a href="/products?redirect=zcf" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Apply Now - Start Journey</a>
                   <a href="/testimonials" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Read Success Stories</a>
                 </div>
               </div>
@@ -285,7 +285,7 @@ const BlogPost = () => {
                 <h3 class="text-2xl font-bold mb-4">🍁 Ready to Secure Your Canadian Scholarship?</h3>
                 <p class="text-lg mb-6">Join 200+ students who've secured over CAD $2 million in scholarships with Axelis guidance!</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="/contact" class="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get Scholarship Guidance</a>
+                  <a href="/products?redirect=zcf" class="bg-white text-red-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Apply Now - Start Journey</a>
                   <a href="/testimonials" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-red-600 transition-colors">Success Stories</a>
                 </div>
               </div>
@@ -479,7 +479,7 @@ const BlogPost = () => {
                 <h3 class="text-2xl font-bold mb-4">💼 Ready to Start Your Work Journey?</h3>
                 <p class="text-lg mb-6">Get expert guidance on work opportunities and visa regulations for international students!</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="/contact" class="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get Work Guidance</a>
+                  <a href="/products?redirect=zcf" class="bg-white text-green-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Apply Now - Start Journey</a>
                   <a href="/testimonials" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-green-600 transition-colors">Success Stories</a>
                 </div>
               </div>
@@ -726,7 +726,7 @@ const BlogPost = () => {
                 <h3 class="text-2xl font-bold mb-4">💰 Ready to Finance Your Dreams?</h3>
                 <p class="text-lg mb-6">Get expert guidance on education loans and secure the best rates for your study abroad journey!</p>
                 <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a href="/contact" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Get Loan Guidance</a>
+                  <a href="/products?redirect=zcf" class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">Apply Now - Start Journey</a>
                   <a href="/testimonials" class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">Success Stories</a>
                 </div>
               </div>
