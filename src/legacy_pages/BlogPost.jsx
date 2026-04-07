@@ -101,7 +101,7 @@ const BlogPost = () => {
 
               <div class="bg-cyan-50 border-l-4 border-cyan-400 p-6 mb-8">
                 <h3 class="text-lg font-semibold text-cyan-800 mb-2">💡 Pro Tip from Axelis</h3>
-                <p class="text-cyan-700">With our Zero Consultation Fee Charter, you get expert guidance on scholarships that can reduce your costs by up to £10,000 per year. We've helped students secure over ₹3 crores worth of scholarships!</p>
+                <p class="text-cyan-700">With our Zero Consultation Fee Student Plan, you get expert guidance on scholarships that can reduce your costs by up to £10,000 per year. We've helped students secure over ₹3 crores worth of scholarships!</p>
               </div>
 
               <h2 class="text-3xl font-bold text-gray-900 mt-12 mb-6">🏆 Top Universities & Popular Courses</h2>

@@ -211,7 +211,7 @@ export const teamMembers = [
     id: 1,
     name: "Rishabh Agrawal",
     role: "Founder",
-    image: "https://www.overseeducation.com/assets/rishabh-agrawal--4TIj-ZA.png",
+    image: "/assets/exweb/rishabh-agrawal.png",
     linkedin: "https://www.linkedin.com/in/rishabhagrawal1828/",
     description: "Visionary leader with extensive experience in international education consulting and student placement.",
     almaMater: {
@@ -223,7 +223,7 @@ export const teamMembers = [
     id: 2,
     name: "John Daniel",
     role: "Co-Founder",
-    image: "https://www.overseeducation.com/assets/john-daniel-B7NLL-ni.jpg",
+    image: "/assets/exweb/john-daniel.jpg",
     linkedin: "https://www.linkedin.com/in/john-daniel-oonnoonny-7920b11bb/",
     description: "Co-founder bringing deep expertise in international education and strategic partnerships.",
     almaMater: {
@@ -235,7 +235,7 @@ export const teamMembers = [
     id: 3,
     name: "Shubhangi Pandey",
     role: "Programme Manager",
-    image: "https://www.overseeducation.com/shubhangi%20pandey%20pm.jpeg",
+    image: "/assets/exweb/shubhangi%20pandey%20pm.jpeg",
     linkedin: "https://www.linkedin.com/in/shubhangi-pandey-1324b4193/",
     description: "Programme Manager driving end-to-end student journey management, from application to post-arrival support across 29+ countries.",
     almaMater: {
@@ -255,7 +255,7 @@ export const teamMembers = [
     id: 5,
     name: "Shubham Murkunde",
     role: "Sales Executive",
-    image: "https://www.overseeducation.com/1706721617257shubham.jpeg",
+    image: "/assets/exweb/1706721617257shubham.jpeg",
     linkedin: "https://www.linkedin.com/in/shubham-murkunde-460b3b2b1/",
     description: "Dynamic sales professional focused on building relationships and helping students achieve their study abroad goals."
   },

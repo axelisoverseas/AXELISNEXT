@@ -7,7 +7,7 @@ const RefundCancellation = () => {
   return (
     <Layout
       title="Refund & Cancellation Policy"
-      description="Refund & Cancellation Policy of Axelis Overseas Education - Understand our refund process for Zero Consultation and Zero Tuition Fee Charters."
+      description="Refund & Cancellation Policy of Axelis Overseas Education - Understand our refund process for Zero Consultation and Zero Tuition Fee Student Plans."
       keywords="refund policy, cancellation policy, axelis overseas, study abroad refund"
     >
 
@@ -29,7 +29,7 @@ const RefundCancellation = () => {
               Refund & Cancellation Policy
             </h1>
             <p className="text-xl md:text-2xl text-gray-100 max-w-3xl mx-auto drop-shadow-md">
-              Transparent Refund Process for All Service Charters
+              Transparent Refund Process for All Student Plans
             </p>
           </div>
         </div>
@@ -42,11 +42,11 @@ const RefundCancellation = () => {
           <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 mb-12 border border-gray-100">
             <div className="text-center mb-8">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Understanding our <span className="font-semibold text-green-600">refund process</span> for different service charters with complete transparency.
+                Understanding our <span className="font-semibold text-green-600">refund process</span> for different Student Plans with complete transparency.
               </p>
             </div>
 
-            {/* Charter Sections */}
+            {/* Student Plan Sections */}
             <div className="space-y-12">
               {/* Zero Consultation Fee Charter */}
               <div>
@@ -54,7 +54,7 @@ const RefundCancellation = () => {
                   <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center mr-4">
                     <CreditCard className="w-6 h-6 text-white" />
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900">Zero Consultation Fee Charter</h2>
+                  <h2 className="text-3xl font-bold text-gray-900">Zero Consultation Fee Student Plan</h2>
                 </div>
 
                 <div className="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl border border-blue-200">
@@ -98,7 +98,7 @@ const RefundCancellation = () => {
                   <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-lg flex items-center justify-center mr-4">
                     <CreditCard className="w-6 h-6 text-white" />
                   </div>
-                  <h2 className="text-3xl font-bold text-gray-900">Zero Tuition Fee Charter</h2>
+                  <h2 className="text-3xl font-bold text-gray-900">Zero Tuition Fee Student Plan</h2>
                 </div>
 
                 <div className="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-xl border border-green-200">
