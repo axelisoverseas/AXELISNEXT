@@ -1,0 +1,16 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "Axelis Overseas Education",
+  "name_for_model": "axelis_overseas",
+  "description_for_human": "Study abroad consultancy helping Indian students pursue higher education at 70+ partner universities across UK, USA, Ireland, Germany, France, and Finland.",
+  "description_for_model": "Axelis Overseas Education (overseeducation.com) is a study abroad consultancy based in Bengaluru, India. They offer university selection, application management, visa assistance, scholarship guidance, education loans, accommodation support, and career counseling for students looking to study in UK, USA, Ireland, Germany, France, and Finland. They partner with 70+ universities including Arizona State University, Northeastern University, NYU, Trinity College Dublin, University of Liverpool, and Warwick University. They handle both undergraduate (UG) and postgraduate (PG) applications.",
+  "auth": {
+    "type": "none"
+  },
+  "api": {
+    "type": "none"
+  },
+  "logo_url": "https://overseeducation.com/logo.png",
+  "contact_email": "axelisoverseas@overseeducation.com",
+  "legal_info_url": "https://overseeducation.com/terms-conditions"
+}

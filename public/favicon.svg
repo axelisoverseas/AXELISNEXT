@@ -1,0 +1,29 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#1E40AF"/>
+
+  <!-- Planet with rings -->
+  <g transform="translate(4, 8)">
+    <!-- Main planet -->
+    <circle cx="10" cy="10" r="7" fill="#1F2937"/>
+
+    <!-- Planet rings -->
+    <ellipse cx="10" cy="10" rx="9" ry="3" fill="none" stroke="#F59E0B" stroke-width="1.2" opacity="0.8"/>
+    <ellipse cx="10" cy="10" rx="11" ry="4" fill="none" stroke="#F59E0B" stroke-width="0.8" opacity="0.6"/>
+
+    <!-- Rocket -->
+    <g transform="translate(16, 2)">
+      <!-- Rocket body -->
+      <path d="M2 0 L6 0 L7 2 L7 8 L6 10 L2 10 L1 8 L1 2 Z" fill="#F3F4F6"/>
+      <!-- Rocket tip -->
+      <path d="M2 0 L4 -2 L6 0 Z" fill="#EF4444"/>
+      <!-- Rocket window -->
+      <circle cx="4" cy="3" r="1.5" fill="#3B82F6"/>
+      <!-- Rocket fins -->
+      <path d="M1 8 L0 10 L1 10 Z" fill="#9CA3AF"/>
+      <path d="M7 8 L8 10 L7 10 Z" fill="#9CA3AF"/>
+      <!-- Rocket flame -->
+      <path d="M2.5 10 L4 12 L5.5 10" fill="#F59E0B" opacity="0.8"/>
+    </g>
+  </g>
+</svg>

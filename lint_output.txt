@@ -1,0 +1,497 @@
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/app/about/page.jsx
+  119:52  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/app/contact/page.jsx
+  144:99  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/app/courses/[course]-in-[country]/page.jsx
+  108:94  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/app/guide/[slug]/page.jsx
+  83:77  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/app/scholarships/page.jsx
+  142:79  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  144:28  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/app/universities/page.jsx
+  270:33  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  270:55  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/assets/exweb/index.js
+  93:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/AdminLogin.jsx
+  105:34  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  105:41  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  105:46  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  105:53  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/BankLogo.jsx
+  52:7  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/EnhancedFAQ.jsx
+  120:96   error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  120:109  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/ErrorBoundary.jsx
+  23:49  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/FeaturesCarousel.jsx
+  18:3   error  React Hook "useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?  react-hooks/rules-of-hooks
+  64:43  error  React Hook "useState" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?   react-hooks/rules-of-hooks
+  66:3   error  React Hook "useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?  react-hooks/rules-of-hooks
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/Footer.jsx
+  14:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  15:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  16:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  24:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/InstagramSuccessStories.jsx
+  416:9  error  Error: Cannot access variable before it is declared
+
+`closeVideoModal` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  414 |     const handleEscKey = (event) => {
+  415 |       if (event.key === 'Escape' && selectedVideo) {
+> 416 |         closeVideoModal();
+      |         ^^^^^^^^^^^^^^^ `closeVideoModal` accessed before it is declared
+  417 |       }
+  418 |     };
+  419 |
+
+  432 |   };
+  433 |
+> 434 |   const closeVideoModal = () => {
+      |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 435 |     setSelectedVideo(null);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 436 |     document.body.style.overflow = 'unset';
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 437 |   };
+      | ^^^^^ `closeVideoModal` is declared here
+  438 |
+  439 |   return (
+  440 |     <AnimatedSection className="py-20 bg-white">  react-hooks/immutability
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/LeadCaptureModal.jsx
+  341:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  630:20  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/LeadDashboard.jsx
+   17:6   warning  React Hook useEffect has a missing dependency: 'loadLeads'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  114:71  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                               react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/LoadingScreen.jsx
+  9:11  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/Navbar.jsx
+  90:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/OptimizedImage.jsx
+  62:7  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/Professional3DGlobe.jsx
+  48:3  error  React Hook "useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?  react-hooks/rules-of-hooks
+  61:3  error  React Hook "useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?  react-hooks/rules-of-hooks
+  69:3  error  React Hook "useEffect" is called conditionally. React Hooks must be called in the exact same order in every component render. Did you accidentally call a React Hook after an early return?  react-hooks/rules-of-hooks
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/RealisticGlobe.jsx
+  222:22  warning  The ref value 'containerRef.current' will likely have changed by the time this effect cleanup function runs. If this ref points to a node rendered by React, copy 'containerRef.current' to a variable inside the effect, and use that variable in the cleanup function  react-hooks/exhaustive-deps
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/TeamCard.jsx
+  45:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  75:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/TeamGlobeCarousel.jsx
+   56:38  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `handleNext`, but the source dependencies were []. Inferred dependency not present in source.
+
+  54 |   }, []);
+  55 |
+> 56 |   const handleTouchEnd = useCallback(() => {
+     |                                      ^^^^^^^
+> 57 |     const diff = touchStartX.current - touchEndX.current;
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 58 |     const minSwipe = 50;
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 59 |     if (Math.abs(diff) > minSwipe) {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 60 |       if (diff > 0) handleNext();
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 61 |       else handlePrevious();
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 62 |     }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 63 |   }, []);
+     | ^^^^ Could not preserve existing manual memoization
+  64 |
+  65 |   const getCardPosition = (index) => {
+  66 |     if (!teamMembers?.length) return {};      react-hooks/preserve-manual-memoization
+   56:38  error    Compilation Skipped: Existing memoization could not be preserved
+
+React Compiler has skipped optimizing this component because the existing manual memoization could not be preserved. The inferred dependencies did not match the manually specified dependencies, which could cause the value to change more or less frequently than expected. The inferred dependency was `handlePrevious`, but the source dependencies were []. Inferred dependency not present in source.
+
+  54 |   }, []);
+  55 |
+> 56 |   const handleTouchEnd = useCallback(() => {
+     |                                      ^^^^^^^
+> 57 |     const diff = touchStartX.current - touchEndX.current;
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 58 |     const minSwipe = 50;
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 59 |     if (Math.abs(diff) > minSwipe) {
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 60 |       if (diff > 0) handleNext();
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 61 |       else handlePrevious();
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 62 |     }
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 63 |   }, []);
+     | ^^^^ Could not preserve existing manual memoization
+  64 |
+  65 |   const getCardPosition = (index) => {
+  66 |     if (!teamMembers?.length) return {};  react-hooks/preserve-manual-memoization
+   63:6   warning  React Hook useCallback has missing dependencies: 'handleNext' and 'handlePrevious'. Either include them or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/exhaustive-deps
+  150:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @next/next/no-img-element
+  177:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/TestimonialCard.jsx
+  14:13  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  14:34  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  23:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/TestimonialCarousel.jsx
+  57:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  79:23  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  79:44  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/TestimonialGlobeCarousel.jsx
+   61:6   warning  React Hook useEffect has a missing dependency: 'countryCoordinates'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/exhaustive-deps
+  152:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       @next/next/no-img-element
+  298:26  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  296 |               className="absolute bg-white rounded-full opacity-60"
+  297 |               style={{
+> 298 |                 left: `${Math.random() * 100}%`,
+      |                          ^^^^^^^^^^^^^ Cannot call impure function
+  299 |                 top: `${Math.random() * 100}%`,
+  300 |                 width: `${Math.random() * 2 + 1}px`,
+  301 |                 height: `${Math.random() * 2 + 1}px`,                                                           react-hooks/purity
+  299:25  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  297 |               style={{
+  298 |                 left: `${Math.random() * 100}%`,
+> 299 |                 top: `${Math.random() * 100}%`,
+      |                         ^^^^^^^^^^^^^ Cannot call impure function
+  300 |                 width: `${Math.random() * 2 + 1}px`,
+  301 |                 height: `${Math.random() * 2 + 1}px`,
+  302 |                 animation: `subtleTwinkle ${Math.random() * 3 + 4}s ease-in-out infinite`,                                     react-hooks/purity
+  300:27  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  298 |                 left: `${Math.random() * 100}%`,
+  299 |                 top: `${Math.random() * 100}%`,
+> 300 |                 width: `${Math.random() * 2 + 1}px`,
+      |                           ^^^^^^^^^^^^^ Cannot call impure function
+  301 |                 height: `${Math.random() * 2 + 1}px`,
+  302 |                 animation: `subtleTwinkle ${Math.random() * 3 + 4}s ease-in-out infinite`,
+  303 |                 animationDelay: `${Math.random() * 3}s`  react-hooks/purity
+  301:28  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  299 |                 top: `${Math.random() * 100}%`,
+  300 |                 width: `${Math.random() * 2 + 1}px`,
+> 301 |                 height: `${Math.random() * 2 + 1}px`,
+      |                            ^^^^^^^^^^^^^ Cannot call impure function
+  302 |                 animation: `subtleTwinkle ${Math.random() * 3 + 4}s ease-in-out infinite`,
+  303 |                 animationDelay: `${Math.random() * 3}s`
+  304 |               }}                                 react-hooks/purity
+  302:45  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  300 |                 width: `${Math.random() * 2 + 1}px`,
+  301 |                 height: `${Math.random() * 2 + 1}px`,
+> 302 |                 animation: `subtleTwinkle ${Math.random() * 3 + 4}s ease-in-out infinite`,
+      |                                             ^^^^^^^^^^^^^ Cannot call impure function
+  303 |                 animationDelay: `${Math.random() * 3}s`
+  304 |               }}
+  305 |             />                                                 react-hooks/purity
+  303:36  error    Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  301 |                 height: `${Math.random() * 2 + 1}px`,
+  302 |                 animation: `subtleTwinkle ${Math.random() * 3 + 4}s ease-in-out infinite`,
+> 303 |                 animationDelay: `${Math.random() * 3}s`
+      |                                    ^^^^^^^^^^^^^ Cannot call impure function
+  304 |               }}
+  305 |             />
+  306 |           ))}                                                                                                 react-hooks/purity
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/TestimonialRealisticGlobe.jsx
+    5:35  error    Component definition is missing display name                                                                                                                                                     react/display-name
+  241:6   warning  React Hook useEffect has missing dependencies: 'countryCoordinates', 'getTestimonialCountries', 'hoveredCountry', and 'selectedTestimonial'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
+  277:6   warning  React Hook useEffect has missing dependencies: 'countryCoordinates' and 'getTestimonialCountries'. Either include them or remove the dependency array                                            react-hooks/exhaustive-deps
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/VideoWidget.jsx
+  63:7  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/VisualTestimonialCarousel.jsx
+   66:19  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+   85:19  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+   85:48  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  170:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/WhatsAppWidget.jsx
+  169:58  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/YouTubeSection.jsx
+  21:9  error  Error: Cannot access variable before it is declared
+
+`closeVideoModal` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  19 |     const handleEscKey = (event) => {
+  20 |       if (event.key === 'Escape' && selectedVideo) {
+> 21 |         closeVideoModal();
+     |         ^^^^^^^^^^^^^^^ `closeVideoModal` accessed before it is declared
+  22 |       }
+  23 |     };
+  24 |
+
+  37 |   };
+  38 |
+> 39 |   const closeVideoModal = () => {
+     |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 40 |     setSelectedVideo(null);
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 41 |     document.body.style.overflow = 'unset';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 42 |   };
+     | ^^^^^ `closeVideoModal` is declared here
+  43 |
+  44 |   return (
+  45 |     <>  react-hooks/immutability
+  36:5  error  Error: This value cannot be modified
+
+Modifying a variable defined outside a component or hook is not allowed. Consider using an effect.
+
+  34 |   const openVideoModal = (video) => {
+  35 |     setSelectedVideo(video);
+> 36 |     document.body.style.overflow = 'hidden';
+     |     ^^^^^^^^^^^^^^^^^^^ value cannot be modified
+  37 |   };
+  38 |
+  39 |   const closeVideoModal = () => {                                                                                                                                                                                                                                                                                                                                                                                                                                 react-hooks/immutability
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/YouTubeShorts.jsx
+  382:9  error  Error: Cannot access variable before it is declared
+
+`closeVideoModal` is accessed before it is declared, which prevents the earlier access from updating when this value changes over time.
+
+  380 |     const handleEscKey = (event) => {
+  381 |       if (event.key === 'Escape' && selectedVideo) {
+> 382 |         closeVideoModal();
+      |         ^^^^^^^^^^^^^^^ `closeVideoModal` accessed before it is declared
+  383 |       }
+  384 |     };
+  385 |
+
+  398 |   };
+  399 |
+> 400 |   const closeVideoModal = () => {
+      |   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 401 |     setSelectedVideo(null);
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 402 |     document.body.style.overflow = 'unset';
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+> 403 |   };
+      | ^^^^^ `closeVideoModal` is declared here
+  404 |
+  405 |   return (
+  406 |     <AnimatedSection className="py-20 bg-gradient-to-br from-slate-50 to-blue-50">  react-hooks/immutability
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/components/YouTubeThumbnail.jsx
+   31:5  error    Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  29 |
+  30 |     // Reset states
+> 31 |     setIsLoading(true);
+     |     ^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  32 |     setHasError(false);
+  33 |     setThumbnailIndex(0);
+  34 |  react-hooks/set-state-in-effect
+  106:9  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @next/next/no-img-element
+  115:7  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/hooks/useAnimations.js
+  39:6   warning  React Hook useEffect was passed a dependency list that is not an array literal. This means we can't statically verify whether you've passed the correct dependencies                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         react-hooks/exhaustive-deps
+  39:6   warning  React Hook useEffect has a missing dependency: 'animationCallback'. Either include it or remove the dependency array. If 'animationCallback' changes too often, find the parent component that defines it and wrap that definition in useCallback                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            react-hooks/exhaustive-deps
+  41:10  error    Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+  39 |   }, dependencies);
+  40 |
+> 41 |   return {
+     |          ^
+> 42 |     rootRef,
+     | ^^^^^^^^^^^^
+> 43 |     scope: scopeRef.current,
+     | ^^^^^^^^^^^^
+> 44 |     // Helper method to trigger scoped animations
+     | ^^^^^^^^^^^^
+> 45 |     trigger: (methodName, ...args) => {
+     | ^^^^^^^^^^^^
+> 46 |       if (scopeRef.current && scopeRef.current.methods[methodName]) {
+     | ^^^^^^^^^^^^
+> 47 |         scopeRef.current.methods[methodName](...args);
+     | ^^^^^^^^^^^^
+> 48 |       }
+     | ^^^^^^^^^^^^
+> 49 |     }
+     | ^^^^^^^^^^^^
+> 50 |   };
+     | ^^^^ Cannot access ref value during render
+  51 | };
+  52 |
+  53 | /**  react-hooks/refs
+  43:12  error    Error: Cannot access refs during render
+
+React refs are values that are not needed for rendering. Refs should only be accessed outside of render, such as in event handlers or effects. Accessing a ref value (the `current` property) during render can cause your component not to update as expected (https://react.dev/reference/react/useRef).
+
+  41 |   return {
+  42 |     rootRef,
+> 43 |     scope: scopeRef.current,
+     |            ^^^^^^^^^^^^^^^^ Cannot access ref value during render
+  44 |     // Helper method to trigger scoped animations
+  45 |     trigger: (methodName, ...args) => {
+  46 |       if (scopeRef.current && scopeRef.current.methods[methodName]) {                                                                                                                                                                                                                                                                                                                                 react-hooks/refs
+  90:6   warning  React Hook useEffect has a missing dependency: 'options'. Either include it or remove the dependency array                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   react-hooks/exhaustive-deps
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/hooks/useLeadCapture.js
+  15:21  error  Error: Calling setState synchronously within an effect can trigger cascading renders
+
+Effects are intended to synchronize state between React and external systems such as manually updating the DOM, state management libraries, or other platform APIs. In general, the body of an effect should do one or both of the following:
+* Update external systems with the latest state from React.
+* Subscribe for updates from some external system, calling setState in a callback function when external state changes.
+
+Calling setState synchronously within an effect body causes cascading renders that can hurt performance, and is not recommended. (https://react.dev/learn/you-might-not-need-an-effect).
+
+  13 |     const exitShown = sessionStorage.getItem('axelis_exit_modal_shown');
+  14 |     
+> 15 |     if (timedShown) setHasShownTimed(true);
+     |                     ^^^^^^^^^^^^^^^^ Avoid calling setState() directly within an effect
+  16 |     if (exitShown) setHasShownExit(true);
+  17 |   }, []);
+  18 |  react-hooks/set-state-in-effect
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/About.jsx
+   45:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  136:36  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/Accommodation.jsx
+  158:17  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  180:23  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/AdminDashboard.jsx
+   87:6  warning  React Hook useEffect has a missing dependency: 'fetchLeads'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  187:6  warning  React Hook useEffect has a missing dependency: 'fetchLeads'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+  197:6  warning  React Hook useEffect has a missing dependency: 'fetchLeads'. Either include it or remove the dependency array  react-hooks/exhaustive-deps
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/Blog.jsx
+  210:58  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  326:18  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/BlogPost.jsx
+  27:64  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  27:85  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/Careers.jsx
+   77:17   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+   83:115  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  205:66   error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  206:200  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/Contact.jsx
+  328:83  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/FAQ.jsx
+  49:106  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/NotFound.jsx
+  18:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  33:31  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  33:51  error    `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/PrivacyPolicy.jsx
+  233:50  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  233:54  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  233:56  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  233:61  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  233:66  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  233:69  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/RefundCancellation.jsx
+   68:114  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  132:174  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+  184:108  error  `'` can be escaped with `&apos;`, `&lsquo;`, `&#39;`, `&rsquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/TermsConditions.jsx
+  46:116  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+  46:123  error  `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`  react/no-unescaped-entities
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/legacy_pages/Testimonials.jsx
+  102:13  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  166:60  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  168:60  error    `"` can be escaped with `&quot;`, `&ldquo;`, `&#34;`, `&rdquo;`                                                                                                                                                                                                                          react/no-unescaped-entities
+  340:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  350:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  360:15  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/services/calendlyService.js
+  328:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/services/emailNotificationService.js
+  340:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/services/leadService.js
+  76:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/services/mockLeadService.js
+  283:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/services/otpService.js
+  70:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/services/whatsappService.js
+  256:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/services/youtubeShortsService.js
+  238:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/utils/sendTestMessage.js
+  130:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+/Users/rishabhagrawal/Desktop/Axelis_website_react/website2.0/website-react/axelis-next/src/utils/testWhatsApp.js
+  153:1  warning  Assign object to a variable before exporting as module default  import/no-anonymous-default-export
+
+✖ 124 problems (74 errors, 50 warnings)
+

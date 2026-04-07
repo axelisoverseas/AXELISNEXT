@@ -1,0 +1,47 @@
+[
+  {
+    "id": "admission-associate-intern",
+    "title": "Admission Associate (Intern)",
+    "location": "Remote / Mumbai",
+    "type": "Internship",
+    "summary": "Support admissions processing, document checks and candidate communication.",
+    "applyType": "external",
+    "externalUrl": "/assets/admission%20associate%20intern.pdf",
+    "responsibilities": [
+      "Assist with application documentation and verification",
+      "Coordinate with counsellors and students",
+      "Support CRM updates and follow-ups"
+    ],
+    "requirements": [
+      "Currently pursuing or recently graduated",
+      "Good communication skills",
+      "Attention to detail"
+    ],
+    "benefits": [
+      "Stipend and mentorship",
+      "Opportunity to join full-time based on performance"
+    ]
+  },
+  {
+    "id": "b2b-account-manager",
+    "title": "B2B Account Manager",
+    "location": "Remote",
+    "type": "Full-time",
+    "summary": "Manage partner accounts and institutional relationships for student recruitment.",
+    "applyType": "external",
+    "externalUrl": "/assets/b2b%20account%20manager.pdf",
+    "responsibilities": [
+      "Manage partner outreach and onboarding",
+      "Maintain partner communications and SLAs",
+      "Drive partnership growth and conversions"
+    ],
+    "requirements": [
+      "Experience in B2B sales or partnerships",
+      "Strong relationship management skills"
+    ],
+    "benefits": [
+      "Competitive salary",
+      "Flexible remote-first working"
+    ]
+  }
+]
