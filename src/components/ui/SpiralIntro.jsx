@@ -86,7 +86,7 @@ export default function SpiralIntro() {
 
   return (
     <div
-      className={`fixed inset-0 z-[100] w-full h-full overflow-hidden bg-black transition-opacity duration-[900ms] ease-out ${
+      className={`fixed inset-0 z-[1000] w-full h-full overflow-hidden bg-black transition-opacity duration-[900ms] ease-out ${
         dismissing ? 'opacity-0 pointer-events-none' : 'opacity-100'
       }`}
       aria-hidden={dismissing}

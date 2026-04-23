@@ -131,7 +131,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-sans antialiased text-slate-900 bg-slate-50 flex flex-col min-h-screen">
         <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600 text-white py-3 px-4 text-center text-sm md:text-base font-extrabold shadow-md z-[100] relative uppercase tracking-wider">
-           DEADLINE: 30th April for September 2026 Public Uni ZTF Student Plan — 50% DISCOUNT
+           FALL 2026 INTAKE: 50% OFF on ZCF & ZTF Student Plans — offer ends 26th May. Sign up now!
         </div>
         <Navbar />
         <main className="flex-grow">
