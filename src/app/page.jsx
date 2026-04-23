@@ -1,16 +1,23 @@
 "use client";
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown } from 'lucide-react';
 
-const CobeGlobe = dynamic(() => import('../components/CobeGlobe'), { ssr: false });
 const InstagramSuccessStories = dynamic(() => import('../components/InstagramSuccessStories'), { ssr: false });
-const YouTubeShorts = dynamic(() => import('../components/YouTubeShorts'), { ssr: false });
 const TeamGlobeCarousel = dynamic(() => import('../components/TeamGlobeCarousel'), { ssr: false });
 const StudyAbroadGuides = dynamic(() => import('../components/StudyAbroadGuides'), { ssr: false });
+const UniversityLogosSection = dynamic(() => import('../components/UniversityLogosSection'), { ssr: false });
+const SpatialPlanShowcase = dynamic(() => import('../components/ui/SpatialPlanShowcase'), { ssr: false });
+const PlanComparison = dynamic(() => import('../components/PlanComparison'), { ssr: false });
+
+import { BorderBeam } from '../components/ui/BorderBeam';
+import { RevealText } from '../components/ui/RevealText';
+import { BackgroundGradientAnimation } from '../components/ui/BackgroundGradientAnimation';
+import { TextEffect, TextEffectInView } from '../components/ui/TextEffect';
+
+const SpiralIntro = dynamic(() => import('../components/ui/SpiralIntro'), { ssr: false });
 
 import { teamMembers, faqData } from '../data/siteData';
 
@@ -41,23 +48,14 @@ const staggerContainer = {
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-50 overflow-hidden">
-      {/* Premium Hero Section */}
-      <section className="relative w-full pt-24 pb-32 bg-slate-900 border-b border-slate-800">
-        {/* Subtle Background Image */}
-        <div className="absolute inset-0 z-0">
-          <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2000&auto=format&fit=crop" alt="Campus Background" className="w-full h-full object-cover opacity-20" />
-          <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/80 to-transparent"></div>
-        </div>
+      {/* Session-gated spiral intro overlay — dismissed by Enter button */}
+      <SpiralIntro />
 
-        {/* Original Cyan Cobe Globe */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 0.6, scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeOut" }}
-          className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none mt-20"
-        >
-          <CobeGlobe size="large" />
-        </motion.div>
+      {/* Premium Hero Section */}
+      <section className="relative w-full pt-24 pb-32 bg-slate-900 border-b border-slate-800 overflow-hidden">
+        {/* Animated gradient backdrop */}
+        <BackgroundGradientAnimation />
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-slate-900 via-slate-900/70 to-slate-900/30 pointer-events-none" />
 
         <motion.div
           variants={staggerContainer}
@@ -66,8 +64,11 @@ export default function Home() {
           className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center"
         >
 
-          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-8 max-w-4xl">
-            Your Gateway to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Global Education</span>
+          <motion.h1 variants={fadeInUp} className="text-5xl md:text-7xl font-extrabold text-white tracking-tight mb-8 max-w-4xl leading-tight">
+            Your Gateway to{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+              Global Education
+            </span>
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl text-slate-400 max-w-2xl mb-12 leading-relaxed">
@@ -76,10 +77,11 @@ export default function Home() {
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
             <Link
-              href="/products?redirect=zcf"
-              className="inline-flex justify-center items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all shadow-[0_0_40px_-10px_rgba(37,99,235,0.4)] hover:shadow-[0_0_60px_-15px_rgba(37,99,235,0.6)]"
+              href="/bookings"
+              className="relative inline-flex justify-center items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-xl transition-all shadow-[0_0_40px_-10px_rgba(37,99,235,0.4)] hover:shadow-[0_0_60px_-15px_rgba(37,99,235,0.6)] overflow-hidden"
             >
-              Apply Now - Start Journey
+              <span className="relative z-10">Apply Now - Start Journey</span>
+              <BorderBeam size={120} duration={8} colorFrom="#22d3ee" colorTo="#0b5cff" />
             </Link>
             <Link
               href="/products"
@@ -89,29 +91,15 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          {/* Clean Trust Indicators */}
-          <motion.div variants={fadeInUp} className="mt-20 pt-10 border-t border-slate-800/80 flex flex-wrap justify-center gap-8 md:gap-16 w-full max-w-4xl">
-            <div className="flex flex-col">
-              <span className="text-3xl font-bold text-white tracking-tight">2000+</span>
-              <span className="text-sm font-medium text-slate-500 uppercase tracking-wider mt-1">Students Placed</span>
-            </div>
-            <div className="hidden md:block w-px h-12 bg-slate-800"></div>
-            <div className="flex flex-col">
-              <span className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 tracking-tight">₹3+ Cr</span>
-              <span className="text-sm font-medium text-slate-500 uppercase tracking-wider mt-1">Scholarships</span>
-            </div>
-            <div className="hidden md:block w-px h-12 bg-slate-800"></div>
-            <div className="flex flex-col">
-              <span className="text-3xl font-bold text-white tracking-tight">100%</span>
-              <span className="text-sm font-medium text-slate-500 uppercase tracking-wider mt-1">Success Rate</span>
-            </div>
-          </motion.div>
         </motion.div>
       </section>
 
 
-      {/* Clean Stats Grid */}
+      {/* Unified Impact Stats — single authoritative section, replaces the old hero trust row + 4-card grid */}
       <section className="py-24 bg-slate-900 text-white border-y border-slate-800 relative overflow-hidden">
+        {/* Ambient glows */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"></div>
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px] translate-y-1/2 pointer-events-none"></div>
 
         <motion.div
           initial="hidden"
@@ -120,37 +108,78 @@ export default function Home() {
           variants={staggerContainer}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         >
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-12 text-center">
-            <motion.div variants={fadeInUp} className="flex flex-col items-center group">
-              <div className="w-20 h-20 bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl flex items-center justify-center mb-6 text-blue-400 group-hover:border-blue-500/50 group-hover:text-blue-300 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_-15px_rgba(37,99,235,0.3)]">
-                <Globe size={40} />
-              </div>
-              <span className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">29+</span>
-              <span className="text-slate-400 font-medium tracking-wide uppercase text-sm">Countries</span>
-            </motion.div>
-            <motion.div variants={fadeInUp} className="flex flex-col items-center group">
-              <div className="w-20 h-20 bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl flex items-center justify-center mb-6 text-cyan-400 group-hover:border-cyan-500/50 group-hover:text-cyan-300 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_-15px_rgba(6,182,212,0.3)]">
-                <Award size={40} />
-              </div>
-              <span className="text-4xl md:text-5xl font-bold mb-2 tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300">2000+</span>
-              <span className="text-slate-400 font-medium tracking-wide uppercase text-sm">Scholarships</span>
-            </motion.div>
-            <motion.div variants={fadeInUp} className="flex flex-col items-center group">
-              <div className="w-20 h-20 bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl flex items-center justify-center mb-6 text-blue-400 group-hover:border-blue-500/50 group-hover:text-blue-300 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_-15px_rgba(37,99,235,0.3)]">
-                <Users size={40} />
-              </div>
-              <span className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">2000+</span>
-              <span className="text-slate-400 font-medium tracking-wide uppercase text-sm">Students Sent</span>
-            </motion.div>
-            <motion.div variants={fadeInUp} className="flex flex-col items-center group">
-              <div className="w-20 h-20 bg-slate-800/80 backdrop-blur border border-slate-700 rounded-2xl flex items-center justify-center mb-6 text-green-400 group-hover:border-green-500/50 group-hover:text-green-300 transition-all duration-500 group-hover:-translate-y-2 group-hover:shadow-[0_20px_40px_-15px_rgba(34,197,94,0.3)]">
-                <CheckCircle size={40} />
-              </div>
-              <span className="text-4xl md:text-5xl font-bold mb-2 tracking-tight">100%</span>
-              <span className="text-slate-400 font-medium tracking-wide uppercase text-sm">Success Rate</span>
-            </motion.div>
+          {/* Section Heading */}
+          <motion.div variants={fadeInUp} className="text-center mb-16 max-w-2xl mx-auto">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-semibold mb-4 uppercase tracking-wider">
+              Our Impact
+            </div>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
+              Numbers that <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">speak for themselves</span>
+            </h2>
+            <p className="text-slate-400 mt-4">
+              Six years of relentless focus on one outcome — placing students at the world&apos;s best universities with zero upfront consultation fees.
+            </p>
+          </motion.div>
+
+          {/* 4-stat grid — deduplicated from the previous two sections */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {[
+              { icon: Globe, value: '29+', label: 'Countries', tint: 'blue' },
+              { icon: Users, value: '2000+', label: 'Students Placed', tint: 'cyan' },
+              { icon: Award, value: '₹3+ Cr', label: 'Scholarships Won', tint: 'blue', gradient: true },
+              { icon: CheckCircle, value: '100%', label: 'Success Rate', tint: 'cyan' },
+            ].map((stat, i) => {
+              const Icon = stat.icon;
+              const isBlue = stat.tint === 'blue';
+              return (
+                <motion.div
+                  key={i}
+                  variants={fadeInUp}
+                  className="group relative bg-slate-800/40 backdrop-blur border border-slate-700/70 rounded-2xl p-8 flex flex-col items-center text-center hover:border-blue-500/40 hover:bg-slate-800/60 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_60px_-20px_rgba(37,99,235,0.35)]"
+                >
+                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 border transition-all duration-500 ${
+                    isBlue
+                      ? 'bg-blue-500/10 border-blue-500/20 text-blue-300 group-hover:bg-blue-500/20 group-hover:text-blue-200'
+                      : 'bg-cyan-500/10 border-cyan-500/20 text-cyan-300 group-hover:bg-cyan-500/20 group-hover:text-cyan-200'
+                  }`}>
+                    <Icon size={32} strokeWidth={1.75} />
+                  </div>
+                  <span className={`text-4xl md:text-5xl font-bold mb-2 tracking-tight ${
+                    stat.gradient
+                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-cyan-300'
+                      : 'text-white'
+                  }`}>
+                    {stat.value}
+                  </span>
+                  <span className="text-slate-400 font-medium tracking-wide uppercase text-xs md:text-sm">
+                    {stat.label}
+                  </span>
+                </motion.div>
+              );
+            })}
           </div>
         </motion.div>
+      </section>
+
+      {/* Student Plans — same showcase as /products, unified across the site */}
+      <section id="student-plans" className="relative">
+        <div className="bg-slate-50 border-t border-slate-200/80 pt-16 pb-4">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold tracking-wide uppercase mb-5">
+              Student Plans
+            </span>
+            <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
+              <TextEffectInView as="span" per="word" preset="blur">Two plans. One</TextEffectInView>{' '}
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">flat deposit.</span>
+            </h2>
+            <p className="text-slate-600 max-w-2xl mx-auto text-base md:text-lg">
+              Pick the route that matches your destination — ZCF for global private universities, ZTF for tuition-free Europe.
+            </p>
+          </div>
+        </div>
+        <SpatialPlanShowcase plan="zcf" />
+        <SpatialPlanShowcase plan="ztf" />
+        <PlanComparison />
       </section>
 
       {/* Team Section */}
@@ -158,8 +187,10 @@ export default function Home() {
 
       {/* Social Proof Videos */}
       <InstagramSuccessStories />
-      <YouTubeShorts />
-      
+
+      {/* University Portfolio — 100+ universities across 29 countries */}
+      <UniversityLogosSection />
+
       {/* Educational Guides */}
       <StudyAbroadGuides />
 
@@ -173,7 +204,7 @@ export default function Home() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">Common Questions</h2>
+            <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-5xl font-bold text-white mb-6">Common Questions</TextEffectInView>
             <p className="text-slate-400 text-lg">Clear up your doubts instantly. For full details, visit our <Link href="/faq" className="text-blue-400 hover:underline">FAQ Help Center</Link>.</p>
           </div>
 
@@ -227,14 +258,17 @@ export default function Home() {
             
             {/* Content Pane */}
             <div className="md:w-7/12 p-12 md:p-20 relative z-10 text-center md:text-left flex flex-col justify-center items-center md:items-start">
-              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight relative z-10">Ready to Start Your Journey?</h2>
+              <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight relative z-10">Ready to Start Your Journey?</TextEffectInView>
               <p className="text-xl text-slate-300 mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Connect with our expert counselors today and take the first step towards your global education with zero hidden fees.</p>
               <Link
-                href="/products?redirect=zcf"
-                className="inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold rounded-xl transition-all shadow-[0_0_40px_-10px_rgba(6,182,212,0.5)] hover:shadow-[0_0_60px_-15px_rgba(6,182,212,0.7)] text-lg hover:-translate-y-1 relative z-10 group"
+                href="/bookings"
+                className="relative overflow-hidden inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white font-bold rounded-xl transition-all shadow-[0_0_40px_-10px_rgba(6,182,212,0.5)] hover:shadow-[0_0_60px_-15px_rgba(6,182,212,0.7)] text-lg hover:-translate-y-1 z-10 group"
               >
-                Apply Now - Start Journey
-                <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
+                <span className="relative z-10 inline-flex items-center">
+                  Apply Now - Start Journey
+                  <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
+                </span>
+                <BorderBeam size={160} duration={9} colorFrom="#ffffff" colorTo="#22d3ee" />
               </Link>
             </div>
           </div>

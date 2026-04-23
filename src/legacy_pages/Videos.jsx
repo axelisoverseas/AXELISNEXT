@@ -3,7 +3,6 @@ import { Youtube } from 'lucide-react';
 import Layout from '../components/Layout';
 import AnimatedSection from '../components/AnimatedSection';
 import InstagramSuccessStories from '../components/InstagramSuccessStories';
-import YouTubeShorts from '../components/YouTubeShorts';
 import { SocialMediaCTA } from '../components/SocialMediaButtons';
 
 const Videos = () => {
@@ -61,9 +60,6 @@ const Videos = () => {
 
       {/* Instagram Success Stories Section */}
       <InstagramSuccessStories />
-
-      {/* YouTube Shorts Section */}
-      <YouTubeShorts />
 
       {/* Social Media CTA Section */}
       <AnimatedSection className="py-20 bg-gradient-to-br from-blue-50 to-yellow-50">

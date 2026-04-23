@@ -1,6 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
 import { Award, ArrowRight, CheckCircle, GraduationCap, Globe2, BookOpen } from 'lucide-react';
+import ScholarshipFinder from '@/components/ScholarshipFinder';
+import { BorderBeam } from '@/components/ui/BorderBeam';
+import { TextEffect, TextEffectInView } from '@/components/ui/TextEffect';
 
 export const metadata = {
     title: 'Scholarships & Financial Aid | Axelis Overseas',
@@ -20,17 +23,24 @@ export default function ScholarshipsPage() {
                         Financial Support
                     </span>
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
-                        Global <span className="text-blue-400">Scholarship</span> Opportunities
+                        <TextEffect as="span" per="word" preset="blur">Global</TextEffect>{' '}
+                        <span className="text-blue-400">
+                            <TextEffect as="span" per="char" preset="blur" delay={0.25}>Scholarship</TextEffect>
+                        </span>{' '}
+                        <TextEffect as="span" per="word" preset="blur" delay={0.55}>Opportunities</TextEffect>
                     </h1>
                     <p className="text-lg md:text-xl text-slate-400 max-w-3xl mx-auto leading-relaxed mb-10">
                         Access over 2000+ scholarship opportunities worldwide. Partnered with top universities to bring you exclusive Agent Scholarships to fund your global education journey.
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                        <Link href="/contact" className="px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-500/30 flex items-center">
-                            Check Your Eligibility <ArrowRight size={18} className="ml-2" />
+                        <Link href="#finder" className="relative overflow-hidden px-8 py-4 bg-blue-600 hover:bg-blue-500 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-blue-500/30 flex items-center">
+                            <span className="relative z-10 flex items-center">
+                                Check Your Eligibility <ArrowRight size={18} className="ml-2" />
+                            </span>
+                            <BorderBeam size={130} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />
                         </Link>
-                        <Link href="/universities" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700 flex items-center">
+                        <Link href="#finder" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700 flex items-center">
                             Find Applicable Programs
                         </Link>
                     </div>
@@ -72,7 +82,7 @@ export default function ScholarshipsPage() {
             <section className="py-20 bg-slate-50 border-t border-slate-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-slate-900 mb-4">Types of Scholarships Available</h2>
+                        <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl font-bold text-slate-900 mb-4">Types of Scholarships Available</TextEffectInView>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">We assist you in procuring various types of financial aid depending on your profile, academic excellence, and destination choice.</p>
                     </div>
 
@@ -136,10 +146,13 @@ export default function ScholarshipsPage() {
                 </div>
             </section>
 
+            {/* Scholarship Finder */}
+            <ScholarshipFinder />
+
             {/* CTA */}
             <section className="py-24 bg-white border-t border-slate-200">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center bg-blue-50 rounded-3xl p-12 border border-blue-100">
-                    <h2 className="text-3xl font-bold text-slate-900 mb-6">Let's Secure Your Funding Together</h2>
+                    <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl font-bold text-slate-900 mb-6">Let's Secure Your Funding Together</TextEffectInView>
                     <p className="text-lg text-slate-600 mb-8 max-w-2xl mx-auto">
                         Don't let financial constraints stop your study abroad dream. Our Zero Consultation Fee Student Plan covers dedicated scholarship and financial aid assistance.
                     </p>

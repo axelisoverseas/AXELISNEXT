@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Linkedin, ChevronLeft, ChevronRight, GraduationCap } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 const TeamGlobeCarousel = ({ teamMembers }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isAutoRotating, setIsAutoRotating] = useState(true);
+  const [isPaused, setIsPaused] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const intervalRef = useRef(null);
   const touchStartX = useRef(0);
@@ -17,9 +17,9 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Auto-rotation effect
+  // Smooth continuous auto-rotation — resumes automatically when not paused
   useEffect(() => {
-    if (isAutoRotating && teamMembers?.length > 0) {
+    if (!isPaused && teamMembers?.length > 0) {
       intervalRef.current = setInterval(() => {
         setCurrentIndex((prev) => (prev + 1) % teamMembers.length);
       }, 4000);
@@ -27,24 +27,15 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
       clearInterval(intervalRef.current);
     }
     return () => clearInterval(intervalRef.current);
-  }, [isAutoRotating, teamMembers?.length]);
+  }, [isPaused, teamMembers?.length]);
 
-  const handlePrevious = () => {
-    setIsAutoRotating(false);
-    setCurrentIndex((prev) => (prev - 1 + teamMembers.length) % teamMembers.length);
+  const advanceTo = (index) => setCurrentIndex(index);
+  const advanceBy = (delta) => {
+    if (!teamMembers?.length) return;
+    setCurrentIndex((prev) => (prev + delta + teamMembers.length) % teamMembers.length);
   };
 
-  const handleNext = () => {
-    setIsAutoRotating(false);
-    setCurrentIndex((prev) => (prev + 1) % teamMembers.length);
-  };
-
-  const handleDotClick = (index) => {
-    setIsAutoRotating(false);
-    setCurrentIndex(index);
-  };
-
-  // Touch swipe handlers
+  // Touch swipe handlers — briefly pause auto-rotate on swipe, then resume
   const handleTouchStart = useCallback((e) => {
     touchStartX.current = e.touches[0].clientX;
   }, []);
@@ -57,8 +48,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
     const diff = touchStartX.current - touchEndX.current;
     const minSwipe = 50;
     if (Math.abs(diff) > minSwipe) {
-      if (diff > 0) handleNext();
-      else handlePrevious();
+      advanceBy(diff > 0 ? 1 : -1);
     }
   }, []);
 
@@ -91,7 +81,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
 
   if (!teamMembers || teamMembers.length === 0) {
     return (
-      <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden bg-gradient-to-b from-transparent via-red-50/30 to-transparent flex items-center justify-center">
+      <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden bg-gradient-to-b from-transparent via-cyan-50/30 to-transparent flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4 animate-pulse"></div>
           <p className="text-gray-500">Loading team members...</p>
@@ -107,15 +97,17 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
 
   return (
     <div
-      className="relative w-full h-[480px] md:h-[600px] overflow-hidden bg-gradient-to-b from-transparent via-red-50/30 to-transparent"
+      className="relative w-full h-[480px] md:h-[600px] overflow-hidden bg-gradient-to-b from-transparent via-cyan-50/30 to-transparent"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
+      onMouseEnter={() => setIsPaused(true)}
+      onMouseLeave={() => setIsPaused(false)}
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-red-400/20 to-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-br from-cyan-400/20 to-red-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       {/* 3D Carousel Container */}
@@ -137,11 +129,11 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
               className={`absolute transition-all duration-1000 ease-in-out ${isActive ? 'cursor-default' : 'cursor-pointer hover:scale-110'
                 }`}
               style={position}
-              onClick={() => !isActive && handleDotClick(index)}
+              onClick={() => !isActive && advanceTo(index)}
             >
               <div className={`bg-white rounded-2xl shadow-2xl p-4 md:p-6 border-2 transition-all duration-500 ${isActive
                   ? 'border-cyan-400 shadow-cyan-400/30 shadow-2xl'
-                  : 'border-gray-200 hover:border-red-400'
+                  : 'border-gray-200 hover:border-blue-400'
                 } ${cardWidth} ${cardHeight} flex flex-col`}>
 
                 {/* Member Photo */}
@@ -150,7 +142,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                     <img
                       src={member.image}
                       alt={`${member.name} - ${member.role}`}
-                      className="w-full h-full rounded-full object-cover border-4 border-red-600 shadow-lg"
+                      className="w-full h-full rounded-full object-cover border-4 border-blue-600 shadow-lg"
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
@@ -159,16 +151,10 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                   ) : null}
 
                   {/* Fallback initials */}
-                  <div className={`w-full h-full bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg ${member.image ? 'hidden' : 'flex'}`}>
+                  <div className={`w-full h-full bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg ${member.image ? 'hidden' : 'flex'}`}>
                     {getInitials(member.name)}
                   </div>
 
-                  {/* Active Indicator */}
-                  {isActive && (
-                    <div className="absolute -top-1 -right-1 w-5 h-5 bg-cyan-400 rounded-full flex items-center justify-center">
-                      <div className="w-2.5 h-2.5 bg-white rounded-full animate-ping"></div>
-                    </div>
-                  )}
                 </div>
 
                 {/* Alumni Badge */}
@@ -190,12 +176,12 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
 
                 {/* Member Info */}
                 <div className="text-center flex-1 flex flex-col">
-                  <h3 className={`text-base md:text-lg font-bold mb-1 transition-colors ${isActive ? 'text-red-600' : 'text-gray-900'
+                  <h3 className={`text-base md:text-lg font-bold mb-1 transition-colors ${isActive ? 'text-blue-600' : 'text-gray-900'
                     }`}>
                     {member.name || 'Team Member'}
                   </h3>
 
-                  <p className="text-red-600 font-semibold mb-2 text-xs md:text-sm">
+                  <p className="text-blue-600 font-semibold mb-2 text-xs md:text-sm">
                     {member.role || 'Team Member'}
                   </p>
 
@@ -229,46 +215,6 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
         })}
       </div>
 
-      {/* Navigation Controls */}
-      <div className="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex items-center gap-3 md:gap-4">
-        <button
-          onClick={handlePrevious}
-          className="w-10 h-10 md:w-12 md:h-12 bg-white/90 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
-          aria-label="Previous team member"
-        >
-          <ChevronLeft className="text-red-600 group-hover:scale-110 transition-transform" size={isMobile ? 18 : 20} />
-        </button>
-
-        {/* Dots Indicator */}
-        <div className="flex gap-1.5 md:gap-2">
-          {teamMembers.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => handleDotClick(index)}
-              className={`w-2.5 h-2.5 md:w-3 md:h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                  ? 'bg-cyan-400 scale-125'
-                  : 'bg-white/60 hover:bg-white/80'
-                }`}
-              aria-label={`Go to team member ${index + 1}`}
-            />
-          ))}
-        </div>
-
-        <button
-          onClick={handleNext}
-          className="w-10 h-10 md:w-12 md:h-12 bg-white/90 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group"
-          aria-label="Next team member"
-        >
-          <ChevronRight className="text-red-600 group-hover:scale-110 transition-transform" size={isMobile ? 18 : 20} />
-        </button>
-      </div>
-
-      {/* Swipe hint for mobile */}
-      {isMobile && (
-        <div className="absolute bottom-1 left-1/2 transform -translate-x-1/2 text-xs text-gray-400">
-          Swipe to navigate
-        </div>
-      )}
     </div>
   );
 };

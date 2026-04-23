@@ -71,9 +71,11 @@ export const metadata = {
     },
   },
   verification: {
-    // Add your verification codes here after setting up Search Console / Bing Webmaster
-    // google: 'your-google-verification-code',
-    // yandex: 'your-yandex-verification-code',
+    google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION,
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION,
+    other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION }
+      : undefined,
   },
   category: 'education',
 };
@@ -88,7 +90,7 @@ const jsonLd = {
   logo: 'https://overseeducation.com/logo.png',
   description: 'India\'s trusted study abroad consultancy helping students pursue higher education at 70+ partner universities across UK, USA, Ireland, Germany, France, and Finland.',
   email: 'axelisoverseas@overseeducation.com',
-  telephone: '+91-9606930003',
+  telephone: '+91 8970224250',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bengaluru',
@@ -119,8 +121,8 @@ export default function RootLayout({ children }) {
         <link rel="canonical" href="https://overseeducation.com" />
       </head>
       <body className="font-sans antialiased text-slate-900 bg-slate-50 flex flex-col min-h-screen">
-        <div className="bg-gradient-to-r from-red-600 to-red-800 text-white py-3 px-4 text-center text-sm md:text-base font-extrabold shadow-md z-[100] relative uppercase tracking-wider">
-           🔥 DEADLINE: 30th April for September 2026 Public Uni ZTF Student Plan - 50% DISCOUNT! 🔥
+        <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600 text-white py-3 px-4 text-center text-sm md:text-base font-extrabold shadow-md z-[100] relative uppercase tracking-wider">
+           DEADLINE: 30th April for September 2026 Public Uni ZTF Student Plan — 50% DISCOUNT
         </div>
         <Navbar />
         <main className="flex-grow">

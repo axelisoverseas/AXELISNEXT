@@ -1,8 +1,11 @@
 'use client';
 
-import React, { useState } from 'react';
-import { Phone, Mail, MapPin, Clock, Send, Globe, Award, Facebook, Instagram, Linkedin, Youtube, CheckCircle } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Phone, Mail, MapPin, Clock, Send, Globe, Award, Facebook, Instagram, Linkedin, Youtube, CheckCircle, Calendar } from 'lucide-react';
 import { siteInfo } from '../../data/siteData';
+import { TextEffect, TextEffectInView } from '../../components/ui/TextEffect';
+
+const CALENDLY_URL = 'https://calendly.com/axelisoverseas/counsellingsession';
 
 export default function ContactPage() {
     const [formData, setFormData] = useState({
@@ -15,6 +18,16 @@ export default function ContactPage() {
 
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState(null);
+
+    useEffect(() => {
+        const id = 'calendly-widget-script';
+        if (document.getElementById(id)) return;
+        const script = document.createElement('script');
+        script.id = id;
+        script.src = 'https://assets.calendly.com/assets/external/widget.js';
+        script.async = true;
+        document.body.appendChild(script);
+    }, []);
 
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -43,7 +56,10 @@ export default function ContactPage() {
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-                        Contact <span className="text-blue-400">Our Experts</span>
+                        <TextEffect as="span" per="word" preset="blur">Contact</TextEffect>{' '}
+                        <span className="text-blue-400">
+                            <TextEffect as="span" per="char" preset="blur" delay={0.25}>Our Experts</TextEffect>
+                        </span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
                         Take the first step toward unparalleled study abroad consulting.
@@ -66,23 +82,22 @@ export default function ContactPage() {
                 </div>
             </section>
 
-            {/* Brand Video Section */}
-            <section className="bg-white pt-16 pb-8">
-                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-slate-100 group">
-                        <video 
-                            autoPlay 
-                            loop 
-                            muted 
-                            playsInline 
-                            className="w-full aspect-video object-cover"
-                        >
-                            <source src="/videos/brand-outro.mp4" type="video/mp4" />
-                        </video>
-                        <div className="absolute inset-0 bg-slate-900/5 group-hover:bg-transparent transition-colors"></div>
+            {/* Calendly Booking Section */}
+            <section className="bg-white py-16 border-b border-slate-100">
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-10">
+                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold mb-4">
+                            <Calendar size={16} /> Book a 1:1 session
+                        </div>
+                        <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-3">Schedule your free counselling call</TextEffectInView>
+                        <p className="text-slate-600 max-w-2xl mx-auto">Pick a time that works for you — we'll walk you through eligibility, scholarships, and next steps.</p>
                     </div>
-                    <div className="text-center mt-8">
-                        <p className="text-slate-500 font-medium italic">Empowering your global education dreams with expert guidance.</p>
+                    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                        <div
+                            className="calendly-inline-widget"
+                            data-url={CALENDLY_URL}
+                            style={{ minWidth: '320px', height: '760px' }}
+                        />
                     </div>
                 </div>
             </section>
@@ -94,7 +109,7 @@ export default function ContactPage() {
 
                         {/* Form Section */}
                         <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-12">
-                            <h2 className="text-3xl font-bold text-slate-900 mb-8 tracking-tight">Send us a Message</h2>
+                            <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl font-bold text-slate-900 mb-8 tracking-tight">Send us a Message</TextEffectInView>
 
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
@@ -182,7 +197,7 @@ export default function ContactPage() {
                         {/* Information Section */}
                         <div className="space-y-8">
                             <div className="bg-slate-900 rounded-3xl shadow-sm border border-slate-800 p-8 md:p-12 text-white">
-                                <h2 className="text-3xl font-bold mb-8 tracking-tight">Get in Touch</h2>
+                                <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl font-bold mb-8 tracking-tight">Get in Touch</TextEffectInView>
 
                                 <div className="space-y-8">
                                     <div className="flex items-start gap-5">
@@ -240,13 +255,13 @@ export default function ContactPage() {
                                     <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-slate-600 rounded-xl hover:bg-blue-50 hover:text-blue-600 transition-colors border border-slate-100">
                                         <Facebook size={24} />
                                     </a>
-                                    <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-slate-600 rounded-xl hover:bg-pink-50 hover:text-pink-600 transition-colors border border-slate-100">
+                                    <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-slate-600 rounded-xl hover:bg-cyan-50 hover:text-cyan-600 transition-colors border border-slate-100">
                                         <Instagram size={24} />
                                     </a>
                                     <a href={siteInfo.social.linkedin} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-slate-600 rounded-xl hover:bg-blue-50 hover:text-blue-700 transition-colors border border-slate-100">
                                         <Linkedin size={24} />
                                     </a>
-                                    <a href={siteInfo.social.youtube} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-slate-600 rounded-xl hover:bg-red-50 hover:text-red-600 transition-colors border border-slate-100">
+                                    <a href={siteInfo.social.youtube} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-slate-600 rounded-xl hover:bg-cyan-50 hover:text-cyan-700 transition-colors border border-slate-100">
                                         <Youtube size={24} />
                                     </a>
                                 </div>

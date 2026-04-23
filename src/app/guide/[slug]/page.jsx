@@ -52,11 +52,25 @@ export default async function CountryGuidePage({ params }) {
         }
     };
 
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://overseeducation.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Study Guides", "item": "https://overseeducation.com/#guides" },
+            { "@type": "ListItem", "position": 3, "name": `Study in ${data.name}`, "item": `https://overseeducation.com/guide/${slug}` },
+        ],
+    };
+
     return (
         <>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
             <div className="min-h-screen bg-white pt-24 pb-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

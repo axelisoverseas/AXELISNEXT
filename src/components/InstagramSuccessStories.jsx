@@ -1,525 +1,260 @@
-"use client";
-import React, { useState, useEffect } from 'react';
-import { Play, ExternalLink, Instagram, Heart, MessageCircle, Share2, Eye, X } from 'lucide-react';
+'use client';
+
+import React, { useEffect, useRef, useState } from 'react';
+import { Play, Instagram, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 import AnimatedSection from './AnimatedSection';
 import { StartJourneyCTA } from './CTAButton';
-import { SocialMediaInline } from './SocialMediaButtons';
-import { getUniqueVideoShuffle, simpleVideoShuffle } from '../utils/videoShuffler';
+import { TextEffectInView } from './ui/TextEffect';
 
-// Import actual video reels - Mix of original and new contextual videos using public path
-const reel1 = '/reels/ardnav_success_story.mp4';
-const reel2 = '/reels/rajat_dublin_success.mp4';
-const reel3 = '/reels/netherlands_part_time_work.mp4';
-const reel4 = '/reels/dutch_education_future.mp4';
-const reel5 = '/reels/education_loan_no_collateral.mp4';
-const reel6 = '/reels/netherlands_top_destination.mp4';
-const reel7 = '/reels/study_abroad_timing.mp4';
-const reel8 = '/reels/axelis_journey_timing.mp4';
-const reel9 = '/reels/netherlands_visa_work_opportunities.mp4';
-const reel10 = '/reels/Blink-52856e8e-73eb-4b68-b410-8a448a2ab881-Edited-1.mp4';
-const reel11 = '/reels/whatsapp_video1.mp4';
-const reel12 = '/reels/reel_copy.mp4';
-
-// Actual Axelis Overseas reels data with contextual content
-const instagramReels = [
+// 4 curated reels — one sliding carousel, unified blue/cyan/slate palette.
+const reels = [
   {
-    id: '1',
-    videoSrc: reel1,
-    videoUrl: 'https://www.instagram.com/reel/C-4Z8_T/axelis_overseas/',
-    caption: '🎉 Hear from Ardnav as he shares his journey with Axelis Overseas and how our expert services helped him achieve his study abroad dreams! Real student, real success! 🌟 #AxelisSuccess #StudentTestimonial',
+    id: 'ardnav',
+    videoSrc: '/reels/ardnav_success_story.mp4',
     studentName: 'Ardnav',
     university: 'International University',
-    country: 'Abroad',
-    likes: 342,
-    comments: 28,
-    views: '4.2K',
-    duration: '0:58'
+    country: 'Germany',
+    tag: 'Success Story',
+    caption:
+      'From application to offer letter — how Ardnav secured his admit to a top European university with Axelis.',
   },
   {
-    id: '2',
-    videoSrc: reel2,
-    videoUrl: 'https://www.instagram.com/reel/D-8B4_R/axelis_overseas/',
-    caption: '🎓 Rajat Limaye - MSc Mechanical Engineering at Dublin City University! Another success story from Axelis Overseas. Your dreams are next! 🇮🇪✨ #DublinUniversity #MechanicalEngineering #AxelisSuccess',
+    id: 'rajat',
+    videoSrc: '/reels/rajat_dublin_success.mp4',
     studentName: 'Rajat Limaye',
     university: 'Dublin City University',
     country: 'Ireland',
-    likes: 289,
-    comments: 22,
-    views: '3.1K',
-    duration: '0:52'
+    tag: 'MSc Mechanical',
+    caption:
+      'Rajat\'s MSc Mechanical Engineering journey to Dublin — offer, visa and housing handled end-to-end.',
   },
   {
-    id: '3',
-    videoSrc: reel3,
-    videoUrl: 'https://www.instagram.com/reel/E-2X2_P/axelis_overseas/',
-    caption: '💶 Earn While You Learn: €9-€12/Hour in the Netherlands! 🇳🇱 Explore how part-time work can enhance your study experience and support your finances! #NetherlandsStudy #PartTimeWork #AxelisOverseas',
-    studentName: 'Netherlands Guide',
-    university: 'Dutch Universities',
+    id: 'loan',
+    videoSrc: '/reels/education_loan_no_collateral.mp4',
+    studentName: 'Loan Support',
+    university: 'Collateral-Free Financing',
+    country: 'India → Global',
+    tag: 'Finance',
+    caption:
+      'Education loans up to ₹1 Cr with no collateral, across 27+ partner banks — structured in 7 days.',
+  },
+  {
+    id: 'netherlands',
+    videoSrc: '/reels/netherlands_top_destination.mp4',
+    studentName: 'Netherlands Track',
+    university: 'Top Dutch Universities',
     country: 'Netherlands',
-    likes: 456,
-    comments: 34,
-    views: '5.2K',
-    duration: '0:48'
+    tag: 'Destination',
+    caption:
+      'Why the Netherlands is our most-recommended 2025 destination — intake calendar, costs, and work rights.',
   },
-  {
-    id: '4',
-    videoSrc: reel4,
-    videoUrl: 'https://www.instagram.com/reel/F-1Y5_K/axelis_overseas/',
-    caption: '🇳🇱✨ Unlock Your Future with a Dutch Education! Thinking of studying in the Netherlands? Discover why it\'s the perfect choice for your academic journey! #DutchEducation #StudyInNetherlands #AxelisOverseas',
-    studentName: 'Netherlands Info',
-    university: 'Dutch Universities',
-    country: 'Netherlands',
-    likes: 378,
-    comments: 29,
-    views: '4.1K',
-    duration: '0:55'
-  },
-  {
-    id: '5',
-    videoSrc: reel5,
-    videoUrl: 'https://www.instagram.com/reel/G-7W1_M/axelis_overseas/',
-    caption: '💸 Get your Education Loan – No Collateral, up to ₹1 CR, from 27+ Banks in just 7 Days! ✈️📚 Dreaming of studying abroad but worried about finances? We\'ve got you covered! #EducationLoan #StudyAbroad #AxelisOverseas',
-    studentName: 'Loan Solutions',
-    university: 'Financial Support',
-    country: 'India',
-    likes: 523,
-    comments: 67,
-    views: '8.1K',
-    duration: '0:59'
-  },
-  {
-    id: '6',
-    videoSrc: reel6,
-    videoUrl: 'https://www.instagram.com/reel/H-3Q9_L/axelis_overseas/',
-    caption: '🌍 WHY the Netherlands is the #1 Study Abroad Destination for Indian Students in 2025! 🇳🇱✨ Looking for the perfect study destination? Here\'s why Netherlands tops the list! #Netherlands #StudyAbroad #AxelisOverseas',
-    studentName: 'Netherlands Guide',
-    university: 'Top Destination',
-    country: 'Netherlands',
-    likes: 612,
-    comments: 45,
-    views: '7.8K',
-    duration: '0:52'
-  },
-  {
-    id: '7',
-    videoSrc: reel7,
-    videoUrl: 'https://www.instagram.com/reel/J-5H2_T/axelis_overseas/',
-    caption: '🎓✨ Dreaming of studying abroad? Timing is everything! 🌍 When should you start preparing? Get expert advice on the perfect timeline for your study abroad journey! #StudyAbroadTiming #AxelisOverseas',
-    studentName: 'Study Planning',
-    university: 'Expert Guidance',
-    country: 'Global',
-    likes: 389,
-    comments: 31,
-    views: '4.7K',
-    duration: '0:48'
-  },
-  {
-    id: '8',
-    videoSrc: reel8,
-    videoUrl: 'https://www.instagram.com/reel/K-9B5_V/axelis_overseas/',
-    caption: '🎓🌍 When to Start Your Study Abroad Journey with Axelis Overseas? 🇳🇱✨ Thinking about studying abroad? Let us guide you on the perfect timing and preparation strategy! #AxelisJourney #StudyAbroad',
-    studentName: 'Axelis Guidance',
-    university: 'Expert Planning',
-    country: 'Netherlands',
-    likes: 267,
-    comments: 19,
-    views: '3.4K',
-    duration: '0:44'
-  },
-  {
-    id: '9',
-    videoSrc: reel9,
-    videoUrl: 'https://www.instagram.com/reel/L-1C8_W/axelis_overseas/',
-    caption: '🇳🇱✨ Unlock Your Future: Visa & Post-Study Work Opportunities in the Netherlands! Curious about career prospects after graduation? Discover amazing opportunities! #NetherlandsVisa #PostStudyWork #AxelisOverseas',
-    studentName: 'Career Opportunities',
-    university: 'Netherlands Unis',
-    country: 'Netherlands',
-    likes: 445,
-    comments: 38,
-    views: '5.9K',
-    duration: '0:56'
-  },
-  {
-    id: '10',
-    videoSrc: reel10,
-    videoUrl: 'https://www.instagram.com/reel/M-7X3_B/axelis_overseas/',
-    caption: '🌟 Blink and you might miss it! Huge scholarship opportunities waiting for you this application cycle. Learn how our experts secure top funding for Indian students! #StudyAbroadScholarship #StudentVisa',
-    studentName: 'Scholarship Alert',
-    university: 'Global Universities',
-    country: 'Worldwide',
-    likes: 832,
-    comments: 94,
-    views: '12.4K',
-    duration: '0:42'
-  },
-  {
-    id: '11',
-    videoSrc: reel11,
-    videoUrl: 'https://www.instagram.com/reel/N-2Y4_A/axelis_overseas/',
-    caption: '📱 Your study abroad dreams are just one WhatsApp message away! See how we instantly connect with students and solve their queries in real-time. #StudentSupport #AxelisOverseas',
-    studentName: 'Instant Support',
-    university: 'Counselling Team',
-    country: 'India / Global',
-    likes: 310,
-    comments: 42,
-    views: '4.8K',
-    duration: '0:35'
-  },
-  {
-    id: '12',
-    videoSrc: reel12,
-    videoUrl: 'https://www.instagram.com/reel/P-5Z1_C/axelis_overseas/',
-    caption: '🎯 Target accepted! Another amazing intake season. Join the Axelis family and let us navigate your university applications together! #UniversityAdmissions #StudyAbroad2025',
-    studentName: 'Admissions Strategy',
-    university: 'Top Ranked Unis',
-    country: 'Multiple Destinations',
-    likes: 567,
-    comments: 61,
-    views: '7.2K',
-    duration: '0:49'
-  }
 ];
 
-const InstagramReelCard = ({ reel, index, onVideoClick }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const [videoError, setVideoError] = useState(false);
-  const [progress, setProgress] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const videoRef = React.useRef(null);
+const ReelCard = ({ reel, isActive, onOpen }) => {
+  const videoRef = useRef(null);
+  const [loaded, setLoaded] = useState(false);
 
-  // Set different preview times for each video
-  const previewTime = React.useMemo(() => {
-    const times = [2, 5, 8, 3, 6, 4, 7, 9, 1, 10, 12, 15];
-    return times[index % times.length];
-  }, [index]);
-
-  React.useEffect(() => {
-    if (videoRef.current && !videoError) {
-      videoRef.current.currentTime = previewTime;
+  useEffect(() => {
+    const v = videoRef.current;
+    if (!v) return;
+    if (isActive) {
+      v.currentTime = 1.5;
+      v.play().catch(() => {});
+    } else {
+      v.pause();
     }
-  }, [previewTime, videoError]);
-
-  // Update progress bar
-  React.useEffect(() => {
-    const video = videoRef.current;
-    if (!video) return;
-
-    const updateProgress = () => {
-      if (video.duration) {
-        const progressPercent = (video.currentTime / video.duration) * 100;
-        setProgress(progressPercent);
-      }
-    };
-
-    const handlePlay = () => setIsPlaying(true);
-    const handlePause = () => setIsPlaying(false);
-
-    video.addEventListener('timeupdate', updateProgress);
-    video.addEventListener('play', handlePlay);
-    video.addEventListener('pause', handlePause);
-
-    return () => {
-      video.removeEventListener('timeupdate', updateProgress);
-      video.removeEventListener('play', handlePlay);
-      video.removeEventListener('pause', handlePause);
-    };
-  }, []);
-
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-    if (videoRef.current && reel.videoSrc && !videoError) {
-      videoRef.current.currentTime = previewTime;
-      videoRef.current.play().catch(() => {
-        // Handle autoplay restrictions
-        console.log('Autoplay prevented');
-      });
-    }
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-    if (videoRef.current && reel.videoSrc) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = previewTime;
-      setProgress(0);
-    }
-  };
-
-  const handleReelClick = () => {
-    // Only open modal for videos with local source, don't open external windows
-    if (reel.videoSrc) {
-      onVideoClick(reel);
-    }
-  };
+  }, [isActive]);
 
   return (
-    <div
-      className={`relative bg-white rounded-2xl shadow-lg overflow-hidden transform transition-all duration-500 hover:scale-105 hover:shadow-2xl cursor-pointer group ${index % 2 === 0 ? 'animate-slideInLeft' : 'animate-slideInRight'
-        }`}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
-      onClick={handleReelClick}
-      style={{ animationDelay: `${index * 0.1}s` }}
+    <button
+      type="button"
+      onClick={onOpen}
+      className={`group relative shrink-0 w-[78vw] sm:w-[320px] md:w-[360px] aspect-[9/16] rounded-3xl overflow-hidden border transition-all duration-500 snap-center text-left ${
+        isActive
+          ? 'border-cyan-400/60 shadow-[0_30px_80px_-30px_rgba(34,211,238,0.55)] scale-100'
+          : 'border-slate-200/70 shadow-md scale-[0.94] opacity-80 hover:opacity-100'
+      }`}
+      aria-label={`Play reel — ${reel.studentName}`}
     >
-      {/* Video Preview with Play Overlay */}
-      <div className="relative aspect-[9/16] overflow-hidden">
-        {reel.videoSrc && !videoError ? (
-          <video
-            ref={videoRef}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-            muted
-            loop
-            playsInline
-            onError={() => setVideoError(true)}
-            onLoadedData={() => {
-              if (videoRef.current) {
-                videoRef.current.currentTime = previewTime;
-              }
-            }}
-          >
-            <source src={reel.videoSrc} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-        ) : (
-          <div className="w-full h-full bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
-            <div className="text-center">
-              <Play size={48} className="text-red-600 mx-auto mb-2" />
-              <p className="text-red-700 font-semibold">Video Preview</p>
-            </div>
-          </div>
-        )}
+      <video
+        ref={videoRef}
+        src={reel.videoSrc}
+        muted
+        loop
+        playsInline
+        preload="metadata"
+        onLoadedData={() => setLoaded(true)}
+        className="absolute inset-0 w-full h-full object-cover"
+      />
+      {!loaded && <div className="absolute inset-0 bg-slate-800 animate-pulse" />}
 
-        {/* Themed Progress Bar */}
-        {reel.videoSrc && !videoError && (
-          <div className="absolute bottom-0 left-0 right-0 h-1 bg-black/30">
-            <div
-              className="h-full bg-gradient-to-r from-blue-400 via-pink-400 to-blue-500 transition-all duration-300 ease-out"
-              style={{ width: `${progress}%` }}
-            >
-              <div className="h-full bg-gradient-to-r from-blue-300 via-pink-300 to-blue-400 opacity-80"></div>
-            </div>
-          </div>
-        )}
+      {/* Vignette */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/10 to-slate-900/30" />
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/30"></div>
-
-        {/* Play Button - Hide when playing */}
-        <div className={`absolute inset-0 flex items-center justify-center transition-all duration-300 ${isHovered && !isPlaying ? 'bg-black/20' : 'bg-transparent'
-          } ${isPlaying ? 'opacity-0' : 'opacity-100'}`}>
-          <div className={`bg-gradient-to-r from-blue-500 via-pink-500 to-blue-600 rounded-full p-4 transform transition-all duration-300 shadow-lg ${isHovered ? 'scale-110 from-blue-400 via-pink-400 to-blue-500' : 'scale-100'
-            }`}>
-            <Play size={32} className="text-white ml-1" fill="currentColor" />
-          </div>
-        </div>
-
-        {/* Duration Badge */}
-        <div className="absolute top-4 right-4 bg-black/70 text-white px-2 py-1 rounded-lg text-sm font-medium">
-          {reel.duration}
-        </div>
-
-        {/* Instagram Badge */}
-        <div className="absolute top-4 left-4 bg-gradient-to-r from-blue-500 to-pink-500 text-white p-2 rounded-lg">
-          <Instagram size={20} />
-        </div>
+      {/* Top row */}
+      <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-wider text-blue-700">
+          <Instagram size={12} /> {reel.tag}
+        </span>
+        <span className="px-2 py-1 rounded-md bg-slate-900/70 text-white text-[10px] font-semibold backdrop-blur">
+          {reel.country}
+        </span>
       </div>
 
-      {/* Content */}
-      <div className="p-6">
-        {/* Student Info */}
-        <div className="mb-4">
-          <h3 className="text-xl font-bold text-gray-900 mb-1">{reel.studentName}</h3>
-          <p className="text-blue-600 font-semibold">{reel.university}</p>
-          <p className="text-gray-600 text-sm">{reel.country}</p>
-        </div>
-
-        {/* Caption */}
-        <p className="text-gray-700 text-sm mb-4 line-clamp-3">{reel.caption}</p>
-
-        {/* Engagement Stats */}
-        <div className="flex items-center justify-between text-gray-500 text-sm">
-          <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-1">
-              <Heart size={16} className="text-pink-500" />
-              <span>{reel.likes}</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <MessageCircle size={16} />
-              <span>{reel.comments}</span>
-            </div>
-            <div className="flex items-center space-x-1">
-              <Eye size={16} />
-              <span>{reel.views}</span>
-            </div>
+      {/* Play pulse — only when inactive */}
+      {!isActive && (
+        <div className="absolute inset-0 flex items-center justify-center">
+          <div className="w-16 h-16 rounded-full bg-white/15 backdrop-blur-md border border-white/40 flex items-center justify-center">
+            <Play size={26} className="text-white fill-white ml-1" />
           </div>
-          <ExternalLink size={16} className="text-gray-400 group-hover:text-blue-600 transition-colors" />
         </div>
-      </div>
+      )}
 
-      {/* Hover Effect Border */}
-      <div className={`absolute inset-0 border-2 border-red-500 rounded-2xl transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'
-        }`}></div>
-    </div>
+      {/* Bottom info */}
+      <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+        <h3 className="text-lg font-bold mb-1">{reel.studentName}</h3>
+        <p className="text-xs text-cyan-200/90 font-semibold mb-2">{reel.university}</p>
+        <p className="text-xs text-slate-200/90 line-clamp-2 leading-snug">{reel.caption}</p>
+      </div>
+    </button>
   );
 };
 
 const InstagramSuccessStories = () => {
-  // Use global shuffle coordinator to ensure unique first 3 videos
-  const [reels, setReels] = useState(() => {
-    try {
-      console.log('Original instagramReels:', instagramReels.length, 'items');
-      console.log('First few items:', instagramReels.slice(0, 3).map(r => r?.id));
+  const [active, setActive] = useState(0);
+  const [selected, setSelected] = useState(null);
+  const trackRef = useRef(null);
 
-      // Try the unique shuffle first
-      let shuffled = getUniqueVideoShuffle(instagramReels, 'instagram-reels');
-
-      // If that fails, use simple shuffle
-      if (!shuffled || shuffled.length === 0) {
-        console.log('Falling back to simple shuffle for Instagram reels');
-        shuffled = simpleVideoShuffle(instagramReels);
-      }
-
-      console.log('Final shuffled result:', shuffled.length, 'items');
-      console.log('Final shuffled first few:', shuffled.slice(0, 3).map(r => r?.id));
-
-      return shuffled.length > 0 ? shuffled : instagramReels;
-    } catch (error) {
-      console.error('Error shuffling Instagram reels:', error);
-      // Last resort: use original array
-      return instagramReels;
-    }
-  });
-  const [visibleReels, setVisibleReels] = useState(6);
-  const [selectedVideo, setSelectedVideo] = useState(null);
-
-  const loadMoreReels = () => {
-    const validReelsCount = reels.filter(reel => reel && reel.id).length;
-    setVisibleReels(prev => Math.min(prev + 3, validReelsCount));
+  // Scrolls only the horizontal carousel track — never the page viewport.
+  const scrollTrackTo = (idx) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const child = track.children?.[idx];
+    if (!child) return;
+    const targetLeft = child.offsetLeft - (track.clientWidth - child.clientWidth) / 2;
+    track.scrollTo({ left: Math.max(0, targetLeft), behavior: 'smooth' });
   };
 
-  // Reshuffle function for manual randomization
-  const reshuffleReels = () => {
-    try {
-      const shuffled = getUniqueVideoShuffle(instagramReels, `instagram-reels-reshuffle-${Date.now()}`);
-      setReels(shuffled.length > 0 ? shuffled : instagramReels);
-      setVisibleReels(6); // Reset to initial count
-    } catch (error) {
-      console.error('Error reshuffling Instagram reels:', error);
-      setReels(instagramReels);
-    }
+  const go = (nextIndex) => {
+    const clamped = Math.max(0, Math.min(reels.length - 1, nextIndex));
+    setActive(clamped);
+    scrollTrackTo(clamped);
   };
 
-  // Handle ESC key to close video modal
+  const prev = () => go(active - 1);
+  const next = () => go((active + 1) % reels.length);
+
+  // Autoplay advance every 7s, pause on modal/hover handled via setInterval reset
   useEffect(() => {
-    const handleEscKey = (event) => {
-      if (event.key === 'Escape' && selectedVideo) {
-        closeVideoModal();
-      }
-    };
+    if (selected) return undefined;
+    const id = setInterval(() => {
+      setActive((i) => {
+        const nxt = (i + 1) % reels.length;
+        scrollTrackTo(nxt);
+        return nxt;
+      });
+    }, 7000);
+    return () => clearInterval(id);
+  }, [selected]);
 
-    if (selectedVideo) {
-      document.addEventListener('keydown', handleEscKey);
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscKey);
-    };
-  }, [selectedVideo]);
-
-  const openVideoModal = (reel) => {
-    setSelectedVideo(reel);
+  // ESC to close modal
+  useEffect(() => {
+    if (!selected) return undefined;
+    const onKey = (e) => e.key === 'Escape' && setSelected(null);
+    document.addEventListener('keydown', onKey);
     document.body.style.overflow = 'hidden';
-  };
-
-  const closeVideoModal = () => {
-    setSelectedVideo(null);
-    document.body.style.overflow = 'unset';
-  };
+    return () => {
+      document.removeEventListener('keydown', onKey);
+      document.body.style.overflow = 'unset';
+    };
+  }, [selected]);
 
   return (
-    <AnimatedSection className="py-20 bg-white">
+    <AnimatedSection className="py-24 bg-gradient-to-b from-white via-slate-50 to-white border-y border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <div className="mb-6">
-            <span className="inline-block px-6 py-2 bg-gradient-to-r from-blue-500/10 to-pink-500/10 text-blue-600 text-sm font-bold rounded-full border border-purple-200">
-              <Instagram className="inline w-4 h-4 mr-2" />
-              Instagram Success Stories
-            </span>
-          </div>
-          <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6">
-            Success Stories from{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-pink-600">
-              Instagram
+        <div className="text-center mb-12">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold tracking-wide uppercase mb-5">
+            <Instagram size={14} /> Student Stories
+          </span>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
+            <TextEffectInView as="span" per="word" preset="blur">Real journeys from</TextEffectInView>{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+              our students
             </span>
           </h2>
-          <p className="text-xl text-slate-600 max-w-3xl mx-auto mb-8">
-            Watch real student journeys unfold! From application to acceptance, see how our students
-            achieved their study abroad dreams through our Instagram reels.
+          <p className="text-slate-600 max-w-2xl mx-auto text-base md:text-lg">
+            Four short reels — straight from the counselling floor. Tap any card to play.
           </p>
-          <div className="flex flex-col items-center space-y-4">
-            <div className="flex items-center justify-center space-x-2 text-gray-500">
-              <Share2 size={20} />
-              <span>Follow @axelis_overseas for more success stories</span>
-            </div>
-            <SocialMediaInline />
-          </div>
         </div>
 
-        {/* Reels Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-          {reels
-            .slice(0, visibleReels)
-            .filter(reel => reel && reel.id)
-            .map((reel, index) => (
-              <InstagramReelCard key={`${reel.id}-${index}`} reel={reel} index={index} onVideoClick={openVideoModal} />
-            ))}
-        </div>
+        {/* Carousel */}
+        <div className="relative">
+          {/* Prev / Next buttons — hidden on small screens, visible md+ */}
+          <button
+            onClick={prev}
+            aria-label="Previous reel"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-700 shadow-lg hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+          >
+            <ChevronLeft size={22} />
+          </button>
+          <button
+            onClick={next}
+            aria-label="Next reel"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-700 shadow-lg hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+          >
+            <ChevronRight size={22} />
+          </button>
 
-        {/* Load More Button */}
-        {visibleReels < reels.filter(reel => reel && reel.id).length && (
-          <div className="text-center mb-12">
-            <button
-              onClick={loadMoreReels}
-              className="bg-gradient-to-r from-blue-600 to-pink-600 text-white px-8 py-4 rounded-xl font-semibold hover:from-blue-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 hover:shadow-lg"
-            >
-              Load More Stories
-            </button>
-          </div>
-        )}
-
-        {/* CTA Section - Space Theme */}
-        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 md:p-12 text-center text-white relative overflow-hidden">
-          {/* Cosmic background effects */}
-          <div className="absolute inset-0 opacity-10">
-            <div
-              className="absolute inset-0"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%233b82f6' fill-opacity='0.2'%3E%3Ccircle cx='20' cy='20' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-              }}
-            ></div>
-          </div>
-          <div className="absolute top-4 right-4 w-16 h-16 bg-gradient-to-br from-blue-500/20 to-pink-500/20 rounded-full blur-xl animate-pulse"></div>
-          <div className="absolute bottom-4 left-4 w-20 h-20 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-          <div className="relative z-10">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Ready to Create Your Own Success Story?
-            </h3>
-            <p className="text-xl mb-8 opacity-90">
-              Join hundreds of students who have achieved their study abroad dreams with Axelis Overseas
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <StartJourneyCTA
-                text="Start Your Journey"
-                variant="light"
+          <div
+            ref={trackRef}
+            className="flex gap-5 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-6 px-4 sm:px-8 md:justify-center [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          >
+            {reels.map((reel, idx) => (
+              <ReelCard
+                key={reel.id}
+                reel={reel}
+                isActive={idx === active}
+                onOpen={() => setSelected(reel)}
               />
+            ))}
+          </div>
+
+          {/* Dots */}
+          <div className="flex items-center justify-center gap-2 mt-4">
+            {reels.map((r, idx) => (
+              <button
+                key={r.id}
+                onClick={() => go(idx)}
+                aria-label={`Go to reel ${idx + 1}`}
+                className={`h-2 rounded-full transition-all ${
+                  idx === active ? 'w-8 bg-blue-600' : 'w-2 bg-slate-300 hover:bg-slate-400'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* CTA Banner */}
+        <div className="mt-16 bg-slate-900 rounded-3xl p-10 md:p-12 text-center text-white relative overflow-hidden border border-slate-800">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+          <div className="relative z-10">
+            <h3 className="text-2xl md:text-3xl font-bold mb-3 tracking-tight">
+              Ready to be our next success story?
+            </h3>
+            <p className="text-slate-300 max-w-xl mx-auto mb-7 text-sm md:text-base">
+              Book a free counselling call and we'll map your admit, scholarship and visa plan — end to end.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+              <StartJourneyCTA text="Start Your Journey" variant="light" />
               <a
                 href="https://www.instagram.com/axelis_overseas/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 bg-gradient-to-r from-blue-600 to-pink-600 text-white px-6 py-3 rounded-xl font-semibold hover:from-blue-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-700 text-slate-200 hover:border-cyan-400 hover:text-cyan-300 transition-all text-sm font-semibold"
               >
-                <Instagram size={20} />
+                <Instagram size={18} />
                 <span>Follow on Instagram</span>
               </a>
             </div>
@@ -527,63 +262,48 @@ const InstagramSuccessStories = () => {
         </div>
       </div>
 
-      {/* Video Modal */}
-      {selectedVideo && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-90 modal-backdrop"
-          onClick={closeVideoModal}
-        >
-          <div
-            className="relative max-w-4xl w-full mx-4"
-            onClick={(e) => e.stopPropagation()}
+      {/* Modal */}
+      <AnimatePresence>
+        {selected && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/95 backdrop-blur-md"
+            onClick={() => setSelected(null)}
           >
-            {/* Close Button */}
-            <button
-              onClick={closeVideoModal}
-              className="absolute -top-12 right-0 text-white hover:text-cyan-400 transition-colors z-10"
+            <motion.div
+              initial={{ scale: 0.9, y: 20, opacity: 0 }}
+              animate={{ scale: 1, y: 0, opacity: 1 }}
+              exit={{ scale: 0.9, y: 20, opacity: 0 }}
+              transition={{ type: 'spring', stiffness: 180, damping: 22 }}
+              onClick={(e) => e.stopPropagation()}
+              className="relative w-full max-w-md aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl border border-slate-800"
             >
-              <X size={32} />
-            </button>
-
-            {/* Video Player */}
-            <div className="relative bg-black rounded-lg overflow-hidden">
-              {selectedVideo.videoSrc ? (
-                <video
-                  className="w-full max-h-[80vh] object-contain"
-                  controls
-                  autoPlay
-                  playsInline
-                >
-                  <source src={selectedVideo.videoSrc} type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              ) : (
-                <div className="aspect-[9/16] flex items-center justify-center bg-gray-800">
-                  <p className="text-white">Video not available</p>
-                </div>
-              )}
-
-              {/* Video Info */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
-                <h3 className="text-white font-bold text-lg mb-2">
-                  {selectedVideo.studentName} - {selectedVideo.university}
-                </h3>
-                <p className="text-gray-300 text-sm">
-                  {selectedVideo.caption}
-                </p>
-                <div className="flex items-center justify-between mt-4 text-sm text-gray-400">
-                  <div className="flex items-center space-x-4">
-                    <span>{selectedVideo.views} views</span>
-                    <span>{selectedVideo.likes} likes</span>
-                    <span>{selectedVideo.comments} comments</span>
-                  </div>
-                  <span>{selectedVideo.country}</span>
-                </div>
+              <video
+                key={selected.id}
+                src={selected.videoSrc}
+                autoPlay
+                controls
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+              <button
+                onClick={() => setSelected(null)}
+                aria-label="Close reel"
+                className="absolute top-3 right-3 w-10 h-10 rounded-full bg-white/15 backdrop-blur border border-white/30 flex items-center justify-center text-white hover:bg-white/25"
+              >
+                <X size={18} />
+              </button>
+              <div className="absolute left-4 right-4 bottom-4 text-white">
+                <h3 className="font-bold text-lg leading-tight">{selected.studentName}</h3>
+                <p className="text-xs text-cyan-200 font-semibold mb-1">{selected.university}</p>
+                <p className="text-xs text-slate-200/90 line-clamp-3">{selected.caption}</p>
               </div>
-            </div>
-          </div>
-        </div>
-      )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </AnimatedSection>
   );
 };

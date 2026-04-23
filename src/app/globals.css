@@ -77,3 +77,84 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* BorderBeam — rotating conic ring masked to the element border */
+@property --bb-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes bb-spin {
+  to { --bb-angle: 360deg; }
+}
+
+.bb-ring {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  padding: var(--bb-thickness, 2px);
+  background: conic-gradient(
+    from var(--bb-angle, 0deg),
+    transparent 0deg,
+    var(--bb-from, #22d3ee) 40deg,
+    var(--bb-to, #0b5cff) 90deg,
+    transparent 140deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  mask-composite: exclude;
+  animation: bb-spin var(--bb-duration, 6s) linear infinite;
+  animation-delay: var(--bb-delay, 0s);
+  will-change: --bb-angle;
+}
+
+/* BackgroundGradientAnimation — organic blob motion for the hero */
+@keyframes bg-first {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-8%, 12%); }
+}
+@keyframes bg-second {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(10%, -10%); }
+}
+@keyframes bg-third {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-12%, -8%); }
+}
+@keyframes bg-fourth {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(14%, 10%); }
+}
+@keyframes bg-fifth {
+  0%, 100% { transform: translate(0, 0); }
+  50% { transform: translate(-6%, -14%); }
+}
+
+.animate-bg-first  { animation: bg-first  22s ease-in-out infinite; }
+.animate-bg-second { animation: bg-second 26s ease-in-out infinite; }
+.animate-bg-third  { animation: bg-third  30s ease-in-out infinite; }
+.animate-bg-fourth { animation: bg-fourth 24s ease-in-out infinite; }
+.animate-bg-fifth  { animation: bg-fifth  28s ease-in-out infinite; }
+
+/* ShinyButton — shimmer sweep */
+@keyframes shiny-sweep {
+  0%   { --x: 100%; }
+  100% { --x: -100%; }
+}
+.shiny-btn {
+  --x: 100%;
+  background: linear-gradient(
+    -75deg,
+    var(--shiny-base, #2563eb) calc(var(--x) + 20%),
+    rgba(255,255,255,0.45) calc(var(--x) + 25%),
+    var(--shiny-base, #2563eb) calc(var(--x) + 100%)
+  );
+  animation: shiny-sweep 3.5s ease-in-out infinite;
+}

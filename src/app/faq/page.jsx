@@ -5,6 +5,7 @@ import { HelpCircle, ChevronDown, Search, MessageCircle, Phone, Globe, Award, Sh
 import Link from 'next/link';
 
 import { faqData } from '../../data/siteData';
+import { TextEffectInView } from '../../components/ui/TextEffect';
 
 const renderMarkdown = (text) => {
   if (!text) return null;
@@ -208,7 +209,7 @@ const FAQPage = () => {
               {/* Bottom CTA Card */}
               <div className="mt-16 bg-gradient-to-br from-blue-600 to-cyan-500 rounded-[3rem] p-12 md:p-16 text-white text-center shadow-2xl relative overflow-hidden group">
                 <div className="relative z-10 flex flex-col items-center">
-                  <h2 className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Still looking for answers?</h2>
+                  <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Still looking for answers?</TextEffectInView>
                   <p className="text-xl text-blue-50/80 mb-10 max-w-2xl leading-relaxed">Our expert counselors are available 24/7 to provide personalized guidance for your unique profile.</p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link 

@@ -211,7 +211,7 @@ const WhatsAppWidget = () => {
               {step === 'form' ? (
                 <form onSubmit={handleFormSubmit} className="space-y-4">
                   <div className="bg-gray-100 rounded-lg p-3 text-sm mb-4">
-                    <p className="text-gray-800 font-medium">👋 Hi! Let's get you connected.</p>
+                    <p className="text-gray-800 font-medium">Hi! Let&apos;s get you connected.</p>
                     <p className="text-gray-600 text-xs">Please provide your details to start the chat with our counselor.</p>
                   </div>
                   
@@ -281,7 +281,7 @@ const WhatsAppWidget = () => {
                   {/* Welcome Message */}
                   <div className="mb-4">
                     <div className="bg-gray-100 rounded-lg p-3 text-sm">
-                      <p className="text-gray-800 mb-2">👋 Hi, {formData.name}!</p>
+                      <p className="text-gray-800 mb-2">Hi, {formData.name}!</p>
                       <p className="text-gray-600 text-xs">How can we assist you with your {formData.degree === 'UG' ? 'Undergraduate' : 'Postgraduate'} studies today?</p>
                     </div>
                   </div>
@@ -360,7 +360,7 @@ const WhatsAppWidget = () => {
 
         {/* Notification Badge */}
         {!isOpen && (
-          <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center animate-pulse">
+          <div className="absolute -top-2 -right-2 bg-cyan-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center animate-pulse">
             1
           </div>
         )}

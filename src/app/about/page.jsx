@@ -4,6 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { Target, Eye, Users, Award, Globe, Heart, Play } from 'lucide-react';
+import { BorderBeam } from '@/components/ui/BorderBeam';
+import { TextEffect, TextEffectInView } from '@/components/ui/TextEffect';
 
 // Static Data specific to this page can be imported or mock-provided for Next.js 
 // We simplify it here to reduce file boilerplate, but keeping true to Axelis narrative
@@ -34,7 +36,10 @@ export default function AboutPage() {
                         />
                     </div>
                     <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-                        About <span className="text-blue-400">Axelis Overseas</span>
+                        <TextEffect as="span" per="word" preset="blur">About</TextEffect>{' '}
+                        <span className="text-blue-400">
+                            <TextEffect as="span" per="char" preset="blur" delay={0.25}>Axelis Overseas</TextEffect>
+                        </span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-light">
                         Your trusted partner in making study abroad dreams come true.
@@ -50,9 +55,9 @@ export default function AboutPage() {
                         {/* Narrative Content */}
                         <div className="space-y-8">
                             <div>
-                                <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
+                                <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
                                     Welcome to Axelis Overseas
-                                </h2>
+                                </TextEffectInView>
                                 <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
                                     <p>
                                         At Axelis Overseas, we believe that education is the key to unlocking limitless possibilities.
@@ -153,7 +158,7 @@ export default function AboutPage() {
                                 rel="noreferrer"
                                 className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-xl transition-all shadow-lg text-lg group self-start"
                             >
-                                <Play className="mr-3 text-red-500 group-hover:scale-110 transition-transform" size={24} fill="currentColor" />
+                                <Play className="mr-3 text-cyan-400 group-hover:scale-110 transition-transform" size={24} fill="currentColor" />
                                 Watch Our YouTube Podcast
                             </a>
                         </div>
@@ -168,7 +173,7 @@ export default function AboutPage() {
             {/* Clean Final CTA */}
             <section className="py-32 bg-slate-900 text-center border-t border-slate-800">
                 <div className="max-w-3xl mx-auto px-4">
-                    <h2 className="text-4xl font-extrabold text-white mb-6 tracking-tight">Ready to Transform Your Future?</h2>
+                    <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl font-extrabold text-white mb-6 tracking-tight">Ready to Transform Your Future?</TextEffectInView>
                     <p className="text-lg text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
                         Let us help you turn your study abroad dreams into reality with our expert guidance.
                     </p>
@@ -177,9 +182,10 @@ export default function AboutPage() {
                             href="https://calendly.com/axelisoverseas/counsellingsession"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="inline-flex justify-center items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg"
+                            className="relative overflow-hidden inline-flex justify-center items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg"
                         >
-                            Schedule FREE Consultation
+                            <span className="relative z-10">Book Your Counselling Call Today</span>
+                            <BorderBeam size={140} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />
                         </a>
                     </div>
                 </div>

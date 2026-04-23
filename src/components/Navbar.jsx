@@ -12,13 +12,14 @@ import {
   Users, ExternalLink, Globe2, Award, HelpCircle
 } from 'lucide-react';
 import { siteInfo } from '../data/siteData';
+import { BorderBeam } from './ui/BorderBeam';
 
 // Placeholder for SocialMediaInline to simplify porting
 const SocialMediaInline = ({ className }) => {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
       <a href={siteInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transition-colors">FB</a>
-      <a href={siteInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-pink-600 transition-colors">IG</a>
+      <a href={siteInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyan-500 transition-colors">IG</a>
       <a href={siteInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-700 transition-colors">LI</a>
     </div>
   );
@@ -135,6 +136,14 @@ const Navbar = () => {
               </Link>
 
               <Link
+                href="/bookings"
+                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/bookings') ? 'text-blue-700' : 'text-slate-600 hover:text-blue-600'
+                  }`}
+              >
+                <span>Bookings</span>
+              </Link>
+
+              <Link
                 href="/contact"
                 className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/contact') ? 'text-blue-700' : 'text-slate-600 hover:text-blue-600'
                   }`}
@@ -146,10 +155,11 @@ const Navbar = () => {
             {/* Desktop Navigation - Menu & CTA */}
             <div className="hidden md:flex items-center space-x-4">
               <Link
-                href="/products?redirect=zcf"
-                className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                href="/bookings"
+                className="relative overflow-hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
               >
-                Apply Now
+                <span className="relative z-10">Apply Now</span>
+                <BorderBeam size={80} duration={7} colorFrom="#ffffff" colorTo="#22d3ee" />
               </Link>
               <button
                 onClick={() => setIsOpen(true)}
@@ -187,7 +197,7 @@ const Navbar = () => {
           className={`fixed right-0 top-0 h-full w-80 bg-white shadow-2xl transform transition-transform duration-300 ease-in-out flex flex-col ${isOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
         >
-          {/* Minimal Menu Header */}
+          {/* Menu Header */}
           <div className="flex items-center justify-between p-6 border-b border-gray-100">
             <h2 className="text-lg font-bold text-slate-900">Navigation</h2>
             <button
@@ -241,6 +251,14 @@ const Navbar = () => {
               FAQ
             </Link>
             <Link
+              href="/bookings"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center p-3 rounded-lg text-slate-700 hover:bg-blue-50 hover:text-blue-700 font-medium transition-colors"
+            >
+              <Phone size={18} className="mr-3" />
+              Bookings
+            </Link>
+            <Link
               href="/contact"
               onClick={() => setIsOpen(false)}
               className="flex items-center p-3 rounded-lg text-slate-700 hover:bg-blue-50 hover:text-blue-700 font-medium transition-colors"
@@ -252,11 +270,12 @@ const Navbar = () => {
 
           <div className="mt-auto p-6 border-t border-gray-100 bg-slate-50 flex flex-col gap-4">
             <Link
-              href="/products?redirect=zcf"
+              href="/bookings"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-md"
+              className="relative overflow-hidden block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-md"
             >
-              Apply Now
+              <span className="relative z-10">Apply Now</span>
+              <BorderBeam size={120} duration={8} colorFrom="#ffffff" colorTo="#22d3ee" />
             </Link>
             <div>
               <p className="text-xs font-semibold text-slate-500 mb-3 uppercase tracking-wider">Connect With Us</p>

@@ -16,7 +16,6 @@ import TextReveal from '../components/TextReveal';
 import AnimatedCounter from '../components/AnimatedCounter';
 import LeadCaptureModal from '../components/LeadCaptureModal';
 import InstagramSuccessStories from '../components/InstagramSuccessStories';
-import YouTubeShorts from '../components/YouTubeShorts';
 import HemisphereGlobe from '../components/HemisphereGlobe';
 import CobeGlobe from '../components/CobeGlobe';
 import RealisticGlobe from '../components/RealisticGlobe';
@@ -346,9 +345,6 @@ const Home = () => {
           </div>
         </div>
       </AnimatedSection>
-
-      {/* YouTube Shorts Section */}
-      <YouTubeShorts />
 
       {/* Social Media CTA Section */}
       <AnimatedSection className="py-20 bg-gradient-to-br from-gray-50 to-white">

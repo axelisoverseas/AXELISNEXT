@@ -73,7 +73,7 @@ Sitemap: https://overseeducation.com/sitemap.xml
 # Type: Study Abroad Consultancy
 # Location: Bengaluru, Karnataka, India
 # Contact: axelisoverseas@overseeducation.com
-# Phone: +91-9606930003
+# Phone: +91 8970224250
 # Services: University Applications, Visa Assistance, Scholarships, Education Loans
 # Countries: UK, USA, Ireland, Germany, France, Finland
 # Partners: 70+ Universities worldwide

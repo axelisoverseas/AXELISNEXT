@@ -1,5 +1,6 @@
 import { CheckCircle, X, Star, Award, DollarSign, Globe } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
+import { TextEffectInView } from './ui/TextEffect';
 
 const PlanComparison = () => {
   const comparisonData = [
@@ -50,9 +51,9 @@ const PlanComparison = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-black mb-4">
             ZCF vs ZTF: Which Student Plan is Right for You?
-          </h2>
+          </TextEffectInView>
           <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-2">
             Compare our student plans to find the perfect fit for your study abroad journey
           </p>

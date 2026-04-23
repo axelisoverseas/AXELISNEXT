@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, CheckCircle, Home, MapPin, Shield, Clock, ExternalLink } from 'lucide-react';
+import { TextEffect, TextEffectInView } from '../../components/ui/TextEffect';
 
 export default function AccommodationPage() {
 
@@ -48,7 +49,10 @@ export default function AccommodationPage() {
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight">
-                        Find Your Perfect <span className="text-blue-400">Student Home</span>
+                        <TextEffect as="span" per="word" preset="blur">Find Your Perfect</TextEffect>{' '}
+                        <span className="text-blue-400">
+                            <TextEffect as="span" per="char" preset="blur" delay={0.35}>Student Home</TextEffect>
+                        </span>
                     </h1>
                     <p className="text-lg md:text-xl mb-10 text-slate-400 max-w-3xl mx-auto leading-relaxed">
                         Secure comfortable and affordable student accommodation with our trusted housing partners including <strong>University Living</strong>, <strong>Amber</strong>, and <strong>Casita</strong>.
@@ -115,7 +119,7 @@ export default function AccommodationPage() {
             <section className="py-24 bg-white border-t border-slate-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <h2 className="text-3xl font-bold text-slate-900 mb-4">Accommodation Options</h2>
+                        <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl font-bold text-slate-900 mb-4">Accommodation Options</TextEffectInView>
                         <p className="text-lg text-slate-600 max-w-2xl mx-auto">
                             Explore different housing options to find what suits your lifestyle and budget.
                         </p>

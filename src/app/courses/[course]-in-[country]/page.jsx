@@ -42,11 +42,25 @@ export default async function CourseGuidePage({ params }) {
         }
     };
 
+    const breadcrumbJsonLd = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://overseeducation.com/" },
+            { "@type": "ListItem", "position": 2, "name": `Study in ${data.country}`, "item": `https://overseeducation.com/guide/study-in-${country}` },
+            { "@type": "ListItem", "position": 3, "name": `${data.course} in ${data.country}`, "item": `https://overseeducation.com/courses/${course}-in-${country}` },
+        ],
+    };
+
     return (
         <>
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+            />
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
             <div className="min-h-screen bg-slate-50 pt-24 pb-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

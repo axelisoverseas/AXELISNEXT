@@ -232,18 +232,6 @@ export const teamMembers = [
     }
   },
   {
-    id: 3,
-    name: "Shubhangi Pandey",
-    role: "Programme Manager",
-    image: "/assets/exweb/shubhangi%20pandey%20pm.jpeg",
-    linkedin: "https://www.linkedin.com/in/shubhangi-pandey-1324b4193/",
-    description: "Programme Manager driving end-to-end student journey management, from application to post-arrival support across 29+ countries.",
-    almaMater: {
-      name: "Imperial College London",
-      logo: "/logos/imperial.png"
-    }
-  },
-  {
     id: 4,
     name: "Arul Johnson",
     role: "Strategic Associate",
@@ -288,7 +276,7 @@ export const faqData = [
   {
     id: 2,
     question: "Do you charge any fees for our services?",
-    answer: "We offer innovative pricing models designed to make study abroad accessible:\n\n**ZCF Student Plan (₹10,000):**\n• Pay only after receiving university offer\n• Complete application assistance\n• Visa guidance and documentation\n• No upfront fees required\n\n**ZTF Student Plan (₹10,000 + ₹1,65,000):**\n• Access to tuition-free universities\n• ₹10,000 initial investment\n• ₹1,65,000 only after admission confirmation\n• Save ₹80+ lakhs in tuition fees\n\n**Free Services Include:**\n• Initial consultation and profile assessment\n• University shortlisting recommendations\n• Basic application guidance\n• General study abroad information\n\nOur 'Pay After Results' model ensures you only invest when you see concrete outcomes. This risk-free approach has helped 200+ students achieve their study abroad dreams without financial stress.\n\n**📺 Watch Our Detailed Explanation:**\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n**📖 Learn More:**\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
+    answer: "We offer innovative pricing models designed to make study abroad accessible:\n\n**ZCF Student Plan (₹10,000):**\n• Pay only after receiving university offer\n• Complete application assistance\n• Visa guidance and documentation\n• No upfront fees required\n\n**ZTF Student Plan (₹10,000 + ₹1,65,000):**\n• Access to tuition-free universities\n• ₹10,000 initial investment\n• ₹1,65,000 only after admission confirmation\n• Save ₹80+ lakhs in tuition fees\n\n**Free Services Include:**\n• Initial consultation and profile assessment\n• University shortlisting recommendations\n• Basic application guidance\n• General study abroad information\n\nOur 'Pay After Results' model ensures you only invest when you see concrete outcomes. This risk-free approach has helped 200+ students achieve their study abroad dreams without financial stress.\n\n**Watch the detailed explanation:**\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n**Learn more:**\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
     category: "Pricing",
     multimedia: {
       video: "https://youtu.be/I7EzLc62Y6c",
@@ -298,7 +286,7 @@ export const faqData = [
   {
     id: 3,
     question: "How many scholarships can I apply for?",
-    answer: "Through our platform, you can access over 2000+ scholarship opportunities worldwide:\n\n**Scholarship Categories:**\n• Merit-based scholarships (academic excellence)\n• Need-based financial aid\n• Country-specific government scholarships\n• University-specific awards\n• Field-specific scholarships (STEM, Arts, Business)\n• Diversity and inclusion scholarships\n\n**Our Guarantee:**\n• Agent scholarships guaranteed across 1600+ universities\n• Personalized scholarship matching based on your profile\n• Application assistance for multiple scholarships\n• Deadline tracking and submission support\n\n**Success Rate:**\n• 85% of our students receive some form of financial aid\n• Average scholarship amount: $8,000-$25,000 per year\n• Some students receive full-ride scholarships covering tuition and living expenses\n\nWe use advanced matching algorithms to identify scholarships you're most likely to win, maximizing your chances of securing funding for your education.\n\n**📖 Comprehensive Scholarship Guides:**\n[Canada Scholarships Guide](/blog/canada-scholarships) | [UK Scholarship Opportunities](/blog/uk-scholarships) | [All Scholarship Resources](/scholarships)",
+    answer: "Through our platform, you can access over 2000+ scholarship opportunities worldwide:\n\n**Scholarship Categories:**\n• Merit-based scholarships (academic excellence)\n• Need-based financial aid\n• Country-specific government scholarships\n• University-specific awards\n• Field-specific scholarships (STEM, Arts, Business)\n• Diversity and inclusion scholarships\n\n**Our Guarantee:**\n• Agent scholarships guaranteed across 1600+ universities\n• Personalized scholarship matching based on your profile\n• Application assistance for multiple scholarships\n• Deadline tracking and submission support\n\n**Success Rate:**\n• 85% of our students receive some form of financial aid\n• Average scholarship amount: $8,000-$25,000 per year\n• Some students receive full-ride scholarships covering tuition and living expenses\n\nWe use advanced matching algorithms to identify scholarships you're most likely to win, maximizing your chances of securing funding for your education.\n\n**Comprehensive scholarship guides:**\n[Canada Scholarships Guide](/blog/canada-scholarships) | [UK Scholarship Opportunities](/blog/uk-scholarships) | [All Scholarship Resources](/scholarships)",
     category: "Scholarships",
     multimedia: {
       relatedLinks: ["/blog/canada-scholarships", "/blog/uk-scholarships", "/scholarships"]
@@ -331,7 +319,7 @@ export const faqData = [
   {
     id: 8,
     question: "Do you help with visa applications?",
-    answer: "Absolutely! Visa assistance is a cornerstone of our services with a 95%+ success rate:\n\n**Comprehensive Visa Support:**\n• Document checklist and preparation\n• Application form completion\n• Appointment booking and scheduling\n• Interview preparation and mock sessions\n• Embassy/consulate liaison\n• Application tracking and follow-up\n\n**Country-Specific Expertise:**\n• **UK:** Student Visa (formerly Tier 4)\n• **USA:** F-1 Student Visa\n• **Canada:** Study Permit\n• **Australia:** Student Visa (Subclass 500)\n• **Schengen:** Student Visa for European countries\n\n**Document Preparation:**\n• Financial documentation and bank statements\n• Academic transcripts and certificates\n• English proficiency test results\n• Medical examinations and health insurance\n• Accommodation and travel arrangements\n\n**Interview Preparation:**\n• Common questions and model answers\n• Mock interview sessions\n• Confidence building techniques\n• Country-specific interview tips\n\n**Success Factors:**\n• 95%+ visa approval rate\n• Experienced visa counselors\n• Updated knowledge of changing regulations\n• Strong relationships with embassy officials\n• Comprehensive documentation review\n\nOur visa specialists stay updated with the latest immigration policies and have successfully processed thousands of visa applications.\n\n**📖 Detailed Guides:**\n[UK Student Visa Guide](/blog/uk-study-guide) | [US F-1 Visa Process](/blog/us-visa-guide) | [Canada Study Permit](/blog/canada-study-guide)",
+    answer: "Absolutely! Visa assistance is a cornerstone of our services with a 95%+ success rate:\n\n**Comprehensive Visa Support:**\n• Document checklist and preparation\n• Application form completion\n• Appointment booking and scheduling\n• Interview preparation and mock sessions\n• Embassy/consulate liaison\n• Application tracking and follow-up\n\n**Country-Specific Expertise:**\n• **UK:** Student Visa (formerly Tier 4)\n• **USA:** F-1 Student Visa\n• **Canada:** Study Permit\n• **Australia:** Student Visa (Subclass 500)\n• **Schengen:** Student Visa for European countries\n\n**Document Preparation:**\n• Financial documentation and bank statements\n• Academic transcripts and certificates\n• English proficiency test results\n• Medical examinations and health insurance\n• Accommodation and travel arrangements\n\n**Interview Preparation:**\n• Common questions and model answers\n• Mock interview sessions\n• Confidence building techniques\n• Country-specific interview tips\n\n**Success Factors:**\n• 95%+ visa approval rate\n• Experienced visa counselors\n• Updated knowledge of changing regulations\n• Strong relationships with embassy officials\n• Comprehensive documentation review\n\nOur visa specialists stay updated with the latest immigration policies and have successfully processed thousands of visa applications.\n\n**Detailed guides:**\n[UK Student Visa Guide](/blog/uk-study-guide) | [US F-1 Visa Process](/blog/us-visa-guide) | [Canada Study Permit](/blog/canada-study-guide)",
     category: "Visa",
     multimedia: {
       relatedLinks: ["/blog/uk-study-guide", "/blog/us-visa-guide", "/blog/canada-study-guide"]

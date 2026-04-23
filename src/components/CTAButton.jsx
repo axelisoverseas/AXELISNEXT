@@ -31,8 +31,6 @@ const CTAButton = ({
 
   const getVariantClasses = () => {
     switch (variant) {
-      case 'primary':
-        return 'btn btn-primary';
       case 'secondary':
         return 'btn btn-secondary';
       case 'outline':
@@ -94,8 +92,8 @@ const CTAButton = ({
     }
 
     if (actionType === 'apply') {
-      console.log('🚀 Redirecting to Student Plans for auto-checkout...');
-      window.location.href = '/products?redirect=zcf';
+      console.log('🚀 Redirecting to Bookings page...');
+      window.location.href = '/bookings';
       return;
     }
 
@@ -157,7 +155,7 @@ export const BookConsultationCTA = (props) => (
 
 export const ScheduleCallCTA = (props) => (
   <CTAButton
-    text="Schedule a Call"
+    text="Book Your Counselling Call Today"
     variant="primary"
     size="large"
     icon="calendar"
@@ -169,8 +167,8 @@ export const ScheduleCallCTA = (props) => (
 
 export const BookDirectCTA = (props) => (
   <CTAButton
-    text="Book Consultation Now"
-    variant="warning"
+    text="Book Your Counselling Call Today"
+    variant="primary"
     size="large"
     icon="calendar"
     showModal={false}
