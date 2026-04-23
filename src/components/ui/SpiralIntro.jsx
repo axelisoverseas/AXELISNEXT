@@ -10,9 +10,28 @@ const SESSION_KEY = 'axelis_intro_seen_v1';
  * - Locks scroll while visible.
  * - Enter button fades in after ~1.8s; click / Enter / Esc / Space dismisses with a fade-out.
  * - Add ?intro=force to the URL to replay during the same session.
+ *
+ * To prevent a flash of the real page before this component hydrates, an inline
+ * blocking script in <head> (see src/app/layout.js) adds `intro-pending` to
+ * <html> when the intro should show, and CSS paints an immediate black cover
+ * under this overlay. This component's initial state mirrors that class, so
+ * the React overlay renders synchronously on the first paint after hydration.
  */
 export default function SpiralIntro() {
-  const [mounted, setMounted] = useState(false);
+  // Initialize from the html class set by the blocking head script — this
+  // avoids the one-tick `useState(false)` → `useEffect setMounted(true)` gap
+  // that was letting the page flash through. Component is dynamic(..., ssr:false),
+  // so `document` is always defined here.
+  const [mounted, setMounted] = useState(() => {
+    if (typeof document === 'undefined') return false;
+    if (document.documentElement.classList.contains('intro-pending')) return true;
+    // Fallback: if the inline script didn't run for some reason, re-check.
+    try {
+      const forced = new URL(window.location.href).searchParams.get('intro') === 'force';
+      if (forced || !sessionStorage.getItem(SESSION_KEY)) return true;
+    } catch {}
+    return false;
+  });
   const [showEnter, setShowEnter] = useState(false);
   const [dismissing, setDismissing] = useState(false);
   const prevOverflowRef = useRef('');
@@ -22,33 +41,29 @@ export default function SpiralIntro() {
     try {
       sessionStorage.setItem(SESSION_KEY, '1');
     } catch {}
+    // Drop the html class immediately so the CSS black cover fades with the overlay,
+    // not after it — otherwise there's a visible "pop" when the cover disappears.
+    document.documentElement.classList.remove('intro-pending');
     setTimeout(() => {
       setMounted(false);
       document.body.style.overflow = prevOverflowRef.current;
     }, 900);
   }, []);
 
-  // Decide on mount whether to show the overlay.
+  // Lock scroll once we know we're showing. (The CSS already locks scroll via
+  // html.intro-pending, but we also reset body overflow on unmount for safety.)
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-
-    let forced = false;
-    try {
-      forced = new URL(window.location.href).searchParams.get('intro') === 'force';
-    } catch {}
-
-    try {
-      if (!forced && sessionStorage.getItem(SESSION_KEY)) return;
-    } catch {}
-
-    setMounted(true);
+    if (!mounted) return;
     prevOverflowRef.current = document.body.style.overflow;
     document.body.style.overflow = 'hidden';
-
+    // Make sure the class is set (covers the case where we fell back to
+    // state-init without the inline script running).
+    document.documentElement.classList.add('intro-pending');
     return () => {
       document.body.style.overflow = prevOverflowRef.current;
+      document.documentElement.classList.remove('intro-pending');
     };
-  }, []);
+  }, [mounted]);
 
   // Fade in the Enter button + keyboard dismiss, only once visible.
   useEffect(() => {

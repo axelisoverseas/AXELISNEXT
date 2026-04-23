@@ -29,6 +29,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Spiral intro — paint a full-screen black cover synchronously before React
+   hydrates the SpiralIntro overlay, so users never see the real page flash
+   underneath. The `intro-pending` class is added by an inline script in
+   <head> (see layout.js) based on sessionStorage. SpiralIntro removes it
+   on dismiss.  */
+html.intro-pending,
+html.intro-pending body {
+  overflow: hidden !important;
+}
+html.intro-pending::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 99;
+  background: #000;
+  pointer-events: none;
+}
+
 /* Minimalist Glass Card */
 .glass-card {
   background: rgba(255, 255, 255, 0.95);

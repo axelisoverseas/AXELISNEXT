@@ -113,6 +113,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={montserrat.variable}>
       <head>
+        {/* BLOCKING: decide before first paint whether the spiral intro should
+            cover the page. Adds html.intro-pending synchronously so our CSS
+            can paint a full-screen black cover immediately, avoiding any
+            flash of the real hero before SpiralIntro hydrates. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var f=new URLSearchParams(location.search).get('intro')==='force';if(f||!sessionStorage.getItem('axelis_intro_seen_v1')){document.documentElement.classList.add('intro-pending');}}catch(e){}})();`,
+          }}
+        />
         <Script
           id="json-ld-organization"
           type="application/ld+json"
