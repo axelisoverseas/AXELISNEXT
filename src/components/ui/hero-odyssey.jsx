@@ -64,7 +64,7 @@ export const HeroSection = () => {
             variants={itemVariants}
             className="text-4xl md:text-6xl pb-3 font-light bg-gradient-to-r from-[var(--storm-electric)] via-white to-[var(--dawn-glow)] bg-clip-text text-transparent mb-4"
           >
-            <TextEffect as="span" per="char" preset="blur" delay={0.35}>Global Education</TextEffect>
+            Global Education
           </motion.h2>
 
           <motion.p

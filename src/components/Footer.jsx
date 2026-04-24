@@ -28,7 +28,7 @@ const Footer = () => {
               <img
                 src="/1yellow svg logoaxelis.svg"
                 alt="Axelis Overseas"
-                className="h-12 w-auto opacity-95 hover:opacity-100 transition-opacity drop-shadow-[0_0_20px_rgba(245,158,11,0.35)]"
+                className="h-12 w-auto opacity-95 hover:opacity-100 transition-opacity [filter:brightness(0)_invert(1)] drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]"
               />
             </Link>
             <p className="text-sm leading-relaxed mb-8 text-slate-400">

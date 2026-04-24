@@ -94,7 +94,7 @@ const Navbar = () => {
               <img
                 src="/1yellow svg logoaxelis.svg"
                 alt="Axelis Overseas"
-                className="h-16 w-auto object-contain drop-shadow-[0_0_20px_rgba(245,158,11,0.35)]"
+                className="h-16 w-auto object-contain [filter:brightness(0)_invert(1)] drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]"
               />
             </Link>
 
