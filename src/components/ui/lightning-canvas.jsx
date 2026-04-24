@@ -9,7 +9,11 @@ const VERTEX_SHADER = `
 `;
 
 const FRAGMENT_SHADER = `
+  #ifdef GL_FRAGMENT_PRECISION_HIGH
+  precision highp float;
+  #else
   precision mediump float;
+  #endif
   uniform vec2 iResolution;
   uniform float iTime;
   uniform float uHue;
