@@ -7,17 +7,49 @@
   --color-axelis: #1E40AF;
   --color-axelis-light: #3B82F6;
   --color-axelis-accent: #F59E0B;
+
+  /* Storm palette — top of page, electric drama */
+  --color-storm-deep: #05070F;
+  --color-storm-abyss: #090D1C;
+  --color-storm-mid: #101830;
+  --color-storm-cloud: #1C2747;
+  --color-storm-electric: #7CC8FF;
+  --color-storm-bolt: #F5F9FF;
+  --color-storm-accent: #F59E0B;
+
+  /* Dawn palette — near CTA, clearing and warmth */
+  --color-dawn-horizon: #1E2A55;
+  --color-dawn-mid: #3A4680;
+  --color-dawn-clear: #4A6FA5;
+  --color-dawn-glow: #F5B877;
+  --color-dawn-glow-soft: #F8D1B0;
 }
 
 :root {
-  --background: #f8fafc;
-  --foreground: #0A1128;
+  --background: #05070F;
+  --foreground: #F5F9FF;
+
+  --storm-deep: #05070F;
+  --storm-abyss: #090D1C;
+  --storm-mid: #101830;
+  --storm-cloud: #1C2747;
+  --storm-electric: #7CC8FF;
+  --storm-bolt: #F5F9FF;
+  --storm-accent: #F59E0B;
+  --storm-accent-glow: rgba(245, 158, 11, 0.45);
+
+  --dawn-horizon: #1E2A55;
+  --dawn-mid: #3A4680;
+  --dawn-clear: #4A6FA5;
+  --dawn-glow: #F5B877;
+  --dawn-glow-soft: #F8D1B0;
+  --dawn-mist: rgba(245, 184, 119, 0.18);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0A1128;
-    --foreground: #f8fafc;
+    --background: #05070F;
+    --foreground: #F5F9FF;
   }
 }
 
@@ -162,6 +194,111 @@ html.intro-pending::before {
 .animate-bg-third  { animation: bg-third  30s ease-in-out infinite; }
 .animate-bg-fourth { animation: bg-fourth 24s ease-in-out infinite; }
 .animate-bg-fifth  { animation: bg-fifth  28s ease-in-out infinite; }
+
+/* ===== Storm → Dawn theme utilities ===== */
+
+.bg-storm-top {
+  background: linear-gradient(180deg, var(--storm-deep) 0%, var(--storm-abyss) 60%, var(--storm-mid) 100%);
+}
+.bg-storm-to-dawn {
+  background: linear-gradient(180deg,
+    var(--storm-deep) 0%,
+    var(--storm-abyss) 18%,
+    var(--storm-mid) 38%,
+    var(--dawn-horizon) 68%,
+    var(--dawn-mid) 88%,
+    var(--dawn-clear) 100%);
+}
+.bg-transition-sky {
+  background: linear-gradient(180deg, var(--storm-mid) 0%, var(--dawn-horizon) 100%);
+}
+.bg-dawn-bottom {
+  background: linear-gradient(180deg, var(--dawn-horizon) 0%, var(--dawn-mid) 55%, var(--dawn-clear) 100%);
+}
+.bg-dawn-glow {
+  background: radial-gradient(ellipse at 50% 110%, var(--dawn-glow) 0%, var(--dawn-mid) 45%, var(--storm-mid) 100%);
+}
+
+/* Glass surfaces for storm/dawn sections */
+.glass-storm {
+  background: rgba(16, 24, 48, 0.55);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(124, 200, 255, 0.10);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 40px -20px rgba(5, 7, 15, 0.8);
+  border-radius: 16px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glass-storm:hover {
+  border-color: rgba(124, 200, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(124, 200, 255, 0.20), 0 20px 60px -20px rgba(37, 99, 235, 0.35);
+}
+
+.glass-dawn {
+  background: rgba(58, 70, 128, 0.38);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(245, 184, 119, 0.18);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 40px -20px rgba(30, 42, 85, 0.7);
+  border-radius: 16px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+.glass-dawn:hover {
+  border-color: rgba(245, 184, 119, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(245, 184, 119, 0.22), 0 20px 60px -20px rgba(245, 184, 119, 0.30);
+}
+
+/* Thunder flash — one-shot on hero mount; irregular two-peak */
+@keyframes thunder-flash {
+  0%, 92%, 100% { opacity: 0; }
+  93% { opacity: 0.08; }
+  94% { opacity: 0; }
+  95% { opacity: 0.12; }
+  96% { opacity: 0; }
+}
+
+/* Single-play variant — use `animation: thunder-flash-once 1.2s ease-out` */
+@keyframes thunder-flash-once {
+  0% { opacity: 0; }
+  10% { opacity: 0.10; }
+  18% { opacity: 0; }
+  28% { opacity: 0.06; }
+  40%, 100% { opacity: 0; }
+}
+
+/* Bolt pulse — amber drop-shadow expand/contract */
+@keyframes bolt-pulse {
+  0%, 100% { filter: drop-shadow(0 0 4px var(--storm-accent-glow)); }
+  50% { filter: drop-shadow(0 0 12px var(--storm-accent-glow)) drop-shadow(0 0 2px var(--storm-accent)); }
+}
+.animate-bolt-pulse { animation: bolt-pulse 4s ease-in-out infinite; }
+
+/* Footer top-edge lightning hairline flash */
+@keyframes hairline-flash {
+  0%, 88%, 100% { opacity: 0.35; }
+  91% { opacity: 1; }
+  93% { opacity: 0.35; }
+  95% { opacity: 0.85; }
+}
+
+/* Focus ring — storm-accent bolt yellow for keyboard users */
+:focus-visible {
+  outline: 2px solid var(--storm-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Reduced motion — kill storm animations */
+@media (prefers-reduced-motion: reduce) {
+  .animate-bg-first,
+  .animate-bg-second,
+  .animate-bg-third,
+  .animate-bg-fourth,
+  .animate-bg-fifth,
+  .animate-bolt-pulse {
+    animation: none !important;
+  }
+}
 
 /* ShinyButton — shimmer sweep */
 @keyframes shiny-sweep {

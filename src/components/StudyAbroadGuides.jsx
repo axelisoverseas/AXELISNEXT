@@ -165,29 +165,29 @@ const StudyAbroadGuides = () => {
   };
 
   return (
-    <section className="py-24 bg-white relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-blue-50/50 rounded-full blur-3xl -mr-20 -mt-20"></div>
+    <section className="py-24 bg-transition-sky relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-[var(--storm-electric)]/10 rounded-full blur-3xl -mr-20 -mt-20"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.span
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1.5 bg-blue-50 text-blue-600 text-sm font-bold rounded-full mb-6"
+            className="inline-block px-4 py-1.5 bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/20 text-[var(--storm-electric)] text-sm font-bold rounded-full mb-6"
           >
             STUDY ABROAD GUIDES
           </motion.span>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 tracking-tight"
+            className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight"
           >
-            Expert <span className="text-blue-600">Video Tutorials</span>
+            Expert <span className="text-[var(--storm-electric)]">Video Tutorials</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-xl text-slate-600 max-w-3xl mx-auto"
+            className="text-xl text-slate-300 max-w-3xl mx-auto"
           >
             Fresh videos straight from our YouTube channel — application process, visa
             requirements, scholarship playbooks, and country guides.
@@ -201,9 +201,9 @@ const StudyAbroadGuides = () => {
             href="https://www.youtube.com/@axelisoverseas"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center space-x-3 text-lg font-bold text-slate-900 hover:text-blue-600 transition-colors px-10 py-5 bg-slate-100 rounded-2xl hover:bg-slate-200"
+            className="inline-flex items-center space-x-3 text-lg font-bold text-white hover:text-[var(--storm-electric)] transition-colors px-10 py-5 glass-storm rounded-2xl"
           >
-            <BookOpen className="text-blue-600" size={24} />
+            <BookOpen className="text-[var(--storm-electric)]" size={24} />
             <span>Access All Guides on YouTube</span>
           </a>
         </div>

@@ -171,19 +171,19 @@ const InstagramSuccessStories = () => {
   }, [selected]);
 
   return (
-    <AnimatedSection className="py-24 bg-gradient-to-b from-white via-slate-50 to-white border-y border-slate-200/80">
+    <AnimatedSection className="py-24 bg-transition-sky border-y border-[var(--storm-electric)]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-bold tracking-wide uppercase mb-5">
+          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/20 text-[var(--storm-electric)] text-xs font-bold tracking-wide uppercase mb-5">
             <Instagram size={14} /> Student Stories
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 tracking-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
             <TextEffectInView as="span" per="word" preset="blur">Real journeys from</TextEffectInView>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
               our students
             </span>
           </h2>
-          <p className="text-slate-600 max-w-2xl mx-auto text-base md:text-lg">
+          <p className="text-slate-300 max-w-2xl mx-auto text-base md:text-lg">
             Four short reels — straight from the counselling floor. Tap any card to play.
           </p>
         </div>
@@ -194,14 +194,14 @@ const InstagramSuccessStories = () => {
           <button
             onClick={prev}
             aria-label="Previous reel"
-            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-700 shadow-lg hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 items-center justify-center rounded-full glass-storm text-white hover:text-[var(--storm-electric)] transition-all"
           >
             <ChevronLeft size={22} />
           </button>
           <button
             onClick={next}
             aria-label="Next reel"
-            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 items-center justify-center rounded-full bg-white border border-slate-200 text-slate-700 shadow-lg hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 items-center justify-center rounded-full glass-storm text-white hover:text-[var(--storm-electric)] transition-all"
           >
             <ChevronRight size={22} />
           </button>

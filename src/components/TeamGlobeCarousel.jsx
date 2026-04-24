@@ -81,7 +81,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
 
   if (!teamMembers || teamMembers.length === 0) {
     return (
-      <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden bg-gradient-to-b from-transparent via-cyan-50/30 to-transparent flex items-center justify-center">
+      <div className="relative w-full h-[500px] md:h-[600px] overflow-hidden bg-gradient-to-b from-transparent via-[var(--storm-electric)]/5 to-transparent flex items-center justify-center">
         <div className="text-center">
           <div className="w-16 h-16 bg-gray-200 rounded-full mx-auto mb-4 animate-pulse"></div>
           <p className="text-gray-500">Loading team members...</p>
@@ -97,7 +97,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
 
   return (
     <div
-      className="relative w-full h-[480px] md:h-[600px] overflow-hidden bg-gradient-to-b from-transparent via-cyan-50/30 to-transparent"
+      className="relative w-full h-[480px] md:h-[600px] overflow-hidden bg-gradient-to-b from-transparent via-[var(--storm-electric)]/5 to-transparent"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}

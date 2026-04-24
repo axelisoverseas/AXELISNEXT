@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
+import { TextEffect } from '../../../components/ui/TextEffect';
 
 // Mock data fetching function
 async function getCountryData(countryParam) {
@@ -72,7 +73,7 @@ export default async function CountryGuidePage({ params }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
-            <div className="min-h-screen bg-white pt-24 pb-12">
+            <div className="min-h-screen bg-storm-to-dawn pt-24 pb-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Breadcrumb */}
                     <nav className="text-sm mb-8 text-gray-500">
@@ -81,8 +82,8 @@ export default async function CountryGuidePage({ params }) {
                     </nav>
 
                     <header className="mb-12">
-                        <h1 className="text-4xl md:text-5xl font-black text-slate-900 mb-6 flex items-center">
-                            Study in {data.name} Guide 2024
+                        <h1 className="text-4xl md:text-5xl font-black text-white mb-6 flex items-center">
+                            <TextEffect as="span" per="word" preset="blur">{`Study in ${data.name} Guide 2024`}</TextEffect>
                         </h1>
                         <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
                             Everything you need to know about pursuing your higher education in {data.name}, from top universities and living costs to visa requirements.

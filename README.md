@@ -20,6 +20,26 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Hero Spline scene (optional)
+
+The homepage hero uses an optional Spline 3D centerpiece. If no scene URL is
+configured, a CSS planet fallback renders automatically — nothing breaks.
+
+Set the scene URL in `.env.local` to enable Spline:
+
+```
+NEXT_PUBLIC_SPLINE_HERO_URL=https://prod.spline.design/xxxxxxxx/scene.splinecode
+```
+
+Build a scene at [spline.design](https://spline.design) — the storm-to-dawn
+direction works best with: a slow-rotating dark-sapphire sphere, faint
+electric arcs on the surface, optional debris ring, lighting biased
+top-right cyan + bottom-left amber. Export as "Code Export → Next.js"
+and paste the `.splinecode` URL above.
+
+Spline runtime is lazy-loaded only when the hero enters the viewport,
+so the fallback has no perf cost.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

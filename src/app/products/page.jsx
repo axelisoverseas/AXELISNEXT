@@ -39,9 +39,9 @@ function ProductsContent() {
     }, [searchParams]);
 
     return (
-        <div className="min-h-screen bg-slate-50">
+        <div className="min-h-screen bg-storm-to-dawn">
             {/* Clean Hero Section */}
-            <section className="relative pt-32 pb-24 bg-slate-900 overflow-hidden border-b border-slate-800">
+            <section className="relative pt-32 pb-24 bg-[var(--storm-deep)] overflow-hidden border-b border-[var(--storm-electric)]/10">
                 {/* Hero Background Image */}
                 <div className="absolute inset-0 z-0">
                     <img src="https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?q=80&w=2000&auto=format&fit=crop" alt="University Campus" className="w-full h-full object-cover opacity-20" />

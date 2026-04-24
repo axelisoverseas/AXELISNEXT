@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import { TextEffect } from '../../../components/ui/TextEffect';
 
 async function getCourseData(courseParam, countryParam) {
     const normalizedCourse = courseParam.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
@@ -62,7 +63,7 @@ export default async function CourseGuidePage({ params }) {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
             />
-            <div className="min-h-screen bg-slate-50 pt-24 pb-12">
+            <div className="min-h-screen bg-storm-to-dawn pt-24 pb-12">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <nav className="text-sm mb-8 text-gray-500">
                         <Link href="/" className="hover:text-blue-600">Home</Link> &gt;
@@ -74,7 +75,7 @@ export default async function CourseGuidePage({ params }) {
                         <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/20 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
                         <span className="inline-block bg-white/20 px-4 py-1.5 rounded-full text-blue-100 font-semibold text-sm mb-4 backdrop-blur-md">Course Guide</span>
                         <h1 className="text-4xl md:text-5xl font-black mb-4 flex items-center leading-tight">
-                            Study {data.course} in {data.country}
+                            <TextEffect as="span" per="word" preset="blur">{`Study ${data.course} in ${data.country}`}</TextEffect>
                         </h1>
                         <p className="text-lg text-blue-100 max-w-2xl">
                             Explore the best universities, entry requirements, and outstanding career prospects for {data.course} graduates in {data.country}.

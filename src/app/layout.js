@@ -111,7 +111,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={montserrat.variable}>
+    <html lang="en" className={montserrat.variable} suppressHydrationWarning>
       <head>
         {/* BLOCKING: decide before first paint whether the spiral intro should
             cover the page. Adds html.intro-pending synchronously so our CSS
@@ -129,9 +129,12 @@ export default function RootLayout({ children }) {
         />
         <link rel="canonical" href="https://overseeducation.com" />
       </head>
-      <body className="font-sans antialiased text-slate-900 bg-slate-50 flex flex-col min-h-screen">
-        <div className="bg-gradient-to-r from-blue-700 via-blue-600 to-cyan-600 text-white py-3 px-4 text-center text-sm md:text-base font-extrabold shadow-md z-[100] relative uppercase tracking-wider">
-           FALL 2026 INTAKE: 50% OFF on ZCF & ZTF Student Plans — offer ends 26th May. Sign up now!
+      <body className="font-sans antialiased text-[var(--storm-bolt)] bg-[var(--storm-deep)] flex flex-col min-h-screen">
+        <div className="relative z-[100] py-3 px-4 text-center text-sm md:text-base font-extrabold shadow-[0_6px_24px_-12px_rgba(5,7,15,0.9)] uppercase tracking-wider text-white bg-[linear-gradient(90deg,var(--storm-abyss)_0%,var(--storm-mid)_45%,var(--dawn-horizon)_100%)] border-b border-[var(--storm-accent)]/30">
+          <span className="relative z-10">
+            <span className="text-[var(--storm-accent)]">⚡</span> FALL 2026 INTAKE: 50% OFF on ZCF & ZTF Student Plans — offer ends 26th May. Sign up now! <span className="text-[var(--storm-accent)]">⚡</span>
+          </span>
+          <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--storm-accent)] to-transparent opacity-60" />
         </div>
         <Navbar />
         <main className="flex-grow">

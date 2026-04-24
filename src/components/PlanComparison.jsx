@@ -47,19 +47,19 @@ const PlanComparison = () => {
   ];
 
   return (
-    <AnimatedSection className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <AnimatedSection className="py-20 bg-transition-sky">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-black mb-4">
+          <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-white mb-4">
             ZCF vs ZTF: Which Student Plan is Right for You?
           </TextEffectInView>
-          <p className="text-xl text-gray-700 max-w-3xl mx-auto mb-2">
+          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-2">
             Compare our student plans to find the perfect fit for your study abroad journey
           </p>
-          <div className="text-sm text-gray-600 font-medium">
+          <div className="text-sm text-slate-400 font-medium">
             <span className="inline-flex items-center gap-2">
-              <Award className="text-cyan-500" size={16} />
+              <Award className="text-[var(--storm-accent)]" size={16} />
               By Axelis Overseas
             </span>
           </div>

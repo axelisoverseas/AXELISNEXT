@@ -24,8 +24,8 @@ const PLAN_CONFIG = {
   zcf: {
     eyebrow: 'ZCF Student Plan',
     badge: 'Most Popular',
-    headline: 'Two pillars. One',
-    accent: 'flat deposit.',
+    headline: 'The',
+    accent: 'Global Access Charter.',
     subline:
       'Everything covered by the Zero Consultation Fee plan, organized around what actually decides your admit: expert application craft and scholarship funding.',
     layoutId: 'zcf-island',
@@ -99,8 +99,8 @@ const PLAN_CONFIG = {
   ztf: {
     eyebrow: 'ZTF Student Plan',
     badge: 'Premium Focus',
-    headline: 'Tuition-free Europe.',
-    accent: 'End-to-end relocation.',
+    headline: 'The',
+    accent: 'Europe Public Access Charter.',
     subline:
       'Admission to public universities in Germany, France, Finland, Italy and Austria — paired with the housing, visa and part-time work support that actually gets you there.',
     layoutId: 'ztf-island',

@@ -47,7 +47,7 @@ export default function ContactPage() {
     };
 
     return (
-        <div className="min-h-screen bg-slate-50">
+        <div className="min-h-screen bg-storm-to-dawn">
             {/* Hero Section */}
             <section className="relative pt-32 pb-24 bg-slate-900 border-b border-slate-800 overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>

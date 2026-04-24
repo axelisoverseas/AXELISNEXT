@@ -43,9 +43,9 @@ export default function AccommodationPage() {
     }, []);
 
     return (
-        <div className="min-h-screen bg-slate-50">
+        <div className="min-h-screen bg-storm-to-dawn">
             {/* Hero Section */}
-            <section className="relative pt-24 pb-20 bg-slate-900 overflow-hidden border-b border-slate-800">
+            <section className="relative pt-24 pb-20 bg-transition-sky overflow-hidden border-b border-[var(--storm-electric)]/10">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight">

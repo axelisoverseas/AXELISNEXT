@@ -12,9 +12,9 @@ export const metadata = {
 
 export default function ScholarshipsPage() {
     return (
-        <div className="min-h-screen bg-slate-50">
+        <div className="min-h-screen bg-storm-to-dawn">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 bg-slate-900 overflow-hidden border-b border-slate-800">
+            <section className="relative pt-32 pb-24 bg-[var(--storm-deep)] overflow-hidden border-b border-[var(--storm-accent)]/20">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 

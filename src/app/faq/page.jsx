@@ -5,7 +5,7 @@ import { HelpCircle, ChevronDown, Search, MessageCircle, Phone, Globe, Award, Sh
 import Link from 'next/link';
 
 import { faqData } from '../../data/siteData';
-import { TextEffectInView } from '../../components/ui/TextEffect';
+import { TextEffect, TextEffectInView } from '../../components/ui/TextEffect';
 
 const renderMarkdown = (text) => {
   if (!text) return null;
@@ -37,9 +37,9 @@ const FAQPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-storm-to-dawn">
       {/* Premium Hero Section */}
-      <section className="relative pt-32 pb-24 bg-slate-900 border-b border-slate-800 overflow-hidden">
+      <section className="relative pt-32 pb-24 bg-[var(--storm-deep)] border-b border-[var(--storm-electric)]/10 overflow-hidden">
         {/* Abstract Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
           <div className="absolute top-20 left-10 w-64 h-64 bg-blue-500 rounded-full blur-3xl"></div>
@@ -62,7 +62,10 @@ const FAQPage = () => {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight"
           >
-            Got <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Questions?</span>
+            <TextEffect as="span" per="word" preset="blur">Got</TextEffect>{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
+              <TextEffect as="span" per="char" preset="blur" delay={0.25}>Questions?</TextEffect>
+            </span>
           </motion.h1>
           
           <motion.p 

@@ -16,7 +16,7 @@ const [col1, col2, col3, col4] = splitInto(universityLogos, 4);
 
 export default function UniversityLogosSection() {
   return (
-    <section className="bg-slate-50 py-24 relative border-t border-slate-200">
+    <section className="bg-transition-sky py-24 relative border-t border-[var(--storm-electric)]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -25,18 +25,18 @@ export default function UniversityLogosSection() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-2xl mx-auto text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold mb-4 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/20 text-[var(--storm-electric)] text-xs font-semibold mb-4 uppercase tracking-wider">
             Our Portfolio
           </div>
           <TextEffectInView
             as="h2"
             per="word"
             preset="blur"
-            className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900"
+            className="text-3xl md:text-5xl font-bold tracking-tight text-white"
           >
             100+ top universities. 29 countries.
           </TextEffectInView>
-          <p className="text-slate-600 mt-4">
+          <p className="text-slate-300 mt-4">
             A snapshot of the institutions Axelis students have been placed at — from Oxford and
             MIT to ETH Zürich, NUS and beyond.
           </p>
