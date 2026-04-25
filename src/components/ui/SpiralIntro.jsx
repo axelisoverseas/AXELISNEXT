@@ -43,7 +43,7 @@ export default function SpiralIntro() {
       sessionStorage.setItem(SESSION_KEY, '1');
     } catch {}
     // Thunder roll — fires from the user gesture so browser autoplay policies pass.
-    try { playThunder({ volume: 0.55 }); } catch {}
+    try { playThunder({ volume: 0.7 }); } catch {}
     // Drop the html class immediately so the CSS black cover fades with the overlay,
     // not after it — otherwise there's a visible "pop" when the cover disappears.
     document.documentElement.classList.remove('intro-pending');
