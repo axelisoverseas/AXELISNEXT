@@ -1,6 +1,7 @@
 'use client';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { SpiralAnimation } from './SpiralAnimation';
+import { playThunder } from '../../lib/thunder';
 
 const SESSION_KEY = 'axelis_intro_seen_v1';
 
@@ -41,6 +42,8 @@ export default function SpiralIntro() {
     try {
       sessionStorage.setItem(SESSION_KEY, '1');
     } catch {}
+    // Thunder roll — fires from the user gesture so browser autoplay policies pass.
+    try { playThunder({ volume: 0.55 }); } catch {}
     // Drop the html class immediately so the CSS black cover fades with the overlay,
     // not after it — otherwise there's a visible "pop" when the cover disappears.
     document.documentElement.classList.remove('intro-pending');
