@@ -2,6 +2,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { SpiralAnimation } from './SpiralAnimation';
 import { playThunder } from '../../lib/thunder';
+import { playSpaceMusic } from '../../lib/spaceMusic';
 
 const SESSION_KEY = 'axelis_intro_seen_v1';
 
@@ -36,12 +37,15 @@ export default function SpiralIntro() {
   const [showEnter, setShowEnter] = useState(false);
   const [dismissing, setDismissing] = useState(false);
   const prevOverflowRef = useRef('');
+  const musicRef = useRef(null);
 
   const handleEnter = useCallback(() => {
     setDismissing(true);
     try {
       sessionStorage.setItem(SESSION_KEY, '1');
     } catch {}
+    // Fade out the space pad as the storm takes over.
+    try { musicRef.current?.stop({ fadeOut: 1.4 }); } catch {}
     // Thunder roll — fires from the user gesture so browser autoplay policies pass.
     try { playThunder({ volume: 0.7 }); } catch {}
     // Drop the html class immediately so the CSS black cover fades with the overlay,
@@ -84,6 +88,39 @@ export default function SpiralIntro() {
       window.removeEventListener('keydown', onKey);
     };
   }, [mounted, handleEnter]);
+
+  // Space-pad music: build the engine on mount, resume on the first user gesture
+  // (browser autoplay policies require this). Cleanup stops the engine if the
+  // user never pressed Enter (e.g. tab closed, navigated away).
+  useEffect(() => {
+    if (!mounted) return;
+    let engine;
+    try {
+      engine = playSpaceMusic({ volume: 0.18 });
+      musicRef.current = engine;
+    } catch {
+      return;
+    }
+
+    const tryResume = () => {
+      try { engine.resume(); } catch {}
+      cleanupListeners();
+    };
+    const cleanupListeners = () => {
+      window.removeEventListener('pointerdown', tryResume);
+      window.removeEventListener('keydown', tryResume);
+      window.removeEventListener('touchstart', tryResume);
+    };
+    window.addEventListener('pointerdown', tryResume, { once: true });
+    window.addEventListener('keydown', tryResume, { once: true });
+    window.addEventListener('touchstart', tryResume, { once: true, passive: true });
+
+    return () => {
+      cleanupListeners();
+      try { engine?.stop({ fadeOut: 0.6 }); } catch {}
+      musicRef.current = null;
+    };
+  }, [mounted]);
 
   if (!mounted) return null;
 
