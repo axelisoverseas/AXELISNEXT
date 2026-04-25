@@ -96,7 +96,7 @@ export default function SpiralIntro() {
     if (!mounted) return;
     let engine;
     try {
-      engine = playSpaceMusic({ volume: 0.18 });
+      engine = playSpaceMusic({ volume: 0.35 });
       musicRef.current = engine;
     } catch {
       return;
