@@ -56,9 +56,9 @@ export function playSpaceMusic({ volume = 0.18 } = {}) {
   d2.connect(master);
 
   const CHORD_DUR = 8.0; // seconds per chord
-  const FADE_IN = 5.5;   // master swell-in
-  const ATTACK = 2.2;    // per-note attack
-  const RELEASE = 2.5;   // per-note release
+  const FADE_IN = 1.2;   // master swell-in (short so it's audible immediately on resume)
+  const ATTACK = 1.4;    // per-note attack
+  const RELEASE = 2.0;   // per-note release
 
   // Per-note voice = 4 stacked partials for organ-pad timbre.
   function spawnVoice(freq, when, duration) {
@@ -143,9 +143,14 @@ export function playSpaceMusic({ volume = 0.18 } = {}) {
     }, fadeOut * 1000 + 300);
   }
 
-  // Try to autostart immediately — works if context is already 'running'
-  // (e.g. browser MEI permits it). Otherwise resume() must be called from a gesture.
-  if (ctx.state === 'running') start();
+  // Schedule chords + ramp immediately on a suspended context. WebAudio events
+  // are timestamped against ctx.currentTime, which is frozen while suspended and
+  // resumes counting where it left off — so when resume() lands, music plays
+  // from the top with no perceptible delay.
+  start();
+  if (ctx.state === 'running') {
+    /* already audible */
+  }
 
   return { resume, stop };
 }

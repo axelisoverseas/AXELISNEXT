@@ -44,8 +44,8 @@ export default function SpiralIntro() {
     try {
       sessionStorage.setItem(SESSION_KEY, '1');
     } catch {}
-    // Fade out the space pad as the storm takes over.
-    try { musicRef.current?.stop({ fadeOut: 1.4 }); } catch {}
+    // Fade out the space pad as the storm takes over (long overlap with thunder).
+    try { musicRef.current?.stop({ fadeOut: 2.5 }); } catch {}
     // Thunder roll — fires from the user gesture so browser autoplay policies pass.
     try { playThunder({ volume: 0.7 }); } catch {}
     // Drop the html class immediately so the CSS black cover fades with the overlay,
@@ -75,7 +75,7 @@ export default function SpiralIntro() {
   // Fade in the Enter button + keyboard dismiss, only once visible.
   useEffect(() => {
     if (!mounted) return;
-    const enterTimer = setTimeout(() => setShowEnter(true), 1800);
+    const enterTimer = setTimeout(() => setShowEnter(true), 3500);
     const onKey = (e) => {
       if (e.key === 'Enter' || e.key === 'Escape' || e.key === ' ') {
         e.preventDefault();
@@ -96,7 +96,7 @@ export default function SpiralIntro() {
     if (!mounted) return;
     let engine;
     try {
-      engine = playSpaceMusic({ volume: 0.35 });
+      engine = playSpaceMusic({ volume: 0.7 });
       musicRef.current = engine;
     } catch {
       return;
@@ -142,7 +142,7 @@ export default function SpiralIntro() {
           showEnter && !dismissing ? 'opacity-60' : 'opacity-0'
         }`}
       >
-        <span className="text-white text-xs tracking-[0.5em] uppercase font-light">
+        <span className="text-white text-xl md:text-2xl tracking-[0.4em] uppercase font-bold">
           Axelis Overseas
         </span>
       </div>
@@ -158,9 +158,9 @@ export default function SpiralIntro() {
         <button
           type="button"
           onClick={handleEnter}
-          className="text-white text-2xl tracking-[0.2em] uppercase font-extralight transition-all duration-700 hover:tracking-[0.3em] animate-pulse focus:outline-none focus:ring-2 focus:ring-white/40 focus:rounded-sm px-4 py-2"
+          className="text-white text-2xl md:text-3xl tracking-[0.2em] uppercase font-semibold transition-all duration-700 hover:tracking-[0.3em] animate-pulse focus:outline-none focus:ring-2 focus:ring-white/40 focus:rounded-sm px-4 py-2"
         >
-          Enter
+          Get Started
         </button>
       </div>
 
@@ -170,7 +170,7 @@ export default function SpiralIntro() {
           showEnter && !dismissing ? 'opacity-40' : 'opacity-0'
         }`}
       >
-        <span className="text-white text-[10px] tracking-[0.35em] uppercase font-light">
+        <span className="text-white text-base md:text-xl tracking-[0.3em] uppercase font-bold">
           Gateway to Global Education
         </span>
       </div>
