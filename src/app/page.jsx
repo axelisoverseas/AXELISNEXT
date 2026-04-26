@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown } from 'lucide-react';
+import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap } from 'lucide-react';
 
 const InstagramSuccessStories = dynamic(() => import('../components/InstagramSuccessStories'), { ssr: false });
 const TeamGlobeCarousel = dynamic(() => import('../components/TeamGlobeCarousel'), { ssr: false });
@@ -83,27 +83,41 @@ export default function Home() {
             </p>
           </motion.div>
 
-          {/* 4-stat grid — storm-glass cards, bolt icons on scholarships + countries */}
+          {/* 4-stat grid — storm-glass cards with unified icon treatment.
+              Every icon: gradient halo + circular ring + dark inner disc + amber bolt accent. */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
-              { icon: Globe, value: '29+', label: 'Countries', bolt: true },
-              { icon: Users, value: '2000+', label: 'Students Placed', bolt: false },
-              { icon: Award, value: '₹3+ Cr', label: 'Scholarships Won', bolt: true, gradient: true },
-              { icon: CheckCircle, value: '100%', label: 'Success Rate', bolt: false },
+              { icon: Globe, value: '29+', label: 'Countries' },
+              { icon: Users, value: '2000+', label: 'Students Placed' },
+              { icon: Award, value: '₹3+ Cr', label: 'Scholarships Won', gradient: true },
+              { icon: CheckCircle, value: '100%', label: 'Success Rate' },
             ].map((stat, i) => {
               const Icon = stat.icon;
-              const iconTone = stat.bolt
-                ? 'bg-[var(--storm-accent)]/10 border-[var(--storm-accent)]/25 text-[var(--storm-accent)] group-hover:bg-[var(--storm-accent)]/20'
-                : 'bg-[var(--storm-electric)]/10 border-[var(--storm-electric)]/20 text-[var(--storm-electric)] group-hover:bg-[var(--storm-electric)]/20';
               return (
                 <motion.div
                   key={i}
                   variants={fadeInUp}
                   className="group relative glass-storm rounded-2xl p-8 flex flex-col items-center text-center hover:-translate-y-2 transition-all duration-500"
                 >
-                  <div className={`w-16 h-16 rounded-2xl flex items-center justify-center mb-6 border transition-all duration-500 ${iconTone}`}
-                       style={stat.bolt ? { animation: 'bolt-pulse 4s ease-in-out infinite' } : undefined}>
-                    <Icon size={32} strokeWidth={1.75} />
+                  {/* Unified icon: halo → ring → disc → bolt accent */}
+                  <div className="relative w-20 h-20 mb-6">
+                    {/* Soft gradient halo behind the disc */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--storm-electric)] via-white/40 to-[var(--dawn-glow)] opacity-30 blur-lg group-hover:opacity-70 transition-opacity duration-500" />
+                    {/* Crisp gradient ring */}
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--storm-electric)] via-white/70 to-[var(--dawn-glow)] p-[1.5px] group-hover:p-[2px] transition-all duration-500">
+                      <div className="w-full h-full rounded-full bg-[var(--storm-deep)]" />
+                    </div>
+                    {/* Inner disc with the icon */}
+                    <div className="absolute inset-[1.5px] rounded-full bg-[var(--storm-deep)]/95 backdrop-blur-md flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
+                      <Icon size={34} strokeWidth={1.6} className="text-white drop-shadow-[0_0_10px_rgba(124,200,255,0.4)]" />
+                    </div>
+                    {/* Amber lightning-bolt accent (universal — same on every card) */}
+                    <div
+                      className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center shadow-[0_0_18px_rgba(245,158,11,0.55)] ring-2 ring-[var(--storm-deep)]"
+                      style={{ animation: 'bolt-pulse 3.5s ease-in-out infinite' }}
+                    >
+                      <Zap size={13} strokeWidth={3} className="text-[var(--storm-deep)]" fill="currentColor" />
+                    </div>
                   </div>
                   <span className={`text-4xl md:text-5xl font-bold mb-2 tracking-tight ${
                     stat.gradient
