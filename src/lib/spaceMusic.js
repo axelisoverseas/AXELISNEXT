@@ -132,15 +132,21 @@ export function playSpaceMusic({ volume = 0.18 } = {}) {
     if (stopped) return;
     stopped = true;
     if (schedulerId) clearInterval(schedulerId);
-    const t = ctx.currentTime;
+    // Critical: do NOT cancelScheduledValues. The fade-in was scheduled while
+    // the ctx was suspended (ctx-time 0 → FADE_IN). If the user pressed Enter
+    // before the ctx ever resumed (very common — Enter is often the first
+    // gesture), cancelling here would lock master at 0.0001 and the music
+    // would never become audible. Instead, let the fade-in run, then ramp out.
+    const fadeOutStart = Math.max(ctx.currentTime + 0.05, FADE_IN);
+    const fadeOutEnd = fadeOutStart + fadeOut;
     try {
-      master.gain.cancelScheduledValues(t);
-      master.gain.setValueAtTime(master.gain.value || 0.0001, t);
-      master.gain.exponentialRampToValueAtTime(0.0001, t + fadeOut);
+      master.gain.setValueAtTime(volume, fadeOutStart);
+      master.gain.exponentialRampToValueAtTime(0.0001, fadeOutEnd);
     } catch {}
+    const closeDelayMs = Math.max(0, (fadeOutEnd - ctx.currentTime) * 1000) + 400;
     setTimeout(() => {
       try { ctx.close(); } catch {}
-    }, fadeOut * 1000 + 300);
+    }, closeDelayMs);
   }
 
   // Schedule chords + ramp immediately on a suspended context. WebAudio events
