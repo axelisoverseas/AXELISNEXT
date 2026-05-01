@@ -117,11 +117,19 @@ const Navbar = () => {
               </Link>
 
               <Link
-                href="/scholarships"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/scholarships') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                href="/testimonials"
+                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/testimonials') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
-                <span>Scholarships</span>
+                <span>Testimonials</span>
+              </Link>
+
+              <Link
+                href="/certifications"
+                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/certifications') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                  }`}
+              >
+                <span>Certifications</span>
               </Link>
 
               <Link
@@ -133,19 +141,11 @@ const Navbar = () => {
               </Link>
 
               <Link
-                href="/bookings"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/bookings') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
-                  }`}
-              >
-                <span>Bookings</span>
-              </Link>
-
-              <Link
                 href="/contact"
                 className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/contact') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
-                <span>Contact Us</span>
+                <span>Contact</span>
               </Link>
             </nav>
 
@@ -224,11 +224,27 @@ const Navbar = () => {
               Student Plans
             </Link>
             <Link
-              href="/scholarships"
+              href="/testimonials"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
+            >
+              <Users size={18} className="mr-3" />
+              Testimonials
+            </Link>
+            <Link
+              href="/certifications"
               onClick={() => setIsOpen(false)}
               className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
             >
               <Award size={18} className="mr-3" />
+              Certifications
+            </Link>
+            <Link
+              href="/scholarships"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
+            >
+              <Globe2 size={18} className="mr-3" />
               Scholarships
             </Link>
             <Link
@@ -261,7 +277,7 @@ const Navbar = () => {
               className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
             >
               <MessageCircle size={18} className="mr-3" />
-              Contact Us
+              Contact
             </Link>
           </div>
 

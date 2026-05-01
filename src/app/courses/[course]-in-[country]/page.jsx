@@ -88,7 +88,7 @@ export default async function CourseGuidePage({ params }) {
                                 <h2 className="text-2xl font-bold mb-6 text-slate-800">Why Study {data.course}?</h2>
                                 <div className="prose max-w-none text-gray-600 leading-relaxed">
                                     <p className="mb-4">
-                                        Pursuing <strong>{data.course}</strong> in <strong>{data.country}</strong> opens doors to world-class education, cutting-edge facilities, and immense career growth. This dynamic field is constantly evolving, presenting graduates with highly sought-after skills on a global scale.
+                                        Studying <strong>{data.course}</strong> in <strong>{data.country}</strong> gets you a recognised degree, real lab and industry exposure, and direct pathways into local hiring pipelines after graduation.
                                     </p>
                                     <p>
                                         With an average starting salary of <span className="text-green-600 font-bold">{data.averageSalary}</span>, graduates find themselves in high demand across multiple sectors.

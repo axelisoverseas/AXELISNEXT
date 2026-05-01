@@ -95,7 +95,7 @@ export default async function CountryGuidePage({ params }) {
                             <section className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
                                 <h2 className="text-2xl font-bold mb-4">Why study in {data.name}?</h2>
                                 <p className="text-gray-700 leading-relaxed mb-4">
-                                    {data.name} is home to some of the world's highest-ranking universities and offers an unparalleled educational experience. International students benefit from cutting-edge research facilities, diverse cultural experiences, and robust post-study work opportunities.
+                                    {data.name} hosts several of the world&apos;s highest-ranking universities. International students get access to strong research labs, well-funded student communities and a clear path to part-time work and post-study work visas.
                                 </p>
                                 <div className="grid grid-cols-2 gap-4 mt-6">
                                     <div className="bg-white p-4 rounded-xl border border-gray-100 text-center">

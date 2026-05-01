@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, Youtube, MoveRight } from 'lucide-react';
-import { siteInfo, navigationLinks } from '../data/siteData';
+import { siteInfo } from '../data/siteData';
 
 const Footer = () => {
   return (
@@ -11,14 +11,14 @@ const Footer = () => {
       {/* dawn-glow radial at the bottom */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-64" style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(245,184,119,0.18) 0%, transparent 70%)' }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Trust Badges - Minimalist row */}
         <div className="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-[var(--storm-electric)]/10 mb-12 gap-6">
-          <p className="text-sm font-semibold text-slate-500 uppercase tracking-widest">Recognized & Certified By</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-300">
-            <img src="/logos/dppit logo.png" alt="Startup India DPIIT" className="h-8 object-contain" />
-            <img src="/trust-badges/british-council-logo.webp" alt="British Council Agent" className="h-6 object-contain" />
-            <img src="/logos/Airc-logo-full-color-centered-LG.jpg" alt="AIRC Certified" className="h-8 rounded-sm object-contain" />
-          </div>
+          <p className="text-sm font-semibold text-slate-500 uppercase tracking-widest">Certified by independent bodies</p>
+          <Link href="/certifications" className="flex flex-wrap justify-center items-center gap-8 opacity-80 hover:opacity-100 transition-all duration-300 group">
+            <img src="/logos/dppit logo.png" alt="DPIIT Startup India" className="h-8 object-contain" />
+            <img src="/trust-badges/british-council-logo.webp" alt="British Council" className="h-6 object-contain" />
+            <img src="/logos/Airc-logo-full-color-centered-LG.jpg" alt="AIRC" className="h-8 rounded-sm object-contain" />
+            <span className="text-xs uppercase tracking-[0.2em] text-[var(--storm-electric)] group-hover:underline">View certificates &rarr;</span>
+          </Link>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8">
@@ -60,11 +60,19 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Quick Links */}
           <div className="lg:col-span-3">
             <h3 className="text-white font-semibold mb-6">Explore</h3>
             <ul className="space-y-3 text-sm">
-              {navigationLinks.map((link) => (
+              {[
+                { name: 'Home', path: '/' },
+                { name: 'Student Plans', path: '/products' },
+                { name: 'Testimonials', path: '/testimonials' },
+                { name: 'Certifications', path: '/certifications' },
+                { name: 'Scholarships', path: '/scholarships' },
+                { name: 'Bookings', path: '/bookings' },
+                { name: 'FAQ', path: '/faq' },
+                { name: 'Contact', path: '/contact' },
+              ].map((link) => (
                 <li key={link.path}>
                   <Link href={link.path} className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--storm-mid)] group-hover:bg-[var(--storm-electric)] transition-colors" />

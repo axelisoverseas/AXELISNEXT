@@ -29,7 +29,10 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
     return [...new Set(countries)]; // Remove duplicates
   };
 
-  // Function to focus on a country
+  // Function to focus on a country (called imperatively via ref).
+  // Do NOT call onCountryFocus here — the parent already triggered this,
+  // calling back would create an infinite loop. The pin click handler
+  // dispatches its own event for parent consumption.
   const focusOnCountry = (country) => {
     if (!globeRef.current) return;
 
@@ -38,16 +41,11 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
 
     setSelectedTestimonial(country);
 
-    // Smooth transition to country with proper altitude
     globeRef.current.pointOfView({
       lat: coords.lat,
       lng: coords.lng,
       altitude: 2.2
-    }, 600); // Reduced for snappier response
-
-    if (onCountryFocus) {
-      onCountryFocus(country);
-    }
+    }, 600);
   };
 
   // Function to clear country focus

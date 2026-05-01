@@ -56,23 +56,21 @@ export default function AboutPage() {
                         <div className="space-y-8">
                             <div>
                                 <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
-                                    Welcome to Axelis Overseas
+                                    About Axelis Overseas
                                 </TextEffectInView>
                                 <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
                                     <p>
-                                        At Axelis Overseas, we believe that education is the key to unlocking limitless possibilities.
-                                        With a passion for empowering students to achieve their academic dreams, we have established
-                                        ourselves as a leading study abroad consultancy.
+                                        We are a study abroad consultancy run by counsellors who studied abroad themselves.
+                                        Our day job is matching Indian students with universities they can actually get into and afford.
                                     </p>
                                     <p>
-                                        Our comprehensive services span across 29+ countries, offering students access to world-class
-                                        education opportunities. From the prestigious universities of the UK and USA to the innovative
-                                        institutions in Canada, Ireland, and Finland, we open doors to global education.
+                                        We work across 29+ countries &mdash; UK, USA, Canada, Ireland, Finland, Germany, France, Australia and more.
+                                        Public tuition-free options are flagged where they exist, and full scholarships are searched first
+                                        before any out-of-pocket plan is recommended.
                                     </p>
                                     <p>
-                                        What sets us apart is our commitment to providing completely free services. We believe that
-                                        financial constraints should never be a barrier to quality education consulting. Our end-to-end
-                                        support ensures that every student receives personalized guidance throughout their journey.
+                                        The first call is free. Plan fees and refund terms are listed openly on the Student Plans page.
+                                        No hidden charges, no upsell scripts.
                                     </p>
                                 </div>
                             </div>
@@ -98,7 +96,7 @@ export default function AboutPage() {
                             {/* Overlay Badge */}
                             <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-white/20">
                                 <p className="text-slate-800 font-bold text-lg mb-1">Global Education</p>
-                                <p className="text-slate-600 text-sm">Empowering students since inception with zero consultation fees.</p>
+                                <p className="text-slate-600 text-sm">First counselling call is free. Always.</p>
                             </div>
                         </div>
 
@@ -121,9 +119,8 @@ export default function AboutPage() {
                                 <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Our Mission</h3>
                             </div>
                             <p className="text-slate-600 text-lg leading-relaxed">
-                                To democratize access to quality international education by providing comprehensive,
-                                free consulting services that guide students through every step of their study abroad journey.
-                                We are committed to breaking down barriers and making global education accessible to all.
+                                Make a real, debt-free study abroad route the default option for Indian students &mdash;
+                                not a luxury reserved for those who can pay agency markups on top of tuition.
                             </p>
                         </div>
 
@@ -136,9 +133,8 @@ export default function AboutPage() {
                                 <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Our Vision</h3>
                             </div>
                             <p className="text-slate-600 text-lg leading-relaxed">
-                                To become the world's most trusted study abroad consultancy, known for our integrity,
-                                expertise, and unwavering commitment to student success. We envision a world where
-                                every student has the opportunity to pursue their educational dreams globally.
+                                Be the consultancy where the counsellor on the other end has actually lived through what the student is about to do.
+                                If we can&apos;t honestly help, we say so &mdash; and we say so first, not last.
                             </p>
                         </div>
                     </div>

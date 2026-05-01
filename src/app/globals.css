@@ -61,25 +61,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Spiral intro — paint a full-screen black cover synchronously before React
-   hydrates the SpiralIntro overlay, so users never see the real page flash
-   underneath. The `intro-pending` class is added by an inline script in
-   <head> (see layout.js) based on sessionStorage. SpiralIntro removes it
-   on dismiss.  */
-html.intro-pending,
-html.intro-pending body {
-  overflow: hidden !important;
-}
-html.intro-pending::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  /* Above the deadline banner (z-100) and anything else in the layout; the
-     React SpiralIntro overlay sits on top of this at z-[1000]. */
-  z-index: 999;
-  background: #000;
-  pointer-events: none;
-}
 
 /* Minimalist Glass Card */
 .glass-card {
@@ -96,6 +77,24 @@ html.intro-pending::before {
   border: 1px solid rgba(255, 255, 255, 0.05);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
   border-radius: 12px;
+}
+
+/* Spiral intro — paint a full-screen black cover synchronously before React
+   hydrates the SpiralIntro overlay, so users never see the real page flash
+   underneath. The `intro-pending` class is added by an inline script in
+   <head> (see layout.js) based on sessionStorage. SpiralIntro removes it
+   on dismiss. */
+html.intro-pending,
+html.intro-pending body {
+  overflow: hidden !important;
+}
+html.intro-pending::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background: #000;
+  pointer-events: none;
 }
 
 /* Scrollbar */
@@ -315,3 +314,70 @@ html.intro-pending::before {
   );
   animation: shiny-sweep 3.5s ease-in-out infinite;
 }
+
+/* ===== Unified site wallpaper — single backdrop across every page ===== */
+.site-body { position: relative; }
+
+.site-wallpaper {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.site-wallpaper__layer { position: absolute; inset: 0; }
+
+.site-wallpaper__layer--gradient {
+  background: linear-gradient(180deg,
+    var(--storm-deep) 0%,
+    var(--storm-abyss) 22%,
+    var(--storm-mid) 48%,
+    var(--dawn-horizon) 72%,
+    var(--dawn-mid) 92%,
+    var(--dawn-clear) 100%);
+}
+
+.site-wallpaper__layer--stars {
+  inset: -60px;
+  background-image:
+    radial-gradient(1px 1px at 11% 19%, rgba(255,255,255,0.85), transparent 50%),
+    radial-gradient(1px 1px at 29% 73%, rgba(255,255,255,0.55), transparent 50%),
+    radial-gradient(1.4px 1.4px at 43% 36%, rgba(186,222,255,0.7), transparent 50%),
+    radial-gradient(1px 1px at 60% 11%, rgba(255,255,255,0.78), transparent 50%),
+    radial-gradient(1.6px 1.6px at 74% 62%, rgba(255,255,255,0.55), transparent 50%),
+    radial-gradient(1px 1px at 88% 28%, rgba(186,222,255,0.7), transparent 50%),
+    radial-gradient(1px 1px at 9% 88%, rgba(255,255,255,0.40), transparent 50%),
+    radial-gradient(1.2px 1.2px at 53% 92%, rgba(255,255,255,0.55), transparent 50%),
+    radial-gradient(1px 1px at 95% 78%, rgba(186,222,255,0.6), transparent 50%);
+  animation: site-wallpaper-drift 280s linear infinite;
+}
+
+.site-wallpaper__layer--stars-far {
+  inset: -120px;
+  opacity: 0.5;
+  animation: site-wallpaper-drift 420s linear infinite reverse;
+  filter: blur(0.4px);
+}
+
+.site-wallpaper__layer--nebula {
+  background:
+    radial-gradient(60% 50% at 18% 12%, rgba(124,200,255,0.16) 0%, transparent 60%),
+    radial-gradient(50% 50% at 82% 22%, rgba(139,92,246,0.12) 0%, transparent 65%),
+    radial-gradient(55% 60% at 50% 95%, rgba(245,184,119,0.18) 0%, transparent 65%);
+  filter: blur(20px);
+}
+
+@keyframes site-wallpaper-drift {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50px, -80px, 0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-wallpaper__layer--stars,
+  .site-wallpaper__layer--stars-far { animation: none !important; }
+}
+
+/* Pages keep transparent so the wallpaper shows through every section. */
+main > *,
+main section { position: relative; }

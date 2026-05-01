@@ -13,6 +13,8 @@ export default function sitemap() {
     { url: `${BASE_URL}/scholarships`, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/portal`, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${BASE_URL}/faq`, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/testimonials`, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE_URL}/certifications`, changeFrequency: 'monthly', priority: 0.6 },
   ].map((page) => ({ ...page, lastModified: now }));
 
   const countryGuides = [

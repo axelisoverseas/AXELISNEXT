@@ -59,7 +59,7 @@ function ProductsContent() {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Student Plan</span>
                     </motion.h1>
                     <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-12 text-slate-400 max-w-3xl mx-auto leading-relaxed">
-                        No hidden charges, transparent pricing, guaranteed results, and comprehensive support for your international education journey.
+                        Two plans. No hidden charges. Refundable deposits. Pick the one that matches where you want to study.
                     </motion.p>
 
                     <motion.div variants={fadeInUp} className="flex flex-wrap justify-center gap-6">

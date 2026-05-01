@@ -62,7 +62,7 @@ export default function ContactPage() {
                         </span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-                        Take the first step toward unparalleled study abroad consulting.
+                        Tell us where you want to study. We&apos;ll tell you what it actually takes &mdash; honestly.
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-6">

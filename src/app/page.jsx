@@ -9,15 +9,11 @@ const InstagramSuccessStories = dynamic(() => import('../components/InstagramSuc
 const TeamGlobeCarousel = dynamic(() => import('../components/TeamGlobeCarousel'), { ssr: false });
 const StudyAbroadGuides = dynamic(() => import('../components/StudyAbroadGuides'), { ssr: false });
 const UniversityLogosSection = dynamic(() => import('../components/UniversityLogosSection'), { ssr: false });
-const SpatialPlanShowcase = dynamic(() => import('../components/ui/SpatialPlanShowcase'), { ssr: false });
-const PlanComparison = dynamic(() => import('../components/PlanComparison'), { ssr: false });
 import { HeroSection as HeroOdyssey } from '../components/ui/hero-odyssey';
 
 import { BorderBeam } from '../components/ui/BorderBeam';
 import { RevealText } from '../components/ui/RevealText';
 import { TextEffect, TextEffectInView } from '../components/ui/TextEffect';
-
-const SpiralIntro = dynamic(() => import('../components/ui/SpiralIntro'), { ssr: false });
 
 import { teamMembers, faqData } from '../data/siteData';
 
@@ -47,11 +43,7 @@ const staggerContainer = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-storm-to-dawn overflow-hidden">
-      {/* Session-gated spiral intro overlay — dismissed by Enter button */}
-      <SpiralIntro />
-
-      {/* Premium Hero Section — Odyssey lightning + planet backdrop */}
+    <div className="min-h-screen overflow-hidden">
       <section className="relative w-full overflow-hidden">
         <HeroOdyssey />
       </section>
@@ -79,7 +71,7 @@ export default function Home() {
               Numbers that <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] via-white to-[var(--dawn-glow)]">speak for themselves</span>
             </h2>
             <p className="text-slate-300 mt-4">
-              Six years of relentless focus on one outcome — placing students at the world&apos;s best universities with zero upfront consultation fees.
+              Six years, one focus &mdash; placing students at universities they can actually get into and afford. Free first call, no upsell.
             </p>
           </motion.div>
 
@@ -138,29 +130,6 @@ export default function Home() {
 
       {/* University Portfolio — 100+ universities across 29 countries */}
       <UniversityLogosSection />
-
-      {/* Student Plans — transition phase */}
-      <section id="student-plans" className="relative">
-        <div className="pt-16 pb-4">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/20 text-[var(--storm-electric)] text-xs font-bold tracking-wide uppercase mb-5">
-              Student Plans
-            </span>
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
-              <TextEffectInView as="span" per="word" preset="blur">Our two</TextEffectInView>{' '}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
-                <TextEffectInView as="span" per="char" preset="blur" delay={0.25}>Student Charters.</TextEffectInView>
-              </span>
-            </h2>
-            <p className="text-slate-300 max-w-2xl mx-auto text-base md:text-lg">
-              Pick the route that matches your destination — ZCF for global private universities, ZTF for tuition-free Europe.
-            </p>
-          </div>
-        </div>
-        <SpatialPlanShowcase plan="zcf" />
-        <SpatialPlanShowcase plan="ztf" />
-        <PlanComparison />
-      </section>
 
       {/* Team Section */}
       <TeamGlobeCarousel teamMembers={teamMembers} />
@@ -235,8 +204,8 @@ export default function Home() {
             
             {/* Content Pane */}
             <div className="md:w-7/12 p-12 md:p-20 relative z-10 text-center md:text-left flex flex-col justify-center items-center md:items-start">
-              <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight relative z-10">Ready to Start Your Journey?</TextEffectInView>
-              <p className="text-xl text-slate-300 mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Connect with our expert counselors today and take the first step towards your global education with zero hidden fees.</p>
+              <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight relative z-10">Ready when you are.</TextEffectInView>
+              <p className="text-xl text-slate-300 mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Tell us where you want to study. We&apos;ll tell you what it actually takes &mdash; honest, transparent, no upsell.</p>
               <Link
                 href="/bookings"
                 className="relative overflow-hidden inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-[var(--storm-accent)] via-[#FFB347] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_40px_-10px_var(--storm-accent-glow)] hover:shadow-[0_0_60px_-15px_var(--storm-accent-glow)] text-lg hover:-translate-y-1 z-10 group"

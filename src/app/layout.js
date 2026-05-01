@@ -2,6 +2,7 @@ import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import SpiralIntroMount from '@/components/ui/SpiralIntroMount';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
@@ -113,10 +114,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={montserrat.variable} suppressHydrationWarning>
       <head>
-        {/* BLOCKING: decide before first paint whether the spiral intro should
-            cover the page. Adds html.intro-pending synchronously so our CSS
-            can paint a full-screen black cover immediately, avoiding any
-            flash of the real hero before SpiralIntro hydrates. */}
+        {/* Spiral intro anti-flash: ship the cover styles INLINE so they
+            apply on the first paint, before globals.css has loaded. The
+            blocking script below adds `intro-pending` synchronously when
+            the spiral should show. Together they guarantee the page never
+            flashes through before SpiralIntro hydrates on top. */}
+        <style
+          dangerouslySetInnerHTML={{
+            __html: `html.intro-pending,html.intro-pending body{overflow:hidden!important;background:#000!important}html.intro-pending::before{content:"";position:fixed;inset:0;z-index:999;background:#000;pointer-events:none}`,
+          }}
+        />
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var f=new URLSearchParams(location.search).get('intro')==='force';if(f||!sessionStorage.getItem('axelis_intro_seen_v1')){document.documentElement.classList.add('intro-pending');}}catch(e){}})();`,
@@ -129,18 +136,19 @@ export default function RootLayout({ children }) {
         />
         <link rel="canonical" href="https://overseeducation.com" />
       </head>
-      <body className="font-sans antialiased text-[var(--storm-bolt)] bg-[var(--storm-deep)] flex flex-col min-h-screen">
-        <div className="relative z-[100] py-3 px-4 text-center text-sm md:text-base font-extrabold shadow-[0_6px_24px_-12px_rgba(5,7,15,0.9)] uppercase tracking-wider text-white bg-[linear-gradient(90deg,var(--storm-abyss)_0%,var(--storm-mid)_45%,var(--dawn-horizon)_100%)] border-b border-[var(--storm-accent)]/30">
-          <span className="relative z-10">
-            <span className="text-[var(--storm-accent)]">⚡</span> FALL 2026 INTAKE: 50% OFF on ZCF & ZTF Student Plans — offer ends 26th May. Sign up now! <span className="text-[var(--storm-accent)]">⚡</span>
-          </span>
-          <span aria-hidden className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--storm-accent)] to-transparent opacity-60" />
+      <body className="font-sans antialiased text-[var(--storm-bolt)] bg-[var(--storm-deep)] flex flex-col min-h-screen site-body">
+        <div className="site-wallpaper" aria-hidden="true">
+          <div className="site-wallpaper__layer site-wallpaper__layer--gradient" />
+          <div className="site-wallpaper__layer site-wallpaper__layer--stars" />
+          <div className="site-wallpaper__layer site-wallpaper__layer--stars site-wallpaper__layer--stars-far" />
+          <div className="site-wallpaper__layer site-wallpaper__layer--nebula" />
         </div>
         <Navbar />
-        <main className="flex-grow">
+        <main className="flex-grow relative z-[1]">
           {children}
         </main>
         <Footer />
+        <SpiralIntroMount />
         <SpeedInsights />
       </body>
     </html>
