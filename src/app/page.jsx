@@ -41,7 +41,58 @@ const staggerContainer = {
   }
 };
 
+const INCORP_DATE = new Date('2023-07-18T00:00:00+05:30');
+
+const ordinal = (n) => {
+  const suffix = ['th', 'st', 'nd', 'rd'];
+  const v = n % 100;
+  return n + (suffix[(v - 20) % 10] || suffix[v] || suffix[0]);
+};
+
+const wordYears = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
+
+const useTimeSinceIncorp = () => {
+  const [now, setNow] = React.useState(() => Date.now());
+  React.useEffect(() => {
+    const id = setInterval(() => setNow(Date.now()), 1000);
+    return () => clearInterval(id);
+  }, []);
+
+  const start = INCORP_DATE.getTime();
+  const diff = Math.max(0, now - start);
+  const totalYears = diff / (365.2425 * 24 * 60 * 60 * 1000);
+  const wholeYears = Math.floor(totalYears);
+  const headlineYears = wordYears[Math.min(wordYears.length - 1, Math.round(totalYears))] || `${Math.round(totalYears)}`;
+
+  // Calendar-accurate y/m/d/h/m/s breakdown.
+  const a = INCORP_DATE;
+  const b = new Date(now);
+  let years = b.getFullYear() - a.getFullYear();
+  let months = b.getMonth() - a.getMonth();
+  let days = b.getDate() - a.getDate();
+  if (days < 0) {
+    months -= 1;
+    const prev = new Date(b.getFullYear(), b.getMonth(), 0);
+    days += prev.getDate();
+  }
+  if (months < 0) {
+    years -= 1;
+    months += 12;
+  }
+  const hours = b.getHours() - a.getHours();
+  const minutes = b.getMinutes() - a.getMinutes();
+  const seconds = b.getSeconds() - a.getSeconds();
+  const norm = (n, mod) => ((n % mod) + mod) % mod;
+
+  return {
+    headlineYears,
+    wholeYears,
+    detail: `${years}y ${norm(months, 12)}m ${norm(days, 31)}d ${norm(hours, 24)}h ${norm(minutes, 60)}m ${norm(seconds, 60)}s`,
+  };
+};
+
 export default function Home() {
+  const { headlineYears, detail } = useTimeSinceIncorp();
   return (
     <div className="min-h-screen overflow-hidden">
       <section className="relative w-full overflow-hidden">
@@ -62,16 +113,19 @@ export default function Home() {
           variants={staggerContainer}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         >
-          {/* Section Heading */}
           <motion.div variants={fadeInUp} className="text-center mb-16 max-w-2xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/20 text-[var(--storm-electric)] text-xs font-semibold mb-4 uppercase tracking-wider">
-              Our Impact
-            </div>
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
-              Numbers that <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] via-white to-[var(--dawn-glow)]">speak for themselves</span>
+              {headlineYears} years of <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] via-white to-[var(--dawn-glow)]">real impact</span>
             </h2>
             <p className="text-slate-300 mt-4">
-              Six years, one focus &mdash; placing students at universities they can actually get into and afford. Free first call, no upsell.
+              One focus &mdash; placing students at universities they can actually get into and afford. Free first call, no upsell.
+            </p>
+            <p
+              className="mt-3 text-xs font-mono uppercase tracking-[0.18em] text-slate-400"
+              suppressHydrationWarning
+            >
+              Incorporated 18 July 2023 &middot;{' '}
+              <span className="text-[var(--storm-electric)]">{detail}</span> and counting.
             </p>
           </motion.div>
 

@@ -3,8 +3,48 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { ArrowRight, Star, MapPin, GraduationCap } from 'lucide-react';
-import { testimonials } from '../../data/siteData';
+import { ArrowRight, Star, MapPin, GraduationCap, Play, BadgeCheck } from 'lucide-react';
+import { testimonials as allTestimonials } from '../../data/siteData';
+
+// Show only testimonials with a real student photo. Entries that fall back to
+// auto-generated initials avatars (ui-avatars.com) are placeholders, not real
+// students, and are filtered out.
+const testimonials = allTestimonials.filter(
+  (t) => t.image && !t.image.includes('ui-avatars.com')
+);
+
+// Video testimonials — students who recorded a review on camera.
+// `youtubeId` for embedded YouTube Shorts, `src` for self-hosted mp4.
+const videoTestimonials = [
+  {
+    id: 'anjali-video',
+    name: 'Anjali Sangwan',
+    university: 'Vistula University',
+    course: 'BA Economics',
+    country: 'Poland',
+    src: '/videos/anjali_sangwan_poland.mp4',
+    poster: '/assets/testimonials/Anjali Sangwantestimonial.jpg',
+  },
+  {
+    id: 'raghav-video',
+    name: 'Raghav Verma',
+    university: 'Warsaw University of Technology',
+    course: 'BSc Computer Science',
+    country: 'Poland',
+    youtubeId: 'J0W5a7lYbRk',
+  },
+];
+
+// Students with confirmed visa + placement, but no full written quote yet.
+// Shown as a clean "Recent Placements" grid below the main carousel.
+const recentPlacements = [
+  { name: 'Jitesh Jha', university: 'Technological University Dublin', course: 'MSc Technology and Innovation Management', country: 'Ireland', plan: 'ZCF', flag: '🇮🇪' },
+  { name: 'Swapnil Arya', university: 'University of Glasgow', course: 'MSc Mechanical Engineering and Management', country: 'UK', plan: 'ZCF', flag: '🇬🇧' },
+  { name: 'Samridhi Singh', university: 'University of Liverpool', course: 'MSc Sustainable Business', country: 'UK', plan: 'ZCF', flag: '🇬🇧' },
+  { name: 'Ashmita Bhatt', university: "Queen's University Belfast", course: 'MBA', country: 'UK', plan: 'ZCF', flag: '🇬🇧' },
+  { name: 'Monika Nataraj', university: 'Humboldt University of Berlin', course: 'LLM — International Dispute Resolution', country: 'Germany', plan: 'ZTF', flag: '🇩🇪' },
+  { name: 'Sai Krishna Penugonda', university: 'Karlsruhe Institute of Technology', course: 'MSc Productions and Operations Management', country: 'Germany', plan: 'ZTF', flag: '🇩🇪' },
+];
 
 const TestimonialRealisticGlobe = dynamic(
   () => import('../../components/TestimonialRealisticGlobe'),
@@ -145,21 +185,32 @@ export default function TestimonialsPage() {
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/20 text-[var(--storm-electric)] text-xs font-bold tracking-wide uppercase mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--storm-electric)]" />
-            Real placements, named students
-          </span>
           <div className="flex justify-center mb-6">
             {Array.from({ length: 5 }).map((_, i) => (
               <Star key={i} className="text-[var(--dawn-glow)] fill-current" size={26} />
             ))}
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-            Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">globe</span>
+            Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">globe.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-300/90 max-w-3xl mx-auto leading-relaxed">
-            Real placements across {uniqueCountries}+ countries. Hover any story and the globe flies to where they actually ended up.
+          <p className="text-xl md:text-2xl text-slate-300/90 max-w-3xl mx-auto leading-relaxed mb-10">
+            Real placements across {uniqueCountries}+ countries. Named students, signed declarations, verifiable visas.
           </p>
+
+          <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
+            <div className="glass-storm py-4">
+              <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">{testimonials.length + recentPlacements.length}</div>
+              <div className="text-sky-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Real placements</div>
+            </div>
+            <div className="glass-storm py-4">
+              <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">{uniqueCountries}+</div>
+              <div className="text-sky-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Countries</div>
+            </div>
+            <div className="glass-storm py-4">
+              <div className="text-2xl md:text-3xl font-bold text-[var(--dawn-glow)]">100%</div>
+              <div className="text-sky-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Visa success</div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -205,6 +256,231 @@ export default function TestimonialsPage() {
               </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Video reviews — students who filmed a thank-you on camera */}
+      <section className="relative py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 inline-flex items-center gap-3">
+              <Play className="w-7 h-7 text-[var(--storm-electric)]" />
+              Watch them <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">tell it on camera.</span>
+            </h2>
+            <p className="text-slate-300/85 text-base md:text-lg max-w-2xl mx-auto">
+              Real students, in their own words, after their visa cleared.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+            {videoTestimonials.map((v) => (
+              <div key={v.id} className="glass-storm p-5 group">
+                <div className="relative aspect-[9/16] sm:aspect-video rounded-xl overflow-hidden bg-black border border-white/10">
+                  {v.youtubeId ? (
+                    <iframe
+                      className="absolute inset-0 w-full h-full"
+                      src={`https://www.youtube.com/embed/${v.youtubeId}?rel=0&modestbranding=1`}
+                      title={`${v.name} review`}
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowFullScreen
+                    />
+                  ) : (
+                    <video
+                      className="absolute inset-0 w-full h-full object-cover"
+                      src={v.src}
+                      poster={v.poster}
+                      controls
+                      preload="metadata"
+                      playsInline
+                    />
+                  )}
+                </div>
+                <div className="pt-4 flex items-start justify-between gap-3">
+                  <div>
+                    <h3 className="text-white font-bold text-lg">{v.name}</h3>
+                    <p className="text-sky-200/85 text-sm">{v.course}</p>
+                    <p className="text-white/70 text-sm">{v.university}</p>
+                  </div>
+                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold whitespace-nowrap">
+                    <BadgeCheck className="w-3.5 h-3.5" />
+                    {v.country}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Recent placements — visa-received students without a written quote yet */}
+      <section className="relative py-16">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 inline-flex items-center gap-3">
+              <BadgeCheck className="w-7 h-7 text-emerald-300" />
+              Recent <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">placements with visa in hand.</span>
+            </h2>
+            <p className="text-slate-300/85 text-base md:text-lg max-w-2xl mx-auto">
+              Fall 2025 cohort. Classes started.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
+            {recentPlacements.map((p) => (
+              <div key={p.name} className="glass-storm p-5 flex items-start gap-4">
+                <div className="text-3xl mt-0.5" aria-hidden>{p.flag}</div>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center justify-between gap-2 mb-1">
+                    <h3 className="text-white font-bold text-base truncate">{p.name}</h3>
+                    <span className="px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider bg-[var(--storm-electric)]/15 border border-[var(--storm-electric)]/30 text-[var(--storm-electric)] uppercase whitespace-nowrap">
+                      {p.plan}
+                    </span>
+                  </div>
+                  <p className="text-sky-200/85 text-sm mb-1 leading-snug">{p.course}</p>
+                  <p className="text-white/70 text-xs mb-2 leading-snug">{p.university}</p>
+                  <div className="inline-flex items-center gap-1.5 text-emerald-300 text-xs font-semibold">
+                    <BadgeCheck className="w-3.5 h-3.5" />
+                    Visa received &middot; {p.country}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Proof gallery — payments, declarations, visas, transfers (PII redacted) */}
+      <section className="relative py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
+              The receipts &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">real payments, real declarations, real visas.</span>
+            </h2>
+            <p className="text-slate-300/85 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+              Every plan flows through Razorpay. Every ZTF student signs a Zero Tuition Fee declaration before we process anything. Every visa we claim is a real stamp in a real passport. Personal info is blacked out below; the rest is exactly what we have on file.
+            </p>
+          </div>
+
+          {/* Group 1: Razorpay payments */}
+          <div className="mb-14">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-px bg-[var(--storm-electric)]/30 flex-1" />
+              <h3 className="text-[var(--storm-electric)] text-xs font-bold uppercase tracking-[0.25em] whitespace-nowrap">
+                Razorpay payments
+              </h3>
+              <div className="h-px bg-[var(--storm-electric)]/30 flex-1" />
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+              {[
+                { src: '/proof/razorpay-prepay.jpeg', cap: 'ZTF Razorpay page', tone: 'sky' },
+                { src: '/proof/razorpay-receipt-1.jpeg', cap: '₹10,000 paid', tone: 'emerald' },
+                { src: '/proof/razorpay-receipt-2.jpeg', cap: '14 May 2025', tone: 'emerald' },
+                { src: '/proof/razorpay-receipt-3.jpeg', cap: '14 May 2025', tone: 'emerald' },
+              ].map((item, i) => (
+                <div key={i} className="glass-storm p-2.5 group hover:scale-[1.02] transition-transform">
+                  <div className="relative rounded-lg overflow-hidden bg-white aspect-[4/5]">
+                    <img
+                      src={item.src}
+                      alt={`Razorpay payment proof ${i + 1}`}
+                      className="absolute inset-0 w-full h-full object-contain"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className={`mt-2 text-center text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-sky-300'}`}>
+                    <BadgeCheck className="w-3 h-3" />
+                    {item.cap}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Group 2: ZTF declarations */}
+          <div className="mb-14">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
+              <h3 className="text-[var(--dawn-glow)] text-xs font-bold uppercase tracking-[0.25em] whitespace-nowrap">
+                Zero Tuition Fee declarations
+              </h3>
+              <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
+            </div>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
+              {[
+                { src: '/proof/esign-zft-1.jpeg', cap: 'Sai Krishna P' },
+                { src: '/proof/esign-zft-2.jpeg', cap: 'Karthik Hegde' },
+                { src: '/proof/esign-zft-3.jpeg', cap: 'Hrashikesh Hegde' },
+                { src: '/proof/esign-zft-4.jpeg', cap: 'Monika Nataraj' },
+              ].map((item, i) => (
+                <div key={i} className="glass-storm p-2.5 group hover:scale-[1.02] transition-transform">
+                  <div className="relative rounded-lg overflow-hidden bg-white aspect-[16/9] sm:aspect-[5/4]">
+                    <img
+                      src={item.src}
+                      alt={`Zero Tuition Fee declaration sent to ${item.cap}`}
+                      className="absolute inset-0 w-full h-full object-cover object-top"
+                      loading="lazy"
+                    />
+                  </div>
+                  <p className="mt-2 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--dawn-glow)] flex items-center justify-center gap-1.5">
+                    <BadgeCheck className="w-3 h-3" />
+                    {item.cap}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Group 3: Visas + UPI — featured 2-up */}
+          <div className="mb-6">
+            <div className="flex items-center gap-3 mb-6">
+              <div className="h-px bg-emerald-400/30 flex-1" />
+              <h3 className="text-emerald-300 text-xs font-bold uppercase tracking-[0.25em] whitespace-nowrap">
+                Visa + bank transfer proofs
+              </h3>
+              <div className="h-px bg-emerald-400/30 flex-1" />
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+              <div className="glass-storm p-3">
+                <div className="relative rounded-xl overflow-hidden bg-white aspect-[3/4]">
+                  <img
+                    src="/proof/visa-poland-raghav.jpeg"
+                    alt="Polish student visa stamp issued to Raghav Verma"
+                    className="absolute inset-0 w-full h-full object-cover"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="pt-3 px-2 text-center">
+                  <p className="text-white font-bold">Raghav Verma &middot; Polish student visa</p>
+                  <p className="text-emerald-300 text-xs font-bold uppercase tracking-wider mt-1 inline-flex items-center gap-1.5">
+                    <BadgeCheck className="w-3 h-3" />
+                    Issued by the Embassy of Poland, New Delhi
+                  </p>
+                </div>
+              </div>
+
+              <div className="glass-storm p-3">
+                <div className="relative rounded-xl overflow-hidden bg-black aspect-[3/4]">
+                  <img
+                    src="/proof/upi-transaction-monika.jpeg"
+                    alt="UPI transfer of ₹65,000 from Monika Nataraj to Axelis Overseas Education Private Limited"
+                    className="absolute inset-0 w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="pt-3 px-2 text-center">
+                  <p className="text-white font-bold">Monika Nataraj &middot; ZTF service fee</p>
+                  <p className="text-emerald-300 text-xs font-bold uppercase tracking-wider mt-1 inline-flex items-center gap-1.5">
+                    <BadgeCheck className="w-3 h-3" />
+                    ₹65,000 via HDFC Bank UPI &middot; 30 Sept 2025
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p className="mt-8 text-center text-slate-400 text-xs max-w-2xl mx-auto">
+            Names are shown only for students whose stories already feature publicly on this site. Personal contact details, account numbers, and government identifiers are blacked out. Anything you want to verify is available on a call &mdash; with the student&apos;s consent.
+          </p>
         </div>
       </section>
 

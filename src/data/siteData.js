@@ -160,47 +160,14 @@ export const testimonials = [
   },
   {
     id: 9,
-    name: "Emma Thompson",
-    university: "University of Melbourne",
-    course: "Master of International Business",
-    country: "Australia",
+    name: "Anjali Sangwan",
+    university: "Vistula University",
+    course: "BA Economics",
+    country: "Poland",
     rating: 5,
-    content: "Axelis made my dream of studying in Australia a reality. Their support throughout the visa process was exceptional and stress-free.",
-    review: "Axelis made my dream of studying in Australia a reality. Their support throughout the visa process was exceptional and stress-free.",
-    image: getTestimonialImage('Emma Thompson')
-  },
-  {
-    id: 10,
-    name: "Lars Andersen",
-    university: "KTH Royal Institute",
-    course: "MSc Sustainable Technology",
-    country: "Sweden",
-    rating: 5,
-    content: "The team at Axelis helped me navigate the complex Swedish education system. Their expertise in Nordic countries is unmatched.",
-    review: "The team at Axelis helped me navigate the complex Swedish education system. Their expertise in Nordic countries is unmatched.",
-    image: getTestimonialImage('Lars Andersen')
-  },
-  {
-    id: 11,
-    name: "Sophie Martin",
-    university: "University of Amsterdam",
-    course: "MA European Studies",
-    country: "Netherlands",
-    rating: 5,
-    content: "From application to arrival, Axelis supported every step of my journey to the Netherlands. Couldn't have done it without them!",
-    review: "From application to arrival, Axelis supported every step of my journey to the Netherlands. Couldn't have done it without them!",
-    image: getTestimonialImage('Sophie Martin')
-  },
-  {
-    id: 12,
-    name: "Hans Mueller",
-    university: "Technical University Munich",
-    course: "MSc Engineering",
-    country: "Germany",
-    rating: 5,
-    content: "Axelis expertise in German universities and their scholarship programs helped me secure funding for my engineering degree.",
-    review: "Axelis expertise in German universities and their scholarship programs helped me secure funding for my engineering degree.",
-    image: getTestimonialImage('Hans Mueller')
+    content: "I am finally here in Poland. You guys truly helped me make my dream of studying abroad come true — your guidance was perfect, always clear and patient through the whole visa process. The best team!",
+    review: "I am finally here in Poland. I am so, so grateful to all of you. You guys truly helped me make my dream of studying abroad come true. The whole process was very hard, getting all the papers ready and getting the visa, but your guidance was perfect. You guys were always so clear and patient with me. I am now settled in my new place and getting to know the city — I love the atmosphere. Knowing I am finally here makes me feel very happy and excited for the future. You are the best team!",
+    image: getTestimonialImage('Anjali Sangwan')
   }
 ];
 

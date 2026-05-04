@@ -45,12 +45,8 @@ export default function CertificationsPage() {
           <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/20 text-[var(--storm-electric)] text-xs font-bold tracking-wide uppercase mb-6">
-            <span className="w-1.5 h-1.5 rounded-full bg-[var(--storm-electric)]" />
-            Verified by independent bodies
-          </span>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6">
-            Certified by <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">DPIIT, British Council and AIRC</span>
+            Independently certified by <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">DPIIT, British Council and AIRC</span>
           </h1>
           <p className="text-lg md:text-xl text-slate-300/90 leading-relaxed">
             Three independent recognitions, three different reasons to trust the work. Hover any certificate for the full preview.

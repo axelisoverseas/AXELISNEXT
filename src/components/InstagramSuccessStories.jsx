@@ -174,13 +174,11 @@ const InstagramSuccessStories = () => {
     <AnimatedSection className="py-24 bg-transition-sky border-y border-[var(--storm-electric)]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/20 text-[var(--storm-electric)] text-xs font-bold tracking-wide uppercase mb-5">
-            <Instagram size={14} /> Student Stories
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
-            <TextEffectInView as="span" per="word" preset="blur">Real journeys from</TextEffectInView>{' '}
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4 inline-flex items-center gap-3 flex-wrap justify-center">
+            <Instagram className="w-7 h-7 text-[var(--storm-electric)]" />
+            <TextEffectInView as="span" per="word" preset="blur">Real student journeys</TextEffectInView>{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
-              our students
+              on Instagram
             </span>
           </h2>
           <p className="text-slate-300 max-w-2xl mx-auto text-base md:text-lg">

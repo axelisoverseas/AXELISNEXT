@@ -21,6 +21,7 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
     'Sweden': { lat: 60.1282, lng: 18.6435, flag: '🇸🇪' },
     'Norway': { lat: 60.4720, lng: 8.4689, flag: '🇳🇴' },
     'Ireland': { lat: 53.4129, lng: -8.2439, flag: '🇮🇪' },
+    'Poland': { lat: 51.9194, lng: 19.1451, flag: '🇵🇱' },
   };
 
   // Get testimonial countries for highlighting
