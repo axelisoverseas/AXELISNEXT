@@ -117,6 +117,14 @@ const Navbar = () => {
               </Link>
 
               <Link
+                href="/test-prep"
+                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/test-prep') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                  }`}
+              >
+                <span>Test Prep</span>
+              </Link>
+
+              <Link
                 href="/testimonials"
                 className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/testimonials') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
@@ -222,6 +230,14 @@ const Navbar = () => {
             >
               <Package size={18} className="mr-3" />
               Student Plans
+            </Link>
+            <Link
+              href="/test-prep"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
+            >
+              <HelpCircle size={18} className="mr-3" />
+              Test Prep
             </Link>
             <Link
               href="/testimonials"
