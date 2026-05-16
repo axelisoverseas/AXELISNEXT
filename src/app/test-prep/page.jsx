@@ -3,7 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const RAZORPAY_URL = 'https://rzp.io/rzp/c5K4pKY';
 
@@ -64,6 +64,35 @@ const offerings = [
   {
     title: 'No drag, no upsell',
     body: 'A clear endpoint per pack. If you hit your target score early, the remaining hours roll into application support &mdash; never wasted.',
+  },
+];
+
+// Mirrors the FAQPage JSON-LD in test-prep/layout.js so search engines and
+// SGE crawlers see matching on-page content.
+const faqs = [
+  {
+    q: 'Which English test should I take — IELTS, TOEFL, PTE or DET?',
+    a: 'It depends on the country and university you are applying to. UK and most European universities accept all four; the US accepts TOEFL, IELTS and increasingly DET; Canadian and Australian universities accept IELTS, TOEFL and PTE. The free 30-minute Axelis demo includes a diagnostic that picks the test most likely to get you to your target band fastest.',
+  },
+  {
+    q: 'Are the test prep classes really 1-on-1?',
+    a: 'Yes. Every Axelis Premium Test Prep session is one student, one tutor, live online. There are no batches, no recorded lectures pretending to be live, and no shared screens with other students.',
+  },
+  {
+    q: 'How experienced are the Axelis test prep tutors?',
+    a: 'Every in-house tutor at Axelis Overseas has at least 8 years of full-time English test prep teaching experience across IELTS, TOEFL, PTE and DET. We share tutor profiles and past score histories on request before you enrol.',
+  },
+  {
+    q: 'What happens if I do not hit my target band?',
+    a: 'If a student finishes the planned hours and has not reached the target band agreed at the start, Axelis continues coaching until that band is hit. There is no extra fee for the additional sessions.',
+  },
+  {
+    q: 'How do I enrol and pay?',
+    a: 'Enrol securely via Razorpay at rzp.io/rzp/c5K4pKY. You will receive a tax invoice the same day, your diagnostic call is scheduled within 24 hours, and your first 1-on-1 session is booked within the week.',
+  },
+  {
+    q: 'Where is Axelis Overseas based and do you teach students outside India?',
+    a: 'Axelis Overseas Education Private Limited is incorporated in Bengaluru, Karnataka, India. All test prep sessions are delivered live online, which means students based anywhere in India and abroad can attend at a time that suits their timezone.',
   },
 ];
 
@@ -271,6 +300,42 @@ export default function TestPrepPage() {
                 Payment opens on <span className="text-slate-200">rzp.io</span> &middot; secured by Razorpay
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ — matches FAQPage JSON-LD in layout.js */}
+      <section className="relative py-20">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
+              Questions, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">answered.</span>
+            </h2>
+            <p className="text-slate-300/85 text-lg">
+              Six things students ask before they enrol.
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            {faqs.map((item, i) => (
+              <details
+                key={item.q}
+                className="group glass-storm overflow-hidden"
+                open={i === 0}
+              >
+                <summary className="flex items-center justify-between p-5 md:p-6 cursor-pointer list-none">
+                  <span className="text-base md:text-lg font-bold text-white group-hover:text-[var(--storm-electric)] transition-colors pr-4">
+                    {item.q}
+                  </span>
+                  <div className="w-8 h-8 shrink-0 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 group-open:rotate-180 transition-transform duration-300">
+                    <ChevronDown size={18} />
+                  </div>
+                </summary>
+                <div className="px-5 md:px-6 pb-6 text-slate-300/85 leading-relaxed border-t border-white/10 pt-4 text-sm md:text-base">
+                  {item.a}
+                </div>
+              </details>
+            ))}
           </div>
         </div>
       </section>
