@@ -15,7 +15,15 @@ export default function ScholarshipsPage() {
         <div className="min-h-screen bg-storm-to-dawn">
             {/* Hero Section */}
             <section className="relative pt-32 pb-24 bg-[var(--storm-deep)] overflow-hidden border-b border-[var(--storm-accent)]/20">
-                <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+                <img
+                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80&auto=format&fit=crop"
+                    alt=""
+                    aria-hidden="true"
+                    loading="eager"
+                    fetchPriority="high"
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]"></div>
                 <div className="absolute top-0 right-0 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
@@ -87,7 +95,17 @@ export default function ScholarshipsPage() {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                            <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1200&q=80&auto=format&fit=crop"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                             <h3 className="text-xl font-bold text-blue-900 mb-4 border-b border-slate-100 pb-2">Merit-Based Scholarships</h3>
                             <ul className="space-y-4">
                                 <li className="flex items-start">
@@ -101,7 +119,17 @@ export default function ScholarshipsPage() {
                             </ul>
                         </div>
 
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                            <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1200&q=80&auto=format&fit=crop"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                             <h3 className="text-xl font-bold text-emerald-900 mb-4 border-b border-slate-100 pb-2">Need-Based Financial Aid</h3>
                             <ul className="space-y-4">
                                 <li className="flex items-start">
@@ -115,7 +143,17 @@ export default function ScholarshipsPage() {
                             </ul>
                         </div>
 
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                            <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=1200&q=80&auto=format&fit=crop"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                             <h3 className="text-xl font-bold text-purple-900 mb-4 border-b border-slate-100 pb-2">University / Agent Scholarships</h3>
                             <ul className="space-y-4">
                                 <li className="flex items-start">
@@ -129,7 +167,17 @@ export default function ScholarshipsPage() {
                             </ul>
                         </div>
 
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                            <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
+                                <img
+                                    src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=1200&q=80&auto=format&fit=crop"
+                                    alt=""
+                                    aria-hidden="true"
+                                    loading="lazy"
+                                    decoding="async"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
                             <h3 className="text-xl font-bold text-amber-900 mb-4 border-b border-slate-100 pb-2">Government / National Grants</h3>
                             <ul className="space-y-4">
                                 <li className="flex items-start">

@@ -2,7 +2,6 @@ import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
-import SpiralIntroMount from '@/components/ui/SpiralIntroMount';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
@@ -114,21 +113,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={montserrat.variable} suppressHydrationWarning>
       <head>
-        {/* Spiral intro anti-flash: ship the cover styles INLINE so they
-            apply on the first paint, before globals.css has loaded. The
-            blocking script below adds `intro-pending` synchronously when
-            the spiral should show. Together they guarantee the page never
-            flashes through before SpiralIntro hydrates on top. */}
-        <style
-          dangerouslySetInnerHTML={{
-            __html: `html.intro-pending,html.intro-pending body{overflow:hidden!important;background:#000!important}html.intro-pending::before{content:"";position:fixed;inset:0;z-index:999;background:#000;pointer-events:none}`,
-          }}
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){try{var f=new URLSearchParams(location.search).get('intro')==='force';if(f||!sessionStorage.getItem('axelis_intro_seen_v1')){document.documentElement.classList.add('intro-pending');}}catch(e){}})();`,
-          }}
-        />
         <Script
           id="json-ld-organization"
           type="application/ld+json"
@@ -147,7 +131,6 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
-        <SpiralIntroMount />
         <SpeedInsights />
       </body>
     </html>

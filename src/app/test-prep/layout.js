@@ -3,20 +3,29 @@ const RAZORPAY_URL = 'https://rzp.io/rzp/c5K4pKY';
 const OG_IMAGE = 'https://overseeducation.com/og-image.jpg';
 
 export const metadata = {
-  title: 'IELTS, TOEFL, PTE, DET Coaching — Premium 1-on-1 Test Prep',
+  title: 'IELTS, TOEFL, PTE, SAT, DET Coaching — Premium 1-on-1 Test Prep',
   description:
-    'Premium 1-on-1 IELTS, TOEFL, PTE and DET coaching with tutors who have 8+ years of teaching experience. Score-targeted plans, full-length mocks, flexible scheduling, and Razorpay-secured enrolment. Based in Bengaluru, India — live online for students worldwide.',
+    'Premium 1-on-1 IELTS, TOEFL, PTE Academic, SAT and Duolingo English Test coaching with in-house tutors who have 8+ years of teaching experience. Score-targeted plans from ₹460/session, full-length mocks, flexible scheduling, and Razorpay-secured enrolment. Bengaluru, India — live online worldwide.',
   keywords: [
     'IELTS coaching',
     'IELTS classes',
     'IELTS preparation',
     'IELTS coaching online',
+    'IELTS coaching fees India',
     'TOEFL coaching',
     'TOEFL iBT preparation',
     'PTE coaching',
     'PTE Academic preparation',
+    'SAT coaching',
+    'Digital SAT preparation',
+    'College Board SAT prep India',
     'Duolingo English Test coaching',
     'DET preparation',
+    'CELPIP coaching India',
+    'spoken English classes India',
+    'English fluency training',
+    'French A1 A2 classes India',
+    'German A1 A2 classes India',
     'English test prep India',
     'one on one IELTS coaching',
     'premium IELTS tutor',
@@ -32,24 +41,24 @@ export const metadata = {
     type: 'website',
     url: PAGE_URL,
     siteName: 'Axelis Overseas Education',
-    title: 'IELTS, TOEFL, PTE, DET Coaching — Premium 1-on-1 Test Prep | Axelis Overseas',
+    title: 'IELTS, TOEFL, PTE, SAT, DET Coaching — Premium 1-on-1 Test Prep | Axelis Overseas',
     description:
-      'Crack IELTS, TOEFL, PTE and DET with tutors who have 8+ years of teaching behind them. Live 1-on-1 sessions, full-length mocks, score-targeted plans. Enrol via Razorpay.',
+      'Crack IELTS, TOEFL, PTE, SAT and DET with tutors who have 8+ years of teaching behind them. Live 1-on-1 sessions, full-length mocks, score-targeted plans from ₹460/session. Enrol via Razorpay.',
     locale: 'en_IN',
     images: [
       {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'Axelis Overseas — Premium 1-on-1 IELTS, TOEFL, PTE and DET coaching',
+        alt: 'Axelis Overseas — Premium 1-on-1 IELTS, TOEFL, PTE, SAT and DET coaching',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IELTS, TOEFL, PTE, DET — Premium 1-on-1 Test Prep | Axelis Overseas',
+    title: 'IELTS, TOEFL, PTE, SAT, DET — Premium 1-on-1 Test Prep | Axelis Overseas',
     description:
-      'Live 1-on-1 coaching with 8+ year tutors. Score-targeted plans for IELTS, TOEFL, PTE and DET.',
+      'Live 1-on-1 coaching with 8+ year tutors. Score-targeted plans for IELTS, TOEFL, PTE, SAT and DET. From ₹460/session.',
     images: [OG_IMAGE],
   },
   robots: {
@@ -102,7 +111,7 @@ const provider = {
   ],
 };
 
-const buildCourse = ({ name, alt, abstract }) => ({
+const buildCourse = ({ name, alt, abstract, price, priceUnit = 'per student per pack' }) => ({
   '@context': 'https://schema.org',
   '@type': 'Course',
   name,
@@ -122,7 +131,9 @@ const buildCourse = ({ name, alt, abstract }) => ({
     url: RAZORPAY_URL,
     availability: 'https://schema.org/InStock',
     priceCurrency: 'INR',
+    price,
     category: 'Premium 1-on-1 tutoring',
+    description: `Indicative starting price (${priceUnit}). Multiple packs available — see /test-prep for the full matrix.`,
   },
   hasCourseInstance: [
     {
@@ -142,25 +153,55 @@ const courses = [
     name: 'IELTS Premium 1-on-1 Coaching',
     alt: 'International English Language Testing System preparation',
     abstract:
-      'Live 1-on-1 IELTS coaching for Academic and General Training. Section-by-section drills, full-length mocks, line-by-line writing and speaking reviews with tutors who have 8+ years of teaching experience.',
+      'Live 1-on-1 IELTS coaching for Academic and General Training. Section-by-section drills, full-length mocks, line-by-line writing and speaking reviews with tutors who have 8+ years of teaching experience. 1-on-1 crash course (12 sessions) at ₹6,000; couple batch (15 sessions) at ₹5,300; batch of 3 (20 sessions) at ₹6,000 per student.',
+    price: '6000',
   }),
   buildCourse({
     name: 'TOEFL iBT Premium 1-on-1 Coaching',
     alt: 'Test of English as a Foreign Language preparation',
     abstract:
-      'Live 1-on-1 TOEFL iBT coaching covering Reading, Listening, Speaking and Writing. Score-targeted curriculum, weekly mocks with same-week feedback.',
+      'Live 1-on-1 TOEFL iBT, CELPIP and general language-cert coaching covering Reading, Listening, Speaking and Writing. Score-targeted curriculum, weekly mocks with same-week feedback. ₹625 per session, practice portal extra.',
+    price: '625',
+    priceUnit: 'per session',
   }),
   buildCourse({
     name: 'PTE Academic Premium 1-on-1 Coaching',
     alt: 'Pearson Test of English Academic preparation',
     abstract:
-      'Live 1-on-1 PTE Academic coaching. Speaking and Writing fluency drills, integrated-skills strategies, full-length mocks with personalised feedback.',
+      'Live 1-on-1 PTE Academic coaching with Alpha PTE subscription included (worth ₹1,299). Speaking and writing fluency drills, integrated-skills strategies, full-length mocks. 1-on-1 crash (9 sessions) at ₹5,300; couple batch (15 sessions) at ₹4,600; batch of 3 (15 sessions) at ₹5,300 per student.',
+    price: '5300',
   }),
   buildCourse({
     name: 'Duolingo English Test (DET) Premium 1-on-1 Coaching',
     alt: 'Duolingo English Test preparation',
     abstract:
-      'Live 1-on-1 Duolingo English Test coaching. At-home test strategy, adaptive question drills, writing-sample reviews, and full-length practice attempts.',
+      'Live 1-on-1 Duolingo English Test coaching. At-home test strategy, adaptive question drills, writing-sample reviews, and full-length practice attempts. Pricing matches the TOEFL/CELPIP/Language Cert track at ₹625 per session.',
+    price: '625',
+    priceUnit: 'per session',
+  }),
+  buildCourse({
+    name: 'SAT (Digital) Premium Coaching — Axelis Overseas',
+    alt: 'Digital SAT (College Board) preparation',
+    abstract:
+      'Live coaching for the Digital SAT. Reading & Writing modules and the adaptive Math sections, full Bluebook mock cycle. 1-on-1 (min 16 sessions) from ₹760/session; batch of 2 (min 20) from ₹1,175/session; batch of 3 (min 30) from ₹1,600/session.',
+    price: '760',
+    priceUnit: 'per session, minimum 16 sessions for 1-on-1',
+  }),
+  buildCourse({
+    name: 'Spoken English & Communication Training',
+    alt: 'English fluency and interview preparation',
+    abstract:
+      'Live coaching to build spoken English fluency, confidence, and interview readiness for visa interviews, university interviews, or workplace English. 1-on-1 from ₹460/session, batches available.',
+    price: '460',
+    priceUnit: 'per session',
+  }),
+  buildCourse({
+    name: 'French and German (A1 / A2) Coaching',
+    alt: 'European language certifications A1 A2',
+    abstract:
+      'A1 and A2 level coaching for French and German. Suited for German student-visa language thresholds and French university admissions. 1-on-1 at ₹900/session; batch of 2 at ₹1,300/session; batch of 3 at ₹1,725/session.',
+    price: '900',
+    priceUnit: 'per session, 1-on-1',
   }),
 ];
 

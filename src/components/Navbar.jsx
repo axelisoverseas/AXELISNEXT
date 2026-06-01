@@ -141,6 +141,14 @@ const Navbar = () => {
               </Link>
 
               <Link
+                href="/accommodation"
+                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/accommodation') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                  }`}
+              >
+                <span>Housing</span>
+              </Link>
+
+              <Link
                 href="/faq"
                 className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/faq') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
@@ -167,10 +175,14 @@ const Navbar = () => {
                 <BorderBeam size={80} duration={7} colorFrom="#7CC8FF" colorTo="#F5B877" />
               </Link>
               <button
+                type="button"
                 onClick={() => setIsOpen(true)}
-                className="flex items-center space-x-2 px-4 py-2.5 rounded-xl glass-storm text-slate-200 hover:text-[var(--storm-electric)] font-semibold transition-colors"
+                aria-label="Open extended navigation menu"
+                aria-expanded={isOpen}
+                aria-controls="mobile-nav-drawer"
+                className="flex items-center space-x-2 px-4 py-2.5 min-h-[44px] rounded-xl glass-storm text-slate-200 hover:text-[var(--storm-electric)] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
               >
-                <Menu size={20} />
+                <Menu size={20} aria-hidden="true" />
                 <span className="text-sm">More</span>
               </button>
             </div>
@@ -178,10 +190,14 @@ const Navbar = () => {
             {/* Mobile menu button */}
             <div className="md:hidden flex items-center">
               <button
+                type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="p-2 rounded-lg text-slate-300 hover:bg-white/5 hover:text-[var(--storm-electric)] transition-colors"
+                aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                aria-expanded={isOpen}
+                aria-controls="mobile-nav-drawer"
+                className="min-w-[44px] min-h-[44px] p-2 rounded-lg text-slate-300 hover:bg-white/5 hover:text-[var(--storm-electric)] transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
               >
-                {isOpen ? <X size={24} /> : <Menu size={24} />}
+                {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
               </button>
             </div>
           </div>
@@ -203,13 +219,15 @@ const Navbar = () => {
             }`}
         >
           {/* Menu Header */}
-          <div className="flex items-center justify-between p-6 border-b border-white/5">
+          <div id="mobile-nav-drawer" className="flex items-center justify-between p-6 border-b border-white/5">
             <h2 className="text-lg font-bold text-white">Navigation</h2>
             <button
+              type="button"
               onClick={() => setIsOpen(false)}
-              className="p-2 rounded-lg text-slate-300 hover:bg-white/5 hover:text-[var(--storm-electric)] transition-colors"
+              aria-label="Close navigation menu"
+              className="min-w-[44px] min-h-[44px] p-2 rounded-lg text-slate-300 hover:bg-white/5 hover:text-[var(--storm-electric)] transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]"
             >
-              <X size={20} />
+              <X size={20} aria-hidden="true" />
             </button>
           </div>
 

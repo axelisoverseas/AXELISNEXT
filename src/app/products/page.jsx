@@ -7,8 +7,6 @@ import {
   CheckCircle, Award, Globe2, BadgeCheck, ShieldCheck, ArrowRight,
   FileText, Phone, Plane, GraduationCap,
 } from 'lucide-react';
-import PlanComparison from '../../components/PlanComparison';
-import SpatialPlanShowcase from '../../components/ui/SpatialPlanShowcase';
 import { TextEffect } from '../../components/ui/TextEffect';
 
 const fadeInUp = {
@@ -61,6 +59,16 @@ function ProductsContent() {
       {/* HERO */}
       <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2400&auto=format&fit=crop"
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+            fetchPriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.65)_0%,transparent_75%)]" />
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
@@ -77,7 +85,7 @@ function ProductsContent() {
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-10 text-slate-300/90 max-w-3xl mx-auto leading-relaxed">
-            ZCF for global private universities. ZTF for tuition-free public Europe. Both come with a 100% refundable deposit and a real human counsellor &mdash; not a chatbot.
+            Global Admissions Charter (GAC) for global private universities. Europe Public Charter (EPC) for tuition-free public Europe. Both come with a 100% refundable deposit and a real human counsellor &mdash; not a chatbot.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -98,7 +106,7 @@ function ProductsContent() {
 
           <motion.div variants={fadeInUp} className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {[
-              { Icon: CheckCircle, label: '2000+ students' },
+              { Icon: CheckCircle, label: '500+ students' },
               { Icon: Globe2, label: '29+ countries' },
               { Icon: Award, label: '₹3 Cr+ scholarships' },
               { Icon: ShieldCheck, label: '100% refundable' },
@@ -129,21 +137,273 @@ function ProductsContent() {
         </div>
       </section>
 
-      {/* PLANS — Spatial showcases + comparison */}
-      <div id="plans">
-        <SpatialPlanShowcase plan="zcf" />
-        <SpatialPlanShowcase plan="ztf" />
+      {/* PLANS — two charters: GAC and EPC */}
+      <section id="plans" className="relative py-20 scroll-mt-24">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/8 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/8 rounded-full blur-[120px]" />
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: '-100px' }}
-          transition={{ duration: 0.8 }}
-          id="student-plan-comparison"
-        >
-          <PlanComparison />
-        </motion.div>
-      </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-14 max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
+              Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">One destination &mdash; yours.</span>
+            </h2>
+            <p className="text-slate-300/85 text-lg">
+              Pick the route that matches where you want to study. Both come with refundable deposits and a real human counsellor.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
+            {/* GAC — Global Admissions Charter */}
+            <article
+              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--storm-electric)]/30 shadow-[0_30px_80px_-20px_rgba(5,7,15,0.9)] bg-[#0c1428]"
+              aria-labelledby="plan-gac-title"
+            >
+              {/* Top brand-band — pure CSS, no image */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[var(--storm-electric)] to-transparent"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-[var(--storm-electric)]/10 blur-3xl pointer-events-none"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[var(--storm-electric)]/5 blur-3xl pointer-events-none"
+              />
+              <div className="relative">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/30 text-[var(--storm-electric)] text-[10px] font-bold tracking-[0.2em] uppercase mb-5">
+                  Most popular
+                </span>
+                <h3 id="plan-gac-title" className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
+                  Global Admissions Charter <span className="text-base font-semibold text-sky-200/70">(GAC)</span>
+                </h3>
+                <p className="text-slate-400 text-xs uppercase tracking-wider mb-6">Internal code: ZCF</p>
+
+                <p className="text-slate-300/90 mb-4 leading-relaxed">
+                  For students applying to <strong className="text-white">paid-tuition universities</strong> in the UK, USA, Canada, Australia, Ireland, New Zealand, and more.
+                </p>
+
+                <div className="flex flex-wrap gap-1.5 mb-6" aria-label="Countries covered under Global Admissions Charter">
+                  {[
+                    { f: '🇬🇧', n: 'UK' },
+                    { f: '🇺🇸', n: 'USA' },
+                    { f: '🇨🇦', n: 'Canada' },
+                    { f: '🇦🇺', n: 'Australia' },
+                    { f: '🇮🇪', n: 'Ireland' },
+                    { f: '🇳🇿', n: 'NZ' },
+                    { f: '🇸🇬', n: 'Singapore' },
+                    { f: '🇨🇭', n: 'Switzerland' },
+                    { f: '🇦🇪', n: 'UAE' },
+                    { f: '🇲🇾', n: 'Malaysia' },
+                    { f: '🇯🇵', n: 'Japan' },
+                    { f: '🇰🇷', n: 'Korea' },
+                    { f: '🇭🇰', n: 'HK' },
+                    { f: '🇲🇹', n: 'Malta' },
+                  ].map((c) => (
+                    <span
+                      key={c.n}
+                      className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/25 text-white text-[11px] font-semibold"
+                    >
+                      <span aria-hidden="true">{c.f}</span>
+                      <span>{c.n}</span>
+                    </span>
+                  ))}
+                </div>
+
+                <div className="bg-white/[0.04] rounded-2xl border border-white/10 p-5 mb-6">
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <span className="text-slate-500 line-through text-base">₹19,999</span>
+                    <span className="px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[10px] font-bold tracking-wider">50% OFF</span>
+                  </div>
+                  <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">₹9,999</div>
+                  <p className="text-sky-200/85 text-sm font-medium">Onboarding deposit &mdash; <span className="text-emerald-300 font-semibold">100% refundable</span></p>
+                  <p className="text-slate-400 text-xs mt-1">Refunded once your student visa is approved, or if you receive zero offers.</p>
+                </div>
+
+                <ul className="space-y-3 mb-8 text-sm">
+                  {[
+                    'Expert university shortlisting + live status tracker',
+                    'SOP, LOR & Europass CV done with you',
+                    'Application submission across 70+ partner universities',
+                    'Scholarship hunt — we apply for every relevant grant',
+                    'Visa file build + mock interview',
+                    'Accommodation & pre-departure support',
+                  ].map((feat) => (
+                    <li key={feat} className="flex items-start gap-2.5">
+                      <CheckCircle size={16} className="text-[var(--storm-electric)] shrink-0 mt-0.5" />
+                      <span className="text-slate-200">{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/products?redirect=zcf"
+                  className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                  aria-label="Enrol in the Global Admissions Charter (GAC) plan for nine thousand nine hundred and ninety nine rupees"
+                >
+                  Enrol in Global Admissions Charter (GAC) &mdash; ₹9,999
+                  <ArrowRight size={20} />
+                </Link>
+                <p className="text-xs text-slate-500 mt-3 text-center flex items-center justify-center gap-1.5">
+                  <ShieldCheck size={12} /> Secure via Razorpay &middot; refund terms in writing
+                </p>
+              </div>
+            </article>
+
+            {/* EPC — Europe Public Charter */}
+            <article
+              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--dawn-glow)]/30 shadow-[0_30px_80px_-20px_rgba(5,7,15,0.9)] bg-[#0c1428]"
+              aria-labelledby="plan-epc-title"
+            >
+              {/* Top brand-band — pure CSS, no image */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[var(--dawn-glow)] to-transparent"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-[var(--dawn-glow)]/10 blur-3xl pointer-events-none"
+              />
+              <div
+                aria-hidden="true"
+                className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[var(--dawn-glow)]/5 blur-3xl pointer-events-none"
+              />
+              <div className="relative">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-[10px] font-bold tracking-[0.2em] uppercase mb-5">
+                  Tuition-free Europe
+                </span>
+                <h3 id="plan-epc-title" className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
+                  Europe Public Charter <span className="text-base font-semibold text-sky-200/70">(EPC)</span>
+                </h3>
+                <p className="text-slate-400 text-xs uppercase tracking-wider mb-6">Internal code: ZTF</p>
+
+                <p className="text-slate-300/90 mb-4 leading-relaxed">
+                  For students who want <strong className="text-white">zero tuition</strong> at public universities in Germany, France, Norway, Sweden, Finland, Italy, Spain, Poland and more.
+                </p>
+
+                <div className="flex flex-wrap gap-1.5 mb-6" aria-label="Countries covered under Europe Public Charter">
+                  {[
+                    { f: '🇩🇪', n: 'Germany' },
+                    { f: '🇫🇷', n: 'France' },
+                    { f: '🇳🇴', n: 'Norway' },
+                    { f: '🇸🇪', n: 'Sweden' },
+                    { f: '🇫🇮', n: 'Finland' },
+                    { f: '🇩🇰', n: 'Denmark' },
+                    { f: '🇳🇱', n: 'Netherlands' },
+                    { f: '🇮🇹', n: 'Italy' },
+                    { f: '🇪🇸', n: 'Spain' },
+                    { f: '🇵🇱', n: 'Poland' },
+                    { f: '🇦🇹', n: 'Austria' },
+                    { f: '🇧🇪', n: 'Belgium' },
+                    { f: '🇨🇿', n: 'Czechia' },
+                    { f: '🇭🇺', n: 'Hungary' },
+                    { f: '🇵🇹', n: 'Portugal' },
+                  ].map((c) => (
+                    <span
+                      key={c.n}
+                      className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/25 text-white text-[11px] font-semibold"
+                    >
+                      <span aria-hidden="true">{c.f}</span>
+                      <span>{c.n}</span>
+                    </span>
+                  ))}
+                </div>
+
+                <div className="bg-white/[0.04] rounded-2xl border border-white/10 p-5 mb-6">
+                  <div className="flex items-baseline gap-2 mb-1">
+                    <span className="text-slate-500 line-through text-base">₹39,998</span>
+                    <span className="px-2 py-0.5 rounded-md bg-[var(--dawn-glow)]/20 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-[10px] font-bold tracking-wider">50% OFF</span>
+                  </div>
+                  <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">₹19,999</div>
+                  <p className="text-sky-200/85 text-sm font-medium">Service fee &mdash; <span className="text-emerald-300 font-semibold">refundable</span> if zero offers received.</p>
+                  <p className="text-slate-400 text-xs mt-1">Once you receive any offer, the fee covers the full end-to-end service.</p>
+                </div>
+
+                <ul className="space-y-3 mb-8 text-sm">
+                  {[
+                    'Targeted shortlist of tuition-free public universities',
+                    'Language certification advisory (DELF, Goethe, IELTS)',
+                    'Direct application submission to chosen universities',
+                    'Visa file build + financial documentation',
+                    'Accommodation help & part-time work guidance',
+                    'On-the-ground support until first day of class',
+                  ].map((feat) => (
+                    <li key={feat} className="flex items-start gap-2.5">
+                      <CheckCircle size={16} className="text-[var(--dawn-glow)] shrink-0 mt-0.5" />
+                      <span className="text-slate-200">{feat}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <Link
+                  href="/products?redirect=ztf"
+                  className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-electric)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                  aria-label="Enrol in the Europe Public Charter (EPC) plan for nineteen thousand nine hundred and ninety nine rupees"
+                >
+                  Enrol in Europe Public Charter (EPC) &mdash; ₹19,999
+                  <ArrowRight size={20} />
+                </Link>
+                <p className="text-xs text-slate-500 mt-3 text-center flex items-center justify-center gap-1.5">
+                  <ShieldCheck size={12} /> Secure via Razorpay &middot; refund terms in writing
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      {/* COMPARISON TABLE — GAC vs EPC */}
+      <section id="comparison" className="relative py-16 scroll-mt-24">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 max-w-2xl mx-auto">
+            <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight mb-3">
+              Global Admissions Charter (GAC) vs Europe Public Charter (EPC) <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">at a glance</span>
+            </h2>
+            <p className="text-slate-300/85">
+              Same human team, same honest counselling &mdash; built for two different student profiles.
+            </p>
+          </div>
+
+          <div className="bg-[#0c1428] border-2 border-white/15 rounded-2xl shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] overflow-hidden">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-white/15 bg-white/[0.06]">
+                  <th scope="col" className="text-left p-4 md:p-5 text-slate-400 font-semibold uppercase text-[10px] tracking-[0.2em]">Compare</th>
+                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--storm-electric)] font-bold">Global Admissions Charter <span className="text-slate-400 font-normal text-xs">(GAC · ZCF)</span></th>
+                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--dawn-glow)] font-bold">Europe Public Charter <span className="text-slate-400 font-normal text-xs">(EPC · ZTF)</span></th>
+                </tr>
+              </thead>
+              <tbody className="text-slate-200">
+                {[
+                  ['Best for', 'Paid global universities', 'Tuition-free public Europe'],
+                  ['Countries covered', '29+ incl. UK, USA, Canada, Australia, Ireland, NZ', 'Germany, France, Norway, Sweden, Finland, Italy, Spain, Poland & more'],
+                  ['Tuition cost', 'University-set fees (₹8–35L/year typical)', 'Free or near-free at public universities'],
+                  ['Cost of living', 'Higher (UK/US/AU metros)', 'Moderate (most European cities)'],
+                  ['Language requirement', 'IELTS / TOEFL / PTE', 'IELTS + local language (DELF / Goethe A1–A2)'],
+                  ['Axelis fee', '₹9,999 onboarding', '₹19,999 service fee'],
+                  ['Refund policy', '100% refund on visa approval or zero offers', 'Full refund if zero offers received'],
+                  ['Application timeline', 'Rolling intakes, plan 6–9 months ahead', 'Strict deadlines, plan 9–12 months ahead'],
+                  ['Post-study work visa', 'UK 2yr, USA 1–3yr OPT, Canada up to 3yr, AU 2–4yr', 'Germany 18mo job seeker, Norway 1yr, Finland 1yr'],
+                  ['Scholarship support', 'Yes — every relevant grant applied for', 'Yes — DAAD, Erasmus+, country-specific'],
+                ].map(([label, gac, epc]) => (
+                  <tr key={label} className="border-b border-white/5 last:border-b-0 hover:bg-white/[0.02] transition-colors">
+                    <th scope="row" className="text-left p-4 md:p-5 text-slate-400 font-medium align-top">{label}</th>
+                    <td className="p-4 md:p-5 align-top">{gac}</td>
+                    <td className="p-4 md:p-5 align-top">{epc}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-center text-xs text-slate-500 mt-6 max-w-2xl mx-auto">
+            Still unsure which charter fits? The <Link href="/bookings" className="text-[var(--storm-electric)] hover:underline">free first call</Link> ends with a clear recommendation &mdash; sometimes it&apos;s &ldquo;neither, here&apos;s why.&rdquo;
+          </p>
+        </div>
+      </section>
 
       {/* HOW IT WORKS */}
       <section className="relative py-20">

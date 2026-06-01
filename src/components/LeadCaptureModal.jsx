@@ -272,7 +272,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
       case 'exit':
         return 'Get free expert guidance before you leave. It only takes 2 minutes!';
       case 'timed':
-        return 'Join 2000+ students who have successfully started their international education with us.';
+        return 'Join 500+ students who have successfully started their international education with us.';
       default:
         return 'Let our experts guide you to your dream university.';
     }

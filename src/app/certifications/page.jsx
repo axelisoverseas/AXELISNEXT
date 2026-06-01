@@ -41,6 +41,16 @@ export default function CertificationsPage() {
     <div className="min-h-screen text-slate-100">
       <section className="relative py-24 lg:py-32 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?q=80&w=2400&auto=format&fit=crop"
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+            fetchPriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.65)_0%,transparent_75%)]" />
           <div className="absolute top-10 left-1/4 w-96 h-96 bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>

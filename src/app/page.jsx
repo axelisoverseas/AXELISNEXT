@@ -3,13 +3,12 @@ import React from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap } from 'lucide-react';
+import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap, ShieldCheck } from 'lucide-react';
 
 const InstagramSuccessStories = dynamic(() => import('../components/InstagramSuccessStories'), { ssr: false });
 const TeamGlobeCarousel = dynamic(() => import('../components/TeamGlobeCarousel'), { ssr: false });
 const StudyAbroadGuides = dynamic(() => import('../components/StudyAbroadGuides'), { ssr: false });
 const UniversityLogosSection = dynamic(() => import('../components/UniversityLogosSection'), { ssr: false });
-import { HeroSection as HeroOdyssey } from '../components/ui/hero-odyssey';
 
 import { BorderBeam } from '../components/ui/BorderBeam';
 import { RevealText } from '../components/ui/RevealText';
@@ -95,8 +94,114 @@ export default function Home() {
   const { headlineYears, detail } = useTimeSinceIncorp();
   return (
     <div className="min-h-screen overflow-hidden">
-      <section className="relative w-full overflow-hidden">
-        <HeroOdyssey />
+      {/* HERO — clean, no lightning, no audio. Subtle study-abroad photo backdrop. */}
+      <section className="relative pt-28 lg:pt-36 pb-24 overflow-hidden">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          {/* Background photo — Unsplash student-on-campus, heavily darkened */}
+          <img
+            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=2400&q=80&auto=format&fit=crop"
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+            fetchPriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Top/bottom fades only — middle stays clear so the photo is fully visible behind the text */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
+          {/* Subtle radial vignette behind the H1 region only — keeps headline contrast without flattening the photo */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.65)_0%,transparent_75%)]" />
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
+          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
+        </div>
+
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={staggerContainer}
+          className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+        >
+          <motion.h1
+            variants={fadeInUp}
+            className="text-4xl md:text-7xl font-extrabold text-white tracking-tight mb-6 max-w-5xl mx-auto"
+          >
+            Your gateway to{' '}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
+              global education.
+            </span>
+          </motion.h1>
+
+          <motion.p
+            variants={fadeInUp}
+            className="text-lg md:text-xl text-slate-300/90 max-w-2xl mx-auto leading-relaxed mb-10"
+          >
+            End-to-end study abroad guidance across <strong className="text-white">29+ countries</strong> including the UK, USA, Canada, Ireland and Finland. Honest counselling, transparent fees, real placements.
+          </motion.p>
+
+          <motion.div
+            variants={fadeInUp}
+            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+          >
+            <Link
+              href="/bookings"
+              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+            >
+              Book a free consultation
+              <ArrowRight className="ml-2" size={20} />
+            </Link>
+            <Link
+              href="/testimonials"
+              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--storm-electric)]"
+            >
+              See student stories
+            </Link>
+          </motion.div>
+
+          <motion.div
+            variants={fadeInUp}
+            className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mb-12"
+          >
+            {[
+              { Icon: Users, label: '500+ students' },
+              { Icon: Globe, label: '29+ countries' },
+              { Icon: Award, label: '₹3 Cr+ scholarships' },
+              { Icon: ShieldCheck, label: '100% visa honesty' },
+            ].map(({ Icon, label }) => (
+              <div
+                key={label}
+                className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-slate-200 text-sm font-semibold"
+              >
+                <Icon size={16} className="text-[var(--storm-electric)] shrink-0" />
+                <span>{label}</span>
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Country chips strip — 29 countries demonstrated inline */}
+          <motion.div variants={fadeInUp} className="max-w-4xl mx-auto">
+            <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--storm-electric)] font-bold mb-3 text-center">
+              Twenty-nine countries &middot; one trusted team
+            </p>
+            <div className="flex flex-wrap gap-2 justify-center mb-4" aria-label="Some of the 29 countries Axelis Overseas serves">
+              {['🇬🇧 UK', '🇺🇸 USA', '🇨🇦 Canada', '🇮🇪 Ireland', '🇩🇪 Germany', '🇫🇷 France', '🇫🇮 Finland', '🇵🇱 Poland', '🇦🇺 Australia', '🇳🇱 Netherlands', '🇸🇪 Sweden', '🇳🇴 Norway'].map((label) => (
+                <span
+                  key={label}
+                  className="text-xs px-3 py-1.5 rounded-full bg-white/8 backdrop-blur border border-white/15 text-white font-semibold"
+                >
+                  {label}
+                </span>
+              ))}
+              <Link
+                href="/testimonials"
+                className="text-xs px-3 py-1.5 rounded-full bg-[var(--storm-electric)]/15 border border-[var(--storm-electric)]/40 text-[var(--storm-electric)] font-bold hover:bg-[var(--storm-electric)]/25 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]"
+              >
+                + 17 more &rarr;
+              </Link>
+            </div>
+            <p className="text-white text-sm md:text-base text-center">
+              <span className="text-[var(--dawn-glow)] font-bold">500+ students</span> placed and on-ground.
+            </p>
+          </motion.div>
+        </motion.div>
       </section>
 
 
@@ -134,7 +239,7 @@ export default function Home() {
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               { icon: Globe, value: '29+', label: 'Countries' },
-              { icon: Users, value: '2000+', label: 'Students Placed' },
+              { icon: Users, value: '500+', label: 'Students Placed' },
               { icon: Award, value: '₹3+ Cr', label: 'Scholarships Won', gradient: true },
               { icon: CheckCircle, value: '100%', label: 'Success Rate' },
             ].map((stat, i) => {
@@ -180,6 +285,214 @@ export default function Home() {
             })}
           </div>
         </motion.div>
+      </section>
+
+      {/* Plans preview — GAC + EPC teaser, links to /products */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <div className="absolute top-1/2 left-0 w-[420px] h-[420px] bg-[var(--storm-electric)]/8 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-1/2 right-0 w-[420px] h-[420px] bg-[var(--dawn-glow)]/8 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2" />
+        </div>
+
+        <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3">
+              Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">Pick your path.</span>
+            </h2>
+            <p className="text-slate-300/85 text-base md:text-lg">
+              Global Admissions Charter (GAC) for paid global universities. Europe Public Charter (EPC) for tuition-free public Europe. Both refundable.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <Link
+              href="/products#plans"
+              className="group bg-[#0c1428] border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+              aria-label="Global Admissions Charter (GAC), nine thousand nine hundred ninety nine rupees — view details"
+            >
+              <div className="flex items-baseline justify-between">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[var(--storm-electric)] font-bold">Most popular</span>
+                  <h3 className="text-2xl font-extrabold text-white mt-1">Global Admissions Charter <span className="text-sm font-semibold text-sky-200/80">(GAC)</span></h3>
+                </div>
+                <span className="text-3xl font-extrabold text-white">₹9,999</span>
+              </div>
+              <p className="text-slate-200 text-sm">
+                Paid-tuition universities. <span className="text-emerald-300 font-semibold">100% refundable</span> on visa or no-offer.
+              </p>
+              <div className="flex flex-wrap gap-1.5" aria-label="Countries covered under Global Admissions Charter">
+                {['🇬🇧 UK', '🇺🇸 USA', '🇨🇦 Canada', '🇦🇺 Australia', '🇮🇪 Ireland', '🇳🇿 NZ', '🇸🇬 Singapore', '🇨🇭 Switzerland', '🇦🇪 UAE', '+5'].map((c) => (
+                  <span key={c} className="px-2 py-1 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/25 text-white text-[11px] font-semibold">
+                    {c}
+                  </span>
+                ))}
+              </div>
+              <span className="inline-flex items-center gap-2 text-[var(--storm-electric)] font-semibold text-sm mt-1 group-hover:underline">
+                See what&apos;s included
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/products#plans"
+              className="group bg-[#0c1428] border-2 border-[var(--dawn-glow)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--dawn-glow)]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+              aria-label="Europe Public Charter (EPC), nineteen thousand nine hundred ninety nine rupees — view details"
+            >
+              <div className="flex items-baseline justify-between">
+                <div>
+                  <span className="text-[10px] uppercase tracking-[0.2em] text-[var(--dawn-glow)] font-bold">Tuition-free Europe</span>
+                  <h3 className="text-2xl font-extrabold text-white mt-1">Europe Public Charter <span className="text-sm font-semibold text-sky-200/80">(EPC)</span></h3>
+                </div>
+                <span className="text-3xl font-extrabold text-white">₹19,999</span>
+              </div>
+              <p className="text-slate-200 text-sm">
+                Public tuition-free Europe. <span className="text-emerald-300 font-semibold">Refundable</span> if zero offers.
+              </p>
+              <div className="flex flex-wrap gap-1.5" aria-label="Countries covered under Europe Public Charter">
+                {['🇩🇪 Germany', '🇫🇷 France', '🇳🇴 Norway', '🇸🇪 Sweden', '🇫🇮 Finland', '🇩🇰 Denmark', '🇳🇱 Netherlands', '🇮🇹 Italy', '🇪🇸 Spain', '+6'].map((c) => (
+                  <span key={c} className="px-2 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/25 text-white text-[11px] font-semibold">
+                    {c}
+                  </span>
+                ))}
+              </div>
+              <span className="inline-flex items-center gap-2 text-[var(--dawn-glow)] font-semibold text-sm mt-1 group-hover:underline">
+                See what&apos;s included
+                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+          </div>
+
+          <div className="text-center mt-8">
+            <Link
+              href="/products#comparison"
+              className="inline-flex items-center gap-2 text-slate-300 hover:text-white text-sm font-semibold underline-offset-4 hover:underline transition-colors"
+            >
+              Compare Global Admissions Charter vs Europe Public Charter side by side
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Destinations grid — 9 feature countries + 20 compact tiles. All 29 photographed. */}
+      <section className="relative py-20 overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10 max-w-2xl mx-auto">
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3">
+              Twenty-nine countries. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">Twenty-nine photos.</span>
+            </h2>
+            <p className="text-slate-300/85 text-base md:text-lg">
+              Every destination we place students into &mdash; pictured. The first nine carry the bulk of our volume; the remaining twenty run on the same plans.
+            </p>
+          </div>
+
+          {/* Feature tier — 9 large cards */}
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 mb-10">
+            {[
+              { name: 'United Kingdom', flag: '🇬🇧', plan: 'GAC', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=80&auto=format&fit=crop' },
+              { name: 'United States', flag: '🇺🇸', plan: 'GAC', img: 'https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=1200&q=80&auto=format&fit=crop' },
+              { name: 'Canada', flag: '🇨🇦', plan: 'GAC', img: 'https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1200&q=80&auto=format&fit=crop' },
+              { name: 'Ireland', flag: '🇮🇪', plan: 'GAC', img: 'https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=1200&q=80&auto=format&fit=crop' },
+              { name: 'Germany', flag: '🇩🇪', plan: 'EPC', img: 'https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?w=1200&q=80&auto=format&fit=crop' },
+              { name: 'Finland', flag: '🇫🇮', plan: 'EPC', img: 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=80&auto=format&fit=crop' },
+              { name: 'Australia', flag: '🇦🇺', plan: 'GAC', img: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1200&q=80&auto=format&fit=crop' },
+              { name: 'France', flag: '🇫🇷', plan: 'EPC', img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80&auto=format&fit=crop' },
+              { name: 'Netherlands', flag: '🇳🇱', plan: 'EPC', img: 'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?w=1200&q=80&auto=format&fit=crop' },
+            ].map((d) => (
+              <article
+                key={d.name}
+                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 hover:border-[var(--storm-electric)]/40 transition-colors"
+              >
+                <img
+                  src={d.img}
+                  alt={`Iconic skyline of ${d.name}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 flex items-end justify-between gap-3">
+                  <div>
+                    <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold mb-1">
+                      <span className={d.plan === 'GAC' ? 'text-[var(--storm-electric)]' : 'text-[var(--dawn-glow)]'}>{d.plan}</span>
+                      <span className="text-slate-400">·</span>
+                      <span className="text-slate-300">Plan</span>
+                    </div>
+                    <h3 className="text-white text-base md:text-lg font-bold leading-tight">
+                      {d.name} <span aria-hidden="true">{d.flag}</span>
+                    </h3>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          {/* Compact tier — remaining 20 countries */}
+          <div className="flex items-center gap-4 mb-5">
+            <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
+            <span className="text-[10px] uppercase tracking-[0.25em] text-[var(--storm-electric)] font-bold">
+              Plus twenty more on the same plans
+            </span>
+            <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
+            {[
+              { name: 'New Zealand', flag: '🇳🇿', plan: 'GAC', img: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Singapore', flag: '🇸🇬', plan: 'GAC', img: 'https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Italy', flag: '🇮🇹', plan: 'EPC', img: 'https://images.unsplash.com/photo-1525874684015-58379d421a52?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Spain', flag: '🇪🇸', plan: 'EPC', img: 'https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Sweden', flag: '🇸🇪', plan: 'EPC', img: 'https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Norway', flag: '🇳🇴', plan: 'EPC', img: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Denmark', flag: '🇩🇰', plan: 'EPC', img: 'https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Poland', flag: '🇵🇱', plan: 'EPC', img: 'https://images.unsplash.com/photo-1607427293702-036933bbf746?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Switzerland', flag: '🇨🇭', plan: 'GAC', img: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Austria', flag: '🇦🇹', plan: 'EPC', img: 'https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Belgium', flag: '🇧🇪', plan: 'EPC', img: 'https://images.unsplash.com/photo-1559113202-c916b8e44373?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Czech Republic', flag: '🇨🇿', plan: 'EPC', img: 'https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Hungary', flag: '🇭🇺', plan: 'EPC', img: 'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Portugal', flag: '🇵🇹', plan: 'EPC', img: 'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Malta', flag: '🇲🇹', plan: 'GAC', img: 'https://images.unsplash.com/photo-1551801841-ecad875a5142?w=800&q=80&auto=format&fit=crop' },
+              { name: 'UAE', flag: '🇦🇪', plan: 'GAC', img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Malaysia', flag: '🇲🇾', plan: 'GAC', img: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80&auto=format&fit=crop' },
+              { name: 'South Korea', flag: '🇰🇷', plan: 'GAC', img: 'https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Japan', flag: '🇯🇵', plan: 'GAC', img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Hong Kong', flag: '🇭🇰', plan: 'GAC', img: 'https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=800&q=80&auto=format&fit=crop' },
+            ].map((d) => (
+              <article
+                key={d.name}
+                className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-white/10 hover:border-[var(--storm-electric)]/40 transition-colors"
+              >
+                <img
+                  src={d.img}
+                  alt={`Skyline of ${d.name}`}
+                  loading="lazy"
+                  decoding="async"
+                  className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-transparent" />
+                <div className="absolute inset-x-0 bottom-0 p-2.5 md:p-3">
+                  <div className="flex items-center gap-1.5 text-[9px] uppercase tracking-[0.2em] font-bold mb-0.5">
+                    <span className={d.plan === 'GAC' ? 'text-[var(--storm-electric)]' : 'text-[var(--dawn-glow)]'}>{d.plan}</span>
+                  </div>
+                  <h3 className="text-white text-xs md:text-sm font-bold leading-tight">
+                    {d.name} <span aria-hidden="true">{d.flag}</span>
+                  </h3>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="text-center mt-10">
+            <Link
+              href="/products#plans"
+              className="inline-flex items-center gap-2 text-slate-300 hover:text-white text-sm font-semibold underline-offset-4 hover:underline transition-colors"
+            >
+              See plans &amp; pricing across all 29 countries
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+        </div>
       </section>
 
       {/* University Portfolio — 100+ universities across 29 countries */}

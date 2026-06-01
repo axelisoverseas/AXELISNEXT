@@ -79,24 +79,6 @@ body {
   border-radius: 12px;
 }
 
-/* Spiral intro — paint a full-screen black cover synchronously before React
-   hydrates the SpiralIntro overlay, so users never see the real page flash
-   underneath. The `intro-pending` class is added by an inline script in
-   <head> (see layout.js) based on sessionStorage. SpiralIntro removes it
-   on dismiss. */
-html.intro-pending,
-html.intro-pending body {
-  overflow: hidden !important;
-}
-html.intro-pending::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: 999;
-  background: #000;
-  pointer-events: none;
-}
-
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
@@ -245,24 +227,6 @@ html.intro-pending::before {
 .glass-dawn:hover {
   border-color: rgba(245, 184, 119, 0.35);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(245, 184, 119, 0.22), 0 20px 60px -20px rgba(245, 184, 119, 0.30);
-}
-
-/* Thunder flash — one-shot on hero mount; irregular two-peak */
-@keyframes thunder-flash {
-  0%, 92%, 100% { opacity: 0; }
-  93% { opacity: 0.08; }
-  94% { opacity: 0; }
-  95% { opacity: 0.12; }
-  96% { opacity: 0; }
-}
-
-/* Single-play variant — use `animation: thunder-flash-once 1.2s ease-out` */
-@keyframes thunder-flash-once {
-  0% { opacity: 0; }
-  10% { opacity: 0.10; }
-  18% { opacity: 0; }
-  28% { opacity: 0.06; }
-  40%, 100% { opacity: 0; }
 }
 
 /* Bolt pulse — amber drop-shadow expand/contract */

@@ -67,7 +67,7 @@ const PLAN_CONFIG = {
           bar: 'bg-blue-500',
           accent: 'text-blue-300',
         },
-        stats: { status: 'Active Dossier', headline: '2,000+ Students Placed' },
+        stats: { status: 'Active Dossier', headline: '500+ Students Placed' },
         features: [
           { label: 'Shortlisting Precision', value: 96, icon: Target },
           { label: 'SOP & LOR Quality', value: 98, icon: FileText },
@@ -155,7 +155,7 @@ const PLAN_CONFIG = {
         description:
           'Student housing, block-account setup, visa interview prep, and part-time job orientation — everything you need once the offer letter is in.',
         image:
-          'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1200&auto=format&fit=crop',
+          'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
         colors: {
           gradient: 'from-blue-600 to-indigo-900',
           glow: 'bg-blue-500',
