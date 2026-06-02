@@ -12,7 +12,7 @@ import { TextEffect, TextEffectInView } from '@/components/ui/TextEffect';
 const stats = [
     { icon: <Globe size={32} />, value: '29+', label: 'Countries' },
     { icon: <Award size={32} />, value: '2000+', label: 'Scholarships' },
-    { icon: <Users size={32} />, value: '2000+', label: 'Students Sent' },
+    { icon: <Users size={32} />, value: '500+', label: 'Students Sent' },
     { icon: <Heart size={32} />, value: '100%', label: 'Free Service' }
 ];
 
