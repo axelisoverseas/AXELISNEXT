@@ -7,7 +7,7 @@ export const sendTestMessage = async () => {
   const testLead = {
     fullName: 'Test User - WhatsApp Integration Check',
     email: 'test@axelisoverseas.com',
-    phone: '918970224250',
+    phone: '919098522711',
     country: 'Netherlands',
     service: 'WhatsApp Integration Test',
     preferredTime: 'Now - Testing',
@@ -17,7 +17,7 @@ export const sendTestMessage = async () => {
 
   try {
     console.log('📋 Test Lead Data:', testLead);
-    console.log('📱 Target Number: 918970224250');
+    console.log('📱 Target Number: 919098522711');
     console.log('🔑 Environment Check:');
     console.log('- JWT Token:', import.meta.env.VITE_AISENSY_JWT_TOKEN ? '✅ Present' : '❌ Missing');
     console.log('- Phone Number:', import.meta.env.VITE_WHATSAPP_NOTIFICATION_NUMBER || '❌ Missing');
@@ -32,7 +32,7 @@ export const sendTestMessage = async () => {
       console.log('📞 Destination:', result.destination);
       console.log('⏰ Timestamp:', result.timestamp);
       
-      alert('✅ Test message sent successfully! Check your WhatsApp (918970224250)');
+      alert('✅ Test message sent successfully! Check your WhatsApp (919098522711)');
       
       return {
         success: true,
@@ -77,11 +77,11 @@ export const testAPIDirectly = async () => {
   const testData = {
     fullName: 'Direct API Test',
     email: 'api-test@axelisoverseas.com',
-    phone: '918970224250',
+    phone: '919098522711',
     country: 'India',
     service: 'Direct API Test',
     preferredTime: 'Now',
-    notificationNumber: '918970224250',
+    notificationNumber: '919098522711',
     jwtToken: import.meta.env.VITE_AISENSY_JWT_TOKEN
   };
 
@@ -102,7 +102,7 @@ export const testAPIDirectly = async () => {
     
     if (response.ok && result.success) {
       console.log('✅ DIRECT API TEST SUCCESSFUL!');
-      alert('✅ Direct API test successful! Check WhatsApp (918970224250)');
+      alert('✅ Direct API test successful! Check WhatsApp (919098522711)');
       return { success: true, data: result };
     } else {
       console.log('❌ DIRECT API TEST FAILED!');

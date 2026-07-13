@@ -92,7 +92,7 @@ const provider = {
   url: 'https://overseeducation.com',
   logo: 'https://overseeducation.com/logo.png',
   email: 'axelisoverseas@overseeducation.com',
-  telephone: '+91 8970224250',
+  telephone: '+91 9098522711',
   address: {
     '@type': 'PostalAddress',
     streetAddress: 'WorkFlo Ranka Junction, Property No. 224, 3rd Floor, #80/3, Vijinapur Village, Old Madras Road, KR Puram Hobli',

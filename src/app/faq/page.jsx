@@ -222,7 +222,7 @@ const FAQPage = () => {
                       Book Free Consultation
                     </Link>
                     <a 
-                      href="https://wa.me/918970224250?text=Hey%2C%20I%20have%20questions%20regarding%20studying%20abroad"
+                      href="https://wa.me/919098522711?text=Hey%2C%20I%20have%20questions%20regarding%20studying%20abroad"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="px-8 py-4 bg-blue-500/20 border border-white/30 backdrop-blur-md text-white text-lg font-bold rounded-2xl hover:bg-blue-500/30 transition-all flex items-center space-x-3"

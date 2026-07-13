@@ -111,7 +111,7 @@ const WhatsAppWidget = () => {
       console.error('⚠️ Failed to capture WhatsApp widget interaction:', error);
     }
 
-    const whatsappUrl = `https://wa.me/918970224250?text=Hey%2C%20I%20am%20interested%20in%20studying%20abroad`;
+    const whatsappUrl = `https://wa.me/919098522711?text=Hey%2C%20I%20am%20interested%20in%20studying%20abroad`;
     window.open(whatsappUrl, '_blank');
     setMessage('');
     setIsOpen(false);
@@ -308,7 +308,7 @@ const WhatsAppWidget = () => {
                       <Phone size={14} className="text-blue-600" />
                       <span className="text-xs font-bold text-blue-900 uppercase tracking-tight">Direct Contact</span>
                     </div>
-                    <p className="text-sm font-bold text-blue-700">+91 8970224250</p>
+                    <p className="text-sm font-bold text-blue-700">+91 9098522711</p>
                     <div className="flex items-center space-x-4 mt-2 text-[11px] text-blue-600 font-medium">
                       <div className="flex items-center space-x-1">
                         <Clock size={12} />

@@ -90,7 +90,7 @@ const jsonLd = {
   logo: 'https://overseeducation.com/logo.png',
   description: 'India\'s trusted study abroad consultancy helping students pursue higher education at 70+ partner universities across UK, USA, Ireland, Germany, France, and Finland.',
   email: 'axelisoverseas@overseeducation.com',
-  telephone: '+91 8970224250',
+  telephone: '+91 9098522711',
   address: {
     '@type': 'PostalAddress',
     addressLocality: 'Bengaluru',
