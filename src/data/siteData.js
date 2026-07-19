@@ -183,7 +183,9 @@ export const teamMembers = [
     description: "Visionary leader with extensive experience in international education consulting and student placement.",
     almaMater: {
       name: "Cardiff University",
-      logo: "/logos/Cardiff_University_(logo).svg.png"
+      logo: "/logos/Cardiff_University_(logo).svg.png",
+      country: "United Kingdom",
+      flag: "/flags/gb.svg"
     }
   },
   {
@@ -195,7 +197,9 @@ export const teamMembers = [
     description: "Co-founder bringing deep expertise in international education and strategic partnerships.",
     almaMater: {
       name: "University of Strathclyde",
-      logo: "/logos/strath_fullcolour_600x300.jpg"
+      logo: "/logos/strath_fullcolour_600x300.jpg",
+      country: "United Kingdom",
+      flag: "/flags/gb.svg"
     }
   },
   {
@@ -212,7 +216,13 @@ export const teamMembers = [
     role: "Alumni Admissions Counsellor",
     image: "/team/naveen-b.png",
     linkedin: "https://www.linkedin.com/in/naveenbammidi",
-    description: "Alumni admissions counsellor guiding students through university selection and applications, from first call to offer."
+    description: "Alumni admissions counsellor guiding students through university selection and applications, from first call to offer.",
+    almaMater: {
+      name: "Sacred Heart University",
+      logo: "/logos/sacred-heart-university.png",
+      country: "United States",
+      flag: "/flags/us.svg"
+    }
   },
   {
     id: 5,

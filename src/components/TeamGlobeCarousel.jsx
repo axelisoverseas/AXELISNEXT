@@ -171,6 +171,14 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                     <span className="text-[10px] md:text-xs text-blue-700 font-semibold truncate">
                       {member.almaMater.name}
                     </span>
+                    {member.almaMater.flag && (
+                      <img
+                        src={member.almaMater.flag}
+                        alt={member.almaMater.country || ''}
+                        title={member.almaMater.country}
+                        className="w-4 h-3 md:w-[18px] md:h-[13px] object-cover rounded-[2px] flex-shrink-0 ring-1 ring-blue-200/60"
+                      />
+                    )}
                   </div>
                 )}
 

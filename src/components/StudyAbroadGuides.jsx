@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import { Play, Globe, BookOpen, ExternalLink, ChevronRight, Youtube } from 'lucide-react';
+import { Play, Globe, BookOpen, ExternalLink, ChevronRight, Youtube, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const FALLBACK_GUIDE_TAG = 'Study Abroad';
@@ -237,7 +237,7 @@ const StudyAbroadGuides = () => {
                 onClick={() => setActiveVideo(null)}
                 aria-label="Close video"
               >
-                <div className="w-6 h-6 flex items-center justify-center">✕</div>
+                <div className="w-6 h-6 flex items-center justify-center"><X size={20} strokeWidth={2.5} /></div>
               </button>
             </motion.div>
           </motion.div>

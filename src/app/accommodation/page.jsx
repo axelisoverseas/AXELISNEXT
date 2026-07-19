@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Home, MapPin, Shield, Clock, ExternalLink, Search } from 'lucide-react';
+import { ArrowRight, CheckCircle, Home, MapPin, Shield, Clock, ExternalLink, Search, Building2 } from 'lucide-react';
 import { TextEffect, TextEffectInView } from '../../components/ui/TextEffect';
 
 // Top student cities, each linking to amber's live city search.
@@ -225,7 +225,7 @@ export default function AccommodationPage() {
                                 />
                             </div>
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--storm-electric)] to-blue-500 rounded-2xl flex items-center justify-center text-[var(--storm-deep)] text-3xl" aria-hidden="true">🏢</div>
+                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--storm-electric)] to-blue-500 rounded-2xl flex items-center justify-center text-[var(--storm-deep)]" aria-hidden="true"><Building2 size={30} strokeWidth={2} /></div>
                                 <div>
                                     <h3 className="text-2xl font-bold text-white">Purpose Built (PBSA)</h3>
                                     <span className="text-sm font-semibold text-[var(--storm-electric)] bg-[var(--storm-electric)]/10 px-3 py-1 rounded-full border border-[var(--storm-electric)]/30 inline-block mt-1">£150 &ndash; £350 / week</span>
@@ -252,7 +252,7 @@ export default function AccommodationPage() {
                                 />
                             </div>
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--dawn-glow)] to-amber-500 rounded-2xl flex items-center justify-center text-[var(--storm-deep)] text-3xl" aria-hidden="true">🏠</div>
+                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--dawn-glow)] to-amber-500 rounded-2xl flex items-center justify-center text-[var(--storm-deep)]" aria-hidden="true"><Home size={30} strokeWidth={2} /></div>
                                 <div>
                                     <h3 className="text-2xl font-bold text-white">Private Apartments</h3>
                                     <span className="text-sm font-semibold text-[var(--dawn-glow)] bg-[var(--dawn-glow)]/10 px-3 py-1 rounded-full border border-[var(--dawn-glow)]/30 inline-block mt-1">£180 &ndash; £400+ / week</span>

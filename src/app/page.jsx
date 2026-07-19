@@ -51,43 +51,50 @@ const ordinal = (n) => {
 const wordYears = ['Zero', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten'];
 
 const useTimeSinceIncorp = () => {
-  const [now, setNow] = React.useState(() => Date.now());
+  // `now` stays null until mount so the server render and the first client render
+  // agree (both null). Seeding with Date.now() caused a hydration mismatch because
+  // the per-second value differed between the server and the (slightly later) client.
+  const [now, setNow] = React.useState(null);
   React.useEffect(() => {
+    setNow(Date.now());
     const id = setInterval(() => setNow(Date.now()), 1000);
     return () => clearInterval(id);
   }, []);
 
   const start = INCORP_DATE.getTime();
-  const diff = Math.max(0, now - start);
-  const totalYears = diff / (365.2425 * 24 * 60 * 60 * 1000);
+  // headlineYears rounds to the same whole year on server and client (a 1s skew
+  // can't change the rounded year count), so it's safe to render during SSR.
+  const refNow = now ?? Date.now();
+  const totalYears = Math.max(0, refNow - start) / (365.2425 * 24 * 60 * 60 * 1000);
   const wholeYears = Math.floor(totalYears);
   const headlineYears = wordYears[Math.min(wordYears.length - 1, Math.round(totalYears))] || `${Math.round(totalYears)}`;
 
-  // Calendar-accurate y/m/d/h/m/s breakdown.
-  const a = INCORP_DATE;
-  const b = new Date(now);
-  let years = b.getFullYear() - a.getFullYear();
-  let months = b.getMonth() - a.getMonth();
-  let days = b.getDate() - a.getDate();
-  if (days < 0) {
-    months -= 1;
-    const prev = new Date(b.getFullYear(), b.getMonth(), 0);
-    days += prev.getDate();
+  // The live y/m/d/h/m/s breakdown ticks every second, so it is client-only —
+  // null until mounted — to avoid the hydration mismatch entirely.
+  let detail = null;
+  if (now !== null) {
+    const a = INCORP_DATE;
+    const b = new Date(now);
+    let years = b.getFullYear() - a.getFullYear();
+    let months = b.getMonth() - a.getMonth();
+    let days = b.getDate() - a.getDate();
+    if (days < 0) {
+      months -= 1;
+      const prev = new Date(b.getFullYear(), b.getMonth(), 0);
+      days += prev.getDate();
+    }
+    if (months < 0) {
+      years -= 1;
+      months += 12;
+    }
+    const hours = b.getHours() - a.getHours();
+    const minutes = b.getMinutes() - a.getMinutes();
+    const seconds = b.getSeconds() - a.getSeconds();
+    const norm = (n, mod) => ((n % mod) + mod) % mod;
+    detail = `${years}y ${norm(months, 12)}m ${norm(days, 31)}d ${norm(hours, 24)}h ${norm(minutes, 60)}m ${norm(seconds, 60)}s`;
   }
-  if (months < 0) {
-    years -= 1;
-    months += 12;
-  }
-  const hours = b.getHours() - a.getHours();
-  const minutes = b.getMinutes() - a.getMinutes();
-  const seconds = b.getSeconds() - a.getSeconds();
-  const norm = (n, mod) => ((n % mod) + mod) % mod;
 
-  return {
-    headlineYears,
-    wholeYears,
-    detail: `${years}y ${norm(months, 12)}m ${norm(days, 31)}d ${norm(hours, 24)}h ${norm(minutes, 60)}m ${norm(seconds, 60)}s`,
-  };
+  return { headlineYears, wholeYears, detail };
 };
 
 export default function Home() {
@@ -225,12 +232,14 @@ export default function Home() {
             <p className="text-slate-300 mt-4">
               One focus &mdash; placing students at universities they can actually get into and afford. Free first call, no upsell.
             </p>
-            <p
-              className="mt-3 text-xs font-mono uppercase tracking-[0.18em] text-slate-400"
-              suppressHydrationWarning
-            >
-              Incorporated 18 July 2023 &middot;{' '}
-              <span className="text-[var(--storm-electric)]">{detail}</span> and counting.
+            <p className="mt-3 text-xs font-mono uppercase tracking-[0.18em] text-slate-400">
+              Incorporated 18 July 2023
+              {detail && (
+                <>
+                  {' '}&middot;{' '}
+                  <span className="text-[var(--storm-electric)]">{detail}</span> and counting.
+                </>
+              )}
             </p>
           </motion.div>
 

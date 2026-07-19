@@ -1,5 +1,31 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, Search, Filter, X, ThumbsUp, ThumbsDown, MessageCircle } from 'lucide-react';
+import { ChevronDown, ChevronUp, Search, Filter, X, ThumbsUp, ThumbsDown, MessageCircle, Globe, ClipboardCheck, GraduationCap, Wallet, FileText, Zap, Handshake, CreditCard, Home, Briefcase, Building2, Rocket, HelpCircle } from 'lucide-react';
+
+// Specific, semantic icons per FAQ category — replaces the generic emoji set.
+const CATEGORY_ICONS = {
+  General: Globe,
+  Visa: ClipboardCheck,
+  Scholarships: GraduationCap,
+  Finance: Wallet,
+  Requirements: FileText,
+  Process: Zap,
+  Support: Handshake,
+  Pricing: CreditCard,
+  Accommodation: Home,
+  Employment: Briefcase,
+  'About Us': Building2,
+  'Getting Started': Rocket,
+};
+// Country categories keep a flag (a specific, appropriate mark — not a generic icon).
+const CATEGORY_FLAGS = { UK: '🇬🇧', USA: '🇺🇸', Canada: '🇨🇦', Australia: '🇦🇺', Germany: '🇩🇪' };
+
+function CategoryIcon({ category }) {
+  if (CATEGORY_FLAGS[category]) {
+    return <span className="text-2xl leading-none" aria-hidden="true">{CATEGORY_FLAGS[category]}</span>;
+  }
+  const Icon = CATEGORY_ICONS[category] || HelpCircle;
+  return <Icon size={22} strokeWidth={2} className="text-blue-600" aria-hidden="true" />;
+}
 import { siteInfo } from '../data/siteData';
 
 const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
@@ -164,24 +190,8 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
               >
                 <div className="flex-1">
                   <div className="flex items-center mb-2">
-                    <span className="text-2xl mr-3">
-                      {faq.category === 'General' && '🌍'}
-                      {faq.category === 'UK' && '🇬🇧'}
-                      {faq.category === 'USA' && '🇺🇸'}
-                      {faq.category === 'Canada' && '🇨🇦'}
-                      {faq.category === 'Australia' && '🇦🇺'}
-                      {faq.category === 'Germany' && '🇩🇪'}
-                      {faq.category === 'Visa' && '📋'}
-                      {faq.category === 'Scholarships' && '🎓'}
-                      {faq.category === 'Finance' && '💰'}
-                      {faq.category === 'Requirements' && '📝'}
-                      {faq.category === 'Process' && '⚡'}
-                      {faq.category === 'Support' && '🤝'}
-                      {faq.category === 'Pricing' && '💳'}
-                      {faq.category === 'Accommodation' && '🏠'}
-                      {faq.category === 'Employment' && '💼'}
-                      {faq.category === 'About Us' && '🏢'}
-                      {faq.category === 'Getting Started' && '🚀'}
+                    <span className="mr-3 inline-flex items-center">
+                      <CategoryIcon category={faq.category} />
                     </span>
                     <span className="inline-block px-3 py-1 text-xs font-bold bg-gradient-to-r from-blue-500/10 to-cyan-500/10 text-blue-600 rounded-full border border-blue-200">
                       {faq.category}
