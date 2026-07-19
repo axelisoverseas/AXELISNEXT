@@ -20,7 +20,7 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen bg-storm-to-dawn">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 bg-slate-900 overflow-hidden border-b border-slate-800">
+            <section className="relative pt-24 pb-16 bg-slate-900 overflow-hidden border-b border-slate-800">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 

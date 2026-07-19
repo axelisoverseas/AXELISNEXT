@@ -23,7 +23,7 @@ const howItWorks = [
   {
     Icon: Phone,
     title: 'Free first call',
-    body: 'Tell us where you want to study and what you can spend. We tell you which plan actually fits — or that neither does.',
+    body: 'Tell us where you want to study and what you can spend. We tell you which plan actually fits, or that neither does.',
   },
   {
     Icon: FileText,
@@ -33,7 +33,7 @@ const howItWorks = [
   {
     Icon: GraduationCap,
     title: 'Applications + offers',
-    body: 'University shortlist, SOP/LOR, applications. We don&rsquo;t guess — every shortlist is built around your profile and budget.',
+    body: 'University shortlist, SOP/LOR, applications. We don&rsquo;t guess; every shortlist is built around your profile and budget.',
   },
   {
     Icon: Plane,
@@ -67,8 +67,8 @@ function ProductsContent() {
             fetchPriority="high"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.65)_0%,transparent_75%)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/60 to-[var(--storm-deep)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.7)_0%,transparent_75%)]" />
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
@@ -85,7 +85,7 @@ function ProductsContent() {
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-10 text-slate-300/90 max-w-3xl mx-auto leading-relaxed">
-            Global Admissions Charter (GAC) for global private universities. Europe Public Charter (EPC) for tuition-free public Europe. Both come with a 100% refundable deposit and a real human counsellor &mdash; not a chatbot.
+            Global Admissions Charter (GAC) for global private universities. Europe Public Charter (EPC) for tuition-free public Europe. Both come with a 100% refundable deposit and a dedicated counsellor.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -106,7 +106,7 @@ function ProductsContent() {
 
           <motion.div variants={fadeInUp} className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {[
-              { Icon: CheckCircle, label: '500+ students' },
+              { Icon: CheckCircle, label: '5,000+ students' },
               { Icon: Globe2, label: '29+ countries' },
               { Icon: Award, label: '₹3 Cr+ scholarships' },
               { Icon: ShieldCheck, label: '100% refundable' },
@@ -150,7 +150,7 @@ function ProductsContent() {
               Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">One destination &mdash; yours.</span>
             </h2>
             <p className="text-slate-300/85 text-lg">
-              Pick the route that matches where you want to study. Both come with refundable deposits and a real human counsellor.
+              Pick the route that matches where you want to study. Both come with refundable deposits and a dedicated counsellor.
             </p>
           </div>
 
@@ -228,7 +228,7 @@ function ProductsContent() {
                     'Expert university shortlisting + live status tracker',
                     'SOP, LOR & Europass CV done with you',
                     'Application submission across 70+ partner universities',
-                    'Scholarship hunt — we apply for every relevant grant',
+                    'Scholarship hunt: we apply for every relevant grant',
                     'Visa file build + mock interview',
                     'Accommodation & pre-departure support',
                   ].map((feat) => (
@@ -387,7 +387,7 @@ function ProductsContent() {
                   ['Refund policy', '100% refund on visa approval or zero offers', 'Full refund if zero offers received'],
                   ['Application timeline', 'Rolling intakes, plan 6–9 months ahead', 'Strict deadlines, plan 9–12 months ahead'],
                   ['Post-study work visa', 'UK 2yr, USA 1–3yr OPT, Canada up to 3yr, AU 2–4yr', 'Germany 18mo job seeker, Norway 1yr, Finland 1yr'],
-                  ['Scholarship support', 'Yes — every relevant grant applied for', 'Yes — DAAD, Erasmus+, country-specific'],
+                  ['Scholarship support', 'Yes, every relevant grant applied for', 'Yes: DAAD, Erasmus+, country-specific'],
                 ].map(([label, gac, epc]) => (
                   <tr key={label} className="border-b border-white/5 last:border-b-0 hover:bg-white/[0.02] transition-colors">
                     <th scope="row" className="text-left p-4 md:p-5 text-slate-400 font-medium align-top">{label}</th>

@@ -245,7 +245,7 @@ const VisaSuccessPredictor = () => {
                             </div>
                             <h3 className="text-3xl font-black text-slate-800 mb-4">You have a High Chance!</h3>
                             <p className="text-gray-600 mb-8 max-w-sm">
-                                Based on your profile, you have an excellent chance of securing a visa for <strong className="text-slate-900">{formData.country}</strong>. Our counselors have been notified and will contact you via WhatsApp shortly with your personalized roadmap.
+                                Based on your profile, you have an excellent chance of securing a visa for <strong className="text-slate-900">{formData.country}</strong>. Our counsellors have been notified and will contact you via WhatsApp shortly with your personalized roadmap.
                             </p>
                             <button
                                 onClick={resetForm}

@@ -120,7 +120,7 @@ export default async function CourseGuidePage({ params }) {
                             <div className="bg-white border border-cyan-400 rounded-2xl p-6 shadow-lg shadow-cyan-500/10 sticky top-24">
                                 <div className="w-12 h-12 bg-cyan-100 text-cyan-600 rounded-full flex items-center justify-center mb-4 text-xl">🚀</div>
                                 <h3 className="text-xl font-bold mb-3 text-slate-800">Fast-Track Your Admission</h3>
-                                <p className="text-gray-600 mb-6 text-sm leading-relaxed">Don't miss the upcoming intake. Our counselors specialize in {data.course} placements in {data.country}.</p>
+                                <p className="text-gray-600 mb-6 text-sm leading-relaxed">Don't miss the upcoming intake. Our counsellors specialize in {data.course} placements in {data.country}.</p>
                                 <Link href="/contact" className="w-full block text-center bg-slate-950 hover:bg-slate-800 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md">
                                     Book Free Consultation
                                 </Link>

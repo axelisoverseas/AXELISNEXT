@@ -160,7 +160,7 @@ export default function ScholarshipFinder() {
             <span className="font-bold text-slate-900">{filtered.length}</span> scholarship{filtered.length === 1 ? '' : 's'} found
           </p>
           <p className="hidden sm:block text-xs text-slate-500">
-            Every scholarship is covered by our ZCF plan; ZTF plans unlock public-university tracks.
+            Every scholarship is covered by our ZCF plan; ZTF plans open up public-university tracks.
           </p>
         </div>
 

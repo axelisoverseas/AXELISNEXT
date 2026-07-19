@@ -152,10 +152,10 @@ const StudentDashboardMock = () => {
                                     <div className="absolute -right-4 -bottom-4 opacity-20">
                                         <Globe size={100} />
                                     </div>
-                                    <h5 className="font-black text-lg mb-2 relative z-10">Counselor Assigned</h5>
+                                    <h5 className="font-black text-lg mb-2 relative z-10">Counsellor Assigned</h5>
                                     <p className="text-sm font-medium mb-4 relative z-10">Ananya Sharma is reviewing your visa file.</p>
                                     <button className="relative z-10 w-full py-2 bg-slate-950 text-white rounded-xl font-bold text-sm shadow hover:bg-slate-800 transition-colors">
-                                        Message Counselor
+                                        Message Counsellor
                                     </button>
                                 </div>
                             </div>

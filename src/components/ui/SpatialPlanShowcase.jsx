@@ -79,7 +79,7 @@ const PLAN_CONFIG = {
         eyebrow: 'Pillar 02',
         title: 'Scholarship Access',
         description:
-          'Unlock 2,000+ scholarships, exclusive agent discounts, and a refundable deposit — students have secured over ₹3 crores in guaranteed aid.',
+          'Access 2,000+ scholarships, exclusive agent discounts, and a refundable deposit; students have secured over ₹3 crores in guaranteed aid.',
         image:
           'https://images.unsplash.com/photo-1627556704302-624286467c65?q=80&w=1200&auto=format&fit=crop',
         colors: {

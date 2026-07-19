@@ -185,9 +185,8 @@ const WhatsAppWidget = () => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-sm">Axelis Overseas</h3>
-                    <div className="text-green-100 text-xs flex items-center">
-                      <div className="w-2 h-2 bg-green-300 rounded-full mr-1 animate-pulse"></div>
-                      Online now
+                    <div className="text-green-100 text-xs">
+                      Study abroad counselling
                     </div>
                   </div>
                 </div>
@@ -212,7 +211,7 @@ const WhatsAppWidget = () => {
                 <form onSubmit={handleFormSubmit} className="space-y-4">
                   <div className="bg-gray-100 rounded-lg p-3 text-sm mb-4">
                     <p className="text-gray-800 font-medium">Hi! Let&apos;s get you connected.</p>
-                    <p className="text-gray-600 text-xs">Please provide your details to start the chat with our counselor.</p>
+                    <p className="text-gray-600 text-xs">Please provide your details to start the chat with our counsellor.</p>
                   </div>
                   
                   <div>
@@ -358,12 +357,6 @@ const WhatsAppWidget = () => {
           {isOpen ? <X size={24} /> : <WhatsAppIcon size={24} />}
         </button>
 
-        {/* Notification Badge */}
-        {!isOpen && (
-          <div className="absolute -top-2 -right-2 bg-cyan-500 text-white text-xs rounded-full w-6 h-6 flex items-center justify-center animate-pulse">
-            1
-          </div>
-        )}
       </div>
 
       {/* Pulse Animation for First Time */}

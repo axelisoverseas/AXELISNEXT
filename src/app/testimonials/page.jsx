@@ -42,7 +42,7 @@ const recentPlacements = [
   { name: 'Swapnil Arya', university: 'University of Glasgow', course: 'MSc Mechanical Engineering and Management', country: 'UK', plan: 'ZCF', flag: '🇬🇧' },
   { name: 'Samridhi Singh', university: 'University of Liverpool', course: 'MSc Sustainable Business', country: 'UK', plan: 'ZCF', flag: '🇬🇧' },
   { name: 'Ashmita Bhatt', university: "Queen's University Belfast", course: 'MBA', country: 'UK', plan: 'ZCF', flag: '🇬🇧' },
-  { name: 'Monika Nataraj', university: 'Humboldt University of Berlin', course: 'LLM — International Dispute Resolution', country: 'Germany', plan: 'ZTF', flag: '🇩🇪' },
+  { name: 'Monika Nataraj', university: 'Humboldt University of Berlin', course: 'LLM in International Dispute Resolution', country: 'Germany', plan: 'ZTF', flag: '🇩🇪' },
   { name: 'Sai Krishna Penugonda', university: 'Karlsruhe Institute of Technology', course: 'MSc Productions and Operations Management', country: 'Germany', plan: 'ZTF', flag: '🇩🇪' },
 ];
 
@@ -189,7 +189,7 @@ export default function TestimonialsPage() {
             fetchPriority="high"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-[var(--storm-deep)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.65)_0%,transparent_75%)]" />
           <div className="absolute top-10 left-10 w-72 h-72 bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />

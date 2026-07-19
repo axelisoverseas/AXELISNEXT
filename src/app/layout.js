@@ -18,9 +18,9 @@ export const metadata = {
   },
   title: {
     template: '%s | Axelis Overseas Education',
-    default: 'Axelis Overseas | Study Abroad Consultancy — 70+ Universities, 6 Countries',
+    default: 'Axelis Overseas | Study Abroad Consultancy for 29 Countries',
   },
-  description: "India's trusted study abroad consultancy. Search 5,000+ courses at 70+ partner universities across UK, USA, Ireland, Germany, France & Finland. Guaranteed admissions, visa support, zero tuition options. Book a free consultation today.",
+  description: "India's trusted study abroad consultancy. Explore 900+ universities across 29 countries, with guaranteed admissions, visa support and zero-tuition options. Book a free consultation.",
   keywords: [
     "study abroad", "overseas education", "study abroad consultancy India",
     "study in UK", "study in USA", "study in Ireland", "study in Germany",
@@ -38,7 +38,7 @@ export const metadata = {
     canonical: 'https://overseeducation.com',
   },
   openGraph: {
-    title: 'Axelis Overseas — Study Abroad Consultancy | 70+ Partner Universities',
+    title: 'Axelis Overseas — Study Abroad Consultancy for 29 Countries',
     description: 'We guide Indian students to their dream university with guaranteed admission and high visa success rates. Zero tuition & zero consultation fee options available.',
     url: 'https://overseeducation.com',
     siteName: 'Axelis Overseas Education',
@@ -55,7 +55,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axelis Overseas | Study Abroad — 70+ Universities, 6 Countries',
+    title: 'Axelis Overseas | Study Abroad Across 29 Countries',
     description: 'India\'s trusted study abroad consultancy. Guaranteed admissions, visa support, zero tuition options.',
     images: ['/og-image.jpg'],
   },
@@ -88,7 +88,7 @@ const jsonLd = {
   alternateName: 'Axelis Overseas',
   url: 'https://overseeducation.com',
   logo: 'https://overseeducation.com/logo.png',
-  description: 'India\'s trusted study abroad consultancy helping students pursue higher education at 70+ partner universities across UK, USA, Ireland, Germany, France, and Finland.',
+  description: 'India\'s trusted study abroad consultancy helping students pursue higher education across 29 countries, including the UK, USA, Canada, Australia and Europe.',
   email: 'axelisoverseas@overseeducation.com',
   telephone: '+91 9098522711',
   address: {

@@ -1,0 +1,5826 @@
+{
+  "epa": [
+    {
+      "country": "Austria",
+      "university": "BOKU University (Natural Resources & Life Sciences)",
+      "source": "EPA",
+      "id": "EPA-austria-boku-university-natural-resources-life-sciences"
+    },
+    {
+      "country": "Austria",
+      "university": "Graz University of Technology (TU Graz)",
+      "source": "EPA",
+      "id": "EPA-austria-graz-university-of-technology-tu-graz"
+    },
+    {
+      "country": "Austria",
+      "university": "Johannes Kepler University Linz",
+      "source": "EPA",
+      "id": "EPA-austria-johannes-kepler-university-linz"
+    },
+    {
+      "country": "Austria",
+      "university": "Medical University of Vienna",
+      "source": "EPA",
+      "id": "EPA-austria-medical-university-of-vienna"
+    },
+    {
+      "country": "Austria",
+      "university": "Montanuniversit\u00e4t Leoben",
+      "source": "EPA",
+      "id": "EPA-austria-montanuniversit-t-leoben"
+    },
+    {
+      "country": "Austria",
+      "university": "TU Graz (Graz University of Technology)",
+      "source": "EPA",
+      "id": "EPA-austria-tu-graz-graz-university-of-technology"
+    },
+    {
+      "country": "Austria",
+      "university": "TU Wien (Vienna University of Technology)",
+      "source": "EPA",
+      "id": "EPA-austria-tu-wien-vienna-university-of-technology"
+    },
+    {
+      "country": "Austria",
+      "university": "University of Graz (Karl-Franzens)",
+      "source": "EPA",
+      "id": "EPA-austria-university-of-graz-karl-franzens"
+    },
+    {
+      "country": "Austria",
+      "university": "University of Innsbruck",
+      "source": "EPA",
+      "id": "EPA-austria-university-of-innsbruck"
+    },
+    {
+      "country": "Austria",
+      "university": "University of Klagenfurt",
+      "source": "EPA",
+      "id": "EPA-austria-university-of-klagenfurt"
+    },
+    {
+      "country": "Austria",
+      "university": "University of Klagenfurt (AAU)",
+      "source": "EPA",
+      "id": "EPA-austria-university-of-klagenfurt-aau"
+    },
+    {
+      "country": "Austria",
+      "university": "University of Salzburg (PLUS)",
+      "source": "EPA",
+      "id": "EPA-austria-university-of-salzburg-plus"
+    },
+    {
+      "country": "Austria",
+      "university": "University of Vienna",
+      "source": "EPA",
+      "id": "EPA-austria-university-of-vienna"
+    },
+    {
+      "country": "Austria",
+      "university": "University of Vienna (Uni Wien)",
+      "source": "EPA",
+      "id": "EPA-austria-university-of-vienna-uni-wien"
+    },
+    {
+      "country": "Austria",
+      "university": "WU Vienna University of Economics and Business",
+      "source": "EPA",
+      "id": "EPA-austria-wu-vienna-university-of-economics-and-business"
+    },
+    {
+      "country": "Belgium",
+      "university": "Ghent University (UGent)",
+      "source": "EPA",
+      "id": "EPA-belgium-ghent-university-ugent"
+    },
+    {
+      "country": "Belgium",
+      "university": "Hasselt University",
+      "source": "EPA",
+      "id": "EPA-belgium-hasselt-university"
+    },
+    {
+      "country": "Belgium",
+      "university": "KU Leuven",
+      "source": "EPA",
+      "id": "EPA-belgium-ku-leuven"
+    },
+    {
+      "country": "Belgium",
+      "university": "University of Antwerp",
+      "source": "EPA",
+      "id": "EPA-belgium-university-of-antwerp"
+    },
+    {
+      "country": "Belgium",
+      "university": "University of Li\u00e8ge (ULi\u00e8ge)",
+      "source": "EPA",
+      "id": "EPA-belgium-university-of-li-ge-uli-ge"
+    },
+    {
+      "country": "Belgium",
+      "university": "University of Namur",
+      "source": "EPA",
+      "id": "EPA-belgium-university-of-namur"
+    },
+    {
+      "country": "Belgium",
+      "university": "Universit\u00e9 Catholique de Louvain (UCLouvain)",
+      "source": "EPA",
+      "id": "EPA-belgium-universit-catholique-de-louvain-uclouvain"
+    },
+    {
+      "country": "Belgium",
+      "university": "Universit\u00e9 Libre de Bruxelles (ULB)",
+      "source": "EPA",
+      "id": "EPA-belgium-universit-libre-de-bruxelles-ulb"
+    },
+    {
+      "country": "Belgium",
+      "university": "VUB (Vrije Universiteit Brussel)",
+      "source": "EPA",
+      "id": "EPA-belgium-vub-vrije-universiteit-brussel"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "Brno University of Technology (VUT)",
+      "source": "EPA",
+      "id": "EPA-czech-republic-brno-university-of-technology-vut"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "Charles University",
+      "source": "EPA",
+      "id": "EPA-czech-republic-charles-university"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "Charles University \u2014 Faculty of Mathematics & Physics",
+      "source": "EPA",
+      "id": "EPA-czech-republic-charles-university-faculty-of-mathematics-physics"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "Czech Technical University in Prague (\u010cVUT)",
+      "source": "EPA",
+      "id": "EPA-czech-republic-czech-technical-university-in-prague-vut"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "Masaryk University",
+      "source": "EPA",
+      "id": "EPA-czech-republic-masaryk-university"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "Masaryk University \u2014 Faculty of Informatics",
+      "source": "EPA",
+      "id": "EPA-czech-republic-masaryk-university-faculty-of-informatics"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "Mendel University in Brno",
+      "source": "EPA",
+      "id": "EPA-czech-republic-mendel-university-in-brno"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "Palack\u00fd University Olomouc",
+      "source": "EPA",
+      "id": "EPA-czech-republic-palack-university-olomouc"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "University of Economics & Business (V\u0160E)",
+      "source": "EPA",
+      "id": "EPA-czech-republic-university-of-economics-business-v-e"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "University of Pardubice",
+      "source": "EPA",
+      "id": "EPA-czech-republic-university-of-pardubice"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "University of South Bohemia",
+      "source": "EPA",
+      "id": "EPA-czech-republic-university-of-south-bohemia"
+    },
+    {
+      "country": "Czech Republic",
+      "university": "VSB-Technical University of Ostrava",
+      "source": "EPA",
+      "id": "EPA-czech-republic-vsb-technical-university-of-ostrava"
+    },
+    {
+      "country": "Denmark",
+      "university": "Aalborg University (AAU)",
+      "source": "EPA",
+      "id": "EPA-denmark-aalborg-university-aau"
+    },
+    {
+      "country": "Denmark",
+      "university": "Aarhus University (AU)",
+      "source": "EPA",
+      "id": "EPA-denmark-aarhus-university-au"
+    },
+    {
+      "country": "Denmark",
+      "university": "Copenhagen Business School (CBS)",
+      "source": "EPA",
+      "id": "EPA-denmark-copenhagen-business-school-cbs"
+    },
+    {
+      "country": "Denmark",
+      "university": "IT University of Copenhagen (ITU)",
+      "source": "EPA",
+      "id": "EPA-denmark-it-university-of-copenhagen-itu"
+    },
+    {
+      "country": "Denmark",
+      "university": "Roskilde University (RUC)",
+      "source": "EPA",
+      "id": "EPA-denmark-roskilde-university-ruc"
+    },
+    {
+      "country": "Denmark",
+      "university": "Technical University of Denmark (DTU)",
+      "source": "EPA",
+      "id": "EPA-denmark-technical-university-of-denmark-dtu"
+    },
+    {
+      "country": "Denmark",
+      "university": "University of Copenhagen (KU)",
+      "source": "EPA",
+      "id": "EPA-denmark-university-of-copenhagen-ku"
+    },
+    {
+      "country": "Denmark",
+      "university": "University of Roskilde \u2014 Lifelong Learning",
+      "source": "EPA",
+      "id": "EPA-denmark-university-of-roskilde-lifelong-learning"
+    },
+    {
+      "country": "Denmark",
+      "university": "University of Southern Denmark (SDU)",
+      "source": "EPA",
+      "id": "EPA-denmark-university-of-southern-denmark-sdu"
+    },
+    {
+      "country": "Denmark",
+      "university": "VIA University College",
+      "source": "EPA",
+      "id": "EPA-denmark-via-university-college"
+    },
+    {
+      "country": "Estonia",
+      "university": "Tallinn University",
+      "source": "EPA",
+      "id": "EPA-estonia-tallinn-university"
+    },
+    {
+      "country": "Estonia",
+      "university": "Tallinn University of Technology (TalTech)",
+      "source": "EPA",
+      "id": "EPA-estonia-tallinn-university-of-technology-taltech"
+    },
+    {
+      "country": "Estonia",
+      "university": "University of Tartu",
+      "source": "EPA",
+      "id": "EPA-estonia-university-of-tartu"
+    },
+    {
+      "country": "Finland",
+      "university": "Aalto University",
+      "source": "EPA",
+      "id": "EPA-finland-aalto-university"
+    },
+    {
+      "country": "Finland",
+      "university": "Arcada University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-arcada-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Centria University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-centria-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Haaga-Helia University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-haaga-helia-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Hanken School of Economics",
+      "source": "EPA",
+      "id": "EPA-finland-hanken-school-of-economics"
+    },
+    {
+      "country": "Finland",
+      "university": "Humak University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-humak-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "H\u00e4me University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-h-me-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "H\u00f6gskolan p\u00e5 \u00c5land",
+      "source": "EPA",
+      "id": "EPA-finland-h-gskolan-p-land"
+    },
+    {
+      "country": "Finland",
+      "university": "Jamk University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-jamk-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Kajaani University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-kajaani-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Karelia University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-karelia-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "LAB University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-lab-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Lapland University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-lapland-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Lappeenranta-Lahti University of Technology LUT",
+      "source": "EPA",
+      "id": "EPA-finland-lappeenranta-lahti-university-of-technology-lut"
+    },
+    {
+      "country": "Finland",
+      "university": "Laurea University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-laurea-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Metropolia University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-metropolia-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Novia University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-novia-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Oulu University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-oulu-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Satakunta University of Applied Sciences SAMK",
+      "source": "EPA",
+      "id": "EPA-finland-satakunta-university-of-applied-sciences-samk"
+    },
+    {
+      "country": "Finland",
+      "university": "Savonia University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-savonia-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Sein\u00e4joki University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-sein-joki-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "South-Eastern Finland University of Applied Sciences Xamk",
+      "source": "EPA",
+      "id": "EPA-finland-south-eastern-finland-university-of-applied-sciences-xamk"
+    },
+    {
+      "country": "Finland",
+      "university": "Tampere University",
+      "source": "EPA",
+      "id": "EPA-finland-tampere-university"
+    },
+    {
+      "country": "Finland",
+      "university": "Tampere University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-tampere-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "Turku University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-turku-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "University of Eastern Finland",
+      "source": "EPA",
+      "id": "EPA-finland-university-of-eastern-finland"
+    },
+    {
+      "country": "Finland",
+      "university": "University of Helsinki",
+      "source": "EPA",
+      "id": "EPA-finland-university-of-helsinki"
+    },
+    {
+      "country": "Finland",
+      "university": "University of Jyv\u00e4skyl\u00e4",
+      "source": "EPA",
+      "id": "EPA-finland-university-of-jyv-skyl"
+    },
+    {
+      "country": "Finland",
+      "university": "University of Lapland",
+      "source": "EPA",
+      "id": "EPA-finland-university-of-lapland"
+    },
+    {
+      "country": "Finland",
+      "university": "University of Oulu",
+      "source": "EPA",
+      "id": "EPA-finland-university-of-oulu"
+    },
+    {
+      "country": "Finland",
+      "university": "University of Turku",
+      "source": "EPA",
+      "id": "EPA-finland-university-of-turku"
+    },
+    {
+      "country": "Finland",
+      "university": "University of Vaasa",
+      "source": "EPA",
+      "id": "EPA-finland-university-of-vaasa"
+    },
+    {
+      "country": "Finland",
+      "university": "University of the Arts Helsinki",
+      "source": "EPA",
+      "id": "EPA-finland-university-of-the-arts-helsinki"
+    },
+    {
+      "country": "Finland",
+      "university": "Vaasa University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-finland-vaasa-university-of-applied-sciences"
+    },
+    {
+      "country": "Finland",
+      "university": "\u00c5bo Akademi University",
+      "source": "EPA",
+      "id": "EPA-finland-bo-akademi-university"
+    },
+    {
+      "country": "France",
+      "university": "AgroParisTech",
+      "source": "EPA",
+      "id": "EPA-france-agroparistech"
+    },
+    {
+      "country": "France",
+      "university": "Agrocampus Ouest",
+      "source": "EPA",
+      "id": "EPA-france-agrocampus-ouest"
+    },
+    {
+      "country": "France",
+      "university": "ArtFx",
+      "source": "EPA",
+      "id": "EPA-france-artfx"
+    },
+    {
+      "country": "France",
+      "university": "Arts et M\u00e9tiers ParisTech",
+      "source": "EPA",
+      "id": "EPA-france-arts-et-m-tiers-paristech"
+    },
+    {
+      "country": "France",
+      "university": "Audencia Business School",
+      "source": "EPA",
+      "id": "EPA-france-audencia-business-school"
+    },
+    {
+      "country": "France",
+      "university": "CIHEAM Montpellier",
+      "source": "EPA",
+      "id": "EPA-france-ciheam-montpellier"
+    },
+    {
+      "country": "France",
+      "university": "CPE \u00c9cole Sup\u00e9rieure de Chimie, Physique, \u00c9lectronique",
+      "source": "EPA",
+      "id": "EPA-france-cpe-cole-sup-rieure-de-chimie-physique-lectronique"
+    },
+    {
+      "country": "France",
+      "university": "CY Cergy Paris Universit\u00e9",
+      "source": "EPA",
+      "id": "EPA-france-cy-cergy-paris-universit"
+    },
+    {
+      "country": "France",
+      "university": "Centrale Lille",
+      "source": "EPA",
+      "id": "EPA-france-centrale-lille"
+    },
+    {
+      "country": "France",
+      "university": "CentraleSup\u00e9lec",
+      "source": "EPA",
+      "id": "EPA-france-centralesup-lec"
+    },
+    {
+      "country": "France",
+      "university": "Centre de formation Alain DUCASSE",
+      "source": "EPA",
+      "id": "EPA-france-centre-de-formation-alain-ducasse"
+    },
+    {
+      "country": "France",
+      "university": "Clermont Auvergne INP",
+      "source": "EPA",
+      "id": "EPA-france-clermont-auvergne-inp"
+    },
+    {
+      "country": "France",
+      "university": "Conservatoire National Sup\u00e9rieur de Musique et de Danse-Lyon",
+      "source": "EPA",
+      "id": "EPA-france-conservatoire-national-sup-rieur-de-musique-et-de-danse-lyon"
+    },
+    {
+      "country": "France",
+      "university": "Conservatoire National des Arts et M\u00e9tiers (CNAM)",
+      "source": "EPA",
+      "id": "EPA-france-conservatoire-national-des-arts-et-m-tiers-cnam"
+    },
+    {
+      "country": "France",
+      "university": "EDHEC Business School",
+      "source": "EPA",
+      "id": "EPA-france-edhec-business-school"
+    },
+    {
+      "country": "France",
+      "university": "EFREI Paris",
+      "source": "EPA",
+      "id": "EPA-france-efrei-paris"
+    },
+    {
+      "country": "France",
+      "university": "EPITA - Ecole pour l'Informatique et les Techniques Avanc\u00e9es",
+      "source": "EPA",
+      "id": "EPA-france-epita-ecole-pour-l-informatique-et-les-techniques-avanc-es"
+    },
+    {
+      "country": "France",
+      "university": "ESCP Business School",
+      "source": "EPA",
+      "id": "EPA-france-escp-business-school"
+    },
+    {
+      "country": "France",
+      "university": "ESIEE Paris",
+      "source": "EPA",
+      "id": "EPA-france-esiee-paris"
+    },
+    {
+      "country": "France",
+      "university": "ESILV - \u00c9cole Sup\u00e9rieure d'Ing\u00e9nieurs L\u00e9onard de Vinci",
+      "source": "EPA",
+      "id": "EPA-france-esilv-cole-sup-rieure-d-ing-nieurs-l-onard-de-vinci"
+    },
+    {
+      "country": "France",
+      "university": "ESME \u00c9cole d'Ing\u00e9nieurs",
+      "source": "EPA",
+      "id": "EPA-france-esme-cole-d-ing-nieurs"
+    },
+    {
+      "country": "France",
+      "university": "ESSEC Business School",
+      "source": "EPA",
+      "id": "EPA-france-essec-business-school"
+    },
+    {
+      "country": "France",
+      "university": "ESTP - Grande \u00e9cole d'ing\u00e9nieurs de la construction",
+      "source": "EPA",
+      "id": "EPA-france-estp-grande-cole-d-ing-nieurs-de-la-construction"
+    },
+    {
+      "country": "France",
+      "university": "Ecole Centrale Marseille",
+      "source": "EPA",
+      "id": "EPA-france-ecole-centrale-marseille"
+    },
+    {
+      "country": "France",
+      "university": "Ecole Centrale de Lyon",
+      "source": "EPA",
+      "id": "EPA-france-ecole-centrale-de-lyon"
+    },
+    {
+      "country": "France",
+      "university": "Ecole Centrale de Nantes",
+      "source": "EPA",
+      "id": "EPA-france-ecole-centrale-de-nantes"
+    },
+    {
+      "country": "France",
+      "university": "Ecole Nationale Sup\u00e9rieure de l'Electronique et de ses Applications",
+      "source": "EPA",
+      "id": "EPA-france-ecole-nationale-sup-rieure-de-l-electronique-et-de-ses-applications"
+    },
+    {
+      "country": "France",
+      "university": "Ecole Nationale d'Ing\u00e9nieurs de Brest",
+      "source": "EPA",
+      "id": "EPA-france-ecole-nationale-d-ing-nieurs-de-brest"
+    },
+    {
+      "country": "France",
+      "university": "Ecole Nationale de l'Aviation Civile - Toulouse",
+      "source": "EPA",
+      "id": "EPA-france-ecole-nationale-de-l-aviation-civile-toulouse"
+    },
+    {
+      "country": "France",
+      "university": "Ecole Nationale de la Statistique et de l'Analyse de l'Information",
+      "source": "EPA",
+      "id": "EPA-france-ecole-nationale-de-la-statistique-et-de-l-analyse-de-l-information"
+    },
+    {
+      "country": "France",
+      "university": "Ecole Normale Sup\u00e9rieure Paris-Saclay",
+      "source": "EPA",
+      "id": "EPA-france-ecole-normale-sup-rieure-paris-saclay"
+    },
+    {
+      "country": "France",
+      "university": "Ecole Polytechnique de Paris",
+      "source": "EPA",
+      "id": "EPA-france-ecole-polytechnique-de-paris"
+    },
+    {
+      "country": "France",
+      "university": "Ecole Sup\u00e9rieure des Agricultures",
+      "source": "EPA",
+      "id": "EPA-france-ecole-sup-rieure-des-agricultures"
+    },
+    {
+      "country": "France",
+      "university": "Ecole d'ing\u00e9nieurs de Purpan",
+      "source": "EPA",
+      "id": "EPA-france-ecole-d-ing-nieurs-de-purpan"
+    },
+    {
+      "country": "France",
+      "university": "Ecole d'ing\u00e9nieurs du Cesi",
+      "source": "EPA",
+      "id": "EPA-france-ecole-d-ing-nieurs-du-cesi"
+    },
+    {
+      "country": "France",
+      "university": "Ecole de Management de Strasbourg",
+      "source": "EPA",
+      "id": "EPA-france-ecole-de-management-de-strasbourg"
+    },
+    {
+      "country": "France",
+      "university": "Ecole de design Nantes Atlantique",
+      "source": "EPA",
+      "id": "EPA-france-ecole-de-design-nantes-atlantique"
+    },
+    {
+      "country": "France",
+      "university": "Ecole des Hautes Etudes en Sant\u00e9 Publique",
+      "source": "EPA",
+      "id": "EPA-france-ecole-des-hautes-etudes-en-sant-publique"
+    },
+    {
+      "country": "France",
+      "university": "Ecole nationale du g\u00e9nie de l'eau et de l'environnement de Strasbourg",
+      "source": "EPA",
+      "id": "EPA-france-ecole-nationale-du-g-nie-de-l-eau-et-de-l-environnement-de-strasbourg"
+    },
+    {
+      "country": "France",
+      "university": "Ecole polytechnique de l'universit\u00e9 de Tours",
+      "source": "EPA",
+      "id": "EPA-france-ecole-polytechnique-de-l-universit-de-tours"
+    },
+    {
+      "country": "France",
+      "university": "Ecole sup\u00e9rieure d'ing\u00e9nieurs en g\u00e9nie \u00e9lectrique",
+      "source": "EPA",
+      "id": "EPA-france-ecole-sup-rieure-d-ing-nieurs-en-g-nie-lectrique"
+    },
+    {
+      "country": "France",
+      "university": "Ecole sup\u00e9rieure de commerce de Pau",
+      "source": "EPA",
+      "id": "EPA-france-ecole-sup-rieure-de-commerce-de-pau"
+    },
+    {
+      "country": "France",
+      "university": "Ecoles de Cond\u00e9",
+      "source": "EPA",
+      "id": "EPA-france-ecoles-de-cond"
+    },
+    {
+      "country": "France",
+      "university": "Eurecom",
+      "source": "EPA",
+      "id": "EPA-france-eurecom"
+    },
+    {
+      "country": "France",
+      "university": "Grenoble Ecole de Management",
+      "source": "EPA",
+      "id": "EPA-france-grenoble-ecole-de-management"
+    },
+    {
+      "country": "France",
+      "university": "Grenoble INP - UGA, Institut d'ing\u00e9nierie et de management",
+      "source": "EPA",
+      "id": "EPA-france-grenoble-inp-uga-institut-d-ing-nierie-et-de-management"
+    },
+    {
+      "country": "France",
+      "university": "IAE - Universit\u00e9 Clermont Auvergne",
+      "source": "EPA",
+      "id": "EPA-france-iae-universit-clermont-auvergne"
+    },
+    {
+      "country": "France",
+      "university": "IAE - Universit\u00e9 Grenoble Alpes",
+      "source": "EPA",
+      "id": "EPA-france-iae-universit-grenoble-alpes"
+    },
+    {
+      "country": "France",
+      "university": "IAE - Universit\u00e9 Montpellier",
+      "source": "EPA",
+      "id": "EPA-france-iae-universit-montpellier"
+    },
+    {
+      "country": "France",
+      "university": "IAE - Universit\u00e9 d'Aix-Marseille",
+      "source": "EPA",
+      "id": "EPA-france-iae-universit-d-aix-marseille"
+    },
+    {
+      "country": "France",
+      "university": "IAE - Universit\u00e9 d'Angers",
+      "source": "EPA",
+      "id": "EPA-france-iae-universit-d-angers"
+    },
+    {
+      "country": "France",
+      "university": "IAE Dijon - Universit\u00e9 de Bourgogne",
+      "source": "EPA",
+      "id": "EPA-france-iae-dijon-universit-de-bourgogne"
+    },
+    {
+      "country": "France",
+      "university": "IAE-ISM - Universit\u00e9 de Versailles Saint Quentin en Yvelines",
+      "source": "EPA",
+      "id": "EPA-france-iae-ism-universit-de-versailles-saint-quentin-en-yvelines"
+    },
+    {
+      "country": "France",
+      "university": "ICN Business school",
+      "source": "EPA",
+      "id": "EPA-france-icn-business-school"
+    },
+    {
+      "country": "France",
+      "university": "IDRAC - Institut Priv\u00e9 de Recherche et d'Action Commerciale - Lyon",
+      "source": "EPA",
+      "id": "EPA-france-idrac-institut-priv-de-recherche-et-d-action-commerciale-lyon"
+    },
+    {
+      "country": "France",
+      "university": "IESEG School of Management",
+      "source": "EPA",
+      "id": "EPA-france-ieseg-school-of-management"
+    },
+    {
+      "country": "France",
+      "university": "IGR-IAE de Rennes",
+      "source": "EPA",
+      "id": "EPA-france-igr-iae-de-rennes"
+    },
+    {
+      "country": "France",
+      "university": "IMT Atlantique",
+      "source": "EPA",
+      "id": "EPA-france-imt-atlantique"
+    },
+    {
+      "country": "France",
+      "university": "IMT Mines Al\u00e8s",
+      "source": "EPA",
+      "id": "EPA-france-imt-mines-al-s"
+    },
+    {
+      "country": "France",
+      "university": "IMT Nord Europe",
+      "source": "EPA",
+      "id": "EPA-france-imt-nord-europe"
+    },
+    {
+      "country": "France",
+      "university": "INSA Hauts-de-France - Institut National des Sciences Appliqu\u00e9es",
+      "source": "EPA",
+      "id": "EPA-france-insa-hauts-de-france-institut-national-des-sciences-appliqu-es"
+    },
+    {
+      "country": "France",
+      "university": "INSA Toulouse - Institut National des Sciences Appliqu\u00e9es",
+      "source": "EPA",
+      "id": "EPA-france-insa-toulouse-institut-national-des-sciences-appliqu-es"
+    },
+    {
+      "country": "France",
+      "university": "ITECH",
+      "source": "EPA",
+      "id": "EPA-france-itech"
+    },
+    {
+      "country": "France",
+      "university": "Institut Catholique de Lille",
+      "source": "EPA",
+      "id": "EPA-france-institut-catholique-de-lille"
+    },
+    {
+      "country": "France",
+      "university": "Institut Fran\u00e7ais de la Mode",
+      "source": "EPA",
+      "id": "EPA-france-institut-fran-ais-de-la-mode"
+    },
+    {
+      "country": "France",
+      "university": "Institut National Polytechnique de Toulouse",
+      "source": "EPA",
+      "id": "EPA-france-institut-national-polytechnique-de-toulouse"
+    },
+    {
+      "country": "France",
+      "university": "Institut Polytechnique de Paris",
+      "source": "EPA",
+      "id": "EPA-france-institut-polytechnique-de-paris"
+    },
+    {
+      "country": "France",
+      "university": "Institut Sup\u00e9rieur d'\u00e9lectronique de Paris",
+      "source": "EPA",
+      "id": "EPA-france-institut-sup-rieur-d-lectronique-de-paris"
+    },
+    {
+      "country": "France",
+      "university": "Institut Sup\u00e9rieur de l'A\u00e9ronautique et de l'Espace-Toulouse",
+      "source": "EPA",
+      "id": "EPA-france-institut-sup-rieur-de-l-a-ronautique-et-de-l-espace-toulouse"
+    },
+    {
+      "country": "France",
+      "university": "Institut catholique de Lyon",
+      "source": "EPA",
+      "id": "EPA-france-institut-catholique-de-lyon"
+    },
+    {
+      "country": "France",
+      "university": "Institut d'Etudes Politiques de Grenoble",
+      "source": "EPA",
+      "id": "EPA-france-institut-d-etudes-politiques-de-grenoble"
+    },
+    {
+      "country": "France",
+      "university": "Junia - Grande Ecole d'Ing\u00e9nieurs",
+      "source": "EPA",
+      "id": "EPA-france-junia-grande-ecole-d-ing-nieurs"
+    },
+    {
+      "country": "France",
+      "university": "KEDGE",
+      "source": "EPA",
+      "id": "EPA-france-kedge"
+    },
+    {
+      "country": "France",
+      "university": "Le Mans Universit\u00e9",
+      "source": "EPA",
+      "id": "EPA-france-le-mans-universit"
+    },
+    {
+      "country": "France",
+      "university": "Montpellier Business School",
+      "source": "EPA",
+      "id": "EPA-france-montpellier-business-school"
+    },
+    {
+      "country": "France",
+      "university": "NEOMA Business School",
+      "source": "EPA",
+      "id": "EPA-france-neoma-business-school"
+    },
+    {
+      "country": "France",
+      "university": "Nantes Universit\u00e9",
+      "source": "EPA",
+      "id": "EPA-france-nantes-universit"
+    },
+    {
+      "country": "France",
+      "university": "ONIRIS",
+      "source": "EPA",
+      "id": "EPA-france-oniris"
+    },
+    {
+      "country": "France",
+      "university": "PSE - Ecole d'\u00e9conomie de Paris - Paris School of Economics",
+      "source": "EPA",
+      "id": "EPA-france-pse-ecole-d-conomie-de-paris-paris-school-of-economics"
+    },
+    {
+      "country": "France",
+      "university": "Paris School of Business (PSB)",
+      "source": "EPA",
+      "id": "EPA-france-paris-school-of-business-psb"
+    },
+    {
+      "country": "France",
+      "university": "Polytech Nantes-Nantes Universit\u00e9",
+      "source": "EPA",
+      "id": "EPA-france-polytech-nantes-nantes-universit"
+    },
+    {
+      "country": "France",
+      "university": "SKEMA Business School",
+      "source": "EPA",
+      "id": "EPA-france-skema-business-school"
+    },
+    {
+      "country": "France",
+      "university": "Sciences Po",
+      "source": "EPA",
+      "id": "EPA-france-sciences-po"
+    },
+    {
+      "country": "France",
+      "university": "Sorbonne Universit\u00e9",
+      "source": "EPA",
+      "id": "EPA-france-sorbonne-universit"
+    },
+    {
+      "country": "France",
+      "university": "Strate College Designers",
+      "source": "EPA",
+      "id": "EPA-france-strate-college-designers"
+    },
+    {
+      "country": "France",
+      "university": "Supbiotech",
+      "source": "EPA",
+      "id": "EPA-france-supbiotech"
+    },
+    {
+      "country": "France",
+      "university": "Toulouse Business School",
+      "source": "EPA",
+      "id": "EPA-france-toulouse-business-school"
+    },
+    {
+      "country": "France",
+      "university": "T\u00e9l\u00e9com Paris",
+      "source": "EPA",
+      "id": "EPA-france-t-l-com-paris"
+    },
+    {
+      "country": "France",
+      "university": "UniLaSalle",
+      "source": "EPA",
+      "id": "EPA-france-unilasalle"
+    },
+    {
+      "country": "France",
+      "university": "Universite de Bretagne sud",
+      "source": "EPA",
+      "id": "EPA-france-universite-de-bretagne-sud"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Angers",
+      "source": "EPA",
+      "id": "EPA-france-universit-angers"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Bordeaux Montaigne",
+      "source": "EPA",
+      "id": "EPA-france-universit-bordeaux-montaigne"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Claude Bernard Lyon 1",
+      "source": "EPA",
+      "id": "EPA-france-universit-claude-bernard-lyon-1"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Clermont Auvergne",
+      "source": "EPA",
+      "id": "EPA-france-universit-clermont-auvergne"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 C\u00f4te d'Azur",
+      "source": "EPA",
+      "id": "EPA-france-universit-c-te-d-azur"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Fran\u00e7ois Rabelais - Tours",
+      "source": "EPA",
+      "id": "EPA-france-universit-fran-ois-rabelais-tours"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Grenoble Alpes",
+      "source": "EPA",
+      "id": "EPA-france-universit-grenoble-alpes"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Gustave Eiffel",
+      "source": "EPA",
+      "id": "EPA-france-universit-gustave-eiffel"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Jean Monnet - Saint-Etienne",
+      "source": "EPA",
+      "id": "EPA-france-universit-jean-monnet-saint-etienne"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Jean Moulin Lyon 3",
+      "source": "EPA",
+      "id": "EPA-france-universit-jean-moulin-lyon-3"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Marie et Louis Pasteur",
+      "source": "EPA",
+      "id": "EPA-france-universit-marie-et-louis-pasteur"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 PSL",
+      "source": "EPA",
+      "id": "EPA-france-universit-psl"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Panth\u00e9on-Assas - Paris 2",
+      "source": "EPA",
+      "id": "EPA-france-universit-panth-on-assas-paris-2"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Panth\u00e9on-Sorbonne (Paris 1)",
+      "source": "EPA",
+      "id": "EPA-france-universit-panth-on-sorbonne-paris-1"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Paris Cit\u00e9",
+      "source": "EPA",
+      "id": "EPA-france-universit-paris-cit"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Paris Est Cr\u00e9teil Val-de-Marne",
+      "source": "EPA",
+      "id": "EPA-france-universit-paris-est-cr-teil-val-de-marne"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Paris-Saclay",
+      "source": "EPA",
+      "id": "EPA-france-universit-paris-saclay"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Perpignan Via Domitia",
+      "source": "EPA",
+      "id": "EPA-france-universit-perpignan-via-domitia"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Poitiers",
+      "source": "EPA",
+      "id": "EPA-france-universit-poitiers"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Savoie Mont Blanc",
+      "source": "EPA",
+      "id": "EPA-france-universit-savoie-mont-blanc"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Toulouse - Jean-Jaur\u00e8s",
+      "source": "EPA",
+      "id": "EPA-france-universit-toulouse-jean-jaur-s"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Toulouse 3 Paul Sabatier",
+      "source": "EPA",
+      "id": "EPA-france-universit-toulouse-3-paul-sabatier"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 Toulouse Capitole",
+      "source": "EPA",
+      "id": "EPA-france-universit-toulouse-capitole"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 d'Aix-Marseille",
+      "source": "EPA",
+      "id": "EPA-france-universit-d-aix-marseille"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 d'Avignon et des pays du Vaucluse",
+      "source": "EPA",
+      "id": "EPA-france-universit-d-avignon-et-des-pays-du-vaucluse"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 d'Evry Val d'Essonne",
+      "source": "EPA",
+      "id": "EPA-france-universit-d-evry-val-d-essonne"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 d'Orl\u00e9ans",
+      "source": "EPA",
+      "id": "EPA-france-universit-d-orl-ans"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Bordeaux",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-bordeaux"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Bourgogne - Dijon",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-bourgogne-dijon"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Caen Normandie",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-caen-normandie"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Lille",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-lille"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Lorraine",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-lorraine"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Lyon",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-lyon"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Montpellier",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-montpellier"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Paris",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-paris"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Pau et des Pays de l'Adour",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-pau-et-des-pays-de-l-adour"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Picardie Jules Verne",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-picardie-jules-verne"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Rennes",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-rennes"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Rouen",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-rouen"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Strasbourg",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-strasbourg"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Technologie de Compi\u00e8gne",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-technologie-de-compi-gne"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Technologie de Troyes",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-technologie-de-troyes"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 de Toulon",
+      "source": "EPA",
+      "id": "EPA-france-universit-de-toulon"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 du Havre",
+      "source": "EPA",
+      "id": "EPA-france-universit-du-havre"
+    },
+    {
+      "country": "France",
+      "university": "Universit\u00e9 du Littoral-C\u00f4te d'\u00d4pale",
+      "source": "EPA",
+      "id": "EPA-france-universit-du-littoral-c-te-d-pale"
+    },
+    {
+      "country": "France",
+      "university": "emlyon business school",
+      "source": "EPA",
+      "id": "EPA-france-emlyon-business-school"
+    },
+    {
+      "country": "France",
+      "university": "\u00c9cole Sup\u00e9rieure de R\u00e9alisation Audiovisuelle - ESRA",
+      "source": "EPA",
+      "id": "EPA-france-cole-sup-rieure-de-r-alisation-audiovisuelle-esra"
+    },
+    {
+      "country": "France",
+      "university": "\u00c9cole Sup\u00e9rieure du Commerce Ext\u00e9rieur",
+      "source": "EPA",
+      "id": "EPA-france-cole-sup-rieure-du-commerce-ext-rieur"
+    },
+    {
+      "country": "France",
+      "university": "\u00c9cole des Ponts ParisTech",
+      "source": "EPA",
+      "id": "EPA-france-cole-des-ponts-paristech"
+    },
+    {
+      "country": "Germany",
+      "university": "Anhalt University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-anhalt-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Ansbach University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-ansbach-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Aschaffenburg University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-aschaffenburg-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Augsburg University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-augsburg-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Bamberg University",
+      "source": "EPA",
+      "id": "EPA-germany-bamberg-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Berlin School of Applied Sciences (HTW)",
+      "source": "EPA",
+      "id": "EPA-germany-berlin-school-of-applied-sciences-htw"
+    },
+    {
+      "country": "Germany",
+      "university": "Berlin School of Economics and Law",
+      "source": "EPA",
+      "id": "EPA-germany-berlin-school-of-economics-and-law"
+    },
+    {
+      "country": "Germany",
+      "university": "Berlin University of Technology",
+      "source": "EPA",
+      "id": "EPA-germany-berlin-university-of-technology"
+    },
+    {
+      "country": "Germany",
+      "university": "Bielefeld University",
+      "source": "EPA",
+      "id": "EPA-germany-bielefeld-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Bonn-Rhine-Sieg University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-bonn-rhine-sieg-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Brand University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-brand-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Brandenburgische Technische Universit\u00e4t Cottbus-Senftenberg",
+      "source": "EPA",
+      "id": "EPA-germany-brandenburgische-technische-universit-t-cottbus-senftenberg"
+    },
+    {
+      "country": "Germany",
+      "university": "Bremerhaven University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-bremerhaven-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "CBS International Business School - University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-cbs-international-business-school-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Catholic University in Eichst\u00e4tt - Ingolstadt",
+      "source": "EPA",
+      "id": "EPA-germany-catholic-university-in-eichst-tt-ingolstadt"
+    },
+    {
+      "country": "Germany",
+      "university": "Chemnitz University of Technology",
+      "source": "EPA",
+      "id": "EPA-germany-chemnitz-university-of-technology"
+    },
+    {
+      "country": "Germany",
+      "university": "Dortmund University of Applied Sciences and Arts",
+      "source": "EPA",
+      "id": "EPA-germany-dortmund-university-of-applied-sciences-and-arts"
+    },
+    {
+      "country": "Germany",
+      "university": "ESMT European School of Management and Technology",
+      "source": "EPA",
+      "id": "EPA-germany-esmt-european-school-of-management-and-technology"
+    },
+    {
+      "country": "Germany",
+      "university": "Eberhard Karls University T\u00fcbingen",
+      "source": "EPA",
+      "id": "EPA-germany-eberhard-karls-university-t-bingen"
+    },
+    {
+      "country": "Germany",
+      "university": "Eberswalde University for Sustainable Development",
+      "source": "EPA",
+      "id": "EPA-germany-eberswalde-university-for-sustainable-development"
+    },
+    {
+      "country": "Germany",
+      "university": "Ernst-Abbe-Hochschule Jena - University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-ernst-abbe-hochschule-jena-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Esslingen University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-esslingen-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Europa-Universit\u00e4t Flensburg",
+      "source": "EPA",
+      "id": "EPA-germany-europa-universit-t-flensburg"
+    },
+    {
+      "country": "Germany",
+      "university": "European University Viadrina Frankfurt (Oder)",
+      "source": "EPA",
+      "id": "EPA-germany-european-university-viadrina-frankfurt-oder"
+    },
+    {
+      "country": "Germany",
+      "university": "FH Aachen - University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-fh-aachen-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "FH M\u00fcnster University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-fh-m-nster-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Fachhochschule of Erfurt",
+      "source": "EPA",
+      "id": "EPA-germany-fachhochschule-of-erfurt"
+    },
+    {
+      "country": "Germany",
+      "university": "Fachhochschule of Printing, Stuttgart",
+      "source": "EPA",
+      "id": "EPA-germany-fachhochschule-of-printing-stuttgart"
+    },
+    {
+      "country": "Germany",
+      "university": "Fachhochschule of Wedel",
+      "source": "EPA",
+      "id": "EPA-germany-fachhochschule-of-wedel"
+    },
+    {
+      "country": "Germany",
+      "university": "Filmuniversit\u00e4t Babelsberg Konrad Wolf",
+      "source": "EPA",
+      "id": "EPA-germany-filmuniversit-t-babelsberg-konrad-wolf"
+    },
+    {
+      "country": "Germany",
+      "university": "Frankfurt School of Finance & Management",
+      "source": "EPA",
+      "id": "EPA-germany-frankfurt-school-of-finance-management"
+    },
+    {
+      "country": "Germany",
+      "university": "Frankfurt University",
+      "source": "EPA",
+      "id": "EPA-germany-frankfurt-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Frankfurt University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-frankfurt-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Free University Berlin",
+      "source": "EPA",
+      "id": "EPA-germany-free-university-berlin"
+    },
+    {
+      "country": "Germany",
+      "university": "Freiberg University of Mining and Technology",
+      "source": "EPA",
+      "id": "EPA-germany-freiberg-university-of-mining-and-technology"
+    },
+    {
+      "country": "Germany",
+      "university": "Fulda University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-fulda-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Furtwangen University - computer science, technology, economics, media, health",
+      "source": "EPA",
+      "id": "EPA-germany-furtwangen-university-computer-science-technology-economics-media-health"
+    },
+    {
+      "country": "Germany",
+      "university": "HHL Leipzig Graduate School of Management",
+      "source": "EPA",
+      "id": "EPA-germany-hhl-leipzig-graduate-school-of-management"
+    },
+    {
+      "country": "Germany",
+      "university": "HTWG Konstanz University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-htwg-konstanz-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "HafenCity University of Hamburg",
+      "source": "EPA",
+      "id": "EPA-germany-hafencity-university-of-hamburg"
+    },
+    {
+      "country": "Germany",
+      "university": "Hamburg University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-hamburg-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Heidelberg University",
+      "source": "EPA",
+      "id": "EPA-germany-heidelberg-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule D\u00fcsseldorf",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-d-sseldorf"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule Flensburg",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-flensburg"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule Geisenheim",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-geisenheim"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule Kaiserslautern (University of Applied Sciences)",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-kaiserslautern-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule Mainz",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-mainz"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule Niederrhein",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-niederrhein"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule Nordhausen",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-nordhausen"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule Schmalkalden",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-schmalkalden"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule Worms, University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-worms-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule der Bayerischen Wirtschaft f\u00fcr angewandte Wissenschaften - HDBW",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-der-bayerischen-wirtschaft-f-r-angewandte-wissenschaften-hdbw"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule f\u00fcr Technik und Wirtschaft Dresden \u2013 University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-f-r-technik-und-wirtschaft-dresden-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Hochschule f\u00fcr angewandte Wissenschaften Coburg",
+      "source": "EPA",
+      "id": "EPA-germany-hochschule-f-r-angewandte-wissenschaften-coburg"
+    },
+    {
+      "country": "Germany",
+      "university": "Hof University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-hof-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Humboldt University Berlin",
+      "source": "EPA",
+      "id": "EPA-germany-humboldt-university-berlin"
+    },
+    {
+      "country": "Germany",
+      "university": "IU International University",
+      "source": "EPA",
+      "id": "EPA-germany-iu-international-university"
+    },
+    {
+      "country": "Germany",
+      "university": "International SDI Munich University - University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-international-sdi-munich-university-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "International School of Management",
+      "source": "EPA",
+      "id": "EPA-germany-international-school-of-management"
+    },
+    {
+      "country": "Germany",
+      "university": "Jade University of Applied Sciences Wilhelmshaven/Oldenburg/Elsfleth",
+      "source": "EPA",
+      "id": "EPA-germany-jade-university-of-applied-sciences-wilhelmshaven-oldenburg-elsfleth"
+    },
+    {
+      "country": "Germany",
+      "university": "Karlsruhe University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-karlsruhe-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Kiel University",
+      "source": "EPA",
+      "id": "EPA-germany-kiel-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Kiel University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-kiel-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Landshut - University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-landshut-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Leuphana University L\u00fcneburg",
+      "source": "EPA",
+      "id": "EPA-germany-leuphana-university-l-neburg"
+    },
+    {
+      "country": "Germany",
+      "university": "Ludwig Maximilians University Munich",
+      "source": "EPA",
+      "id": "EPA-germany-ludwig-maximilians-university-munich"
+    },
+    {
+      "country": "Germany",
+      "university": "L\u00fcbeck University",
+      "source": "EPA",
+      "id": "EPA-germany-l-beck-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Magdeburg-Stendal University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-magdeburg-stendal-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Mainz University",
+      "source": "EPA",
+      "id": "EPA-germany-mainz-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Merseburg University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-merseburg-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Mittweida University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-mittweida-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Munich University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-munich-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Osnabr\u00fcck University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-osnabr-ck-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Ostbayerische Technische Hochschule Amberg-Weiden",
+      "source": "EPA",
+      "id": "EPA-germany-ostbayerische-technische-hochschule-amberg-weiden"
+    },
+    {
+      "country": "Germany",
+      "university": "Ostbayerische Technische Hochschule Regensburg",
+      "source": "EPA",
+      "id": "EPA-germany-ostbayerische-technische-hochschule-regensburg"
+    },
+    {
+      "country": "Germany",
+      "university": "PFH - Private University of Applied Sciences G\u00f6ttingen",
+      "source": "EPA",
+      "id": "EPA-germany-pfh-private-university-of-applied-sciences-g-ttingen"
+    },
+    {
+      "country": "Germany",
+      "university": "Paderborn University",
+      "source": "EPA",
+      "id": "EPA-germany-paderborn-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Pforzheim University of Applied Sciences - Design, Technology, Economics and Law",
+      "source": "EPA",
+      "id": "EPA-germany-pforzheim-university-of-applied-sciences-design-technology-economics-and-law"
+    },
+    {
+      "country": "Germany",
+      "university": "RWTH Aachen University",
+      "source": "EPA",
+      "id": "EPA-germany-rwth-aachen-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Ravensburg-Weingarten University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-ravensburg-weingarten-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Reutlingen University of Applied Sciences for Engineering, Business, Computer Science and Design",
+      "source": "EPA",
+      "id": "EPA-germany-reutlingen-university-of-applied-sciences-for-engineering-business-computer-scie"
+    },
+    {
+      "country": "Germany",
+      "university": "Rhine-Waal University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-rhine-waal-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "RhineMain University",
+      "source": "EPA",
+      "id": "EPA-germany-rhinemain-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Rhineland-Palatinate Technical University of Kaiserslautern-Landau",
+      "source": "EPA",
+      "id": "EPA-germany-rhineland-palatinate-technical-university-of-kaiserslautern-landau"
+    },
+    {
+      "country": "Germany",
+      "university": "Ruhr University Bochum",
+      "source": "EPA",
+      "id": "EPA-germany-ruhr-university-bochum"
+    },
+    {
+      "country": "Germany",
+      "university": "SOURCE OF INFORMATION:",
+      "source": "EPA",
+      "id": "EPA-germany-source-of-information"
+    },
+    {
+      "country": "Germany",
+      "university": "SOURCE:",
+      "source": "EPA",
+      "id": "EPA-germany-source"
+    },
+    {
+      "country": "Germany",
+      "university": "SRH Berlin University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-srh-berlin-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "SRH University in North Rhine-Westphalia",
+      "source": "EPA",
+      "id": "EPA-germany-srh-university-in-north-rhine-westphalia"
+    },
+    {
+      "country": "Germany",
+      "university": "SRH University of Applied Sciences Heidelberg",
+      "source": "EPA",
+      "id": "EPA-germany-srh-university-of-applied-sciences-heidelberg"
+    },
+    {
+      "country": "Germany",
+      "university": "Saarland University",
+      "source": "EPA",
+      "id": "EPA-germany-saarland-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Saarland University of Applied Sciences, University of Technology and Economics",
+      "source": "EPA",
+      "id": "EPA-germany-saarland-university-of-applied-sciences-university-of-technology-and-economics"
+    },
+    {
+      "country": "Germany",
+      "university": "South Westphalia University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-south-westphalia-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Sports University of Cologne",
+      "source": "EPA",
+      "id": "EPA-germany-sports-university-of-cologne"
+    },
+    {
+      "country": "Germany",
+      "university": "Stuttgart University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-stuttgart-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "TU Dortmund University",
+      "source": "EPA",
+      "id": "EPA-germany-tu-dortmund-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Technical University of Applied Sciences Wildau",
+      "source": "EPA",
+      "id": "EPA-germany-technical-university-of-applied-sciences-wildau"
+    },
+    {
+      "country": "Germany",
+      "university": "Technical University of Applied Sciences W\u00fcrzburg-Schweinfurt",
+      "source": "EPA",
+      "id": "EPA-germany-technical-university-of-applied-sciences-w-rzburg-schweinfurt"
+    },
+    {
+      "country": "Germany",
+      "university": "Technical University of Darmstadt",
+      "source": "EPA",
+      "id": "EPA-germany-technical-university-of-darmstadt"
+    },
+    {
+      "country": "Germany",
+      "university": "Technical University of Hamburg",
+      "source": "EPA",
+      "id": "EPA-germany-technical-university-of-hamburg"
+    },
+    {
+      "country": "Germany",
+      "university": "Technische Hochschule Bingen",
+      "source": "EPA",
+      "id": "EPA-germany-technische-hochschule-bingen"
+    },
+    {
+      "country": "Germany",
+      "university": "Technische Hochschule Deggendorf",
+      "source": "EPA",
+      "id": "EPA-germany-technische-hochschule-deggendorf"
+    },
+    {
+      "country": "Germany",
+      "university": "Technische Hochschule Ingolstadt",
+      "source": "EPA",
+      "id": "EPA-germany-technische-hochschule-ingolstadt"
+    },
+    {
+      "country": "Germany",
+      "university": "Technische Hochschule K\u00f6ln",
+      "source": "EPA",
+      "id": "EPA-germany-technische-hochschule-k-ln"
+    },
+    {
+      "country": "Germany",
+      "university": "Technische Hochschule L\u00fcbeck",
+      "source": "EPA",
+      "id": "EPA-germany-technische-hochschule-l-beck"
+    },
+    {
+      "country": "Germany",
+      "university": "Technische Universit\u00e4t Braunschweig",
+      "source": "EPA",
+      "id": "EPA-germany-technische-universit-t-braunschweig"
+    },
+    {
+      "country": "Germany",
+      "university": "Technische Universit\u00e4t Dresden",
+      "source": "EPA",
+      "id": "EPA-germany-technische-universit-t-dresden"
+    },
+    {
+      "country": "Germany",
+      "university": "Technische Universit\u00e4t Ilmenau",
+      "source": "EPA",
+      "id": "EPA-germany-technische-universit-t-ilmenau"
+    },
+    {
+      "country": "Germany",
+      "university": "Touro College Berlin",
+      "source": "EPA",
+      "id": "EPA-germany-touro-college-berlin"
+    },
+    {
+      "country": "Germany",
+      "university": "Trier University - Trier University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-trier-university-trier-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Ulm University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-ulm-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Aalen - Engineering and Business",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-aalen-engineering-and-business"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Applied Management Studies",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-applied-management-studies"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Applied Sciences Bremen",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-applied-sciences-bremen"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Applied Sciences Darmstadt",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-applied-sciences-darmstadt"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Applied Sciences Emden/Leer",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-applied-sciences-emden-leer"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Applied Sciences Fresenius",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-applied-sciences-fresenius"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Applied Sciences Neu-Ulm",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-applied-sciences-neu-ulm"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Applied Sciences Neubrandenburg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-applied-sciences-neubrandenburg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Applied Sciences Rosenheim",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-applied-sciences-rosenheim"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Applied Sciences and Arts Ostwestfalen-Lippe",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-applied-sciences-and-arts-ostwestfalen-lippe"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Augsburg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-augsburg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Bayreuth",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-bayreuth"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Bonn",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-bonn"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Bremen",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-bremen"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Cologne",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-cologne"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Duisburg-Essen",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-duisburg-essen"
+    },
+    {
+      "country": "Germany",
+      "university": "University of D\u00fcsseldorf",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-d-sseldorf"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Erfurt",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-erfurt"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Erlangen-Nuremberg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-erlangen-nuremberg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Europe for Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-europe-for-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Freiburg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-freiburg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Giessen",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-giessen"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Greifswald",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-greifswald"
+    },
+    {
+      "country": "Germany",
+      "university": "University of G\u00f6ttingen",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-g-ttingen"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Halle-Wittenberg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-halle-wittenberg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Hamburg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-hamburg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Hamm-Lippstadt",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-hamm-lippstadt"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Hannover",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-hannover"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Hildesheim",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-hildesheim"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Hohenheim",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-hohenheim"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Jena",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-jena"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Kassel",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-kassel"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Koblenz",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-koblenz"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Konstanz",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-konstanz"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Leipzig",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-leipzig"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Magdeburg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-magdeburg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Mannheim",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-mannheim"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Marburg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-marburg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of M\u00fcnster",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-m-nster"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Oldenburg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-oldenburg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Osnabr\u00fcck",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-osnabr-ck"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Passau",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-passau"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Potsdam",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-potsdam"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Regensburg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-regensburg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Rostock",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-rostock"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Siegen",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-siegen"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Stralsund",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-stralsund"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Stuttgart",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-stuttgart"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Trier",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-trier"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Ulm",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-ulm"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Wuppertal",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-wuppertal"
+    },
+    {
+      "country": "Germany",
+      "university": "University of W\u00fcrzburg",
+      "source": "EPA",
+      "id": "EPA-germany-university-of-w-rzburg"
+    },
+    {
+      "country": "Germany",
+      "university": "WHU - Otto Beisheim School of Management",
+      "source": "EPA",
+      "id": "EPA-germany-whu-otto-beisheim-school-of-management"
+    },
+    {
+      "country": "Germany",
+      "university": "Weihenstephan-Triesdorf University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-weihenstephan-triesdorf-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "West Saxon University of Applied Sciences of Zwickau",
+      "source": "EPA",
+      "id": "EPA-germany-west-saxon-university-of-applied-sciences-of-zwickau"
+    },
+    {
+      "country": "Germany",
+      "university": "Westcoast University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-westcoast-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Wismar University of Applied Sciences: Technology, Business and Design",
+      "source": "EPA",
+      "id": "EPA-germany-wismar-university-of-applied-sciences-technology-business-and-design"
+    },
+    {
+      "country": "Germany",
+      "university": "XU Exponential University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-germany-xu-exponential-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "bbw university",
+      "source": "EPA",
+      "id": "EPA-germany-bbw-university"
+    },
+    {
+      "country": "Greece",
+      "university": "Aristotle University of Thessaloniki",
+      "source": "EPA",
+      "id": "EPA-greece-aristotle-university-of-thessaloniki"
+    },
+    {
+      "country": "Greece",
+      "university": "Athens University of Economics and Business",
+      "source": "EPA",
+      "id": "EPA-greece-athens-university-of-economics-and-business"
+    },
+    {
+      "country": "Greece",
+      "university": "International Hellenic University",
+      "source": "EPA",
+      "id": "EPA-greece-international-hellenic-university"
+    },
+    {
+      "country": "Greece",
+      "university": "National Technical University of Athens (NTUA)",
+      "source": "EPA",
+      "id": "EPA-greece-national-technical-university-of-athens-ntua"
+    },
+    {
+      "country": "Greece",
+      "university": "National and Kapodistrian University of Athens (NKUA)",
+      "source": "EPA",
+      "id": "EPA-greece-national-and-kapodistrian-university-of-athens-nkua"
+    },
+    {
+      "country": "Greece",
+      "university": "University of Crete",
+      "source": "EPA",
+      "id": "EPA-greece-university-of-crete"
+    },
+    {
+      "country": "Greece",
+      "university": "University of Patras",
+      "source": "EPA",
+      "id": "EPA-greece-university-of-patras"
+    },
+    {
+      "country": "Hungary",
+      "university": "Budapest University of Technology and Economics (BME)",
+      "source": "EPA",
+      "id": "EPA-hungary-budapest-university-of-technology-and-economics-bme"
+    },
+    {
+      "country": "Hungary",
+      "university": "Corvinus University of Budapest",
+      "source": "EPA",
+      "id": "EPA-hungary-corvinus-university-of-budapest"
+    },
+    {
+      "country": "Hungary",
+      "university": "E\u00f6tv\u00f6s Lor\u00e1nd University (ELTE)",
+      "source": "EPA",
+      "id": "EPA-hungary-e-tv-s-lor-nd-university-elte"
+    },
+    {
+      "country": "Hungary",
+      "university": "P\u00e1zm\u00e1ny P\u00e9ter Catholic University",
+      "source": "EPA",
+      "id": "EPA-hungary-p-zm-ny-p-ter-catholic-university"
+    },
+    {
+      "country": "Hungary",
+      "university": "Semmelweis University",
+      "source": "EPA",
+      "id": "EPA-hungary-semmelweis-university"
+    },
+    {
+      "country": "Hungary",
+      "university": "Stipendium Hungaricum (Government Scholarship)",
+      "source": "EPA",
+      "id": "EPA-hungary-stipendium-hungaricum-government-scholarship"
+    },
+    {
+      "country": "Hungary",
+      "university": "University of Debrecen",
+      "source": "EPA",
+      "id": "EPA-hungary-university-of-debrecen"
+    },
+    {
+      "country": "Hungary",
+      "university": "University of P\u00e9cs",
+      "source": "EPA",
+      "id": "EPA-hungary-university-of-p-cs"
+    },
+    {
+      "country": "Hungary",
+      "university": "University of Szeged",
+      "source": "EPA",
+      "id": "EPA-hungary-university-of-szeged"
+    },
+    {
+      "country": "Hungary",
+      "university": "\u00d3buda University",
+      "source": "EPA",
+      "id": "EPA-hungary-buda-university"
+    },
+    {
+      "country": "Iceland",
+      "university": "University of Iceland",
+      "source": "EPA",
+      "id": "EPA-iceland-university-of-iceland"
+    },
+    {
+      "country": "Italy",
+      "university": "American University of Rome (AUR)",
+      "source": "EPA",
+      "id": "EPA-italy-american-university-of-rome-aur"
+    },
+    {
+      "country": "Italy",
+      "university": "Bocconi University",
+      "source": "EPA",
+      "id": "EPA-italy-bocconi-university"
+    },
+    {
+      "country": "Italy",
+      "university": "Ca' Foscari University of Venice",
+      "source": "EPA",
+      "id": "EPA-italy-ca-foscari-university-of-venice"
+    },
+    {
+      "country": "Italy",
+      "university": "Domus Academy",
+      "source": "EPA",
+      "id": "EPA-italy-domus-academy"
+    },
+    {
+      "country": "Italy",
+      "university": "European University Institute (EUI)",
+      "source": "EPA",
+      "id": "EPA-italy-european-university-institute-eui"
+    },
+    {
+      "country": "Italy",
+      "university": "Florence University of the Arts (FUA-AUF)",
+      "source": "EPA",
+      "id": "EPA-italy-florence-university-of-the-arts-fua-auf"
+    },
+    {
+      "country": "Italy",
+      "university": "Free University of Bozen-Bolzano (UniBZ)",
+      "source": "EPA",
+      "id": "EPA-italy-free-university-of-bozen-bolzano-unibz"
+    },
+    {
+      "country": "Italy",
+      "university": "Gran Sasso Science Institute (GSSI)",
+      "source": "EPA",
+      "id": "EPA-italy-gran-sasso-science-institute-gssi"
+    },
+    {
+      "country": "Italy",
+      "university": "Humanitas University",
+      "source": "EPA",
+      "id": "EPA-italy-humanitas-university"
+    },
+    {
+      "country": "Italy",
+      "university": "IED Istituto Europeo di Design",
+      "source": "EPA",
+      "id": "EPA-italy-ied-istituto-europeo-di-design"
+    },
+    {
+      "country": "Italy",
+      "university": "IMT School for Advanced Studies",
+      "source": "EPA",
+      "id": "EPA-italy-imt-school-for-advanced-studies"
+    },
+    {
+      "country": "Italy",
+      "university": "IULM University",
+      "source": "EPA",
+      "id": "EPA-italy-iulm-university"
+    },
+    {
+      "country": "Italy",
+      "university": "IUSS Pavia (Institute for Advanced Study)",
+      "source": "EPA",
+      "id": "EPA-italy-iuss-pavia-institute-for-advanced-study"
+    },
+    {
+      "country": "Italy",
+      "university": "John Cabot University",
+      "source": "EPA",
+      "id": "EPA-italy-john-cabot-university"
+    },
+    {
+      "country": "Italy",
+      "university": "LUMSA University",
+      "source": "EPA",
+      "id": "EPA-italy-lumsa-university"
+    },
+    {
+      "country": "Italy",
+      "university": "Luiss Guido Carli",
+      "source": "EPA",
+      "id": "EPA-italy-luiss-guido-carli"
+    },
+    {
+      "country": "Italy",
+      "university": "Magna Graecia University of Catanzaro",
+      "source": "EPA",
+      "id": "EPA-italy-magna-graecia-university-of-catanzaro"
+    },
+    {
+      "country": "Italy",
+      "university": "Marangoni Florence/Milan",
+      "source": "EPA",
+      "id": "EPA-italy-marangoni-florence-milan"
+    },
+    {
+      "country": "Italy",
+      "university": "Marche Polytechnic University (UnivPM)",
+      "source": "EPA",
+      "id": "EPA-italy-marche-polytechnic-university-univpm"
+    },
+    {
+      "country": "Italy",
+      "university": "Mediterranea University of Reggio Calabria",
+      "source": "EPA",
+      "id": "EPA-italy-mediterranea-university-of-reggio-calabria"
+    },
+    {
+      "country": "Italy",
+      "university": "NABA Nuova Accademia di Belle Arti",
+      "source": "EPA",
+      "id": "EPA-italy-naba-nuova-accademia-di-belle-arti"
+    },
+    {
+      "country": "Italy",
+      "university": "Politecnico di Bari (PoliBA)",
+      "source": "EPA",
+      "id": "EPA-italy-politecnico-di-bari-poliba"
+    },
+    {
+      "country": "Italy",
+      "university": "Politecnico di Milano (PoliMI)",
+      "source": "EPA",
+      "id": "EPA-italy-politecnico-di-milano-polimi"
+    },
+    {
+      "country": "Italy",
+      "university": "Politecnico di Torino (PoliTo)",
+      "source": "EPA",
+      "id": "EPA-italy-politecnico-di-torino-polito"
+    },
+    {
+      "country": "Italy",
+      "university": "Roma Tre University",
+      "source": "EPA",
+      "id": "EPA-italy-roma-tre-university"
+    },
+    {
+      "country": "Italy",
+      "university": "SISSA \u2014 Scuola Internazionale Superiore di Studi Avanzati",
+      "source": "EPA",
+      "id": "EPA-italy-sissa-scuola-internazionale-superiore-di-studi-avanzati"
+    },
+    {
+      "country": "Italy",
+      "university": "Sapienza University of Rome",
+      "source": "EPA",
+      "id": "EPA-italy-sapienza-university-of-rome"
+    },
+    {
+      "country": "Italy",
+      "university": "Scuola Normale Superiore (SNS)",
+      "source": "EPA",
+      "id": "EPA-italy-scuola-normale-superiore-sns"
+    },
+    {
+      "country": "Italy",
+      "university": "Scuola Superiore Sant'Anna (SSSA)",
+      "source": "EPA",
+      "id": "EPA-italy-scuola-superiore-sant-anna-sssa"
+    },
+    {
+      "country": "Italy",
+      "university": "UniNettuno International Telematic University",
+      "source": "EPA",
+      "id": "EPA-italy-uninettuno-international-telematic-university"
+    },
+    {
+      "country": "Italy",
+      "university": "University for Foreigners of Perugia (UniStraPg)",
+      "source": "EPA",
+      "id": "EPA-italy-university-for-foreigners-of-perugia-unistrapg"
+    },
+    {
+      "country": "Italy",
+      "university": "University for Foreigners of Siena (UniStraSi)",
+      "source": "EPA",
+      "id": "EPA-italy-university-for-foreigners-of-siena-unistrasi"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Bari Aldo Moro",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-bari-aldo-moro"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Basilicata",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-basilicata"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Bergamo (UniBg)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-bergamo-unibg"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Bologna (UNIBO)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-bologna-unibo"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Brescia (UniBs)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-brescia-unibs"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Cagliari (UniCa)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-cagliari-unica"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Calabria (UniCal)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-calabria-unical"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Camerino (UniCam)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-camerino-unicam"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Campania Luigi Vanvitelli",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-campania-luigi-vanvitelli"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Catania (UniCT)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-catania-unict"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Chieti-Pescara (UniCH)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-chieti-pescara-unich"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Enna Kore (UKE)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-enna-kore-uke"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Ferrara (UniFE)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-ferrara-unife"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Florence (UNIFI)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-florence-unifi"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Foggia",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-foggia"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Genoa (UniGe)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-genoa-unige"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Insubria",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-insubria"
+    },
+    {
+      "country": "Italy",
+      "university": "University of L'Aquila (UnivAQ)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-l-aquila-univaq"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Macerata (UniMC)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-macerata-unimc"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Messina (UniMe)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-messina-unime"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Milan (Statale)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-milan-statale"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Milan-Bicocca (UniMiB)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-milan-bicocca-unimib"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Modena and Reggio Emilia (UniMoRe)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-modena-and-reggio-emilia-unimore"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Molise",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-molise"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Naples Federico II",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-naples-federico-ii"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Naples L'Orientale",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-naples-l-orientale"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Naples Parthenope",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-naples-parthenope"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Padua (UNIPD)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-padua-unipd"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Palermo (UniPa)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-palermo-unipa"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Parma (UniPR)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-parma-unipr"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Pavia (UNIPV)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-pavia-unipv"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Perugia (UniPg)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-perugia-unipg"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Pisa",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-pisa"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Salento",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-salento"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Salerno (UniSA)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-salerno-unisa"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Sassari (UniSS)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-sassari-uniss"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Siena (UniSI)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-siena-unisi"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Teramo",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-teramo"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Tor Vergata Rome",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-tor-vergata-rome"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Trento (UniTN)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-trento-unitn"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Trieste (UniTS)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-trieste-units"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Turin (UniTO)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-turin-unito"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Tuscia (Unitus)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-tuscia-unitus"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Udine (UniUD)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-udine-uniud"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Urbino Carlo Bo",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-urbino-carlo-bo"
+    },
+    {
+      "country": "Italy",
+      "university": "University of Verona (UniVR)",
+      "source": "EPA",
+      "id": "EPA-italy-university-of-verona-univr"
+    },
+    {
+      "country": "Italy",
+      "university": "Universit\u00e0 Cattolica del Sacro Cuore",
+      "source": "EPA",
+      "id": "EPA-italy-universit-cattolica-del-sacro-cuore"
+    },
+    {
+      "country": "Italy",
+      "university": "Universit\u00e0 Telematica Pegaso",
+      "source": "EPA",
+      "id": "EPA-italy-universit-telematica-pegaso"
+    },
+    {
+      "country": "Italy",
+      "university": "Vita-Salute San Raffaele University (UniSR)",
+      "source": "EPA",
+      "id": "EPA-italy-vita-salute-san-raffaele-university-unisr"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Aeres University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-aeres-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Amsterdam University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-amsterdam-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Amsterdam University of the Arts",
+      "source": "EPA",
+      "id": "EPA-netherlands-amsterdam-university-of-the-arts"
+    },
+    {
+      "country": "Netherlands",
+      "university": "ArtEZ University of the Arts",
+      "source": "EPA",
+      "id": "EPA-netherlands-artez-university-of-the-arts"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Avans University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-avans-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Breda University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-breda-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Christian University of Applied Sciences Ede",
+      "source": "EPA",
+      "id": "EPA-netherlands-christian-university-of-applied-sciences-ede"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Delft University of Technology",
+      "source": "EPA",
+      "id": "EPA-netherlands-delft-university-of-technology"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Design Academy Eindhoven",
+      "source": "EPA",
+      "id": "EPA-netherlands-design-academy-eindhoven"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Eindhoven University of Technology",
+      "source": "EPA",
+      "id": "EPA-netherlands-eindhoven-university-of-technology"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Erasmus University Rotterdam",
+      "source": "EPA",
+      "id": "EPA-netherlands-erasmus-university-rotterdam"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Fontys University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-fontys-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "HAN University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-han-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "HKU University of the Arts Utrecht",
+      "source": "EPA",
+      "id": "EPA-netherlands-hku-university-of-the-arts-utrecht"
+    },
+    {
+      "country": "Netherlands",
+      "university": "HU University of Applied Sciences Utrecht",
+      "source": "EPA",
+      "id": "EPA-netherlands-hu-university-of-applied-sciences-utrecht"
+    },
+    {
+      "country": "Netherlands",
+      "university": "HZ University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-hz-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Hanze University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-hanze-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "IHE Delft Institute for Water Education",
+      "source": "EPA",
+      "id": "EPA-netherlands-ihe-delft-institute-for-water-education"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Inholland University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-inholland-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "KIT (Royal Tropical Institute)",
+      "source": "EPA",
+      "id": "EPA-netherlands-kit-royal-tropical-institute"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Leiden University",
+      "source": "EPA",
+      "id": "EPA-netherlands-leiden-university"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Maastricht University",
+      "source": "EPA",
+      "id": "EPA-netherlands-maastricht-university"
+    },
+    {
+      "country": "Netherlands",
+      "university": "NHL Stenden University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-nhl-stenden-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Nyenrode Business University",
+      "source": "EPA",
+      "id": "EPA-netherlands-nyenrode-business-university"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Radboud University",
+      "source": "EPA",
+      "id": "EPA-netherlands-radboud-university"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Rotterdam University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-rotterdam-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Saxion University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-saxion-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "THIM University of Applied Sciences in Physiotherapy",
+      "source": "EPA",
+      "id": "EPA-netherlands-thim-university-of-applied-sciences-in-physiotherapy"
+    },
+    {
+      "country": "Netherlands",
+      "university": "TIAS School for Business and Society",
+      "source": "EPA",
+      "id": "EPA-netherlands-tias-school-for-business-and-society"
+    },
+    {
+      "country": "Netherlands",
+      "university": "The Hague Academy for Local Governance",
+      "source": "EPA",
+      "id": "EPA-netherlands-the-hague-academy-for-local-governance"
+    },
+    {
+      "country": "Netherlands",
+      "university": "The Hague University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-the-hague-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Tilburg University",
+      "source": "EPA",
+      "id": "EPA-netherlands-tilburg-university"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Tio University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-tio-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Transnationale Universiteit Limburg",
+      "source": "EPA",
+      "id": "EPA-netherlands-transnationale-universiteit-limburg"
+    },
+    {
+      "country": "Netherlands",
+      "university": "University of Amsterdam",
+      "source": "EPA",
+      "id": "EPA-netherlands-university-of-amsterdam"
+    },
+    {
+      "country": "Netherlands",
+      "university": "University of Groningen",
+      "source": "EPA",
+      "id": "EPA-netherlands-university-of-groningen"
+    },
+    {
+      "country": "Netherlands",
+      "university": "University of Twente",
+      "source": "EPA",
+      "id": "EPA-netherlands-university-of-twente"
+    },
+    {
+      "country": "Netherlands",
+      "university": "University of the Arts The Hague",
+      "source": "EPA",
+      "id": "EPA-netherlands-university-of-the-arts-the-hague"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Unknown University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-unknown-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Utrecht University",
+      "source": "EPA",
+      "id": "EPA-netherlands-utrecht-university"
+    },
+    {
+      "country": "Netherlands",
+      "university": "VHL University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-vhl-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Vrije Universiteit Amsterdam",
+      "source": "EPA",
+      "id": "EPA-netherlands-vrije-universiteit-amsterdam"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Wageningen University & Research",
+      "source": "EPA",
+      "id": "EPA-netherlands-wageningen-university-research"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Windesheim University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-windesheim-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Wittenborg University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-wittenborg-university-of-applied-sciences"
+    },
+    {
+      "country": "Netherlands",
+      "university": "Zuyd University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-netherlands-zuyd-university-of-applied-sciences"
+    },
+    {
+      "country": "Norway",
+      "university": "BI Norwegian Business School",
+      "source": "EPA",
+      "id": "EPA-norway-bi-norwegian-business-school"
+    },
+    {
+      "country": "Norway",
+      "university": "Fjellhaug International University College",
+      "source": "EPA",
+      "id": "EPA-norway-fjellhaug-international-university-college"
+    },
+    {
+      "country": "Norway",
+      "university": "Kristiania University College",
+      "source": "EPA",
+      "id": "EPA-norway-kristiania-university-college"
+    },
+    {
+      "country": "Norway",
+      "university": "MF Norwegian School of Theology, Religion and Society",
+      "source": "EPA",
+      "id": "EPA-norway-mf-norwegian-school-of-theology-religion-and-society"
+    },
+    {
+      "country": "Norway",
+      "university": "Molde University College \u2013 Specialized University in Logistics (HiMolde)",
+      "source": "EPA",
+      "id": "EPA-norway-molde-university-college-specialized-university-in-logistics-himolde"
+    },
+    {
+      "country": "Norway",
+      "university": "NHH Norwegian School of Economics",
+      "source": "EPA",
+      "id": "EPA-norway-nhh-norwegian-school-of-economics"
+    },
+    {
+      "country": "Norway",
+      "university": "NLA University College",
+      "source": "EPA",
+      "id": "EPA-norway-nla-university-college"
+    },
+    {
+      "country": "Norway",
+      "university": "Nord University",
+      "source": "EPA",
+      "id": "EPA-norway-nord-university"
+    },
+    {
+      "country": "Norway",
+      "university": "Noroff - School of technology and digital media",
+      "source": "EPA",
+      "id": "EPA-norway-noroff-school-of-technology-and-digital-media"
+    },
+    {
+      "country": "Norway",
+      "university": "Norwegian Academy of Music",
+      "source": "EPA",
+      "id": "EPA-norway-norwegian-academy-of-music"
+    },
+    {
+      "country": "Norway",
+      "university": "Norwegian School of Leadership and Theology",
+      "source": "EPA",
+      "id": "EPA-norway-norwegian-school-of-leadership-and-theology"
+    },
+    {
+      "country": "Norway",
+      "university": "Norwegian University of Life Sciences",
+      "source": "EPA",
+      "id": "EPA-norway-norwegian-university-of-life-sciences"
+    },
+    {
+      "country": "Norway",
+      "university": "Norwegian University of Science and Technology",
+      "source": "EPA",
+      "id": "EPA-norway-norwegian-university-of-science-and-technology"
+    },
+    {
+      "country": "Norway",
+      "university": "Oslo National Academy of the Arts",
+      "source": "EPA",
+      "id": "EPA-norway-oslo-national-academy-of-the-arts"
+    },
+    {
+      "country": "Norway",
+      "university": "Oslo School of Architecture and Design",
+      "source": "EPA",
+      "id": "EPA-norway-oslo-school-of-architecture-and-design"
+    },
+    {
+      "country": "Norway",
+      "university": "OsloMet \u2013 Oslo Metropolitan University",
+      "source": "EPA",
+      "id": "EPA-norway-oslomet-oslo-metropolitan-university"
+    },
+    {
+      "country": "Norway",
+      "university": "UiT The Arctic University of Norway",
+      "source": "EPA",
+      "id": "EPA-norway-uit-the-arctic-university-of-norway"
+    },
+    {
+      "country": "Norway",
+      "university": "University of Agder",
+      "source": "EPA",
+      "id": "EPA-norway-university-of-agder"
+    },
+    {
+      "country": "Norway",
+      "university": "University of Bergen",
+      "source": "EPA",
+      "id": "EPA-norway-university-of-bergen"
+    },
+    {
+      "country": "Norway",
+      "university": "University of Inland Norway",
+      "source": "EPA",
+      "id": "EPA-norway-university-of-inland-norway"
+    },
+    {
+      "country": "Norway",
+      "university": "University of Oslo",
+      "source": "EPA",
+      "id": "EPA-norway-university-of-oslo"
+    },
+    {
+      "country": "Norway",
+      "university": "University of South-Eastern Norway",
+      "source": "EPA",
+      "id": "EPA-norway-university-of-south-eastern-norway"
+    },
+    {
+      "country": "Norway",
+      "university": "University of Stavanger",
+      "source": "EPA",
+      "id": "EPA-norway-university-of-stavanger"
+    },
+    {
+      "country": "Norway",
+      "university": "VID Specialized University",
+      "source": "EPA",
+      "id": "EPA-norway-vid-specialized-university"
+    },
+    {
+      "country": "Norway",
+      "university": "Volda University College",
+      "source": "EPA",
+      "id": "EPA-norway-volda-university-college"
+    },
+    {
+      "country": "Norway",
+      "university": "Western Norway University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-norway-western-norway-university-of-applied-sciences"
+    },
+    {
+      "country": "Norway",
+      "university": "\u00d8stfold University of Applied Sciences",
+      "source": "EPA",
+      "id": "EPA-norway-stfold-university-of-applied-sciences"
+    },
+    {
+      "country": "Poland",
+      "university": "AGH University of Science and Technology",
+      "source": "EPA",
+      "id": "EPA-poland-agh-university-of-science-and-technology"
+    },
+    {
+      "country": "Poland",
+      "university": "Adam Mickiewicz University",
+      "source": "EPA",
+      "id": "EPA-poland-adam-mickiewicz-university"
+    },
+    {
+      "country": "Poland",
+      "university": "Cracow University of Technology",
+      "source": "EPA",
+      "id": "EPA-poland-cracow-university-of-technology"
+    },
+    {
+      "country": "Poland",
+      "university": "Gda\u0144sk University of Technology",
+      "source": "EPA",
+      "id": "EPA-poland-gda-sk-university-of-technology"
+    },
+    {
+      "country": "Poland",
+      "university": "Jagiellonian University",
+      "source": "EPA",
+      "id": "EPA-poland-jagiellonian-university"
+    },
+    {
+      "country": "Poland",
+      "university": "Lodz University of Technology",
+      "source": "EPA",
+      "id": "EPA-poland-lodz-university-of-technology"
+    },
+    {
+      "country": "Poland",
+      "university": "Medical University of Warsaw",
+      "source": "EPA",
+      "id": "EPA-poland-medical-university-of-warsaw"
+    },
+    {
+      "country": "Poland",
+      "university": "SGH Warsaw School of Economics",
+      "source": "EPA",
+      "id": "EPA-poland-sgh-warsaw-school-of-economics"
+    },
+    {
+      "country": "Poland",
+      "university": "University of Warsaw",
+      "source": "EPA",
+      "id": "EPA-poland-university-of-warsaw"
+    },
+    {
+      "country": "Poland",
+      "university": "University of \u0141\u00f3d\u017a",
+      "source": "EPA",
+      "id": "EPA-poland-university-of-d"
+    },
+    {
+      "country": "Poland",
+      "university": "Warsaw University of Technology",
+      "source": "EPA",
+      "id": "EPA-poland-warsaw-university-of-technology"
+    },
+    {
+      "country": "Poland",
+      "university": "Wroc\u0142aw University of Science and Technology",
+      "source": "EPA",
+      "id": "EPA-poland-wroc-aw-university-of-science-and-technology"
+    },
+    {
+      "country": "Portugal",
+      "university": "Catholic University of Portugal",
+      "source": "EPA",
+      "id": "EPA-portugal-catholic-university-of-portugal"
+    },
+    {
+      "country": "Portugal",
+      "university": "ISCTE \u2014 University Institute of Lisbon",
+      "source": "EPA",
+      "id": "EPA-portugal-iscte-university-institute-of-lisbon"
+    },
+    {
+      "country": "Portugal",
+      "university": "Instituto Superior T\u00e9cnico (Univ Lisbon)",
+      "source": "EPA",
+      "id": "EPA-portugal-instituto-superior-t-cnico-univ-lisbon"
+    },
+    {
+      "country": "Portugal",
+      "university": "NOVA University Lisbon",
+      "source": "EPA",
+      "id": "EPA-portugal-nova-university-lisbon"
+    },
+    {
+      "country": "Portugal",
+      "university": "University of Algarve",
+      "source": "EPA",
+      "id": "EPA-portugal-university-of-algarve"
+    },
+    {
+      "country": "Portugal",
+      "university": "University of Aveiro",
+      "source": "EPA",
+      "id": "EPA-portugal-university-of-aveiro"
+    },
+    {
+      "country": "Portugal",
+      "university": "University of Coimbra",
+      "source": "EPA",
+      "id": "EPA-portugal-university-of-coimbra"
+    },
+    {
+      "country": "Portugal",
+      "university": "University of Lisbon",
+      "source": "EPA",
+      "id": "EPA-portugal-university-of-lisbon"
+    },
+    {
+      "country": "Portugal",
+      "university": "University of Minho",
+      "source": "EPA",
+      "id": "EPA-portugal-university-of-minho"
+    },
+    {
+      "country": "Portugal",
+      "university": "University of Porto",
+      "source": "EPA",
+      "id": "EPA-portugal-university-of-porto"
+    },
+    {
+      "country": "Slovenia",
+      "university": "University of Ljubljana",
+      "source": "EPA",
+      "id": "EPA-slovenia-university-of-ljubljana"
+    },
+    {
+      "country": "Slovenia",
+      "university": "University of Maribor",
+      "source": "EPA",
+      "id": "EPA-slovenia-university-of-maribor"
+    },
+    {
+      "country": "Slovenia",
+      "university": "University of Nova Gorica",
+      "source": "EPA",
+      "id": "EPA-slovenia-university-of-nova-gorica"
+    },
+    {
+      "country": "Slovenia",
+      "university": "University of Primorska",
+      "source": "EPA",
+      "id": "EPA-slovenia-university-of-primorska"
+    },
+    {
+      "country": "Spain",
+      "university": "Autonomous University of Barcelona (UAB)",
+      "source": "EPA",
+      "id": "EPA-spain-autonomous-university-of-barcelona-uab"
+    },
+    {
+      "country": "Spain",
+      "university": "Autonomous University of Madrid (UAM)",
+      "source": "EPA",
+      "id": "EPA-spain-autonomous-university-of-madrid-uam"
+    },
+    {
+      "country": "Spain",
+      "university": "Carlos III University of Madrid (UC3M)",
+      "source": "EPA",
+      "id": "EPA-spain-carlos-iii-university-of-madrid-uc3m"
+    },
+    {
+      "country": "Spain",
+      "university": "Complutense University of Madrid (UCM)",
+      "source": "EPA",
+      "id": "EPA-spain-complutense-university-of-madrid-ucm"
+    },
+    {
+      "country": "Spain",
+      "university": "IE University",
+      "source": "EPA",
+      "id": "EPA-spain-ie-university"
+    },
+    {
+      "country": "Spain",
+      "university": "Pompeu Fabra University (UPF)",
+      "source": "EPA",
+      "id": "EPA-spain-pompeu-fabra-university-upf"
+    },
+    {
+      "country": "Spain",
+      "university": "Universidad Carlos III de Madrid (UC3M)",
+      "source": "EPA",
+      "id": "EPA-spain-universidad-carlos-iii-de-madrid-uc3m"
+    },
+    {
+      "country": "Spain",
+      "university": "Universidad Polit\u00e9cnica de Madrid (UPM)",
+      "source": "EPA",
+      "id": "EPA-spain-universidad-polit-cnica-de-madrid-upm"
+    },
+    {
+      "country": "Spain",
+      "university": "Universidad de Zaragoza (Unizar)",
+      "source": "EPA",
+      "id": "EPA-spain-universidad-de-zaragoza-unizar"
+    },
+    {
+      "country": "Spain",
+      "university": "Universidad del Pa\u00eds Vasco (UPV/EHU)",
+      "source": "EPA",
+      "id": "EPA-spain-universidad-del-pa-s-vasco-upv-ehu"
+    },
+    {
+      "country": "Spain",
+      "university": "Universidade da Coru\u00f1a (UDC)",
+      "source": "EPA",
+      "id": "EPA-spain-universidade-da-coru-a-udc"
+    },
+    {
+      "country": "Spain",
+      "university": "Universidade de Santiago de Compostela (USC)",
+      "source": "EPA",
+      "id": "EPA-spain-universidade-de-santiago-de-compostela-usc"
+    },
+    {
+      "country": "Spain",
+      "university": "Universitat Aut\u00f2noma de Barcelona (UAB)",
+      "source": "EPA",
+      "id": "EPA-spain-universitat-aut-noma-de-barcelona-uab"
+    },
+    {
+      "country": "Spain",
+      "university": "Universitat Polit\u00e8cnica de Catalunya (UPC / BarcelonaTech)",
+      "source": "EPA",
+      "id": "EPA-spain-universitat-polit-cnica-de-catalunya-upc-barcelonatech"
+    },
+    {
+      "country": "Spain",
+      "university": "Universitat Polit\u00e8cnica de Catalunya (UPC)",
+      "source": "EPA",
+      "id": "EPA-spain-universitat-polit-cnica-de-catalunya-upc"
+    },
+    {
+      "country": "Spain",
+      "university": "Universitat Pompeu Fabra (UPF)",
+      "source": "EPA",
+      "id": "EPA-spain-universitat-pompeu-fabra-upf"
+    },
+    {
+      "country": "Spain",
+      "university": "Universitat Rovira i Virgili (URV)",
+      "source": "EPA",
+      "id": "EPA-spain-universitat-rovira-i-virgili-urv"
+    },
+    {
+      "country": "Spain",
+      "university": "Universitat de Val\u00e8ncia (UV)",
+      "source": "EPA",
+      "id": "EPA-spain-universitat-de-val-ncia-uv"
+    },
+    {
+      "country": "Spain",
+      "university": "Universitat de les Illes Balears (UIB)",
+      "source": "EPA",
+      "id": "EPA-spain-universitat-de-les-illes-balears-uib"
+    },
+    {
+      "country": "Spain",
+      "university": "University of Barcelona (UB)",
+      "source": "EPA",
+      "id": "EPA-spain-university-of-barcelona-ub"
+    },
+    {
+      "country": "Spain",
+      "university": "University of Granada (UGR)",
+      "source": "EPA",
+      "id": "EPA-spain-university-of-granada-ugr"
+    },
+    {
+      "country": "Spain",
+      "university": "University of Navarra (UNAV)",
+      "source": "EPA",
+      "id": "EPA-spain-university-of-navarra-unav"
+    },
+    {
+      "country": "Spain",
+      "university": "University of Salamanca (USAL)",
+      "source": "EPA",
+      "id": "EPA-spain-university-of-salamanca-usal"
+    },
+    {
+      "country": "Spain",
+      "university": "University of Seville (US)",
+      "source": "EPA",
+      "id": "EPA-spain-university-of-seville-us"
+    },
+    {
+      "country": "Spain",
+      "university": "University of the Basque Country (UPV/EHU)",
+      "source": "EPA",
+      "id": "EPA-spain-university-of-the-basque-country-upv-ehu"
+    },
+    {
+      "country": "Sweden",
+      "university": "Dalarna University",
+      "source": "EPA",
+      "id": "EPA-sweden-dalarna-university"
+    },
+    {
+      "country": "Sweden",
+      "university": "KTH Royal Institute of Technology",
+      "source": "EPA",
+      "id": "EPA-sweden-kth-royal-institute-of-technology"
+    },
+    {
+      "country": "Sweden",
+      "university": "Karlstad University",
+      "source": "EPA",
+      "id": "EPA-sweden-karlstad-university"
+    },
+    {
+      "country": "Sweden",
+      "university": "Karolinska Institutet",
+      "source": "EPA",
+      "id": "EPA-sweden-karolinska-institutet"
+    },
+    {
+      "country": "Sweden",
+      "university": "Link\u00f6ping University",
+      "source": "EPA",
+      "id": "EPA-sweden-link-ping-university"
+    },
+    {
+      "country": "Sweden",
+      "university": "Linnaeus University (Kalmar V\u00e4xj\u00f6)",
+      "source": "EPA",
+      "id": "EPA-sweden-linnaeus-university-kalmar-v-xj"
+    },
+    {
+      "country": "Sweden",
+      "university": "Malm\u00f6 University",
+      "source": "EPA",
+      "id": "EPA-sweden-malm-university"
+    },
+    {
+      "country": "Sweden",
+      "university": "Stockholm University",
+      "source": "EPA",
+      "id": "EPA-sweden-stockholm-university"
+    },
+    {
+      "country": "Sweden",
+      "university": "Stockholm University of the Arts",
+      "source": "EPA",
+      "id": "EPA-sweden-stockholm-university-of-the-arts"
+    },
+    {
+      "country": "Sweden",
+      "university": "Swedish University of Agricultural Sciences",
+      "source": "EPA",
+      "id": "EPA-sweden-swedish-university-of-agricultural-sciences"
+    },
+    {
+      "country": "Sweden",
+      "university": "S\u00f6dert\u00f6rn University",
+      "source": "EPA",
+      "id": "EPA-sweden-s-dert-rn-university"
+    },
+    {
+      "country": "Sweden",
+      "university": "Ume\u00e5 University",
+      "source": "EPA",
+      "id": "EPA-sweden-ume-university"
+    },
+    {
+      "country": "Sweden",
+      "university": "University of Gothenburg",
+      "source": "EPA",
+      "id": "EPA-sweden-university-of-gothenburg"
+    },
+    {
+      "country": "Sweden",
+      "university": "University of G\u00e4vle",
+      "source": "EPA",
+      "id": "EPA-sweden-university-of-g-vle"
+    },
+    {
+      "country": "Switzerland",
+      "university": "EPFL (\u00c9cole polytechnique f\u00e9d\u00e9rale de Lausanne)",
+      "source": "EPA",
+      "id": "EPA-switzerland-epfl-cole-polytechnique-f-d-rale-de-lausanne"
+    },
+    {
+      "country": "Switzerland",
+      "university": "ETH Z\u00fcrich",
+      "source": "EPA",
+      "id": "EPA-switzerland-eth-z-rich"
+    },
+    {
+      "country": "Switzerland",
+      "university": "USI Universit\u00e0 della Svizzera italiana",
+      "source": "EPA",
+      "id": "EPA-switzerland-usi-universit-della-svizzera-italiana"
+    },
+    {
+      "country": "Switzerland",
+      "university": "University of Basel",
+      "source": "EPA",
+      "id": "EPA-switzerland-university-of-basel"
+    },
+    {
+      "country": "Switzerland",
+      "university": "University of Bern",
+      "source": "EPA",
+      "id": "EPA-switzerland-university-of-bern"
+    },
+    {
+      "country": "Switzerland",
+      "university": "University of Geneva",
+      "source": "EPA",
+      "id": "EPA-switzerland-university-of-geneva"
+    },
+    {
+      "country": "Switzerland",
+      "university": "University of Zurich",
+      "source": "EPA",
+      "id": "EPA-switzerland-university-of-zurich"
+    }
+  ],
+  "gac": [
+    {
+      "country": "Australia",
+      "university": "Adelaide University",
+      "source": "GAC",
+      "id": "GAC-australia-adelaide-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Bond University",
+      "source": "GAC",
+      "id": "GAC-australia-bond-university"
+    },
+    {
+      "country": "Australia",
+      "university": "CQUniversity Australia",
+      "source": "GAC",
+      "id": "GAC-australia-cquniversity-australia"
+    },
+    {
+      "country": "Australia",
+      "university": "Charles Darwin University",
+      "source": "GAC",
+      "id": "GAC-australia-charles-darwin-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Charles Sturt University",
+      "source": "GAC",
+      "id": "GAC-australia-charles-sturt-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Curtin University / Curtin College",
+      "source": "GAC",
+      "id": "GAC-australia-curtin-university-curtin-college"
+    },
+    {
+      "country": "Australia",
+      "university": "Deakin University",
+      "source": "GAC",
+      "id": "GAC-australia-deakin-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Flinders University",
+      "source": "GAC",
+      "id": "GAC-australia-flinders-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Griffith University",
+      "source": "GAC",
+      "id": "GAC-australia-griffith-university"
+    },
+    {
+      "country": "Australia",
+      "university": "James Cook University",
+      "source": "GAC",
+      "id": "GAC-australia-james-cook-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Kaplan Business School",
+      "source": "GAC",
+      "id": "GAC-australia-kaplan-business-school"
+    },
+    {
+      "country": "Australia",
+      "university": "La Trobe University",
+      "source": "GAC",
+      "id": "GAC-australia-la-trobe-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Macquarie University",
+      "source": "GAC",
+      "id": "GAC-australia-macquarie-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Monash University",
+      "source": "GAC",
+      "id": "GAC-australia-monash-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Murdoch University",
+      "source": "GAC",
+      "id": "GAC-australia-murdoch-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Queensland University of Technology",
+      "source": "GAC",
+      "id": "GAC-australia-queensland-university-of-technology"
+    },
+    {
+      "country": "Australia",
+      "university": "RMIT University",
+      "source": "GAC",
+      "id": "GAC-australia-rmit-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Southern Cross University",
+      "source": "GAC",
+      "id": "GAC-australia-southern-cross-university"
+    },
+    {
+      "country": "Australia",
+      "university": "Swinburne University of Technology",
+      "source": "GAC",
+      "id": "GAC-australia-swinburne-university-of-technology"
+    },
+    {
+      "country": "Australia",
+      "university": "UNSW Sydney / UNSW College",
+      "source": "GAC",
+      "id": "GAC-australia-unsw-sydney-unsw-college"
+    },
+    {
+      "country": "Australia",
+      "university": "University of Adelaide",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-adelaide"
+    },
+    {
+      "country": "Australia",
+      "university": "University of Canberra",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-canberra"
+    },
+    {
+      "country": "Australia",
+      "university": "University of Newcastle",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-newcastle"
+    },
+    {
+      "country": "Australia",
+      "university": "University of Notre Dame Australia",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-notre-dame-australia"
+    },
+    {
+      "country": "Australia",
+      "university": "University of Queensland",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-queensland"
+    },
+    {
+      "country": "Australia",
+      "university": "University of South Australia",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-south-australia"
+    },
+    {
+      "country": "Australia",
+      "university": "University of Tasmania",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-tasmania"
+    },
+    {
+      "country": "Australia",
+      "university": "University of Technology Sydney",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-technology-sydney"
+    },
+    {
+      "country": "Australia",
+      "university": "University of Western Australia",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-western-australia"
+    },
+    {
+      "country": "Australia",
+      "university": "University of Wollongong",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-wollongong"
+    },
+    {
+      "country": "Australia",
+      "university": "University of the Sunshine Coast (Adelaide Campus / ECA)",
+      "source": "GAC",
+      "id": "GAC-australia-university-of-the-sunshine-coast-adelaide-campus-eca"
+    },
+    {
+      "country": "Australia",
+      "university": "Victoria University (Brisbane/Sydney/Melbourne)",
+      "source": "GAC",
+      "id": "GAC-australia-victoria-university-brisbane-sydney-melbourne"
+    },
+    {
+      "country": "Australia",
+      "university": "Western Sydney University",
+      "source": "GAC",
+      "id": "GAC-australia-western-sydney-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Acsenda School of Management",
+      "source": "GAC",
+      "id": "GAC-canada-acsenda-school-of-management"
+    },
+    {
+      "country": "Canada",
+      "university": "Adler University",
+      "source": "GAC",
+      "id": "GAC-canada-adler-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Alexander College",
+      "source": "GAC",
+      "id": "GAC-canada-alexander-college"
+    },
+    {
+      "country": "Canada",
+      "university": "Algonquin College",
+      "source": "GAC",
+      "id": "GAC-canada-algonquin-college"
+    },
+    {
+      "country": "Canada",
+      "university": "BCIT (British Columbia Institute of Technology)",
+      "source": "GAC",
+      "id": "GAC-canada-bcit-british-columbia-institute-of-technology"
+    },
+    {
+      "country": "Canada",
+      "university": "Brighton College, BC",
+      "source": "GAC",
+      "id": "GAC-canada-brighton-college-bc"
+    },
+    {
+      "country": "Canada",
+      "university": "Brock University, ON",
+      "source": "GAC",
+      "id": "GAC-canada-brock-university-on"
+    },
+    {
+      "country": "Canada",
+      "university": "Cambrian College",
+      "source": "GAC",
+      "id": "GAC-canada-cambrian-college"
+    },
+    {
+      "country": "Canada",
+      "university": "Cape Breton University",
+      "source": "GAC",
+      "id": "GAC-canada-cape-breton-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Capilano University",
+      "source": "GAC",
+      "id": "GAC-canada-capilano-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Carleton University, Ottawa",
+      "source": "GAC",
+      "id": "GAC-canada-carleton-university-ottawa"
+    },
+    {
+      "country": "Canada",
+      "university": "Centennial College, ON",
+      "source": "GAC",
+      "id": "GAC-canada-centennial-college-on"
+    },
+    {
+      "country": "Canada",
+      "university": "Concordia University of Edmonton",
+      "source": "GAC",
+      "id": "GAC-canada-concordia-university-of-edmonton"
+    },
+    {
+      "country": "Canada",
+      "university": "Conestoga College",
+      "source": "GAC",
+      "id": "GAC-canada-conestoga-college"
+    },
+    {
+      "country": "Canada",
+      "university": "Dalhousie University",
+      "source": "GAC",
+      "id": "GAC-canada-dalhousie-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Durham College",
+      "source": "GAC",
+      "id": "GAC-canada-durham-college"
+    },
+    {
+      "country": "Canada",
+      "university": "Fanshawe College",
+      "source": "GAC",
+      "id": "GAC-canada-fanshawe-college"
+    },
+    {
+      "country": "Canada",
+      "university": "George Brown Polytechnic",
+      "source": "GAC",
+      "id": "GAC-canada-george-brown-polytechnic"
+    },
+    {
+      "country": "Canada",
+      "university": "Humber Polytechnic",
+      "source": "GAC",
+      "id": "GAC-canada-humber-polytechnic"
+    },
+    {
+      "country": "Canada",
+      "university": "Kwantlen Polytechnic University",
+      "source": "GAC",
+      "id": "GAC-canada-kwantlen-polytechnic-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Lakehead University, ON",
+      "source": "GAC",
+      "id": "GAC-canada-lakehead-university-on"
+    },
+    {
+      "country": "Canada",
+      "university": "Lambton College",
+      "source": "GAC",
+      "id": "GAC-canada-lambton-college"
+    },
+    {
+      "country": "Canada",
+      "university": "Laurentian University",
+      "source": "GAC",
+      "id": "GAC-canada-laurentian-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Memorial University of Newfoundland (UG)",
+      "source": "GAC",
+      "id": "GAC-canada-memorial-university-of-newfoundland-ug"
+    },
+    {
+      "country": "Canada",
+      "university": "Mount Royal University",
+      "source": "GAC",
+      "id": "GAC-canada-mount-royal-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Mount Saint Vincent University",
+      "source": "GAC",
+      "id": "GAC-canada-mount-saint-vincent-university"
+    },
+    {
+      "country": "Canada",
+      "university": "NSCAD University",
+      "source": "GAC",
+      "id": "GAC-canada-nscad-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Niagara College",
+      "source": "GAC",
+      "id": "GAC-canada-niagara-college"
+    },
+    {
+      "country": "Canada",
+      "university": "Nipissing University",
+      "source": "GAC",
+      "id": "GAC-canada-nipissing-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Ontario Tech University",
+      "source": "GAC",
+      "id": "GAC-canada-ontario-tech-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Queen's University, Kingston (UG only)",
+      "source": "GAC",
+      "id": "GAC-canada-queen-s-university-kingston-ug-only"
+    },
+    {
+      "country": "Canada",
+      "university": "Royal Roads University",
+      "source": "GAC",
+      "id": "GAC-canada-royal-roads-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Saskatchewan Polytechnic",
+      "source": "GAC",
+      "id": "GAC-canada-saskatchewan-polytechnic"
+    },
+    {
+      "country": "Canada",
+      "university": "Selkirk College",
+      "source": "GAC",
+      "id": "GAC-canada-selkirk-college"
+    },
+    {
+      "country": "Canada",
+      "university": "Seneca Polytechnic",
+      "source": "GAC",
+      "id": "GAC-canada-seneca-polytechnic"
+    },
+    {
+      "country": "Canada",
+      "university": "Sheridan College",
+      "source": "GAC",
+      "id": "GAC-canada-sheridan-college"
+    },
+    {
+      "country": "Canada",
+      "university": "Simon Fraser / Fraser International College (FIC)",
+      "source": "GAC",
+      "id": "GAC-canada-simon-fraser-fraser-international-college-fic"
+    },
+    {
+      "country": "Canada",
+      "university": "St. Lawrence College",
+      "source": "GAC",
+      "id": "GAC-canada-st-lawrence-college"
+    },
+    {
+      "country": "Canada",
+      "university": "Taie International Institute, Ontario",
+      "source": "GAC",
+      "id": "GAC-canada-taie-international-institute-ontario"
+    },
+    {
+      "country": "Canada",
+      "university": "Thompson Rivers University",
+      "source": "GAC",
+      "id": "GAC-canada-thompson-rivers-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Toronto Metropolitan University / TMUIC",
+      "source": "GAC",
+      "id": "GAC-canada-toronto-metropolitan-university-tmuic"
+    },
+    {
+      "country": "Canada",
+      "university": "Trent University",
+      "source": "GAC",
+      "id": "GAC-canada-trent-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Trinity Western University (UG)",
+      "source": "GAC",
+      "id": "GAC-canada-trinity-western-university-ug"
+    },
+    {
+      "country": "Canada",
+      "university": "University Canada West, BC",
+      "source": "GAC",
+      "id": "GAC-canada-university-canada-west-bc"
+    },
+    {
+      "country": "Canada",
+      "university": "University of Alberta",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-alberta"
+    },
+    {
+      "country": "Canada",
+      "university": "University of Guelph (UG only)",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-guelph-ug-only"
+    },
+    {
+      "country": "Canada",
+      "university": "University of Lethbridge, AB",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-lethbridge-ab"
+    },
+    {
+      "country": "Canada",
+      "university": "University of Manitoba",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-manitoba"
+    },
+    {
+      "country": "Canada",
+      "university": "University of Niagara Falls Canada",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-niagara-falls-canada"
+    },
+    {
+      "country": "Canada",
+      "university": "University of Northern British Columbia",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-northern-british-columbia"
+    },
+    {
+      "country": "Canada",
+      "university": "University of Ottawa, ON",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-ottawa-on"
+    },
+    {
+      "country": "Canada",
+      "university": "University of Victoria (Kaplan)",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-victoria-kaplan"
+    },
+    {
+      "country": "Canada",
+      "university": "University of Waterloo, ON",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-waterloo-on"
+    },
+    {
+      "country": "Canada",
+      "university": "University of Winnipeg",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-winnipeg"
+    },
+    {
+      "country": "Canada",
+      "university": "University of the Fraser Valley, BC",
+      "source": "GAC",
+      "id": "GAC-canada-university-of-the-fraser-valley-bc"
+    },
+    {
+      "country": "Canada",
+      "university": "Urban International School, Toronto",
+      "source": "GAC",
+      "id": "GAC-canada-urban-international-school-toronto"
+    },
+    {
+      "country": "Canada",
+      "university": "Vancouver Film School, BC",
+      "source": "GAC",
+      "id": "GAC-canada-vancouver-film-school-bc"
+    },
+    {
+      "country": "Canada",
+      "university": "Western University",
+      "source": "GAC",
+      "id": "GAC-canada-western-university"
+    },
+    {
+      "country": "Canada",
+      "university": "Wilfrid Laurier University, ON",
+      "source": "GAC",
+      "id": "GAC-canada-wilfrid-laurier-university-on"
+    },
+    {
+      "country": "China",
+      "university": "City University of Macau, Taipa",
+      "source": "GAC",
+      "id": "GAC-china-city-university-of-macau-taipa"
+    },
+    {
+      "country": "China",
+      "university": "Skema Business School, Suzhou",
+      "source": "GAC",
+      "id": "GAC-china-skema-business-school-suzhou"
+    },
+    {
+      "country": "China",
+      "university": "United International College, Zhuhai (UG only)",
+      "source": "GAC",
+      "id": "GAC-china-united-international-college-zhuhai-ug-only"
+    },
+    {
+      "country": "China",
+      "university": "University of Nottingham Ningbo China",
+      "source": "GAC",
+      "id": "GAC-china-university-of-nottingham-ningbo-china"
+    },
+    {
+      "country": "Germany",
+      "university": "Arden University, Berlin",
+      "source": "GAC",
+      "id": "GAC-germany-arden-university-berlin"
+    },
+    {
+      "country": "Germany",
+      "university": "Berlin International College, Berlin",
+      "source": "GAC",
+      "id": "GAC-germany-berlin-international-college-berlin"
+    },
+    {
+      "country": "Germany",
+      "university": "Berlin School of Business and Innovation",
+      "source": "GAC",
+      "id": "GAC-germany-berlin-school-of-business-and-innovation"
+    },
+    {
+      "country": "Germany",
+      "university": "CBS University of Applied Science, Cologne",
+      "source": "GAC",
+      "id": "GAC-germany-cbs-university-of-applied-science-cologne"
+    },
+    {
+      "country": "Germany",
+      "university": "Constructor University, Bremen",
+      "source": "GAC",
+      "id": "GAC-germany-constructor-university-bremen"
+    },
+    {
+      "country": "Germany",
+      "university": "EBS University, Wiesbaden",
+      "source": "GAC",
+      "id": "GAC-germany-ebs-university-wiesbaden"
+    },
+    {
+      "country": "Germany",
+      "university": "EIIE EURASIA Institute, Berlin",
+      "source": "GAC",
+      "id": "GAC-germany-eiie-eurasia-institute-berlin"
+    },
+    {
+      "country": "Germany",
+      "university": "EU Business School, Munich",
+      "source": "GAC",
+      "id": "GAC-germany-eu-business-school-munich"
+    },
+    {
+      "country": "Germany",
+      "university": "FH Aachen Freshman Program, Julich",
+      "source": "GAC",
+      "id": "GAC-germany-fh-aachen-freshman-program-julich"
+    },
+    {
+      "country": "Germany",
+      "university": "FOM University of Applied Sciences, Essen",
+      "source": "GAC",
+      "id": "GAC-germany-fom-university-of-applied-sciences-essen"
+    },
+    {
+      "country": "Germany",
+      "university": "Fachhochschule des Mittelstands (FHM), Bielefeld",
+      "source": "GAC",
+      "id": "GAC-germany-fachhochschule-des-mittelstands-fhm-bielefeld"
+    },
+    {
+      "country": "Germany",
+      "university": "Fresenius University of Applied Sciences, Idstein",
+      "source": "GAC",
+      "id": "GAC-germany-fresenius-university-of-applied-sciences-idstein"
+    },
+    {
+      "country": "Germany",
+      "university": "GISMA University of Applied Sciences",
+      "source": "GAC",
+      "id": "GAC-germany-gisma-university-of-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "German International College, Bedburg-Hau",
+      "source": "GAC",
+      "id": "GAC-germany-german-international-college-bedburg-hau"
+    },
+    {
+      "country": "Germany",
+      "university": "ICN Business School, Berlin Campus",
+      "source": "GAC",
+      "id": "GAC-germany-icn-business-school-berlin-campus"
+    },
+    {
+      "country": "Germany",
+      "university": "ISM International School of Management, Dortmund",
+      "source": "GAC",
+      "id": "GAC-germany-ism-international-school-of-management-dortmund"
+    },
+    {
+      "country": "Germany",
+      "university": "Karlshochschule International University, Karlsruhe",
+      "source": "GAC",
+      "id": "GAC-germany-karlshochschule-international-university-karlsruhe"
+    },
+    {
+      "country": "Germany",
+      "university": "Lancaster University Leipzig (Navitas)",
+      "source": "GAC",
+      "id": "GAC-germany-lancaster-university-leipzig-navitas"
+    },
+    {
+      "country": "Germany",
+      "university": "Macromedia University of Applied Sciences, Munich",
+      "source": "GAC",
+      "id": "GAC-germany-macromedia-university-of-applied-sciences-munich"
+    },
+    {
+      "country": "Germany",
+      "university": "Media Design University of Applied Sciences, Berlin",
+      "source": "GAC",
+      "id": "GAC-germany-media-design-university-of-applied-sciences-berlin"
+    },
+    {
+      "country": "Germany",
+      "university": "Munich Business School, Munich",
+      "source": "GAC",
+      "id": "GAC-germany-munich-business-school-munich"
+    },
+    {
+      "country": "Germany",
+      "university": "Munich University of Digital Technology & Applied Science",
+      "source": "GAC",
+      "id": "GAC-germany-munich-university-of-digital-technology-applied-science"
+    },
+    {
+      "country": "Germany",
+      "university": "Navitas - SRH International College (SRHIC)",
+      "source": "GAC",
+      "id": "GAC-germany-navitas-srh-international-college-srhic"
+    },
+    {
+      "country": "Germany",
+      "university": "New European College, Munich",
+      "source": "GAC",
+      "id": "GAC-germany-new-european-college-munich"
+    },
+    {
+      "country": "Germany",
+      "university": "Northern Institute of Technology Management (NIT), Hamburg",
+      "source": "GAC",
+      "id": "GAC-germany-northern-institute-of-technology-management-nit-hamburg"
+    },
+    {
+      "country": "Germany",
+      "university": "PFH \u2013 Private University of Applied Sciences, G\u00f6ttingen",
+      "source": "GAC",
+      "id": "GAC-germany-pfh-private-university-of-applied-sciences-g-ttingen"
+    },
+    {
+      "country": "Germany",
+      "university": "SRH Fernhochschule, Riedlingen",
+      "source": "GAC",
+      "id": "GAC-germany-srh-fernhochschule-riedlingen"
+    },
+    {
+      "country": "Germany",
+      "university": "SRH University",
+      "source": "GAC",
+      "id": "GAC-germany-srh-university"
+    },
+    {
+      "country": "Germany",
+      "university": "Schiller International University, Heidelberg",
+      "source": "GAC",
+      "id": "GAC-germany-schiller-international-university-heidelberg"
+    },
+    {
+      "country": "Germany",
+      "university": "Steinbeis University, Berlin (PG only)",
+      "source": "GAC",
+      "id": "GAC-germany-steinbeis-university-berlin-pg-only"
+    },
+    {
+      "country": "Germany",
+      "university": "University Targu Mures Medical (UMCH), Hamburg",
+      "source": "GAC",
+      "id": "GAC-germany-university-targu-mures-medical-umch-hamburg"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Economics for Management (HDWM), Mannheim",
+      "source": "GAC",
+      "id": "GAC-germany-university-of-economics-for-management-hdwm-mannheim"
+    },
+    {
+      "country": "Germany",
+      "university": "University of Europe for Applied Sciences",
+      "source": "GAC",
+      "id": "GAC-germany-university-of-europe-for-applied-sciences"
+    },
+    {
+      "country": "Germany",
+      "university": "Whitecliffe University of Applied Sciences, Berlin",
+      "source": "GAC",
+      "id": "GAC-germany-whitecliffe-university-of-applied-sciences-berlin"
+    },
+    {
+      "country": "Germany",
+      "university": "accadis University of Applied Sciences, Bad Homburg",
+      "source": "GAC",
+      "id": "GAC-germany-accadis-university-of-applied-sciences-bad-homburg"
+    },
+    {
+      "country": "Ireland",
+      "university": "American College Dublin",
+      "source": "GAC",
+      "id": "GAC-ireland-american-college-dublin"
+    },
+    {
+      "country": "Ireland",
+      "university": "Atlantic Technological University (ATU)",
+      "source": "GAC",
+      "id": "GAC-ireland-atlantic-technological-university-atu"
+    },
+    {
+      "country": "Ireland",
+      "university": "BIMM University, Dublin",
+      "source": "GAC",
+      "id": "GAC-ireland-bimm-university-dublin"
+    },
+    {
+      "country": "Ireland",
+      "university": "Dublin Business School",
+      "source": "GAC",
+      "id": "GAC-ireland-dublin-business-school"
+    },
+    {
+      "country": "Ireland",
+      "university": "Dublin City University",
+      "source": "GAC",
+      "id": "GAC-ireland-dublin-city-university"
+    },
+    {
+      "country": "Ireland",
+      "university": "Dublin International Foundation College (DIFC)",
+      "source": "GAC",
+      "id": "GAC-ireland-dublin-international-foundation-college-difc"
+    },
+    {
+      "country": "Ireland",
+      "university": "Dundalk Institute of Technology",
+      "source": "GAC",
+      "id": "GAC-ireland-dundalk-institute-of-technology"
+    },
+    {
+      "country": "Ireland",
+      "university": "Galway Business School",
+      "source": "GAC",
+      "id": "GAC-ireland-galway-business-school"
+    },
+    {
+      "country": "Ireland",
+      "university": "Griffith College (Dublin/Limerick/Cork)",
+      "source": "GAC",
+      "id": "GAC-ireland-griffith-college-dublin-limerick-cork"
+    },
+    {
+      "country": "Ireland",
+      "university": "Holmes Institute of Dublin",
+      "source": "GAC",
+      "id": "GAC-ireland-holmes-institute-of-dublin"
+    },
+    {
+      "country": "Ireland",
+      "university": "IBAT College Dublin",
+      "source": "GAC",
+      "id": "GAC-ireland-ibat-college-dublin"
+    },
+    {
+      "country": "Ireland",
+      "university": "Independent College, Dublin",
+      "source": "GAC",
+      "id": "GAC-ireland-independent-college-dublin"
+    },
+    {
+      "country": "Ireland",
+      "university": "Irish American University - American College Dublin",
+      "source": "GAC",
+      "id": "GAC-ireland-irish-american-university-american-college-dublin"
+    },
+    {
+      "country": "Ireland",
+      "university": "Maynooth University",
+      "source": "GAC",
+      "id": "GAC-ireland-maynooth-university"
+    },
+    {
+      "country": "Ireland",
+      "university": "Munster Technological University",
+      "source": "GAC",
+      "id": "GAC-ireland-munster-technological-university"
+    },
+    {
+      "country": "Ireland",
+      "university": "National College of Ireland",
+      "source": "GAC",
+      "id": "GAC-ireland-national-college-of-ireland"
+    },
+    {
+      "country": "Ireland",
+      "university": "RCSI University of Medicine and Health Sciences",
+      "source": "GAC",
+      "id": "GAC-ireland-rcsi-university-of-medicine-and-health-sciences"
+    },
+    {
+      "country": "Ireland",
+      "university": "Shannon College of Hotel Management",
+      "source": "GAC",
+      "id": "GAC-ireland-shannon-college-of-hotel-management"
+    },
+    {
+      "country": "Ireland",
+      "university": "South East Technological University (SETU)",
+      "source": "GAC",
+      "id": "GAC-ireland-south-east-technological-university-setu"
+    },
+    {
+      "country": "Ireland",
+      "university": "Technological University Dublin (TU Dublin)",
+      "source": "GAC",
+      "id": "GAC-ireland-technological-university-dublin-tu-dublin"
+    },
+    {
+      "country": "Ireland",
+      "university": "Technological University of the Shannon (TUS)",
+      "source": "GAC",
+      "id": "GAC-ireland-technological-university-of-the-shannon-tus"
+    },
+    {
+      "country": "Ireland",
+      "university": "Trinity College Dublin",
+      "source": "GAC",
+      "id": "GAC-ireland-trinity-college-dublin"
+    },
+    {
+      "country": "Ireland",
+      "university": "University College Cork (UCC)",
+      "source": "GAC",
+      "id": "GAC-ireland-university-college-cork-ucc"
+    },
+    {
+      "country": "Ireland",
+      "university": "University College Dublin (UCD)",
+      "source": "GAC",
+      "id": "GAC-ireland-university-college-dublin-ucd"
+    },
+    {
+      "country": "Ireland",
+      "university": "University of Galway",
+      "source": "GAC",
+      "id": "GAC-ireland-university-of-galway"
+    },
+    {
+      "country": "Ireland",
+      "university": "University of Limerick",
+      "source": "GAC",
+      "id": "GAC-ireland-university-of-limerick"
+    },
+    {
+      "country": "Japan",
+      "university": "International College of Liberal Arts, Kofu",
+      "source": "GAC",
+      "id": "GAC-japan-international-college-of-liberal-arts-kofu"
+    },
+    {
+      "country": "Japan",
+      "university": "Kudan Institute of Japanese Language & Culture, Tokyo",
+      "source": "GAC",
+      "id": "GAC-japan-kudan-institute-of-japanese-language-culture-tokyo"
+    },
+    {
+      "country": "Japan",
+      "university": "Lakeland University, Tokyo",
+      "source": "GAC",
+      "id": "GAC-japan-lakeland-university-tokyo"
+    },
+    {
+      "country": "Japan",
+      "university": "Tokyo International University, Kawagoe",
+      "source": "GAC",
+      "id": "GAC-japan-tokyo-international-university-kawagoe"
+    },
+    {
+      "country": "Japan",
+      "university": "University of Idaho, Hiroshima Campus (BS Electrical Eng only)",
+      "source": "GAC",
+      "id": "GAC-japan-university-of-idaho-hiroshima-campus-bs-electrical-eng-only"
+    },
+    {
+      "country": "New Zealand",
+      "university": "ATMC, Auckland",
+      "source": "GAC",
+      "id": "GAC-new-zealand-atmc-auckland"
+    },
+    {
+      "country": "New Zealand",
+      "university": "AcademyEX Education",
+      "source": "GAC",
+      "id": "GAC-new-zealand-academyex-education"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Ara Institute of Canterbury",
+      "source": "GAC",
+      "id": "GAC-new-zealand-ara-institute-of-canterbury"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Auckland Institute of Studies",
+      "source": "GAC",
+      "id": "GAC-new-zealand-auckland-institute-of-studies"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Auckland University of Technology (AUT)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-auckland-university-of-technology-aut"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Christchurch College of English (CCELI)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-christchurch-college-of-english-cceli"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Eastern Institute of Technology (EIT)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-eastern-institute-of-technology-eit"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Future Skills Academy",
+      "source": "GAC",
+      "id": "GAC-new-zealand-future-skills-academy"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Health Care Academy of New Zealand",
+      "source": "GAC",
+      "id": "GAC-new-zealand-health-care-academy-of-new-zealand"
+    },
+    {
+      "country": "New Zealand",
+      "university": "ICL Graduate Business School",
+      "source": "GAC",
+      "id": "GAC-new-zealand-icl-graduate-business-school"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Kaplan / Massey University College (MUC)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-kaplan-massey-university-college-muc"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Le Cordon Bleu, Wellington",
+      "source": "GAC",
+      "id": "GAC-new-zealand-le-cordon-bleu-wellington"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Lincoln University - NZ",
+      "source": "GAC",
+      "id": "GAC-new-zealand-lincoln-university-nz"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Manukau Institute of Technology (MIT) / Unitec",
+      "source": "GAC",
+      "id": "GAC-new-zealand-manukau-institute-of-technology-mit-unitec"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Massey University",
+      "source": "GAC",
+      "id": "GAC-new-zealand-massey-university"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Nelson Marlborough Institute of Technology (NMIT)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-nelson-marlborough-institute-of-technology-nmit"
+    },
+    {
+      "country": "New Zealand",
+      "university": "New Zealand Management Academies (NZMA)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-new-zealand-management-academies-nzma"
+    },
+    {
+      "country": "New Zealand",
+      "university": "New Zealand Tertiary College (NZTC)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-new-zealand-tertiary-college-nztc"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Northtec (Northland Polytechnic)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-northtec-northland-polytechnic"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Otago Polytechnic",
+      "source": "GAC",
+      "id": "GAC-new-zealand-otago-polytechnic"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Pacific International Hotel Management School (PIHMS)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-pacific-international-hotel-management-school-pihms"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Southern Institute of Technology",
+      "source": "GAC",
+      "id": "GAC-new-zealand-southern-institute-of-technology"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Toi Ohomai Institute of Technology",
+      "source": "GAC",
+      "id": "GAC-new-zealand-toi-ohomai-institute-of-technology"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Universal College of Learning (UCOL)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-universal-college-of-learning-ucol"
+    },
+    {
+      "country": "New Zealand",
+      "university": "University of Auckland",
+      "source": "GAC",
+      "id": "GAC-new-zealand-university-of-auckland"
+    },
+    {
+      "country": "New Zealand",
+      "university": "University of Canterbury",
+      "source": "GAC",
+      "id": "GAC-new-zealand-university-of-canterbury"
+    },
+    {
+      "country": "New Zealand",
+      "university": "University of Otago",
+      "source": "GAC",
+      "id": "GAC-new-zealand-university-of-otago"
+    },
+    {
+      "country": "New Zealand",
+      "university": "University of Waikato",
+      "source": "GAC",
+      "id": "GAC-new-zealand-university-of-waikato"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Victoria University of Wellington",
+      "source": "GAC",
+      "id": "GAC-new-zealand-victoria-university-of-wellington"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Waikato Institute of Technology (Wintec)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-waikato-institute-of-technology-wintec"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Western Institute of Technology Taranaki (WITT)",
+      "source": "GAC",
+      "id": "GAC-new-zealand-western-institute-of-technology-taranaki-witt"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Whitecliffe College of Arts and Design",
+      "source": "GAC",
+      "id": "GAC-new-zealand-whitecliffe-college-of-arts-and-design"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Whitireia / Weltec",
+      "source": "GAC",
+      "id": "GAC-new-zealand-whitireia-weltec"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Worldwide School of English, Auckland",
+      "source": "GAC",
+      "id": "GAC-new-zealand-worldwide-school-of-english-auckland"
+    },
+    {
+      "country": "New Zealand",
+      "university": "Yoobee College of Creative Innovation",
+      "source": "GAC",
+      "id": "GAC-new-zealand-yoobee-college-of-creative-innovation"
+    },
+    {
+      "country": "Singapore",
+      "university": "AT-Sunrice Globalchef Academy",
+      "source": "GAC",
+      "id": "GAC-singapore-at-sunrice-globalchef-academy"
+    },
+    {
+      "country": "Singapore",
+      "university": "Academies Australasia College",
+      "source": "GAC",
+      "id": "GAC-singapore-academies-australasia-college"
+    },
+    {
+      "country": "Singapore",
+      "university": "Amity Global Institute, National Library Building",
+      "source": "GAC",
+      "id": "GAC-singapore-amity-global-institute-national-library-building"
+    },
+    {
+      "country": "Singapore",
+      "university": "Curtin Singapore (Navitas)",
+      "source": "GAC",
+      "id": "GAC-singapore-curtin-singapore-navitas"
+    },
+    {
+      "country": "Singapore",
+      "university": "ERC Institute",
+      "source": "GAC",
+      "id": "GAC-singapore-erc-institute"
+    },
+    {
+      "country": "Singapore",
+      "university": "East Asia Institute of Management",
+      "source": "GAC",
+      "id": "GAC-singapore-east-asia-institute-of-management"
+    },
+    {
+      "country": "Singapore",
+      "university": "James Cook University (JCU), Singapore",
+      "source": "GAC",
+      "id": "GAC-singapore-james-cook-university-jcu-singapore"
+    },
+    {
+      "country": "Singapore",
+      "university": "Kaplan Higher Education Academy (KHEA)",
+      "source": "GAC",
+      "id": "GAC-singapore-kaplan-higher-education-academy-khea"
+    },
+    {
+      "country": "Singapore",
+      "university": "London School of Business and Finance, Singapore",
+      "source": "GAC",
+      "id": "GAC-singapore-london-school-of-business-and-finance-singapore"
+    },
+    {
+      "country": "Singapore",
+      "university": "Management Development Institute of Singapore (MDIS)",
+      "source": "GAC",
+      "id": "GAC-singapore-management-development-institute-of-singapore-mdis"
+    },
+    {
+      "country": "Singapore",
+      "university": "Nanyang Institute of Management",
+      "source": "GAC",
+      "id": "GAC-singapore-nanyang-institute-of-management"
+    },
+    {
+      "country": "Singapore",
+      "university": "PSB Academy",
+      "source": "GAC",
+      "id": "GAC-singapore-psb-academy"
+    },
+    {
+      "country": "Singapore",
+      "university": "Raffles College of Higher Education",
+      "source": "GAC",
+      "id": "GAC-singapore-raffles-college-of-higher-education"
+    },
+    {
+      "country": "Singapore",
+      "university": "S P Jain School of Global Management, Singapore",
+      "source": "GAC",
+      "id": "GAC-singapore-s-p-jain-school-of-global-management-singapore"
+    },
+    {
+      "country": "Singapore",
+      "university": "SIM Global Education",
+      "source": "GAC",
+      "id": "GAC-singapore-sim-global-education"
+    },
+    {
+      "country": "Singapore",
+      "university": "Singapore University of Technology and Design (SUTD)",
+      "source": "GAC",
+      "id": "GAC-singapore-singapore-university-of-technology-and-design-sutd"
+    },
+    {
+      "country": "Singapore",
+      "university": "Technical University of Munich Asia (PG only)",
+      "source": "GAC",
+      "id": "GAC-singapore-technical-university-of-munich-asia-pg-only"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Bella Vista Institute of Higher Education",
+      "source": "GAC",
+      "id": "GAC-switzerland-bella-vista-institute-of-higher-education"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Business & Hotel Management School (BHMS), Lucerne",
+      "source": "GAC",
+      "id": "GAC-switzerland-business-hotel-management-school-bhms-lucerne"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Cesar Ritz, Montreux",
+      "source": "GAC",
+      "id": "GAC-switzerland-cesar-ritz-montreux"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Culinary Arts Academy (CAA)",
+      "source": "GAC",
+      "id": "GAC-switzerland-culinary-arts-academy-caa"
+    },
+    {
+      "country": "Switzerland",
+      "university": "EHL Hospitality Business School, Lausanne",
+      "source": "GAC",
+      "id": "GAC-switzerland-ehl-hospitality-business-school-lausanne"
+    },
+    {
+      "country": "Switzerland",
+      "university": "EU Business School, Montreux & Geneva",
+      "source": "GAC",
+      "id": "GAC-switzerland-eu-business-school-montreux-geneva"
+    },
+    {
+      "country": "Switzerland",
+      "university": "GLION Institute of Higher Education, Montreux",
+      "source": "GAC",
+      "id": "GAC-switzerland-glion-institute-of-higher-education-montreux"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Geneva Business School",
+      "source": "GAC",
+      "id": "GAC-switzerland-geneva-business-school"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Helvetic Business School, Vevey",
+      "source": "GAC",
+      "id": "GAC-switzerland-helvetic-business-school-vevey"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Hotel & Tourism Management Institute (HTMi), Lucerne",
+      "source": "GAC",
+      "id": "GAC-switzerland-hotel-tourism-management-institute-htmi-lucerne"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Hotel Institute Montreux (HIM)",
+      "source": "GAC",
+      "id": "GAC-switzerland-hotel-institute-montreux-him"
+    },
+    {
+      "country": "Switzerland",
+      "university": "International Management Institute (IMI), Luzern",
+      "source": "GAC",
+      "id": "GAC-switzerland-international-management-institute-imi-luzern"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Les Roches, Montana",
+      "source": "GAC",
+      "id": "GAC-switzerland-les-roches-montana"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Swiss Hotel Management School (SHMS)",
+      "source": "GAC",
+      "id": "GAC-switzerland-swiss-hotel-management-school-shms"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Swiss School of Business and Management (SSBM), Geneva",
+      "source": "GAC",
+      "id": "GAC-switzerland-swiss-school-of-business-and-management-ssbm-geneva"
+    },
+    {
+      "country": "Switzerland",
+      "university": "University of Zurich (PG only)",
+      "source": "GAC",
+      "id": "GAC-switzerland-university-of-zurich-pg-only"
+    },
+    {
+      "country": "Switzerland",
+      "university": "Webster University Geneva",
+      "source": "GAC",
+      "id": "GAC-switzerland-webster-university-geneva"
+    },
+    {
+      "country": "UAE",
+      "university": "Abu Dhabi University",
+      "source": "GAC",
+      "id": "GAC-uae-abu-dhabi-university"
+    },
+    {
+      "country": "UAE",
+      "university": "Ajman University",
+      "source": "GAC",
+      "id": "GAC-uae-ajman-university"
+    },
+    {
+      "country": "UAE",
+      "university": "American University in Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-american-university-in-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "American University in the Emirates, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-american-university-in-the-emirates-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "American University of Ras Al Khaimah (AURAK)",
+      "source": "GAC",
+      "id": "GAC-uae-american-university-of-ras-al-khaimah-aurak"
+    },
+    {
+      "country": "UAE",
+      "university": "Amity University - UAE",
+      "source": "GAC",
+      "id": "GAC-uae-amity-university-uae"
+    },
+    {
+      "country": "UAE",
+      "university": "BITS Pilani, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-bits-pilani-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Bath Spa University, RAK",
+      "source": "GAC",
+      "id": "GAC-uae-bath-spa-university-rak"
+    },
+    {
+      "country": "UAE",
+      "university": "Britts Imperial University College, Sharjah",
+      "source": "GAC",
+      "id": "GAC-uae-britts-imperial-university-college-sharjah"
+    },
+    {
+      "country": "UAE",
+      "university": "Canadian University Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-canadian-university-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "City University Ajman",
+      "source": "GAC",
+      "id": "GAC-uae-city-university-ajman"
+    },
+    {
+      "country": "UAE",
+      "university": "Curtin University, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-curtin-university-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "De Montfort University, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-de-montfort-university-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Dubai Institute of Design and Innovation (DIDI)",
+      "source": "GAC",
+      "id": "GAC-uae-dubai-institute-of-design-and-innovation-didi"
+    },
+    {
+      "country": "UAE",
+      "university": "EM Normandie Business School, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-em-normandie-business-school-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "George Brown Polytechnic, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-george-brown-polytechnic-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Global Business Studies (GBS), Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-global-business-studies-gbs-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Heriot-Watt University, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-heriot-watt-university-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Hult International Business School, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-hult-international-business-school-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Istituto Marangoni, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-istituto-marangoni-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Manipal Education (MENA), Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-manipal-education-mena-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Middlesex University, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-middlesex-university-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Murdoch University, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-murdoch-university-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Northwood University, RAK",
+      "source": "GAC",
+      "id": "GAC-uae-northwood-university-rak"
+    },
+    {
+      "country": "UAE",
+      "university": "Regent Middle East / Regent College, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-regent-middle-east-regent-college-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Rochester Institute of Technology Dubai (RIT Dubai)",
+      "source": "GAC",
+      "id": "GAC-uae-rochester-institute-of-technology-dubai-rit-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "SAE University College, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-sae-university-college-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "SKEMA Business School, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-skema-business-school-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Symbiosis International University, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-symbiosis-international-university-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "The Woolwich Institute, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-the-woolwich-institute-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "UK College of Business and Computing, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-uk-college-of-business-and-computing-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "University of Birmingham, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-university-of-birmingham-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "University of Bolton / University of Greater Manchester, RAK",
+      "source": "GAC",
+      "id": "GAC-uae-university-of-bolton-university-of-greater-manchester-rak"
+    },
+    {
+      "country": "UAE",
+      "university": "University of Europe for Applied Sciences, Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-university-of-europe-for-applied-sciences-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "University of Hertfordshire / Success Point College",
+      "source": "GAC",
+      "id": "GAC-uae-university-of-hertfordshire-success-point-college"
+    },
+    {
+      "country": "UAE",
+      "university": "University of Stirling, RAK",
+      "source": "GAC",
+      "id": "GAC-uae-university-of-stirling-rak"
+    },
+    {
+      "country": "UAE",
+      "university": "University of West London, UAE",
+      "source": "GAC",
+      "id": "GAC-uae-university-of-west-london-uae"
+    },
+    {
+      "country": "UAE",
+      "university": "University of Wollongong in Dubai",
+      "source": "GAC",
+      "id": "GAC-uae-university-of-wollongong-in-dubai"
+    },
+    {
+      "country": "UAE",
+      "university": "Whitecliffe College, RAK",
+      "source": "GAC",
+      "id": "GAC-uae-whitecliffe-college-rak"
+    },
+    {
+      "country": "USA",
+      "university": "Adelphi University",
+      "source": "GAC",
+      "id": "GAC-usa-adelphi-university"
+    },
+    {
+      "country": "USA",
+      "university": "American University",
+      "source": "GAC",
+      "id": "GAC-usa-american-university"
+    },
+    {
+      "country": "USA",
+      "university": "Arizona State University",
+      "source": "GAC",
+      "id": "GAC-usa-arizona-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "Auburn University",
+      "source": "GAC",
+      "id": "GAC-usa-auburn-university"
+    },
+    {
+      "country": "USA",
+      "university": "Care Hope College",
+      "source": "GAC",
+      "id": "GAC-usa-care-hope-college"
+    },
+    {
+      "country": "USA",
+      "university": "Charleston Southern University",
+      "source": "GAC",
+      "id": "GAC-usa-charleston-southern-university"
+    },
+    {
+      "country": "USA",
+      "university": "Cleveland State University",
+      "source": "GAC",
+      "id": "GAC-usa-cleveland-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "Colorado State University",
+      "source": "GAC",
+      "id": "GAC-usa-colorado-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "Concordia University, Chicago",
+      "source": "GAC",
+      "id": "GAC-usa-concordia-university-chicago"
+    },
+    {
+      "country": "USA",
+      "university": "Coventry University USA / Hult Intl Business School USA",
+      "source": "GAC",
+      "id": "GAC-usa-coventry-university-usa-hult-intl-business-school-usa"
+    },
+    {
+      "country": "USA",
+      "university": "Drew University",
+      "source": "GAC",
+      "id": "GAC-usa-drew-university"
+    },
+    {
+      "country": "USA",
+      "university": "Drexel University",
+      "source": "GAC",
+      "id": "GAC-usa-drexel-university"
+    },
+    {
+      "country": "USA",
+      "university": "Duquesne University",
+      "source": "GAC",
+      "id": "GAC-usa-duquesne-university"
+    },
+    {
+      "country": "USA",
+      "university": "Florida International University",
+      "source": "GAC",
+      "id": "GAC-usa-florida-international-university"
+    },
+    {
+      "country": "USA",
+      "university": "Gonzaga University",
+      "source": "GAC",
+      "id": "GAC-usa-gonzaga-university"
+    },
+    {
+      "country": "USA",
+      "university": "Hofstra University",
+      "source": "GAC",
+      "id": "GAC-usa-hofstra-university"
+    },
+    {
+      "country": "USA",
+      "university": "Illinois Institute of Technology",
+      "source": "GAC",
+      "id": "GAC-usa-illinois-institute-of-technology"
+    },
+    {
+      "country": "USA",
+      "university": "Illinois State University",
+      "source": "GAC",
+      "id": "GAC-usa-illinois-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "Johns Hopkins University (PG only)",
+      "source": "GAC",
+      "id": "GAC-usa-johns-hopkins-university-pg-only"
+    },
+    {
+      "country": "USA",
+      "university": "LIM College",
+      "source": "GAC",
+      "id": "GAC-usa-lim-college"
+    },
+    {
+      "country": "USA",
+      "university": "Lehigh University (PG only)",
+      "source": "GAC",
+      "id": "GAC-usa-lehigh-university-pg-only"
+    },
+    {
+      "country": "USA",
+      "university": "Louisiana State University",
+      "source": "GAC",
+      "id": "GAC-usa-louisiana-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "Marshall University",
+      "source": "GAC",
+      "id": "GAC-usa-marshall-university"
+    },
+    {
+      "country": "USA",
+      "university": "Mercy College",
+      "source": "GAC",
+      "id": "GAC-usa-mercy-college"
+    },
+    {
+      "country": "USA",
+      "university": "Miami University, Oxford OH",
+      "source": "GAC",
+      "id": "GAC-usa-miami-university-oxford-oh"
+    },
+    {
+      "country": "USA",
+      "university": "Montclair State University",
+      "source": "GAC",
+      "id": "GAC-usa-montclair-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "Murray State University",
+      "source": "GAC",
+      "id": "GAC-usa-murray-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "New England College",
+      "source": "GAC",
+      "id": "GAC-usa-new-england-college"
+    },
+    {
+      "country": "USA",
+      "university": "Northeastern University",
+      "source": "GAC",
+      "id": "GAC-usa-northeastern-university"
+    },
+    {
+      "country": "USA",
+      "university": "Northwest Missouri State University",
+      "source": "GAC",
+      "id": "GAC-usa-northwest-missouri-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "Ohio University (UG only)",
+      "source": "GAC",
+      "id": "GAC-usa-ohio-university-ug-only"
+    },
+    {
+      "country": "USA",
+      "university": "Oregon State University",
+      "source": "GAC",
+      "id": "GAC-usa-oregon-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "Schiller University - USA",
+      "source": "GAC",
+      "id": "GAC-usa-schiller-university-usa"
+    },
+    {
+      "country": "USA",
+      "university": "Seattle University",
+      "source": "GAC",
+      "id": "GAC-usa-seattle-university"
+    },
+    {
+      "country": "USA",
+      "university": "Southern Methodist University (PG only)",
+      "source": "GAC",
+      "id": "GAC-usa-southern-methodist-university-pg-only"
+    },
+    {
+      "country": "USA",
+      "university": "Suffolk University",
+      "source": "GAC",
+      "id": "GAC-usa-suffolk-university"
+    },
+    {
+      "country": "USA",
+      "university": "Tennessee Tech University",
+      "source": "GAC",
+      "id": "GAC-usa-tennessee-tech-university"
+    },
+    {
+      "country": "USA",
+      "university": "Texas State University",
+      "source": "GAC",
+      "id": "GAC-usa-texas-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "Thomas Jefferson University",
+      "source": "GAC",
+      "id": "GAC-usa-thomas-jefferson-university"
+    },
+    {
+      "country": "USA",
+      "university": "University of Alabama Tuscaloosa",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-alabama-tuscaloosa"
+    },
+    {
+      "country": "USA",
+      "university": "University of Cincinnati",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-cincinnati"
+    },
+    {
+      "country": "USA",
+      "university": "University of Dayton",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-dayton"
+    },
+    {
+      "country": "USA",
+      "university": "University of Delaware (UG only)",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-delaware-ug-only"
+    },
+    {
+      "country": "USA",
+      "university": "University of Illinois Chicago",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-illinois-chicago"
+    },
+    {
+      "country": "USA",
+      "university": "University of Kansas (UG only)",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-kansas-ug-only"
+    },
+    {
+      "country": "USA",
+      "university": "University of Maryland, Baltimore County",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-maryland-baltimore-county"
+    },
+    {
+      "country": "USA",
+      "university": "University of Massachusetts Amherst",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-massachusetts-amherst"
+    },
+    {
+      "country": "USA",
+      "university": "University of Massachusetts Boston",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-massachusetts-boston"
+    },
+    {
+      "country": "USA",
+      "university": "University of Miami (PG only)",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-miami-pg-only"
+    },
+    {
+      "country": "USA",
+      "university": "University of Nevada at Reno",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-nevada-at-reno"
+    },
+    {
+      "country": "USA",
+      "university": "University of Oregon",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-oregon"
+    },
+    {
+      "country": "USA",
+      "university": "University of South Carolina",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-south-carolina"
+    },
+    {
+      "country": "USA",
+      "university": "University of South Florida",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-south-florida"
+    },
+    {
+      "country": "USA",
+      "university": "University of Tennessee, Knoxville",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-tennessee-knoxville"
+    },
+    {
+      "country": "USA",
+      "university": "University of Texas at San Antonio",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-texas-at-san-antonio"
+    },
+    {
+      "country": "USA",
+      "university": "University of Tulsa",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-tulsa"
+    },
+    {
+      "country": "USA",
+      "university": "University of Vermont (UG only)",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-vermont-ug-only"
+    },
+    {
+      "country": "USA",
+      "university": "University of Washington",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-washington"
+    },
+    {
+      "country": "USA",
+      "university": "University of Wyoming",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-wyoming"
+    },
+    {
+      "country": "USA",
+      "university": "University of the Pacific",
+      "source": "GAC",
+      "id": "GAC-usa-university-of-the-pacific"
+    },
+    {
+      "country": "USA",
+      "university": "Washington State University",
+      "source": "GAC",
+      "id": "GAC-usa-washington-state-university"
+    },
+    {
+      "country": "USA",
+      "university": "Webster University",
+      "source": "GAC",
+      "id": "GAC-usa-webster-university"
+    },
+    {
+      "country": "USA",
+      "university": "Yeshiva University",
+      "source": "GAC",
+      "id": "GAC-usa-yeshiva-university"
+    }
+  ]
+}

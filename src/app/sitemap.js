@@ -9,6 +9,8 @@ export default function sitemap() {
     { url: `${BASE_URL}/contact`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/bookings`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/products`, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/university-finder`, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/resources`, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE_URL}/test-prep`, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE_URL}/accommodation`, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${BASE_URL}/scholarships`, changeFrequency: 'weekly', priority: 0.9 },

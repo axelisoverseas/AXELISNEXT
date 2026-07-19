@@ -243,7 +243,7 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
           Still have questions?
         </h3>
         <p className="text-neutral-600 mb-4">
-          Our expert counselors are here to help you with personalized guidance.
+          Our expert counsellors are here to help you with personalized guidance.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a

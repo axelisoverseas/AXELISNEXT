@@ -66,6 +66,8 @@ const Footer = () => {
               {[
                 { name: 'Home', path: '/' },
                 { name: 'Student Plans', path: '/products' },
+                { name: 'University Finder', path: '/university-finder' },
+                { name: 'Free Guides', path: '/resources' },
                 { name: 'Test Prep', path: '/test-prep' },
                 { name: 'Testimonials', path: '/testimonials' },
                 { name: 'Certifications', path: '/certifications' },

@@ -1,13 +1,11 @@
 'use client';
 
-import React, { useEffect, useState, useCallback } from 'react';
+import React from 'react';
 import Link from 'next/link';
-import Script from 'next/script';
 import { ArrowRight, CheckCircle, Home, MapPin, Shield, Clock, ExternalLink, Search } from 'lucide-react';
 import { TextEffect, TextEffectInView } from '../../components/ui/TextEffect';
 
-// Top student cities the amber widget supports as location strings.
-// (Amber's location parameter accepts city names verbatim, e.g. "london", "sydney".)
+// Top student cities, each linking to amber's live city search.
 const cities = [
     { label: 'London',     loc: 'london',      country: 'United Kingdom', flag: '🇬🇧', from: '£280/wk',  img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80&auto=format&fit=crop' },
     { label: 'Manchester', loc: 'manchester',  country: 'United Kingdom', flag: '🇬🇧', from: '£165/wk',  img: 'https://images.unsplash.com/photo-1543832923-44667a44c804?w=800&q=80&auto=format&fit=crop' },
@@ -17,59 +15,12 @@ const cities = [
     { label: 'New York',   loc: 'new york',    country: 'United States',  flag: '🇺🇸', from: '$2,100/mo',img: 'https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=800&q=80&auto=format&fit=crop' },
 ];
 
-// Amber widget configuration — real partner ID issued to Axelis Overseas
-// (sourced from the unique identifier in our amber sharing link).
-const AMBER_PARTNER_ID = '1721030776';
-const AMBER_WIDGET_SRC = 'https://d341zbz41jo7w1.cloudfront.net/widget/list/3.1.0.js';
-// Canonical Axelis × amber partner profile — all outbound links go here so
-// bookings made via direct click-through are attributed to our partnership.
+// Axelis × amber partner marketplace — outbound housing links go here.
 const AMBER_PARTNER_URL = 'https://amberstudent.com/partners/axelis-overseas-1721030776';
 
 export default function AccommodationPage() {
-    const [activeLoc, setActiveLoc] = useState('london');
-    const [widgetReady, setWidgetReady] = useState(false);
-
-    const initWidget = useCallback((location) => {
-        if (typeof window === 'undefined' || typeof window._aw !== 'function') return;
-        const el = document.getElementById('amber-widget');
-        if (!el) return;
-        el.innerHTML = ''; // clear any previous render before re-init
-        window._aw('init', {
-            element: el,
-            location,
-            partnerId: AMBER_PARTNER_ID,
-            fontFamily: 'Inter',
-            sort: 'Recommended',
-            numListings: 6,
-        });
-    }, []);
-
-    // Set up the global _aw queue exactly as Amber's docs require, BEFORE the script loads.
-    useEffect(() => {
-        if (typeof window === 'undefined') return;
-        if (!window._aw) {
-            window._aw = function () {
-                (window._aw.q = window._aw.q || []).push(arguments);
-            };
-        }
-    }, []);
-
-    // Once the script is loaded, init the widget for the current city.
-    useEffect(() => {
-        if (widgetReady) initWidget(activeLoc);
-    }, [widgetReady, activeLoc, initWidget]);
-
     return (
         <div className="min-h-screen bg-storm-to-dawn text-slate-100">
-            {/* Amber widget script — loaded via next/script with afterInteractive so it
-                runs after hydration but before the user scrolls to the widget. */}
-            <Script
-                id="amber-widget-script"
-                src={AMBER_WIDGET_SRC}
-                strategy="afterInteractive"
-                onLoad={() => setWidgetReady(true)}
-            />
-
             {/* Hero Section */}
             <section className="relative pt-24 pb-20 overflow-hidden border-b border-[var(--storm-electric)]/10">
                 <img
@@ -80,7 +31,7 @@ export default function AccommodationPage() {
                     fetchPriority="high"
                     className="absolute inset-0 w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-[var(--storm-deep)]" />
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.65)_0%,transparent_75%)]" />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -109,7 +60,7 @@ export default function AccommodationPage() {
                         </span>
                     </h1>
                     <p className="text-lg md:text-xl mb-10 text-slate-300/85 max-w-3xl mx-auto leading-relaxed">
-                        Live, learn and thrive &mdash; book bills-inclusive student accommodation across <strong className="text-white">29+ countries</strong> through our partnership with <strong className="text-white">amber</strong>, the world&apos;s largest student housing marketplace.
+                        Live, learn and thrive. Book bills-inclusive student accommodation across <strong className="text-white">29+ countries</strong> through our partnership with <strong className="text-white">amber</strong>, the world&apos;s largest student housing marketplace.
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -158,80 +109,41 @@ export default function AccommodationPage() {
                 </div>
             </section>
 
-            {/* Amber widget embed — official integration per Amber's docs */}
+            {/* amber marketplace CTA — static panel linking to our partner marketplace */}
             <section id="listings" className="py-20 scroll-mt-24">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-10 max-w-2xl mx-auto">
-                        <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
-                            Live student housing &mdash; book in minutes
-                        </TextEffectInView>
-                        <p className="text-slate-300/85">
-                            Real inventory streamed from amber. Switch the city below to retarget the listings.
-                        </p>
-                    </div>
+                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="relative overflow-hidden rounded-3xl border-2 border-white/10 bg-[#0c1428] shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)]">
+                        <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-[var(--storm-electric)]/10 blur-[120px]" />
+                        <div className="pointer-events-none absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-[var(--dawn-glow)]/10 blur-[120px]" />
 
-                    {/* City switcher — re-inits widget with the selected location */}
-                    <div className="flex flex-wrap justify-center gap-2 mb-8" role="tablist" aria-label="Select a city">
-                        {cities.map((c) => {
-                            const isActive = activeLoc === c.loc;
-                            return (
-                                <button
-                                    key={c.loc}
-                                    type="button"
-                                    role="tab"
-                                    aria-selected={isActive}
-                                    onClick={() => setActiveLoc(c.loc)}
-                                    className={`inline-flex items-center gap-2 px-4 py-2 min-h-[44px] rounded-full text-sm font-semibold transition-colors border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)] ${
-                                        isActive
-                                            ? 'bg-[var(--storm-electric)] border-[var(--storm-electric)] text-[var(--storm-deep)]'
-                                            : 'bg-white/5 border-white/10 text-slate-200 hover:bg-white/10 hover:border-white/25'
-                                    }`}
-                                >
-                                    <span aria-hidden="true">{c.flag}</span>
-                                    <span>{c.label}</span>
-                                </button>
-                            );
-                        })}
-                    </div>
-
-                    {/* Widget container — required ID per amber's docs */}
-                    <div className="w-full bg-[#0c1428] rounded-2xl border-2 border-white/10 shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] overflow-hidden p-4 sm:p-6 min-h-[520px]">
-                        <div id="amber-widget" className="w-full min-h-[480px]" />
-                        <div className="amber-link" style={{ textAlign: 'center', padding: '10px 0' }} />
-
-                        {/* Lightweight fallback shown until the widget paints — also acts as a noscript surface */}
-                        {!widgetReady && (
-                            <div className="flex flex-col items-center justify-center py-16 text-center" aria-hidden="true">
-                                <div className="w-12 h-12 rounded-full border-2 border-white/10 border-t-[var(--storm-electric)] animate-spin mb-4" />
-                                <p className="text-slate-300 text-sm">Loading live amber listings for {cities.find((c) => c.loc === activeLoc)?.label}&hellip;</p>
-                                <p className="text-slate-500 text-xs mt-2">
-                                    Or open our{' '}
-                                    <a
-                                        href={AMBER_PARTNER_URL}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="underline hover:text-[var(--storm-electric)]"
-                                    >
-                                        amber partner page
-                                    </a>{' '}
-                                    directly.
-                                </p>
+                        <div className="relative flex flex-col items-center px-6 py-16 text-center sm:px-12">
+                            <div className="w-16 h-16 rounded-2xl bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/30 flex items-center justify-center mb-6">
+                                <Home className="text-[var(--storm-electric)]" size={30} />
                             </div>
-                        )}
+                            <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
+                                Browse verified student homes on amber
+                            </TextEffectInView>
+                            <p className="text-slate-300/85 max-w-xl mb-8">
+                                Explore bills-inclusive, verified rooms across 250+ student cities on our amber marketplace &mdash; or pick a city below and a counsellor will shortlist three contract-checked, budget-fit options for you, free.
+                            </p>
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <a
+                                    href={AMBER_PARTNER_URL}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                                >
+                                    Open amber marketplace <ExternalLink size={16} className="ml-2" />
+                                </a>
+                                <Link
+                                    href="/contact"
+                                    className="inline-flex items-center justify-center px-8 py-4 glass-storm text-white font-bold rounded-xl hover:text-[var(--storm-electric)] transition-all"
+                                >
+                                    Get free housing help
+                                </Link>
+                            </div>
+                        </div>
                     </div>
-
-                    <p className="text-center text-xs text-slate-400 mt-6">
-                        Listings powered by{' '}
-                        <a
-                            href={AMBER_PARTNER_URL}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-[var(--storm-electric)] hover:underline font-semibold inline-flex items-center gap-1"
-                        >
-                            amber &times; Axelis Overseas <ExternalLink size={11} />
-                        </a>
-                        . Prices and availability shown live from amber.
-                    </p>
                 </div>
             </section>
 
@@ -243,21 +155,19 @@ export default function AccommodationPage() {
                             Where our students live
                         </h2>
                         <p className="text-slate-300/85">
-                            Click any city to pull live amber inventory above.
+                            Tap any city to browse live amber listings for that destination.
                         </p>
                     </div>
 
                     <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5">
                         {cities.map((c) => (
-                            <button
+                            <a
                                 key={c.loc}
-                                type="button"
-                                onClick={() => {
-                                    setActiveLoc(c.loc);
-                                    document.getElementById('listings')?.scrollIntoView({ behavior: 'smooth' });
-                                }}
-                                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 hover:border-[var(--storm-electric)]/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)] text-left"
-                                aria-label={`Load amber listings for ${c.label}, ${c.country}`}
+                                href={`https://amberstudent.com/search/${c.loc.replace(/\s+/g, '-')}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 hover:border-[var(--storm-electric)]/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)] text-left block"
+                                aria-label={`Browse amber listings for ${c.label}, ${c.country} (opens in new tab)`}
                             >
                                 <img
                                     src={c.img}
@@ -283,7 +193,7 @@ export default function AccommodationPage() {
                                         <Search size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-[var(--storm-electric)]" />
                                     </h3>
                                 </div>
-                            </button>
+                            </a>
                         ))}
                     </div>
                 </div>
@@ -321,7 +231,7 @@ export default function AccommodationPage() {
                                     <span className="text-sm font-semibold text-[var(--storm-electric)] bg-[var(--storm-electric)]/10 px-3 py-1 rounded-full border border-[var(--storm-electric)]/30 inline-block mt-1">£150 &ndash; £350 / week</span>
                                 </div>
                             </div>
-                            <p className="text-slate-300/85 mb-6">Modern buildings designed specifically for students, with facilities and a vibrant social life baked in.</p>
+                            <p className="text-slate-300/85 mb-6">Modern buildings designed specifically for students, with facilities and an active social life built in.</p>
                             <ul className="space-y-3">
                                 <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--storm-electric)] shrink-0" /><span className="text-slate-200">All bills included (Wi-Fi, water, electricity)</span></li>
                                 <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--storm-electric)] shrink-0" /><span className="text-slate-200">On-site gym, cinema and study rooms</span></li>

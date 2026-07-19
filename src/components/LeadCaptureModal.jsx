@@ -272,7 +272,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
       case 'exit':
         return 'Get free expert guidance before you leave. It only takes 2 minutes!';
       case 'timed':
-        return 'Join 500+ students who have successfully started their international education with us.';
+        return 'Join 5,000+ students who have successfully started their international education with us.';
       default:
         return 'Let our experts guide you to your dream university.';
     }
@@ -600,7 +600,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     <MessageCircle className="mr-2 sm:mr-3 group-hover:scale-110 transition-transform" size={18} />
                     <div className="text-left">
                       <div className="font-bold text-sm sm:text-base">Send WhatsApp Message</div>
-                      <div className="text-green-100 text-xs hidden sm:block">Get instant response from our counselors</div>
+                      <div className="text-green-100 text-xs hidden sm:block">Get instant response from our counsellors</div>
                     </div>
                   </div>
                 </button>

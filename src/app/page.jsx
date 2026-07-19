@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap, ShieldCheck, GraduationCap, Landmark } from 'lucide-react';
 
 const InstagramSuccessStories = dynamic(() => import('../components/InstagramSuccessStories'), { ssr: false });
 const TeamGlobeCarousel = dynamic(() => import('../components/TeamGlobeCarousel'), { ssr: false });
@@ -161,7 +161,7 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mb-12"
           >
             {[
-              { Icon: Users, label: '500+ students' },
+              { Icon: Users, label: '5,000+ students' },
               { Icon: Globe, label: '29+ countries' },
               { Icon: Award, label: '₹3 Cr+ scholarships' },
               { Icon: ShieldCheck, label: '100% visa honesty' },
@@ -198,7 +198,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="text-white text-sm md:text-base text-center">
-              <span className="text-[var(--dawn-glow)] font-bold">500+ students</span> placed and on-ground.
+              <span className="text-[var(--dawn-glow)] font-bold">5,000+ students</span> placed and on-ground.
             </p>
           </motion.div>
         </motion.div>
@@ -236,11 +236,13 @@ export default function Home() {
 
           {/* 4-stat grid — storm-glass cards with unified icon treatment.
               Every icon: gradient halo + circular ring + dark inner disc + amber bolt accent. */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
+              { icon: Users, value: '5,000+', label: 'Students Placed' },
               { icon: Globe, value: '29+', label: 'Countries' },
-              { icon: Users, value: '500+', label: 'Students Placed' },
+              { icon: GraduationCap, value: '35,000+', label: 'Universities' },
               { icon: Award, value: '₹3+ Cr', label: 'Scholarships Won', gradient: true },
+              { icon: Landmark, value: '₹30+ Cr', label: 'Loans Facilitated' },
               { icon: CheckCircle, value: '100%', label: 'Success Rate' },
             ].map((stat, i) => {
               const Icon = stat.icon;

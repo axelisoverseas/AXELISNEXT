@@ -62,7 +62,7 @@ export default function ContactPage() {
                         </span>
                     </h1>
                     <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
-                        Tell us where you want to study. We&apos;ll tell you what it actually takes &mdash; honestly.
+                        Tell us where you want to study. We&apos;ll tell you what it actually takes, honestly.
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-6">
@@ -76,7 +76,7 @@ export default function ContactPage() {
                         </div>
                         <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-slate-700 shadow-sm text-slate-300">
                             <Award size={18} className="text-blue-400" />
-                            <span className="text-sm font-semibold">Expert Counselors</span>
+                            <span className="text-sm font-semibold">Expert Counsellors</span>
                         </div>
                     </div>
                 </div>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                             <Calendar size={16} /> Book a 1:1 session
                         </div>
                         <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-3">Schedule your free counselling call</TextEffectInView>
-                        <p className="text-slate-600 max-w-2xl mx-auto">Pick a time that works for you — we'll walk you through eligibility, scholarships, and next steps.</p>
+                        <p className="text-slate-600 max-w-2xl mx-auto">Pick a time that works for you and we'll walk you through eligibility, scholarships, and next steps.</p>
                     </div>
                     <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
                         <div

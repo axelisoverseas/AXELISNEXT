@@ -31,8 +31,8 @@ export const features = [
   },
   {
     id: 3,
-    title: "500+ Students Sent",
-    description: "Successfully placed 500+ students for the September 2024 intake across top universities worldwide, with 2025 applications now open.",
+    title: "5,000+ Students Sent",
+    description: "Successfully placed 5,000+ students across top universities worldwide, with 2025 applications now open.",
     icon: "👥"
   },
   {
@@ -199,36 +199,51 @@ export const teamMembers = [
     }
   },
   {
-    id: 4,
+    id: 3,
     name: "Arul Johnson",
-    role: "Strategic Associate",
+    role: "Strategic Admission Associate",
     image: "/team/arul_johnson.png",
     linkedin: "https://www.linkedin.com/in/arul-j-812680132/",
-    description: "Strategic associate spearheading business development, university partnerships, and market expansion initiatives."
+    description: "Strategic admission associate driving university partnerships and guiding students through admissions."
+  },
+  {
+    id: 4,
+    name: "Naveen B",
+    role: "Alumni Admissions Counsellor",
+    image: "/team/naveen-b.png",
+    linkedin: "https://www.linkedin.com/in/naveenbammidi",
+    description: "Alumni admissions counsellor guiding students through university selection and applications, from first call to offer."
   },
   {
     id: 5,
     name: "Shubham Murkunde",
-    role: "Sales Executive",
+    role: "Strategic Admission Associate",
     image: "/assets/exweb/1706721617257shubham.jpeg",
     linkedin: "https://www.linkedin.com/in/shubham-murkunde-460b3b2b1/",
-    description: "Dynamic sales professional focused on building relationships and helping students achieve their study abroad goals."
+    description: "Strategic admission associate helping students shortlist universities and move from application to offer."
   },
   {
     id: 6,
-    name: "Vruddhi Mathapati",
-    role: "Admission Associate",
-    image: "https://ui-avatars.com/api/?name=Vruddhi%20Mathapati&size=300&background=145da0&color=fff&bold=true",
-    linkedin: "https://www.linkedin.com/in/vruddhi-mathapati-2602263b1/",
-    description: "Admission specialist ensuring seamless application processing, document verification, and university coordination for students."
+    name: "Aviral Shukla",
+    role: "Strategic Admission Associate",
+    image: "/team/aviral-shukla.jpg",
+    linkedin: "https://www.linkedin.com/in/aviral-shukla-63814b419",
+    description: "Strategic admission associate supporting shortlisting, applications and student guidance across destinations."
   },
   {
     id: 7,
-    name: "Hiya Agrawal",
-    role: "Operations Research Associate",
-    image: "/team/hiya.png",
-    linkedin: "https://www.linkedin.com/in/hiya-agrawal-0b91202a3/",
-    description: "Operations research associate leveraging data-driven insights to optimize student outcomes and streamline processes."
+    name: "Sourav Kumar Acharya",
+    role: "Operations Associate",
+    image: "/team/sourav-acharya.jpg",
+    description: "Operations associate coordinating documentation, applications and university communication for students."
+  },
+  {
+    id: 8,
+    name: "Desineedi Manasa",
+    role: "Operations Associate",
+    image: "/team/desineedi-manasa.png",
+    linkedin: "https://www.linkedin.com/in/manasa-desineedi",
+    description: "Operations associate ensuring smooth application processing, document verification and university coordination."
   }
 ];
 
@@ -243,7 +258,7 @@ export const faqData = [
   {
     id: 2,
     question: "Do you charge any fees for our services?",
-    answer: "We offer innovative pricing models designed to make study abroad accessible:\n\n**ZCF Student Plan (₹10,000):**\n• Pay only after receiving university offer\n• Complete application assistance\n• Visa guidance and documentation\n• No upfront fees required\n\n**ZTF Student Plan (₹10,000 + ₹1,65,000):**\n• Access to tuition-free universities\n• ₹10,000 initial investment\n• ₹1,65,000 only after admission confirmation\n• Save ₹80+ lakhs in tuition fees\n\n**Free Services Include:**\n• Initial consultation and profile assessment\n• University shortlisting recommendations\n• Basic application guidance\n• General study abroad information\n\nOur 'Pay After Results' model ensures you only invest when you see concrete outcomes. This risk-free approach has helped 500+ students achieve their study abroad dreams without financial stress.\n\n**Watch the detailed explanation:**\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n**Learn more:**\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
+    answer: "We offer innovative pricing models designed to make study abroad accessible:\n\n**ZCF Student Plan (₹10,000):**\n• Pay only after receiving university offer\n• Complete application assistance\n• Visa guidance and documentation\n• No upfront fees required\n\n**ZTF Student Plan (₹10,000 + ₹1,65,000):**\n• Access to tuition-free universities\n• ₹10,000 initial investment\n• ₹1,65,000 only after admission confirmation\n• Save ₹80+ lakhs in tuition fees\n\n**Free Services Include:**\n• Initial consultation and profile assessment\n• University shortlisting recommendations\n• Basic application guidance\n• General study abroad information\n\nOur 'Pay After Results' model ensures you only invest when you see concrete outcomes. This risk-free approach has helped 5,000+ students achieve their study abroad dreams without financial stress.\n\n**Watch the detailed explanation:**\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n**Learn more:**\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
     category: "Pricing",
     multimedia: {
       video: "https://youtu.be/I7EzLc62Y6c",
@@ -286,7 +301,7 @@ export const faqData = [
   {
     id: 8,
     question: "Do you help with visa applications?",
-    answer: "Absolutely! Visa assistance is a cornerstone of our services with a 95%+ success rate:\n\n**Comprehensive Visa Support:**\n• Document checklist and preparation\n• Application form completion\n• Appointment booking and scheduling\n• Interview preparation and mock sessions\n• Embassy/consulate liaison\n• Application tracking and follow-up\n\n**Country-Specific Expertise:**\n• **UK:** Student Visa (formerly Tier 4)\n• **USA:** F-1 Student Visa\n• **Canada:** Study Permit\n• **Australia:** Student Visa (Subclass 500)\n• **Schengen:** Student Visa for European countries\n\n**Document Preparation:**\n• Financial documentation and bank statements\n• Academic transcripts and certificates\n• English proficiency test results\n• Medical examinations and health insurance\n• Accommodation and travel arrangements\n\n**Interview Preparation:**\n• Common questions and model answers\n• Mock interview sessions\n• Confidence building techniques\n• Country-specific interview tips\n\n**Success Factors:**\n• 95%+ visa approval rate\n• Experienced visa counselors\n• Updated knowledge of changing regulations\n• Strong relationships with embassy officials\n• Comprehensive documentation review\n\nOur visa specialists stay updated with the latest immigration policies and have successfully processed thousands of visa applications.\n\n**Detailed guides:**\n[UK Student Visa Guide](/blog/uk-study-guide) | [US F-1 Visa Process](/blog/us-visa-guide) | [Canada Study Permit](/blog/canada-study-guide)",
+    answer: "Absolutely! Visa assistance is a cornerstone of our services with a 95%+ success rate:\n\n**Comprehensive Visa Support:**\n• Document checklist and preparation\n• Application form completion\n• Appointment booking and scheduling\n• Interview preparation and mock sessions\n• Embassy/consulate liaison\n• Application tracking and follow-up\n\n**Country-Specific Expertise:**\n• **UK:** Student Visa (formerly Tier 4)\n• **USA:** F-1 Student Visa\n• **Canada:** Study Permit\n• **Australia:** Student Visa (Subclass 500)\n• **Schengen:** Student Visa for European countries\n\n**Document Preparation:**\n• Financial documentation and bank statements\n• Academic transcripts and certificates\n• English proficiency test results\n• Medical examinations and health insurance\n• Accommodation and travel arrangements\n\n**Interview Preparation:**\n• Common questions and model answers\n• Mock interview sessions\n• Confidence building techniques\n• Country-specific interview tips\n\n**Success Factors:**\n• 95%+ visa approval rate\n• Experienced visa counsellors\n• Updated knowledge of changing regulations\n• Strong relationships with embassy officials\n• Comprehensive documentation review\n\nOur visa specialists stay updated with the latest immigration policies and have successfully processed thousands of visa applications.\n\n**Detailed guides:**\n[UK Student Visa Guide](/blog/uk-study-guide) | [US F-1 Visa Process](/blog/us-visa-guide) | [Canada Study Permit](/blog/canada-study-guide)",
     category: "Visa",
     multimedia: {
       relatedLinks: ["/blog/uk-study-guide", "/blog/us-visa-guide", "/blog/canada-study-guide"]
@@ -301,7 +316,7 @@ export const faqData = [
   {
     id: 10,
     question: "What makes Axelis different from other consultancies?",
-    answer: "Axelis stands out through our unique value propositions and proven track record:\n\n**Innovative Pricing Models:**\n• Pay After Offer - No upfront fees\n• ZCF Student Plan\n• ZTF Student Plan\n• Risk-free investment approach\n\n**Comprehensive Service Portfolio:**\n• 29+ destination countries\n• 2000+ scholarship opportunities\n• 25+ loan provider partnerships\n• End-to-end support from application to settlement\n\n**Proven Success Metrics:**\n• 500+ students successfully placed\n• 95%+ visa approval rate\n• 85% scholarship success rate\n• ₹80+ lakhs saved through tuition-free programs\n\n**Technology-Driven Approach:**\n• Advanced university matching algorithms\n• Scholarship matching system\n• Application tracking platform\n• Digital document management\n\n**Expert Team:**\n• Experienced counselors with international education backgrounds\n• Country-specific specialists\n• Visa experts with embassy connections\n• Alumni network for peer support\n\n**Unique Guarantees:**\n• Agent scholarships guaranteed across 1600+ universities\n• Visa approval guarantee (conditions apply)\n• Post-arrival support commitment\n• Transparent pricing with no hidden costs\n\n**Industry Partnerships:**\n• Direct university partnerships\n• Accommodation provider tie-ups\n• Financial institution collaborations\n• Professional service networks\n\nOur holistic approach, combined with innovative pricing and guaranteed results, makes us the preferred choice for ambitious students.",
+    answer: "Axelis stands out through our unique value propositions and proven track record:\n\n**Innovative Pricing Models:**\n• Pay After Offer - No upfront fees\n• ZCF Student Plan\n• ZTF Student Plan\n• Risk-free investment approach\n\n**Comprehensive Service Portfolio:**\n• 29+ destination countries\n• 35,000+ universities\n• 2000+ scholarship opportunities\n• 25+ loan provider partnerships\n• End-to-end support from application to settlement\n\n**Proven Success Metrics:**\n• 5,000+ students successfully placed\n• ₹3+ Cr in scholarships won\n• ₹30+ Cr in education loans facilitated\n• 95%+ visa approval rate\n• 85% scholarship success rate\n• ₹80+ lakhs saved through tuition-free programs\n\n**Technology-Driven Approach:**\n• Advanced university matching algorithms\n• Scholarship matching system\n• Application tracking platform\n• Digital document management\n\n**Expert Team:**\n• Experienced counsellors with international education backgrounds\n• Country-specific specialists\n• Visa experts with embassy connections\n• Alumni network for peer support\n\n**Unique Guarantees:**\n• Agent scholarships guaranteed across 1600+ universities\n• Visa approval guarantee (conditions apply)\n• Post-arrival support commitment\n• Transparent pricing with no hidden costs\n\n**Industry Partnerships:**\n• Direct university partnerships\n• Accommodation provider tie-ups\n• Financial institution collaborations\n• Professional service networks\n\nOur holistic approach, combined with innovative pricing and guaranteed results, makes us the preferred choice for ambitious students.",
     category: "About Us"
   },
   {
@@ -365,7 +380,7 @@ export const faqData = [
   {
     id: 20,
     question: "How do I choose the right course and university for my career goals?",
-    answer: "Selecting the right course and university is crucial for your career success:\n\n**Self-Assessment Process:**\n• **Academic Interests:** What subjects genuinely excite you?\n• **Career Goals:** What profession do you want to pursue?\n• **Skills and Strengths:** What are you naturally good at?\n• **Values and Priorities:** Work-life balance, salary, impact, etc.\n• **Learning Style:** Research-focused, practical, theoretical\n\n**Course Selection Criteria:**\n• **Industry Demand:** Job market prospects in your field\n• **Curriculum Content:** Does it match your interests and goals?\n• **Practical Experience:** Internships, co-op programs, industry projects\n• **Faculty Expertise:** Research areas and industry connections\n• **Accreditation:** Professional body recognition\n\n**University Evaluation Factors:**\n• **Academic Reputation:** Global and subject-specific rankings\n• **Location:** Climate, culture, cost of living, job opportunities\n• **Campus Facilities:** Libraries, labs, sports, accommodation\n• **Student Support:** International student services, career guidance\n• **Alumni Network:** Career opportunities and mentorship\n• **Research Opportunities:** For graduate students and researchers\n\n**Financial Considerations:**\n• **Tuition Fees:** Compare costs across universities\n• **Living Expenses:** Location-based cost variations\n• **Scholarship Availability:** Merit and need-based opportunities\n• **Work Opportunities:** Part-time jobs and internships\n• **Return on Investment:** Expected salary vs. education costs\n\n**Future Career Prospects:**\n• **Employment Rates:** Graduate employment statistics\n• **Salary Expectations:** Average starting salaries in your field\n• **Industry Connections:** University partnerships with employers\n• **Post-Study Work Rights:** Visa options after graduation\n• **Professional Development:** Continuing education opportunities\n\n**Research Methods:**\n• University websites and official publications\n• Student reviews and testimonials\n• Alumni interviews and networking\n• University fairs and information sessions\n• Professional counselor guidance\n\n**Decision-Making Process:**\n• Create a weighted scoring system for your priorities\n• Visit campuses (virtually or in-person) if possible\n• Speak with current students and alumni\n• Consider backup options and alternatives\n• Make informed decisions based on comprehensive research\n\nOur experienced counselors provide personalized guidance to help you make the best choice for your unique situation and career aspirations.",
+    answer: "Selecting the right course and university is crucial for your career success:\n\n**Self-Assessment Process:**\n• **Academic Interests:** What subjects genuinely excite you?\n• **Career Goals:** What profession do you want to pursue?\n• **Skills and Strengths:** What are you naturally good at?\n• **Values and Priorities:** Work-life balance, salary, impact, etc.\n• **Learning Style:** Research-focused, practical, theoretical\n\n**Course Selection Criteria:**\n• **Industry Demand:** Job market prospects in your field\n• **Curriculum Content:** Does it match your interests and goals?\n• **Practical Experience:** Internships, co-op programs, industry projects\n• **Faculty Expertise:** Research areas and industry connections\n• **Accreditation:** Professional body recognition\n\n**University Evaluation Factors:**\n• **Academic Reputation:** Global and subject-specific rankings\n• **Location:** Climate, culture, cost of living, job opportunities\n• **Campus Facilities:** Libraries, labs, sports, accommodation\n• **Student Support:** International student services, career guidance\n• **Alumni Network:** Career opportunities and mentorship\n• **Research Opportunities:** For graduate students and researchers\n\n**Financial Considerations:**\n• **Tuition Fees:** Compare costs across universities\n• **Living Expenses:** Location-based cost variations\n• **Scholarship Availability:** Merit and need-based opportunities\n• **Work Opportunities:** Part-time jobs and internships\n• **Return on Investment:** Expected salary vs. education costs\n\n**Future Career Prospects:**\n• **Employment Rates:** Graduate employment statistics\n• **Salary Expectations:** Average starting salaries in your field\n• **Industry Connections:** University partnerships with employers\n• **Post-Study Work Rights:** Visa options after graduation\n• **Professional Development:** Continuing education opportunities\n\n**Research Methods:**\n• University websites and official publications\n• Student reviews and testimonials\n• Alumni interviews and networking\n• University fairs and information sessions\n• Professional counsellor guidance\n\n**Decision-Making Process:**\n• Create a weighted scoring system for your priorities\n• Visit campuses (virtually or in-person) if possible\n• Speak with current students and alumni\n• Consider backup options and alternatives\n• Make informed decisions based on comprehensive research\n\nOur experienced counsellors provide personalized guidance to help you make the best choice for your unique situation and career aspirations.",
     category: "General"
   },
   {
@@ -379,19 +394,19 @@ export const faqData = [
   {
     id: 22,
     question: "Which is the best study abroad consultancy in Bangalore?",
-    answer: "Axelis Overseas, based in WorkFlo Ranka Junction, Bengaluru, is rated among the top study abroad consultancies in Bangalore with a 4.9/5 rating:\n\n**Why Students Choose Axelis in Bangalore:**\n• **Zero Consultation Fee Model** — Pay only after results\n• **29+ Countries** covered with direct university partnerships\n• **2000+ Scholarships** accessible through our network\n• **95%+ Visa Approval Rate** with expert guidance\n• **Free End-to-End Support** from application to post-arrival\n\n**Our Bangalore Office:**\n📍 WorkFlo Ranka Junction, 3rd Floor, Old Madras Road, KR Puram, Bengaluru 560016\n📞 +91 9098522711\n📧 axelisoverseas@overseeducation.com\n\n**What Sets Us Apart from Other Bangalore Consultancies:**\n• We don't charge consultation fees like most Bangalore consultants\n• Personalized counselling with subject-matter experts\n• In-house employability analysis tool\n• Alumni connections in 29+ countries\n• Transparent pricing with no hidden costs\n\nBook a free consultation at our Bengaluru office or online via Calendly.",
+    answer: "Axelis Overseas, based in WorkFlo Ranka Junction, Bengaluru, is rated among the top study abroad consultancies in Bangalore with a 4.9/5 rating:\n\n**Why Students Choose Axelis in Bangalore:**\n• **Zero Consultation Fee Model**: Pay only after results\n• **29+ Countries** covered with direct university partnerships\n• **2000+ Scholarships** accessible through our network\n• **95%+ Visa Approval Rate** with expert guidance\n• **Free End-to-End Support** from application to post-arrival\n\n**Our Bangalore Office:**\n📍 WorkFlo Ranka Junction, 3rd Floor, Old Madras Road, KR Puram, Bengaluru 560016\n📞 +91 9098522711\n📧 axelisoverseas@overseeducation.com\n\n**What Sets Us Apart from Other Bangalore Consultancies:**\n• We don't charge consultation fees like most Bangalore consultants\n• Personalized counselling with subject-matter experts\n• In-house employability analysis tool\n• Alumni connections in 29+ countries\n• Transparent pricing with no hidden costs\n\nBook a free consultation at our Bengaluru office or online via Calendly.",
     category: "Bangalore"
   },
   {
     id: 23,
     question: "How much does it cost to study abroad from India in 2025?",
-    answer: "The total cost of studying abroad from India varies significantly by country and program:\n\n**Affordable Options (₹5-15 Lakhs/year total):**\n• **Germany:** Tuition-free at public universities, ₹6-8 lakhs/year living\n• **France:** ₹2-5 lakhs tuition + ₹6-8 lakhs living\n• **Finland/Norway:** Tuition-free for some programs\n• **Malaysia:** ₹3-6 lakhs tuition + ₹3-5 lakhs living\n\n**Mid-Range Options (₹15-30 Lakhs/year total):**\n• **Canada:** ₹12-25 lakhs tuition + ₹8-12 lakhs living\n• **Ireland:** ₹10-20 lakhs tuition + ₹8-10 lakhs living\n• **New Zealand:** ₹12-22 lakhs tuition + ₹8-10 lakhs living\n\n**Premium Options (₹25-60 Lakhs/year total):**\n• **UK:** ₹12-35 lakhs tuition + ₹10-15 lakhs living\n• **USA:** ₹15-45 lakhs tuition + ₹10-18 lakhs living\n• **Australia:** ₹15-40 lakhs tuition + ₹10-15 lakhs living\n\n**Ways to Reduce Costs:**\n• Apply for scholarships (we help with 2000+ options)\n• Choose universities outside major cities\n• Education loans at 8.5% onwards via our 25+ loan partners\n• Part-time work earnings (₹5-12 lakhs/year depending on country)\n\nAxelis helps Bangalore students find the best value-for-money options based on their budget and career goals.",
+    answer: "The total cost of studying abroad from India varies significantly by country and program:\n\n**Affordable Options (₹5-15 Lakhs/year total):**\n• **Germany:** Tuition-free at public universities, ₹6-8 lakhs/year living\n• **France:** ₹2-5 lakhs tuition + ₹6-8 lakhs living\n• **Finland/Norway:** Tuition-free for some programs\n• **Malaysia:** ₹3-6 lakhs tuition + ₹3-5 lakhs living\n\n**Mid-Range Options (₹15-30 Lakhs/year total):**\n• **Canada:** ₹12-25 lakhs tuition + ₹8-12 lakhs living\n• **Ireland:** ₹10-20 lakhs tuition + ₹8-10 lakhs living\n• **New Zealand:** ₹12-22 lakhs tuition + ₹8-10 lakhs living\n\n**Premium Options (₹25-60 Lakhs/year total):**\n• **UK:** ₹12-35 lakhs tuition + ₹10-15 lakhs living\n• **USA:** ₹15-45 lakhs tuition + ₹10-18 lakhs living\n• **Australia:** ₹15-40 lakhs tuition + ₹10-15 lakhs living\n\n**Ways to Reduce Costs:**\n• Apply for scholarships (we help with 2000+ options)\n• Choose universities outside major cities\n• Education loans at 8.5% onwards via our 25+ loan partners (₹30+ Cr facilitated)\n• Part-time work earnings (₹5-12 lakhs/year depending on country)\n\nAxelis helps Bangalore students find the best value-for-money options based on their budget and career goals.",
     category: "Finance"
   },
   {
     id: 24,
     question: "Can I study abroad without IELTS from India?",
-    answer: "Yes! Several countries and universities accept students without IELTS scores:\n\n**Countries Where IELTS is Not Mandatory:**\n• **Germany:** Many programs taught in English accept Duolingo or MOI letter\n• **France:** French-taught programs don't need IELTS\n• **Italy:** Many universities accept English proficiency alternatives\n• **Malaysia/Singapore:** Some universities accept 12th grade English scores\n\n**UK Universities Without IELTS:**\n• Some universities accept Duolingo English Test (DET)\n• Medium of Instruction (MOI) letter from previous institution\n• University's own English proficiency test\n• Password Solo test accepted by select universities\n\n**USA Options Without IELTS:**\n• Conditional admission with ESL pathway programs\n• Duolingo English Test (accepted by 3000+ institutions)\n• University placement tests\n• MOI letter from English-medium institutions\n\n**Canada Without IELTS:**\n• Limited — most programs require IELTS/TOEFL\n• Some colleges accept Duolingo or PTE\n• SDS stream requires IELTS 6.0+\n\n**Important Notes:**\n• Top-ranked universities generally require standardized tests\n• Alternative tests may limit university choices\n• We recommend taking IELTS/PTE for maximum options\n\nAxelis counselors in Bengaluru can help you find the best pathway based on your English proficiency level.",
+    answer: "Yes! Several countries and universities accept students without IELTS scores:\n\n**Countries Where IELTS is Not Mandatory:**\n• **Germany:** Many programs taught in English accept Duolingo or MOI letter\n• **France:** French-taught programs don't need IELTS\n• **Italy:** Many universities accept English proficiency alternatives\n• **Malaysia/Singapore:** Some universities accept 12th grade English scores\n\n**UK Universities Without IELTS:**\n• Some universities accept Duolingo English Test (DET)\n• Medium of Instruction (MOI) letter from previous institution\n• University's own English proficiency test\n• Password Solo test accepted by select universities\n\n**USA Options Without IELTS:**\n• Conditional admission with ESL pathway programs\n• Duolingo English Test (accepted by 3000+ institutions)\n• University placement tests\n• MOI letter from English-medium institutions\n\n**Canada Without IELTS:**\n• Limited — most programs require IELTS/TOEFL\n• Some colleges accept Duolingo or PTE\n• SDS stream requires IELTS 6.0+\n\n**Important Notes:**\n• Top-ranked universities generally require standardized tests\n• Alternative tests may limit university choices\n• We recommend taking IELTS/PTE for maximum options\n\nAxelis counsellors in Bengaluru can help you find the best pathway based on your English proficiency level.",
     category: "Requirements"
   },
   {
@@ -403,19 +418,19 @@ export const faqData = [
   {
     id: 26,
     question: "What are the best courses to study abroad for Indian students in 2025?",
-    answer: "The most in-demand and high-ROI courses for Indian students studying abroad in 2025:\n\n**Tech & Data (Highest Demand):**\n• Artificial Intelligence & Machine Learning — Average salary: $120,000+/year (USA)\n• Data Science & Analytics — Growing 35% annually worldwide\n• Cybersecurity — 3.5 million unfilled positions globally\n• Cloud Computing & DevOps — Essential for digital transformation\n• Full-Stack Development — Consistently high demand\n\n**Business & Management:**\n• MBA (especially with tech focus) — $80,000-$150,000 starting salary\n• Business Analytics — Bridges the gap between business and data\n• Supply Chain Management — Post-pandemic demand surge\n• Digital Marketing — Growing industry across all countries\n\n**Healthcare & Sciences:**\n• Public Health — Massive growth post-COVID\n• Biotechnology — Strong in UK, USA, Germany\n• Pharmaceutical Sciences — Growing research opportunities\n• Nursing — High demand in Australia, Canada, UK\n\n**Engineering:**\n• Mechanical & Automotive Engineering — Strong in Germany\n• Renewable Energy Engineering — Growing globally\n• Biomedical Engineering — Interdisciplinary growth\n\n**Creative & Design:**\n• UX/UI Design — Tech companies actively hiring\n• Animation & Game Design — Growing entertainment industry\n• Architecture — International opportunities\n\nOur Bengaluru counselors help match your skills and interests with the most employable courses in your target country.",
+    answer: "The most in-demand and high-ROI courses for Indian students studying abroad in 2025:\n\n**Tech & Data (Highest Demand):**\n• Artificial Intelligence & Machine Learning — Average salary: $120,000+/year (USA)\n• Data Science & Analytics — Growing 35% annually worldwide\n• Cybersecurity — 3.5 million unfilled positions globally\n• Cloud Computing & DevOps — Essential for digital transformation\n• Full-Stack Development — Consistently high demand\n\n**Business & Management:**\n• MBA (especially with tech focus) — $80,000-$150,000 starting salary\n• Business Analytics — Bridges the gap between business and data\n• Supply Chain Management — Post-pandemic demand surge\n• Digital Marketing — Growing industry across all countries\n\n**Healthcare & Sciences:**\n• Public Health — Massive growth post-COVID\n• Biotechnology — Strong in UK, USA, Germany\n• Pharmaceutical Sciences — Growing research opportunities\n• Nursing — High demand in Australia, Canada, UK\n\n**Engineering:**\n• Mechanical & Automotive Engineering — Strong in Germany\n• Renewable Energy Engineering — Growing globally\n• Biomedical Engineering — Interdisciplinary growth\n\n**Creative & Design:**\n• UX/UI Design — Tech companies actively hiring\n• Animation & Game Design — Growing entertainment industry\n• Architecture — International opportunities\n\nOur Bengaluru counsellors help match your skills and interests with the most employable courses in your target country.",
     category: "General"
   },
   {
     id: 27,
     question: "How can I get an education loan for studying abroad from Bangalore?",
-    answer: "Axelis partners with 25+ financial institutions to help Bangalore students secure education loans:\n\n**Step-by-Step Process:**\n1. **Free Loan Consultation** at our Bengaluru office\n2. **Profile Assessment** — We evaluate your eligibility across lenders\n3. **Multi-Lender Application** — Apply to 3-5 lenders simultaneously\n4. **Documentation Support** — We prepare all paperwork\n5. **Sanction & Disbursement** — Coordinated with your university timeline\n\n**Top Loan Options for Bangalore Students:**\n\n**Public Banks:**\n• SBI Education Loan — From 8.5% p.a., up to ₹1.5 Cr\n• Bank of Baroda — Competitive rates, fast processing\n• Canara Bank — Headquartered in Bengaluru, student-friendly\n\n**Private Banks:**\n• HDFC Credila — Up to ₹45 lakhs without collateral\n• ICICI Bank — Quick approval, digital process\n• Axis Bank — Flexible repayment options\n\n**NBFCs:**\n• Avanse — 100% financing, no collateral up to ₹40 lakhs\n• InCred — Fast 48-hour approval\n• Prodigy Finance — No cosigner needed for select universities\n\n**Key Parameters:**\n• **Without Collateral:** Up to ₹40-45 lakhs\n• **With Collateral:** Up to ₹1.5 crores\n• **Interest Rate:** 8.5% - 13.5% p.a.\n• **Moratorium:** Course + 6-12 months\n• **Tax Benefit:** Under Section 80E\n\nAll our loan services are **completely free**. Visit our Bengaluru office for a personalized loan consultation.",
+    answer: "Axelis partners with 25+ financial institutions to help Bangalore students secure education loans:\n\n**Step-by-Step Process:**\n1. **Free Loan Consultation** at our Bengaluru office\n2. **Profile Assessment**: We evaluate your eligibility across lenders\n3. **Multi-Lender Application**: Apply to 3-5 lenders simultaneously\n4. **Documentation Support**: We prepare all paperwork\n5. **Sanction & Disbursement**: Coordinated with your university timeline\n\n**Top Loan Options for Bangalore Students:**\n\n**Public Banks:**\n• SBI Education Loan — From 8.5% p.a., up to ₹1.5 Cr\n• Bank of Baroda — Competitive rates, fast processing\n• Canara Bank — Headquartered in Bengaluru, student-friendly\n\n**Private Banks:**\n• HDFC Credila — Up to ₹45 lakhs without collateral\n• ICICI Bank — Quick approval, digital process\n• Axis Bank — Flexible repayment options\n\n**NBFCs:**\n• Avanse — 100% financing, no collateral up to ₹40 lakhs\n• InCred — Fast 48-hour approval\n• Prodigy Finance — No cosigner needed for select universities\n\n**Key Parameters:**\n• **Without Collateral:** Up to ₹40-45 lakhs\n• **With Collateral:** Up to ₹1.5 crores\n• **Interest Rate:** 8.5% - 13.5% p.a.\n• **Moratorium:** Course + 6-12 months\n• **Tax Benefit:** Under Section 80E\n\nAll our loan services are **completely free**. Visit our Bengaluru office for a personalized loan consultation.",
     category: "Finance"
   },
   {
     id: 28,
     question: "Is free study abroad consultation available in Bangalore?",
-    answer: "Yes! Axelis Overseas offers **completely free study abroad consultation** at our Bengaluru office and online:\n\n**What's Included in Our Free Consultation:**\n• Complete profile evaluation and career assessment\n• Country and university shortlisting based on your profile\n• Course selection guidance aligned with career goals\n• Scholarship eligibility check across 2000+ options\n• Budget planning and loan guidance\n• Visa probability assessment\n• Timeline planning for upcoming intakes\n\n**How to Book Your Free Consultation:**\n• **Online:** Book via Calendly at axelisoverseas.com\n• **Phone:** Call +91 9098522711\n• **WhatsApp:** Message us for instant response\n• **Walk-in:** Visit our office at WorkFlo Ranka Junction, KR Puram, Bengaluru\n\n**Office Hours:**\n• Monday - Friday: 9:00 AM - 6:00 PM\n• Saturday: 10:00 AM - 4:00 PM\n\n**Why It's Really Free:**\nUnlike other Bangalore consultancies that charge ₹5,000-₹50,000 for consultation, Axelis operates on a university-commission model. We earn from universities, not from students. This means our advice is genuinely unbiased.\n\nOver 500+ Bangalore students have benefited from our free consultation services.",
+    answer: "Yes! Axelis Overseas offers **completely free study abroad consultation** at our Bengaluru office and online:\n\n**What's Included in Our Free Consultation:**\n• Complete profile evaluation and career assessment\n• Country and university shortlisting based on your profile\n• Course selection guidance aligned with career goals\n• Scholarship eligibility check across 2000+ options\n• Budget planning and loan guidance\n• Visa probability assessment\n• Timeline planning for upcoming intakes\n\n**How to Book Your Free Consultation:**\n• **Online:** Book via Calendly at axelisoverseas.com\n• **Phone:** Call +91 9098522711\n• **WhatsApp:** Message us for instant response\n• **Walk-in:** Visit our office at WorkFlo Ranka Junction, KR Puram, Bengaluru\n\n**Office Hours:**\n• Monday - Friday: 9:00 AM - 6:00 PM\n• Saturday: 10:00 AM - 4:00 PM\n\n**Why It's Really Free:**\nUnlike other Bangalore consultancies that charge ₹5,000-₹50,000 for consultation, Axelis operates on a university-commission model. We earn from universities, not from students. This means our advice is genuinely unbiased.\n\nOver 5,000+ Bangalore students have benefited from our free consultation services.",
     category: "Bangalore"
   },
   {
@@ -721,7 +736,7 @@ export const housingPartners = [
   {
     id: 4,
     name: "Casita Student Accommodation",
-    description: "Leading student accommodation platform offering diverse housing options with seamless booking experience",
+    description: "Leading student accommodation platform offering diverse housing options with a smooth booking experience",
     features: ["Global Coverage", "Flexible Booking", "Student Support", "Secure Payments"],
     logo: "🏘️",
     logoImage: "/src/assets/accom logo/casita.svg",
@@ -967,7 +982,7 @@ export const productBenefits = [
   {
     id: 3,
     title: "Expert Guidance",
-    description: "Work with experienced counselors who have helped 500+ students.",
+    description: "Work with experienced counsellors who have helped 5,000+ students.",
     icon: "👨‍🎓"
   },
   {

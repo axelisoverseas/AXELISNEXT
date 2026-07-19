@@ -1,7 +1,7 @@
 'use client';
 
-import React, { useRef } from 'react';
-import { AnimatePresence, motion, useInView } from 'framer-motion';
+import React from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
 
 const defaultStaggerTimes = {
@@ -31,9 +31,9 @@ const presetVariants = {
   blur: {
     container: defaultContainerVariants,
     item: {
-      hidden: { opacity: 0, filter: 'blur(12px)' },
-      visible: { opacity: 1, filter: 'blur(0px)' },
-      exit: { opacity: 0, filter: 'blur(12px)' },
+      hidden: { opacity: 0, filter: 'blur(5px)' },
+      visible: { opacity: 1, filter: 'blur(0px)', transition: { duration: 0.35 } },
+      exit: { opacity: 0, filter: 'blur(5px)' },
     },
   },
   shake: {
@@ -126,7 +126,7 @@ export function TextEffect({
   variants,
   className,
   preset,
-  delay = 0,
+  delay = 0.12,
   trigger = true,
   onAnimationComplete,
   segmentWrapperClassName,
@@ -164,7 +164,7 @@ export function TextEffect({
   };
 
   return (
-    <AnimatePresence mode="popLayout">
+    <AnimatePresence>
       {trigger && (
         <MotionTag
           initial="hidden"
@@ -191,17 +191,21 @@ export function TextEffect({
 }
 
 /**
- * Wrapper that only triggers TextEffect once its container scrolls into view.
- * Use for section headings that aren't visible on initial mount.
+ * Wrapper kept for API compatibility with existing call sites.
+ *
+ * It used to defer the reveal until the element scrolled into view using
+ * `useInView`, with the ref on a `<span className="contents">`. But a
+ * `display:contents` element generates no layout box, so IntersectionObserver
+ * (which useInView is built on) can never observe it — the trigger stayed false
+ * forever and the heading never rendered, reading as empty space. This is a
+ * genuine, environment-independent framer-motion footgun.
+ *
+ * We now render immediately and let the blur-in play on mount (the same reliable
+ * path the direct TextEffect uses). `margin`/`once` are accepted and ignored so
+ * no call site needs to change.
  */
-export function TextEffectInView({ margin = '-10% 0px -10% 0px', once = true, ...props }) {
-  const ref = useRef(null);
-  const inView = useInView(ref, { once, margin });
-  return (
-    <span ref={ref} className="contents">
-      <TextEffect {...props} trigger={inView} />
-    </span>
-  );
+export function TextEffectInView({ margin, once, ...props }) { // eslint-disable-line no-unused-vars
+  return <TextEffect {...props} />;
 }
 
 export default TextEffect;

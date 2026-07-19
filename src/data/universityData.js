@@ -121,7 +121,7 @@ export const universities = [
     name: "Liverpool John Moores University",
     country: "UK", countryFlag: "🇬🇧", programs: ["UG", "PG"],
     logoUrl: "https://logo.clearbit.com/ljmu.ac.uk", website: "https://ljmu.ac.uk",
-    description: "A vibrant university in Liverpool with excellent teaching quality and student satisfaction.",
+    description: "A lively university in Liverpool with excellent teaching quality and student satisfaction.",
     ranking: "Top 60 UK",
     applicationProcess: { ugDeadline: "January 31 (UCAS)", pgDeadline: "Rolling admissions", requirements: ["Academic transcripts", "Personal statement", "IELTS 6.0+"], applyUrl: "https://www.ljmu.ac.uk/study/" }
   },
@@ -290,7 +290,7 @@ export const universities = [
   {
     id: "maynooth-university", name: "Maynooth University", country: "Ireland", countryFlag: "🇮🇪", programs: ["UG", "PG"],
     logoUrl: "https://logo.clearbit.com/maynoothuniversity.ie", website: "https://maynoothuniversity.ie",
-    description: "A vibrant university near Dublin known for arts, humanities, social sciences, and computer science.", ranking: "Top 400 World",
+    description: "A lively university near Dublin known for arts, humanities, social sciences, and computer science.", ranking: "Top 400 World",
     applicationProcess: { ugDeadline: "February 1 (CAO)", pgDeadline: "Rolling admissions", requirements: ["Academic transcripts", "IELTS 6.5+"], applyUrl: "https://www.maynoothuniversity.ie/study-maynooth/" }
   },
 
@@ -312,7 +312,7 @@ export const universities = [
   {
     id: "mcphs", name: "MCPHS University", country: "USA", countryFlag: "🇺🇸", programs: ["PG"],
     logoUrl: "https://logo.clearbit.com/mcphs.edu", website: "https://mcphs.edu",
-    description: "Massachusetts College of Pharmacy and Health Sciences — a leader in health sciences education.", ranking: "USA",
+    description: "Massachusetts College of Pharmacy and Health Sciences, a leader in health sciences education.", ranking: "USA",
     applicationProcess: { pgDeadline: "Rolling admissions", requirements: ["Bachelor's degree", "TOEFL 79+ / IELTS 6.5+", "GRE (program-specific)", "Transcripts"], applyUrl: "https://www.mcphs.edu/admission" }
   },
   {

@@ -9,7 +9,7 @@ import { usePathname } from 'next/navigation';
 const WhatsAppWidget = dynamic(() => import('./WhatsAppWidget'), { ssr: false });
 import {
   Menu, X, Phone, Mail, Home, Package, MessageCircle,
-  Users, ExternalLink, Globe2, Award, HelpCircle
+  Users, ExternalLink, Globe2, Award, HelpCircle, GraduationCap, BookOpen
 } from 'lucide-react';
 import { siteInfo } from '../data/siteData';
 import { BorderBeam } from './ui/BorderBeam';
@@ -114,6 +114,14 @@ const Navbar = () => {
                   }`}
               >
                 <span>Student Plans</span>
+              </Link>
+
+              <Link
+                href="/university-finder"
+                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/university-finder') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                  }`}
+              >
+                <span>Universities</span>
               </Link>
 
               <Link
@@ -248,6 +256,22 @@ const Navbar = () => {
             >
               <Package size={18} className="mr-3" />
               Student Plans
+            </Link>
+            <Link
+              href="/university-finder"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
+            >
+              <GraduationCap size={18} className="mr-3" />
+              University Finder
+            </Link>
+            <Link
+              href="/resources"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
+            >
+              <BookOpen size={18} className="mr-3" />
+              Free Guides
             </Link>
             <Link
               href="/test-prep"
