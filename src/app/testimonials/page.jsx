@@ -204,16 +204,16 @@ export default function TestimonialsPage() {
             Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">globe.</span>
           </h1>
           <p className="text-xl md:text-2xl text-slate-300/90 max-w-3xl mx-auto leading-relaxed mb-10">
-            Real placements across {uniqueCountries}+ countries. Named students, signed declarations, verifiable visas.
+            Real placements across 29+ countries. Named students, signed declarations, verifiable visas.
           </p>
 
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="glass-storm py-4">
-              <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">{testimonials.length + recentPlacements.length}</div>
-              <div className="text-sky-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Real placements</div>
+              <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">500+</div>
+              <div className="text-sky-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Students placed</div>
             </div>
             <div className="glass-storm py-4">
-              <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">{uniqueCountries}+</div>
+              <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">29+</div>
               <div className="text-sky-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Countries</div>
             </div>
             <div className="glass-storm py-4">
@@ -257,11 +257,11 @@ export default function TestimonialsPage() {
               <div className="mt-6 pt-4 border-t border-white/10 grid grid-cols-2 gap-4 text-center">
                 <div className="glass-storm py-3">
                   <div className="text-2xl font-bold text-[var(--storm-electric)]">{testimonials.length}</div>
-                  <div className="text-sky-200/80 text-xs">Stories</div>
+                  <div className="text-sky-200/80 text-xs">Featured stories</div>
                 </div>
                 <div className="glass-storm py-3">
                   <div className="text-2xl font-bold text-[var(--storm-electric)]">{uniqueCountries}</div>
-                  <div className="text-sky-200/80 text-xs">Countries</div>
+                  <div className="text-sky-200/80 text-xs">On this page</div>
                 </div>
               </div>
             </div>
