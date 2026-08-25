@@ -46,6 +46,9 @@ const recentPlacements = [
   { name: 'Sai Krishna Penugonda', university: 'Karlsruhe Institute of Technology', course: 'MSc Productions and Operations Management', country: 'Germany', plan: 'ZTF', flag: '🇩🇪' },
 ];
 
+const GoogleReviewsFloat = dynamic(() => import('../../components/GoogleReviewsFloat'), { ssr: false });
+const GoogleReviewsSection = dynamic(() => import('../../components/GoogleReviewsSection'), { ssr: false });
+
 const TestimonialRealisticGlobe = dynamic(
   () => import('../../components/TestimonialRealisticGlobe'),
   {
@@ -519,6 +522,12 @@ export default function TestimonialsPage() {
           </div>
         </div>
       </section>
+
+      {/* Google Reviews — verified 3rd-party proof from Bilaspur branch */}
+      <GoogleReviewsSection />
+
+      {/* Floating Google Reviews badge — bottom-left to avoid WhatsApp widget */}
+      <GoogleReviewsFloat position="bottom-left" />
     </div>
   );
 }

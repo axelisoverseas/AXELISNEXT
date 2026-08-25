@@ -9,6 +9,8 @@ const InstagramSuccessStories = dynamic(() => import('../components/InstagramSuc
 const TeamGlobeCarousel = dynamic(() => import('../components/TeamGlobeCarousel'), { ssr: false });
 const StudyAbroadGuides = dynamic(() => import('../components/StudyAbroadGuides'), { ssr: false });
 const UniversityLogosSection = dynamic(() => import('../components/UniversityLogosSection'), { ssr: false });
+const GoogleReviewsFloat = dynamic(() => import('../components/GoogleReviewsFloat'), { ssr: false });
+const GoogleReviewsSection = dynamic(() => import('../components/GoogleReviewsSection'), { ssr: false });
 
 import { BorderBeam } from '../components/ui/BorderBeam';
 import { RevealText } from '../components/ui/RevealText';
@@ -509,6 +511,9 @@ export default function Home() {
       {/* University Portfolio — 100+ universities across 29 countries */}
       <UniversityLogosSection />
 
+      {/* Google Reviews — verified 3rd-party proof from Bilaspur branch */}
+      <GoogleReviewsSection compact />
+
       {/* Team Section */}
       <TeamGlobeCarousel teamMembers={teamMembers} />
 
@@ -599,6 +604,8 @@ export default function Home() {
         </motion.div>
       </section>
 
+      {/* Floating Google Reviews badge — bottom-left to avoid the WhatsApp widget */}
+      <GoogleReviewsFloat position="bottom-left" />
     </div>
   );
 }
