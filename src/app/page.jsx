@@ -11,6 +11,7 @@ const StudyAbroadGuides = dynamic(() => import('../components/StudyAbroadGuides'
 const UniversityLogosSection = dynamic(() => import('../components/UniversityLogosSection'), { ssr: false });
 const GoogleReviewsFloat = dynamic(() => import('../components/GoogleReviewsFloat'), { ssr: false });
 const GoogleReviewsSection = dynamic(() => import('../components/GoogleReviewsSection'), { ssr: false });
+const HomeCertificationsPreview = dynamic(() => import('../components/HomeCertificationsPreview'));
 
 import { BorderBeam } from '../components/ui/BorderBeam';
 import { RevealText } from '../components/ui/RevealText';
@@ -191,7 +192,7 @@ export default function Home() {
             className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mb-12"
           >
             {[
-              { Icon: Users, label: '5,000+ students' },
+              { Icon: Users, label: '500+ students' },
               { Icon: Globe, label: '29+ countries' },
               { Icon: Award, label: '₹3 Cr+ scholarships' },
               { Icon: ShieldCheck, label: '100% visa honesty' },
@@ -228,7 +229,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="text-white text-sm md:text-base text-center">
-              <span className="text-[var(--dawn-glow)] font-bold">5,000+ students</span> placed and on-ground.
+              <span className="text-[var(--dawn-glow)] font-bold">500+ students</span> placed and on-ground.
             </p>
           </motion.div>
         </motion.div>
@@ -270,7 +271,7 @@ export default function Home() {
               Every icon: gradient halo + circular ring + dark inner disc + amber bolt accent. */}
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              { icon: Users, value: '5,000+', label: 'Students Placed' },
+              { icon: Users, value: '500+', label: 'Students Placed' },
               { icon: Globe, value: '29+', label: 'Countries' },
               { icon: GraduationCap, value: '35,000+', label: 'Universities' },
               { icon: Award, value: '₹3+ Cr', label: 'Scholarships Won', gradient: true },
@@ -320,6 +321,9 @@ export default function Home() {
           </div>
         </motion.div>
       </section>
+
+      {/* Certifications preview — primary product line, delivers on the hero */}
+      <HomeCertificationsPreview />
 
       {/* Plans preview — GAC + EPC teaser, links to /products */}
       <section className="relative py-20 overflow-hidden">

@@ -296,7 +296,7 @@ const Navbar = () => {
               className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
             >
               <Award size={18} className="mr-3" />
-              Courses &amp; Certifications
+              Certifications
             </Link>
             <Link
               href="/accreditations"

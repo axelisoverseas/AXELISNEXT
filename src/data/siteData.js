@@ -31,8 +31,8 @@ export const features = [
   },
   {
     id: 3,
-    title: "5,000+ Students Sent",
-    description: "Successfully placed 5,000+ students across top universities worldwide, with 2025 applications now open.",
+    title: "500+ Students Sent",
+    description: "Successfully placed 500+ students across top universities worldwide, with 2025 applications now open.",
     icon: "👥"
   },
   {
@@ -268,7 +268,7 @@ export const faqData = [
   {
     id: 2,
     question: "Do you charge any fees for our services?",
-    answer: "We offer innovative pricing models designed to make study abroad accessible:\n\n**ZCF Student Plan (₹10,000):**\n• Pay only after receiving university offer\n• Complete application assistance\n• Visa guidance and documentation\n• No upfront fees required\n\n**ZTF Student Plan (₹10,000 + ₹1,65,000):**\n• Access to tuition-free universities\n• ₹10,000 initial investment\n• ₹1,65,000 only after admission confirmation\n• Save ₹80+ lakhs in tuition fees\n\n**Free Services Include:**\n• Initial consultation and profile assessment\n• University shortlisting recommendations\n• Basic application guidance\n• General study abroad information\n\nOur 'Pay After Results' model ensures you only invest when you see concrete outcomes. This risk-free approach has helped 5,000+ students achieve their study abroad dreams without financial stress.\n\n**Watch the detailed explanation:**\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n**Learn more:**\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
+    answer: "We offer innovative pricing models designed to make study abroad accessible:\n\n**ZCF Student Plan (₹10,000):**\n• Pay only after receiving university offer\n• Complete application assistance\n• Visa guidance and documentation\n• No upfront fees required\n\n**ZTF Student Plan (₹10,000 + ₹1,65,000):**\n• Access to tuition-free universities\n• ₹10,000 initial investment\n• ₹1,65,000 only after admission confirmation\n• Save ₹80+ lakhs in tuition fees\n\n**Free Services Include:**\n• Initial consultation and profile assessment\n• University shortlisting recommendations\n• Basic application guidance\n• General study abroad information\n\nOur 'Pay After Results' model ensures you only invest when you see concrete outcomes. This risk-free approach has helped 500+ students achieve their study abroad dreams without financial stress.\n\n**Watch the detailed explanation:**\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n**Learn more:**\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
     category: "Pricing",
     multimedia: {
       video: "https://youtu.be/I7EzLc62Y6c",
@@ -326,7 +326,7 @@ export const faqData = [
   {
     id: 10,
     question: "What makes Axelis different from other consultancies?",
-    answer: "Axelis stands out through our unique value propositions and proven track record:\n\n**Innovative Pricing Models:**\n• Pay After Offer - No upfront fees\n• ZCF Student Plan\n• ZTF Student Plan\n• Risk-free investment approach\n\n**Comprehensive Service Portfolio:**\n• 29+ destination countries\n• 35,000+ universities\n• 2000+ scholarship opportunities\n• 25+ loan provider partnerships\n• End-to-end support from application to settlement\n\n**Proven Success Metrics:**\n• 5,000+ students successfully placed\n• ₹3+ Cr in scholarships won\n• ₹30+ Cr in education loans facilitated\n• 95%+ visa approval rate\n• 85% scholarship success rate\n• ₹80+ lakhs saved through tuition-free programs\n\n**Technology-Driven Approach:**\n• Advanced university matching algorithms\n• Scholarship matching system\n• Application tracking platform\n• Digital document management\n\n**Expert Team:**\n• Experienced counsellors with international education backgrounds\n• Country-specific specialists\n• Visa experts with embassy connections\n• Alumni network for peer support\n\n**Unique Guarantees:**\n• Agent scholarships guaranteed across 1600+ universities\n• Visa approval guarantee (conditions apply)\n• Post-arrival support commitment\n• Transparent pricing with no hidden costs\n\n**Industry Partnerships:**\n• Direct university partnerships\n• Accommodation provider tie-ups\n• Financial institution collaborations\n• Professional service networks\n\nOur holistic approach, combined with innovative pricing and guaranteed results, makes us the preferred choice for ambitious students.",
+    answer: "Axelis stands out through our unique value propositions and proven track record:\n\n**Innovative Pricing Models:**\n• Pay After Offer - No upfront fees\n• ZCF Student Plan\n• ZTF Student Plan\n• Risk-free investment approach\n\n**Comprehensive Service Portfolio:**\n• 29+ destination countries\n• 35,000+ universities\n• 2000+ scholarship opportunities\n• 25+ loan provider partnerships\n• End-to-end support from application to settlement\n\n**Proven Success Metrics:**\n• 500+ students successfully placed\n• ₹3+ Cr in scholarships won\n• ₹30+ Cr in education loans facilitated\n• 95%+ visa approval rate\n• 85% scholarship success rate\n• ₹80+ lakhs saved through tuition-free programs\n\n**Technology-Driven Approach:**\n• Advanced university matching algorithms\n• Scholarship matching system\n• Application tracking platform\n• Digital document management\n\n**Expert Team:**\n• Experienced counsellors with international education backgrounds\n• Country-specific specialists\n• Visa experts with embassy connections\n• Alumni network for peer support\n\n**Unique Guarantees:**\n• Agent scholarships guaranteed across 1600+ universities\n• Visa approval guarantee (conditions apply)\n• Post-arrival support commitment\n• Transparent pricing with no hidden costs\n\n**Industry Partnerships:**\n• Direct university partnerships\n• Accommodation provider tie-ups\n• Financial institution collaborations\n• Professional service networks\n\nOur holistic approach, combined with innovative pricing and guaranteed results, makes us the preferred choice for ambitious students.",
     category: "About Us"
   },
   {
@@ -440,7 +440,7 @@ export const faqData = [
   {
     id: 28,
     question: "Is free study abroad consultation available in Bangalore?",
-    answer: "Yes! Axelis Overseas offers **completely free study abroad consultation** at our Bengaluru office and online:\n\n**What's Included in Our Free Consultation:**\n• Complete profile evaluation and career assessment\n• Country and university shortlisting based on your profile\n• Course selection guidance aligned with career goals\n• Scholarship eligibility check across 2000+ options\n• Budget planning and loan guidance\n• Visa probability assessment\n• Timeline planning for upcoming intakes\n\n**How to Book Your Free Consultation:**\n• **Online:** Book via Calendly at axelisoverseas.com\n• **Phone:** Call +91 9098522711\n• **WhatsApp:** Message us for instant response\n• **Walk-in:** Visit our office at WorkFlo Ranka Junction, KR Puram, Bengaluru\n\n**Office Hours:**\n• Monday - Friday: 9:00 AM - 6:00 PM\n• Saturday: 10:00 AM - 4:00 PM\n\n**Why It's Really Free:**\nUnlike other Bangalore consultancies that charge ₹5,000-₹50,000 for consultation, Axelis operates on a university-commission model. We earn from universities, not from students. This means our advice is genuinely unbiased.\n\nOver 5,000+ Bangalore students have benefited from our free consultation services.",
+    answer: "Yes! Axelis Overseas offers **completely free study abroad consultation** at our Bengaluru office and online:\n\n**What's Included in Our Free Consultation:**\n• Complete profile evaluation and career assessment\n• Country and university shortlisting based on your profile\n• Course selection guidance aligned with career goals\n• Scholarship eligibility check across 2000+ options\n• Budget planning and loan guidance\n• Visa probability assessment\n• Timeline planning for upcoming intakes\n\n**How to Book Your Free Consultation:**\n• **Online:** Book via Calendly at axelisoverseas.com\n• **Phone:** Call +91 9098522711\n• **WhatsApp:** Message us for instant response\n• **Walk-in:** Visit our office at WorkFlo Ranka Junction, KR Puram, Bengaluru\n\n**Office Hours:**\n• Monday - Friday: 9:00 AM - 6:00 PM\n• Saturday: 10:00 AM - 4:00 PM\n\n**Why It's Really Free:**\nUnlike other Bangalore consultancies that charge ₹5,000-₹50,000 for consultation, Axelis operates on a university-commission model. We earn from universities, not from students. This means our advice is genuinely unbiased.\n\nOver 500+ Bangalore students have benefited from our free consultation services.",
     category: "Bangalore"
   },
   {
@@ -992,7 +992,7 @@ export const productBenefits = [
   {
     id: 3,
     title: "Expert Guidance",
-    description: "Work with experienced counsellors who have helped 5,000+ students.",
+    description: "Work with experienced counsellors who have helped 500+ students.",
     icon: "👨‍🎓"
   },
   {
