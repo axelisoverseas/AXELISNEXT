@@ -12,6 +12,7 @@ const UniversityLogosSection = dynamic(() => import('../components/UniversityLog
 const GoogleReviewsFloat = dynamic(() => import('../components/GoogleReviewsFloat'), { ssr: false });
 const GoogleReviewsSection = dynamic(() => import('../components/GoogleReviewsSection'), { ssr: false });
 const HomeCertificationsPreview = dynamic(() => import('../components/HomeCertificationsPreview'));
+import HeroOrbitalBackdrop from '../components/HeroOrbitalBackdrop';
 
 import { BorderBeam } from '../components/ui/BorderBeam';
 import { RevealText } from '../components/ui/RevealText';
@@ -106,23 +107,7 @@ export default function Home() {
     <div className="min-h-screen overflow-hidden">
       {/* HERO — clean, no lightning, no audio. Subtle study-abroad photo backdrop. */}
       <section className="relative pt-28 lg:pt-36 pb-24 overflow-hidden">
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          {/* Background photo — Unsplash student-on-campus, heavily darkened */}
-          <img
-            src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=2400&q=80&auto=format&fit=crop"
-            alt=""
-            aria-hidden="true"
-            loading="eager"
-            fetchPriority="high"
-            className="absolute inset-0 w-full h-full object-cover"
-          />
-          {/* Top/bottom fades only — middle stays clear so the photo is fully visible behind the text */}
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
-          {/* Subtle radial vignette behind the H1 region only — keeps headline contrast without flattening the photo */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.65)_0%,transparent_75%)]" />
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
-        </div>
+        <HeroOrbitalBackdrop />
 
         <motion.div
           initial="hidden"
