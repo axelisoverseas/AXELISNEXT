@@ -9,7 +9,8 @@ import { usePathname } from 'next/navigation';
 const WhatsAppWidget = dynamic(() => import('./WhatsAppWidget'), { ssr: false });
 import {
   Menu, X, Phone, Mail, Home, Package, MessageCircle,
-  Users, ExternalLink, Globe2, Award, HelpCircle, GraduationCap, BookOpen
+  Users, ExternalLink, Globe2, Award, HelpCircle, GraduationCap, BookOpen,
+  BadgeCheck
 } from 'lucide-react';
 import { siteInfo } from '../data/siteData';
 import { BorderBeam } from './ui/BorderBeam';
@@ -179,7 +180,7 @@ const Navbar = () => {
                 href="/bookings"
                 className="relative overflow-hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
               >
-                <span className="relative z-10">Apply Now</span>
+                <span className="relative z-10">Book a Discovery Call</span>
                 <BorderBeam size={80} duration={7} colorFrom="#7CC8FF" colorTo="#F5B877" />
               </Link>
               <button
@@ -295,7 +296,15 @@ const Navbar = () => {
               className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
             >
               <Award size={18} className="mr-3" />
-              Certifications
+              Courses &amp; Certifications
+            </Link>
+            <Link
+              href="/accreditations"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
+            >
+              <BadgeCheck size={18} className="mr-3" />
+              Accreditations
             </Link>
             <Link
               href="/scholarships"
@@ -345,7 +354,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="relative overflow-hidden block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-[0_0_40px_-10px_var(--storm-accent-glow)]"
             >
-              <span className="relative z-10">Apply Now</span>
+              <span className="relative z-10">Book a Discovery Call</span>
               <BorderBeam size={120} duration={8} colorFrom="#7CC8FF" colorTo="#F5B877" />
             </Link>
             <div>

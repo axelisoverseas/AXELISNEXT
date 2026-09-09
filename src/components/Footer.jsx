@@ -13,7 +13,7 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-[var(--storm-electric)]/10 mb-12 gap-6">
           <p className="text-sm font-semibold text-slate-500 uppercase tracking-widest">Certified by independent bodies</p>
-          <Link href="/certifications" className="flex flex-wrap justify-center items-center gap-8 opacity-80 hover:opacity-100 transition-all duration-300 group">
+          <Link href="/accreditations" className="flex flex-wrap justify-center items-center gap-8 opacity-80 hover:opacity-100 transition-all duration-300 group">
             <img src="/logos/dppit logo.png" alt="DPIIT Startup India" className="h-8 object-contain" />
             <img src="/trust-badges/british-council-logo.webp" alt="British Council" className="h-6 object-contain" />
             <img src="/logos/Airc-logo-full-color-centered-LG.jpg" alt="AIRC" className="h-8 rounded-sm object-contain" />
@@ -133,10 +133,27 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Company statement */}
+        <div className="border-t border-[var(--storm-electric)]/10 mt-12 pt-8">
+          <p className="text-sm text-slate-400 leading-relaxed max-w-4xl">
+            <span className="text-slate-200 font-semibold">Axelis Overseas Education Pvt Ltd</span>
+            {' '}&mdash; Bengaluru &amp; Bilaspur. India&rsquo;s certification-first study-abroad platform.
+            16 certification programmes. Zero-Tuition-Fee (ZTF) Charter agency.
+          </p>
+        </div>
+
+        {/* Legal / corporate strip */}
+        <div className="mt-6 pt-6 border-t border-[var(--storm-electric)]/10">
+          <p className="text-[11px] text-slate-500 leading-relaxed">
+            CIN U85500CT2023PTC014913 &middot; MCC 8299 (Educational Services) &middot;
+            Registered under the Companies Act 2013 in the Republic of India.
+          </p>
+        </div>
+
         {/* Bottom Bar */}
-        <div className="border-t border-[var(--storm-electric)]/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} {siteInfo.name}. All rights reserved.</p>
-          <p>Built with Next.js</p>
+        <div className="border-t border-[var(--storm-electric)]/10 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+          <p>&copy; {new Date().getFullYear()} {siteInfo.name}. All rights reserved.</p>
+          <p>Bengaluru &middot; Bilaspur</p>
         </div>
       </div>
     </footer>

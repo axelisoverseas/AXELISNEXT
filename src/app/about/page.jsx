@@ -106,6 +106,21 @@ export default function AboutPage() {
                 </div>
             </section>
 
+            {/* Scale & Scope */}
+            <section className="py-20 bg-white border-t border-slate-200">
+                <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-5">
+                        Scale and scope
+                    </h2>
+                    <p className="text-lg text-slate-600 leading-relaxed">
+                        Axelis operates from a Bengaluru corporate office (WorkFlo, KR Puram Hobli) with a registered
+                        office in Bilaspur. The company is scaling to serve 5,000 to 10,000 learners per year across
+                        16 certification programmes, 29 study-abroad destination markets, and an in-house language and
+                        application coaching faculty.
+                    </p>
+                </div>
+            </section>
+
             {/* Mission & Vision Section */}
             <section className="py-24 bg-slate-50 border-t border-slate-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -167,7 +182,7 @@ export default function AboutPage() {
             </section>
 
             {/* Clean Final CTA */}
-            <section className="py-32 bg-slate-900 text-center border-t border-slate-800">
+            <section className="py-32 bg-slate-900 text-center border-t border-slate-800" data-section="cta">
                 <div className="max-w-3xl mx-auto px-4">
                     <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl font-extrabold text-white mb-6 tracking-tight">Ready to Transform Your Future?</TextEffectInView>
                     <p className="text-lg text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
@@ -184,6 +199,17 @@ export default function AboutPage() {
                             <BorderBeam size={140} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />
                         </a>
                     </div>
+                </div>
+            </section>
+
+            {/* Legal / corporate strip */}
+            <section className="py-8 bg-slate-950 border-t border-slate-800">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <p className="text-xs text-slate-500 text-center leading-relaxed">
+                        Axelis Overseas Education Pvt Ltd &mdash; CIN U85500CT2023PTC014913 &mdash;
+                        MCC 8299 (Educational Services) &mdash; Registered under the Companies Act 2013
+                        in the Republic of India.
+                    </p>
                 </div>
             </section>
 

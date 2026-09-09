@@ -18,9 +18,9 @@ export const metadata = {
   },
   title: {
     template: '%s | Axelis Overseas Education',
-    default: 'Axelis Overseas | Study Abroad Consultancy for 29 Countries',
+    default: 'Axelis Overseas — Certification-first Study Abroad | 16 Programmes | EMI Available',
   },
-  description: "India's trusted study abroad consultancy. Explore 900+ universities across 29 countries, with guaranteed admissions, visa support and zero-tuition options. Book a free consultation.",
+  description: "India's certification-first study-abroad platform. Sixteen programmes across four tiers, from ₹4,000 to ₹3,00,000. EMI available. Bengaluru + Bilaspur.",
   keywords: [
     "study abroad", "overseas education", "study abroad consultancy India",
     "study in UK", "study in USA", "study in Ireland", "study in Germany",
@@ -30,6 +30,9 @@ export const metadata = {
     "education loan abroad", "scholarship abroad", "zero tuition university",
     "Student Plans", "Axelis Overseas", "overseeducation",
     "best study abroad consultant Bengaluru", "study abroad consultant India",
+    "study abroad certification", "application coaching certificate",
+    "German CEFR B1 India", "French CEFR B1 India", "Executive MBA application coaching",
+    "PhD application coaching India", "study abroad course EMI", "certification programmes India",
   ],
   authors: [{ name: 'Axelis Overseas Education' }],
   creator: 'Axelis Overseas Education',
@@ -38,8 +41,8 @@ export const metadata = {
     canonical: 'https://overseeducation.com',
   },
   openGraph: {
-    title: 'Axelis Overseas — Study Abroad Consultancy for 29 Countries',
-    description: 'We guide Indian students to their dream university with guaranteed admission and high visa success rates. Zero tuition & zero consultation fee options available.',
+    title: 'Axelis Overseas — Certification-first Study Abroad | 16 Programmes',
+    description: 'Sixteen certification programmes across four tiers, from ₹4,000 to ₹3,00,000. Application coaching, languages to CEFR B1, executive MBA and PhD support. EMI available.',
     url: 'https://overseeducation.com',
     siteName: 'Axelis Overseas Education',
     locale: 'en_IN',
@@ -55,8 +58,8 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axelis Overseas | Study Abroad Across 29 Countries',
-    description: 'India\'s trusted study abroad consultancy. Guaranteed admissions, visa support, zero tuition options.',
+    title: 'Axelis Overseas — Certification-first Study Abroad',
+    description: 'Sixteen certification programmes, four tiers, EMI available. Bengaluru + Bilaspur.',
     images: ['/og-image.jpg'],
   },
   robots: {

@@ -33,12 +33,12 @@ const howItWorks = [
   {
     Icon: GraduationCap,
     title: 'Applications + offers',
-    body: 'University shortlist, SOP/LOR, applications. We don&rsquo;t guess; every shortlist is built around your profile and budget.',
+    body: 'University shortlist, SOP/LOR, applications. We do not guess; every shortlist is built around your profile and budget.',
   },
   {
     Icon: Plane,
     title: 'Visa + landing',
-    body: 'End-to-end visa file, mock interview, accommodation handover, and a counsellor on call until you&rsquo;ve started classes.',
+    body: 'End-to-end visa file, mock interview, accommodation handover, and a counsellor on call until you have started classes.',
   },
 ];
 
@@ -127,7 +127,7 @@ function ProductsContent() {
             <p className="text-xs uppercase tracking-[0.25em] text-slate-400 font-semibold">
               Certified by independent bodies
             </p>
-            <Link href="/certifications" className="flex flex-wrap items-center gap-8 opacity-80 hover:opacity-100 transition-opacity group">
+            <Link href="/accreditations" className="flex flex-wrap items-center gap-8 opacity-80 hover:opacity-100 transition-opacity group">
               <img src="/logos/dppit logo.png" alt="DPIIT Startup India" className="h-7 object-contain" />
               <img src="/trust-badges/british-council-logo.webp" alt="British Council" className="h-5 object-contain" />
               <img src="/logos/Airc-logo-full-color-centered-LG.jpg" alt="AIRC" className="h-7 rounded-sm object-contain" />

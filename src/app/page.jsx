@@ -133,9 +133,9 @@ export default function Home() {
             variants={fadeInUp}
             className="text-4xl md:text-7xl font-extrabold text-white tracking-tight mb-6 max-w-5xl mx-auto"
           >
-            Your gateway to{' '}
+            India&rsquo;s certification-first{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
-              global education.
+              study-abroad platform.
             </span>
           </motion.h1>
 
@@ -143,7 +143,8 @@ export default function Home() {
             variants={fadeInUp}
             className="text-lg md:text-xl text-slate-300/90 max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            End-to-end study abroad guidance across <strong className="text-white">29+ countries</strong> including the UK, USA, Canada, Ireland and Finland. Honest counselling, transparent fees, real placements.
+            Sixteen certification programmes. Application coaching, languages, executive MBA prep, PhD and fellowship
+            applications, career launch. Every student earns a verifiable credential on the way to their offer letter.
           </motion.p>
 
           <motion.div
@@ -151,18 +152,38 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
             <Link
-              href="/bookings"
+              href="/certifications"
               className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
-              Book a free consultation
+              Explore Certifications
               <ArrowRight className="ml-2" size={20} />
             </Link>
             <Link
-              href="/testimonials"
+              href="/bookings"
               className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--storm-electric)]"
             >
-              See student stories
+              Book a Discovery Call
             </Link>
+          </motion.div>
+
+          <motion.div
+            variants={fadeInUp}
+            className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 max-w-4xl mx-auto mb-10 text-sm"
+          >
+            {[
+              '16 Programmes',
+              '4 Tiers',
+              '5,000+ Learners Targeted Annually',
+              '₹2L Avg Ticket',
+              'No-cost EMI',
+            ].map((stat, i, arr) => (
+              <React.Fragment key={stat}>
+                <span className="text-slate-200 font-semibold">{stat}</span>
+                {i < arr.length - 1 && (
+                  <span aria-hidden="true" className="text-[var(--storm-electric)]/60">&middot;</span>
+                )}
+              </React.Fragment>
+            ))}
           </motion.div>
 
           <motion.div

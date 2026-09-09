@@ -1,3 +1,5 @@
+import { programs } from '../data/certificationPrograms';
+
 const BASE_URL = 'https://overseeducation.com';
 
 export default function sitemap() {
@@ -17,7 +19,8 @@ export default function sitemap() {
     { url: `${BASE_URL}/portal`, changeFrequency: 'weekly', priority: 0.6 },
     { url: `${BASE_URL}/faq`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/testimonials`, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${BASE_URL}/certifications`, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/certifications`, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/accreditations`, changeFrequency: 'monthly', priority: 0.6 },
   ].map((page) => ({ ...page, lastModified: now }));
 
   const countryGuides = [
@@ -31,5 +34,12 @@ export default function sitemap() {
     priority: 0.8,
   }));
 
-  return [...corePages, ...countryGuides];
+  const certificationPages = programs.map((program) => ({
+    url: `${BASE_URL}/certifications/${program.slug}`,
+    lastModified: now,
+    changeFrequency: 'weekly',
+    priority: 0.85,
+  }));
+
+  return [...corePages, ...certificationPages, ...countryGuides];
 }
