@@ -54,11 +54,11 @@ const LeadDashboard = () => {
 
   const getStatusColor = (status) => {
     switch (status) {
-      case 'contacted': return 'bg-blue-100 text-blue-800';
+      case 'contacted': return 'bg-stone-100 text-stone-900';
       case 'qualified': return 'bg-green-100 text-green-800';
       case 'converted': return 'bg-purple-100 text-purple-800';
       case 'not_interested': return 'bg-red-100 text-red-800';
-      default: return 'bg-cyan-100 text-cyan-800';
+      default: return 'bg-stone-100 text-stone-900';
     }
   };
 
@@ -79,7 +79,7 @@ const LeadDashboard = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="bg-white rounded-lg shadow p-6">
             <div className="flex items-center">
-              <Users className="h-8 w-8 text-blue-600" />
+              <Users className="h-8 w-8 text-stone-900" />
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Total Leads</p>
                 <p className="text-2xl font-bold text-gray-900">{totalLeads}</p>
@@ -99,7 +99,7 @@ const LeadDashboard = () => {
 
           <div className="bg-white rounded-lg shadow p-6">
             <div className="flex items-center">
-              <TrendingUp className="h-8 w-8 text-blue-600" />
+              <TrendingUp className="h-8 w-8 text-stone-900" />
               <div className="ml-4">
                 <p className="text-sm font-medium text-gray-600">Success Rate</p>
                 <p className="text-2xl font-bold text-gray-900">{whatsappSuccess}%</p>
@@ -128,7 +128,7 @@ const LeadDashboard = () => {
 
           {loading ? (
             <div className="p-8 text-center">
-              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+              <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-stone-900 mx-auto"></div>
               <p className="mt-2 text-gray-600">Loading leads...</p>
             </div>
           ) : (
@@ -200,7 +200,7 @@ const LeadDashboard = () => {
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium">
                         <button
                           onClick={() => setSelectedLead(lead)}
-                          className="text-blue-600 hover:text-blue-900 mr-3"
+                          className="text-stone-900 hover:text-stone-900 mr-3"
                         >
                           <Edit className="h-4 w-4" />
                         </button>

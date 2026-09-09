@@ -225,7 +225,7 @@ export default function AccommodationPage() {
                                 />
                             </div>
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--storm-electric)] to-blue-500 rounded-2xl flex items-center justify-center text-[var(--storm-deep)]" aria-hidden="true"><Building2 size={30} strokeWidth={2} /></div>
+                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--storm-electric)] to-stone-700 rounded-2xl flex items-center justify-center text-[var(--storm-deep)]" aria-hidden="true"><Building2 size={30} strokeWidth={2} /></div>
                                 <div>
                                     <h3 className="text-2xl font-bold text-white">Purpose Built (PBSA)</h3>
                                     <span className="text-sm font-semibold text-[var(--storm-electric)] bg-[var(--storm-electric)]/10 px-3 py-1 rounded-full border border-[var(--storm-electric)]/30 inline-block mt-1">£150 &ndash; £350 / week</span>

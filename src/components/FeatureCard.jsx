@@ -72,7 +72,7 @@ const FeatureCard = ({ feature, className = "", index = 0 }) => {
           >
             {feature.icon}
           </div>
-          <h3 className="text-xl font-bold text-black mb-3 group-hover:text-blue-600 transition-colors">
+          <h3 className="text-xl font-bold text-black mb-3 group-hover:text-stone-900 transition-colors">
             {feature.title}
           </h3>
           <p className="text-gray-600 leading-relaxed text-sm">

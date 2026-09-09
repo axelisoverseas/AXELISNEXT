@@ -79,7 +79,7 @@ const WhatsAppTest = () => {
           <button
             onClick={sendCustomMessage}
             disabled={sendingCustom || !customMessage.trim()}
-            className="w-full mt-2 px-3 py-1 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white rounded text-sm flex items-center justify-center"
+            className="w-full mt-2 px-3 py-1 bg-stone-900 hover:bg-stone-950 disabled:bg-gray-400 text-white rounded text-sm flex items-center justify-center"
           >
             {sendingCustom ? (
               <>

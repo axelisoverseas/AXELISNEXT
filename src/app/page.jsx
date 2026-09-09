@@ -351,7 +351,7 @@ export default function Home() {
               <div className="flex items-baseline justify-between">
                 <div>
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[var(--storm-electric)] font-bold">Most popular</span>
-                  <h3 className="text-2xl font-extrabold text-white mt-1">Global Admissions Charter <span className="text-sm font-semibold text-sky-200/80">(GAC)</span></h3>
+                  <h3 className="text-2xl font-extrabold text-white mt-1">Global Admissions Charter <span className="text-sm font-semibold text-stone-200/80">(GAC)</span></h3>
                 </div>
                 <span className="text-3xl font-extrabold text-white">₹9,999</span>
               </div>
@@ -379,7 +379,7 @@ export default function Home() {
               <div className="flex items-baseline justify-between">
                 <div>
                   <span className="text-[10px] uppercase tracking-[0.2em] text-[var(--dawn-glow)] font-bold">Tuition-free Europe</span>
-                  <h3 className="text-2xl font-extrabold text-white mt-1">Europe Public Charter <span className="text-sm font-semibold text-sky-200/80">(EPC)</span></h3>
+                  <h3 className="text-2xl font-extrabold text-white mt-1">Europe Public Charter <span className="text-sm font-semibold text-stone-200/80">(EPC)</span></h3>
                 </div>
                 <span className="text-3xl font-extrabold text-white">₹19,999</span>
               </div>

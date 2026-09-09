@@ -114,7 +114,7 @@ function TestimonialCard({ testimonial, index, onCountryFocus }) {
               <h3 className={`text-lg font-bold mb-1 transition-colors ${isExpanded ? 'text-white' : 'text-[var(--storm-electric)]'}`}>
                 {testimonial.name}
               </h3>
-              <div className="flex items-center text-sky-200/85 text-sm mb-1">
+              <div className="flex items-center text-stone-200/85 text-sm mb-1">
                 <GraduationCap className="w-4 h-4 mr-1.5" />
                 <span>{testimonial.course}</span>
               </div>
@@ -139,7 +139,7 @@ function TestimonialCard({ testimonial, index, onCountryFocus }) {
           </div>
 
           {!isExpanded && testimonial.content.length > 100 && (
-            <div className="text-sky-300/70 text-xs mt-2">Hover to read more</div>
+            <div className="text-stone-300/70 text-xs mt-2">Hover to read more</div>
           )}
         </div>
       </div>
@@ -213,15 +213,15 @@ export default function TestimonialsPage() {
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">500+</div>
-              <div className="text-sky-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Students placed</div>
+              <div className="text-stone-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Students placed</div>
             </div>
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">29+</div>
-              <div className="text-sky-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Countries</div>
+              <div className="text-stone-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Countries</div>
             </div>
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--dawn-glow)]">100%</div>
-              <div className="text-sky-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Visa success</div>
+              <div className="text-stone-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Visa success</div>
             </div>
           </div>
         </div>
@@ -243,7 +243,7 @@ export default function TestimonialsPage() {
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
                   Real student <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">experiences</span>
                 </h2>
-                <p className="text-sky-200/80 text-sm">Hover a card to rotate the globe to that country.</p>
+                <p className="text-stone-200/80 text-sm">Hover a card to rotate the globe to that country.</p>
               </div>
 
               <div className="testimonial-scroller space-y-4 max-h-[640px] overflow-y-auto pr-2 scrollbar-thin">
@@ -260,11 +260,11 @@ export default function TestimonialsPage() {
               <div className="mt-6 pt-4 border-t border-white/10 grid grid-cols-2 gap-4 text-center">
                 <div className="glass-storm py-3">
                   <div className="text-2xl font-bold text-[var(--storm-electric)]">{testimonials.length}</div>
-                  <div className="text-sky-200/80 text-xs">Featured stories</div>
+                  <div className="text-stone-200/80 text-xs">Featured stories</div>
                 </div>
                 <div className="glass-storm py-3">
                   <div className="text-2xl font-bold text-[var(--storm-electric)]">{uniqueCountries}</div>
-                  <div className="text-sky-200/80 text-xs">On this page</div>
+                  <div className="text-stone-200/80 text-xs">On this page</div>
                 </div>
               </div>
             </div>
@@ -312,7 +312,7 @@ export default function TestimonialsPage() {
                 <div className="pt-4 flex items-start justify-between gap-3">
                   <div>
                     <h3 className="text-white font-bold text-lg">{v.name}</h3>
-                    <p className="text-sky-200/85 text-sm">{v.course}</p>
+                    <p className="text-stone-200/85 text-sm">{v.course}</p>
                     <p className="text-white/70 text-sm">{v.university}</p>
                   </div>
                   <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold whitespace-nowrap">
@@ -350,7 +350,7 @@ export default function TestimonialsPage() {
                       {p.plan}
                     </span>
                   </div>
-                  <p className="text-sky-200/85 text-sm mb-1 leading-snug">{p.course}</p>
+                  <p className="text-stone-200/85 text-sm mb-1 leading-snug">{p.course}</p>
                   <p className="text-white/70 text-xs mb-2 leading-snug">{p.university}</p>
                   <div className="inline-flex items-center gap-1.5 text-emerald-300 text-xs font-semibold">
                     <BadgeCheck className="w-3.5 h-3.5" />
@@ -400,7 +400,7 @@ export default function TestimonialsPage() {
                       loading="lazy"
                     />
                   </div>
-                  <p className={`mt-2 text-center text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-sky-300'}`}>
+                  <p className={`mt-2 text-center text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-stone-300'}`}>
                     <BadgeCheck className="w-3 h-3" />
                     {item.cap}
                   </p>

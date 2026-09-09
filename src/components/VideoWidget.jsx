@@ -101,7 +101,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700">
         <div className="flex items-center mb-4">
-          <Youtube className="text-blue-600 mr-2" size={20} />
+          <Youtube className="text-stone-900 mr-2" size={20} />
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
         </div>
         
@@ -147,7 +147,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
                   <span>{video.publishedAt}</span>
                 </div>
                 <button
-                  className="mt-2 bg-blue-500 hover:bg-blue-600 text-white px-2 py-1 rounded text-xs transition-colors"
+                  className="mt-2 bg-stone-700 hover:bg-stone-900 text-white px-2 py-1 rounded text-xs transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     openVideoOnYouTube(video);

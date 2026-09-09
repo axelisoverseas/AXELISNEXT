@@ -62,10 +62,10 @@ const PLAN_CONFIG = {
         image:
           'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop',
         colors: {
-          gradient: 'from-blue-600 to-indigo-900',
-          glow: 'bg-blue-500',
-          bar: 'bg-blue-500',
-          accent: 'text-blue-300',
+          gradient: 'from-stone-900 to-stone-900',
+          glow: 'bg-stone-700',
+          bar: 'bg-stone-700',
+          accent: 'text-stone-300',
         },
         stats: { status: 'Active Dossier', headline: '500+ Students Placed' },
         features: [
@@ -83,10 +83,10 @@ const PLAN_CONFIG = {
         image:
           'https://images.unsplash.com/photo-1627556704302-624286467c65?q=80&w=1200&auto=format&fit=crop',
         colors: {
-          gradient: 'from-cyan-500 to-sky-900',
-          glow: 'bg-cyan-400',
-          bar: 'bg-cyan-400',
-          accent: 'text-cyan-300',
+          gradient: 'from-stone-700 to-stone-900',
+          glow: 'bg-white',
+          bar: 'bg-white',
+          accent: 'text-stone-300',
         },
         stats: { status: 'Secured', headline: '₹3+ Cr Scholarships' },
         features: [
@@ -136,10 +136,10 @@ const PLAN_CONFIG = {
         image:
           'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?q=80&w=1200&auto=format&fit=crop',
         colors: {
-          gradient: 'from-cyan-500 to-sky-900',
-          glow: 'bg-cyan-400',
-          bar: 'bg-cyan-400',
-          accent: 'text-cyan-300',
+          gradient: 'from-stone-700 to-stone-900',
+          glow: 'bg-white',
+          bar: 'bg-white',
+          accent: 'text-stone-300',
         },
         stats: { status: 'Application Track', headline: '100% Tuition-Free Placements' },
         features: [
@@ -157,10 +157,10 @@ const PLAN_CONFIG = {
         image:
           'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
         colors: {
-          gradient: 'from-blue-600 to-indigo-900',
-          glow: 'bg-blue-500',
-          bar: 'bg-blue-500',
-          accent: 'text-blue-300',
+          gradient: 'from-stone-900 to-stone-900',
+          glow: 'bg-stone-700',
+          bar: 'bg-stone-700',
+          accent: 'text-stone-300',
         },
         stats: { status: 'Relocation Kit', headline: 'Housing · Visa · Part-time' },
         features: [
@@ -389,21 +389,21 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
 
   const flagPillClass =
     plan === 'ztf'
-      ? 'bg-cyan-500/10 text-cyan-100 border-cyan-400/20 hover:bg-cyan-500/15'
-      : 'bg-blue-500/10 text-blue-100 border-blue-400/20 hover:bg-blue-500/15';
+      ? 'bg-stone-700/10 text-stone-100 border-white/20 hover:bg-stone-700/15'
+      : 'bg-stone-700/10 text-stone-100 border-white/20 hover:bg-stone-700/15';
 
   const discountPillClass =
     plan === 'ztf'
-      ? 'bg-cyan-500/15 text-cyan-300 border-cyan-400/30'
+      ? 'bg-stone-700/15 text-stone-300 border-white/30'
       : 'bg-rose-500/15 text-rose-200 border-rose-400/30';
 
   const badgePillClass =
     plan === 'ztf'
-      ? 'bg-gradient-to-r from-blue-600 to-cyan-500 text-white'
-      : 'bg-blue-500/15 text-blue-200 border border-blue-400/30';
+      ? 'bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white'
+      : 'bg-stone-700/15 text-stone-200 border border-white/30';
 
   const featureDotClass =
-    plan === 'ztf' ? 'bg-cyan-400/20 text-cyan-300' : 'bg-blue-500/20 text-blue-300';
+    plan === 'ztf' ? 'bg-white/20 text-stone-300' : 'bg-stone-700/20 text-stone-300';
 
   const shortCode = (name) =>
     name === 'United Kingdom' ? 'UK' : name === 'United States' ? 'USA' : name;
@@ -419,7 +419,7 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
       <div
         aria-hidden
         className={`absolute top-0 left-0 w-full h-0.5 bg-gradient-to-r ${
-          plan === 'ztf' ? 'from-blue-500 to-cyan-400' : 'from-blue-600 to-cyan-500'
+          plan === 'ztf' ? 'from-stone-700 to-white' : 'from-[var(--storm-accent)] to-[var(--dawn-glow)]'
         }`}
       />
       <div className={`absolute top-0 right-0 px-5 py-2.5 rounded-bl-2xl font-bold text-sm tracking-wide shadow-lg ${badgePillClass}`}>
@@ -524,12 +524,12 @@ export default function SpatialPlanShowcase({ plan = 'zcf' }) {
   const rightColor = plan === 'ztf' ? 'rgba(59,130,246,0.18)' : 'rgba(34,211,238,0.18)';
 
   const accentGradient =
-    plan === 'ztf' ? 'from-cyan-300 to-blue-400' : 'from-blue-400 to-cyan-300';
+    plan === 'ztf' ? 'from-stone-300 to-white' : 'from-white to-stone-300';
 
   const eyebrowClass =
     plan === 'ztf'
-      ? 'bg-cyan-500/10 text-cyan-300 border-cyan-500/20'
-      : 'bg-blue-500/10 text-blue-300 border-blue-500/20';
+      ? 'bg-stone-700/10 text-stone-300 border-stone-700/20'
+      : 'bg-stone-700/10 text-stone-300 border-stone-700/20';
 
   const options = facetKeys.map((k) => ({ id: k, label: config.facets[k].label }));
 

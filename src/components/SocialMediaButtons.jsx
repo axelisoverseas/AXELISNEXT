@@ -13,28 +13,28 @@ const SocialMediaButtons = ({
       url: 'https://www.facebook.com/profile.php?id=61552129672233',
       icon: Facebook,
       label: 'Follow on Facebook',
-      color: 'bg-blue-600 hover:bg-blue-700',
+      color: 'bg-stone-900 hover:bg-stone-950',
       textColor: 'text-white'
     },
     instagram: {
       url: 'https://www.instagram.com/axelis_overseas/',
       icon: Instagram,
       label: 'Follow on Instagram',
-      color: 'bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600',
+      color: 'bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:from-stone-900 hover:to-stone-800',
       textColor: 'text-white'
     },
     linkedin: {
       url: 'https://www.linkedin.com/company/axelis-overseas/',
       icon: Linkedin,
       label: 'Follow on LinkedIn',
-      color: 'bg-blue-700 hover:bg-blue-800',
+      color: 'bg-stone-950 hover:bg-stone-900',
       textColor: 'text-white'
     },
     youtube: {
       url: 'https://www.youtube.com/@axelisoverseas',
       icon: Youtube,
       label: 'Subscribe on YouTube',
-      color: 'bg-blue-600 hover:bg-blue-700',
+      color: 'bg-stone-900 hover:bg-stone-950',
       textColor: 'text-white'
     }
   };
@@ -119,7 +119,7 @@ const SocialMediaButtons = ({
 export const SocialMediaCTA = ({ className = '' }) => (
   <div className={`text-center ${className}`}>
     <h3 className="text-2xl font-bold text-slate-900 mb-4">
-      Stay Connected with <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Axelis Overseas</span>
+      Stay Connected with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">Axelis Overseas</span>
     </h3>
     <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
       Follow us for the latest updates on study abroad opportunities, student success stories, and expert guidance

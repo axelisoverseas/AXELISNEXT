@@ -22,7 +22,7 @@ export default function AboutPage() {
             {/* Hero Section */}
             <section className="relative pt-24 pb-16 bg-slate-900 overflow-hidden border-b border-slate-800">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-stone-900/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
                 <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     {/* Minimal Logo Integration */}
@@ -37,7 +37,7 @@ export default function AboutPage() {
                     </div>
                     <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
                         <TextEffect as="span" per="word" preset="blur">About</TextEffect>{' '}
-                        <span className="text-blue-400">
+                        <span className="text-white">
                             <TextEffect as="span" per="char" preset="blur" delay={0.25}>Axelis Overseas</TextEffect>
                         </span>
                     </h1>
@@ -78,8 +78,8 @@ export default function AboutPage() {
                             {/* Minimal Grid Stats Moved Under Text */}
                             <div className="grid grid-cols-2 gap-4 mt-8">
                                 {stats.map((stat, idx) => (
-                                    <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 px-4 py-8 text-center hover:bg-white hover:border-blue-200 transition-colors shadow-sm hover:shadow-md">
-                                        <div className="mx-auto mb-3 text-blue-600 flex justify-center">
+                                    <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 px-4 py-8 text-center hover:bg-white hover:border-stone-200 transition-colors shadow-sm hover:shadow-md">
+                                        <div className="mx-auto mb-3 text-stone-900 flex justify-center">
                                             {stat.icon}
                                         </div>
                                         <div className="text-2xl font-extrabold text-slate-900 mb-1">{stat.value}</div>
@@ -128,7 +128,7 @@ export default function AboutPage() {
                         {/* Mission Card */}
                         <div className="bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-slate-200">
                             <div className="flex items-center gap-4 mb-8">
-                                <div className="w-14 h-14 bg-blue-50 text-blue-600 flex items-center justify-center rounded-xl p-3 shrink-0">
+                                <div className="w-14 h-14 bg-stone-50 text-stone-900 flex items-center justify-center rounded-xl p-3 shrink-0">
                                     <Target size={28} />
                                 </div>
                                 <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Our Mission</h3>
@@ -142,7 +142,7 @@ export default function AboutPage() {
                         {/* Vision Card */}
                         <div className="bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-slate-200">
                             <div className="flex items-center gap-4 mb-8">
-                                <div className="w-14 h-14 bg-blue-50 text-blue-600 flex items-center justify-center rounded-xl p-3 shrink-0">
+                                <div className="w-14 h-14 bg-stone-50 text-stone-900 flex items-center justify-center rounded-xl p-3 shrink-0">
                                     <Eye size={28} />
                                 </div>
                                 <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Our Vision</h3>
@@ -169,7 +169,7 @@ export default function AboutPage() {
                                 rel="noreferrer"
                                 className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-xl transition-all shadow-lg text-lg group self-start"
                             >
-                                <Play className="mr-3 text-cyan-400 group-hover:scale-110 transition-transform" size={24} fill="currentColor" />
+                                <Play className="mr-3 text-white group-hover:scale-110 transition-transform" size={24} fill="currentColor" />
                                 Watch Our YouTube Podcast
                             </a>
                         </div>
@@ -193,7 +193,7 @@ export default function AboutPage() {
                             href="https://calendly.com/axelisoverseas/counsellingsession"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="relative overflow-hidden inline-flex justify-center items-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold rounded-xl transition-all shadow-lg"
+                            className="relative overflow-hidden inline-flex justify-center items-center px-8 py-4 bg-stone-900 hover:bg-stone-950 text-white font-bold rounded-xl transition-all shadow-lg"
                         >
                             <span className="relative z-10">Book Your Counselling Call Today</span>
                             <BorderBeam size={140} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />

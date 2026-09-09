@@ -302,13 +302,13 @@ const WhatsAppWidget = () => {
                   </div>
 
                   {/* Contact Info */}
-                  <div className="bg-blue-50 rounded-xl p-4 mb-4 border border-blue-100">
+                  <div className="bg-stone-50 rounded-xl p-4 mb-4 border border-stone-100">
                     <div className="flex items-center space-x-2 mb-2">
-                      <Phone size={14} className="text-blue-600" />
-                      <span className="text-xs font-bold text-blue-900 uppercase tracking-tight">Direct Contact</span>
+                      <Phone size={14} className="text-stone-900" />
+                      <span className="text-xs font-bold text-stone-900 uppercase tracking-tight">Direct Contact</span>
                     </div>
-                    <p className="text-sm font-bold text-blue-700">+91 9098522711</p>
-                    <div className="flex items-center space-x-4 mt-2 text-[11px] text-blue-600 font-medium">
+                    <p className="text-sm font-bold text-stone-950">+91 9098522711</p>
+                    <div className="flex items-center space-x-4 mt-2 text-[11px] text-stone-900 font-medium">
                       <div className="flex items-center space-x-1">
                         <Clock size={12} />
                         <span>9 AM - 8 PM</span>

@@ -7,7 +7,7 @@ const PlanComparison = () => {
     {
       feature: "Initial Payment",
       zcf: { value: "₹9,999 (Refundable)", highlight: true, icon: <CheckCircle className="text-green-500" size={20} /> },
-      ztf: { value: "₹19,999 (Upfront)", highlight: true, icon: <DollarSign className="text-blue-500" size={20} /> }
+      ztf: { value: "₹19,999 (Upfront)", highlight: true, icon: <DollarSign className="text-stone-700" size={20} /> }
     },
     {
       feature: "Payment Model",
@@ -17,32 +17,32 @@ const PlanComparison = () => {
     {
       feature: "Risk Protection",
       zcf: { value: "Refund guarantee", highlight: true, icon: <CheckCircle className="text-green-500" size={20} /> },
-      ztf: { value: "Pay only on success", highlight: true, icon: <Award className="text-cyan-500" size={20} /> }
+      ztf: { value: "Pay only on success", highlight: true, icon: <Award className="text-stone-700" size={20} /> }
     },
     {
       feature: "Tuition Fee Savings",
-      zcf: { value: "Standard Programs", highlight: false, icon: <Globe className="text-blue-500" size={20} /> },
-      ztf: { value: "Save ₹80+ Lakhs", highlight: true, icon: <Award className="text-cyan-500" size={20} /> }
+      zcf: { value: "Standard Programs", highlight: false, icon: <Globe className="text-stone-700" size={20} /> },
+      ztf: { value: "Save ₹80+ Lakhs", highlight: true, icon: <Award className="text-stone-700" size={20} /> }
     },
     {
       feature: "Country Coverage",
       zcf: { value: "All 29+ Countries", highlight: true, icon: <CheckCircle className="text-green-500" size={20} /> },
-      ztf: { value: "European Countries", highlight: true, icon: <Star className="text-cyan-500" size={20} /> }
+      ztf: { value: "European Countries", highlight: true, icon: <Star className="text-stone-700" size={20} /> }
     },
     {
       feature: "University Access",
       zcf: { value: "Global Universities", highlight: true, icon: <CheckCircle className="text-green-500" size={20} /> },
-      ztf: { value: "50+ Tuition-Free Unis", highlight: true, icon: <Star className="text-cyan-500" size={20} /> }
+      ztf: { value: "50+ Tuition-Free Unis", highlight: true, icon: <Star className="text-stone-700" size={20} /> }
     },
     {
       feature: "Application Support",
       zcf: { value: "Complete Assistance", highlight: true, icon: <CheckCircle className="text-green-500" size={20} /> },
-      ztf: { value: "Priority Support", highlight: true, icon: <Star className="text-cyan-500" size={20} /> }
+      ztf: { value: "Priority Support", highlight: true, icon: <Star className="text-stone-700" size={20} /> }
     },
     {
       feature: "Visa Assistance",
       zcf: { value: "Standard Processing", highlight: true, icon: <CheckCircle className="text-green-500" size={20} /> },
-      ztf: { value: "Fast-Track Processing", highlight: true, icon: <Star className="text-cyan-500" size={20} /> }
+      ztf: { value: "Fast-Track Processing", highlight: true, icon: <Star className="text-stone-700" size={20} /> }
     }
   ];
 
@@ -68,7 +68,7 @@ const PlanComparison = () => {
         {/* Comparison Table */}
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
           {/* Table Header - Space Theme */}
-          <div className="grid grid-cols-3 bg-gradient-to-r from-slate-800 via-blue-600 to-slate-900 text-white relative overflow-hidden">
+          <div className="grid grid-cols-3 bg-gradient-to-r from-slate-800 via-stone-900 to-slate-900 text-white relative overflow-hidden">
             {/* Cosmic background effects */}
             <div className="absolute inset-0 opacity-10">
               <div
@@ -83,17 +83,17 @@ const PlanComparison = () => {
             </div>
             <div className="relative z-10 p-6 text-center border-l border-white/20">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                 <h3 className="text-lg font-bold">ZCF Student Plan</h3>
               </div>
-              <p className="text-sm text-blue-200">Most Popular</p>
+              <p className="text-sm text-stone-200">Most Popular</p>
             </div>
             <div className="p-6 text-center border-l border-white/20">
               <div className="flex items-center justify-center gap-2 mb-2">
-                <div className="w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
+                <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                 <h3 className="text-lg font-bold">ZTF Student Plan</h3>
               </div>
-              <p className="text-sm text-cyan-200">Premium Gold Service</p>
+              <p className="text-sm text-stone-200">Premium Gold Service</p>
             </div>
           </div>
 
@@ -107,21 +107,21 @@ const PlanComparison = () => {
                 <div className="p-6 font-semibold text-gray-900 bg-gray-50">
                   {row.feature}
                 </div>
-                <div className={`p-6 text-center border-l border-gray-200 ${row.zcf.highlight ? 'bg-blue-50' : ''
+                <div className={`p-6 text-center border-l border-gray-200 ${row.zcf.highlight ? 'bg-stone-50' : ''
                   }`}>
                   <div className="flex items-center justify-center gap-2">
                     {row.zcf.icon}
-                    <span className={`font-medium ${row.zcf.highlight ? 'text-blue-700' : 'text-gray-700'
+                    <span className={`font-medium ${row.zcf.highlight ? 'text-stone-950' : 'text-gray-700'
                       }`}>
                       {row.zcf.value}
                     </span>
                   </div>
                 </div>
-                <div className={`p-6 text-center border-l border-gray-200 ${row.ztf.highlight ? 'bg-gradient-to-r from-cyan-50 to-yellow-100' : ''
+                <div className={`p-6 text-center border-l border-gray-200 ${row.ztf.highlight ? 'bg-gradient-to-r from-stone-50 to-yellow-100' : ''
                   }`}>
                   <div className="flex items-center justify-center gap-2">
                     {row.ztf.icon}
-                    <span className={`font-medium ${row.ztf.highlight ? 'text-cyan-700' : 'text-gray-700'
+                    <span className={`font-medium ${row.ztf.highlight ? 'text-stone-900' : 'text-gray-700'
                       }`}>
                       {row.ztf.value}
                     </span>
@@ -134,51 +134,51 @@ const PlanComparison = () => {
 
         {/* Decision Helper - Space Theme */}
         <div className="mt-16 grid md:grid-cols-2 gap-8">
-          <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-2xl border border-blue-200 relative overflow-hidden">
+          <div className="bg-gradient-to-br from-stone-50 to-stone-100 p-8 rounded-2xl border border-stone-200 relative overflow-hidden">
             {/* Subtle cosmic effect */}
-            <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-sm animate-pulse"></div>
-            <h3 className="text-xl font-bold text-blue-800 mb-4 flex items-center gap-2">
-              <CheckCircle className="text-blue-600" size={24} />
+            <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-white/20 to-white/20 rounded-full blur-sm animate-pulse"></div>
+            <h3 className="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2">
+              <CheckCircle className="text-stone-900" size={24} />
               Choose ZCF if you want:
             </h3>
-            <ul className="space-y-3 text-blue-700">
+            <ul className="space-y-3 text-stone-950">
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
                 <span>100% Refundable ₹9,999 Deposit</span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
                 <span>Access to all 29+ countries</span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
                 <span>Complete application & visa assistance</span>
               </li>
             </ul>
           </div>
 
-          <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl border border-cyan-200 relative overflow-hidden">
+          <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-8 rounded-2xl border border-stone-200 relative overflow-hidden">
             {/* Subtle cosmic effect */}
-            <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-cyan-400/20 to-orange-400/20 rounded-full blur-sm animate-pulse" style={{ animationDelay: '1s' }}></div>
-            <h3 className="text-xl font-bold text-cyan-800 mb-4 flex items-center gap-2">
-              <Star className="text-cyan-600" size={24} />
+            <div className="absolute top-2 right-2 w-8 h-8 bg-gradient-to-br from-white/20 to-orange-400/20 rounded-full blur-sm animate-pulse" style={{ animationDelay: '1s' }}></div>
+            <h3 className="text-xl font-bold text-stone-900 mb-4 flex items-center gap-2">
+              <Star className="text-stone-800" size={24} />
               Choose ZTF if you want:
             </h3>
-            <ul className="space-y-3 text-cyan-700">
+            <ul className="space-y-3 text-stone-900">
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
                 <span>₹19,999 Service Fee (Discounted from ₹39,998)</span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
                 <span>One-time Service Fee Structure</span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
                 <span>Save ₹80+ lakhs in tuition fees</span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-cyan-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
                 <span>Premium public European university access</span>
               </li>
             </ul>

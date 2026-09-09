@@ -141,8 +141,8 @@ const TestimonialGlobeCarousel = ({ testimonials }) => {
             {/* Pin Base */}
             <div className={`w-4 h-4 rounded-full transition-all duration-500 ${
               isActive
-                ? 'bg-cyan-400'
-                : 'bg-blue-400 hover:bg-blue-300'
+                ? 'bg-white'
+                : 'bg-white hover:bg-stone-300'
             }`} style={{
               animation: isActive ? 'pinPulse 2s ease-in-out infinite' : 'none'
             }}></div>
@@ -171,7 +171,7 @@ const TestimonialGlobeCarousel = ({ testimonials }) => {
                 <div className="font-semibold mb-1">
                   {testimonials.find(t => t.country === country).name}
                 </div>
-                <div className="text-blue-300 mb-1">
+                <div className="text-stone-300 mb-1">
                   {testimonials.find(t => t.country === country).course}
                 </div>
                 <div className="text-white/70">
@@ -347,7 +347,7 @@ const TestimonialGlobeCarousel = ({ testimonials }) => {
                   <div className="absolute w-6 h-4 bg-orange-600/50 rounded-lg"
                     style={{ top: '65%', left: '70%', transform: 'rotate(-10deg)' }}></div>
                   {/* Africa */}
-                  <div className="absolute w-8 h-16 bg-cyan-600/50 rounded-lg"
+                  <div className="absolute w-8 h-16 bg-stone-800/50 rounded-lg"
                     style={{ top: '40%', left: '48%', transform: 'rotate(5deg)' }}></div>
                   {/* South America */}
                   <div className="absolute w-6 h-14 bg-green-700/50 rounded-lg"
@@ -356,11 +356,11 @@ const TestimonialGlobeCarousel = ({ testimonials }) => {
 
                 {/* Subtle City Lights on Night Side */}
                 <div className="absolute inset-0 rounded-full">
-                  <div className="absolute w-1 h-1 bg-cyan-300/60 rounded-full" style={{ top: '35%', left: '20%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-300/60 rounded-full" style={{ top: '45%', left: '25%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-300/60 rounded-full" style={{ top: '55%', left: '15%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-300/60 rounded-full" style={{ top: '40%', left: '50%' }}></div>
-                  <div className="absolute w-1 h-1 bg-cyan-300/60 rounded-full" style={{ top: '30%', left: '60%' }}></div>
+                  <div className="absolute w-1 h-1 bg-stone-300/60 rounded-full" style={{ top: '35%', left: '20%' }}></div>
+                  <div className="absolute w-1 h-1 bg-stone-300/60 rounded-full" style={{ top: '45%', left: '25%' }}></div>
+                  <div className="absolute w-1 h-1 bg-stone-300/60 rounded-full" style={{ top: '55%', left: '15%' }}></div>
+                  <div className="absolute w-1 h-1 bg-stone-300/60 rounded-full" style={{ top: '40%', left: '50%' }}></div>
+                  <div className="absolute w-1 h-1 bg-stone-300/60 rounded-full" style={{ top: '30%', left: '60%' }}></div>
                 </div>
 
                 {/* Subtle Cloud Layer */}
@@ -396,13 +396,13 @@ const TestimonialGlobeCarousel = ({ testimonials }) => {
                 {/* Subtle Surface Details */}
                 <div className="absolute inset-0 rounded-full pointer-events-none">
                   {/* Ocean currents and weather patterns */}
-                  <div className="absolute w-32 h-2 bg-blue-400/10 rounded-full blur-sm" style={{ top: '35%', left: '10%', transform: 'rotate(15deg)' }}></div>
-                  <div className="absolute w-28 h-2 bg-blue-300/8 rounded-full blur-sm" style={{ top: '55%', left: '40%', transform: 'rotate(-10deg)' }}></div>
-                  <div className="absolute w-24 h-2 bg-blue-400/10 rounded-full blur-sm" style={{ top: '75%', left: '20%', transform: 'rotate(25deg)' }}></div>
+                  <div className="absolute w-32 h-2 bg-white/10 rounded-full blur-sm" style={{ top: '35%', left: '10%', transform: 'rotate(15deg)' }}></div>
+                  <div className="absolute w-28 h-2 bg-stone-300/8 rounded-full blur-sm" style={{ top: '55%', left: '40%', transform: 'rotate(-10deg)' }}></div>
+                  <div className="absolute w-24 h-2 bg-white/10 rounded-full blur-sm" style={{ top: '75%', left: '20%', transform: 'rotate(25deg)' }}></div>
                 </div>
 
                 {/* Atmospheric glow */}
-                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-300/20 via-transparent to-blue-800/20"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-br from-stone-300/20 via-transparent to-stone-900/20"></div>
               </div>
             </div>
 

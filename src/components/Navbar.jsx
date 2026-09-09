@@ -19,9 +19,9 @@ import { BorderBeam } from './ui/BorderBeam';
 const SocialMediaInline = ({ className }) => {
   return (
     <div className={`flex items-center gap-3 ${className}`}>
-      <a href={siteInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-600 transition-colors">FB</a>
-      <a href={siteInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-cyan-500 transition-colors">IG</a>
-      <a href={siteInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-blue-700 transition-colors">LI</a>
+      <a href={siteInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-stone-900 transition-colors">FB</a>
+      <a href={siteInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-stone-700 transition-colors">IG</a>
+      <a href={siteInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-stone-950 transition-colors">LI</a>
     </div>
   );
 };
@@ -178,7 +178,7 @@ const Navbar = () => {
             <div className="hidden md:flex items-center space-x-4">
               <Link
                 href="/bookings"
-                className="relative overflow-hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                className="relative overflow-hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
               >
                 <span className="relative z-10">Book a Discovery Call</span>
                 <BorderBeam size={80} duration={7} colorFrom="#7CC8FF" colorTo="#F5B877" />
@@ -352,7 +352,7 @@ const Navbar = () => {
             <Link
               href="/bookings"
               onClick={() => setIsOpen(false)}
-              className="relative overflow-hidden block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-bold hover:from-blue-700 hover:to-cyan-600 transition-all shadow-[0_0_40px_-10px_var(--storm-accent-glow)]"
+              className="relative overflow-hidden block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-all shadow-[0_0_40px_-10px_var(--storm-accent-glow)]"
             >
               <span className="relative z-10">Book a Discovery Call</span>
               <BorderBeam size={120} duration={8} colorFrom="#7CC8FF" colorTo="#F5B877" />

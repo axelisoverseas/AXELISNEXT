@@ -62,7 +62,7 @@ export default function ScholarshipFinder() {
     <section id="finder" className="py-20 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-semibold mb-4">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-100 text-stone-950 text-sm font-semibold mb-4">
             <Award size={16} /> Scholarship Finder
           </div>
           <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-3">
@@ -83,7 +83,7 @@ export default function ScholarshipFinder() {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 placeholder="Search by name, keyword, or country"
-                className="w-full pl-10 pr-10 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm"
+                className="w-full pl-10 pr-10 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-stone-700 text-sm"
               />
               {query && (
                 <button
@@ -99,7 +99,7 @@ export default function ScholarshipFinder() {
             <select
               value={country}
               onChange={(e) => setCountry(e.target.value)}
-              className="px-3 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-3 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-stone-700"
             >
               <option value="ALL">All countries</option>
               {SCHOLARSHIP_COUNTRIES.map((c) => (
@@ -110,7 +110,7 @@ export default function ScholarshipFinder() {
             <select
               value={level}
               onChange={(e) => setLevel(e.target.value)}
-              className="px-3 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-3 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-stone-700"
             >
               <option value="ALL">All levels</option>
               {SCHOLARSHIP_LEVELS.map((l) => (
@@ -121,7 +121,7 @@ export default function ScholarshipFinder() {
             <select
               value={type}
               onChange={(e) => setType(e.target.value)}
-              className="px-3 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="px-3 py-3 bg-slate-50 border border-slate-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-stone-700"
             >
               <option value="ALL">All types</option>
               {SCHOLARSHIP_TYPES.map((t) => (
@@ -173,7 +173,7 @@ export default function ScholarshipFinder() {
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-2xl border border-slate-200 p-5 hover:border-blue-400/60 hover:shadow-lg transition-all flex flex-col"
+                className="group bg-white rounded-2xl border border-slate-200 p-5 hover:border-white/60 hover:shadow-lg transition-all flex flex-col"
               >
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500">
@@ -186,8 +186,8 @@ export default function ScholarshipFinder() {
                         key={p}
                         className={`px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wider ${
                           p === 'ZTF'
-                            ? 'bg-cyan-50 text-cyan-700 border border-cyan-200'
-                            : 'bg-blue-50 text-blue-700 border border-blue-200'
+                            ? 'bg-stone-50 text-stone-900 border border-stone-200'
+                            : 'bg-stone-50 text-stone-950 border border-stone-200'
                         }`}
                       >
                         {p}
@@ -195,9 +195,9 @@ export default function ScholarshipFinder() {
                     ))}
                   </div>
                 </div>
-                <h3 className="font-bold text-slate-900 mb-1 text-[15px] leading-snug group-hover:text-blue-700 transition-colors flex items-start gap-1.5">
+                <h3 className="font-bold text-slate-900 mb-1 text-[15px] leading-snug group-hover:text-stone-950 transition-colors flex items-start gap-1.5">
                   <span>{s.name}</span>
-                  <ExternalLink size={13} className="shrink-0 mt-1 text-slate-400 group-hover:text-blue-600 transition-colors" />
+                  <ExternalLink size={13} className="shrink-0 mt-1 text-slate-400 group-hover:text-stone-900 transition-colors" />
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed mb-3 min-h-[36px]">{s.summary}</p>
                 <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider mt-auto">
@@ -219,7 +219,7 @@ export default function ScholarshipFinder() {
         {filtered.length === 0 && (
           <div className="text-center py-16 text-slate-500 text-sm">
             <Globe2 size={28} className="mx-auto mb-3 text-slate-400" />
-            No scholarships match these filters. Try loosening a filter or <button onClick={clearAll} className="text-blue-600 font-semibold hover:underline">reset all</button>.
+            No scholarships match these filters. Try loosening a filter or <button onClick={clearAll} className="text-stone-900 font-semibold hover:underline">reset all</button>.
           </div>
         )}
 
@@ -230,7 +230,7 @@ export default function ScholarshipFinder() {
           </p>
           <a
             href="/bookings"
-            className="relative overflow-hidden inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 text-white font-semibold hover:shadow-lg hover:shadow-cyan-500/30 transition-all"
+            className="relative overflow-hidden inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-stone-700 to-white text-white font-semibold hover:shadow-lg hover:shadow-stone-700/30 transition-all"
           >
             <span className="relative z-10 inline-flex items-center">
               Book a free counselling call <ArrowRight size={16} className="ml-2" />

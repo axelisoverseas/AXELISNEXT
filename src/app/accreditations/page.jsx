@@ -21,7 +21,7 @@ const certifications = [
     blurb: 'Counsellors completed the British Council UK Agent & Counsellor Training course and qualifying exam — the standard reference for ethical UK student placement.',
     image: '/trust-badges/british-council.png',
     Icon: Globe2,
-    accent: 'from-blue-400 to-indigo-500',
+    accent: 'from-white to-stone-700',
   },
   {
     id: 'airc',
@@ -30,7 +30,7 @@ const certifications = [
     blurb: 'AIRC certified for U.S. student recruitment — a peer-reviewed standard that holds agencies to ethical and quality benchmarks for placing students in American universities.',
     image: '/trust-badges/airc-certificate.png',
     Icon: Award,
-    accent: 'from-cyan-300 to-sky-500',
+    accent: 'from-stone-300 to-stone-700',
   },
 ];
 
@@ -80,7 +80,7 @@ export default function CertificationsPage() {
                     <cert.Icon size={26} strokeWidth={2.4} />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-1">{cert.name}</h3>
-                  <p className="text-xs uppercase tracking-wider text-sky-300/80 mb-5">
+                  <p className="text-xs uppercase tracking-wider text-stone-300/80 mb-5">
                     {cert.issuer}
                   </p>
                   <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/10 bg-white">

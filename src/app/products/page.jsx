@@ -178,7 +178,7 @@ function ProductsContent() {
                   Most popular
                 </span>
                 <h3 id="plan-gac-title" className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
-                  Global Admissions Charter <span className="text-base font-semibold text-sky-200/70">(GAC)</span>
+                  Global Admissions Charter <span className="text-base font-semibold text-stone-200/70">(GAC)</span>
                 </h3>
                 <p className="text-slate-400 text-xs uppercase tracking-wider mb-6">Internal code: ZCF</p>
 
@@ -219,7 +219,7 @@ function ProductsContent() {
                     <span className="px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[10px] font-bold tracking-wider">50% OFF</span>
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">₹9,999</div>
-                  <p className="text-sky-200/85 text-sm font-medium">Onboarding deposit &mdash; <span className="text-emerald-300 font-semibold">100% refundable</span></p>
+                  <p className="text-stone-200/85 text-sm font-medium">Onboarding deposit &mdash; <span className="text-emerald-300 font-semibold">100% refundable</span></p>
                   <p className="text-slate-400 text-xs mt-1">Refunded once your student visa is approved, or if you receive zero offers.</p>
                 </div>
 
@@ -276,7 +276,7 @@ function ProductsContent() {
                   Tuition-free Europe
                 </span>
                 <h3 id="plan-epc-title" className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
-                  Europe Public Charter <span className="text-base font-semibold text-sky-200/70">(EPC)</span>
+                  Europe Public Charter <span className="text-base font-semibold text-stone-200/70">(EPC)</span>
                 </h3>
                 <p className="text-slate-400 text-xs uppercase tracking-wider mb-6">Internal code: ZTF</p>
 
@@ -318,7 +318,7 @@ function ProductsContent() {
                     <span className="px-2 py-0.5 rounded-md bg-[var(--dawn-glow)]/20 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-[10px] font-bold tracking-wider">50% OFF</span>
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">₹19,999</div>
-                  <p className="text-sky-200/85 text-sm font-medium">Service fee &mdash; <span className="text-emerald-300 font-semibold">refundable</span> if zero offers received.</p>
+                  <p className="text-stone-200/85 text-sm font-medium">Service fee &mdash; <span className="text-emerald-300 font-semibold">refundable</span> if zero offers received.</p>
                   <p className="text-slate-400 text-xs mt-1">Once you receive any offer, the fee covers the full end-to-end service.</p>
                 </div>
 
@@ -472,7 +472,7 @@ function ProductsContent() {
                       loading="lazy"
                     />
                   </div>
-                  <p className={`mt-2 text-center text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-sky-300'}`}>
+                  <p className={`mt-2 text-center text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-stone-300'}`}>
                     <BadgeCheck className="w-3 h-3" />
                     {item.cap}
                   </p>

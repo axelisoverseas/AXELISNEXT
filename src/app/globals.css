@@ -3,53 +3,53 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-navy: #0A1128;
-  --color-axelis: #1E40AF;
-  --color-axelis-light: #3B82F6;
+  --color-navy: #0C0A09;
+  --color-axelis: #1C1917;
+  --color-axelis-light: #57534E;
   --color-axelis-accent: #F59E0B;
 
   /* Storm palette — top of page, electric drama */
-  --color-storm-deep: #05070F;
-  --color-storm-abyss: #090D1C;
-  --color-storm-mid: #101830;
-  --color-storm-cloud: #1C2747;
-  --color-storm-electric: #7CC8FF;
-  --color-storm-bolt: #F5F9FF;
+  --color-storm-deep: #0C0A09;
+  --color-storm-abyss: #141210;
+  --color-storm-mid: #1C1917;
+  --color-storm-cloud: #292524;
+  --color-storm-electric: #FFFFFF;
+  --color-storm-bolt: #FAFAF9;
   --color-storm-accent: #F59E0B;
 
   /* Dawn palette — near CTA, clearing and warmth */
-  --color-dawn-horizon: #1E2A55;
-  --color-dawn-mid: #3A4680;
-  --color-dawn-clear: #4A6FA5;
-  --color-dawn-glow: #F5B877;
-  --color-dawn-glow-soft: #F8D1B0;
+  --color-dawn-horizon: #292524;
+  --color-dawn-mid: #44403C;
+  --color-dawn-clear: #78716C;
+  --color-dawn-glow: #FBBF24;
+  --color-dawn-glow-soft: #FDE68A;
 }
 
 :root {
-  --background: #05070F;
-  --foreground: #F5F9FF;
+  --background: #0C0A09;
+  --foreground: #FAFAF9;
 
-  --storm-deep: #05070F;
-  --storm-abyss: #090D1C;
-  --storm-mid: #101830;
-  --storm-cloud: #1C2747;
-  --storm-electric: #7CC8FF;
-  --storm-bolt: #F5F9FF;
+  --storm-deep: #0C0A09;
+  --storm-abyss: #141210;
+  --storm-mid: #1C1917;
+  --storm-cloud: #292524;
+  --storm-electric: #FFFFFF;
+  --storm-bolt: #FAFAF9;
   --storm-accent: #F59E0B;
   --storm-accent-glow: rgba(245, 158, 11, 0.45);
 
-  --dawn-horizon: #1E2A55;
-  --dawn-mid: #3A4680;
-  --dawn-clear: #4A6FA5;
-  --dawn-glow: #F5B877;
-  --dawn-glow-soft: #F8D1B0;
-  --dawn-mist: rgba(245, 184, 119, 0.18);
+  --dawn-horizon: #292524;
+  --dawn-mid: #44403C;
+  --dawn-clear: #78716C;
+  --dawn-glow: #FBBF24;
+  --dawn-glow-soft: #FDE68A;
+  --dawn-mist: rgba(251, 191, 36, 0.18);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #05070F;
-    --foreground: #F5F9FF;
+    --background: #0C0A09;
+    --foreground: #FAFAF9;
   }
 }
 
@@ -205,28 +205,28 @@ body {
   background: rgba(16, 24, 48, 0.55);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(124, 200, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 40px -20px rgba(5, 7, 15, 0.8);
   border-radius: 16px;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .glass-storm:hover {
-  border-color: rgba(124, 200, 255, 0.25);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(124, 200, 255, 0.20), 0 20px 60px -20px rgba(37, 99, 235, 0.35);
+  border-color: rgba(255, 255, 255, 0.25);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.20), 0 20px 60px -20px rgba(37, 99, 235, 0.35);
 }
 
 .glass-dawn {
   background: rgba(58, 70, 128, 0.38);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(245, 184, 119, 0.18);
+  border: 1px solid rgba(251, 191, 36, 0.18);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 40px -20px rgba(30, 42, 85, 0.7);
   border-radius: 16px;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .glass-dawn:hover {
-  border-color: rgba(245, 184, 119, 0.35);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(245, 184, 119, 0.22), 0 20px 60px -20px rgba(245, 184, 119, 0.30);
+  border-color: rgba(251, 191, 36, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(251, 191, 36, 0.22), 0 20px 60px -20px rgba(251, 191, 36, 0.30);
 }
 
 /* Bolt pulse — amber drop-shadow expand/contract */
@@ -326,9 +326,9 @@ body {
 
 .site-wallpaper__layer--nebula {
   background:
-    radial-gradient(60% 50% at 18% 12%, rgba(124,200,255,0.16) 0%, transparent 60%),
+    radial-gradient(60% 50% at 18% 12%, rgba(255,255,255,0.16) 0%, transparent 60%),
     radial-gradient(50% 50% at 82% 22%, rgba(139,92,246,0.12) 0%, transparent 65%),
-    radial-gradient(55% 60% at 50% 95%, rgba(245,184,119,0.18) 0%, transparent 65%);
+    radial-gradient(55% 60% at 50% 95%, rgba(251,191,36,0.18) 0%, transparent 65%);
   filter: blur(20px);
 }
 

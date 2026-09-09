@@ -98,14 +98,14 @@ const ScholarshipMatcher = () => {
     return (
         <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 overflow-hidden max-w-4xl mx-auto">
             {/* Header */}
-            <div className="bg-gradient-to-r from-blue-900 to-slate-900 text-white p-8 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+            <div className="bg-gradient-to-r from-stone-900 to-slate-900 text-white p-8 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-stone-700/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
                 <div className="relative z-10 text-center">
                     <h3 className="text-3xl font-black mb-3 flex items-center justify-center">
-                        <Award className="mr-3 text-cyan-400 w-8 h-8" />
+                        <Award className="mr-3 text-white w-8 h-8" />
                         Scholarship Matcher
                     </h3>
-                    <p className="text-blue-100 text-lg max-w-2xl mx-auto">Find millions in funding available for international students based on your profile.</p>
+                    <p className="text-stone-100 text-lg max-w-2xl mx-auto">Find millions in funding available for international students based on your profile.</p>
                 </div>
             </div>
 
@@ -117,7 +117,7 @@ const ScholarshipMatcher = () => {
                         <div className="relative">
                             <MapPin className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
                             <select
-                                className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl appearance-none focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all font-medium text-gray-700"
+                                className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl appearance-none focus:ring-2 focus:ring-stone-900 focus:border-transparent outline-none transition-all font-medium text-gray-700"
                                 value={filters.country}
                                 onChange={(e) => setFilters({ ...filters, country: e.target.value })}
                             >
@@ -131,7 +131,7 @@ const ScholarshipMatcher = () => {
                         <div className="relative">
                             <GraduationCap className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
                             <select
-                                className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl appearance-none focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition-all font-medium text-gray-700"
+                                className="w-full pl-10 pr-4 py-3 bg-gray-50 border border-gray-200 rounded-xl appearance-none focus:ring-2 focus:ring-stone-900 focus:border-transparent outline-none transition-all font-medium text-gray-700"
                                 value={filters.degree}
                                 onChange={(e) => setFilters({ ...filters, degree: e.target.value })}
                             >
@@ -144,7 +144,7 @@ const ScholarshipMatcher = () => {
                         <button
                             onClick={handleSearch}
                             disabled={isSearching}
-                            className="w-full h-[50px] bg-cyan-400 hover:bg-cyan-500 text-slate-900 font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed group"
+                            className="w-full h-[50px] bg-white hover:bg-stone-700 text-slate-900 font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed group"
                         >
                             {isSearching ? (
                                 <span className="flex items-center">
@@ -198,11 +198,11 @@ const ScholarshipMatcher = () => {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: index * 0.1 }}
-                                            className="bg-white border border-gray-200 hover:border-blue-400 rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group"
+                                            className="bg-white border border-gray-200 hover:border-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group"
                                         >
                                             <div className="flex justify-between items-start mb-4">
-                                                <h4 className="font-bold text-slate-800 text-lg leading-tight group-hover:text-blue-600 transition-colors pr-4">{scholarship.name}</h4>
-                                                <span className="bg-blue-50 text-blue-700 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap border border-blue-100">
+                                                <h4 className="font-bold text-slate-800 text-lg leading-tight group-hover:text-stone-900 transition-colors pr-4">{scholarship.name}</h4>
+                                                <span className="bg-stone-50 text-stone-950 text-xs font-bold px-3 py-1 rounded-full whitespace-nowrap border border-stone-100">
                                                     {scholarship.country}
                                                 </span>
                                             </div>
@@ -228,7 +228,7 @@ const ScholarshipMatcher = () => {
                                                 ))}
                                             </div>
 
-                                            <button className="w-full text-blue-600 font-semibold text-sm flex items-center justify-center p-2 rounded-lg hover:bg-blue-50 transition-colors">
+                                            <button className="w-full text-stone-900 font-semibold text-sm flex items-center justify-center p-2 rounded-lg hover:bg-stone-50 transition-colors">
                                                 Check Eligibility <ChevronRight className="w-4 h-4 mt-0.5 ml-1" />
                                             </button>
                                         </motion.div>

@@ -77,7 +77,7 @@ export default async function CountryGuidePage({ params }) {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Breadcrumb */}
                     <nav className="text-sm mb-8 text-gray-500">
-                        <Link href="/" className="hover:text-blue-600">Home</Link> &gt;
+                        <Link href="/" className="hover:text-stone-900">Home</Link> &gt;
                         <span className="text-gray-900 ml-2">Study in {data.name}</span>
                     </nav>
 
@@ -99,11 +99,11 @@ export default async function CountryGuidePage({ params }) {
                                 </p>
                                 <div className="grid grid-cols-2 gap-4 mt-6">
                                     <div className="bg-white p-4 rounded-xl border border-gray-100 text-center">
-                                        <div className="text-3xl font-black text-cyan-500 mb-1">{data.universitiesCount}+</div>
+                                        <div className="text-3xl font-black text-stone-700 mb-1">{data.universitiesCount}+</div>
                                         <div className="text-sm font-semibold text-gray-600">Partner Universities</div>
                                     </div>
                                     <div className="bg-white p-4 rounded-xl border border-gray-100 text-center">
-                                        <div className="text-3xl font-black text-blue-500 mb-1">{data.studentsSent}+</div>
+                                        <div className="text-3xl font-black text-stone-700 mb-1">{data.studentsSent}+</div>
                                         <div className="text-sm font-semibold text-gray-600">Students Sent</div>
                                     </div>
                                 </div>
@@ -114,8 +114,8 @@ export default async function CountryGuidePage({ params }) {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {[1, 2, 3, 4].map(i => (
                                         <Link key={i} href={`/universities/${countryParam}/university-${i}`} className="block group">
-                                            <div className="border border-gray-200 rounded-xl p-4 hover:border-blue-500 hover:shadow-md transition-all">
-                                                <h3 className="font-bold text-lg text-slate-800 group-hover:text-blue-600">University {i} of {data.name}</h3>
+                                            <div className="border border-gray-200 rounded-xl p-4 hover:border-stone-700 hover:shadow-md transition-all">
+                                                <h3 className="font-bold text-lg text-slate-800 group-hover:text-stone-900">University {i} of {data.name}</h3>
                                                 <p className="text-sm text-gray-500 mt-1">{data.capital}, {data.name}</p>
                                             </div>
                                         </Link>
@@ -125,10 +125,10 @@ export default async function CountryGuidePage({ params }) {
                         </div>
 
                         <div className="space-y-6">
-                            <div className="bg-blue-900 border border-blue-800 rounded-2xl p-6 text-white sticky top-24 shadow-xl">
+                            <div className="bg-stone-900 border border-stone-900 rounded-2xl p-6 text-white sticky top-24 shadow-xl">
                                 <h3 className="text-xl font-bold mb-4">Need personalized guidance?</h3>
-                                <p className="text-blue-100 mb-6 text-sm">Our expert counsellors can help you find the right university and course in {data.name}.</p>
-                                <Link href="/contact" className="w-full block text-center bg-cyan-400 hover:bg-cyan-500 text-slate-900 font-bold py-3 px-4 rounded-xl transition-colors">
+                                <p className="text-stone-100 mb-6 text-sm">Our expert counsellors can help you find the right university and course in {data.name}.</p>
+                                <Link href="/contact" className="w-full block text-center bg-white hover:bg-stone-700 text-slate-900 font-bold py-3 px-4 rounded-xl transition-colors">
                                     Get Free Consultation
                                 </Link>
                             </div>

@@ -21,7 +21,7 @@ export const TestimonialsColumn = ({ className = '', testimonials, duration = 15
             {testimonials.map((t, i) => (
               <div
                 key={`${loop}-${i}`}
-                className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm shadow-blue-900/5 max-w-xs w-full"
+                className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm shadow-stone-900/5 max-w-xs w-full"
               >
                 <p className="text-sm text-slate-700 leading-relaxed">&ldquo;{t.text}&rdquo;</p>
                 <div className="flex items-center gap-3 mt-4">
@@ -34,7 +34,7 @@ export const TestimonialsColumn = ({ className = '', testimonials, duration = 15
                       className="h-10 w-10 rounded-full object-cover"
                     />
                   ) : (
-                    <div className="h-10 w-10 rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-white font-bold text-sm">
+                    <div className="h-10 w-10 rounded-full bg-gradient-to-br from-stone-700 to-white flex items-center justify-center text-white font-bold text-sm">
                       {t.name?.[0]}
                     </div>
                   )}

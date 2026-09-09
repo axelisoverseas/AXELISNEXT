@@ -67,7 +67,7 @@ const LoanDocumentCTA = () => {
   return (
     <>
       {/* CTA Card */}
-      <div className="bg-gradient-to-br from-orange-50 to-blue-100 rounded-2xl p-6 border-2 border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 sticky top-8">
+      <div className="bg-gradient-to-br from-orange-50 to-stone-100 rounded-2xl p-6 border-2 border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 sticky top-8">
         <div className="text-center">
           {/* Icon */}
           <div className="mx-auto w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-4">
@@ -91,11 +91,11 @@ const LoanDocumentCTA = () => {
               <span>Student Documents</span>
             </div>
             <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
-              <Users size={16} className="text-blue-600" />
+              <Users size={16} className="text-stone-900" />
               <span>Co-applicant Documents</span>
             </div>
             <div className="flex items-center justify-center gap-2 text-sm text-gray-600">
-              <Download size={16} className="text-blue-600" />
+              <Download size={16} className="text-stone-900" />
               <span>Ready-to-use Checklist</span>
             </div>
           </div>
@@ -103,7 +103,7 @@ const LoanDocumentCTA = () => {
           {/* CTA Button */}
           <button
             onClick={openModal}
-            className="w-full bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            className="w-full bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center gap-2"
           >
             <FileText size={18} />
             View Document Checklist
@@ -151,9 +151,9 @@ const LoanDocumentCTA = () => {
             <div className="p-6 overflow-y-auto max-h-[calc(90vh-120px)]">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 {/* Student Documents */}
-                <div className="bg-blue-50 rounded-xl p-6 border border-blue-200">
+                <div className="bg-stone-50 rounded-xl p-6 border border-stone-200">
                   <div className="flex items-center gap-3 mb-4">
-                    <User className="text-blue-600" size={24} />
+                    <User className="text-stone-900" size={24} />
                     <h3 className="text-xl font-bold text-gray-900">1. Applicant (Student) Documents</h3>
                   </div>
                   <ul className="space-y-3">
@@ -190,7 +190,7 @@ const LoanDocumentCTA = () => {
                     <ul className="space-y-3">
                       {salariedDocs.map((doc, index) => (
                         <li key={index} className="flex items-start gap-2">
-                          <CheckSquare className="text-blue-600 flex-shrink-0 mt-0.5" size={16} />
+                          <CheckSquare className="text-stone-900 flex-shrink-0 mt-0.5" size={16} />
                           <span className="text-sm text-gray-700">{doc}</span>
                         </li>
                       ))}
@@ -198,12 +198,12 @@ const LoanDocumentCTA = () => {
                   </div>
 
                   {/* Self-employed */}
-                  <div className="bg-cyan-50 rounded-xl p-6 border border-cyan-200">
+                  <div className="bg-stone-50 rounded-xl p-6 border border-stone-200">
                     <h4 className="text-lg font-bold text-gray-900 mb-3">If Self-employed / Business Owner:</h4>
                     <ul className="space-y-3">
                       {selfEmployedDocs.map((doc, index) => (
                         <li key={index} className="flex items-start gap-2">
-                          <CheckSquare className="text-cyan-600 flex-shrink-0 mt-0.5" size={16} />
+                          <CheckSquare className="text-stone-800 flex-shrink-0 mt-0.5" size={16} />
                           <span className="text-sm text-gray-700">{doc}</span>
                         </li>
                       ))}

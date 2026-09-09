@@ -28,7 +28,7 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-[540px] mx-auto text-center"
         >
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-xs font-semibold mb-4 uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-stone-50 border border-stone-100 text-stone-950 text-xs font-semibold mb-4 uppercase tracking-wider">
             Testimonials
           </div>
           <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">

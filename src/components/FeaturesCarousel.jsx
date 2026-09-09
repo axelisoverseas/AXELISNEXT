@@ -100,12 +100,12 @@ const FeaturesCarousel = ({ features = [] }) => {
                   visibleCards === 2 ? 'w-1/2' : 'w-1/3'
                 }`}
             >
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-blue-500 group hover:transform hover:scale-105 hover:-translate-y-2 h-full">
+              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-stone-700 group hover:transform hover:scale-105 hover:-translate-y-2 h-full">
                 <div className="text-center">
                   <div className="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
                     {feature.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-black mb-3 group-hover:text-stone-900 transition-colors">
                     {feature.title}
                   </h3>
                   <p className="text-gray-600 leading-relaxed text-sm">
@@ -142,7 +142,7 @@ const FeaturesCarousel = ({ features = [] }) => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                ? 'bg-blue-600 scale-125'
+                ? 'bg-stone-900 scale-125'
                 : 'bg-gray-300 hover:bg-gray-400'
               }`}
             aria-label={`Go to feature ${index + 1}`}

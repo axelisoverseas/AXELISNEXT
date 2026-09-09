@@ -563,6 +563,29 @@ export function monthlyEmi(program) {
   return Math.ceil(program.price / tenure);
 }
 
+/**
+ * Tenures offered per tier. The handover offers 3/6/9/12 on Concierge; the
+ * shorter tiers stop at 6, which is the divisor its quick-facts spec uses.
+ */
+export function emiTenures(tier) {
+  if (tier === 'concierge') return [3, 6, 9, 12];
+  if (tier === 'core' || tier === 'advanced') return [3, 6];
+  return [];
+}
+
+/**
+ * Per-tenure schedule. `monthly` is fee/tenure — the NO-COST figure, true
+ * only where interest is genuinely nil. Card EMI through a bank carries the
+ * issuer's rate, so the UI labels these as no-cost rather than implying every
+ * payment route reaches this number.
+ */
+export function emiSchedule(program) {
+  return emiTenures(program.tier).map((months) => ({
+    months,
+    monthly: Math.ceil(program.price / months),
+  }));
+}
+
 /** ₹2,00,000 — Indian digit grouping, no decimals. */
 export function formatINR(amount) {
   return `₹${amount.toLocaleString('en-IN')}`;

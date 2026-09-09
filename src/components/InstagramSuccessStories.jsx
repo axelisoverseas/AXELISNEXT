@@ -72,7 +72,7 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
       onClick={onOpen}
       className={`group relative shrink-0 w-[78vw] sm:w-[320px] md:w-[360px] aspect-[9/16] rounded-3xl overflow-hidden border transition-all duration-500 snap-center text-left ${
         isActive
-          ? 'border-cyan-400/60 shadow-[0_30px_80px_-30px_rgba(34,211,238,0.55)] scale-100'
+          ? 'border-white/60 shadow-[0_30px_80px_-30px_rgba(34,211,238,0.55)] scale-100'
           : 'border-slate-200/70 shadow-md scale-[0.94] opacity-80 hover:opacity-100'
       }`}
       aria-label={`Play reel — ${reel.studentName}`}
@@ -94,7 +94,7 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
 
       {/* Top row */}
       <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-wider text-blue-700">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-wider text-stone-950">
           <Instagram size={12} /> {reel.tag}
         </span>
         <span className="px-2 py-1 rounded-md bg-slate-900/70 text-white text-[10px] font-semibold backdrop-blur">
@@ -114,7 +114,7 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
       {/* Bottom info */}
       <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
         <h3 className="text-lg font-bold mb-1">{reel.studentName}</h3>
-        <p className="text-xs text-cyan-200/90 font-semibold mb-2">{reel.university}</p>
+        <p className="text-xs text-stone-200/90 font-semibold mb-2">{reel.university}</p>
         <p className="text-xs text-slate-200/90 line-clamp-2 leading-snug">{reel.caption}</p>
       </div>
     </button>
@@ -226,7 +226,7 @@ const InstagramSuccessStories = () => {
                 onClick={() => go(idx)}
                 aria-label={`Go to reel ${idx + 1}`}
                 className={`h-2 rounded-full transition-all ${
-                  idx === active ? 'w-8 bg-blue-600' : 'w-2 bg-slate-300 hover:bg-slate-400'
+                  idx === active ? 'w-8 bg-stone-900' : 'w-2 bg-slate-300 hover:bg-slate-400'
                 }`}
               />
             ))}
@@ -235,8 +235,8 @@ const InstagramSuccessStories = () => {
 
         {/* CTA Banner */}
         <div className="mt-16 bg-slate-900 rounded-3xl p-10 md:p-12 text-center text-white relative overflow-hidden border border-slate-800">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-blue-600/15 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-cyan-500/15 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-stone-900/15 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-stone-700/15 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-bold mb-3 tracking-tight">
               Ready to be our next success story?
@@ -250,7 +250,7 @@ const InstagramSuccessStories = () => {
                 href="https://www.instagram.com/axelis_overseas/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-700 text-slate-200 hover:border-cyan-400 hover:text-cyan-300 transition-all text-sm font-semibold"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-700 text-slate-200 hover:border-white hover:text-stone-300 transition-all text-sm font-semibold"
               >
                 <Instagram size={18} />
                 <span>Follow on Instagram</span>
@@ -295,7 +295,7 @@ const InstagramSuccessStories = () => {
               </button>
               <div className="absolute left-4 right-4 bottom-4 text-white">
                 <h3 className="font-bold text-lg leading-tight">{selected.studentName}</h3>
-                <p className="text-xs text-cyan-200 font-semibold mb-1">{selected.university}</p>
+                <p className="text-xs text-stone-200 font-semibold mb-1">{selected.university}</p>
                 <p className="text-xs text-slate-200/90 line-clamp-3">{selected.caption}</p>
               </div>
             </motion.div>

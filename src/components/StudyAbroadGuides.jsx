@@ -66,7 +66,7 @@ const StudyAbroadGuides = () => {
               href="https://www.youtube.com/@axelisoverseas"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 font-semibold hover:underline"
+              className="text-stone-900 font-semibold hover:underline"
             >
               Visit our YouTube channel
             </a>{' '}
@@ -90,7 +90,7 @@ const StudyAbroadGuides = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.08 }}
               viewport={{ once: true }}
-              className="group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 hover:border-blue-300 transition-all duration-500 hover:shadow-[0_20px_50px_-20px_rgba(37,99,235,0.2)]"
+              className="group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 hover:border-stone-300 transition-all duration-500 hover:shadow-[0_20px_50px_-20px_rgba(37,99,235,0.2)]"
             >
               <div className="relative aspect-video overflow-hidden bg-slate-900">
                 <img
@@ -112,13 +112,13 @@ const StudyAbroadGuides = () => {
                   className="absolute inset-0 flex items-center justify-center group/btn"
                   aria-label={`Play ${guide.title}`}
                 >
-                  <div className="w-16 h-16 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center group-hover/btn:bg-blue-600 group-hover/btn:scale-110 transition-all duration-300 shadow-xl border border-white/40">
+                  <div className="w-16 h-16 bg-white/30 backdrop-blur-md rounded-full flex items-center justify-center group-hover/btn:bg-stone-900 group-hover/btn:scale-110 transition-all duration-300 shadow-xl border border-white/40">
                     <Play className="text-white fill-current ml-1" size={24} />
                   </div>
                 </button>
 
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-blue-600 text-[10px] font-bold rounded-lg shadow-sm uppercase tracking-wider">
+                  <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-stone-900 text-[10px] font-bold rounded-lg shadow-sm uppercase tracking-wider">
                     {FALLBACK_GUIDE_TAG}
                   </span>
                 </div>
@@ -131,14 +131,14 @@ const StudyAbroadGuides = () => {
                     {guide.author || 'Axelis Overseas'}
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-blue-600 transition-colors line-clamp-2">
+                <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-stone-900 transition-colors line-clamp-2">
                   {guide.title}
                 </h3>
                 <p className="text-sm text-slate-600 mb-6 line-clamp-2">{summary}</p>
                 <div className="pt-6 border-t border-slate-200 flex items-center justify-between">
                   <button
                     onClick={() => setActiveVideo(guide.id)}
-                    className="text-blue-600 font-bold text-sm flex items-center group/link hover:underline"
+                    className="text-stone-900 font-bold text-sm flex items-center group/link hover:underline"
                   >
                     Watch Now
                     <ChevronRight
@@ -150,7 +150,7 @@ const StudyAbroadGuides = () => {
                     href={guide.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-slate-400 hover:text-blue-600 transition-colors"
+                    className="text-slate-400 hover:text-stone-900 transition-colors"
                     aria-label="Open on YouTube"
                   >
                     <ExternalLink size={18} />

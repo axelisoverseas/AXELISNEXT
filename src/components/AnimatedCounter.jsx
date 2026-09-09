@@ -63,7 +63,7 @@ const AnimatedCounter = ({
     <span 
       ref={counterRef}
       className={`inline-block transition-all duration-300 ${
-        goldAccent ? 'text-cyan-500 font-bold' : ''
+        goldAccent ? 'text-stone-700 font-bold' : ''
       } ${className}`}
     >
       {prefix}{count}{suffix}

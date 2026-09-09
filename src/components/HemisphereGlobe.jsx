@@ -108,12 +108,12 @@ const HemisphereGlobe = ({ className = "" }) => {
       </div>
       
       {/* Floating elements around the hemisphere */}
-      <div className="absolute -top-4 -right-4 w-3 h-3 bg-cyan-400 rounded-full animate-pulse"></div>
+      <div className="absolute -top-4 -right-4 w-3 h-3 bg-white rounded-full animate-pulse"></div>
       <div className="absolute top-1/4 -left-6 w-2 h-2 bg-red-400 rounded-full animate-bounce" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute bottom-1/4 -right-8 w-4 h-4 bg-cyan-300/60 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
+      <div className="absolute bottom-1/4 -right-8 w-4 h-4 bg-stone-300/60 rounded-full animate-pulse" style={{ animationDelay: '2s' }}></div>
       
       {/* Glow effect */}
-      <div className="absolute inset-0 rounded-full bg-gradient-to-t from-cyan-400/20 via-transparent to-transparent blur-xl -z-10"></div>
+      <div className="absolute inset-0 rounded-full bg-gradient-to-t from-white/20 via-transparent to-transparent blur-xl -z-10"></div>
     </div>
   );
 };

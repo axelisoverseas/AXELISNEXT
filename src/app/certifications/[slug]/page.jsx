@@ -11,6 +11,7 @@ import {
 } from '../../../data/certificationPrograms';
 import CertificationEnquiryForm from '../../../components/CertificationEnquiryForm';
 import PaymentPartnersStrip from '../../../components/PaymentPartnersStrip';
+import FinancingBlock from '../../../components/FinancingBlock';
 
 export function generateStaticParams() {
   return programs.map((p) => ({ slug: p.slug }));
@@ -292,29 +293,8 @@ export default async function ProgramPage({ params }) {
         </div>
       </section>
 
-      {/* --------------------------------------------------------- FINANCING */}
-      {emi && (
-        <section className="relative py-14 border-y border-white/5 bg-[var(--storm-deep)]/40">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row md:items-center gap-6">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--storm-electric)] to-[var(--dawn-glow)] flex items-center justify-center text-[var(--storm-deep)] shrink-0">
-                <CreditCard size={22} strokeWidth={2.3} />
-              </div>
-              <div className="flex-1">
-                <h2 className="text-xl font-bold text-white mb-2">Financing this programme</h2>
-                <p className="text-slate-300/85 text-sm leading-relaxed mb-2">
-                  {formatINR(program.price)} works out to{' '}
-                  <span className="text-white font-bold">{formatINR(emi)} a month over {tenure} months</span>{' '}
-                  on card EMI through Razorpay or Cashfree. Talk to your Axelis advisor for a personal plan.
-                </p>
-                <p className="text-xs text-slate-400">
-                  {BAJAJ_EMI_LIVE ? financing.bajajLiveCopy : financing.bajajPendingCopy}
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
+      {/* Fee + financing, in the format Indian EdTech actually ships */}
+      <FinancingBlock program={program} />
 
       {/* ------------------------------------------------------ ENQUIRY FORM */}
       <section id="enquire" className="relative py-20 scroll-mt-24">

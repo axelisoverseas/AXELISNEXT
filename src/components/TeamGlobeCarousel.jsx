@@ -106,8 +106,8 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
     >
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-br from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-white/20 to-white/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-gradient-to-br from-white/20 to-white/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '2s' }}></div>
       </div>
 
       {/* 3D Carousel Container */}
@@ -132,8 +132,8 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
               onClick={() => !isActive && advanceTo(index)}
             >
               <div className={`bg-white rounded-2xl shadow-2xl p-4 md:p-6 border-2 transition-all duration-500 ${isActive
-                  ? 'border-cyan-400 shadow-cyan-400/30 shadow-2xl'
-                  : 'border-gray-200 hover:border-blue-400'
+                  ? 'border-white shadow-white/30 shadow-2xl'
+                  : 'border-gray-200 hover:border-white'
                 } ${cardWidth} ${cardHeight} flex flex-col`}>
 
                 {/* Member Photo */}
@@ -142,7 +142,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                     <img
                       src={member.image}
                       alt={`${member.name} - ${member.role}`}
-                      className="w-full h-full rounded-full object-cover border-4 border-blue-600 shadow-lg"
+                      className="w-full h-full rounded-full object-cover border-4 border-stone-900 shadow-lg"
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
@@ -151,7 +151,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                   ) : null}
 
                   {/* Fallback initials */}
-                  <div className={`w-full h-full bg-gradient-to-br from-blue-600 to-cyan-600 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg ${member.image ? 'hidden' : 'flex'}`}>
+                  <div className={`w-full h-full bg-gradient-to-br from-stone-900 to-stone-800 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg ${member.image ? 'hidden' : 'flex'}`}>
                     {getInitials(member.name)}
                   </div>
 
@@ -159,7 +159,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
 
                 {/* Alumni Badge */}
                 {member.almaMater && (
-                  <div className="flex items-center justify-center gap-1.5 mb-2 px-2 py-1 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-full border border-blue-200/60 mx-auto max-w-full">
+                  <div className="flex items-center justify-center gap-1.5 mb-2 px-2 py-1 bg-gradient-to-r from-stone-50 to-stone-50 rounded-full border border-stone-200/60 mx-auto max-w-full">
                     <img
                       src={member.almaMater.logo}
                       alt={member.almaMater.name}
@@ -168,7 +168,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                         e.target.style.display = 'none';
                       }}
                     />
-                    <span className="text-[10px] md:text-xs text-blue-700 font-semibold truncate">
+                    <span className="text-[10px] md:text-xs text-stone-950 font-semibold truncate">
                       {member.almaMater.name}
                     </span>
                     {member.almaMater.flag && (
@@ -176,7 +176,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                         src={member.almaMater.flag}
                         alt={member.almaMater.country || ''}
                         title={member.almaMater.country}
-                        className="w-4 h-3 md:w-[18px] md:h-[13px] object-cover rounded-[2px] flex-shrink-0 ring-1 ring-blue-200/60"
+                        className="w-4 h-3 md:w-[18px] md:h-[13px] object-cover rounded-[2px] flex-shrink-0 ring-1 ring-stone-200/60"
                       />
                     )}
                   </div>
@@ -184,12 +184,12 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
 
                 {/* Member Info */}
                 <div className="text-center flex-1 flex flex-col">
-                  <h3 className={`text-base md:text-lg font-bold mb-1 transition-colors ${isActive ? 'text-blue-600' : 'text-gray-900'
+                  <h3 className={`text-base md:text-lg font-bold mb-1 transition-colors ${isActive ? 'text-stone-900' : 'text-gray-900'
                     }`}>
                     {member.name || 'Team Member'}
                   </h3>
 
-                  <p className="text-blue-600 font-semibold mb-2 text-xs md:text-sm">
+                  <p className="text-stone-900 font-semibold mb-2 text-xs md:text-sm">
                     {member.role || 'Team Member'}
                   </p>
 
@@ -207,8 +207,8 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                         target="_blank"
                         rel="noopener noreferrer"
                         className={`inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full transition-all duration-300 shadow-lg hover:scale-110 transform ${isActive
-                            ? 'bg-cyan-500 hover:bg-cyan-600 text-black'
-                            : 'bg-blue-600 hover:bg-blue-700 text-white'
+                            ? 'bg-stone-700 hover:bg-stone-800 text-black'
+                            : 'bg-stone-900 hover:bg-stone-950 text-white'
                           }`}
                         onClick={(e) => e.stopPropagation()}
                       >

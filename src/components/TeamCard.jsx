@@ -35,7 +35,7 @@ const TeamCard = ({ member, className = "", style = {} }) => {
       className="h-full block"
     >
       <div
-        className={`bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 border border-blue-100 group hover:border-cyan-400/50 h-80 flex flex-col ${className}`}
+        className={`bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 border border-stone-100 group hover:border-white/50 h-80 flex flex-col ${className}`}
         style={style}
       >
         <div className="text-center flex-1 flex flex-col">
@@ -45,7 +45,7 @@ const TeamCard = ({ member, className = "", style = {} }) => {
               <img
                 src={member.image}
                 alt={`${member.name} - ${member.role}`}
-                className={`w-full h-full rounded-full object-cover border-4 border-blue-500 shadow-lg transition-opacity duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'
+                className={`w-full h-full rounded-full object-cover border-4 border-stone-700 shadow-lg transition-opacity duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'
                   }`}
                 onLoad={handleImageLoad}
                 onError={handleImageError}
@@ -54,14 +54,14 @@ const TeamCard = ({ member, className = "", style = {} }) => {
 
             {/* Loading state */}
             {imageLoading && member.image && !imageError && (
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white">
+              <div className="absolute inset-0 bg-gradient-to-br from-stone-700 to-stone-900 rounded-full flex items-center justify-center text-white">
                 <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
               </div>
             )}
 
             {/* Fallback avatar with initials */}
             {(!member.image || imageError) && (
-              <div className="w-full h-full bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+              <div className="w-full h-full bg-gradient-to-br from-stone-700 to-stone-900 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
                 {getInitials(member.name)}
               </div>
             )}
@@ -69,7 +69,7 @@ const TeamCard = ({ member, className = "", style = {} }) => {
             {/* Alumni Logo Badge */}
             {member.almaMater && member.almaMater.logo && (
               <div
-                className="absolute -bottom-2 -right-2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center border-2 border-blue-100 p-1 group-hover:scale-110 transition-transform duration-300"
+                className="absolute -bottom-2 -right-2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center border-2 border-stone-100 p-1 group-hover:scale-110 transition-transform duration-300"
                 title={`Alumnus of ${member.almaMater.name}`}
               >
                 <img
@@ -81,11 +81,11 @@ const TeamCard = ({ member, className = "", style = {} }) => {
             )}
           </div>
 
-          <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-blue-600 transition-colors">
+          <h3 className="text-xl font-bold text-slate-900 mb-2 group-hover:text-stone-900 transition-colors">
             {member.name}
           </h3>
 
-          <p className="text-blue-600 font-semibold mb-3">
+          <p className="text-stone-900 font-semibold mb-3">
             {member.role}
           </p>
 
@@ -101,7 +101,7 @@ const TeamCard = ({ member, className = "", style = {} }) => {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-blue-500 to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white rounded-full transition-all duration-300 shadow-lg hover:scale-110 hover:shadow-xl transform relative z-10"
+                className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-white rounded-full transition-all duration-300 shadow-lg hover:scale-110 hover:shadow-xl transform relative z-10"
                 aria-label={`${member.name} LinkedIn Profile`}
               >
                 <Linkedin size={18} />

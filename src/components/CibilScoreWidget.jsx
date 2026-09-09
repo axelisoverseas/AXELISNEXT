@@ -6,8 +6,8 @@ const CibilScoreWidget = () => {
 
   const scoreRanges = [
     { range: '750-900', label: 'Excellent', color: 'bg-green-500', description: 'Best loan rates & instant approvals' },
-    { range: '700-749', label: 'Good', color: 'bg-blue-500', description: 'Good loan rates & quick approvals' },
-    { range: '650-699', label: 'Fair', color: 'bg-cyan-500', description: 'Moderate rates with some conditions' },
+    { range: '700-749', label: 'Good', color: 'bg-stone-700', description: 'Good loan rates & quick approvals' },
+    { range: '650-699', label: 'Fair', color: 'bg-stone-700', description: 'Moderate rates with some conditions' },
     { range: '600-649', label: 'Poor', color: 'bg-orange-500', description: 'Higher rates & stricter conditions' },
     { range: '300-599', label: 'Very Poor', color: 'bg-gray-500', description: 'Loan approval may be difficult' }
   ];
@@ -31,11 +31,11 @@ const CibilScoreWidget = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl p-6 border border-blue-200 shadow-lg">
+    <div className="bg-gradient-to-br from-stone-50 to-stone-100 rounded-2xl p-6 border border-stone-200 shadow-lg">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-blue-600 rounded-xl">
+          <div className="p-3 bg-stone-900 rounded-xl">
             <CreditCard className="text-white" size={24} />
           </div>
           <div>
@@ -79,7 +79,7 @@ const CibilScoreWidget = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                <div className="w-2 h-2 bg-stone-700 rounded-full"></div>
                 <span className="text-sm text-gray-700">{benefit}</span>
               </div>
             ))}
@@ -92,7 +92,7 @@ const CibilScoreWidget = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <button
             onClick={handleCheckScore}
-            className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+            className="flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-950 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
           >
             <CreditCard size={18} />
             Check on CIBIL Official
@@ -119,10 +119,10 @@ const CibilScoreWidget = () => {
       </div>
 
       {/* Important Note */}
-      <div className="mt-4 bg-cyan-50 border border-cyan-200 rounded-lg p-3">
+      <div className="mt-4 bg-stone-50 border border-stone-200 rounded-lg p-3">
         <div className="flex items-start gap-2">
-          <AlertCircle className="text-cyan-600 flex-shrink-0 mt-0.5" size={16} />
-          <div className="text-xs text-cyan-800">
+          <AlertCircle className="text-stone-800 flex-shrink-0 mt-0.5" size={16} />
+          <div className="text-xs text-stone-900">
             <strong>Important:</strong> A good CIBIL score (750+) significantly improves your education loan approval chances and helps secure better interest rates. Check your score before applying for any loan.
           </div>
         </div>

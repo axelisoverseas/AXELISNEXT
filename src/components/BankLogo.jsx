@@ -34,9 +34,9 @@ const BankLogo = ({ bankName, className = "w-16 h-16" }) => {
 
     const bgColor = isNBFC
       ? "bg-gradient-to-br from-green-600 to-green-700"
-      : "bg-gradient-to-br from-blue-600 to-blue-700";
+      : "bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)]";
 
-    const borderColor = isNBFC ? "border-green-500" : "border-blue-500";
+    const borderColor = isNBFC ? "border-green-500" : "border-stone-700";
 
     return (
       <div className={`${className} ${bgColor} rounded-lg flex items-center justify-center shadow-lg border ${borderColor}`}>

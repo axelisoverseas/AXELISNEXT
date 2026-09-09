@@ -101,14 +101,14 @@ const VisaSuccessPredictor = () => {
     return (
         <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 overflow-hidden max-w-2xl mx-auto">
             {/* Header */}
-            <div className="bg-gradient-to-r from-slate-900 to-blue-900 text-white p-6 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+            <div className="bg-gradient-to-r from-slate-900 to-stone-900 text-white p-6 relative overflow-hidden">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-stone-700/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
                 <div className="relative z-10">
                     <h3 className="text-2xl font-bold mb-2 flex items-center">
-                        <CheckCircle className="mr-2 text-cyan-400" />
+                        <CheckCircle className="mr-2 text-white" />
                         Visa Success Predictor
                     </h3>
-                    <p className="text-blue-100 text-sm">Find out your chances of approval in 60 seconds</p>
+                    <p className="text-stone-100 text-sm">Find out your chances of approval in 60 seconds</p>
                 </div>
             </div>
 
@@ -117,7 +117,7 @@ const VisaSuccessPredictor = () => {
                 <div className="bg-gray-50 p-4 border-b border-gray-100 flex justify-between items-center px-8 relative">
                     <div className="absolute left-0 top-1/2 w-full h-0.5 bg-gray-200 -z-0 -translate-y-1/2"></div>
                     <div
-                        className="absolute left-0 top-1/2 h-0.5 bg-blue-600 -z-0 -translate-y-1/2 transition-all duration-500"
+                        className="absolute left-0 top-1/2 h-0.5 bg-stone-900 -z-0 -translate-y-1/2 transition-all duration-500"
                         style={{ width: `${((currentStep - 1) / 3) * 100}%` }}
                     ></div>
 
@@ -125,8 +125,8 @@ const VisaSuccessPredictor = () => {
                         <div
                             key={step.id}
                             className={`relative z-10 flex flex-col items-center justify-center w-10 h-10 rounded-full border-2 transition-all duration-300 bg-white
-                ${currentStep > step.id ? 'border-blue-600 bg-blue-600/10 text-blue-600' :
-                                    currentStep === step.id ? 'border-blue-600 shadow-[0_0_15px_rgba(37,99,235,0.3)] text-blue-600' :
+                ${currentStep > step.id ? 'border-stone-900 bg-stone-900/10 text-stone-900' :
+                                    currentStep === step.id ? 'border-stone-900 shadow-[0_0_15px_rgba(37,99,235,0.3)] text-stone-900' :
                                         'border-gray-200 text-gray-400'}`}
                         >
                             <span className="text-sm font-bold">{step.id}</span>
@@ -147,7 +147,7 @@ const VisaSuccessPredictor = () => {
                             transition={{ duration: 0.3 }}
                             className="flex-1"
                         >
-                            <div className="flex items-center text-blue-600 mb-4">
+                            <div className="flex items-center text-stone-900 mb-4">
                                 {steps[currentStep - 1].icon}
                                 <span className="ml-2 font-semibold text-sm uppercase tracking-wider">{steps[currentStep - 1].title}</span>
                             </div>
@@ -165,8 +165,8 @@ const VisaSuccessPredictor = () => {
                         ${(currentStep === 1 && formData.country === option) ||
                                                     (currentStep === 2 && formData.qualification === option) ||
                                                     (currentStep === 3 && formData.englishTest === option)
-                                                    ? 'border-blue-600 bg-blue-50 text-blue-800 font-semibold'
-                                                    : 'border-gray-100 hover:border-blue-300 bg-white text-gray-700'}`}
+                                                    ? 'border-stone-900 bg-stone-50 text-stone-900 font-semibold'
+                                                    : 'border-gray-100 hover:border-stone-300 bg-white text-gray-700'}`}
                                         >
                                             {option}
                                         </button>
@@ -175,7 +175,7 @@ const VisaSuccessPredictor = () => {
                             ) : (
                                 /* Lead Gate Form for Step 4 */
                                 <form onSubmit={handleSubmit} className="space-y-4">
-                                    <div className="bg-blue-50 p-4 rounded-xl mb-6 border border-blue-100 text-sm text-blue-800">
+                                    <div className="bg-stone-50 p-4 rounded-xl mb-6 border border-stone-100 text-sm text-stone-900">
                                         <p className="flex items-center">
                                             <CheckCircle className="w-4 h-4 mr-2" /> We have analyzed your profile. Enter details to view results instantly.
                                         </p>
@@ -189,7 +189,7 @@ const VisaSuccessPredictor = () => {
                                             required
                                             value={formData.name}
                                             onChange={handleInputChange}
-                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all outline-none"
+                                            className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-stone-900 focus:border-transparent transition-all outline-none"
                                             placeholder="John Doe"
                                         />
                                     </div>
@@ -205,7 +205,7 @@ const VisaSuccessPredictor = () => {
                                                 required
                                                 value={formData.phone}
                                                 onChange={handleInputChange}
-                                                className="flex-1 px-4 py-3 rounded-r-xl border border-gray-200 focus:ring-2 focus:ring-blue-600 focus:border-transparent transition-all outline-none"
+                                                className="flex-1 px-4 py-3 rounded-r-xl border border-gray-200 focus:ring-2 focus:ring-stone-900 focus:border-transparent transition-all outline-none"
                                                 placeholder="98765 43210"
                                             />
                                         </div>
@@ -214,7 +214,7 @@ const VisaSuccessPredictor = () => {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting || !formData.name || formData.phone.length < 10}
-                                        className="w-full py-4 mt-6 bg-cyan-400 hover:bg-cyan-500 text-slate-900 font-bold rounded-xl shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center"
+                                        className="w-full py-4 mt-6 bg-white hover:bg-stone-700 text-slate-900 font-bold rounded-xl shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center"
                                     >
                                         {isSubmitting ? (
                                             <span className="flex items-center">
@@ -249,7 +249,7 @@ const VisaSuccessPredictor = () => {
                             </p>
                             <button
                                 onClick={resetForm}
-                                className="text-blue-600 font-semibold hover:underline"
+                                className="text-stone-900 font-semibold hover:underline"
                             >
                                 Check another profile
                             </button>
@@ -262,7 +262,7 @@ const VisaSuccessPredictor = () => {
                     <div className="absolute bottom-8 left-8">
                         <button
                             onClick={() => setCurrentStep(currentStep - 1)}
-                            className="flex items-center text-gray-400 hover:text-blue-600 font-medium transition-colors"
+                            className="flex items-center text-gray-400 hover:text-stone-900 font-medium transition-colors"
                         >
                             <ArrowLeft className="w-4 h-4 mr-1" /> Back
                         </button>

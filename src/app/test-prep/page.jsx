@@ -88,7 +88,7 @@ const tracks = [
     logo: null,
     logoText: 'DELF · DALF',
     logoSub: 'France Éducation International',
-    accent: 'from-blue-600 via-white to-rose-500',
+    accent: 'from-stone-900 via-white to-rose-500',
     accentText: 'text-[var(--storm-deep)]',
     headline: 'A1 and A2 levels — France Éducation International',
     note: 'Built for French university admissions and Schengen visa language thresholds. Same tutor for grammar, oral and the official DELF format.',
@@ -285,7 +285,7 @@ export default function TestPrepPage() {
             {examLogos.map((e) => (
               <div key={e.code} className="glass-storm p-4 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
                 <LogoTile logo={e.src} alt={e.alt} code={e.code} />
-                <p className="text-sky-200/85 text-[10px] uppercase tracking-wider leading-snug">{e.sub}</p>
+                <p className="text-stone-200/85 text-[10px] uppercase tracking-wider leading-snug">{e.sub}</p>
               </div>
             ))}
           </div>
@@ -332,7 +332,7 @@ export default function TestPrepPage() {
                           />
                         )}
                       </div>
-                      <p className="text-sky-200/85 text-sm mt-1">{t.headline}</p>
+                      <p className="text-stone-200/85 text-sm mt-1">{t.headline}</p>
                     </div>
                   </div>
                   <p className="text-slate-300/80 text-sm md:text-right md:max-w-sm leading-snug">{t.note}</p>
@@ -355,7 +355,7 @@ export default function TestPrepPage() {
                       )}
                       <p className="text-[10px] uppercase tracking-[0.18em] text-slate-400 font-bold mb-2">{p.code}</p>
                       <h4 className="text-lg font-bold text-white mb-1">{p.label}</h4>
-                      <p className="text-sky-200/75 text-xs mb-5">{p.sessions}</p>
+                      <p className="text-stone-200/75 text-xs mb-5">{p.sessions}</p>
 
                       <div className="mb-1 flex items-baseline gap-2">
                         <span className="text-3xl md:text-4xl font-extrabold text-white">{p.price}</span>

@@ -288,30 +288,30 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
       />
 
       {/* Floating UI Elements */}
-      <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30 animate-pulse">
+      <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-stone-700/30 animate-pulse">
         <div className="flex items-center text-white text-sm">
-          <div className="w-2 h-2 bg-cyan-400 rounded-full mr-2 animate-ping"></div>
+          <div className="w-2 h-2 bg-white rounded-full mr-2 animate-ping"></div>
           <span>Live Globe</span>
         </div>
       </div>
 
-      <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
+      <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-stone-700/30">
         <div className="flex items-center text-white text-sm">
-          <Star className="w-4 h-4 mr-2 text-cyan-400" />
+          <Star className="w-4 h-4 mr-2 text-white" />
           <span>Success Stories</span>
         </div>
       </div>
 
-      <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
+      <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-stone-700/30">
         <div className="flex items-center text-white text-sm">
           <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
           <span>{getTestimonialCountries().length} Countries</span>
         </div>
       </div>
 
-      <div className="absolute bottom-4 right-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-blue-500/30">
+      <div className="absolute bottom-4 right-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-stone-700/30">
         <div className="flex items-center text-white text-sm">
-          <div className="w-2 h-2 bg-blue-400 rounded-full mr-2"></div>
+          <div className="w-2 h-2 bg-white rounded-full mr-2"></div>
           <span>NASA Earth</span>
         </div>
       </div>

@@ -42,9 +42,9 @@ const CTAButton = ({
       case 'success':
         return 'btn bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-600 hover:to-emerald-700 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/25';
       case 'warning':
-        return 'btn bg-cyan-400 text-slate-900 border hover:bg-cyan-300 border-cyan-500 shadow-[0_0_15px_rgba(250,204,21,0.5)]';
+        return 'btn bg-white text-slate-900 border hover:bg-stone-300 border-stone-700 shadow-[0_0_15px_rgba(250,204,21,0.5)]';
       case 'primary':
-        return 'btn bg-blue-600 text-white hover:bg-blue-500 border border-blue-600 shadow-md';
+        return 'btn bg-stone-900 text-white hover:bg-stone-700 border border-stone-900 shadow-md';
       case 'light':
         return 'btn bg-white text-slate-900 border-2 border-white hover:bg-gray-50 hover:border-gray-50 shadow-xl hover:shadow-2xl hover:shadow-white/25';
       case 'electric':
@@ -115,7 +115,7 @@ const CTAButton = ({
         className={`
           group relative inline-flex items-center justify-center font-bold rounded-xl overflow-hidden
           transition-all duration-500 transform hover:scale-110 hover:-translate-y-2
-          focus:outline-none focus:ring-4 focus:ring-blue-300/50
+          focus:outline-none focus:ring-4 focus:ring-stone-300/50
           active:scale-95 active:translate-y-0
           ${getVariantClasses()} ${getSizeClasses()} ${className}
         `}

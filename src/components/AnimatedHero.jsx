@@ -97,7 +97,7 @@ const AnimatedHero = ({
         {subtitle && (
           <div 
             ref={subtitleRef}
-            className="text-blue-600 dark:text-blue-400 font-semibold text-lg mb-4"
+            className="text-stone-900 dark:text-white font-semibold text-lg mb-4"
             style={{ opacity: 0, transform: 'translateY(30px)' }}
           >
             {subtitle}
@@ -134,7 +134,7 @@ const AnimatedHero = ({
             {primaryButton && (
               <button
                 onClick={primaryButton.onClick}
-                className="px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="px-8 py-4 bg-stone-900 hover:bg-stone-950 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
                 {primaryButton.text}
               </button>
@@ -143,7 +143,7 @@ const AnimatedHero = ({
             {secondaryButton && (
               <button
                 onClick={secondaryButton.onClick}
-                className="px-8 py-4 bg-transparent border-2 border-blue-600 text-blue-600 dark:text-blue-400 hover:bg-blue-600 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
+                className="px-8 py-4 bg-transparent border-2 border-stone-900 text-stone-900 dark:text-white hover:bg-stone-900 hover:text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105"
               >
                 {secondaryButton.text}
               </button>
@@ -155,8 +155,8 @@ const AnimatedHero = ({
       {/* Animated background elements */}
       <div className="absolute inset-0 pointer-events-none">
         {/* Floating geometric shapes for visual interest */}
-        <div className="absolute top-1/4 left-1/4 w-20 h-20 bg-blue-500 bg-opacity-10 rounded-full animate-pulse"></div>
-        <div className="absolute top-3/4 right-1/4 w-16 h-16 bg-blue-500 bg-opacity-10 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute top-1/4 left-1/4 w-20 h-20 bg-stone-700 bg-opacity-10 rounded-full animate-pulse"></div>
+        <div className="absolute top-3/4 right-1/4 w-16 h-16 bg-stone-700 bg-opacity-10 rounded-full animate-pulse delay-1000"></div>
         <div className="absolute bottom-1/4 left-1/3 w-12 h-12 bg-green-500 bg-opacity-10 rounded-full animate-pulse delay-2000"></div>
       </div>
     </div>
