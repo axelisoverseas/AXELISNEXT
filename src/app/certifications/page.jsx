@@ -8,7 +8,7 @@ import {
 } from 'lucide-react';
 import {
   TIERS, programsByTier, catalogueStats,
-  monthlyEmi, formatINR, financing, BAJAJ_EMI_LIVE,
+  monthlyEmi, formatINR, financing,
 } from '../../data/certificationPrograms';
 import CertificationEnquiryForm from '../../components/CertificationEnquiryForm';
 import PaymentPartnersStrip from '../../components/PaymentPartnersStrip';
@@ -268,11 +268,6 @@ export default function CertificationsPage() {
               ))}
             </div>
 
-            {!BAJAJ_EMI_LIVE && (
-              <p className="text-xs text-slate-400 leading-relaxed border-t border-white/10 pt-4">
-                {financing.bajajPendingCopy} We will update this page the day it goes live.
-              </p>
-            )}
           </div>
         </div>
       </section>

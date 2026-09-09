@@ -176,7 +176,7 @@ export default function Home() {
               '4 Tiers',
               '5,000+ Learners Targeted Annually',
               '₹2L Avg Ticket',
-              'No-cost EMI',
+              'EMI available',
             ].map((stat, i, arr) => (
               <React.Fragment key={stat}>
                 <span className="text-slate-200 font-semibold">{stat}</span>

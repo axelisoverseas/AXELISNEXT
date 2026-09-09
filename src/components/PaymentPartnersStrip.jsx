@@ -1,10 +1,10 @@
 import React from 'react';
 import { CreditCard } from 'lucide-react';
-import { BAJAJ_EMI_LIVE, financing } from '../data/certificationPrograms';
+import { financing } from '../data/certificationPrograms';
 
-// Typographic wordmarks rather than logo files. We do not hold redistribution
-// rights to the partner brand assets, and the handover asks for the Bajaj slot
-// to be reserved rather than filled until merchant onboarding closes.
+// Typographic wordmarks rather than logo files: we do not hold redistribution
+// rights to the partner brand assets. Only gateways that are actually live
+// appear here — a partner is listed when the integration is real, not before.
 const GATEWAYS = [
   { name: 'Razorpay', note: 'Live' },
   { name: 'Cashfree', note: 'Live' },
@@ -36,28 +36,6 @@ export default function PaymentPartnersStrip() {
             </div>
           ))}
 
-          {/* Bajaj slot — DOM space reserved per the handover. The logo goes in
-              once merchant onboarding closes and BAJAJ_EMI_LIVE flips true. */}
-          <div
-            className={`inline-flex items-center gap-2.5 px-5 py-3 rounded-xl border ${
-              BAJAJ_EMI_LIVE
-                ? 'bg-white/[0.04] border-white/10'
-                : 'bg-white/[0.02] border-dashed border-white/15'
-            }`}
-          >
-            <span className={BAJAJ_EMI_LIVE ? 'text-white font-bold tracking-tight' : 'text-slate-500 font-bold tracking-tight'}>
-              Bajaj Finserv EMI Network
-            </span>
-            <span
-              className={`text-[9px] font-bold px-1.5 py-0.5 rounded border ${
-                BAJAJ_EMI_LIVE
-                  ? 'bg-emerald-500/15 border-emerald-400/30 text-emerald-300'
-                  : 'bg-white/5 border-white/15 text-slate-500'
-              }`}
-            >
-              {BAJAJ_EMI_LIVE ? 'Live' : 'Onboarding'}
-            </span>
-          </div>
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-2 mb-6">

@@ -35,10 +35,10 @@
 // from this file, so one edit pass updates the whole site.
 // ============================================================================
 
-// Bajaj Finserv merchant EMI is NOT live yet — onboarding is in progress.
-// The handover says to reserve DOM space and grey out the checkbox until it
-// closes. Flip this single constant when the merchant ID lands; every
-// Bajaj-dependent string and logo slot reads from it.
+// Bajaj Finserv merchant EMI is NOT live. Nothing about it renders anywhere
+// while this is false — no logo, no chip, no "onboarding" placeholder, and no
+// no-cost-EMI claim, because no-cost EMI IS the Bajaj product. Flip this one
+// constant when the merchant ID lands and the whole treatment comes back.
 export const BAJAJ_EMI_LIVE = false;
 
 export const TIERS = [
@@ -606,10 +606,10 @@ export function emiTenures(tier) {
 }
 
 /**
- * Per-tenure schedule. `monthly` is fee/tenure — the NO-COST figure, true
- * only where interest is genuinely nil. Card EMI through a bank carries the
- * issuer's rate, so the UI labels these as no-cost rather than implying every
- * payment route reaches this number.
+ * Per-tenure schedule. `monthly` is the programme fee split across the tenure,
+ * i.e. principal only. On card EMI the issuing bank adds its own interest, so
+ * this is a floor rather than a quoted instalment. It only becomes the true
+ * instalment once a genuine no-cost route is live.
  */
 export function emiSchedule(program) {
   return emiTenures(program.tier).map((months) => ({
@@ -642,23 +642,35 @@ export const catalogueStats = {
 };
 
 // ---------------------------------------------------------------------------
-// Financing copy. Single source of truth so the Bajaj claim stays accurate.
+// Financing copy.
 //
-// The handover's metrics table splits these correctly — "No-cost EMI on Bajaj
-// Finserv + card EMI on Razorpay & Cashfree" — while its §3 financing strip
-// flattens both into "no-cost". The table wins: Bajaj is not onboarded yet,
-// so claiming live no-cost EMI across all three would be false.
+// What is live today: card EMI through Razorpay and Cashfree, where the
+// issuing bank sets the rate. No-cost EMI is a Bajaj Finserv product and
+// Bajaj is not onboarded, so no no-cost claim appears anywhere on the site
+// until BAJAJ_EMI_LIVE is true.
 // ---------------------------------------------------------------------------
 export const financing = {
   liveCopy:
     'Card EMI on 3, 6, 9 and 12-month tenures through Razorpay and Cashfree, on all major credit cards.',
-  bajajPendingCopy:
-    'No-cost EMI through the Bajaj Finserv EMI Network is being onboarded and is not live yet.',
+  // Rendered only once Bajaj is genuinely live.
   bajajLiveCopy:
-    'No-cost EMI on the Bajaj Finserv EMI Network, across 3, 6, 9 and 12-month tenures.',
+    'No-cost EMI on the Bajaj Finserv Insta EMI Card, across 3, 6, 9 and 12-month tenures.',
   get strip() {
+    return BAJAJ_EMI_LIVE ? `${this.bajajLiveCopy} ${this.liveCopy}` : this.liveCopy;
+  },
+  /** Live gateways only. Bajaj joins this list when it is real. */
+  get partners() {
     return BAJAJ_EMI_LIVE
-      ? `${this.bajajLiveCopy} ${this.liveCopy}`
-      : this.liveCopy;
+      ? ['Razorpay', 'Cashfree', 'Bajaj Finserv Insta EMI Card']
+      : ['Razorpay', 'Cashfree'];
+  },
+  /** Table framing changes entirely depending on whether no-cost is real. */
+  get scheduleHeading() {
+    return BAJAJ_EMI_LIVE ? 'No-cost EMI options' : 'EMI options';
+  },
+  get scheduleNote() {
+    return BAJAJ_EMI_LIVE
+      ? 'On no-cost EMI the total payable does not change across tenures.'
+      : 'Amounts are the programme fee divided across the tenure. Your bank sets its own rate on card EMI, so the final instalment is fixed by your card issuer.';
   },
 };
