@@ -30,7 +30,7 @@ export default function PaymentPartnersStrip() {
               className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-white/[0.04] border border-white/10"
             >
               <span className="text-white font-bold tracking-tight">{g.name}</span>
-              <span className="text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded bg-emerald-500/15 border border-emerald-400/30 text-emerald-300">
+              <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/15 border border-emerald-400/30 text-emerald-300">
                 {g.note}
               </span>
             </div>
@@ -49,7 +49,7 @@ export default function PaymentPartnersStrip() {
               Bajaj Finserv EMI Network
             </span>
             <span
-              className={`text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded border ${
+              className={`text-[9px] font-bold px-1.5 py-0.5 rounded border ${
                 BAJAJ_EMI_LIVE
                   ? 'bg-emerald-500/15 border-emerald-400/30 text-emerald-300'
                   : 'bg-white/5 border-white/15 text-slate-500'

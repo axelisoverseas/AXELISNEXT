@@ -149,7 +149,7 @@ const VisaSuccessPredictor = () => {
                         >
                             <div className="flex items-center text-stone-900 mb-4">
                                 {steps[currentStep - 1].icon}
-                                <span className="ml-2 font-semibold text-sm uppercase tracking-wider">{steps[currentStep - 1].title}</span>
+                                <span className="ml-2 font-semibold text-sm">{steps[currentStep - 1].title}</span>
                             </div>
 
                             <h4 className="text-2xl font-bold text-slate-800 mb-6">{steps[currentStep - 1].question}</h4>

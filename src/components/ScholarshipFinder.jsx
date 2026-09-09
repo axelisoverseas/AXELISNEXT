@@ -184,7 +184,7 @@ export default function ScholarshipFinder() {
                     {s.plan.map((p) => (
                       <span
                         key={p}
-                        className={`px-2 py-0.5 rounded-full text-[10px] font-bold tracking-wider ${
+                        className={`px-2 py-0.5 rounded-full text-[10px] font-bold ${
                           p === 'ZTF'
                             ? 'bg-stone-50 text-stone-900 border border-stone-200'
                             : 'bg-stone-50 text-stone-950 border border-stone-200'
@@ -200,7 +200,7 @@ export default function ScholarshipFinder() {
                   <ExternalLink size={13} className="shrink-0 mt-1 text-slate-400 group-hover:text-stone-900 transition-colors" />
                 </h3>
                 <p className="text-xs text-slate-600 leading-relaxed mb-3 min-h-[36px]">{s.summary}</p>
-                <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-semibold uppercase tracking-wider mt-auto">
+                <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-semibold mt-auto">
                   <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-slate-100 text-slate-600">
                     <GraduationCap size={12} /> {s.level.join(' / ')}
                   </span>

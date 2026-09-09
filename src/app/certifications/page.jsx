@@ -1,15 +1,14 @@
 'use client';
 
-import React, { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import {
-  ArrowRight, Award, CheckCircle, Clock, CreditCard, Layers,
-  ShieldCheck, Users, Sparkles,
+  ArrowRight, Clock, CreditCard, ShieldCheck, Users, Sparkles,
 } from 'lucide-react';
 import {
-  TIERS, programs, programsByTier, catalogueStats,
-  monthlyEmi, formatINR, financing, BAJAJ_EMI_LIVE, accentFor,
+  TIERS, programsByTier, catalogueStats,
+  monthlyEmi, formatINR, financing, BAJAJ_EMI_LIVE,
 } from '../../data/certificationPrograms';
 import CertificationEnquiryForm from '../../components/CertificationEnquiryForm';
 import PaymentPartnersStrip from '../../components/PaymentPartnersStrip';
@@ -25,60 +24,133 @@ const stagger = {
   visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
 };
 
-function ProgramCard({ program }) {
+/**
+ * Programmes are listed by tier, with the layout itself encoding commitment:
+ * Concierge runs as full-width rows with the photograph, Advanced as halves,
+ * Foundation and Core as a compact index. Size carries the information, so
+ * the old tier-filter chrome is gone — scrolling shows the same structure the
+ * filter used to describe.
+ */
+function ConciergeRow({ program }) {
   const emi = monthlyEmi(program);
-  const isConcierge = program.tier === 'concierge';
-  const accent = accentFor(program.tier);
-
   return (
     <Link
       href={`/certifications/${program.slug}`}
-      className={`group relative flex flex-col bg-[#141210] border-2 rounded-2xl p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)] ${
-        isConcierge
-          ? 'border-[var(--dawn-glow)]/35 hover:border-[var(--dawn-glow)]/70 focus-visible:ring-[var(--dawn-glow)]'
-          : 'border-white/10 hover:border-[var(--storm-electric)]/50 focus-visible:ring-[var(--storm-electric)]'
-      }`}
+      className="group relative grid grid-cols-1 md:grid-cols-5 gap-0 overflow-hidden rounded-2xl border border-white/12 bg-[#141210] hover:border-[var(--dawn-glow)]/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]"
     >
-      {program.flagship && (
-        <span className="absolute -top-3 left-6 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[var(--storm-deep)] text-xs font-bold">
-          <Sparkles size={12} /> Flagship
-        </span>
-      )}
-
-      <div className="flex items-start justify-between gap-3 mb-3">
-        <span className={`text-xs font-semibold ${accent.text}`}>
-          {TIERS.find((t) => t.id === program.tier)?.name}
-        </span>
-        <span className="text-xs text-slate-500 text-right shrink-0">
-          {program.duration}
-        </span>
+      <div className="md:col-span-2 relative h-48 md:h-auto min-h-[200px] overflow-hidden">
+        <img
+          src={program.image}
+          alt={program.imageAlt}
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#141210] md:to-[#141210]" />
       </div>
 
-      <h3 className="text-lg font-bold text-white leading-snug mb-2">{program.title}</h3>
-      <p className="text-slate-300/80 text-sm leading-relaxed mb-5 flex-1">{program.summary}</p>
+      <div className="md:col-span-3 p-6 md:p-8 flex flex-col justify-center">
+        {program.flagship && (
+          <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] text-sm font-semibold mb-2">
+            <Sparkles size={13} /> Our flagship programme
+          </span>
+        )}
+        <h3 className="text-2xl md:text-3xl font-bold text-white mb-2.5">{program.title}</h3>
+        <p className="text-slate-300/85 leading-relaxed mb-5 max-w-xl">{program.summary}</p>
 
-      <div className="pt-4 border-t border-white/10">
-        <div className="flex items-baseline justify-between gap-2 mb-1">
-          <span className="text-2xl font-extrabold text-white">{formatINR(program.price)}</span>
-          <span className={`inline-flex items-center gap-1.5 text-sm font-semibold ${accent.text} group-hover:gap-2.5 transition-all`}>
-            Details <ArrowRight size={14} />
+        <div className="flex flex-wrap items-end gap-x-8 gap-y-3">
+          <div>
+            <div className="text-3xl font-bold text-white">{formatINR(program.price)}</div>
+            {emi && <div className="text-sm text-slate-400">or {formatINR(emi)} a month</div>}
+          </div>
+          <div className="text-sm text-slate-400">
+            {program.duration} &middot; {program.cohortSize}
+          </div>
+          <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] font-semibold text-sm ml-auto group-hover:gap-2.5 transition-all">
+            Details <ArrowRight size={15} />
           </span>
         </div>
-        {emi && (
-          <p className="text-xs text-slate-400">
-            EMI from <span className="text-slate-200 font-semibold">{formatINR(emi)}/month</span>
-          </p>
-        )}
       </div>
     </Link>
   );
 }
 
-export default function CertificationsPage() {
-  const [activeTier, setActiveTier] = useState('all');
+function AdvancedCard({ program }) {
+  const emi = monthlyEmi(program);
+  return (
+    <Link
+      href={`/certifications/${program.slug}`}
+      className="group flex flex-col overflow-hidden rounded-2xl border border-white/12 bg-[#141210] hover:border-white/30 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+    >
+      <div className="relative h-40 overflow-hidden">
+        <img
+          src={program.image}
+          alt={program.imageAlt}
+          loading="lazy"
+          decoding="async"
+          className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#141210] via-[#141210]/30 to-transparent" />
+      </div>
+      <div className="p-6 flex flex-col flex-1">
+        <h3 className="text-lg font-bold text-white mb-2">{program.title}</h3>
+        <p className="text-slate-300/80 text-sm leading-relaxed mb-5 flex-1">{program.summary}</p>
+        <div className="flex items-end justify-between gap-3">
+          <div>
+            <div className="text-xl font-bold text-white">{formatINR(program.price)}</div>
+            {emi && <div className="text-xs text-slate-400">or {formatINR(emi)} a month</div>}
+          </div>
+          <span className="text-sm text-slate-400">{program.duration}</span>
+        </div>
+      </div>
+    </Link>
+  );
+}
 
-  const shown = activeTier === 'all' ? programs : programsByTier(activeTier);
-  const concierge = programsByTier('concierge');
+function IndexRow({ program }) {
+  const emi = monthlyEmi(program);
+  return (
+    <Link
+      href={`/certifications/${program.slug}`}
+      className="group flex items-center gap-4 py-4 border-b border-white/8 last:border-0 hover:bg-white/[0.03] px-3 -mx-3 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+    >
+      <img
+        src={program.image}
+        alt=""
+        aria-hidden="true"
+        loading="lazy"
+        decoding="async"
+        className="w-14 h-14 rounded-lg object-cover shrink-0 ring-1 ring-white/15"
+      />
+      <div className="min-w-0 flex-1">
+        <h3 className="text-white font-semibold leading-snug">{program.title}</h3>
+        <p className="text-slate-400 text-sm truncate">{program.duration} &middot; {program.format}</p>
+      </div>
+      <div className="text-right shrink-0">
+        <div className="text-white font-bold">{formatINR(program.price)}</div>
+        {emi && <div className="text-xs text-slate-500">{formatINR(emi)}/mo</div>}
+      </div>
+      <ArrowRight size={16} className="text-slate-600 group-hover:text-white group-hover:translate-x-0.5 transition-all shrink-0" />
+    </Link>
+  );
+}
+
+function TierHeading({ tier, count }) {
+  return (
+    <div className="flex items-baseline justify-between gap-4 mb-5 pb-3 border-b border-white/10">
+      <div>
+        <h3 className="text-xl md:text-2xl font-bold text-white">{tier.name}</h3>
+        <p className="text-slate-400 text-sm mt-1">{tier.tagline}</p>
+      </div>
+      <span className="text-sm text-slate-500 shrink-0">
+        {count} {count === 1 ? 'programme' : 'programmes'}
+      </span>
+    </div>
+  );
+}
+
+export default function CertificationsPage() {
+  const byTier = Object.fromEntries(TIERS.map((t) => [t.id, programsByTier(t.id)]));
 
   return (
     <div className="min-h-screen text-slate-100">
@@ -93,10 +165,7 @@ export default function CertificationsPage() {
             fetchPriority="high"
             className="absolute inset-0 w-full h-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.7)_0%,transparent_75%)]" />
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)]/90 via-[var(--storm-deep)]/75 to-[var(--storm-deep)]" />
         </div>
 
         <motion.div
@@ -120,7 +189,7 @@ export default function CertificationsPage() {
             Enrol standalone or bundled with the ZTF Charter.
           </motion.p>
 
-          <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#programmes"
               className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
@@ -135,127 +204,39 @@ export default function CertificationsPage() {
               Book a discovery call
             </Link>
           </motion.div>
-
-          <motion.div variants={fadeInUp} className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto">
-            {[
-              { Icon: Award, label: '16 programmes' },
-              { Icon: Layers, label: '4 tiers' },
-              { Icon: ShieldCheck, label: 'Verifiable certificate' },
-              { Icon: CreditCard, label: 'EMI available' },
-            ].map(({ Icon, label }) => (
-              <div key={label} className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-slate-200 text-sm font-semibold">
-                <Icon size={16} className="text-[var(--storm-electric)] shrink-0" />
-                <span>{label}</span>
-              </div>
-            ))}
-          </motion.div>
         </motion.div>
       </section>
 
-      {/* ------------------------------------------------- PROGRAMMES + TIERS */}
+      {/* ------------------------------------------------------- PROGRAMMES */}
       <section id="programmes" className="relative py-20 scroll-mt-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
-              Four tiers. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">Pick your depth.</span>
-            </h2>
-            <p className="text-slate-300/85">
-              Foundation programmes run two to four weeks. Concierge runs twelve to fifteen months with one counsellor throughout.
-            </p>
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          {/* Concierge — the largest commitment gets the most room */}
+          <div className="mb-16">
+            <TierHeading tier={TIERS.find((t) => t.id === 'concierge')} count={byTier.concierge.length} />
+            <div className="space-y-5">
+              {byTier.concierge.map((p) => <ConciergeRow key={p.slug} program={p} />)}
+            </div>
           </div>
 
-          {/* Tier switcher */}
-          <div className="flex flex-wrap justify-center gap-2 mb-4" role="tablist" aria-label="Filter programmes by tier">
-            {[{ id: 'all', name: 'All 16' }, ...TIERS].map((tier) => {
-              const isActive = activeTier === tier.id;
-              const count = tier.id === 'all' ? programs.length : programsByTier(tier.id).length;
-              return (
-                <button
-                  key={tier.id}
-                  type="button"
-                  role="tab"
-                  aria-selected={isActive}
-                  onClick={() => setActiveTier(tier.id)}
-                  className={`inline-flex items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-full text-sm font-bold transition-colors border focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)] ${
-                    isActive
-                      ? 'bg-[var(--storm-electric)] border-[var(--storm-electric)] text-[var(--storm-deep)]'
-                      : 'bg-white/5 border-white/10 text-slate-200 hover:bg-white/10 hover:border-white/25'
-                  }`}
-                >
-                  {tier.name}
-                  <span className={isActive ? 'text-[var(--storm-deep)]/70' : 'text-slate-500'}>{count}</span>
-                </button>
-              );
-            })}
+          {/* Advanced — half-width */}
+          <div className="mb-16">
+            <TierHeading tier={TIERS.find((t) => t.id === 'advanced')} count={byTier.advanced.length} />
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              {byTier.advanced.map((p) => <AdvancedCard key={p.slug} program={p} />)}
+            </div>
           </div>
 
-          {/* Active tier description */}
-          {activeTier !== 'all' && (
-            <p className="text-center text-slate-300/85 text-sm max-w-2xl mx-auto mb-8">
-              {TIERS.find((t) => t.id === activeTier)?.description}
-            </p>
-          )}
-          {activeTier === 'all' && <div className="mb-8" />}
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-            {shown.map((program) => (
-              <ProgramCard key={program.slug} program={program} />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* --------------------------------------------- CONCIERGE SPOTLIGHT */}
-      <section className="relative py-20 border-y border-white/5 bg-[var(--storm-deep)]/40">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10 max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-sm font-semibold mb-5">
-              Concierge tier
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
-              End-to-end, with a written outcome guarantee
-            </h2>
-            <p className="text-slate-300/85 text-base md:text-lg leading-relaxed">
-              Our flagship Concierge programmes run {formatINR(200000)} to {formatINR(300000)} and cover application, language,
-              visa and first-90-days-abroad support in a single engagement. EMI available.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-            {concierge.map((program) => {
-              const emi = monthlyEmi(program);
-              return (
-                <Link
-                  key={program.slug}
-                  href={`/certifications/${program.slug}`}
-                  className="group relative bg-[#141210] border-2 border-[var(--dawn-glow)]/30 hover:border-[var(--dawn-glow)]/70 rounded-2xl p-7 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] transition-all hover:-translate-y-1 flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
-                >
-                  <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-transparent via-[var(--dawn-glow)] to-transparent" />
-
-                  <h3 className="text-xl font-extrabold text-white mb-2">{program.title}</h3>
-                  <p className="text-slate-300/85 text-sm leading-relaxed mb-5 flex-1">{program.summary}</p>
-
-                  <ul className="space-y-2 mb-6">
-                    {program.outcomes.slice(0, 3).map((o) => (
-                      <li key={o} className="flex items-start gap-2 text-xs text-slate-200">
-                        <CheckCircle size={13} className="text-[var(--dawn-glow)] shrink-0 mt-0.5" />
-                        <span>{o}</span>
-                      </li>
-                    ))}
-                  </ul>
-
-                  <div className="pt-4 border-t border-white/10 flex items-end justify-between gap-3">
-                    <div>
-                      <div className="text-2xl font-extrabold text-white">{formatINR(program.price)}</div>
-                      {emi && <div className="text-xs text-slate-400">EMI from {formatINR(emi)}/month</div>}
-                    </div>
-                    <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] font-semibold text-sm group-hover:gap-2.5 transition-all">
-                      Details <ArrowRight size={14} />
-                    </span>
-                  </div>
-                </Link>
-              );
-            })}
+          {/* Core and Foundation — a scannable index, two columns of rows */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16">
+            <div>
+              <TierHeading tier={TIERS.find((t) => t.id === 'core')} count={byTier.core.length} />
+              <div>{byTier.core.map((p) => <IndexRow key={p.slug} program={p} />)}</div>
+            </div>
+            <div>
+              <TierHeading tier={TIERS.find((t) => t.id === 'foundation')} count={byTier.foundation.length} />
+              <div>{byTier.foundation.map((p) => <IndexRow key={p.slug} program={p} />)}</div>
+            </div>
           </div>
         </div>
       </section>

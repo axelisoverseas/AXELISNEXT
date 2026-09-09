@@ -108,7 +108,7 @@ const FAQPage = () => {
               <div className="sticky top-8 space-y-8">
                 {/* Category Filter */}
                 <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
-                  <h3 className="text-sm font-bold text-slate-900 uppercase tracking-widest mb-6">Explore Categories</h3>
+                  <h3 className="text-sm font-bold text-slate-900 mb-6">Explore Categories</h3>
                   <div className="flex flex-wrap lg:flex-col gap-2">
                     {categories.map((cat) => (
                       <button

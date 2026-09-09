@@ -118,7 +118,7 @@ const StudyAbroadGuides = () => {
                 </button>
 
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-stone-900 text-[10px] font-bold rounded-lg shadow-sm uppercase tracking-wider">
+                  <span className="px-3 py-1 bg-white/90 backdrop-blur-sm text-stone-900 text-[10px] font-bold rounded-lg shadow-sm">
                     {FALLBACK_GUIDE_TAG}
                   </span>
                 </div>
@@ -127,7 +127,7 @@ const StudyAbroadGuides = () => {
               <div className="p-8">
                 <div className="flex items-center space-x-2 mb-3 text-slate-500">
                   <Globe size={14} />
-                  <span className="text-xs font-semibold tracking-wide uppercase">
+                  <span className="text-xs font-semibold tracking-wide">
                     {guide.author || 'Axelis Overseas'}
                   </span>
                 </div>

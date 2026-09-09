@@ -43,17 +43,17 @@ export default function UniversityFinderPage() {
               <div className="text-3xl font-bold sm:text-4xl" style={{ color: '#3590f3' }}>
                 {TOTAL.toLocaleString('en-IN')}
               </div>
-              <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-slate-400">Universities</div>
+              <div className="mt-1 text-xs font-semibold text-slate-400">Universities</div>
             </div>
             <div>
               <div className="text-3xl font-bold sm:text-4xl" style={{ color: '#beb7a4' }}>
                 {EPA.toLocaleString('en-IN')}
               </div>
-              <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-slate-400">Tuition-free</div>
+              <div className="mt-1 text-xs font-semibold text-slate-400">Tuition-free</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-white sm:text-4xl">29</div>
-              <div className="mt-1 text-xs font-semibold uppercase tracking-wider text-slate-400">Destinations</div>
+              <div className="mt-1 text-xs font-semibold text-slate-400">Destinations</div>
             </div>
           </div>
         </div>

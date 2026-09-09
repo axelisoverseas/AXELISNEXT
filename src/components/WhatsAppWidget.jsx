@@ -215,7 +215,7 @@ const WhatsAppWidget = () => {
                   </div>
                   
                   <div>
-                    <label className="block text-[10px] uppercase font-bold text-gray-500 mb-1 ml-1">Full Name *</label>
+                    <label className="block text-[10px] font-bold text-gray-500 mb-1 ml-1">Full Name *</label>
                     <input
                       type="text"
                       required
@@ -227,7 +227,7 @@ const WhatsAppWidget = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] uppercase font-bold text-gray-500 mb-1 ml-1">Phone Number *</label>
+                    <label className="block text-[10px] font-bold text-gray-500 mb-1 ml-1">Phone Number *</label>
                     <input
                       type="tel"
                       required
@@ -239,7 +239,7 @@ const WhatsAppWidget = () => {
                   </div>
 
                   <div>
-                    <label className="block text-[10px] uppercase font-bold text-gray-500 mb-1 ml-1">Degree Interested In *</label>
+                    <label className="block text-[10px] font-bold text-gray-500 mb-1 ml-1">Degree Interested In *</label>
                     <div className="grid grid-cols-2 gap-2">
                       <button
                         type="button"
@@ -287,7 +287,7 @@ const WhatsAppWidget = () => {
 
                   {/* Quick Actions */}
                   <div className="mb-4">
-                    <p className="text-xs text-gray-500 mb-3 font-semibold uppercase tracking-wider ml-1">Quick actions:</p>
+                    <p className="text-xs text-gray-500 mb-3 font-semibold ml-1">Quick actions:</p>
                     <div className="space-y-2">
                       {predefinedMessages.slice(0, 3).map((msg, index) => (
                         <button
@@ -305,7 +305,7 @@ const WhatsAppWidget = () => {
                   <div className="bg-stone-50 rounded-xl p-4 mb-4 border border-stone-100">
                     <div className="flex items-center space-x-2 mb-2">
                       <Phone size={14} className="text-stone-900" />
-                      <span className="text-xs font-bold text-stone-900 uppercase tracking-tight">Direct Contact</span>
+                      <span className="text-xs font-bold text-stone-900 tracking-tight">Direct Contact</span>
                     </div>
                     <p className="text-sm font-bold text-stone-950">+91 9098522711</p>
                     <div className="flex items-center space-x-4 mt-2 text-[11px] text-stone-900 font-medium">

@@ -124,14 +124,14 @@ function ProductsContent() {
       <section className="relative py-10 border-y border-white/5">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-xs uppercase tracking-[0.25em] text-slate-400 font-semibold">
+            <p className="text-xs text-slate-400 font-semibold">
               Certified by independent bodies
             </p>
             <Link href="/accreditations" className="flex flex-wrap items-center gap-8 opacity-80 hover:opacity-100 transition-opacity group">
               <img src="/logos/dppit logo.png" alt="DPIIT Startup India" className="h-7 object-contain" />
               <img src="/trust-badges/british-council-logo.webp" alt="British Council" className="h-5 object-contain" />
               <img src="/logos/Airc-logo-full-color-centered-LG.jpg" alt="AIRC" className="h-7 rounded-sm object-contain" />
-              <span className="text-xs uppercase tracking-[0.2em] text-[var(--storm-electric)] group-hover:underline">View certificates &rarr;</span>
+              <span className="text-xs text-[var(--storm-electric)] group-hover:underline">View certificates &rarr;</span>
             </Link>
           </div>
         </div>
@@ -174,13 +174,13 @@ function ProductsContent() {
                 className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[var(--storm-electric)]/5 blur-3xl pointer-events-none"
               />
               <div className="relative">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/30 text-[var(--storm-electric)] text-[10px] font-bold tracking-[0.2em] uppercase mb-5">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/30 text-[var(--storm-electric)] text-[10px] font-bold mb-5">
                   Most popular
                 </span>
                 <h3 id="plan-gac-title" className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
                   Global Admissions Charter <span className="text-base font-semibold text-stone-200/70">(GAC)</span>
                 </h3>
-                <p className="text-slate-400 text-xs uppercase tracking-wider mb-6">Internal code: ZCF</p>
+                <p className="text-slate-400 text-xs mb-6">Internal code: ZCF</p>
 
                 <p className="text-slate-300/90 mb-4 leading-relaxed">
                   For students applying to <strong className="text-white">paid-tuition universities</strong> in the UK, USA, Canada, Australia, Ireland, New Zealand, and more.
@@ -216,7 +216,7 @@ function ProductsContent() {
                 <div className="bg-white/[0.04] rounded-2xl border border-white/10 p-5 mb-6">
                   <div className="flex items-baseline gap-2 mb-1">
                     <span className="text-slate-500 line-through text-base">₹19,999</span>
-                    <span className="px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[10px] font-bold tracking-wider">50% OFF</span>
+                    <span className="px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[10px] font-bold">50% OFF</span>
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">₹9,999</div>
                   <p className="text-stone-200/85 text-sm font-medium">Onboarding deposit &mdash; <span className="text-emerald-300 font-semibold">100% refundable</span></p>
@@ -272,13 +272,13 @@ function ProductsContent() {
                 className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[var(--dawn-glow)]/5 blur-3xl pointer-events-none"
               />
               <div className="relative">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-[10px] font-bold tracking-[0.2em] uppercase mb-5">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-[10px] font-bold mb-5">
                   Tuition-free Europe
                 </span>
                 <h3 id="plan-epc-title" className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
                   Europe Public Charter <span className="text-base font-semibold text-stone-200/70">(EPC)</span>
                 </h3>
-                <p className="text-slate-400 text-xs uppercase tracking-wider mb-6">Internal code: ZTF</p>
+                <p className="text-slate-400 text-xs mb-6">Internal code: ZTF</p>
 
                 <p className="text-slate-300/90 mb-4 leading-relaxed">
                   For students who want <strong className="text-white">zero tuition</strong> at public universities in Germany, France, Norway, Sweden, Finland, Italy, Spain, Poland and more.
@@ -315,7 +315,7 @@ function ProductsContent() {
                 <div className="bg-white/[0.04] rounded-2xl border border-white/10 p-5 mb-6">
                   <div className="flex items-baseline gap-2 mb-1">
                     <span className="text-slate-500 line-through text-base">₹39,998</span>
-                    <span className="px-2 py-0.5 rounded-md bg-[var(--dawn-glow)]/20 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-[10px] font-bold tracking-wider">50% OFF</span>
+                    <span className="px-2 py-0.5 rounded-md bg-[var(--dawn-glow)]/20 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-[10px] font-bold">50% OFF</span>
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">₹19,999</div>
                   <p className="text-stone-200/85 text-sm font-medium">Service fee &mdash; <span className="text-emerald-300 font-semibold">refundable</span> if zero offers received.</p>
@@ -371,7 +371,7 @@ function ProductsContent() {
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-white/15 bg-white/[0.06]">
-                  <th scope="col" className="text-left p-4 md:p-5 text-slate-400 font-semibold uppercase text-[10px] tracking-[0.2em]">Compare</th>
+                  <th scope="col" className="text-left p-4 md:p-5 text-slate-400 font-semibold text-[10px]">Compare</th>
                   <th scope="col" className="text-left p-4 md:p-5 text-[var(--storm-electric)] font-bold">Global Admissions Charter <span className="text-slate-400 font-normal text-xs">(GAC · ZCF)</span></th>
                   <th scope="col" className="text-left p-4 md:p-5 text-[var(--dawn-glow)] font-bold">Europe Public Charter <span className="text-slate-400 font-normal text-xs">(EPC · ZTF)</span></th>
                 </tr>
@@ -451,7 +451,7 @@ function ProductsContent() {
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-[var(--storm-electric)]/30 flex-1" />
-              <h3 className="text-[var(--storm-electric)] text-xs font-bold uppercase tracking-[0.25em] whitespace-nowrap">
+              <h3 className="text-[var(--storm-electric)] text-xs font-bold whitespace-nowrap">
                 Razorpay payments
               </h3>
               <div className="h-px bg-[var(--storm-electric)]/30 flex-1" />
@@ -472,7 +472,7 @@ function ProductsContent() {
                       loading="lazy"
                     />
                   </div>
-                  <p className={`mt-2 text-center text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-stone-300'}`}>
+                  <p className={`mt-2 text-center text-[11px] font-bold flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-stone-300'}`}>
                     <BadgeCheck className="w-3 h-3" />
                     {item.cap}
                   </p>
@@ -485,7 +485,7 @@ function ProductsContent() {
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
-              <h3 className="text-[var(--dawn-glow)] text-xs font-bold uppercase tracking-[0.25em] whitespace-nowrap">
+              <h3 className="text-[var(--dawn-glow)] text-xs font-bold whitespace-nowrap">
                 Zero Tuition Fee declarations
               </h3>
               <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
@@ -506,7 +506,7 @@ function ProductsContent() {
                       loading="lazy"
                     />
                   </div>
-                  <p className="mt-2 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--dawn-glow)] flex items-center justify-center gap-1.5">
+                  <p className="mt-2 text-center text-[11px] font-bold text-[var(--dawn-glow)] flex items-center justify-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     {item.cap}
                   </p>
@@ -519,7 +519,7 @@ function ProductsContent() {
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-emerald-400/30 flex-1" />
-              <h3 className="text-emerald-300 text-xs font-bold uppercase tracking-[0.25em] whitespace-nowrap">
+              <h3 className="text-emerald-300 text-xs font-bold whitespace-nowrap">
                 Visa + bank transfer proofs
               </h3>
               <div className="h-px bg-emerald-400/30 flex-1" />
@@ -536,7 +536,7 @@ function ProductsContent() {
                 </div>
                 <div className="pt-3 px-2 text-center">
                   <p className="text-white font-bold">Raghav Verma &middot; Polish student visa</p>
-                  <p className="text-emerald-300 text-xs font-bold uppercase tracking-wider mt-1 inline-flex items-center gap-1.5">
+                  <p className="text-emerald-300 text-xs font-bold mt-1 inline-flex items-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     Issued by the Embassy of Poland, New Delhi
                   </p>
@@ -554,7 +554,7 @@ function ProductsContent() {
                 </div>
                 <div className="pt-3 px-2 text-center">
                   <p className="text-white font-bold">Monika Nataraj &middot; ZTF service fee</p>
-                  <p className="text-emerald-300 text-xs font-bold uppercase tracking-wider mt-1 inline-flex items-center gap-1.5">
+                  <p className="text-emerald-300 text-xs font-bold mt-1 inline-flex items-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     ₹65,000 via HDFC Bank UPI &middot; 30 Sept 2025
                   </p>

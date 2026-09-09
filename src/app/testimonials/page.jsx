@@ -213,15 +213,15 @@ export default function TestimonialsPage() {
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">500+</div>
-              <div className="text-stone-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Students placed</div>
+              <div className="text-stone-200/85 text-[10px] md:text-xs mt-1">Students placed</div>
             </div>
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">29+</div>
-              <div className="text-stone-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Countries</div>
+              <div className="text-stone-200/85 text-[10px] md:text-xs mt-1">Countries</div>
             </div>
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--dawn-glow)]">100%</div>
-              <div className="text-stone-200/85 text-[10px] md:text-xs uppercase tracking-wider mt-1">Visa success</div>
+              <div className="text-stone-200/85 text-[10px] md:text-xs mt-1">Visa success</div>
             </div>
           </div>
         </div>
@@ -346,7 +346,7 @@ export default function TestimonialsPage() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2 mb-1">
                     <h3 className="text-white font-bold text-base truncate">{p.name}</h3>
-                    <span className="px-2 py-0.5 rounded-md text-[10px] font-bold tracking-wider bg-[var(--storm-electric)]/15 border border-[var(--storm-electric)]/30 text-[var(--storm-electric)] uppercase whitespace-nowrap">
+                    <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[var(--storm-electric)]/15 border border-[var(--storm-electric)]/30 text-[var(--storm-electric)] whitespace-nowrap">
                       {p.plan}
                     </span>
                   </div>
@@ -379,7 +379,7 @@ export default function TestimonialsPage() {
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-[var(--storm-electric)]/30 flex-1" />
-              <h3 className="text-[var(--storm-electric)] text-xs font-bold uppercase tracking-[0.25em] whitespace-nowrap">
+              <h3 className="text-[var(--storm-electric)] text-xs font-bold whitespace-nowrap">
                 Razorpay payments
               </h3>
               <div className="h-px bg-[var(--storm-electric)]/30 flex-1" />
@@ -400,7 +400,7 @@ export default function TestimonialsPage() {
                       loading="lazy"
                     />
                   </div>
-                  <p className={`mt-2 text-center text-[11px] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-stone-300'}`}>
+                  <p className={`mt-2 text-center text-[11px] font-bold flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-stone-300'}`}>
                     <BadgeCheck className="w-3 h-3" />
                     {item.cap}
                   </p>
@@ -413,7 +413,7 @@ export default function TestimonialsPage() {
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
-              <h3 className="text-[var(--dawn-glow)] text-xs font-bold uppercase tracking-[0.25em] whitespace-nowrap">
+              <h3 className="text-[var(--dawn-glow)] text-xs font-bold whitespace-nowrap">
                 Zero Tuition Fee declarations
               </h3>
               <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
@@ -434,7 +434,7 @@ export default function TestimonialsPage() {
                       loading="lazy"
                     />
                   </div>
-                  <p className="mt-2 text-center text-[11px] font-bold uppercase tracking-wider text-[var(--dawn-glow)] flex items-center justify-center gap-1.5">
+                  <p className="mt-2 text-center text-[11px] font-bold text-[var(--dawn-glow)] flex items-center justify-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     {item.cap}
                   </p>
@@ -447,7 +447,7 @@ export default function TestimonialsPage() {
           <div className="mb-6">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-emerald-400/30 flex-1" />
-              <h3 className="text-emerald-300 text-xs font-bold uppercase tracking-[0.25em] whitespace-nowrap">
+              <h3 className="text-emerald-300 text-xs font-bold whitespace-nowrap">
                 Visa + bank transfer proofs
               </h3>
               <div className="h-px bg-emerald-400/30 flex-1" />
@@ -464,7 +464,7 @@ export default function TestimonialsPage() {
                 </div>
                 <div className="pt-3 px-2 text-center">
                   <p className="text-white font-bold">Raghav Verma &middot; Polish student visa</p>
-                  <p className="text-emerald-300 text-xs font-bold uppercase tracking-wider mt-1 inline-flex items-center gap-1.5">
+                  <p className="text-emerald-300 text-xs font-bold mt-1 inline-flex items-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     Issued by the Embassy of Poland, New Delhi
                   </p>
@@ -482,7 +482,7 @@ export default function TestimonialsPage() {
                 </div>
                 <div className="pt-3 px-2 text-center">
                   <p className="text-white font-bold">Monika Nataraj &middot; ZTF service fee</p>
-                  <p className="text-emerald-300 text-xs font-bold uppercase tracking-wider mt-1 inline-flex items-center gap-1.5">
+                  <p className="text-emerald-300 text-xs font-bold mt-1 inline-flex items-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     ₹65,000 via HDFC Bank UPI &middot; 30 Sept 2025
                   </p>

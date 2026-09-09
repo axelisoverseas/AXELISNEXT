@@ -128,7 +128,7 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-1.5 p-3 border-t border-white/10 bg-white/[0.03] text-[var(--storm-electric)] hover:text-white hover:bg-white/10 text-xs font-bold uppercase tracking-wider transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]"
+                        className="flex items-center justify-center gap-1.5 p-3 border-t border-white/10 bg-white/[0.03] text-[var(--storm-electric)] hover:text-white hover:bg-white/10 text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]"
                     >
                         See all reviews on Google <ExternalLink size={12} />
                     </a>

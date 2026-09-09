@@ -53,7 +53,7 @@ export default function GoogleReviewsSection({ compact = false }) {
                                 <span className="text-3xl font-extrabold leading-none">{googleReviewsMeta.rating.toFixed(1)}</span>
                                 <Stars rating={googleReviewsMeta.rating} size={16} />
                             </div>
-                            <div className="text-[11px] uppercase tracking-wider font-bold text-slate-500 mt-0.5">
+                            <div className="text-[11px] font-bold text-slate-500 mt-0.5">
                                 {googleReviewsMeta.totalReviews} Google reviews
                             </div>
                         </div>

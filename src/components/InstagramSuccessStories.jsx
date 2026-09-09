@@ -94,7 +94,7 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
 
       {/* Top row */}
       <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold uppercase tracking-wider text-stone-950">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold text-stone-950">
           <Instagram size={12} /> {reel.tag}
         </span>
         <span className="px-2 py-1 rounded-md bg-slate-900/70 text-white text-[10px] font-semibold backdrop-blur">

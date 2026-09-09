@@ -83,7 +83,7 @@ export default function AboutPage() {
                                             {stat.icon}
                                         </div>
                                         <div className="text-2xl font-extrabold text-slate-900 mb-1">{stat.value}</div>
-                                        <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">{stat.label}</div>
+                                        <div className="text-xs font-semibold text-slate-500">{stat.label}</div>
                                     </div>
                                 ))}
                             </div>

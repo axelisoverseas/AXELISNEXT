@@ -358,7 +358,7 @@ const Navbar = () => {
               <BorderBeam size={120} duration={8} colorFrom="#FFFFFF" colorTo="#FBBF24" />
             </Link>
             <div>
-              <p className="text-xs font-semibold text-[var(--storm-accent)] mb-3 uppercase tracking-wider">Connect With Us</p>
+              <p className="text-xs font-semibold text-[var(--storm-accent)] mb-3">Connect With Us</p>
               <div className="flex flex-col gap-3 text-sm">
                 <a href={`tel:${siteInfo.contact.phones[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2"><Phone size={14} /> {siteInfo.contact.phones[0]}</a>
                 <a href={`mailto:${siteInfo.contact.emails[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2"><Mail size={14} /> {siteInfo.contact.emails[0]}</a>

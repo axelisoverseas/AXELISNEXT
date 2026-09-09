@@ -3,15 +3,15 @@ import Link from 'next/link';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import {
   TIERS, programs, programsByTier, catalogueStats,
-  monthlyEmi, formatINR, accentFor,
+  monthlyEmi, formatINR,
 } from '../data/certificationPrograms';
 
 // The homepage hero promises sixteen programmes, so the page has to show them.
 // One flagship, one per remaining tier, then through to the full catalogue.
-const featured = [
-  programs.find((p) => p.flagship),
-  programsByTier('core').find((p) => p.slug === 'application-coaching-postgraduate'),
+const flagship = programs.find((p) => p.flagship);
+const supporting = [
   programsByTier('advanced').find((p) => p.slug === 'german-b1-intensive'),
+  programsByTier('core').find((p) => p.slug === 'application-coaching-postgraduate'),
   programsByTier('foundation').find((p) => p.slug === 'sop-and-personal-statement'),
 ].filter(Boolean);
 
@@ -60,42 +60,69 @@ export default function HomeCertificationsPreview() {
           })}
         </div>
 
-        {/* Featured programmes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-          {featured.map((program) => {
-            const emi = monthlyEmi(program);
-            const accent = accentFor(program.tier);
-            return (
-              <Link
-                key={program.slug}
-                href={`/certifications/${program.slug}`}
-                className="group relative flex flex-col bg-[#141210] border-2 border-white/10 hover:border-[var(--storm-electric)]/50 rounded-2xl p-5 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
-              >
-                {program.flagship && (
-                  <span className="absolute -top-3 left-5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[var(--storm-deep)] text-[11px] font-bold">
-                    <Sparkles size={11} /> Flagship
-                  </span>
-                )}
-
-                <span className={`text-xs font-semibold mb-2 ${accent.text}`}>
-                  {TIERS.find((t) => t.id === program.tier)?.name}
-                </span>
-
-                <h3 className="text-white font-bold leading-snug mb-2">{program.title}</h3>
-                <p className="text-slate-300/75 text-xs leading-relaxed mb-4 flex-1">{program.summary}</p>
-
-                <div className="pt-3 border-t border-white/10">
-                  <div className="flex items-baseline justify-between gap-2">
-                    <span className="text-xl font-extrabold text-white">{formatINR(program.price)}</span>
-                    <ArrowRight size={14} className="text-[var(--storm-electric)] group-hover:translate-x-1 transition-transform" />
-                  </div>
-                  {emi && (
-                    <p className="text-[11px] text-slate-400 mt-0.5">EMI from {formatINR(emi)}/month</p>
-                  )}
+        {/* Flagship gets the wide slot; the rest read as a supporting list */}
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-5 mb-8">
+          <Link
+            href={`/certifications/${flagship.slug}`}
+            className="group lg:col-span-3 relative overflow-hidden rounded-2xl border border-white/12 bg-[#141210] hover:border-[var(--dawn-glow)]/50 transition-colors min-h-[280px] flex focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]"
+          >
+            <img
+              src={flagship.image}
+              alt={flagship.imageAlt}
+              loading="lazy"
+              decoding="async"
+              className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#141210] via-[#141210]/90 to-[#141210]/30" />
+            <div className="relative p-7 md:p-8 flex flex-col justify-end">
+              <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] text-sm font-semibold mb-2">
+                <Sparkles size={13} /> Our flagship programme
+              </span>
+              <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{flagship.title}</h3>
+              <p className="text-slate-300/85 text-sm leading-relaxed mb-4 max-w-md">{flagship.summary}</p>
+              <div className="flex items-end gap-6">
+                <div>
+                  <div className="text-2xl font-bold text-white">{formatINR(flagship.price)}</div>
+                  <div className="text-xs text-slate-400">or {formatINR(monthlyEmi(flagship))} a month</div>
                 </div>
-              </Link>
-            );
-          })}
+                <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] font-semibold text-sm group-hover:gap-2.5 transition-all">
+                  Details <ArrowRight size={15} />
+                </span>
+              </div>
+            </div>
+          </Link>
+
+          <div className="lg:col-span-2 flex flex-col gap-3">
+            {supporting.map((program) => {
+              const emi = monthlyEmi(program);
+              return (
+                <Link
+                  key={program.slug}
+                  href={`/certifications/${program.slug}`}
+                  className="group flex items-center gap-4 flex-1 rounded-xl border border-white/12 bg-[#141210] hover:border-white/30 p-4 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                >
+                  <img
+                    src={program.image}
+                    alt=""
+                    aria-hidden="true"
+                    loading="lazy"
+                    decoding="async"
+                    className="w-16 h-16 rounded-lg object-cover shrink-0"
+                  />
+                  <div className="min-w-0 flex-1">
+                    <div className="text-sm font-semibold text-slate-400 mb-0.5">
+                      {TIERS.find((t) => t.id === program.tier)?.name}
+                    </div>
+                    <h3 className="text-white font-semibold leading-snug truncate">{program.title}</h3>
+                    <div className="text-sm text-slate-400">
+                      {formatINR(program.price)}{emi ? ` · ${formatINR(emi)}/mo` : ''}
+                    </div>
+                  </div>
+                  <ArrowRight size={16} className="text-slate-600 group-hover:text-white transition-colors shrink-0" />
+                </Link>
+              );
+            })}
+          </div>
         </div>
 
         <div className="text-center">

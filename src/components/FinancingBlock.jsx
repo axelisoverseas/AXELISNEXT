@@ -110,7 +110,7 @@ export default function FinancingBlock({ program }) {
                     }`}
                   >
                     {p.name}
-                    <span className={`text-[9px] uppercase tracking-wider font-bold px-1.5 py-0.5 rounded border ${
+                    <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded border ${
                       live
                         ? 'bg-emerald-500/15 border-emerald-400/30 text-emerald-300'
                         : 'bg-white/5 border-white/15 text-slate-500'

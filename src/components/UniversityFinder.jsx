@@ -68,7 +68,7 @@ function CountryGroup({ country, universities }) {
         {flagCode && (
           <Image src={`/flags/${flagCode}.svg`} alt="" width={20} height={15} className="h-3.5 w-5 rounded-sm object-cover" />
         )}
-        <h3 className="text-sm font-semibold uppercase tracking-wide" style={{ color: DODGER }}>
+        <h3 className="text-sm font-semibold tracking-wide" style={{ color: DODGER }}>
           {country}
           <span className="ml-2 font-normal normal-case text-slate-500">({universities.length})</span>
         </h3>

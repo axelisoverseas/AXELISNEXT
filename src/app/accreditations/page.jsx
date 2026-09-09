@@ -80,7 +80,7 @@ export default function CertificationsPage() {
                     <cert.Icon size={26} strokeWidth={2.4} />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-1">{cert.name}</h3>
-                  <p className="text-xs uppercase tracking-wider text-stone-300/80 mb-5">
+                  <p className="text-xs text-stone-300/80 mb-5">
                     {cert.issuer}
                   </p>
                   <div className="relative w-full aspect-[4/3] rounded-xl overflow-hidden border border-white/10 bg-white">
@@ -90,7 +90,7 @@ export default function CertificationsPage() {
                       className="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-[1.04]"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
-                    <span className="absolute bottom-3 right-3 text-[10px] uppercase tracking-[0.2em] text-white/85 bg-slate-900/70 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
+                    <span className="absolute bottom-3 right-3 text-[10px] text-white/85 bg-slate-900/70 px-2 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity">
                       Hover to enlarge
                     </span>
                   </div>
@@ -120,7 +120,7 @@ export default function CertificationsPage() {
                 className="w-full h-auto object-contain"
               />
             </div>
-            <div className="text-center mt-4 text-slate-200 text-sm uppercase tracking-[0.3em]">
+            <div className="text-center mt-4 text-slate-200 text-sm">
               {cert.name} Certificate
             </div>
           </div>

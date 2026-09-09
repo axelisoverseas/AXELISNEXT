@@ -209,7 +209,7 @@ export default function Home() {
 
           {/* Country chips strip — 29 countries demonstrated inline */}
           <motion.div variants={fadeInUp} className="max-w-4xl mx-auto">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-[var(--storm-electric)] font-bold mb-3 text-center">
+            <p className="text-[10px] text-[var(--storm-electric)] font-bold mb-3 text-center">
               Twenty-nine countries &middot; one trusted team
             </p>
             <div className="flex flex-wrap gap-2 justify-center mb-4" aria-label="Some of the 29 countries Axelis Overseas serves">
@@ -256,7 +256,7 @@ export default function Home() {
             <p className="text-slate-300 mt-4">
               One focus &mdash; placing students at universities they can actually get into and afford. Free first call, no upsell.
             </p>
-            <p className="mt-3 text-xs font-mono uppercase tracking-[0.18em] text-slate-400">
+            <p className="mt-3 text-xs font-mono text-slate-400">
               Incorporated 18 July 2023
               {detail && (
                 <>
@@ -312,7 +312,7 @@ export default function Home() {
                   }`}>
                     {stat.value}
                   </span>
-                  <span className="text-slate-300 font-medium tracking-wide uppercase text-xs md:text-sm">
+                  <span className="text-slate-300 font-medium tracking-wide text-xs md:text-sm">
                     {stat.label}
                   </span>
                 </motion.div>
@@ -350,7 +350,7 @@ export default function Home() {
             >
               <div className="flex items-baseline justify-between">
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[var(--storm-electric)] font-bold">Most popular</span>
+                  <span className="text-[10px] text-[var(--storm-electric)] font-bold">Most popular</span>
                   <h3 className="text-2xl font-extrabold text-white mt-1">Global Admissions Charter <span className="text-sm font-semibold text-stone-200/80">(GAC)</span></h3>
                 </div>
                 <span className="text-3xl font-extrabold text-white">₹9,999</span>
@@ -378,7 +378,7 @@ export default function Home() {
             >
               <div className="flex items-baseline justify-between">
                 <div>
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-[var(--dawn-glow)] font-bold">Tuition-free Europe</span>
+                  <span className="text-[10px] text-[var(--dawn-glow)] font-bold">Tuition-free Europe</span>
                   <h3 className="text-2xl font-extrabold text-white mt-1">Europe Public Charter <span className="text-sm font-semibold text-stone-200/80">(EPC)</span></h3>
                 </div>
                 <span className="text-3xl font-extrabold text-white">₹19,999</span>
@@ -451,7 +451,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 flex items-end justify-between gap-3">
                   <div>
-                    <div className="flex items-center gap-2 text-[10px] uppercase tracking-[0.2em] font-bold mb-1">
+                    <div className="flex items-center gap-2 text-[10px] font-bold mb-1">
                       <span className={d.plan === 'GAC' ? 'text-[var(--storm-electric)]' : 'text-[var(--dawn-glow)]'}>{d.plan}</span>
                       <span className="text-slate-400">·</span>
                       <span className="text-slate-300">Plan</span>
@@ -468,7 +468,7 @@ export default function Home() {
           {/* Compact tier — remaining 20 countries */}
           <div className="flex items-center gap-4 mb-5">
             <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
-            <span className="text-[10px] uppercase tracking-[0.25em] text-[var(--storm-electric)] font-bold">
+            <span className="text-[10px] text-[var(--storm-electric)] font-bold">
               Plus twenty more on the same plans
             </span>
             <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
@@ -481,7 +481,7 @@ export default function Home() {
               { name: 'Italy', flag: '🇮🇹', plan: 'EPC', img: 'https://images.unsplash.com/photo-1525874684015-58379d421a52?w=800&q=80&auto=format&fit=crop' },
               { name: 'Spain', flag: '🇪🇸', plan: 'EPC', img: 'https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=800&q=80&auto=format&fit=crop' },
               { name: 'Sweden', flag: '🇸🇪', plan: 'EPC', img: 'https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Norway', flag: '🇳🇴', plan: 'EPC', img: 'https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=800&q=80&auto=format&fit=crop' },
+              { name: 'Norway', flag: '🇳🇴', plan: 'EPC', img: 'https://images.unsplash.com/photo-1601439678777-b2b3c56fa627?w=800&q=80&auto=format&fit=crop' },
               { name: 'Denmark', flag: '🇩🇰', plan: 'EPC', img: 'https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80&auto=format&fit=crop' },
               { name: 'Poland', flag: '🇵🇱', plan: 'EPC', img: 'https://images.unsplash.com/photo-1607427293702-036933bbf746?w=800&q=80&auto=format&fit=crop' },
               { name: 'Switzerland', flag: '🇨🇭', plan: 'GAC', img: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800&q=80&auto=format&fit=crop' },
@@ -510,7 +510,7 @@ export default function Home() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-2.5 md:p-3">
-                  <div className="flex items-center gap-1.5 text-[9px] uppercase tracking-[0.2em] font-bold mb-0.5">
+                  <div className="flex items-center gap-1.5 text-[9px] font-bold mb-0.5">
                     <span className={d.plan === 'GAC' ? 'text-[var(--storm-electric)]' : 'text-[var(--dawn-glow)]'}>{d.plan}</span>
                   </div>
                   <h3 className="text-white text-xs md:text-sm font-bold leading-tight">

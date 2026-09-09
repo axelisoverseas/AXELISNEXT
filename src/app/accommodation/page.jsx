@@ -37,7 +37,7 @@ export default function AccommodationPage() {
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     {/* In partnership with — amber's wordmark, lowercase per their brand rules */}
                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/8 backdrop-blur border border-white/15 mb-8">
-                        <span className="text-[10px] uppercase tracking-[0.25em] text-slate-300 font-bold">In partnership with</span>
+                        <span className="text-[10px] text-slate-300 font-bold">In partnership with</span>
                         <a
                             href={AMBER_PARTNER_URL}
                             target="_blank"
@@ -88,22 +88,22 @@ export default function AccommodationPage() {
                         <div className="px-4">
                             <Home className="mx-auto mb-3 text-[var(--storm-electric)]" size={32} />
                             <div className="text-3xl font-bold text-white">1M+</div>
-                            <div className="text-sm font-medium text-slate-400 uppercase tracking-wider">Rooms on amber</div>
+                            <div className="text-sm font-medium text-slate-400">Rooms on amber</div>
                         </div>
                         <div className="px-4">
                             <MapPin className="mx-auto mb-3 text-[var(--storm-electric)]" size={32} />
                             <div className="text-3xl font-bold text-white">250+</div>
-                            <div className="text-sm font-medium text-slate-400 uppercase tracking-wider">Student Cities</div>
+                            <div className="text-sm font-medium text-slate-400">Student Cities</div>
                         </div>
                         <div className="px-4">
                             <Shield className="mx-auto mb-3 text-[var(--storm-electric)]" size={32} />
                             <div className="text-3xl font-bold text-white">100%</div>
-                            <div className="text-sm font-medium text-slate-400 uppercase tracking-wider">Verified Properties</div>
+                            <div className="text-sm font-medium text-slate-400">Verified Properties</div>
                         </div>
                         <div className="px-4">
                             <Clock className="mx-auto mb-3 text-[var(--storm-electric)]" size={32} />
                             <div className="text-3xl font-bold text-white">24/7</div>
-                            <div className="text-sm font-medium text-slate-400 uppercase tracking-wider">Support Available</div>
+                            <div className="text-sm font-medium text-slate-400">Support Available</div>
                         </div>
                     </div>
                 </div>
@@ -179,14 +179,14 @@ export default function AccommodationPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--storm-deep)] via-[var(--storm-deep)]/45 to-transparent" />
 
-                                <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-[var(--storm-deep)]/80 backdrop-blur border border-white/15 text-[10px] font-bold uppercase tracking-wider text-[var(--dawn-glow)]">
+                                <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-[var(--storm-deep)]/80 backdrop-blur border border-white/15 text-[10px] font-bold text-[var(--dawn-glow)]">
                                     from {c.from}
                                 </div>
 
                                 <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <span aria-hidden="true" className="text-base">{c.flag}</span>
-                                        <span className="text-[10px] uppercase tracking-[0.2em] text-slate-300 font-bold">{c.country}</span>
+                                        <span className="text-[10px] text-slate-300 font-bold">{c.country}</span>
                                     </div>
                                     <h3 className="text-white text-lg md:text-xl font-bold leading-tight flex items-center gap-2">
                                         {c.label}

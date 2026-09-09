@@ -12,12 +12,12 @@ const Footer = () => {
       <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-64" style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(251, 191, 36,0.18) 0%, transparent 70%)' }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-[var(--storm-electric)]/10 mb-12 gap-6">
-          <p className="text-sm font-semibold text-slate-500 uppercase tracking-widest">Certified by independent bodies</p>
+          <p className="text-sm font-semibold text-slate-500">Certified by independent bodies</p>
           <Link href="/accreditations" className="flex flex-wrap justify-center items-center gap-8 opacity-80 hover:opacity-100 transition-all duration-300 group">
             <img src="/logos/dppit logo.png" alt="DPIIT Startup India" className="h-8 object-contain" />
             <img src="/trust-badges/british-council-logo.webp" alt="British Council" className="h-6 object-contain" />
             <img src="/logos/Airc-logo-full-color-centered-LG.jpg" alt="AIRC" className="h-8 rounded-sm object-contain" />
-            <span className="text-xs uppercase tracking-[0.2em] text-[var(--storm-electric)] group-hover:underline">View certificates &rarr;</span>
+            <span className="text-xs text-[var(--storm-electric)] group-hover:underline">View certificates &rarr;</span>
           </Link>
         </div>
 

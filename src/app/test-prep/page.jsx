@@ -285,7 +285,7 @@ export default function TestPrepPage() {
             {examLogos.map((e) => (
               <div key={e.code} className="glass-storm p-4 flex flex-col items-center text-center hover:-translate-y-1 transition-transform">
                 <LogoTile logo={e.src} alt={e.alt} code={e.code} />
-                <p className="text-stone-200/85 text-[10px] uppercase tracking-wider leading-snug">{e.sub}</p>
+                <p className="text-stone-200/85 text-[10px] leading-snug">{e.sub}</p>
               </div>
             ))}
           </div>
@@ -317,7 +317,7 @@ export default function TestPrepPage() {
                       <div className={`h-12 md:h-14 px-4 rounded-lg bg-gradient-to-br ${t.accent || 'from-slate-500 to-slate-700'} flex flex-col items-center justify-center shrink-0 shadow-[0_8px_24px_-12px_rgba(0,0,0,0.5)]`}>
                         <span className={`text-sm md:text-base font-extrabold tracking-tight leading-none ${t.accentText || 'text-white'}`}>{t.logoText}</span>
                         {t.logoSub && (
-                          <span className={`text-[8px] md:text-[9px] uppercase tracking-[0.18em] mt-0.5 leading-none ${t.accentText || 'text-white'} opacity-80`}>{t.logoSub}</span>
+                          <span className={`text-[8px] md:text-[9px] mt-0.5 leading-none ${t.accentText || 'text-white'} opacity-80`}>{t.logoSub}</span>
                         )}
                       </div>
                     ) : null}
@@ -349,11 +349,11 @@ export default function TestPrepPage() {
                       }`}
                     >
                       {p.highlight && (
-                        <span className="absolute -top-2 right-4 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[10px] font-bold uppercase tracking-wider text-[var(--storm-deep)] shadow-[0_0_18px_var(--storm-accent-glow)]">
+                        <span className="absolute -top-2 right-4 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[10px] font-bold text-[var(--storm-deep)] shadow-[0_0_18px_var(--storm-accent-glow)]">
                           Popular
                         </span>
                       )}
-                      <p className="text-[10px] uppercase tracking-[0.18em] text-slate-400 font-bold mb-2">{p.code}</p>
+                      <p className="text-[10px] text-slate-400 font-bold mb-2">{p.code}</p>
                       <h4 className="text-lg font-bold text-white mb-1">{p.label}</h4>
                       <p className="text-stone-200/75 text-xs mb-5">{p.sessions}</p>
 
