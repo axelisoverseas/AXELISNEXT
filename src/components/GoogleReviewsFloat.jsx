@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import { Star, X, ExternalLink } from 'lucide-react';
-import { googleReviewsMeta, reviews, getGoogleMapsHref } from '../data/googleReviews';
+import { googleReviewsMeta, verifiedReviews, hasVerifiedReviews, getGoogleMapsHref } from '../data/googleReviews';
 
 // Google "G" logomark — inline SVG so it renders without an external asset.
 function GoogleG({ size = 18 }) {
@@ -61,12 +61,15 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
         };
     }, [open]);
 
+    // No verified reviews yet — render nothing rather than a placeholder rating.
+    if (!hasVerifiedReviews) return null;
+
     const positionClass = position === 'bottom-left'
         ? 'left-4 md:left-6'
         : 'right-4 md:right-6';
 
     const href = getGoogleMapsHref();
-    const displayReviews = reviews.slice(0, 5);
+    const displayReviews = verifiedReviews.slice(0, 5);
 
     return (
         <div className={`fixed bottom-4 md:bottom-6 ${positionClass} z-40`} ref={panelRef}>
@@ -75,7 +78,7 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
                 <div
                     role="dialog"
                     aria-label="Google Reviews for Axelis Overseas Bilaspur"
-                    className="mb-3 w-[92vw] max-w-sm bg-[#0c1428] border-2 border-white/15 rounded-2xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] overflow-hidden animate-in fade-in slide-in-from-bottom-2 duration-200 motion-reduce:animate-none"
+                    className="mb-3 w-[92vw] max-w-sm bg-[#141210] border-2 border-white/15 rounded-2xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] overflow-hidden animate-in fade-in slide-in-from-bottom-2 duration-200 motion-reduce:animate-none"
                 >
                     <header className="flex items-start justify-between gap-3 p-4 border-b border-white/10 bg-white/[0.03]">
                         <div className="flex items-center gap-3">

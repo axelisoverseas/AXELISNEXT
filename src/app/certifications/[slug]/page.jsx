@@ -12,6 +12,7 @@ import {
 import CertificationEnquiryForm from '../../../components/CertificationEnquiryForm';
 import PaymentPartnersStrip from '../../../components/PaymentPartnersStrip';
 import FinancingBlock from '../../../components/FinancingBlock';
+import TrustBand from '../../../components/TrustBand';
 
 export function generateStaticParams() {
   return programs.map((p) => ({ slug: p.slug }));
@@ -53,7 +54,7 @@ function QuickFact({ Icon, label, value, highlight = false }) {
     <div className={`flex items-start gap-3 py-3.5 ${highlight ? '' : 'border-b border-white/8'}`}>
       <Icon size={16} className={`shrink-0 mt-0.5 ${highlight ? 'text-[var(--dawn-glow)]' : 'text-[var(--storm-electric)]'}`} />
       <div className="min-w-0">
-        <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold mb-0.5">{label}</div>
+        <div className="text-xs text-slate-500 mb-0.5">{label}</div>
         <div className={`text-sm leading-snug ${highlight ? 'text-[var(--dawn-glow)] font-bold' : 'text-white font-semibold'}`}>
           {value}
         </div>
@@ -128,9 +129,19 @@ export default async function ProgramPage({ params }) {
 
       {/* ---------------------------------------------------------- HERO */}
       <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-white/5">
-        <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/8 rounded-full blur-[120px]" />
-          <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/8 rounded-full blur-[120px]" />
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src={program.image}
+            alt=""
+            aria-hidden="true"
+            loading="eager"
+            fetchPriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          {/* Editorial treatment: opaque behind the copy on the left, clearing
+              to the right so the photograph is actually visible. */}
+          <div className="absolute inset-0 bg-gradient-to-r from-[var(--storm-deep)] via-[var(--storm-deep)]/88 to-[var(--storm-deep)]/20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[var(--storm-deep)] via-transparent to-[var(--storm-deep)]/60" />
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -144,19 +155,17 @@ export default async function ProgramPage({ params }) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
             {/* Left — headline + description */}
             <div className="lg:col-span-2">
-              <div className="flex flex-wrap items-center gap-2 mb-5">
-                <span className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full border ${accent.badge} text-[10px] font-bold tracking-[0.2em] uppercase`}>
-                  {tier?.name}
-                </span>
-                <span className="px-3 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 text-[10px] font-bold tracking-wider uppercase">
-                  {program.family}
-                </span>
+              <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-slate-400 mb-5">
+                <span className="text-white font-semibold">{tier?.name}</span>
+                <span aria-hidden="true">&middot;</span>
+                <span>{program.family}</span>
                 {program.flagship && (
-                  <span className="px-3 py-1 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[var(--storm-deep)] text-[10px] font-bold tracking-[0.15em] uppercase">
-                    Flagship
-                  </span>
+                  <>
+                    <span aria-hidden="true">&middot;</span>
+                    <span className="text-[var(--dawn-glow)] font-semibold">Our flagship programme</span>
+                  </>
                 )}
-              </div>
+              </p>
 
               <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-5">
                 {program.title}
@@ -189,9 +198,9 @@ export default async function ProgramPage({ params }) {
 
             {/* Right rail — quick facts */}
             <aside className="lg:col-span-1 lg:sticky lg:top-24">
-              <div className="bg-[#0c1428] border-2 border-white/10 rounded-2xl p-6 shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)]">
+              <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
                 <div className="pb-4 mb-2 border-b border-white/10">
-                  <div className="text-[10px] uppercase tracking-wider text-slate-500 font-bold mb-1">Programme fee</div>
+                  <div className="text-xs text-slate-500 mb-1">Programme fee</div>
                   <div className="text-4xl font-extrabold text-white">{formatINR(program.price)}</div>
                 </div>
 
@@ -232,7 +241,7 @@ export default async function ProgramPage({ params }) {
                 {program.outcomes.map((o) => (
                   <li
                     key={o}
-                    className="flex items-start gap-3 bg-[#0c1428] border border-white/10 rounded-xl p-4"
+                    className="flex items-start gap-3 bg-[#141210] border border-white/10 rounded-xl p-4"
                   >
                     <CheckCircle size={17} className={`${accent.text} shrink-0 mt-0.5`} />
                     <span className="text-slate-200 text-sm leading-relaxed">{o}</span>
@@ -247,7 +256,7 @@ export default async function ProgramPage({ params }) {
                 {program.syllabus.map((mod, i) => (
                   <li
                     key={mod.title}
-                    className="flex items-start gap-4 bg-[#0c1428] border border-white/10 rounded-xl p-5"
+                    className="flex items-start gap-4 bg-[#141210] border border-white/10 rounded-xl p-5"
                   >
                     <span className={`shrink-0 w-8 h-8 rounded-lg border flex items-center justify-center font-bold text-sm ${accent.step}`}>
                       {i + 1}
@@ -272,7 +281,7 @@ export default async function ProgramPage({ params }) {
 
             {/* Certificate + guarantee rail */}
             <aside className="lg:col-span-1 space-y-5">
-              <div className="bg-[#0c1428] border-2 border-white/10 rounded-2xl p-6">
+              <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-6">
                 <BadgeCheck size={26} className={`${accent.text} mb-3`} />
                 <h3 className="text-white font-bold text-base mb-2">Verifiable certificate</h3>
                 <p className="text-slate-300/80 text-sm leading-relaxed">
@@ -282,7 +291,7 @@ export default async function ProgramPage({ params }) {
               </div>
 
               {program.guarantee && (
-                <div className="bg-[#0c1428] border-2 border-[var(--dawn-glow)]/30 rounded-2xl p-6">
+                <div className="bg-[#141210] border-2 border-[var(--dawn-glow)]/30 rounded-2xl p-6">
                   <ShieldCheck size={26} className="text-[var(--dawn-glow)] mb-3" />
                   <h3 className="text-white font-bold text-base mb-2">Outcome guarantee</h3>
                   <p className="text-slate-300/80 text-sm leading-relaxed">{program.guarantee}</p>
@@ -337,9 +346,9 @@ export default async function ProgramPage({ params }) {
                 <Link
                   key={p.slug}
                   href={`/certifications/${p.slug}`}
-                  className="group bg-[#0c1428] border-2 border-white/10 hover:border-[var(--storm-electric)]/50 rounded-2xl p-5 transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                  className="group bg-[#141210] border-2 border-white/10 hover:border-[var(--storm-electric)]/50 rounded-2xl p-5 transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
                 >
-                  <div className="text-[10px] uppercase tracking-[0.2em] text-slate-500 font-bold mb-2">
+                  <div className="text-xs text-slate-500 mb-2">
                     {TIERS.find((t) => t.id === p.tier)?.name}
                   </div>
                   <h3 className="text-white font-bold mb-2 leading-snug">{p.title}</h3>
@@ -353,6 +362,8 @@ export default async function ProgramPage({ params }) {
           </div>
         </section>
       )}
+
+      <TrustBand />
 
       <PaymentPartnersStrip />
     </div>

@@ -206,13 +206,13 @@ body {
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 40px -20px rgba(5, 7, 15, 0.8);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 40px -20px rgba(0, 0, 0, 0.8);
   border-radius: 16px;
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .glass-storm:hover {
   border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.20), 0 20px 60px -20px rgba(37, 99, 235, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.20), 0 20px 60px -20px rgba(251, 191, 36, 0.35);
 }
 
 .glass-dawn {
@@ -272,9 +272,9 @@ body {
   --x: 100%;
   background: linear-gradient(
     -75deg,
-    var(--shiny-base, #2563eb) calc(var(--x) + 20%),
+    var(--shiny-base, #292524) calc(var(--x) + 20%),
     rgba(255,255,255,0.45) calc(var(--x) + 25%),
-    var(--shiny-base, #2563eb) calc(var(--x) + 100%)
+    var(--shiny-base, #292524) calc(var(--x) + 100%)
   );
   animation: shiny-sweep 3.5s ease-in-out infinite;
 }

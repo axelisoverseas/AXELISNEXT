@@ -13,6 +13,7 @@ import {
 } from '../../data/certificationPrograms';
 import CertificationEnquiryForm from '../../components/CertificationEnquiryForm';
 import PaymentPartnersStrip from '../../components/PaymentPartnersStrip';
+import TrustBand from '../../components/TrustBand';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -32,23 +33,23 @@ function ProgramCard({ program }) {
   return (
     <Link
       href={`/certifications/${program.slug}`}
-      className={`group relative flex flex-col bg-[#0c1428] border-2 rounded-2xl p-6 shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)] ${
+      className={`group relative flex flex-col bg-[#141210] border-2 rounded-2xl p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)] ${
         isConcierge
           ? 'border-[var(--dawn-glow)]/35 hover:border-[var(--dawn-glow)]/70 focus-visible:ring-[var(--dawn-glow)]'
           : 'border-white/10 hover:border-[var(--storm-electric)]/50 focus-visible:ring-[var(--storm-electric)]'
       }`}
     >
       {program.flagship && (
-        <span className="absolute -top-3 left-6 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[var(--storm-deep)] text-[10px] font-bold uppercase tracking-[0.15em]">
-          <Sparkles size={11} /> Flagship
+        <span className="absolute -top-3 left-6 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[var(--storm-deep)] text-xs font-bold">
+          <Sparkles size={12} /> Flagship
         </span>
       )}
 
       <div className="flex items-start justify-between gap-3 mb-3">
-        <span className={`text-[10px] uppercase tracking-[0.2em] font-bold ${accent.text}`}>
+        <span className={`text-xs font-semibold ${accent.text}`}>
           {TIERS.find((t) => t.id === program.tier)?.name}
         </span>
-        <span className="text-[10px] uppercase tracking-wider text-slate-500 text-right shrink-0">
+        <span className="text-xs text-slate-500 text-right shrink-0">
           {program.duration}
         </span>
       </div>
@@ -93,7 +94,7 @@ export default function CertificationsPage() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.7)_0%,transparent_75%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.7)_0%,transparent_75%)]" />
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
@@ -208,7 +209,7 @@ export default function CertificationsPage() {
       <section className="relative py-20 border-y border-white/5 bg-[var(--storm-deep)]/40">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-3xl mx-auto">
-            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-[10px] font-bold tracking-[0.2em] uppercase mb-5">
+            <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-sm font-semibold mb-5">
               Concierge tier
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
@@ -227,7 +228,7 @@ export default function CertificationsPage() {
                 <Link
                   key={program.slug}
                   href={`/certifications/${program.slug}`}
-                  className="group relative bg-[#0c1428] border-2 border-[var(--dawn-glow)]/30 hover:border-[var(--dawn-glow)]/70 rounded-2xl p-7 shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] transition-all hover:-translate-y-1 flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                  className="group relative bg-[#141210] border-2 border-[var(--dawn-glow)]/30 hover:border-[var(--dawn-glow)]/70 rounded-2xl p-7 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] transition-all hover:-translate-y-1 flex flex-col focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
                 >
                   <div aria-hidden="true" className="absolute inset-x-0 top-0 h-1 rounded-t-2xl bg-gradient-to-r from-transparent via-[var(--dawn-glow)] to-transparent" />
 
@@ -262,7 +263,7 @@ export default function CertificationsPage() {
       {/* ------------------------------------------------------- FINANCING */}
       <section id="financing" className="relative py-16 scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#0c1428] border-2 border-white/10 rounded-2xl p-7 md:p-9 shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)]">
+          <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-7 md:p-9 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
             <div className="flex items-start gap-4 mb-5">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--storm-electric)] to-[var(--dawn-glow)] flex items-center justify-center text-[var(--storm-deep)] shrink-0">
                 <CreditCard size={22} strokeWidth={2.3} />
@@ -280,7 +281,7 @@ export default function CertificationsPage() {
                 { label: 'Worked example', value: `${formatINR(200000)} = ${formatINR(16667)}/mo × 12` },
               ].map((row) => (
                 <div key={row.label} className="bg-white/[0.04] border border-white/10 rounded-xl p-4">
-                  <div className="text-[10px] uppercase tracking-wider text-slate-400 font-bold mb-1">{row.label}</div>
+                  <div className="text-xs text-slate-400 mb-1">{row.label}</div>
                   <div className="text-white font-semibold text-sm">{row.value}</div>
                 </div>
               ))}
@@ -327,6 +328,8 @@ export default function CertificationsPage() {
           </div>
         </div>
       </section>
+
+      <TrustBand />
 
       <PaymentPartnersStrip />
     </div>

@@ -46,9 +46,9 @@ export default function HomeCertificationsPreview() {
               <Link
                 key={tier.id}
                 href="/certifications#programmes"
-                className="group bg-[#0c1428] border border-white/10 hover:border-[var(--storm-electric)]/45 rounded-xl p-4 text-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                className="group bg-[#141210] border border-white/10 hover:border-[var(--storm-electric)]/45 rounded-xl p-4 text-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
               >
-                <div className="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400 mb-1.5">
+                <div className="text-sm font-semibold text-white mb-1.5">
                   {tier.name}
                 </div>
                 <div className="text-white font-extrabold text-lg leading-none mb-1">
@@ -69,15 +69,15 @@ export default function HomeCertificationsPreview() {
               <Link
                 key={program.slug}
                 href={`/certifications/${program.slug}`}
-                className="group relative flex flex-col bg-[#0c1428] border-2 border-white/10 hover:border-[var(--storm-electric)]/50 rounded-2xl p-5 shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                className="group relative flex flex-col bg-[#141210] border-2 border-white/10 hover:border-[var(--storm-electric)]/50 rounded-2xl p-5 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
               >
                 {program.flagship && (
-                  <span className="absolute -top-3 left-5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[var(--storm-deep)] text-[9px] font-bold uppercase tracking-[0.15em]">
-                    <Sparkles size={10} /> Flagship
+                  <span className="absolute -top-3 left-5 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[var(--storm-deep)] text-[11px] font-bold">
+                    <Sparkles size={11} /> Flagship
                   </span>
                 )}
 
-                <span className={`text-[10px] uppercase tracking-[0.2em] font-bold mb-2 ${accent.text}`}>
+                <span className={`text-xs font-semibold mb-2 ${accent.text}`}>
                   {TIERS.find((t) => t.id === program.tier)?.name}
                 </span>
 

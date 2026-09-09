@@ -33,7 +33,7 @@ const REFERRAL_SOURCES = [
 
 const FIELD =
   'w-full px-4 py-3 min-h-[44px] rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder:text-slate-500 text-sm transition-colors focus:outline-none focus:border-[var(--storm-electric)] focus:ring-2 focus:ring-[var(--storm-electric)]/40';
-const LABEL = 'block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1.5';
+const LABEL = 'block text-sm font-medium text-slate-300 mb-1.5';
 
 /**
  * Certification enquiry form. Posts to /api/certification-enquiry, which
@@ -92,7 +92,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
     return (
       <div
         role="status"
-        className="bg-[#0c1428] border-2 border-emerald-500/40 rounded-2xl p-8 text-center shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)]"
+        className="bg-[#141210] border-2 border-emerald-500/40 rounded-2xl p-8 text-center shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]"
       >
         <div className="w-14 h-14 rounded-full bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center mx-auto mb-5">
           <CheckCircle size={28} className="text-emerald-300" />
@@ -109,7 +109,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
   return (
     <form
       onSubmit={onSubmit}
-      className="bg-[#0c1428] border-2 border-white/10 rounded-2xl p-6 md:p-7 shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)]"
+      className="bg-[#141210] border-2 border-white/10 rounded-2xl p-6 md:p-7 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]"
       noValidate
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">

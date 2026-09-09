@@ -11,9 +11,9 @@ const PHASE_CLASS = {
 };
 
 const PHASE_BLOB_COLORS = {
-  storm: { a: 'rgba(124, 200, 255, 0.10)', b: 'rgba(37, 99, 235, 0.12)' },
-  transition: { a: 'rgba(124, 200, 255, 0.08)', b: 'rgba(245, 184, 119, 0.08)' },
-  dawn: { a: 'rgba(245, 184, 119, 0.14)', b: 'rgba(124, 200, 255, 0.08)' },
+  storm: { a: 'rgba(255, 255, 255, 0.10)', b: 'rgba(251, 191, 36, 0.12)' },
+  transition: { a: 'rgba(255, 255, 255, 0.08)', b: 'rgba(251, 191, 36, 0.08)' },
+  dawn: { a: 'rgba(251, 191, 36, 0.14)', b: 'rgba(255, 255, 255, 0.08)' },
 };
 
 export default function StormBackdrop({

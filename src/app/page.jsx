@@ -119,7 +119,7 @@ export default function Home() {
           {/* Top/bottom fades only — middle stays clear so the photo is fully visible behind the text */}
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
           {/* Subtle radial vignette behind the H1 region only — keeps headline contrast without flattening the photo */}
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.65)_0%,transparent_75%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.65)_0%,transparent_75%)]" />
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
@@ -295,7 +295,7 @@ export default function Home() {
                     </div>
                     {/* Inner disc with the icon */}
                     <div className="absolute inset-[1.5px] rounded-full bg-[var(--storm-deep)]/95 backdrop-blur-md flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <Icon size={34} strokeWidth={1.6} className="text-white drop-shadow-[0_0_10px_rgba(124,200,255,0.4)]" />
+                      <Icon size={34} strokeWidth={1.6} className="text-white drop-shadow-[0_0_10px_rgba(255, 255, 255,0.4)]" />
                     </div>
                     {/* Amber lightning-bolt accent (universal — same on every card) */}
                     <div
@@ -345,7 +345,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <Link
               href="/products#plans"
-              className="group bg-[#0c1428] border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+              className="group bg-[#141210] border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
               aria-label="Global Admissions Charter (GAC), nine thousand nine hundred ninety nine rupees — view details"
             >
               <div className="flex items-baseline justify-between">
@@ -373,7 +373,7 @@ export default function Home() {
 
             <Link
               href="/products#plans"
-              className="group bg-[#0c1428] border-2 border-[var(--dawn-glow)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--dawn-glow)]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+              className="group bg-[#141210] border-2 border-[var(--dawn-glow)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--dawn-glow)]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
               aria-label="Europe Public Charter (EPC), nineteen thousand nine hundred ninety nine rupees — view details"
             >
               <div className="flex items-baseline justify-between">
@@ -622,7 +622,7 @@ export default function Home() {
                   Apply Now - Start Journey
                   <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
                 </span>
-                <BorderBeam size={160} duration={9} colorFrom="#F5B877" colorTo="#7CC8FF" />
+                <BorderBeam size={160} duration={9} colorFrom="#FBBF24" colorTo="#FFFFFF" />
               </Link>
             </div>
           </div>

@@ -18,7 +18,7 @@ export default function PaymentPartnersStrip() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           id="payment-partners-heading"
-          className="text-[10px] uppercase tracking-[0.25em] text-slate-500 font-bold text-center mb-8"
+          className="text-sm text-slate-500 text-center mb-8"
         >
           Payment &amp; financing partners
         </h2>

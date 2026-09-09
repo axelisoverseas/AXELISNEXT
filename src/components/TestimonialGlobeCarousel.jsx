@@ -252,7 +252,7 @@ const TestimonialGlobeCarousel = ({ testimonials }) => {
           background:
             radial-gradient(circle at 30% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
             radial-gradient(circle at 70% 70%, rgba(0,0,0,0.6) 0%, transparent 70%),
-            linear-gradient(45deg, #1e40af 0%, #0f766e 25%, #1e3a8a 50%, #0c4a6e 75%, #1e40af 100%);
+            linear-gradient(45deg, #1C1917 0%, #44403C 25%, #1C1917 50%, #292524 75%, #1C1917 100%);
           box-shadow:
             inset -40px -40px 80px rgba(0,0,0,0.7),
             inset 20px 20px 40px rgba(255,255,255,0.05),

@@ -84,6 +84,8 @@ export const programs = [
   // ---- FOUNDATION -------------------------------------------------------
   {
     slug: 'study-abroad-readiness',
+    image: 'https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'Desk with a laptop, notebook and travel documents mid-planning',
     title: 'Study Abroad Readiness',
     tier: 'foundation',
     family: 'Application coaching',
@@ -110,6 +112,8 @@ export const programs = [
   },
   {
     slug: 'sop-and-personal-statement',
+    image: 'https://images.unsplash.com/photo-1455390582262-044cdead277a?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'A fountain pen resting on a handwritten page',
     title: 'SOP & Personal Statement Craft',
     tier: 'foundation',
     family: 'Application coaching',
@@ -136,6 +140,8 @@ export const programs = [
   },
   {
     slug: 'university-shortlisting-strategy',
+    image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'Two people comparing options across a laptop and printed notes',
     title: 'University Shortlisting & Application Strategy',
     tier: 'foundation',
     family: 'Application coaching',
@@ -162,6 +168,8 @@ export const programs = [
   },
   {
     slug: 'student-visa-interview-readiness',
+    image: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'Someone signing a document across a desk in an interview setting',
     title: 'Student Visa & Interview Readiness',
     tier: 'foundation',
     family: 'Application coaching',
@@ -190,6 +198,8 @@ export const programs = [
   // ---- CORE -------------------------------------------------------------
   {
     slug: 'german-a1-a2',
+    image: 'https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'The German flag against a clear sky',
     title: 'German A1 to A2 (CEFR)',
     tier: 'core',
     family: 'Language proficiency',
@@ -218,6 +228,8 @@ export const programs = [
   },
   {
     slug: 'french-a1-a2',
+    image: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'The Eiffel Tower over the Seine at dusk',
     title: 'French A1 to A2 (CEFR)',
     tier: 'core',
     family: 'Language proficiency',
@@ -246,6 +258,8 @@ export const programs = [
   },
   {
     slug: 'application-coaching-undergraduate',
+    image: 'https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'Undergraduate students at desks in a bright classroom',
     title: 'Undergraduate Application Coaching',
     tier: 'core',
     family: 'Application coaching',
@@ -272,6 +286,8 @@ export const programs = [
   },
   {
     slug: 'application-coaching-postgraduate',
+    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'Postgraduate students working together over laptops',
     title: 'Postgraduate Application Coaching',
     tier: 'core',
     family: 'Application coaching',
@@ -298,6 +314,8 @@ export const programs = [
   },
   {
     slug: 'scholarship-and-funding-strategy',
+    image: 'https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'A seedling growing from a jar of coins',
     title: 'Scholarship & Funding Strategy',
     tier: 'core',
     family: 'Application coaching',
@@ -326,6 +344,8 @@ export const programs = [
   // ---- ADVANCED ---------------------------------------------------------
   {
     slug: 'german-b1-intensive',
+    image: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'A traditional German town square in summer',
     title: 'German B1 Intensive (CEFR)',
     tier: 'advanced',
     family: 'Language proficiency',
@@ -352,6 +372,8 @@ export const programs = [
   },
   {
     slug: 'french-b1-intensive',
+    image: 'https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'The curved balconies of a classical library',
     title: 'French B1 Intensive (CEFR)',
     tier: 'advanced',
     family: 'Language proficiency',
@@ -378,6 +400,8 @@ export const programs = [
   },
   {
     slug: 'executive-mba-application-coaching',
+    image: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'A working session around a table in a modern office',
     title: 'Executive MBA Application Coaching',
     tier: 'advanced',
     family: 'Executive MBA application coaching',
@@ -404,6 +428,8 @@ export const programs = [
   },
   {
     slug: 'phd-research-proposal',
+    image: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'Laboratory glassware arranged on a bench',
     title: 'PhD & Research Proposal Certificate',
     tier: 'advanced',
     family: 'PhD & Fellowship applications',
@@ -432,6 +458,8 @@ export const programs = [
   // ---- CONCIERGE --------------------------------------------------------
   {
     slug: 'global-career-launch',
+    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'An aircraft wing above the clouds',
     title: 'Global Career Launch',
     tier: 'concierge',
     family: 'Global Career Launch',
@@ -462,6 +490,8 @@ export const programs = [
   },
   {
     slug: 'phd-fellowship-concierge',
+    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'Graduates throwing their caps in the air',
     title: 'PhD & Fellowship Concierge',
     tier: 'concierge',
     family: 'PhD & Fellowship applications',
@@ -491,6 +521,8 @@ export const programs = [
   },
   {
     slug: 'executive-mba-concierge',
+    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'Senior colleagues in discussion around a boardroom table',
     title: 'Executive MBA Concierge',
     tier: 'concierge',
     family: 'Executive MBA application coaching',

@@ -10,7 +10,7 @@ const RazorpayEmbed = ({ url, text = 'Pay Now' }) => {
         target="_blank"
         rel="noopener noreferrer"
         className="w-full flex items-center justify-center px-8 py-4 font-bold text-white rounded-xl shadow-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-xl active:scale-95"
-        style={{ background: 'linear-gradient(135deg, #2563eb 0%, #1e40af 100%)' }}
+        style={{ background: 'linear-gradient(135deg, #292524 0%, #1C1917 100%)' }}
       >
         {text}
       </a>

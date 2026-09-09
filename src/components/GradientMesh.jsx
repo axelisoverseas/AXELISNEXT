@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
-const GradientMesh = ({ className = '', colors = ['#3b82f6', '#eab308', '#8b5cf6'], speed = 0.002, opacity = 0.15 }) => {
+const GradientMesh = ({ className = '', colors = ['#FBBF24', '#eab308', '#F59E0B'], speed = 0.002, opacity = 0.15 }) => {
     const canvasRef = useRef(null);
     const animationRef = useRef(null);
 

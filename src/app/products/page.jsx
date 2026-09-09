@@ -68,7 +68,7 @@ function ProductsContent() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/60 to-[var(--storm-deep)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.7)_0%,transparent_75%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.7)_0%,transparent_75%)]" />
           <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
@@ -157,7 +157,7 @@ function ProductsContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {/* GAC — Global Admissions Charter */}
             <article
-              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--storm-electric)]/30 shadow-[0_30px_80px_-20px_rgba(5,7,15,0.9)] bg-[#0c1428]"
+              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--storm-electric)]/30 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] bg-[#141210]"
               aria-labelledby="plan-gac-title"
             >
               {/* Top brand-band — pure CSS, no image */}
@@ -255,7 +255,7 @@ function ProductsContent() {
 
             {/* EPC — Europe Public Charter */}
             <article
-              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--dawn-glow)]/30 shadow-[0_30px_80px_-20px_rgba(5,7,15,0.9)] bg-[#0c1428]"
+              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--dawn-glow)]/30 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] bg-[#141210]"
               aria-labelledby="plan-epc-title"
             >
               {/* Top brand-band — pure CSS, no image */}
@@ -367,7 +367,7 @@ function ProductsContent() {
             </p>
           </div>
 
-          <div className="bg-[#0c1428] border-2 border-white/15 rounded-2xl shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] overflow-hidden">
+          <div className="bg-[#141210] border-2 border-white/15 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] overflow-hidden">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-white/15 bg-white/[0.06]">

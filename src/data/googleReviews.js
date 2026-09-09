@@ -41,6 +41,13 @@ export const reviews = [
   },
 ];
 
+// Only reviews confirmed live on the Google profile. The widgets render
+// from THIS list, so an unreplaced placeholder hides the component instead
+// of shipping a fabricated-looking review on a page about credibility.
+export const verifiedReviews = reviews.filter((r) => r.verified);
+
+export const hasVerifiedReviews = verifiedReviews.length > 0;
+
 // Convenience helper used by the widget to pick the best outbound URL.
 export function getGoogleMapsHref() {
   return googleReviewsMeta.placeUrl || googleReviewsMeta.mapsUrl;

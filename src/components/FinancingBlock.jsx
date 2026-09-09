@@ -69,9 +69,9 @@ export default function FinancingBlock({ program }) {
               <table className="w-full text-sm min-w-[380px]">
                 <thead>
                   <tr className="border-b border-white/10">
-                    <th scope="col" className="text-left pb-2.5 text-xs font-semibold uppercase tracking-wider text-slate-500">Tenure</th>
-                    <th scope="col" className="text-right pb-2.5 text-xs font-semibold uppercase tracking-wider text-slate-500">Monthly</th>
-                    <th scope="col" className="text-right pb-2.5 text-xs font-semibold uppercase tracking-wider text-slate-500">Total payable</th>
+                    <th scope="col" className="text-left pb-2.5 text-xs font-medium text-slate-500">Tenure</th>
+                    <th scope="col" className="text-right pb-2.5 text-xs font-medium text-slate-500">Monthly</th>
+                    <th scope="col" className="text-right pb-2.5 text-xs font-medium text-slate-500">Total payable</th>
                   </tr>
                 </thead>
                 <tbody>

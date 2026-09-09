@@ -520,8 +520,8 @@ export default function SpatialPlanShowcase({ plan = 'zcf' }) {
   const data = config.facets[activeFacet];
   const isLeft = activeFacet === facetKeys[0];
 
-  const leftColor = plan === 'ztf' ? 'rgba(34,211,238,0.18)' : 'rgba(59,130,246,0.18)';
-  const rightColor = plan === 'ztf' ? 'rgba(59,130,246,0.18)' : 'rgba(34,211,238,0.18)';
+  const leftColor = plan === 'ztf' ? 'rgba(34,211,238,0.18)' : 'rgba(251, 191, 36,0.18)';
+  const rightColor = plan === 'ztf' ? 'rgba(251, 191, 36,0.18)' : 'rgba(34,211,238,0.18)';
 
   const accentGradient =
     plan === 'ztf' ? 'from-stone-300 to-white' : 'from-white to-stone-300';

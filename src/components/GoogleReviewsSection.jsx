@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Star, ExternalLink, MapPin } from 'lucide-react';
-import { googleReviewsMeta, reviews, getGoogleMapsHref } from '../data/googleReviews';
+import { googleReviewsMeta, verifiedReviews, hasVerifiedReviews, getGoogleMapsHref } from '../data/googleReviews';
 
 function GoogleG({ size = 22 }) {
     return (
@@ -35,8 +35,11 @@ function Stars({ rating, size = 14 }) {
 }
 
 export default function GoogleReviewsSection({ compact = false }) {
+    // No verified reviews yet — render nothing rather than a placeholder.
+    if (!hasVerifiedReviews) return null;
+
     const href = getGoogleMapsHref();
-    const shown = reviews.slice(0, compact ? 3 : 6);
+    const shown = verifiedReviews.slice(0, compact ? 3 : 6);
 
     return (
         <section className={`relative ${compact ? 'py-14' : 'py-20'} border-t border-white/5`}>
@@ -70,7 +73,7 @@ export default function GoogleReviewsSection({ compact = false }) {
                     {shown.map((r, i) => (
                         <article
                             key={i}
-                            className="relative bg-[#0c1428] border-2 border-white/10 hover:border-white/20 rounded-2xl p-5 md:p-6 shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)] transition-colors flex flex-col"
+                            className="relative bg-[#141210] border-2 border-white/10 hover:border-white/20 rounded-2xl p-5 md:p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] transition-colors flex flex-col"
                         >
                             {/* Google G watermark top-right */}
                             <div className="absolute top-4 right-4 opacity-70">

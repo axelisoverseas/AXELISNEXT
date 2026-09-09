@@ -32,7 +32,7 @@ export default function AccommodationPage() {
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-[var(--storm-deep)]" />
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(5,7,15,0.65)_0%,transparent_75%)]" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.65)_0%,transparent_75%)]" />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     {/* In partnership with — amber's wordmark, lowercase per their brand rules */}
@@ -112,7 +112,7 @@ export default function AccommodationPage() {
             {/* amber marketplace CTA — static panel linking to our partner marketplace */}
             <section id="listings" className="py-20 scroll-mt-24">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="relative overflow-hidden rounded-3xl border-2 border-white/10 bg-[#0c1428] shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)]">
+                    <div className="relative overflow-hidden rounded-3xl border-2 border-white/10 bg-[#141210] shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
                         <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-[var(--storm-electric)]/10 blur-[120px]" />
                         <div className="pointer-events-none absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-[var(--dawn-glow)]/10 blur-[120px]" />
 
@@ -213,7 +213,7 @@ export default function AccommodationPage() {
 
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         {/* PBSA */}
-                        <div className="bg-[#0c1428] border-2 border-white/10 rounded-2xl p-8 overflow-hidden shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)]">
+                        <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-8 overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
                             <div className="-mx-8 -mt-8 mb-6 h-40 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1200&q=80&auto=format&fit=crop"
@@ -240,7 +240,7 @@ export default function AccommodationPage() {
                         </div>
 
                         {/* Private Apartments */}
-                        <div className="bg-[#0c1428] border-2 border-white/10 rounded-2xl p-8 overflow-hidden shadow-[0_20px_60px_-20px_rgba(5,7,15,0.9)]">
+                        <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-8 overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
                             <div className="-mx-8 -mt-8 mb-6 h-40 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80&auto=format&fit=crop"

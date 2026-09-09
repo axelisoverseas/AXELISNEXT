@@ -126,7 +126,7 @@ const VisaSuccessPredictor = () => {
                             key={step.id}
                             className={`relative z-10 flex flex-col items-center justify-center w-10 h-10 rounded-full border-2 transition-all duration-300 bg-white
                 ${currentStep > step.id ? 'border-stone-900 bg-stone-900/10 text-stone-900' :
-                                    currentStep === step.id ? 'border-stone-900 shadow-[0_0_15px_rgba(37,99,235,0.3)] text-stone-900' :
+                                    currentStep === step.id ? 'border-stone-900 shadow-[0_0_15px_rgba(251, 191, 36,0.3)] text-stone-900' :
                                         'border-gray-200 text-gray-400'}`}
                         >
                             <span className="text-sm font-bold">{step.id}</span>

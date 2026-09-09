@@ -11,7 +11,7 @@ export const ShinyButton = ({ children, className = '', as: Tag = 'button', ...p
       <span
         aria-hidden
         className="shiny-btn absolute inset-0"
-        style={{ '--shiny-base': '#1e3a8a' }}
+        style={{ '--shiny-base': '#1C1917' }}
       />
       <span className="relative z-10 inline-flex items-center gap-2">{children}</span>
     </Tag>

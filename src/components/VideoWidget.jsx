@@ -45,8 +45,8 @@ const ThumbnailImage = ({ videoId, title, index, duration }) => {
     <svg width="320" height="180" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" style="stop-color:#2563EB;stop-opacity:1" />
-          <stop offset="100%" style="stop-color:#1E40AF;stop-opacity:1" />
+          <stop offset="0%" style="stop-color:#292524;stop-opacity:1" />
+          <stop offset="100%" style="stop-color:#1C1917;stop-opacity:1" />
         </linearGradient>
       </defs>
       <rect width="320" height="180" fill="url(#grad1)"/>
