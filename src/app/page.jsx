@@ -154,30 +154,10 @@ export default function Home() {
 
           <motion.div
             variants={fadeInUp}
-            className="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 max-w-4xl mx-auto mb-10 text-sm"
-          >
-            {[
-              '16 Programmes',
-              '4 Tiers',
-              '5,000+ Learners Targeted Annually',
-              '₹2L Avg Ticket',
-              'EMI available',
-            ].map((stat, i, arr) => (
-              <React.Fragment key={stat}>
-                <span className="text-slate-200 font-semibold">{stat}</span>
-                {i < arr.length - 1 && (
-                  <span aria-hidden="true" className="text-[var(--storm-electric)]/60">&middot;</span>
-                )}
-              </React.Fragment>
-            ))}
-          </motion.div>
-
-          <motion.div
-            variants={fadeInUp}
             className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mb-12"
           >
             {[
-              { Icon: Users, label: '500+ students' },
+              { Icon: Users, label: '5,000+ students' },
               { Icon: Globe, label: '29+ countries' },
               { Icon: Award, label: '₹3 Cr+ scholarships' },
               { Icon: ShieldCheck, label: '100% visa honesty' },
@@ -214,7 +194,7 @@ export default function Home() {
               </Link>
             </div>
             <p className="text-white text-sm md:text-base text-center">
-              <span className="text-[var(--dawn-glow)] font-bold">500+ students</span> placed and on-ground.
+              <span className="text-[var(--dawn-glow)] font-bold">5,000+ students</span> placed and on-ground.
             </p>
           </motion.div>
         </motion.div>
@@ -256,7 +236,7 @@ export default function Home() {
               Every icon: gradient halo + circular ring + dark inner disc + amber bolt accent. */}
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              { icon: Users, value: '500+', label: 'Students Placed' },
+              { icon: Users, value: '5,000+', label: 'Students Placed' },
               { icon: Globe, value: '29+', label: 'Countries' },
               { icon: GraduationCap, value: '35,000+', label: 'Universities' },
               { icon: Award, value: '₹3+ Cr', label: 'Scholarships Won', gradient: true },

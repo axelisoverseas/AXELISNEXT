@@ -106,7 +106,7 @@ function ProductsContent() {
 
           <motion.div variants={fadeInUp} className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
             {[
-              { Icon: CheckCircle, label: '500+ students' },
+              { Icon: CheckCircle, label: '5,000+ students' },
               { Icon: Globe2, label: '29+ countries' },
               { Icon: Award, label: '₹3 Cr+ scholarships' },
               { Icon: ShieldCheck, label: '100% refundable' },

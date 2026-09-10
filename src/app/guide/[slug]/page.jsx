@@ -11,7 +11,7 @@ async function getCountryData(countryParam) {
         name: countryName,
         capital: countryName === 'Uk' ? 'London' : countryName === 'Usa' ? 'Washington D.C.' : 'Capital City',
         universitiesCount: 154,
-        studentsSent: 500
+        studentsSent: 5000
     };
 }
 

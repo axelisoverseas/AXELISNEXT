@@ -212,7 +212,7 @@ export default function TestimonialsPage() {
 
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="glass-storm py-4">
-              <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">500+</div>
+              <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">5,000+</div>
               <div className="text-stone-200/85 text-[10px] md:text-xs mt-1">Students placed</div>
             </div>
             <div className="glass-storm py-4">

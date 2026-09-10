@@ -67,7 +67,7 @@ const PLAN_CONFIG = {
           bar: 'bg-stone-700',
           accent: 'text-stone-300',
         },
-        stats: { status: 'Active Dossier', headline: '500+ Students Placed' },
+        stats: { status: 'Active Dossier', headline: '5,000+ Students Placed' },
         features: [
           { label: 'Shortlisting Precision', value: 96, icon: Target },
           { label: 'SOP & LOR Quality', value: 98, icon: FileText },
