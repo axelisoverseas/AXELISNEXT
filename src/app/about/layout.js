@@ -1,7 +1,7 @@
 export const metadata = {
     title: 'About Us',
     description:
-        "India's certification-first study-abroad platform. Bengaluru corporate office, Bilaspur registered office, scaling to serve 5,000 to 10,000 learners a year across 16 certification programmes.",
+        "India's certification-first study-abroad platform. Bengaluru corporate office, Bilaspur registered office, 16 certification programmes across four tiers.",
     alternates: { canonical: 'https://overseeducation.com/about' },
 };
 
