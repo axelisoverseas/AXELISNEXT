@@ -97,7 +97,7 @@ const Footer = () => {
                 <Link href="/terms-conditions" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Terms of Service</Link>
               </li>
               <li>
-                <Link href="/refund-cancellation" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Refund Policy</Link>
+                <Link href="/policies/cancellation-refund" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Cancellation &amp; Refund Policy</Link>
               </li>
               <li>
                 <Link href="/delivery-policy" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Delivery Policy</Link>
