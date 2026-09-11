@@ -21,6 +21,7 @@ export default function sitemap() {
     { url: `${BASE_URL}/testimonials`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/certifications`, changeFrequency: 'weekly', priority: 0.95 },
     { url: `${BASE_URL}/accreditations`, changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${BASE_URL}/policies/cancellation-refund`, changeFrequency: 'monthly', priority: 0.5 },
   ].map((page) => ({ ...page, lastModified: now }));
 
   const countryGuides = [
