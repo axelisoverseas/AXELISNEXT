@@ -13,6 +13,7 @@ import CertificationEnquiryForm from '../../../components/CertificationEnquiryFo
 import PaymentPartnersStrip from '../../../components/PaymentPartnersStrip';
 import FinancingBlock from '../../../components/FinancingBlock';
 import TrustBand from '../../../components/TrustBand';
+import CancellationRefundBlock from '../../../components/CancellationRefundBlock';
 
 export function generateStaticParams() {
   return programs.map((p) => ({ slug: p.slug }));
@@ -70,7 +71,7 @@ export default async function ProgramPage({ params }) {
 
   const tier = TIERS.find((t) => t.id === program.tier);
   const emi = monthlyEmi(program);
-  const tenure = emiTenure(program.tier);
+  const tenure = emiTenure(program);
   const isConcierge = program.tier === 'concierge';
   const accent = accentFor(program.tier);
 
@@ -294,7 +295,14 @@ export default async function ProgramPage({ params }) {
                 <div className="bg-[#141210] border-2 border-[var(--dawn-glow)]/30 rounded-2xl p-6">
                   <ShieldCheck size={26} className="text-[var(--dawn-glow)] mb-3" />
                   <h3 className="text-white font-bold text-base mb-2">Outcome guarantee</h3>
-                  <p className="text-slate-300/80 text-sm leading-relaxed">{program.guarantee}</p>
+                  <p className="text-white font-semibold text-sm leading-relaxed mb-2">{program.guarantee.promise}</p>
+                  <p className="text-slate-400 text-xs leading-relaxed mb-3">
+                    If the guarantee is not met, the {program.guarantee.pct}% refund is issued regardless of how far into
+                    the programme you are.
+                  </p>
+                  <Link href="/policies/cancellation-refund#refund-tiers" className="text-sm text-[var(--dawn-glow)] font-semibold hover:underline underline-offset-4">
+                    Guarantee terms live in the Cancellation &amp; Refund Policy &rarr;
+                  </Link>
                 </div>
               )}
             </aside>
@@ -304,6 +312,9 @@ export default async function ProgramPage({ params }) {
 
       {/* Fee + financing, in the format Indian EdTech actually ships */}
       <FinancingBlock program={program} />
+
+      {/* Cancellation & Refund — P0, verbatim from the handover, above the enquiry form */}
+      <CancellationRefundBlock />
 
       {/* ------------------------------------------------------ ENQUIRY FORM */}
       <section id="enquire" className="relative py-20 scroll-mt-24">
