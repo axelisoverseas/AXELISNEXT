@@ -257,9 +257,9 @@ export default function CertificationsPage() {
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
               {[
-                { label: 'Concierge tier', value: '12-month tenure' },
-                { label: 'Core & Advanced', value: '6-month tenure' },
-                { label: 'Worked example', value: `${formatINR(200000)} = ${formatINR(16667)}/mo × 12` },
+                { label: 'Eligibility', value: `Programmes from ${formatINR(10000)}` },
+                { label: 'Tenures', value: '6, 9, 12, 18 or 24 months' },
+                { label: 'Worked example', value: `${formatINR(200000)} = ${formatINR(33333)}/mo × 6, or ${formatINR(8333)}/mo × 24` },
               ].map((row) => (
                 <div key={row.label} className="bg-white/[0.04] border border-white/10 rounded-xl p-4">
                   <div className="text-xs text-slate-400 mb-1">{row.label}</div>

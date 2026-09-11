@@ -485,8 +485,11 @@ export const programs = [
       { title: 'Months 6 to 9 — offers and language', detail: 'Offer negotiation, scholarships, and certification.' },
       { title: 'Months 9 to 12 — visa and landing', detail: 'Visa file, accommodation, departure, first 90 days.' },
     ],
-    guarantee:
-      'Written outcome guarantee. Terms, including the refund conditions and what counts as a qualifying outcome, are set out in your engagement letter before you pay.',
+    guarantee: {
+      pct: 25,
+      promise: 'One internship interview within six months of arrival, or 25% of the fee refunded.',
+      condition: '1 internship interview within 6 months of arrival not delivered',
+    },
   },
   {
     slug: 'phd-fellowship-concierge',
@@ -516,8 +519,11 @@ export const programs = [
       { title: 'Months 8 to 12 — funding', detail: 'Fellowship, studentship and council applications.' },
       { title: 'Months 12 to 15 — visa and landing', detail: 'Offer, visa file, and arrival.' },
     ],
-    guarantee:
-      'Written outcome guarantee. Terms, including the refund conditions and what counts as a qualifying outcome, are set out in your engagement letter before you pay.',
+    guarantee: {
+      pct: 40,
+      promise: 'Three supervisor callbacks, or 40% of the fee refunded.',
+      condition: '3 supervisor callbacks not delivered',
+    },
   },
   {
     slug: 'executive-mba-concierge',
@@ -547,8 +553,11 @@ export const programs = [
       { title: 'Months 8 to 12 — interviews and offers', detail: 'Mock panels, offer comparison, and financing.' },
       { title: 'Months 12 to 15 — relocation', detail: 'Visa, housing, and family logistics.' },
     ],
-    guarantee:
-      'Written outcome guarantee. Terms, including the refund conditions and what counts as a qualifying outcome, are set out in your engagement letter before you pay.',
+    guarantee: {
+      pct: 30,
+      promise: 'Interview calls at two or more top-30 schools, or 30% of the fee refunded.',
+      condition: 'interview calls at 2+ top-30 schools not delivered',
+    },
   },
 ];
 
@@ -581,28 +590,33 @@ export function accentFor(tier) {
   return tier === 'concierge' || tier === 'advanced' ? ACCENTS.glow : ACCENTS.electric;
 }
 
-/** EMI tenure per the handover: fee/12 for Concierge, fee/6 for Core & Advanced. */
-export function emiTenure(tier) {
-  if (tier === 'concierge') return 12;
-  if (tier === 'core' || tier === 'advanced') return 6;
-  return null; // Foundation tickets are too small to finance.
+/** The longest tenure offered — the headline "as low as" figure is priced on it. */
+export function emiTenure(program) {
+  return isEmiEligible(program) ? EMI_TENURES[EMI_TENURES.length - 1] : null;
 }
 
-/** Monthly EMI outgo, rounded up to the rupee. Null when the tier has no EMI. */
+/** Monthly outgo at the longest tenure, rounded up. Null below the EMI threshold. */
 export function monthlyEmi(program) {
-  const tenure = emiTenure(program.tier);
+  const tenure = emiTenure(program);
   if (!tenure) return null;
-  return Math.ceil(program.price / tenure);
+  return Math.round(program.price / tenure);
 }
 
 /**
- * Tenures offered per tier. The handover offers 3/6/9/12 on Concierge; the
- * shorter tiers stop at 6, which is the divisor its quick-facts spec uses.
+ * EMI eligibility and tenures come from the published Cancellation & Refund
+ * Policy (Sections 2 and 3): programmes priced ₹10,000 and above are eligible,
+ * on 6 / 9 / 12 / 18 / 24-month tenures where the card issuer supports it.
+ * The earlier 3-month tenure contradicted the policy's 6-month minimum.
  */
-export function emiTenures(tier) {
-  if (tier === 'concierge') return [3, 6, 9, 12];
-  if (tier === 'core' || tier === 'advanced') return [3, 6];
-  return [];
+export const EMI_MIN_TICKET = 10000;
+export const EMI_TENURES = [6, 9, 12, 18, 24];
+
+export function isEmiEligible(program) {
+  return program.price >= EMI_MIN_TICKET;
+}
+
+export function emiTenures(program) {
+  return isEmiEligible(program) ? EMI_TENURES : [];
 }
 
 /**
@@ -612,9 +626,9 @@ export function emiTenures(tier) {
  * instalment once a genuine no-cost route is live.
  */
 export function emiSchedule(program) {
-  return emiTenures(program.tier).map((months) => ({
+  return emiTenures(program).map((months) => ({
     months,
-    monthly: Math.ceil(program.price / months),
+    monthly: Math.round(program.price / months),
   }));
 }
 
@@ -636,8 +650,6 @@ export const catalogueStats = {
   tierCount: TIERS.length,
   priceFloor: Math.min(...programs.map((p) => p.price)),
   priceCeiling: Math.max(...programs.map((p) => p.price)),
-  // Handover: this is a TARGET, never a claim of past enrolment.
-  annualLearnerTarget: '5,000 to 10,000',
   averageTicket: 200000,
 };
 
@@ -651,10 +663,10 @@ export const catalogueStats = {
 // ---------------------------------------------------------------------------
 export const financing = {
   liveCopy:
-    'Card EMI on 3, 6, 9 and 12-month tenures through Razorpay and Cashfree, on all major credit cards.',
+    'Card EMI on 6, 9, 12, 18 and 24-month tenures through Razorpay and Cashfree, where your card issuer supports it.',
   // Rendered only once Bajaj is genuinely live.
   bajajLiveCopy:
-    'No-cost EMI on the Bajaj Finserv Insta EMI Card, across 3, 6, 9 and 12-month tenures.',
+    'No-cost EMI on the Bajaj Finserv Insta EMI Card, on 6, 9, 12, 18 and 24-month tenures.',
   get strip() {
     return BAJAJ_EMI_LIVE ? `${this.bajajLiveCopy} ${this.liveCopy}` : this.liveCopy;
   },
@@ -673,4 +685,22 @@ export const financing = {
       ? 'On no-cost EMI the total payable does not change across tenures.'
       : 'Amounts are the programme fee divided across the tenure. Your bank sets its own rate on card EMI, so the final instalment is fixed by your card issuer.';
   },
+};
+
+// ---------------------------------------------------------------------------
+// Cancellation & Refund Policy — the numbers every surface must agree on.
+// Any change here needs written sign-off (policy handover, "what must not change").
+// ---------------------------------------------------------------------------
+export const refundPolicy = {
+  href: '/policies/cancellation-refund',
+  effectiveFrom: '15 September 2026',
+  version: '1.0',
+  coolingOffBusinessDays: 7,
+  adminFee: 2500,
+  ackBusinessHours: 48,
+  verificationBusinessDays: 5,
+  decisionBusinessDays: 2,
+  creditWorkingDays: '7 to 10',
+  supportEmail: 'axelisoverseas@overseeducation.com',
+  supportPhone: '+91 9098522711',
 };

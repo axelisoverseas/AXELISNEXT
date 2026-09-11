@@ -27,7 +27,7 @@ export default function FinancingBlock({ program }) {
   if (schedule.length === 0) return null;
 
   const headline = monthlyEmi(program);
-  const headlineTenure = emiTenure(program.tier);
+  const headlineTenure = emiTenure(program);
 
   return (
     <section id="financing" className="relative py-16 scroll-mt-24">
