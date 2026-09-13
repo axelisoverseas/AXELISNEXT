@@ -12,8 +12,11 @@
 //
 //   1. DEV_HANDOVER_v2_certifications_website.md
 //        - 16 programmes, 4 tiers (Foundation / Core / Advanced / Concierge)
-//        - Ticket range ₹4,000 to ₹3,00,000
+//          — superseded by [RULING 12]; see the catalogue note below. Three
+//          programmes are listed, ₹2,00,000 to ₹3,00,000, Concierge only.
+//        - Ticket range ₹4,000 to ₹3,00,000 (now ₹2,00,000 to ₹3,00,000)
 //        - Average ticket ₹2,00,000, carried by the Concierge tier
+//          — now derived, and it computes to ₹2,50,000.
 //        - Concierge defined as ₹1.5L+, spotlight band quotes ₹2L to ₹3L
 //        - EMI: fee/12 for Concierge, fee/6 for Core and Advanced
 //
@@ -80,7 +83,137 @@ export const TIERS = [
 // The 16 programmes.
 // `family` maps each one to the five families named in the Bajaj email.
 // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// The catalogue.
+//
+// [RULING 12] Every programme under ₹2,00,000 is off the catalogue. The three
+// Concierge programmes are all that is listed: they are what appears in the
+// tile grid, the tier sections, the sitemap, `catalogueStats` and the
+// Cancellation & Refund Policy's Section 1.
+//
+// The other thirteen are UNLISTED, not deleted. Their pages stay reachable so
+// the links deployed to production on 12 Sep, and any in-flight enquiry that
+// cites one, do not 404 — but they are out of the sitemap and carry
+// `noindex`. Nothing surfaces them; you have to already hold the URL.
+//
+// To relist one: move its object from `unlistedPrograms` into `programs`.
+// To hard-delete instead: drop `unlistedPrograms` entirely and add a redirect
+// per slug to `/certifications` in next.config.mjs.
+//
+// `family` maps each one to the five families named in the Bajaj email.
+// ---------------------------------------------------------------------------
 export const programs = [
+  // ---- CONCIERGE --------------------------------------------------------
+  {
+    slug: 'global-career-launch',
+    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'An aircraft wing above the clouds',
+    title: 'Global Career Launch',
+    tier: 'concierge',
+    family: 'Global Career Launch',
+    price: 200000,
+    duration: '12 months',
+    format: 'One dedicated counsellor, end to end',
+    cohortSize: 'Capped at 12 per intake',
+    certificate: 'Axelis Certified — Global Career Launch',
+    flagship: true,
+    summary:
+      'Application, language, visa and your first ninety days abroad, run end to end by one counsellor.',
+    description:
+      'Our flagship programme, and the one the rest of the catalogue is built around. Twelve months with a single named counsellor covering university applications, language certification to the level your destination requires, the visa file, accommodation, and the first ninety days after you land. Written outcome guarantee.',
+    outcomes: [
+      'Admission to a university on your agreed shortlist',
+      'Language certification to your destination’s required level',
+      'Visa file, accommodation and arrival logistics handled',
+      'Ninety days of post-arrival support after you land',
+    ],
+    syllabus: [
+      { title: 'Months 1 to 2 — strategy', detail: 'Shortlist, budget, funding plan, and language baseline.' },
+      { title: 'Months 3 to 6 — applications', detail: 'SOP, CV, references, and submissions across the shortlist.' },
+      { title: 'Months 6 to 9 — offers and language', detail: 'Offer negotiation, scholarships, and certification.' },
+      { title: 'Months 9 to 12 — visa and landing', detail: 'Visa file, accommodation, departure, first 90 days.' },
+    ],
+    guarantee: {
+      pct: 25,
+      promise: 'One internship interview within six months of arrival, or 25% of the fee refunded.',
+      condition: '1 internship interview within 6 months of arrival not delivered',
+    },
+  },
+  {
+    slug: 'phd-fellowship-concierge',
+    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'Graduates throwing their caps in the air',
+    title: 'PhD & Fellowship Concierge',
+    tier: 'concierge',
+    family: 'PhD & Fellowship applications',
+    price: 250000,
+    duration: '15 months',
+    format: 'One dedicated counsellor + research supervisor',
+    cohortSize: 'Capped at 8 per intake',
+    certificate: 'Axelis Certified — PhD & Fellowship Concierge',
+    summary:
+      'Funded-PhD and fellowship applications run end to end, from proposal through supervisor placement to visa.',
+    description:
+      'Funded doctoral places turn on a proposal a supervisor wants to take on and a funding application that lands in the same cycle. Fifteen months with both a counsellor and a research supervisor covering proposal development, supervisor placement, fellowship applications, and the visa file. Written outcome guarantee.',
+    outcomes: [
+      'A research proposal developed with an academic supervisor',
+      'Supervisor outreach through to a confirmed placement conversation',
+      'Fellowship and studentship applications submitted in cycle',
+      'Visa file and arrival logistics handled',
+    ],
+    syllabus: [
+      { title: 'Months 1 to 4 — proposal', detail: 'Literature positioning, method, and feasibility.' },
+      { title: 'Months 4 to 8 — supervisors', detail: 'Outreach, calls, and refining to their group’s work.' },
+      { title: 'Months 8 to 12 — funding', detail: 'Fellowship, studentship and council applications.' },
+      { title: 'Months 12 to 15 — visa and landing', detail: 'Offer, visa file, and arrival.' },
+    ],
+    guarantee: {
+      pct: 40,
+      promise: 'Three supervisor callbacks, or 40% of the fee refunded.',
+      condition: '3 supervisor callbacks not delivered',
+    },
+  },
+  {
+    slug: 'executive-mba-concierge',
+    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1600&q=80&auto=format&fit=crop',
+    imageAlt: 'Senior colleagues in discussion around a boardroom table',
+    title: 'Executive MBA Concierge',
+    tier: 'concierge',
+    family: 'Executive MBA application coaching',
+    price: 300000,
+    duration: '15 months',
+    format: 'One dedicated counsellor, 1:1 throughout',
+    cohortSize: 'Capped at 8 per intake',
+    certificate: 'Axelis Certified — Executive MBA Concierge',
+    summary:
+      'Executive MBA admission run end to end, including financing, relocation and the move itself.',
+    description:
+      'Our most senior engagement, for candidates applying to top-tier Executive MBA programmes while working. Fifteen months covering school selection, essays, recommenders, interviews, financing and relocation, with one counsellor across the whole thing. Written outcome guarantee.',
+    outcomes: [
+      'Admission to a school on your agreed shortlist',
+      'Essays, recommenders and interviews prepared end to end',
+      'Financing structured, including EMI and education loans',
+      'Relocation and family logistics coordinated',
+    ],
+    syllabus: [
+      { title: 'Months 1 to 3 — positioning', detail: 'Career audit, school selection, and testing strategy.' },
+      { title: 'Months 3 to 8 — applications', detail: 'Essays, recommenders, and round-by-round submission.' },
+      { title: 'Months 8 to 12 — interviews and offers', detail: 'Mock panels, offer comparison, and financing.' },
+      { title: 'Months 12 to 15 — relocation', detail: 'Visa, housing, and family logistics.' },
+    ],
+    guarantee: {
+      pct: 30,
+      promise: 'Interview calls at two or more top-30 schools, or 30% of the fee refunded.',
+      condition: 'interview calls at 2+ top-30 schools not delivered',
+    },
+  },
+];
+
+/**
+ * Withheld from every listing surface, still served at /certifications/<slug>.
+ * Not in the sitemap, not in `catalogueStats`, not in the policy's Section 1.
+ */
+export const unlistedPrograms = [
   // ---- FOUNDATION -------------------------------------------------------
   {
     slug: 'study-abroad-readiness',
@@ -455,111 +588,10 @@ export const programs = [
     ],
   },
 
-  // ---- CONCIERGE --------------------------------------------------------
-  {
-    slug: 'global-career-launch',
-    image: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1600&q=80&auto=format&fit=crop',
-    imageAlt: 'An aircraft wing above the clouds',
-    title: 'Global Career Launch',
-    tier: 'concierge',
-    family: 'Global Career Launch',
-    price: 200000,
-    duration: '12 months',
-    format: 'One dedicated counsellor, end to end',
-    cohortSize: 'Capped at 12 per intake',
-    certificate: 'Axelis Certified — Global Career Launch',
-    flagship: true,
-    summary:
-      'Application, language, visa and your first ninety days abroad, run end to end by one counsellor.',
-    description:
-      'Our flagship programme, and the one the rest of the catalogue is built around. Twelve months with a single named counsellor covering university applications, language certification to the level your destination requires, the visa file, accommodation, and the first ninety days after you land. Written outcome guarantee.',
-    outcomes: [
-      'Admission to a university on your agreed shortlist',
-      'Language certification to your destination’s required level',
-      'Visa file, accommodation and arrival logistics handled',
-      'Ninety days of post-arrival support after you land',
-    ],
-    syllabus: [
-      { title: 'Months 1 to 2 — strategy', detail: 'Shortlist, budget, funding plan, and language baseline.' },
-      { title: 'Months 3 to 6 — applications', detail: 'SOP, CV, references, and submissions across the shortlist.' },
-      { title: 'Months 6 to 9 — offers and language', detail: 'Offer negotiation, scholarships, and certification.' },
-      { title: 'Months 9 to 12 — visa and landing', detail: 'Visa file, accommodation, departure, first 90 days.' },
-    ],
-    guarantee: {
-      pct: 25,
-      promise: 'One internship interview within six months of arrival, or 25% of the fee refunded.',
-      condition: '1 internship interview within 6 months of arrival not delivered',
-    },
-  },
-  {
-    slug: 'phd-fellowship-concierge',
-    image: 'https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&q=80&auto=format&fit=crop',
-    imageAlt: 'Graduates throwing their caps in the air',
-    title: 'PhD & Fellowship Concierge',
-    tier: 'concierge',
-    family: 'PhD & Fellowship applications',
-    price: 250000,
-    duration: '15 months',
-    format: 'One dedicated counsellor + research supervisor',
-    cohortSize: 'Capped at 8 per intake',
-    certificate: 'Axelis Certified — PhD & Fellowship Concierge',
-    summary:
-      'Funded-PhD and fellowship applications run end to end, from proposal through supervisor placement to visa.',
-    description:
-      'Funded doctoral places turn on a proposal a supervisor wants to take on and a funding application that lands in the same cycle. Fifteen months with both a counsellor and a research supervisor covering proposal development, supervisor placement, fellowship applications, and the visa file. Written outcome guarantee.',
-    outcomes: [
-      'A research proposal developed with an academic supervisor',
-      'Supervisor outreach through to a confirmed placement conversation',
-      'Fellowship and studentship applications submitted in cycle',
-      'Visa file and arrival logistics handled',
-    ],
-    syllabus: [
-      { title: 'Months 1 to 4 — proposal', detail: 'Literature positioning, method, and feasibility.' },
-      { title: 'Months 4 to 8 — supervisors', detail: 'Outreach, calls, and refining to their group’s work.' },
-      { title: 'Months 8 to 12 — funding', detail: 'Fellowship, studentship and council applications.' },
-      { title: 'Months 12 to 15 — visa and landing', detail: 'Offer, visa file, and arrival.' },
-    ],
-    guarantee: {
-      pct: 40,
-      promise: 'Three supervisor callbacks, or 40% of the fee refunded.',
-      condition: '3 supervisor callbacks not delivered',
-    },
-  },
-  {
-    slug: 'executive-mba-concierge',
-    image: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=1600&q=80&auto=format&fit=crop',
-    imageAlt: 'Senior colleagues in discussion around a boardroom table',
-    title: 'Executive MBA Concierge',
-    tier: 'concierge',
-    family: 'Executive MBA application coaching',
-    price: 300000,
-    duration: '15 months',
-    format: 'One dedicated counsellor, 1:1 throughout',
-    cohortSize: 'Capped at 8 per intake',
-    certificate: 'Axelis Certified — Executive MBA Concierge',
-    summary:
-      'Executive MBA admission run end to end, including financing, relocation and the move itself.',
-    description:
-      'Our most senior engagement, for candidates applying to top-tier Executive MBA programmes while working. Fifteen months covering school selection, essays, recommenders, interviews, financing and relocation, with one counsellor across the whole thing. Written outcome guarantee.',
-    outcomes: [
-      'Admission to a school on your agreed shortlist',
-      'Essays, recommenders and interviews prepared end to end',
-      'Financing structured, including EMI and education loans',
-      'Relocation and family logistics coordinated',
-    ],
-    syllabus: [
-      { title: 'Months 1 to 3 — positioning', detail: 'Career audit, school selection, and testing strategy.' },
-      { title: 'Months 3 to 8 — applications', detail: 'Essays, recommenders, and round-by-round submission.' },
-      { title: 'Months 8 to 12 — interviews and offers', detail: 'Mock panels, offer comparison, and financing.' },
-      { title: 'Months 12 to 15 — relocation', detail: 'Visa, housing, and family logistics.' },
-    ],
-    guarantee: {
-      pct: 30,
-      promise: 'Interview calls at two or more top-30 schools, or 30% of the fee refunded.',
-      condition: 'interview calls at 2+ top-30 schools not delivered',
-    },
-  },
 ];
+
+/** Everything with a live page — listed or not. Routing and lookup only. */
+export const allPrograms = [...programs, ...unlistedPrograms];
 
 // ---------------------------------------------------------------------------
 // Derived values — computed, never hand-maintained.
@@ -637,20 +669,36 @@ export function formatINR(amount) {
   return `₹${amount.toLocaleString('en-IN')}`;
 }
 
+/** Resolves listed AND unlisted slugs — unlisted pages are still served. */
 export function getProgram(slug) {
-  return programs.find((p) => p.slug === slug) || null;
+  return allPrograms.find((p) => p.slug === slug) || null;
 }
 
+/** True when a slug is served but withheld from listings — drives `noindex`. */
+export function isUnlisted(slug) {
+  return unlistedPrograms.some((p) => p.slug === slug);
+}
+
+/** Listed programmes only, so empty tiers stay empty and get filtered out. */
 export function programsByTier(tierId) {
   return programs.filter((p) => p.tier === tierId);
 }
 
+/** The tiers that still have something in them. Today: Concierge alone. */
+export function populatedTiers() {
+  return TIERS.filter((t) => programsByTier(t.id).length > 0);
+}
+
 export const catalogueStats = {
   programCount: programs.length,
-  tierCount: TIERS.length,
+  tierCount: populatedTiers().length,
   priceFloor: Math.min(...programs.map((p) => p.price)),
   priceCeiling: Math.max(...programs.map((p) => p.price)),
-  averageTicket: 200000,
+  // Derived, not pinned. Was hard-coded at ₹2,00,000 against the 16-programme
+  // catalogue; on the Concierge-only catalogue it computes to ₹2,50,000.
+  averageTicket: Math.round(
+    programs.reduce((sum, p) => sum + p.price, 0) / programs.length,
+  ),
 };
 
 // ---------------------------------------------------------------------------

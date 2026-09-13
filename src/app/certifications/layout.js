@@ -3,8 +3,8 @@ import { programs, catalogueStats, formatINR } from '../../data/certificationPro
 const priceRange = `${formatINR(catalogueStats.priceFloor)} to ${formatINR(catalogueStats.priceCeiling)}`;
 
 export const metadata = {
-  title: 'Certification Programmes — 16 Programmes, 4 Tiers, EMI Available',
-  description: `Sixteen Axelis certification programmes across four tiers, from ${priceRange}. Application coaching, German and French to CEFR B1, Executive MBA prep, PhD and fellowship applications, and Global Career Launch. EMI available.`,
+  title: 'Certification Programmes — Outcome Guaranteed, EMI Available',
+  description: `Axelis end-to-end certification programmes, ${priceRange}, each with a written outcome guarantee. Application coaching, language certification, Executive MBA prep, PhD and fellowship applications, and Global Career Launch. EMI available.`,
   keywords: [
     'study abroad certification', 'application coaching certificate',
     'German CEFR B1 course India', 'French CEFR B1 course India',
@@ -15,8 +15,8 @@ export const metadata = {
   ],
   alternates: { canonical: 'https://overseeducation.com/certifications' },
   openGraph: {
-    title: 'Axelis Certification Programmes — 16 Programmes Across 4 Tiers',
-    description: `Earn a verifiable credential on the way to your offer letter. Sixteen programmes, ${priceRange}, EMI available.`,
+    title: 'Axelis Certification Programmes — Outcome Guaranteed',
+    description: `Earn a verifiable credential on the way to your offer letter. ${priceRange}, written outcome guarantee, EMI available.`,
     url: 'https://overseeducation.com/certifications',
     siteName: 'Axelis Overseas Education',
     locale: 'en_IN',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axelis Certification Programmes — 16 Programmes, 4 Tiers',
+    title: 'Axelis Certification Programmes — Outcome Guaranteed',
     description: `Application coaching, languages to CEFR B1, Executive MBA and PhD support. ${priceRange}. EMI available.`,
   },
 };

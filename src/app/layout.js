@@ -18,9 +18,9 @@ export const metadata = {
   },
   title: {
     template: '%s | Axelis Overseas Education',
-    default: 'Axelis Overseas — Certification-first Study Abroad | 16 Programmes | EMI Available',
+    default: 'Axelis Overseas — Certification-first Study Abroad | Outcome Guaranteed | EMI Available',
   },
-  description: "India's certification-first study-abroad platform. Sixteen programmes across four tiers, from ₹4,000 to ₹3,00,000. EMI available. Bengaluru + Bilaspur.",
+  description: "India's certification-first study-abroad platform. End-to-end concierge programmes with a written outcome guarantee. EMI available. Bengaluru + Bilaspur.",
   keywords: [
     "study abroad", "overseas education", "study abroad consultancy India",
     "study in UK", "study in USA", "study in Ireland", "study in Germany",
@@ -41,8 +41,8 @@ export const metadata = {
     canonical: 'https://overseeducation.com',
   },
   openGraph: {
-    title: 'Axelis Overseas — Certification-first Study Abroad | 16 Programmes',
-    description: 'Sixteen certification programmes across four tiers, from ₹4,000 to ₹3,00,000. Application coaching, languages to CEFR B1, executive MBA and PhD support. EMI available.',
+    title: 'Axelis Overseas — Certification-first Study Abroad | Outcome Guaranteed',
+    description: 'End-to-end certification programmes with a written outcome guarantee. Application coaching, languages to CEFR B1, executive MBA and PhD support. EMI available.',
     url: 'https://overseeducation.com',
     siteName: 'Axelis Overseas Education',
     locale: 'en_IN',
@@ -59,7 +59,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Axelis Overseas — Certification-first Study Abroad',
-    description: 'Sixteen certification programmes, four tiers, EMI available. Bengaluru + Bilaspur.',
+    description: 'Certification programmes with a written outcome guarantee. EMI available. Bengaluru + Bilaspur.',
     images: ['/og-image.jpg'],
   },
   robots: {

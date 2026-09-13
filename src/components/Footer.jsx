@@ -138,7 +138,7 @@ const Footer = () => {
           <p className="text-sm text-slate-400 leading-relaxed max-w-4xl">
             <span className="text-slate-200 font-semibold">Axelis Overseas Education Pvt Ltd</span>
             {' '}&mdash; Bengaluru &amp; Bilaspur. India&rsquo;s certification-first study-abroad platform.
-            16 certification programmes. Zero-Tuition-Fee (ZTF) Charter agency.
+            Certification programmes with a written outcome guarantee. Zero-Tuition-Fee (ZTF) Charter agency.
           </p>
         </div>
 

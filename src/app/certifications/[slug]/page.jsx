@@ -6,7 +6,7 @@ import {
   ShieldCheck, Users, Layers, BadgeCheck,
 } from 'lucide-react';
 import {
-  programs, getProgram, TIERS, monthlyEmi, emiTenure,
+  programs, allPrograms, getProgram, isUnlisted, TIERS, monthlyEmi, emiTenure,
   formatINR, financing, BAJAJ_EMI_LIVE, accentFor,
 } from '../../../data/certificationPrograms';
 import CertificationEnquiryForm from '../../../components/CertificationEnquiryForm';
@@ -16,7 +16,9 @@ import TrustBand from '../../../components/TrustBand';
 import CancellationRefundBlock from '../../../components/CancellationRefundBlock';
 
 export function generateStaticParams() {
-  return programs.map((p) => ({ slug: p.slug }));
+  // Unlisted programmes are built too. Withholding them from the listings is
+  // the point; letting their live URLs 404 is not.
+  return allPrograms.map((p) => ({ slug: p.slug }));
 }
 
 export async function generateMetadata({ params }) {
@@ -34,6 +36,12 @@ export async function generateMetadata({ params }) {
     title,
     description: `${program.summary} ${program.duration}, ${program.format}.${emiLine}`,
     alternates: { canonical: url },
+    // Unlisted programmes are reachable but not indexable: they are out of the
+    // sitemap, so leaving them crawlable would advertise a catalogue we no
+    // longer sell.
+    ...(isUnlisted(program.slug)
+      ? { robots: { index: false, follow: true } }
+      : {}),
     openGraph: {
       title,
       description: program.summary,
@@ -75,6 +83,8 @@ export default async function ProgramPage({ params }) {
   const isConcierge = program.tier === 'concierge';
   const accent = accentFor(program.tier);
 
+  // Always drawn from the listed catalogue, so no page — listed or unlisted —
+  // ever recommends a withdrawn programme.
   const related = programs
     .filter((p) => p.slug !== program.slug && (p.tier === program.tier || p.family === program.family))
     .slice(0, 3);

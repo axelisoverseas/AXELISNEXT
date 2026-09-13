@@ -7,7 +7,7 @@ import {
   ArrowRight, Clock, CreditCard, ShieldCheck, Users, Sparkles,
 } from 'lucide-react';
 import {
-  TIERS, programsByTier, catalogueStats,
+  TIERS, programsByTier, populatedTiers, catalogueStats,
   monthlyEmi, formatINR, financing,
 } from '../../data/certificationPrograms';
 import CertificationEnquiryForm from '../../components/CertificationEnquiryForm';
@@ -107,34 +107,6 @@ function AdvancedCard({ program }) {
   );
 }
 
-function IndexRow({ program }) {
-  const emi = monthlyEmi(program);
-  return (
-    <Link
-      href={`/certifications/${program.slug}`}
-      className="group flex items-center gap-4 py-4 border-b border-white/8 last:border-0 hover:bg-white/[0.03] px-3 -mx-3 rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
-    >
-      <img
-        src={program.image}
-        alt=""
-        aria-hidden="true"
-        loading="lazy"
-        decoding="async"
-        className="w-14 h-14 rounded-lg object-cover shrink-0 ring-1 ring-white/15"
-      />
-      <div className="min-w-0 flex-1">
-        <h3 className="text-white font-semibold leading-snug">{program.title}</h3>
-        <p className="text-slate-400 text-sm truncate">{program.duration} &middot; {program.format}</p>
-      </div>
-      <div className="text-right shrink-0">
-        <div className="text-white font-bold">{formatINR(program.price)}</div>
-        {emi && <div className="text-xs text-slate-500">{formatINR(emi)}/mo</div>}
-      </div>
-      <ArrowRight size={16} className="text-slate-600 group-hover:text-white group-hover:translate-x-0.5 transition-all shrink-0" />
-    </Link>
-  );
-}
-
 function TierHeading({ tier, count }) {
   return (
     <div className="flex items-baseline justify-between gap-4 mb-5 pb-3 border-b border-white/10">
@@ -150,7 +122,10 @@ function TierHeading({ tier, count }) {
 }
 
 export default function CertificationsPage() {
-  const byTier = Object.fromEntries(TIERS.map((t) => [t.id, programsByTier(t.id)]));
+  // Only tiers that still hold something. Foundation, Core and Advanced are
+  // empty under [RULING 12], and a TierHeading over an empty grid reads as a
+  // broken page rather than a deliberate one.
+  const tiers = populatedTiers();
 
   return (
     <div className="min-h-screen text-slate-100">
@@ -185,8 +160,8 @@ export default function CertificationsPage() {
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl text-slate-300/90 max-w-3xl mx-auto leading-relaxed mb-10">
-            Sixteen programmes, four tiers, {formatINR(catalogueStats.priceFloor)} to {formatINR(catalogueStats.priceCeiling)}.
-            Enrol standalone or bundled with the ZTF Charter.
+            End-to-end concierge programmes, {formatINR(catalogueStats.priceFloor)} to {formatINR(catalogueStats.priceCeiling)},
+            each carrying a written outcome guarantee. One counsellor, start to finish.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -194,7 +169,7 @@ export default function CertificationsPage() {
               href="#programmes"
               className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
-              Browse all 16 programmes
+              Browse the programmes
               <ArrowRight className="ml-2" size={20} />
             </a>
             <Link
@@ -211,33 +186,25 @@ export default function CertificationsPage() {
       <section id="programmes" className="relative py-20 scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          {/* Concierge — the largest commitment gets the most room */}
-          <div className="mb-16">
-            <TierHeading tier={TIERS.find((t) => t.id === 'concierge')} count={byTier.concierge.length} />
-            <div className="space-y-5">
-              {byTier.concierge.map((p) => <ConciergeRow key={p.slug} program={p} />)}
-            </div>
-          </div>
+          {/* One block per populated tier. Concierge runs full-width rows;
+              anything relisted later falls back to the half-width card. */}
+          {tiers.map((tier) => {
+            const inTier = programsByTier(tier.id);
+            const isConcierge = tier.id === 'concierge';
 
-          {/* Advanced — half-width */}
-          <div className="mb-16">
-            <TierHeading tier={TIERS.find((t) => t.id === 'advanced')} count={byTier.advanced.length} />
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {byTier.advanced.map((p) => <AdvancedCard key={p.slug} program={p} />)}
-            </div>
-          </div>
-
-          {/* Core and Foundation — a scannable index, two columns of rows */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-16">
-            <div>
-              <TierHeading tier={TIERS.find((t) => t.id === 'core')} count={byTier.core.length} />
-              <div>{byTier.core.map((p) => <IndexRow key={p.slug} program={p} />)}</div>
-            </div>
-            <div>
-              <TierHeading tier={TIERS.find((t) => t.id === 'foundation')} count={byTier.foundation.length} />
-              <div>{byTier.foundation.map((p) => <IndexRow key={p.slug} program={p} />)}</div>
-            </div>
-          </div>
+            return (
+              <div key={tier.id} className="mb-16 last:mb-0">
+                <TierHeading tier={tier} count={inTier.length} />
+                <div className={isConcierge ? 'space-y-5' : 'grid grid-cols-1 sm:grid-cols-2 gap-5'}>
+                  {inTier.map((p) =>
+                    isConcierge
+                      ? <ConciergeRow key={p.slug} program={p} />
+                      : <AdvancedCard key={p.slug} program={p} />,
+                  )}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </section>
 

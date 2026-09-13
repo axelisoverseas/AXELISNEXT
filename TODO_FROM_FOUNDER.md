@@ -29,9 +29,9 @@ Bundles: none exist as products yet — mint later (ruling 5). Hand the 16 codes
 
 ## 2. Policy — items that need your eyes (ruling 4)
 
-- **Global Scholar Concierge — NOT published.** Policy §1 and §7 name it with a 40% / "3 admits" guarantee, but no such programme exists in the catalogue. Its guarantee has been left out of the published Section 7. Add the programme, or confirm it's dropped.
-- **ZTF Charter (₹19,999 on /products) — scoped out.** The policy draft listed "the ZTF Charter service fee" under Section 1. The Student Plans page promises that fee as *fully refundable on visa refusal or zero offers*. Putting it under this policy's tiered table would contradict that promise. The published policy covers the 16 certification programmes only. Tell me if the Charter should move under it.
-- **₹1,000 enrolment kit fee (§9)** — kept verbatim as non-refundable, but nothing on the site charges it. Confirm it's real or strike it.
+- ~~**Global Scholar Concierge — NOT published.**~~ **RESOLVED 13 Sep (ruling 9): dropped.** It existed only in the source policy, never in the catalogue. Its 40% / "3 admits" guarantee is not published and every residual mention is now cleared.
+- **ZTF Charter (₹19,999 on /products) — scoped out.** The policy draft listed "the ZTF Charter service fee" under Section 1. The Student Plans page promises that fee as *fully refundable on visa refusal or zero offers*. Putting it under this policy's tiered table would contradict that promise. The published policy covers the 16 certification programmes only. **Confirmed 13 Sep (ruling 10): the Charter stays scoped out.**
+- ~~**₹1,000 enrolment kit fee (§9)**~~ **RESOLVED 13 Sep (ruling 11): struck.** Nothing on the site charged it. Removing it also cleared the policy's last ZTF Charter reference, which suits ruling 10.
 - **Section 8 worked example** — the numbers are untouched, but "Bajaj Finserv" became "the financing partner" and "6-month Bajaj tenure" became "6-month tenure" (ruling 1). Flagging because the file was marked verbatim.
 - **Sections 1 and 3** — realigned to the 16 programmes; ₹4,75,000 became ₹3,00,000; bundle lines dropped (no bundles exist).
 

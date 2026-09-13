@@ -2,18 +2,16 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import {
-  TIERS, programs, programsByTier, catalogueStats,
+  programs, catalogueStats,
   monthlyEmi, formatINR,
 } from '../data/certificationPrograms';
 
-// The homepage hero promises sixteen programmes, so the page has to show them.
-// One flagship, one per remaining tier, then through to the full catalogue.
+// The catalogue is small enough to show whole: the flagship takes the wide
+// slot and every other listed programme sits beside it. This used to name
+// three supporting slugs by hand, all of which [RULING 12] withdrew — so it
+// derives from the catalogue now and cannot go stale the same way again.
 const flagship = programs.find((p) => p.flagship);
-const supporting = [
-  programsByTier('advanced').find((p) => p.slug === 'german-b1-intensive'),
-  programsByTier('core').find((p) => p.slug === 'application-coaching-postgraduate'),
-  programsByTier('foundation').find((p) => p.slug === 'sop-and-personal-statement'),
-].filter(Boolean);
+const supporting = programs.filter((p) => p !== flagship);
 
 export default function HomeCertificationsPreview() {
   return (
@@ -26,38 +24,15 @@ export default function HomeCertificationsPreview() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3">
-            Sixteen programmes.{' '}
+            End to end.{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
-              Four tiers.
+              Outcome guaranteed.
             </span>
           </h2>
           <p className="text-slate-300/85 text-base md:text-lg">
-            {formatINR(catalogueStats.priceFloor)} to {formatINR(catalogueStats.priceCeiling)}. Enrol standalone,
-            or bundled with the ZTF Charter.
+            {formatINR(catalogueStats.priceFloor)} to {formatINR(catalogueStats.priceCeiling)}, one counsellor from
+            application to arrival, and a written guarantee on the result.
           </p>
-        </div>
-
-        {/* Tier ladder */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-10 max-w-4xl mx-auto">
-          {TIERS.map((tier) => {
-            const inTier = programsByTier(tier.id);
-            const from = Math.min(...inTier.map((p) => p.price));
-            return (
-              <Link
-                key={tier.id}
-                href="/certifications#programmes"
-                className="group bg-[#141210] border border-white/10 hover:border-[var(--storm-electric)]/45 rounded-xl p-4 text-center transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
-              >
-                <div className="text-sm font-semibold text-white mb-1.5">
-                  {tier.name}
-                </div>
-                <div className="text-white font-extrabold text-lg leading-none mb-1">
-                  {inTier.length}
-                </div>
-                <div className="text-[11px] text-slate-400">from {formatINR(from)}</div>
-              </Link>
-            );
-          })}
         </div>
 
         {/* Flagship gets the wide slot; the rest read as a supporting list */}
@@ -111,7 +86,7 @@ export default function HomeCertificationsPreview() {
                   />
                   <div className="min-w-0 flex-1">
                     <div className="text-sm font-semibold text-slate-400 mb-0.5">
-                      {TIERS.find((t) => t.id === program.tier)?.name}
+                      {program.duration}
                     </div>
                     <h3 className="text-white font-semibold leading-snug truncate">{program.title}</h3>
                     <div className="text-sm text-slate-400">
@@ -130,7 +105,7 @@ export default function HomeCertificationsPreview() {
             href="/certifications"
             className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
           >
-            See all 16 programmes
+            See the programmes
             <ArrowRight size={18} />
           </Link>
         </div>

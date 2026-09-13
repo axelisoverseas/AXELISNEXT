@@ -11,10 +11,16 @@
 //              Section 6 and the Section 8 worked example. The example's
 //              arithmetic is unchanged; only the partner name is generalised.
 //   [RULING 4] src/data/certificationPrograms.js is the canonical catalogue.
-//              Section 1 lists those 16 programmes. Section 3's amounts follow.
+//              Section 1 lists the programmes it publishes. Section 3's amounts
+//              follow. Per [RULING 12] that is the three Concierge programmes;
+//              the list auto-derives, so it tracks the catalogue by itself.
 //              No bundles exist yet, so bundle language is dropped from 1 and 3.
-//              "Global Scholar Concierge" exists only in the policy, so its
-//              Section 7 guarantee is NOT published — see TODO_FROM_FOUNDER.md.
+//   [RULING 9] "Global Scholar Concierge" existed only in the source policy,
+//              never in the catalogue. It is dropped, not pending: its
+//              Section 7 guarantee is not published and no mention remains.
+//   [RULING 11] The ₹1,000 application / enrolment kit fee is struck from
+//              Section 9. Nothing on the site charges it. This also clears
+//              the policy's last ZTF Charter reference, per [RULING 10].
 //   [RULING 6] support@overseeducation.com does not exist yet. Sections 6 and
 //              12 use axelisoverseas@overseeducation.com until it does.
 //
@@ -24,7 +30,7 @@
 // agrees. Change them in one place, with sign-off.
 // ============================================================================
 
-import { programs, TIERS, refundPolicy } from './certificationPrograms';
+import { programs, populatedTiers, refundPolicy } from './certificationPrograms';
 
 const titlesFor = (tierId) => programs.filter((p) => p.tier === tierId).map((p) => p.title);
 
@@ -44,9 +50,11 @@ export const policySections = [
     blocks: [
       { p: 'This policy applies to every certification programme offered by Axelis Overseas Education Pvt Ltd on overseeducation.com:' },
       {
-        list: TIERS.map((t) => `${t.name}-tier programmes (${titlesFor(t.id).join(', ')})`),
+        // Populated tiers only. Mapping all of TIERS emitted three empty
+        // entries — "Foundation-tier programmes ()" — once [RULING 12] landed.
+        list: populatedTiers().map((t) => `${t.name}-tier programmes (${titlesFor(t.id).join(', ')})`),
       },
-      { p: 'Programme fees range from ₹4,000 to ₹3,00,000. Each programme carries a dedicated page on overseeducation.com/certifications with its own fee, duration, syllabus, and outcome deliverables.' },
+      { p: 'Programme fees range from ₹2,00,000 to ₹3,00,000. Each programme carries a dedicated page on overseeducation.com/certifications with its own fee, duration, syllabus, and outcome deliverables.' },
     ],
   },
   {
@@ -176,7 +184,6 @@ export const policySections = [
       {
         list: [
           'The ₹2,500 administrative fee',
-          'Application / enrolment kit fee (₹1,000; waived for ZTF Charter students)',
           'Third-party exam registration fees paid by Axelis on the student’s behalf (IELTS, PTE, Goethe, DELF, embassy fees)',
           'Physical books or hardware shipped to the student',
           'Certificates already issued to the student',

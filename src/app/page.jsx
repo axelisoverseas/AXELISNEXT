@@ -129,8 +129,9 @@ export default function Home() {
             variants={fadeInUp}
             className="text-lg md:text-xl text-slate-300/90 max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            Sixteen certification programmes. Application coaching, languages, executive MBA prep, PhD and fellowship
-            applications, career launch. Every student earns a verifiable credential on the way to their offer letter.
+            End-to-end concierge programmes. Application coaching, languages, executive MBA prep, PhD and fellowship
+            applications, career launch — one counsellor throughout, with a written outcome guarantee. Every student
+            earns a verifiable credential on the way to their offer letter.
           </motion.p>
 
           <motion.div

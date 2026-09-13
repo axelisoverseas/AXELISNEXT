@@ -114,8 +114,8 @@ export default function AboutPage() {
                     </h2>
                     <p className="text-lg text-slate-600 leading-relaxed">
                         Axelis operates from a Bengaluru corporate office (WorkFlo, KR Puram Hobli) with a registered
-                        office in Bilaspur, and runs 16 certification programmes, 29 study-abroad destination
-                        markets, and an in-house language and application coaching faculty.
+                        office in Bilaspur, and runs its certification programmes across 29 study-abroad destination
+                        markets, with an in-house language and application coaching faculty.
                     </p>
                 </div>
             </section>
