@@ -112,7 +112,7 @@ export default function FinancingBlock({ program }) {
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="#enquire"
-                className="inline-flex justify-center items-center px-6 py-3 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold text-sm transition-all"
+                className="inline-flex justify-center items-center px-6 py-3 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold text-sm transition-[filter]"
               >
                 Apply now
               </a>

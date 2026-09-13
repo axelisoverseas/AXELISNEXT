@@ -1,0 +1,192 @@
+<meta charset="utf-8">
+<title>Three Colourways to Choose From</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0; background:#F1F3EE; color:#101A16; font-family:'IBM Plex Sans',-apple-system,sans-serif; line-height:1.6}
+  .page{max-width:1080px; margin:0 auto; padding-inline:24px; padding-block:48px 72px}
+  h1,h2,h3{font-family:'Source Serif 4',Georgia,serif; font-weight:600; line-height:1.12; letter-spacing:-.015em; margin:0; text-wrap:balance}
+  p{margin:0}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace; font-variant-numeric:tabular-nums}
+  .intro{display:flex; flex-direction:column; gap:14px; max-width:64ch; margin-bottom:44px}
+  .intro h1{font-size:clamp(1.9rem,1.4rem+2.2vw,2.8rem)}
+  .intro p{color:#5F6660}
+  .eyebrow{font-family:'IBM Plex Mono',monospace; font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:#7E5C1C}
+
+  /* Each direction is a self-contained specimen with its own tokens */
+  .dir{margin-bottom:56px; border:1px solid #C8D1C6}
+  .dirhead{display:flex; flex-wrap:wrap; gap:10px 20px; align-items:baseline; justify-content:space-between; padding:16px 20px; border-bottom:1px solid #C8D1C6; background:#F1F3EE}
+  .dirhead h2{font-size:1.3rem}
+  .dirhead .verdict{font-family:'IBM Plex Mono',monospace; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase}
+  .rec{color:#12463A} .alt{color:#5F6660}
+  .dirnote{padding:14px 20px; border-bottom:1px solid #C8D1C6; font-size:.94rem; color:#5F6660; background:#E2E8DE}
+  .dirnote b{color:#101A16}
+
+  /* the specimen canvas — tokens set per direction */
+  .demo{--paper:#F1F3EE; --ledger:#E2E8DE; --rule:#C8D1C6; --ink:#101A16; --brand:#12463A; --deep:#0B2B23; --accent:#B0862F; --accent-text:#7E5C1C; --accent-lt:#D9B166; --muted:#5F6660}
+  .demo.b{--paper:#F6F2EF; --ledger:#EBE2DC; --rule:#D8C9C1; --ink:#1A1110; --brand:#6E241C; --deep:#2A0F0C; --accent:#9A7B3C; --accent-text:#6E5526; --accent-lt:#D3B173; --muted:#6B5C58}
+  .demo.c{--paper:#EFEFED; --ledger:#E2E2DF; --rule:#CBCBC6; --ink:#0F0F0E; --brand:#1C1C1A; --deep:#111110; --accent:#A8833A; --accent-text:#75581F; --accent-lt:#C9A662; --muted:#63635E}
+
+  .hero{background:var(--deep); color:var(--paper); padding:38px 30px 34px; display:flex; flex-direction:column; gap:20px}
+  .lock{display:flex; align-items:center; gap:12px}
+  .lock .wm{font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:19px; letter-spacing:.08em}
+  .hero h3{font-size:clamp(1.6rem,1.2rem+1.8vw,2.4rem); max-width:19ch; color:var(--paper)}
+  .hero .sub{max-width:54ch; color:color-mix(in srgb, var(--paper) 72%, var(--deep)); font-size:1rem}
+  .herofoot{display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:4px}
+  .btn{display:inline-block; background:var(--accent); color:var(--deep); font-weight:600; font-size:.95rem; padding:11px 20px; border-radius:3px; text-decoration:none}
+  .btn.ghost{background:transparent; color:var(--paper); border:1px solid color-mix(in srgb, var(--paper) 38%, var(--deep))}
+  .seal-line{font-family:'IBM Plex Mono',monospace; font-size:.74rem; letter-spacing:.1em; text-transform:uppercase; color:var(--accent-lt)}
+
+  .body{background:var(--paper); padding:30px; display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:20px}
+  .card{border:1px solid var(--rule); background:var(--paper); padding:20px; display:flex; flex-direction:column; gap:10px}
+  .card .tag{font-family:'IBM Plex Mono',monospace; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--accent-text)}
+  .card h4{font-family:'Source Serif 4',Georgia,serif; font-weight:600; font-size:1.12rem; margin:0; color:var(--brand); line-height:1.2}
+  .card p{font-size:.9rem; color:var(--muted)}
+  .card .fee{font-family:'IBM Plex Mono',monospace; font-variant-numeric:tabular-nums; font-size:1.12rem; color:var(--ink); margin-top:auto; padding-top:10px; border-top:1px solid var(--rule)}
+  .card .emi{font-family:'IBM Plex Mono',monospace; font-size:.76rem; color:var(--muted)}
+
+  .strip{background:var(--ledger); border-top:1px solid var(--rule); padding:18px 30px; display:flex; flex-wrap:wrap; gap:10px 26px; align-items:center}
+  .strip .cl{font-family:'Source Serif 4',Georgia,serif; font-style:italic; font-size:1.02rem; color:var(--brand)}
+  .strip .ref{font-family:'IBM Plex Mono',monospace; font-size:.74rem; color:var(--accent-text)}
+
+  .swatchrow{display:flex; flex-wrap:wrap; gap:0; border-top:1px solid var(--rule)}
+  .swatchrow span{flex:1 1 90px; height:46px; position:relative}
+  .swatchrow span::after{content:attr(data-hex); position:absolute; bottom:4px; left:6px; font-family:'IBM Plex Mono',monospace; font-size:.62rem; letter-spacing:.02em}
+
+  .decide{border:1px solid #C8D1C6; background:#E2E8DE; padding:24px; display:flex; flex-direction:column; gap:12px}
+  .decide h2{font-size:1.25rem}
+  .decide ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:8px; font-size:.96rem}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<div class="page">
+  <div class="intro">
+    <span class="eyebrow">Axelis Overseas · pick one</span>
+    <h1>The same page, three ways</h1>
+    <p>Identical copy, layout, type and mark in all three — only the colour changes, so what you are judging is the colour and nothing else. Every palette below clears WCAG AA on its own ground. Direction A is the recommendation; B and C are real alternatives, not straw men.</p>
+  </div>
+
+  <!-- ============ A ============ -->
+  <div class="dir">
+    <div class="dirhead">
+      <h2>A · Axis Green on greenbar ledger</h2>
+      <span class="verdict rec">Recommended</span>
+    </div>
+    <div class="dirnote"><b>Why.</b> No competitor in the audit uses green as a primary — it is the one open lane. Green reads institutional and money-adjacent without reading corporate-blue. The ledger ground is the accounting stock figures have been ruled onto for a century, which is exactly the claim Axelis is making. <b>Risk:</b> green can drift agricultural or eco if the value ever lightens; hold it dark.</div>
+    <div class="demo">
+      <div class="hero">
+        <div class="lock">
+          <svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#D9B166" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#D9B166" stroke-width="6"/></svg>
+          <span class="wm">AXELIS OVERSEAS</span>
+        </div>
+        <h3>Three programmes. One guarantee, in writing.</h3>
+        <p class="sub">We take a small number of students end to end — application to admission — under terms that are written down, including what happens if we fail.</p>
+        <div class="herofoot">
+          <a class="btn" href="#a">Read the guarantee</a>
+          <a class="btn ghost" href="#a">Book a discovery call</a>
+        </div>
+        <span class="seal-line">Clause 4 · remedy on failure · 30 days</span>
+      </div>
+      <div class="body">
+        <div class="card"><span class="tag">Concierge</span><h4>Global Career Launch</h4><p>Shortlist to offer, handled end to end.</p><span class="fee">₹2,00,000</span><span class="emi">EMI from ₹8,334 / 24 mo</span></div>
+        <div class="card"><span class="tag">Concierge</span><h4>PhD &amp; Fellowship Concierge</h4><p>Proposal, supervisor match, funding.</p><span class="fee">₹2,50,000</span><span class="emi">EMI from ₹10,417 / 24 mo</span></div>
+        <div class="card"><span class="tag">Concierge</span><h4>Executive MBA Concierge</h4><p>For candidates with a career behind them.</p><span class="fee">₹3,00,000</span><span class="emi">EMI from ₹12,500 / 24 mo</span></div>
+      </div>
+      <div class="strip"><span class="cl">“If you receive no offer, 60% of the fee is returned within 30 days.”</span><span class="ref">Cancellation &amp; Refund Policy · §4.2</span></div>
+      <div class="swatchrow">
+        <span style="background:#12463A; color:#F1F3EE" data-hex="#12463A"></span>
+        <span style="background:#0B2B23; color:#F1F3EE" data-hex="#0B2B23"></span>
+        <span style="background:#F1F3EE; color:#101A16" data-hex="#F1F3EE"></span>
+        <span style="background:#E2E8DE; color:#101A16" data-hex="#E2E8DE"></span>
+        <span style="background:#B0862F; color:#101A16" data-hex="#B0862F"></span>
+        <span style="background:#8A2B22; color:#F1F3EE" data-hex="#8A2B22"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ B ============ -->
+  <div class="dir">
+    <div class="dirhead">
+      <h2>B · Oxblood on warm bone</h2>
+      <span class="verdict alt">Alternative</span>
+    </div>
+    <div class="dirnote"><b>Why.</b> Oxblood is the colour of law reports, university crests and bound volumes — the most academically credentialled palette of the three, and equally unoccupied in the category. <b>Risk:</b> it runs close to the crimson of several university brands, so lockups sitting beside a partner university logo can read as borrowed authority. It is also warmer and more traditional, which suits PhD and Executive MBA buyers more than undergraduates.</div>
+    <div class="demo b">
+      <div class="hero">
+        <div class="lock">
+          <svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#D3B173" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#D3B173" stroke-width="6"/></svg>
+          <span class="wm">AXELIS OVERSEAS</span>
+        </div>
+        <h3>Three programmes. One guarantee, in writing.</h3>
+        <p class="sub">We take a small number of students end to end — application to admission — under terms that are written down, including what happens if we fail.</p>
+        <div class="herofoot">
+          <a class="btn" href="#b">Read the guarantee</a>
+          <a class="btn ghost" href="#b">Book a discovery call</a>
+        </div>
+        <span class="seal-line">Clause 4 · remedy on failure · 30 days</span>
+      </div>
+      <div class="body">
+        <div class="card"><span class="tag">Concierge</span><h4>Global Career Launch</h4><p>Shortlist to offer, handled end to end.</p><span class="fee">₹2,00,000</span><span class="emi">EMI from ₹8,334 / 24 mo</span></div>
+        <div class="card"><span class="tag">Concierge</span><h4>PhD &amp; Fellowship Concierge</h4><p>Proposal, supervisor match, funding.</p><span class="fee">₹2,50,000</span><span class="emi">EMI from ₹10,417 / 24 mo</span></div>
+        <div class="card"><span class="tag">Concierge</span><h4>Executive MBA Concierge</h4><p>For candidates with a career behind them.</p><span class="fee">₹3,00,000</span><span class="emi">EMI from ₹12,500 / 24 mo</span></div>
+      </div>
+      <div class="strip"><span class="cl">“If you receive no offer, 60% of the fee is returned within 30 days.”</span><span class="ref">Cancellation &amp; Refund Policy · §4.2</span></div>
+      <div class="swatchrow">
+        <span style="background:#6E241C; color:#F6F2EF" data-hex="#6E241C"></span>
+        <span style="background:#2A0F0C; color:#F6F2EF" data-hex="#2A0F0C"></span>
+        <span style="background:#F6F2EF; color:#1A1110" data-hex="#F6F2EF"></span>
+        <span style="background:#EBE2DC; color:#1A1110" data-hex="#EBE2DC"></span>
+        <span style="background:#9A7B3C; color:#1A1110" data-hex="#9A7B3C"></span>
+        <span style="background:#6E5526; color:#F6F2EF" data-hex="#6E5526"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ C ============ -->
+  <div class="dir">
+    <div class="dirhead">
+      <h2>C · Ink and brass, no hue at all</h2>
+      <span class="verdict alt">Alternative</span>
+    </div>
+    <div class="dirnote"><b>Why.</b> The most severe option: a near-black and a paper grey, with brass as the only colour on the page. Nothing in the category is achromatic, and it puts every bit of emphasis on typography and figures. <b>Risk:</b> it is unforgiving — with no brand hue, a single badly-set page has nothing to fall back on, and partner logos, university crests and payment marks all fight it. It also gives Instagram nothing to work with.</div>
+    <div class="demo c">
+      <div class="hero">
+        <div class="lock">
+          <svg width="34" height="34" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#C9A662" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#C9A662" stroke-width="6"/></svg>
+          <span class="wm">AXELIS OVERSEAS</span>
+        </div>
+        <h3>Three programmes. One guarantee, in writing.</h3>
+        <p class="sub">We take a small number of students end to end — application to admission — under terms that are written down, including what happens if we fail.</p>
+        <div class="herofoot">
+          <a class="btn" href="#c">Read the guarantee</a>
+          <a class="btn ghost" href="#c">Book a discovery call</a>
+        </div>
+        <span class="seal-line">Clause 4 · remedy on failure · 30 days</span>
+      </div>
+      <div class="body">
+        <div class="card"><span class="tag">Concierge</span><h4>Global Career Launch</h4><p>Shortlist to offer, handled end to end.</p><span class="fee">₹2,00,000</span><span class="emi">EMI from ₹8,334 / 24 mo</span></div>
+        <div class="card"><span class="tag">Concierge</span><h4>PhD &amp; Fellowship Concierge</h4><p>Proposal, supervisor match, funding.</p><span class="fee">₹2,50,000</span><span class="emi">EMI from ₹10,417 / 24 mo</span></div>
+        <div class="card"><span class="tag">Concierge</span><h4>Executive MBA Concierge</h4><p>For candidates with a career behind them.</p><span class="fee">₹3,00,000</span><span class="emi">EMI from ₹12,500 / 24 mo</span></div>
+      </div>
+      <div class="strip"><span class="cl">“If you receive no offer, 60% of the fee is returned within 30 days.”</span><span class="ref">Cancellation &amp; Refund Policy · §4.2</span></div>
+      <div class="swatchrow">
+        <span style="background:#1C1C1A; color:#EFEFED" data-hex="#1C1C1A"></span>
+        <span style="background:#111110; color:#EFEFED" data-hex="#111110"></span>
+        <span style="background:#EFEFED; color:#0F0F0E" data-hex="#EFEFED"></span>
+        <span style="background:#E2E2DF; color:#0F0F0E" data-hex="#E2E2DF"></span>
+        <span style="background:#A8833A; color:#0F0F0E" data-hex="#A8833A"></span>
+        <span style="background:#75581F; color:#EFEFED" data-hex="#75581F"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="decide">
+    <h2>What I need from you to lock this</h2>
+    <ul>
+      <li><b>A, B or C</b> — or A with B's warmth in the paper, which is a real hybrid and takes ten minutes.</li>
+      <li><b>The mark:</b> keep the Axial A as drawn, or adjust the tilt, weight or rule length.</li>
+      <li><b>The certificate:</b> confirm it may move off the old navy <span class="mono">#1F4E79</span> and cream <span class="mono">#FFF4E0</span>, which belong to no system.</li>
+      <li><b>The wordmark:</b> “AXELIS OVERSEAS” in full, or “AXELIS” alone with “Overseas Education” as a descriptor beneath.</li>
+    </ul>
+  </div>
+</div>

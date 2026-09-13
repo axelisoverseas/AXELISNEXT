@@ -18,6 +18,10 @@
 //   [RULING 9] "Global Scholar Concierge" existed only in the source policy,
 //              never in the catalogue. It is dropped, not pending: its
 //              Section 7 guarantee is not published and no mention remains.
+//   [RULING 12] Nothing in the catalogue ships. The Section 9 line covering
+//              "physical books or hardware shipped to the student" was
+//              vestigial from the 16-programme catalogue and is struck, so
+//              this policy and the Delivery Policy now agree.
 //   [RULING 11] The ₹1,000 application / enrolment kit fee is struck from
 //              Section 9. Nothing on the site charges it. This also clears
 //              the policy's last ZTF Charter reference, per [RULING 10].
@@ -185,7 +189,6 @@ export const policySections = [
         list: [
           'The ₹2,500 administrative fee',
           'Third-party exam registration fees paid by Axelis on the student’s behalf (IELTS, PTE, Goethe, DELF, embassy fees)',
-          'Physical books or hardware shipped to the student',
           'Certificates already issued to the student',
           'Written deliverables already handed over (SOP drafts, mock interview recordings, Concierge visa file, submitted university applications)',
           'Recorded live sessions already streamed by the student',

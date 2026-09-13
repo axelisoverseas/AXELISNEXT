@@ -167,14 +167,14 @@ export default function CertificationsPage() {
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#programmes"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
               Browse the programmes
               <ArrowRight aria-hidden="true" className="ml-2" size={20} />
             </a>
             <Link
               href="/bookings"
-              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--storm-electric)]"
+              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-colors hover:text-[var(--storm-electric)]"
             >
               Book a discovery call
             </Link>
@@ -244,7 +244,7 @@ export default function CertificationsPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4 text-balance">
                 Not sure which one fits?
               </h2>
               <p className="text-slate-300/85 leading-relaxed mb-6">

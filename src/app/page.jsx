@@ -89,14 +89,14 @@ export default function Home() {
           >
             <Link
               href="/certifications"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
               Explore Certifications
               <ArrowRight aria-hidden="true" className="ml-2" size={20} />
             </Link>
             <Link
               href="/bookings"
-              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--storm-electric)]"
+              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-colors hover:text-[var(--storm-electric)]"
             >
               Book a Discovery Call
             </Link>
@@ -165,7 +165,7 @@ export default function Home() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         >
           <motion.div variants={fadeInUp} className="text-center mb-16 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white text-balance">
               Real <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] via-white to-[var(--dawn-glow)]">impact</span>
             </h2>
             <p className="text-slate-300 mt-4">
@@ -189,7 +189,7 @@ export default function Home() {
                 <motion.div
                   key={i}
                   variants={fadeInUp}
-                  className="group relative glass-storm rounded-2xl p-8 flex flex-col items-center text-center hover:-translate-y-2 transition-all duration-500"
+                  className="group relative glass-storm rounded-2xl p-8 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-500"
                 >
                   {/* Unified icon: halo → ring → disc → bolt accent */}
                   <div className="relative w-20 h-20 mb-6">
@@ -240,7 +240,7 @@ export default function Home() {
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3">
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-balance">
               Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">Pick your path.</span>
             </h2>
             <p className="text-slate-300/85 text-base md:text-lg">
@@ -251,7 +251,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <Link
               href="/products#plans"
-              className="group bg-[#141210] border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+              className="group bg-[#141210] border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
               aria-label="Global Admissions Charter (GAC), nine thousand nine hundred ninety nine rupees — view details"
             >
               <div className="flex items-baseline justify-between">
@@ -279,7 +279,7 @@ export default function Home() {
 
             <Link
               href="/products#plans"
-              className="group bg-[#141210] border-2 border-[var(--dawn-glow)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--dawn-glow)]/60 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+              className="group bg-[#141210] border-2 border-[var(--dawn-glow)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--dawn-glow)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
               aria-label="Europe Public Charter (EPC), nineteen thousand nine hundred ninety nine rupees — view details"
             >
               <div className="flex items-baseline justify-between">
@@ -322,7 +322,7 @@ export default function Home() {
       <section className="relative py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3">
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-balance">
               Twenty-nine countries. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">Twenty-nine photos.</span>
             </h2>
             <p className="text-slate-300/85 text-base md:text-lg">
@@ -522,7 +522,7 @@ export default function Home() {
               <p className="text-xl text-slate-300 mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Tell us where you want to study. We&apos;ll tell you what it actually takes &mdash; honest, transparent, no upsell.</p>
               <Link
                 href="/bookings"
-                className="relative overflow-hidden inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-[var(--storm-accent)] via-[#FFB347] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_40px_-10px_var(--storm-accent-glow)] hover:shadow-[0_0_60px_-15px_var(--storm-accent-glow)] text-lg hover:-translate-y-1 z-10 group"
+                className="relative overflow-hidden inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-[var(--storm-accent)] via-[#FFB347] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[transform,filter,box-shadow] shadow-[0_0_40px_-10px_var(--storm-accent-glow)] hover:shadow-[0_0_60px_-15px_var(--storm-accent-glow)] text-lg hover:-translate-y-1 z-10 group"
               >
                 <span className="relative z-10 inline-flex items-center">
                   Apply Now - Start Journey

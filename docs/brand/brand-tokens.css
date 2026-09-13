@@ -11,18 +11,18 @@
   /* — Ink & field: the dark end — */
   --color-ink:        #101A16; /* primary text on light; deepest surface   */
   --color-field:      #0B2B23; /* large dark surfaces, footer, hero        */
-  --color-axis:       #12463A; /* PRIMARY BRAND GREEN — 9.48:1 on bone AAA */
+  --color-axis:       #12463A; /* PRIMARY BRAND GREEN — 9.58:1 on bone AAA */
   --color-axis-lift:  #1A5C4B; /* hover / raised state of axis             */
 
   /* — Paper: the light end — */
-  --color-bone:       #F4F1EA; /* primary page ground (never pure white)   */
-  --color-bone-deep:  #E8E3D8; /* cards, table stripes, quiet panels       */
-  --color-rule:       #CFC8B8; /* hairlines, dividers, table borders       */
+  --color-bone:       #F1F3EE; /* primary page ground (never pure white)   */
+  --color-bone-deep:  #E2E8DE; /* cards, table stripes, quiet panels       */
+  --color-rule:       #C8D1C6; /* hairlines, dividers, table borders       */
   --color-paper:      #FFFFFF; /* print only + certificate stock           */
 
   /* — Brass: the accent. Scarce by rule (see §4.3) — */
   --color-brass:      #B0862F; /* accent on DARK only  — 5.33:1 on ink AA  */
-  --color-brass-deep: #7E5C1C; /* accent TEXT on light — 5.42:1 on bone AA */
+  --color-brass-deep: #7E5C1C; /* accent TEXT on light — 5.47:1 on bone AA */
   --color-gold:       #D9B166; /* accent text on dark  — 8.83:1 on ink AAA */
 
   /* — Signal — */
@@ -104,8 +104,8 @@ h1, h2, h3, .display {
    --storm-abyss     #141210  → --color-ink       #101A16
    --storm-mid       #1C1917  → --color-field     #0B2B23
    --storm-cloud     #292524  → --color-axis      #12463A  (raised)
-   --storm-electric  #FFFFFF  → --color-bone      #F4F1EA
-   --storm-bolt      #FAFAF9  → --color-bone      #F4F1EA
+   --storm-electric  #FFFFFF  → --color-bone      #F1F3EE
+   --storm-bolt      #FAFAF9  → --color-bone      #F1F3EE
    --storm-accent    #F59E0B  → --color-brass     #B0862F
    --dawn-glow       #FBBF24  → --color-gold      #D9B166
    --dawn-glow-soft  #FDE68A  → --color-gold      #D9B166

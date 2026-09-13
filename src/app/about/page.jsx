@@ -35,7 +35,7 @@ export default function AboutPage() {
                             className="brightness-0 invert opacity-90"
                         />
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight text-balance">
                         <TextEffect as="span" per="word" preset="blur">About</TextEffect>{' '}
                         <span className="text-white">
                             <TextEffect as="span" per="char" preset="blur" delay={0.25}>Axelis Overseas</TextEffect>
@@ -109,7 +109,7 @@ export default function AboutPage() {
             {/* Scale & Scope */}
             <section className="py-20 bg-white border-t border-slate-200">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-5">
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-5 text-balance">
                         Scale and scope
                     </h2>
                     <p className="text-lg text-slate-600 leading-relaxed">

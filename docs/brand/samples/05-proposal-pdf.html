@@ -1,0 +1,179 @@
+<meta charset="utf-8">
+<title>Axelis Proposal Document</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#F1F3EE; --white:#FFFFFF; --ledger:#E2E8DE; --rule:#C8D1C6;
+    --ink:#101A16; --axis:#12463A; --field:#0B2B23;
+    --brass:#B0862F; --brass-deep:#7E5C1C; --gold:#D9B166; --oxblood:#8A2B22; --muted:#5F6660;
+    --display:'Source Serif 4',Georgia,serif;
+    --sans:'IBM Plex Sans',-apple-system,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ledger); color:var(--ink); font-family:var(--sans); line-height:1.55; padding-block:28px; padding-inline:16px}
+  .note{max-width:210mm; margin:0 auto 20px; font-size:.86rem; color:#42504A}
+  .note b{color:#101A16}
+
+  .page{
+    width:210mm; max-width:100%; min-height:297mm;
+    background:var(--white); margin:0 auto 22px; position:relative;
+    padding:25mm; display:flex; flex-direction:column;
+    box-shadow:0 1px 3px rgba(16,26,22,.16);
+  }
+  .page.cover{background:var(--field); color:var(--paper); justify-content:space-between; padding:25mm}
+
+  h1,h2,h3{font-family:var(--display); font-weight:600; line-height:1.15; letter-spacing:-.012em; margin:0; text-wrap:balance}
+  p{margin:0}
+  .mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+  /* ---------- cover ---------- */
+  .lock{display:flex; align-items:center; gap:4mm}
+  .lock .wm{font-family:var(--display); font-weight:600; font-size:17px; letter-spacing:.08em; color:var(--paper)}
+  .cover h1{font-size:34px; color:var(--paper); max-width:16ch}
+  .cover .for{font-family:var(--mono); font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:6mm}
+  .cover .mid{display:flex; flex-direction:column; gap:5mm}
+  .cover .prepared{border-top:1px solid rgba(241,243,238,.22); padding-top:5mm; display:grid; grid-template-columns:repeat(2,1fr); gap:5mm 8mm; font-size:11px; color:#B9C9C1}
+  .cover .prepared b{display:block; font-family:var(--mono); font-size:9px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); font-weight:500; margin-bottom:1.5mm}
+
+  /* ---------- interior ---------- */
+  .head{display:flex; align-items:center; justify-content:space-between; padding-bottom:4mm; border-bottom:1px solid var(--rule); margin-bottom:9mm}
+  .head .lk{display:flex; align-items:center; gap:3mm}
+  .head .lk span{font-family:var(--display); font-weight:600; font-size:12px; letter-spacing:.08em}
+  .head .pg{font-family:var(--mono); font-size:9px; color:var(--muted); letter-spacing:.08em}
+  .sec{margin-bottom:9mm}
+  .sec h2{font-size:19px; color:var(--axis); margin-bottom:4mm}
+  .sec h3{font-size:13px; margin:6mm 0 2.5mm}
+  .sec p{font-size:11.5px; max-width:62ch; margin-bottom:3mm}
+  .clausenum{font-family:var(--mono); font-size:9px; letter-spacing:.1em; color:var(--brass-deep); display:block; margin-bottom:1.5mm}
+
+  table{border-collapse:collapse; width:100%; font-size:11px; margin-block:3mm}
+  th{text-align:left; font-family:var(--mono); font-weight:500; font-size:8.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding:2.5mm 3mm; border-bottom:1px solid var(--rule)}
+  td{padding:2.5mm 3mm; border-bottom:1px solid var(--rule)}
+  tbody tr:nth-child(even){background:var(--paper)}
+  th.num,td.num{text-align:right; font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap}
+  tfoot td{font-weight:600; border-top:1.5px solid var(--ink); border-bottom:0}
+
+  .terms{border:1px solid var(--rule); padding:6mm; margin-top:4mm; background:var(--paper)}
+  .terms h3{margin-top:0; font-size:12px}
+  .terms ol{margin:0; padding-left:5mm; font-size:11px; display:flex; flex-direction:column; gap:2.5mm}
+  .terms .excl{color:var(--oxblood)}
+
+  .signblock{margin-top:auto; padding-top:8mm; display:flex; align-items:flex-end; justify-content:space-between; gap:8mm}
+  .sig{min-width:56mm}
+  .sig .line{height:1px; background:var(--ink); margin-bottom:2mm}
+  .sig .who{font-size:10.5px}
+  .sig .role{font-size:9px; color:var(--muted)}
+
+  .foot{margin-top:8mm; padding-top:3mm; border-top:1px solid var(--rule); display:flex; flex-wrap:wrap; gap:3mm 8mm; justify-content:space-between; font-family:var(--mono); font-size:8.5px; color:var(--muted); letter-spacing:.05em}
+
+  @media print{
+    @page{size:A4 portrait; margin:0}
+    body{background:#fff; padding:0}
+    .note{display:none}
+    .page{box-shadow:none; margin:0; page-break-after:always; min-height:297mm}
+    .page:last-child{page-break-after:auto}
+  }
+</style>
+
+<div class="note"><b>Sample — proposal PDF, two pages.</b> A4 portrait. Cover on Field with the mark in brass and nothing else on it; interior reverts to white stock. The terms are set at body size, never in small print, because the terms are the product.</div>
+
+<!-- ============ COVER ============ -->
+<div class="page cover">
+  <div class="lock">
+    <svg width="34" height="34" viewBox="0 0 120 120" aria-label="Axelis"><g fill="none" stroke="#B0862F" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#B0862F" stroke-width="6"/></svg>
+    <span class="wm">AXELIS OVERSEAS</span>
+  </div>
+
+  <div class="mid">
+    <span class="for">Programme proposal · private &amp; confidential</span>
+    <h1>Executive MBA Concierge</h1>
+    <p style="font-size:12.5px; color:#B9C9C1; max-width:52ch">Prepared for a single candidate. It states the scope, the fee, the schedule, and what is returned if the outcome named in clause 4 is not reached.</p>
+  </div>
+
+  <div class="prepared">
+    <div><b>Prepared for</b>Ananya Krishnamurthy</div>
+    <div><b>Date</b>13 September 2026</div>
+    <div><b>Reference</b>AXP-2026-0147</div>
+    <div><b>Valid until</b>13 October 2026</div>
+  </div>
+</div>
+
+<!-- ============ INTERIOR ============ -->
+<div class="page">
+  <div class="head">
+    <div class="lk">
+      <svg width="22" height="22" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#12463A" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#12463A" stroke-width="6"/></svg>
+      <span>AXELIS OVERSEAS</span>
+    </div>
+    <span class="pg">AXP-2026-0147 · 2/2</span>
+  </div>
+
+  <div class="sec">
+    <h2>Fee and schedule</h2>
+    <p>One programme, one fee. Nothing below is an estimate — these are the amounts that appear on the payment link and the financing agreement.</p>
+    <table>
+      <thead><tr><th>Item</th><th>Basis</th><th class="num">Amount</th></tr></thead>
+      <tbody>
+        <tr><td>Executive MBA Concierge</td><td>Programme fee, inclusive</td><td class="num">₹3,00,000</td></tr>
+        <tr><td>School applications</td><td>Up to 6, included</td><td class="num">₹0</td></tr>
+        <tr><td>Scholarship negotiation</td><td>Included</td><td class="num">₹0</td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="2">Payable</td><td class="num">₹3,00,000</td></tr></tfoot>
+    </table>
+    <h3>If paid monthly</h3>
+    <table>
+      <thead><tr><th>Tenure</th><th class="num">Instalment</th><th class="num">Instalments</th><th class="num">Total</th></tr></thead>
+      <tbody>
+        <tr><td>12 months</td><td class="num">₹25,000</td><td class="num">12</td><td class="num">₹3,00,000</td></tr>
+        <tr><td>18 months</td><td class="num">₹16,667</td><td class="num">18</td><td class="num">₹3,00,006</td></tr>
+        <tr><td>24 months</td><td class="num">₹12,500</td><td class="num">24</td><td class="num">₹3,00,000</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:10px; color:var(--muted)">Instalments are the fee divided by the tenure, rounded up to the rupee, and exclude any charge levied by the financing partner. The binding schedule is the one on the financing agreement.</p>
+  </div>
+
+  <div class="sec">
+    <h2>The written outcome guarantee</h2>
+    <div class="terms">
+      <h3>Clause 4 — in full</h3>
+      <ol>
+        <li><span class="clausenum">§4.1</span>Axelis agrees a shortlist of at least six schools with the candidate in writing before any application is opened.</li>
+        <li><span class="clausenum">§4.2</span>If no offer is received from any shortlisted school, 60% of the programme fee is returned within 30 days of the final decision.</li>
+        <li><span class="clausenum">§4.3</span><span class="excl">Not covered: visa refusal on grounds of document fraud or misrepresentation; withdrawal by the candidate; failure to sit a required test on the agreed date.</span></li>
+        <li><span class="clausenum">§4.4</span>Axelis does not guarantee admission. It guarantees the remedy stated in §4.2 on the failure defined in §4.2.</li>
+      </ol>
+    </div>
+  </div>
+
+  <div class="signblock">
+    <div class="sig">
+      <div class="line"></div>
+      <div class="who">Ananya Krishnamurthy</div>
+      <div class="role">Candidate</div>
+    </div>
+    <div class="sig">
+      <div class="line"></div>
+      <div class="who">Rishabh Agrawal</div>
+      <div class="role">Founder, Axelis Overseas Education</div>
+    </div>
+    <svg width="86" height="86" viewBox="0 0 240 240" aria-label="Axelis guarantee seal">
+      <defs><path id="parc" d="M120,120 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs>
+      <circle cx="120" cy="120" r="112" fill="none" stroke="#12463A" stroke-width="3"/>
+      <circle cx="120" cy="120" r="103" fill="none" stroke="#12463A" stroke-width="1"/>
+      <text font-family="'Source Serif 4',Georgia,serif" font-size="13" letter-spacing="3.4" fill="#12463A"><textPath href="#parc" startOffset="50%" text-anchor="middle">AXELIS OVERSEAS · WRITTEN OUTCOME GUARANTEE</textPath></text>
+      <g transform="translate(120,118) scale(.62) translate(-60,-60)">
+        <g fill="none" stroke="#12463A" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g>
+        <path d="M10 74 L110 74" stroke="#12463A" stroke-width="6"/>
+      </g>
+      <text x="120" y="186" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="11" letter-spacing="1.6" fill="#7E5C1C">AXP-2026-0147</text>
+    </svg>
+  </div>
+
+  <div class="foot">
+    <span>Axelis Overseas Education</span>
+    <span>axelisoverseas@overseeducation.com</span>
+    <span>+91 9098522711</span>
+    <span>overseeducation.com</span>
+  </div>
+</div>

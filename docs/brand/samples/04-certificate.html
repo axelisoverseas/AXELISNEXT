@@ -1,0 +1,123 @@
+<meta charset="utf-8">
+<title>Axelis Programme Certificate</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#FFFFFF; --ink:#101A16; --axis:#12463A; --brass-deep:#7E5C1C;
+    --rule:#C8D1C6; --muted:#5F6660;
+    --display:'Source Serif 4',Georgia,serif;
+    --sans:'IBM Plex Sans',-apple-system,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:#E2E8DE; font-family:var(--sans); color:var(--ink); padding-block:28px; padding-inline:16px}
+  .note{max-width:297mm; margin:0 auto 20px; font-size:.86rem; color:#42504A; display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between; align-items:baseline}
+  .note b{color:#101A16}
+  .note .mono{font-family:var(--mono); font-size:.76rem}
+
+  /* A4 landscape sheet */
+  .sheet{
+    width:297mm; max-width:100%; aspect-ratio:297/210;
+    background:var(--paper); margin:0 auto; position:relative;
+    padding:12mm; box-shadow:0 1px 3px rgba(16,26,22,.18);
+  }
+  .frame{
+    position:absolute; inset:12mm;
+    border:1.6mm solid var(--axis);
+  }
+  .inner{
+    position:relative; height:100%; padding:14mm 16mm;
+    display:flex; flex-direction:column;
+  }
+  .head{display:flex; align-items:center; justify-content:space-between; gap:16px}
+  .lock{display:flex; align-items:center; gap:3mm}
+  .lock .wm{font-family:var(--display); font-weight:600; font-size:clamp(13px,1.7vw,19px); letter-spacing:.08em; color:var(--ink)}
+  .docline{font-family:var(--mono); font-size:clamp(7px,.85vw,10px); letter-spacing:.14em; text-transform:uppercase; color:var(--muted); text-align:right}
+
+  .body{flex:1; display:flex; flex-direction:column; justify-content:center; gap:2mm; max-width:78%}
+  .conferred{font-family:var(--sans); font-size:clamp(9px,1.05vw,12px); letter-spacing:.02em; color:var(--muted)}
+  .name{font-family:var(--display); font-weight:400; font-size:clamp(26px,4.6vw,52px); line-height:1.05; color:var(--ink); letter-spacing:-.01em}
+  .namerule{height:1px; background:var(--rule); margin-block:3mm 4mm; width:100%}
+  .for{font-size:clamp(9px,1.05vw,12px); color:var(--muted); margin-bottom:1mm}
+  .prog{font-family:var(--display); font-weight:600; font-size:clamp(15px,2.2vw,26px); color:var(--axis); line-height:1.15}
+  .dates{font-family:var(--mono); font-size:clamp(8px,.95vw,11px); color:var(--muted); margin-top:3mm}
+
+  .foot{display:flex; align-items:flex-end; justify-content:space-between; gap:10mm}
+  .sigs{display:flex; gap:14mm}
+  .sig{min-width:52mm}
+  .sig .line{height:1px; background:var(--ink); margin-bottom:2mm}
+  .sig .who{font-size:clamp(8px,.95vw,11px); color:var(--ink)}
+  .sig .role{font-size:clamp(7px,.85vw,10px); color:var(--muted)}
+  .idblock{display:flex; flex-direction:column; gap:1mm; text-align:left}
+  .idblock .id{font-family:var(--mono); font-size:clamp(8px,1vw,11px); color:var(--brass-deep); letter-spacing:.08em}
+  .idblock .verify{font-family:var(--mono); font-size:clamp(7px,.8vw,9px); color:var(--muted)}
+  .sealwrap{flex:0 0 auto; line-height:0}
+  .sealwrap svg{width:clamp(64px,9vw,104px); height:auto}
+
+  @media print{
+    @page{size:A4 landscape; margin:0}
+    body{background:#fff; padding:0}
+    .note{display:none}
+    .sheet{width:297mm; height:210mm; box-shadow:none; margin:0}
+  }
+  @media (max-width:700px){ .body{max-width:100%} .sealwrap{margin-top:6mm} .foot{flex-direction:column; align-items:flex-start} }
+</style>
+
+<div class="note">
+  <span><b>Sample — programme certificate.</b> A4 landscape, white stock (print is the one place pure white is correct). Print to PDF to check the trim.</span>
+  <span class="mono">Supersedes navy #1F4E79 / cream #FFF4E0</span>
+</div>
+
+<div class="sheet">
+  <div class="frame"></div>
+  <div class="inner">
+    <div class="head">
+      <div class="lock">
+        <svg width="34" height="34" viewBox="0 0 120 120" aria-label="Axelis"><g fill="none" stroke="#12463A" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#12463A" stroke-width="6"/></svg>
+        <span class="wm">AXELIS OVERSEAS</span>
+      </div>
+      <div class="docline">Certificate of completion<br>Concierge programme</div>
+    </div>
+
+    <div class="body">
+      <span class="conferred">This certifies that</span>
+      <span class="name">Ananya Krishnamurthy</span>
+      <div class="namerule"></div>
+      <span class="for">has completed, in full, the concierge programme</span>
+      <span class="prog">Executive MBA Concierge</span>
+      <span class="dates">Cohort 2026-A · 14 February 2026 — 11 September 2026 · Bengaluru</span>
+    </div>
+
+    <div class="foot">
+      <div class="sigs">
+        <div class="sig">
+          <div class="line"></div>
+          <div class="who">Rishabh Agrawal</div>
+          <div class="role">Founder, Axelis Overseas Education</div>
+        </div>
+        <div class="sig">
+          <div class="line"></div>
+          <div class="who">Programme lead</div>
+          <div class="role">Executive MBA Concierge</div>
+        </div>
+      </div>
+      <div class="sealwrap">
+      <svg width="116" height="116" viewBox="0 0 240 240" aria-label="Axelis guarantee seal">
+        <defs><path id="carc" d="M120,120 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs>
+        <circle cx="120" cy="120" r="112" fill="none" stroke="#12463A" stroke-width="3"/>
+        <circle cx="120" cy="120" r="103" fill="none" stroke="#12463A" stroke-width="1"/>
+        <text font-family="'Source Serif 4',Georgia,serif" font-size="13" letter-spacing="3.4" fill="#12463A"><textPath href="#carc" startOffset="50%" text-anchor="middle">AXELIS OVERSEAS · WRITTEN OUTCOME GUARANTEE</textPath></text>
+        <g transform="translate(120,118) scale(.62) translate(-60,-60)">
+          <g fill="none" stroke="#12463A" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g>
+          <path d="M10 74 L110 74" stroke="#12463A" stroke-width="6"/>
+        </g>
+        <text x="120" y="186" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="11" letter-spacing="1.6" fill="#7E5C1C">AXC-2026-0147</text>
+      </svg>
+    </div>
+      <div class="idblock">
+        <span class="id">AXC-2026-0147</span>
+        <span class="verify">Verify at overseeducation.com/verify</span>
+      </div>
+    </div>
+  </div>
+</div>

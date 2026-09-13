@@ -202,7 +202,7 @@ export default async function ProgramPage({ params }) {
                 )}
               </p>
 
-              <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-5">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-5 text-balance">
                 {program.title}
               </h1>
 
@@ -217,14 +217,14 @@ export default async function ProgramPage({ params }) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={withdrawn ? '/certifications' : '#enquire'}
-                  className="inline-flex justify-center items-center px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                  className="inline-flex justify-center items-center px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
                 >
                   {withdrawn ? 'See our current programmes' : 'Enquire about this programme'}
                   <ArrowRight aria-hidden="true" className="ml-2" size={18} />
                 </Link>
                 <Link
                   href="/bookings"
-                  className="inline-flex justify-center items-center px-7 py-3.5 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--storm-electric)]"
+                  className="inline-flex justify-center items-center px-7 py-3.5 glass-storm text-white font-bold rounded-xl transition-colors hover:text-[var(--storm-electric)]"
                 >
                   Book a discovery call
                 </Link>
@@ -271,7 +271,7 @@ export default async function ProgramPage({ params }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
             <div className="lg:col-span-2">
-              <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-6 text-balance">
                 What you leave with
               </h2>
               <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-14">
@@ -286,7 +286,7 @@ export default async function ProgramPage({ params }) {
                 ))}
               </ul>
 
-              <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-6">
+              <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-6 text-balance">
                 Syllabus
               </h2>
               <ol className="space-y-3">
@@ -357,7 +357,7 @@ export default async function ProgramPage({ params }) {
         <section className="relative py-20">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-7 md:p-9 text-center">
-              <h2 className="text-2xl font-bold text-white tracking-tight mb-3">
+              <h2 className="text-2xl font-bold text-white tracking-tight mb-3 text-balance">
                 This programme is no longer open for new enrolment
               </h2>
               <p className="text-slate-300/85 leading-relaxed mb-7">
@@ -375,7 +375,7 @@ export default async function ProgramPage({ params }) {
               </p>
               <Link
                 href="/certifications"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter]"
               >
                 See our current programmes <ArrowRight aria-hidden="true" size={18} />
               </Link>
@@ -387,7 +387,7 @@ export default async function ProgramPage({ params }) {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl font-bold text-white tracking-tight mb-4">
+              <h2 className="text-3xl font-bold text-white tracking-tight mb-4 text-balance">
                 Enquire about {program.title}
               </h2>
               <p className="text-slate-300/85 leading-relaxed mb-6">
@@ -418,13 +418,13 @@ export default async function ProgramPage({ params }) {
       {related.length > 0 && (
         <section className="relative py-16 border-t border-white/5">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-white tracking-tight mb-6">Related programmes</h2>
+            <h2 className="text-2xl font-bold text-white tracking-tight mb-6 text-balance">Related programmes</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
               {related.map((p) => (
                 <Link
                   key={p.slug}
                   href={`/certifications/${p.slug}`}
-                  className="group bg-[#141210] border-2 border-white/10 hover:border-[var(--storm-electric)]/50 rounded-2xl p-5 transition-all hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                  className="group bg-[#141210] border-2 border-white/10 hover:border-[var(--storm-electric)]/50 rounded-2xl p-5 transition-[transform,color,background-color,border-color] hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
                 >
                   <div className="text-xs text-slate-500 mb-2">
                     {TIERS.find((t) => t.id === p.tier)?.name}

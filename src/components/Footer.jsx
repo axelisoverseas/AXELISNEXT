@@ -13,10 +13,10 @@ const Footer = () => {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-[var(--storm-electric)]/10 mb-12 gap-6">
           <p className="text-sm font-semibold text-slate-500">Certified by independent bodies</p>
-          <Link href="/accreditations" className="flex flex-wrap justify-center items-center gap-8 opacity-80 hover:opacity-100 transition-all duration-300 group">
-            <img src="/logos/dppit logo.png" alt="DPIIT Startup India" className="h-8 object-contain" />
-            <img src="/trust-badges/british-council-logo.webp" alt="British Council" className="h-6 object-contain" />
-            <img src="/logos/Airc-logo-full-color-centered-LG.jpg" alt="AIRC" className="h-8 rounded-sm object-contain" />
+          <Link href="/accreditations" className="flex flex-wrap justify-center items-center gap-8 opacity-80 hover:opacity-100 transition-opacity duration-300 group">
+            <img src="/logos/dppit logo.png" width={47} height={32} alt="DPIIT Startup India" className="h-8 object-contain" />
+            <img src="/trust-badges/british-council-logo.webp" width={84} height={24} alt="British Council" className="h-6 object-contain" />
+            <img src="/logos/Airc-logo-full-color-centered-LG.jpg" width={56} height={32} alt="AIRC" className="h-8 rounded-sm object-contain" />
             <span className="text-xs text-[var(--storm-electric)] group-hover:underline">View certificates &rarr;</span>
           </Link>
         </div>
@@ -104,6 +104,9 @@ const Footer = () => {
               <li>
                 <Link href="/delivery-policy" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Delivery Policy</Link>
               </li>
+              <li>
+                <Link href="/verify" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Verify a Certificate</Link>
+              </li>
             </ul>
           </div>
 
@@ -111,16 +114,16 @@ const Footer = () => {
           <div className="lg:col-span-3">
             <h3 className="text-white font-semibold mb-6">Connect With Us</h3>
             <div className="flex gap-4 mb-8">
-              <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-900 hover:text-white transition-all">
+              <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-900 hover:text-white transition-colors">
                 <Facebook size={18} />
               </a>
-              <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-700 hover:text-white transition-all">
+              <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-700 hover:text-white transition-colors">
                 <Instagram size={18} />
               </a>
-              <a href={siteInfo.social.linkedin} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-950 hover:text-white transition-all">
+              <a href={siteInfo.social.linkedin} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-950 hover:text-white transition-colors">
                 <Linkedin size={18} />
               </a>
-              <a href={siteInfo.social.youtube} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-900 hover:text-white transition-all">
+              <a href={siteInfo.social.youtube} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-900 hover:text-white transition-colors">
                 <Youtube size={18} />
               </a>
             </div>

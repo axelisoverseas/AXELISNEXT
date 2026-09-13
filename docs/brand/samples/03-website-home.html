@@ -1,0 +1,258 @@
+<meta charset="utf-8">
+<title>Axelis Homepage Applied</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#F1F3EE; --ledger:#E2E8DE; --rule:#C8D1C6;
+    --ink:#101A16; --axis:#12463A; --axis-lift:#1A5C4B; --field:#0B2B23;
+    --brass:#B0862F; --brass-deep:#7E5C1C; --gold:#D9B166; --oxblood:#8A2B22; --muted:#5F6660;
+    --display:'Source Serif 4',Georgia,serif;
+    --sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--sans); line-height:1.6; -webkit-font-smoothing:antialiased}
+  h1,h2,h3,h4{font-family:var(--display); font-weight:600; line-height:1.14; letter-spacing:-.015em; margin:0; text-wrap:balance}
+  p{margin:0}
+  a{color:inherit}
+  .mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+  .wrap{max-width:1080px; margin:0 auto; padding-inline:24px}
+  .eyebrow{font-family:var(--mono); font-size:.7rem; letter-spacing:.16em; text-transform:uppercase; color:var(--brass-deep)}
+
+  /* ---------- chrome ---------- */
+  .utility{background:var(--field); color:#A9BDB3; font-family:var(--mono); font-size:.72rem; letter-spacing:.06em; padding-block:7px}
+  .utility .wrap{display:flex; flex-wrap:wrap; gap:6px 22px; justify-content:space-between}
+  nav{background:var(--paper); border-bottom:1px solid var(--rule); position:sticky; top:0; z-index:10}
+  nav .wrap{display:flex; align-items:center; justify-content:space-between; gap:20px; padding-block:14px}
+  .lock{display:flex; align-items:center; gap:11px; text-decoration:none}
+  .lock .wm{font-family:var(--display); font-weight:600; font-size:17px; letter-spacing:.08em; color:var(--ink)}
+  .navlinks{display:flex; gap:22px; font-size:.9rem}
+  .navlinks a{text-decoration:none; color:var(--ink); padding-block:4px; border-bottom:1px solid transparent}
+  .navlinks a:hover{border-bottom-color:var(--axis); color:var(--axis)}
+  .btn{display:inline-block; background:var(--axis); color:var(--paper); font-weight:600; font-size:.92rem; padding:10px 18px; border-radius:3px; text-decoration:none; border:1px solid var(--axis)}
+  .btn:hover{background:var(--axis-lift); border-color:var(--axis-lift)}
+  .btn.ghost{background:transparent; color:var(--axis)}
+  .btn.ghost:hover{background:var(--ledger)}
+  .btn.brass{background:var(--brass); border-color:var(--brass); color:var(--field)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--brass); outline-offset:2px}
+
+  /* ---------- hero ---------- */
+  .hero{background:var(--field); color:var(--paper)}
+  .hero .wrap{padding-block:72px 60px; display:grid; grid-template-columns:1.35fr .8fr; gap:48px; align-items:start}
+  .hero h1{font-size:clamp(2.1rem,1.5rem+2.9vw,3.5rem); color:var(--paper); max-width:17ch}
+  .hero .sub{margin-top:20px; max-width:52ch; color:#BCCBC3; font-size:1.06rem}
+  .hero .acts{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
+  .hero .acts .btn{border-color:var(--brass)}
+  .hero .acts .btn.ghost{color:var(--paper); border-color:rgba(241,243,238,.36); background:transparent}
+  .heropanel{border:1px solid rgba(217,177,102,.34); padding:22px; display:flex; flex-direction:column; gap:14px}
+  .heropanel .l{font-family:var(--mono); font-size:.68rem; letter-spacing:.14em; text-transform:uppercase; color:var(--gold)}
+  .heropanel q{font-family:var(--display); font-style:italic; font-size:1.12rem; line-height:1.45; color:var(--paper); quotes:none}
+  .heropanel .ref{font-family:var(--mono); font-size:.74rem; color:#9FB3A9}
+
+  /* ---------- trust band ---------- */
+  .band{background:var(--ledger); border-bottom:1px solid var(--rule)}
+  .band .wrap{display:flex; flex-wrap:wrap; gap:18px 44px; padding-block:18px; justify-content:space-between; align-items:center}
+  .stat{display:flex; flex-direction:column}
+  .stat .n{font-family:var(--mono); font-size:1.28rem; font-variant-numeric:tabular-nums; color:var(--ink); line-height:1.2}
+  .stat .k{font-size:.78rem; color:var(--muted)}
+
+  /* ---------- sections ---------- */
+  section{padding-block:64px; border-top:1px solid var(--rule)}
+  .shead{display:flex; flex-direction:column; gap:10px; max-width:62ch; margin-bottom:34px}
+  .shead h2{font-size:clamp(1.5rem,1.2rem+1.3vw,2.15rem)}
+  .shead p{color:var(--muted)}
+
+  .progs{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule)}
+  .prog{background:var(--paper); padding:26px 24px; display:flex; flex-direction:column; gap:12px}
+  .prog h3{font-size:1.22rem; color:var(--axis)}
+  .prog .what{font-size:.94rem; color:var(--muted)}
+  .prog ul{margin:0; padding-left:17px; display:flex; flex-direction:column; gap:5px; font-size:.88rem; color:var(--ink)}
+  .prog .fee{margin-top:auto; padding-top:16px; border-top:1px solid var(--rule); display:flex; align-items:baseline; justify-content:space-between; gap:10px}
+  .prog .fee .amt{font-family:var(--mono); font-size:1.3rem; font-variant-numeric:tabular-nums}
+  .prog .fee .emi{font-family:var(--mono); font-size:.74rem; color:var(--muted); text-align:right}
+  .prog .go{margin-top:14px}
+
+  /* ---------- guarantee ---------- */
+  .guar{background:var(--field); color:var(--paper); border-top:1px solid var(--rule)}
+  .guar .wrap{padding-block:64px; display:grid; grid-template-columns:1fr auto; gap:48px; align-items:center}
+  .guar h2{color:var(--paper); font-size:clamp(1.5rem,1.2rem+1.3vw,2.15rem); max-width:20ch}
+  .guar p{margin-top:16px; max-width:56ch; color:#BCCBC3}
+  .clauses{margin-top:24px; display:flex; flex-direction:column; gap:1px; background:rgba(241,243,238,.16); border:1px solid rgba(241,243,238,.16)}
+  .clause{background:var(--field); padding:13px 16px; display:grid; grid-template-columns:60px 1fr; gap:16px; align-items:baseline}
+  .clause .n{font-family:var(--mono); font-size:.76rem; color:var(--gold)}
+  .clause .t{font-size:.94rem; color:var(--paper)}
+
+  /* ---------- finance table ---------- */
+  .tablewrap{overflow-x:auto; border:1px solid var(--rule)}
+  table{border-collapse:collapse; width:100%; min-width:520px; font-size:.92rem}
+  th{text-align:left; font-family:var(--mono); font-weight:500; font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding:12px 16px; border-bottom:1px solid var(--rule)}
+  td{padding:11px 16px; border-bottom:1px solid var(--rule)}
+  tbody tr:nth-child(even){background:var(--ledger)}
+  tbody tr:last-child td{border-bottom:0}
+  th.num,td.num{text-align:right; font-family:var(--mono); font-variant-numeric:tabular-nums; white-space:nowrap}
+  .fineprint{margin-top:14px; font-size:.82rem; color:var(--muted); max-width:70ch}
+
+  /* ---------- footer ---------- */
+  footer{background:var(--field); color:#A9BDB3; padding-block:52px 34px; font-size:.9rem}
+  footer .cols{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px}
+  footer h4{color:var(--paper); font-size:.98rem; margin-bottom:12px}
+  footer ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--gold)}
+  .fbar{margin-top:36px; padding-top:18px; border-top:1px solid rgba(241,243,238,.14); display:flex; flex-wrap:wrap; gap:10px 24px; justify-content:space-between; font-family:var(--mono); font-size:.72rem; letter-spacing:.05em; color:#8CA298}
+
+  @media (max-width:860px){
+    .hero .wrap{grid-template-columns:1fr; gap:32px}
+    .guar .wrap{grid-template-columns:1fr; gap:30px}
+    footer .cols{grid-template-columns:1fr 1fr}
+    .navlinks{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+</style>
+
+<div class="utility"><div class="wrap"><span>Bengaluru &amp; Bilaspur</span><span>+91 9098522711 · axelisoverseas@overseeducation.com</span></div></div>
+
+<nav>
+  <div class="wrap">
+    <a class="lock" href="#top">
+      <svg width="30" height="30" viewBox="0 0 120 120" aria-label="Axelis"><g fill="none" stroke="#12463A" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#12463A" stroke-width="6"/></svg>
+      <span class="wm">AXELIS OVERSEAS</span>
+    </a>
+    <div class="navlinks">
+      <a href="#programmes">Programmes</a>
+      <a href="#guarantee">The guarantee</a>
+      <a href="#financing">Financing</a>
+      <a href="#about">About</a>
+    </div>
+    <a class="btn" href="#call">Book a discovery call</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <h1>Three programmes. One guarantee, in writing.</h1>
+      <p class="sub">Axelis takes a small number of students end to end — shortlist to offer — under terms that are written down, including what happens if we fail.</p>
+      <div class="acts">
+        <a class="btn brass" href="#programmes">See the three programmes</a>
+        <a class="btn ghost" href="#guarantee">Read the guarantee first</a>
+      </div>
+    </div>
+    <aside class="heropanel">
+      <span class="l">From the refund policy</span>
+      <q>If you receive no offer from any shortlisted university, 60% of the programme fee is returned within 30 days.</q>
+      <span class="ref">Cancellation &amp; Refund Policy · §4.2</span>
+    </aside>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <div class="stat"><span class="n">5,000+</span><span class="k">students placed</span></div>
+    <div class="stat"><span class="n">29</span><span class="k">countries</span></div>
+    <div class="stat"><span class="n">3</span><span class="k">concierge programmes</span></div>
+    <div class="stat"><span class="n">30 days</span><span class="k">refund window, written</span></div>
+    <div class="stat"><span class="n">6–24 mo</span><span class="k">EMI tenures</span></div>
+  </div>
+</div>
+
+<main>
+  <section id="programmes" class="wrap" style="border-top:0">
+    <div class="shead">
+      <span class="eyebrow">The catalogue</span>
+      <h2>Three programmes, and nothing we cannot staff properly</h2>
+      <p>Each is end to end and capped by intake. There is no self-serve tier, because there is no honest way to guarantee an outcome on one.</p>
+    </div>
+    <div class="progs">
+      <article class="prog">
+        <h3>Global Career Launch</h3>
+        <p class="what">Shortlist to offer, handled end to end, for a first degree abroad.</p>
+        <ul><li>University shortlist and strategy</li><li>Applications, SOP and references</li><li>Visa file and interview readiness</li></ul>
+        <div class="fee"><span class="amt">₹2,00,000</span><span class="emi">EMI from<br>₹8,334 / 24 mo</span></div>
+        <a class="btn ghost go" href="#call">Enrol</a>
+      </article>
+      <article class="prog">
+        <h3>PhD &amp; Fellowship Concierge</h3>
+        <p class="what">Research proposal, supervisor match and funding, to submission.</p>
+        <ul><li>Proposal development and review</li><li>Supervisor identification and outreach</li><li>Fellowship and funding applications</li></ul>
+        <div class="fee"><span class="amt">₹2,50,000</span><span class="emi">EMI from<br>₹10,417 / 24 mo</span></div>
+        <a class="btn ghost go" href="#call">Enrol</a>
+      </article>
+      <article class="prog">
+        <h3>Executive MBA Concierge</h3>
+        <p class="what">For candidates with a career behind them and no time to spare.</p>
+        <ul><li>School selection against career goals</li><li>Essays, recommenders, interview prep</li><li>Scholarship negotiation</li></ul>
+        <div class="fee"><span class="amt">₹3,00,000</span><span class="emi">EMI from<br>₹12,500 / 24 mo</span></div>
+        <a class="btn ghost go" href="#call">Enrol</a>
+      </article>
+    </div>
+  </section>
+</main>
+
+<section class="guar" id="guarantee" style="padding-block:0">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--gold)">§4 · The written outcome guarantee</span>
+      <h2>What happens if we fail is written down before you pay</h2>
+      <p>Axelis does not guarantee admission — no one honestly can. It guarantees a defined remedy on a defined failure, and publishes both.</p>
+      <div class="clauses">
+        <div class="clause"><span class="n">§4.1</span><span class="t">A shortlist of at least six universities, agreed in writing before applications open.</span></div>
+        <div class="clause"><span class="n">§4.2</span><span class="t">No offer from any shortlisted university — 60% of the fee returned within 30 days.</span></div>
+        <div class="clause"><span class="n">§4.3</span><span class="t">Not covered: visa refusal on grounds of document fraud, or withdrawal by the student.</span></div>
+      </div>
+    </div>
+    <svg width="168" height="168" viewBox="0 0 240 240" aria-label="Axelis guarantee seal">
+      <defs><path id="arc2" d="M120,120 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs>
+      <circle cx="120" cy="120" r="112" fill="none" stroke="#D9B166" stroke-width="3"/>
+      <circle cx="120" cy="120" r="103" fill="none" stroke="#D9B166" stroke-width="1"/>
+      <text font-family="'Source Serif 4',Georgia,serif" font-size="13" letter-spacing="3.4" fill="#D9B166"><textPath href="#arc2" startOffset="50%" text-anchor="middle">AXELIS OVERSEAS · WRITTEN OUTCOME GUARANTEE</textPath></text>
+      <g transform="translate(120,118) scale(.62) translate(-60,-60)">
+        <g fill="none" stroke="#D9B166" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g>
+        <path d="M10 74 L110 74" stroke="#D9B166" stroke-width="6"/>
+      </g>
+      <text x="120" y="186" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="11" letter-spacing="1.6" fill="#B0862F">AXC-2026-0001</text>
+    </svg>
+  </div>
+</section>
+
+<section id="financing" class="wrap">
+  <div class="shead">
+    <span class="eyebrow">Financing</span>
+    <h2>The whole fee, or monthly</h2>
+    <p>Every programme clears the ₹10,000 EMI floor. Tenures of 6, 9, 12, 18 and 24 months.</p>
+  </div>
+  <div class="tablewrap">
+    <table>
+      <caption class="visually-hidden" style="position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0)">Monthly instalment by programme and tenure</caption>
+      <thead><tr><th>Programme</th><th class="num">Fee</th><th class="num">12 months</th><th class="num">18 months</th><th class="num">24 months</th></tr></thead>
+      <tbody>
+        <tr><td>Global Career Launch</td><td class="num">₹2,00,000</td><td class="num">₹16,667</td><td class="num">₹11,112</td><td class="num">₹8,334</td></tr>
+        <tr><td>PhD &amp; Fellowship Concierge</td><td class="num">₹2,50,000</td><td class="num">₹20,834</td><td class="num">₹13,889</td><td class="num">₹10,417</td></tr>
+        <tr><td>Executive MBA Concierge</td><td class="num">₹3,00,000</td><td class="num">₹25,000</td><td class="num">₹16,667</td><td class="num">₹12,500</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p class="fineprint">Instalments shown are the fee divided by the tenure, rounded up to the rupee, and exclude any charge levied by the financing partner. Your final schedule is the one on the financing agreement, not this table.</p>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="lock" style="margin-bottom:12px">
+          <svg width="28" height="28" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#D9B166" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#D9B166" stroke-width="6"/></svg>
+          <span class="wm" style="color:#F1F3EE; font-family:var(--display); font-weight:600; font-size:16px; letter-spacing:.08em">AXELIS OVERSEAS</span>
+        </div>
+        <p>Three end-to-end concierge programmes. A written outcome guarantee.</p>
+      </div>
+      <div><h4>Programmes</h4><ul><li><a href="#programmes">Global Career Launch</a></li><li><a href="#programmes">PhD &amp; Fellowship Concierge</a></li><li><a href="#programmes">Executive MBA Concierge</a></li></ul></div>
+      <div><h4>Terms</h4><ul><li><a href="#guarantee">Cancellation &amp; refund policy</a></li><li><a href="#guarantee">Terms &amp; conditions</a></li><li><a href="#guarantee">Privacy policy</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="#call">Book a discovery call</a></li><li><a href="#call">+91 9098522711</a></li><li><a href="#call">axelisoverseas@overseeducation.com</a></li></ul></div>
+    </div>
+    <div class="fbar">
+      <span>© 2026 Axelis Overseas Education</span>
+      <span>Bengaluru · Bilaspur</span>
+      <span>overseeducation.com</span>
+    </div>
+  </div>
+</footer>

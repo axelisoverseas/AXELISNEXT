@@ -23,7 +23,7 @@ export default function HomeCertificationsPreview() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10 max-w-2xl mx-auto">
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3">
+          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-balance">
             End to end.{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
               Outcome guaranteed.
@@ -103,7 +103,7 @@ export default function HomeCertificationsPreview() {
         <div className="text-center">
           <Link
             href="/certifications"
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
           >
             See the programmes
             <ArrowRight aria-hidden="true" size={18} />

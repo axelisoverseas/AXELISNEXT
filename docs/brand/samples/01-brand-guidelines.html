@@ -1,0 +1,364 @@
+<meta charset="utf-8">
+<title>Axelis Brand System</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+  :root{
+    --paper:#F1F3EE; --ledger:#E2E8DE; --rule:#C8D1C6;
+    --ink:#101A16; --axis:#12463A; --axis-lift:#1A5C4B; --field:#0B2B23;
+    --brass:#B0862F; --brass-deep:#7E5C1C; --gold:#D9B166;
+    --oxblood:#8A2B22; --muted:#5F6660;
+    --display:'Source Serif 4',Georgia,'Times New Roman',serif;
+    --sans:'IBM Plex Sans',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    --mono:'IBM Plex Mono',ui-monospace,Menlo,monospace;
+  }
+  *{box-sizing:border-box}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:var(--sans); font-size:16px; line-height:1.6;
+    margin:0; padding-block:0; padding-inline:0;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1060px; margin:0 auto; padding-inline:24px}
+  h1,h2,h3,h4{font-family:var(--display); font-weight:600; line-height:1.14; letter-spacing:-.015em; text-wrap:balance; margin:0}
+  p{margin:0}
+  a{color:var(--axis)}
+  .mono{font-family:var(--mono); font-variant-numeric:tabular-nums}
+
+  /* ---- masthead ---- */
+  .masthead{background:var(--field); color:var(--paper); padding-block:56px 48px}
+  .masthead .wrap{display:flex; flex-direction:column; gap:32px}
+  .lockup{display:flex; align-items:center; gap:18px}
+  .lockup svg{display:block}
+  .wordmark{font-family:var(--display); font-weight:600; font-size:30px; letter-spacing:.08em; color:var(--paper); line-height:1}
+  .masthead h1{font-size:clamp(2.2rem,1.6rem+2.6vw,3.4rem); color:var(--paper); max-width:20ch}
+  .masthead .sub{color:#BFCcC4; max-width:60ch; font-size:1.05rem}
+  .meta{display:flex; flex-wrap:wrap; gap:8px 28px; font-family:var(--mono); font-size:.78rem; letter-spacing:.04em; color:var(--gold); text-transform:uppercase}
+
+  /* ---- sections ---- */
+  section{padding-block:56px; border-top:1px solid var(--rule)}
+  section:first-of-type{border-top:0}
+  .eyebrow{font-family:var(--mono); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--brass-deep); margin-bottom:10px; display:block}
+  .sec-head{display:flex; flex-direction:column; gap:12px; margin-bottom:36px; max-width:64ch}
+  .sec-head h2{font-size:clamp(1.5rem,1.2rem+1.2vw,2.1rem)}
+  .sec-head p{color:var(--muted); max-width:62ch}
+  .lede{font-family:var(--display); font-size:1.25rem; line-height:1.5; max-width:56ch; color:var(--ink)}
+
+  /* ---- tables: greenbar ledger ---- */
+  .tablewrap{overflow-x:auto; border:1px solid var(--rule)}
+  table{border-collapse:collapse; width:100%; min-width:520px; font-size:.92rem}
+  th{text-align:left; font-family:var(--mono); font-weight:500; font-size:.72rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); padding:12px 16px; border-bottom:1px solid var(--rule); background:var(--paper)}
+  td{padding:11px 16px; border-bottom:1px solid var(--rule); vertical-align:top}
+  tbody tr:nth-child(even){background:var(--ledger)}
+  tbody tr:last-child td{border-bottom:0}
+  td.num{font-family:var(--mono); font-variant-numeric:tabular-nums; text-align:right; white-space:nowrap}
+  .chip{display:inline-block; width:13px; height:13px; border:1px solid rgba(16,26,22,.25); vertical-align:-1px; margin-right:8px}
+
+  /* ---- palette ---- */
+  .swatches{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule)}
+  .sw{background:var(--paper); padding:0}
+  .sw .block{height:96px}
+  .sw .body{padding:12px 14px; display:flex; flex-direction:column; gap:2px}
+  .sw .name{font-weight:600; font-size:.92rem}
+  .sw .hex{font-family:var(--mono); font-size:.78rem; color:var(--muted)}
+  .sw .role{font-size:.78rem; color:var(--muted); line-height:1.4}
+
+  /* ---- specimen ---- */
+  .specimen{border:1px solid var(--rule); background:var(--paper)}
+  .spec-row{display:grid; grid-template-columns:118px 1fr; gap:24px; padding:20px 22px; border-bottom:1px solid var(--rule); align-items:baseline}
+  .spec-row:last-child{border-bottom:0}
+  .spec-label{font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted); line-height:1.5}
+  .spec-d1{font-family:var(--display); font-weight:600; font-size:clamp(1.9rem,1.4rem+2vw,2.9rem); line-height:1.08}
+  .spec-d2{font-family:var(--display); font-weight:400; font-style:italic; font-size:1.35rem; color:var(--axis)}
+  .spec-body{max-width:62ch; font-size:1rem}
+  .spec-fig{font-family:var(--mono); font-size:1.3rem; font-variant-numeric:tabular-nums; color:var(--brass-deep)}
+
+  /* ---- mark specimen ---- */
+  .marks{display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule)}
+  .markcell{background:var(--paper); padding:26px 22px; display:flex; flex-direction:column; gap:16px; align-items:flex-start}
+  .markcell.dark{background:var(--field)}
+  .markcell .cap{font-family:var(--mono); font-size:.7rem; letter-spacing:.1em; text-transform:uppercase; color:var(--muted)}
+  .markcell.dark .cap{color:var(--gold)}
+  .sizerow{display:flex; align-items:flex-end; gap:20px}
+
+  /* ---- two-col lists ---- */
+  .cols{display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule)}
+  .col{background:var(--paper); padding:22px}
+  .col h4{font-size:1.05rem; margin-bottom:12px; display:flex; align-items:center; gap:9px}
+  .col ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:7px; font-size:.94rem; color:var(--ink)}
+  .col.no h4{color:var(--oxblood)}
+  .col.yes h4{color:var(--axis)}
+  .tick{width:9px; height:9px; display:inline-block; border-radius:50%}
+  .col.yes .tick{background:var(--axis)}
+  .col.no .tick{background:var(--oxblood)}
+
+  /* ---- voice pairs ---- */
+  .voice{display:flex; flex-direction:column; gap:1px; background:var(--rule); border:1px solid var(--rule)}
+  .vrow{background:var(--paper); display:grid; grid-template-columns:1fr 1fr; gap:0}
+  .vcell{padding:18px 20px; display:flex; flex-direction:column; gap:8px}
+  .vcell.bad{border-right:1px solid var(--rule); background:var(--ledger)}
+  .vtag{font-family:var(--mono); font-size:.68rem; letter-spacing:.12em; text-transform:uppercase}
+  .vcell.bad .vtag{color:var(--oxblood)}
+  .vcell.good .vtag{color:var(--axis)}
+  .vcell p{font-size:.98rem}
+  .vcell.bad p{color:var(--muted); text-decoration:line-through; text-decoration-color:rgba(138,43,34,.45)}
+
+  /* ---- callout ---- */
+  .note{border-left:3px solid var(--brass); background:var(--ledger); padding:18px 20px; font-size:.96rem; max-width:70ch}
+  .note strong{color:var(--brass-deep)}
+
+  /* ---- ratio bar ---- */
+  .ratio{display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:.84rem}
+  .grade{font-family:var(--mono); font-size:.68rem; letter-spacing:.08em; padding:2px 6px; border:1px solid currentColor}
+  .aaa{color:var(--axis)} .aa{color:var(--brass-deep)} .fail{color:var(--oxblood)}
+
+  footer{background:var(--field); color:#BFCCC4; padding-block:44px; font-size:.9rem}
+  footer .wrap{display:flex; flex-direction:column; gap:10px}
+  footer .mono{color:var(--gold); font-size:.76rem; letter-spacing:.06em; text-transform:uppercase}
+
+  @media (max-width:620px){
+    .spec-row{grid-template-columns:1fr; gap:10px}
+    .vrow{grid-template-columns:1fr}
+    .vcell.bad{border-right:0; border-bottom:1px solid var(--rule)}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="lockup">
+      <svg width="46" height="46" viewBox="0 0 120 120" aria-label="Axelis mark">
+        <g fill="none" stroke="#D9B166" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g>
+        <path d="M10 74 L110 74" stroke="#D9B166" stroke-width="6"/>
+      </svg>
+      <span class="wordmark">AXELIS OVERSEAS</span>
+    </div>
+    <h1>The brand of a firm that puts it in writing</h1>
+    <p class="sub">Three end-to-end concierge programmes. A written outcome guarantee. This is the system that makes every document, PDF and page look like it came from the same firm — and like that firm means it.</p>
+    <div class="meta">
+      <span>Version 1.0</span><span>13 September 2026</span><span>Owner · Rishabh Agrawal</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">§1 · The category, measured</span>
+      <h2>Everyone else is blue, violet, or orange</h2>
+      <p>Hex values read out of each firm's homepage HTML and inline CSS on 13 September 2026 — not impressions. It catches what a homepage paints and misses colour declared only in external stylesheets; Crimson Education, Julius Baer and Shiksha Study Abroad returned nothing usable and are not listed. Nine firms is a sample, not a census.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Firm</th><th>Primary</th><th>Secondary</th><th>Family</th></tr></thead>
+        <tbody>
+          <tr><td>IDP Education</td><td><span class="chip" style="background:#28558C"></span><span class="mono">#28558C</span></td><td><span class="chip" style="background:#0B6FE3"></span><span class="mono">#0B6FE3</span></td><td>Blue</td></tr>
+          <tr><td>Leverage Edu</td><td><span class="chip" style="background:#0E3240"></span><span class="mono">#0E3240</span></td><td><span class="chip" style="background:#4080BD"></span><span class="mono">#4080BD</span></td><td>Blue</td></tr>
+          <tr><td>Collegify</td><td><span class="chip" style="background:#061421"></span><span class="mono">#061421</span></td><td><span class="chip" style="background:#153DD1"></span><span class="mono">#153DD1</span></td><td>Blue</td></tr>
+          <tr><td>AECC Global</td><td><span class="chip" style="background:#715AE6"></span><span class="mono">#715AE6</span></td><td><span class="chip" style="background:#FDC700"></span><span class="mono">#FDC700</span></td><td>Violet</td></tr>
+          <tr><td>Edvoy</td><td><span class="chip" style="background:#9317CE"></span><span class="mono">#9317CE</span></td><td><span class="chip" style="background:#FF3D53"></span><span class="mono">#FF3D53</span></td><td>Violet</td></tr>
+          <tr><td>GradRight</td><td><span class="chip" style="background:#782BFF"></span><span class="mono">#782BFF</span></td><td><span class="chip" style="background:#2F6BE3"></span><span class="mono">#2F6BE3</span></td><td>Violet</td></tr>
+          <tr><td>Yocket</td><td><span class="chip" style="background:#E37712"></span><span class="mono">#E37712</span></td><td><span class="chip" style="background:#2B3340"></span><span class="mono">#2B3340</span></td><td>Orange</td></tr>
+          <tr><td>upGrad Abroad</td><td><span class="chip" style="background:#B86E00"></span><span class="mono">#B86E00</span></td><td><span class="chip" style="background:#FFEACB"></span><span class="mono">#FFEACB</span></td><td>Amber</td></tr>
+          <tr><td><strong>Axelis (today)</strong></td><td><span class="chip" style="background:#ffde59"></span><span class="mono">#ffde59</span></td><td><span class="chip" style="background:#F59E0B"></span><span class="mono">#F59E0B</span></td><td>Yellow</td></tr>
+          <tr><td><strong>Axelis (proposed)</strong></td><td><span class="chip" style="background:#12463A"></span><span class="mono">#12463A</span></td><td><span class="chip" style="background:#B0862F"></span><span class="mono">#B0862F</span></td><td><strong>Green</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:22px">
+      <strong>Two findings.</strong> The current amber-and-yellow is not differentiated — upGrad Abroad already owns amber-on-cream and Yocket owns orange. And none of the nine uses green as a primary. That is the open lane — a finding about these nine firms, not proof that nobody in India uses green — and it happens to be the colour of ledgers, contracts and institutions.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">§2 · The idea</span>
+      <h2>The category looks like software. Axelis looks like paper.</h2>
+    </div>
+    <p class="lede">The real differentiator is not the counselling. It is that the outcome — and the refund if the outcome fails — exists as a document a student can hold. Competitors promise. Axelis signs.</p>
+    <div class="cols" style="margin-top:32px">
+      <div class="col yes">
+        <h4><span class="tick"></span>Always</h4>
+        <ul>
+          <li>State the term, with its clause number</li>
+          <li>Number with a source behind it</li>
+          <li>Name what the guarantee does <em>not</em> cover</li>
+          <li>Rupees in full: ₹2,00,000</li>
+          <li>Sentence case, Indian English, Oxford comma</li>
+        </ul>
+      </div>
+      <div class="col no">
+        <h4><span class="tick"></span>Never</h4>
+        <ul>
+          <li>Globes, aeroplanes, passports, graduation caps, rockets</li>
+          <li>Gradient buttons, glows, pills, floating 3D objects</li>
+          <li>Exclamation marks in published copy</li>
+          <li><em>Dream, journey, unlock, empower, seamless, fly</em></li>
+          <li>Stock photos of students with backpacks</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">§3 · The mark</span>
+      <h2>The Axial A</h2>
+      <p>The letter A with two departures. The right stroke is inclined 23.4° from vertical — the Earth's axial tilt, so studying abroad is in the mark without a globe in it. The crossbar runs past both legs as a rule: the line a document is signed on.</p>
+    </div>
+    <div class="marks">
+      <div class="markcell">
+        <svg width="112" height="112" viewBox="0 0 120 120" aria-label="Axelis mark in axis green">
+          <g fill="none" stroke="#12463A" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g>
+          <path d="M10 74 L110 74" stroke="#12463A" stroke-width="6"/>
+        </svg>
+        <span class="cap">Primary · Axis on paper</span>
+      </div>
+      <div class="markcell dark">
+        <svg width="112" height="112" viewBox="0 0 120 120" aria-label="Axelis mark in brass on field">
+          <g fill="none" stroke="#B0862F" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g>
+          <path d="M10 74 L110 74" stroke="#B0862F" stroke-width="6"/>
+        </svg>
+        <span class="cap">Reverse · Brass on field</span>
+      </div>
+      <div class="markcell">
+        <div class="sizerow">
+          <svg width="56" height="56" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#101A16" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#101A16" stroke-width="6"/></svg>
+          <svg width="32" height="32" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#101A16" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#101A16" stroke-width="6"/></svg>
+          <svg width="16" height="16" viewBox="0 0 120 120" aria-hidden="true"><g fill="none" stroke="#101A16" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g><path d="M10 74 L110 74" stroke="#101A16" stroke-width="6"/></svg>
+        </div>
+        <span class="cap">56 / 32 / 16px — still an A at favicon size</span>
+      </div>
+      <div class="markcell">
+        <svg width="132" height="132" viewBox="0 0 240 240" aria-label="Guarantee seal">
+          <defs><path id="arc" d="M120,120 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/></defs>
+          <circle cx="120" cy="120" r="112" fill="none" stroke="#12463A" stroke-width="3"/>
+          <circle cx="120" cy="120" r="103" fill="none" stroke="#12463A" stroke-width="1"/>
+          <text font-family="'Source Serif 4',Georgia,serif" font-size="13" letter-spacing="3.4" fill="#12463A"><textPath href="#arc" startOffset="50%" text-anchor="middle">AXELIS OVERSEAS · WRITTEN OUTCOME GUARANTEE</textPath></text>
+          <g transform="translate(120,118) scale(.62) translate(-60,-60)">
+            <g fill="none" stroke="#12463A" stroke-width="11"><path d="M20 100 L58 20"/><path d="M58 20 L92.6 100"/></g>
+            <path d="M10 74 L110 74" stroke="#12463A" stroke-width="6"/>
+          </g>
+          <text x="120" y="186" text-anchor="middle" font-family="'IBM Plex Mono',monospace" font-size="11" letter-spacing="1.6" fill="#7E5C1C">AXC-YYYY-####</text>
+        </svg>
+        <span class="cap">The seal · three uses only</span>
+      </div>
+    </div>
+    <div class="note" style="margin-top:22px">
+      <strong>The seal is not a logo.</strong> It appears on the programme certificate, the signed guarantee page of a proposal, and the enrolment agreement. Nowhere else — using it as decoration spends the one asset that makes the guarantee feel real.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">§4 · Colour</span>
+      <h2>Greenbar ledger, brass, oxblood</h2>
+      <p>The ground is the faintly green accounting stock that figures have been ruled onto for a century — warm enough to read on, cool enough not to look like a wedding invitation, and the same hue family as the ink.</p>
+    </div>
+    <div class="swatches">
+      <div class="sw"><div class="block" style="background:#12463A"></div><div class="body"><span class="name">Axis</span><span class="hex">#12463A</span><span class="role">Primary. Logo, buttons, headings.</span></div></div>
+      <div class="sw"><div class="block" style="background:#0B2B23"></div><div class="body"><span class="name">Field</span><span class="hex">#0B2B23</span><span class="role">Deep surface. Footer, PDF covers.</span></div></div>
+      <div class="sw"><div class="block" style="background:#101A16"></div><div class="body"><span class="name">Ink</span><span class="hex">#101A16</span><span class="role">Body text on light.</span></div></div>
+      <div class="sw"><div class="block" style="background:#F1F3EE; box-shadow:inset 0 0 0 1px #C8D1C6"></div><div class="body"><span class="name">Paper</span><span class="hex">#F1F3EE</span><span class="role">The page. Never pure white on screen.</span></div></div>
+      <div class="sw"><div class="block" style="background:#E2E8DE"></div><div class="body"><span class="name">Ledger</span><span class="hex">#E2E8DE</span><span class="role">Cards, alternate table rows.</span></div></div>
+      <div class="sw"><div class="block" style="background:#B0862F"></div><div class="body"><span class="name">Brass</span><span class="hex">#B0862F</span><span class="role">Accent — on dark grounds only.</span></div></div>
+      <div class="sw"><div class="block" style="background:#7E5C1C"></div><div class="body"><span class="name">Brass Deep</span><span class="hex">#7E5C1C</span><span class="role">Accent text on light grounds.</span></div></div>
+      <div class="sw"><div class="block" style="background:#8A2B22"></div><div class="body"><span class="name">Oxblood</span><span class="hex">#8A2B22</span><span class="role">Refusals, errors, refund denials.</span></div></div>
+    </div>
+
+    <h3 style="margin:36px 0 14px; font-size:1.15rem">Measured, not estimated</h3>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Pair</th><th>Ratio</th><th>Grade</th><th>Where it may be used</th></tr></thead>
+        <tbody>
+          <tr><td>Ink on Paper</td><td class="num">15.91</td><td><span class="grade aaa">AAA</span></td><td>All body copy</td></tr>
+          <tr><td>Axis on Paper</td><td class="num">9.58</td><td><span class="grade aaa">AAA</span></td><td>Headings, links</td></tr>
+          <tr><td>Paper on Field</td><td class="num">13.58</td><td><span class="grade aaa">AAA</span></td><td>Dark sections</td></tr>
+          <tr><td>Oxblood on Paper</td><td class="num">7.67</td><td><span class="grade aaa">AAA</span></td><td>Error text</td></tr>
+          <tr><td>Brass Deep on Paper</td><td class="num">5.47</td><td><span class="grade aa">AA</span></td><td>Accent text on light</td></tr>
+          <tr><td>Brass on Ink</td><td class="num">5.33</td><td><span class="grade aa">AA</span></td><td>Accent on dark</td></tr>
+          <tr><td>Muted on Paper</td><td class="num">5.29</td><td><span class="grade aa">AA</span></td><td>Captions, metadata</td></tr>
+          <tr><td><strong>Brass on Paper</strong></td><td class="num">2.98</td><td><span class="grade fail">FAIL</span></td><td><strong>Never. Use Brass Deep.</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note" style="margin-top:22px">
+      <strong>Proportion — 60 / 30 / 8 / 2.</strong> Paper 60%, Axis and Field 30%, Ledger and Rule 8%, Brass 2%. Brass marks <em>one</em> thing per page: the guarantee, the seal, or the single primary action. A page with brass in four places has no accent at all.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">§5 · Typography</span>
+      <h2>Source Serif 4, IBM Plex Sans, IBM Plex Mono</h2>
+      <p>Three open-licensed families, all present in Google Docs, Google Fonts, Adobe Fonts and on the web — so a fee table in a PDF and the same table on the site set identically. Montserrat is retired; it is the default typeface of the Indian education category.</p>
+    </div>
+    <div class="specimen">
+      <div class="spec-row"><span class="spec-label">Display<br>Source Serif 4 · 600</span><span class="spec-d1">Three programmes. One guarantee, in writing.</span></div>
+      <div class="spec-row"><span class="spec-label">Quote<br>Source Serif 4 · 400 italic</span><span class="spec-d2">“If you receive no offer, clause 4 applies.”</span></div>
+      <div class="spec-row"><span class="spec-label">Body<br>IBM Plex Sans · 400</span><p class="spec-body">Axelis takes a small number of students end to end — application to admission — under terms that are written down, including what happens if we fail. Body copy is never set wider than 62 characters.</p></div>
+      <div class="spec-row"><span class="spec-label">Figures<br>IBM Plex Mono · 400</span><span class="spec-fig">₹2,00,000 · ₹8,334/mo · AXC-2026-0001</span></div>
+    </div>
+    <div class="note" style="margin-top:22px">
+      <strong>Why monospace for money.</strong> Setting fees and certificate IDs in a mono face makes them read as figures on an instrument rather than marketing numbers. Always with <span class="mono">tabular-nums</span>, so columns of rupees align.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">§6 · Voice</span>
+      <h2>Write like a firm that will be held to the sentence</h2>
+    </div>
+    <div class="voice">
+      <div class="vrow">
+        <div class="vcell bad"><span class="vtag">Category</span><p>Get your dream admit — guaranteed!</p></div>
+        <div class="vcell good"><span class="vtag">Axelis</span><p>If you receive no offer, clause 4 applies: 60% of the fee is returned within 30 days.</p></div>
+      </div>
+      <div class="vrow">
+        <div class="vcell bad"><span class="vtag">Category</span><p>Thousands of happy students worldwide!</p></div>
+        <div class="vcell good"><span class="vtag">Axelis</span><p>5,000+ students placed.</p></div>
+      </div>
+      <div class="vrow">
+        <div class="vcell bad"><span class="vtag">Category</span><p>Affordable EMI options available!</p></div>
+        <div class="vcell good"><span class="vtag">Axelis</span><p>₹2,00,000. EMI from ₹8,334 a month over 24 months.</p></div>
+      </div>
+      <div class="vrow">
+        <div class="vcell bad"><span class="vtag">Category</span><p>We strive to ensure a seamless journey.</p></div>
+        <div class="vcell good"><span class="vtag">Axelis</span><p>The guarantee does not cover visa refusal on grounds of document fraud.</p></div>
+      </div>
+    </div>
+    <div class="note" style="margin-top:22px">
+      <strong>Never write “guaranteed admission.”</strong> Axelis does not guarantee admission; it guarantees a defined remedy on a defined failure. Write “written outcome guarantee” and link the clause. This is a brand rule because it is also a legal one.
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head">
+      <span class="eyebrow">§7 · Rollout</span>
+      <h2>Nothing here has touched the running site</h2>
+      <p>Cheapest and most visible first. Steps 1 and 2 are independent of every design decision below them.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Step</th><th>Work</th><th>Touches</th><th>Blocked by</th></tr></thead>
+        <tbody>
+          <tr><td class="num">1</td><td>Reissue the mark — lockup, favicons, OG image, email signature, social avatars</td><td>Every impression</td><td>Mark sign-off</td></tr>
+          <tr><td class="num">2</td><td>Finish the positioning-copy purge — largely done; one stale comment left in the catalogue file</td><td>Truthfulness</td><td>Nothing</td></tr>
+          <tr><td class="num">3</td><td>Swap the token layer into globals.css via the migration map</td><td>Whole site</td><td>Step 1</td></tr>
+          <tr><td class="num">4</td><td>Fonts — Montserrat out, Source Serif 4 + Plex in</td><td>layout.js</td><td>Step 3</td></tr>
+          <tr><td class="num">5</td><td>Invert the theme — paper ground, field sections</td><td>Nav, footer, hero, catalogue</td><td>Step 3</td></tr>
+          <tr><td class="num">6</td><td>Reissue letter, proposal and certificate templates</td><td>Docs and PDFs</td><td>Step 1</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="mono">Axelis Overseas Education · Bengaluru &amp; Bilaspur</span>
+    <p>Brand system v1.0. Full specification, token layer and mark files live in <span class="mono">docs/brand/</span>. Where this document and an existing asset disagree, this document wins and the asset gets reissued.</p>
+    <p style="color:#8FA69B; font-size:.84rem">Open with the founder: founder photo and bio, programme lead names and credentials, and confirmation that the certificate may move off the old navy and cream.</p>
+  </div>
+</footer>

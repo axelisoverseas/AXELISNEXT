@@ -20,7 +20,7 @@ export const metadata = {
 function Section({ number, title, children }) {
   return (
     <section className="mb-10">
-      <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-3">
+      <h2 className="text-xl md:text-2xl font-bold text-white tracking-tight mb-3 text-balance">
         <span className="text-slate-500 font-mono text-base mr-2">{number}.</span>
         {title}
       </h2>
@@ -37,7 +37,7 @@ export default function TermsConditionsPage() {
     <main className="min-h-screen text-slate-100">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24">
         <p className="text-sm text-slate-400 mb-3">{policyMeta.company}</p>
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-4 text-balance">
           Terms of Service
         </h1>
         <p className="text-sm text-slate-400 mb-10">
