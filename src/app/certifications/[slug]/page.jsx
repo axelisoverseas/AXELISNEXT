@@ -7,7 +7,7 @@ import {
 } from 'lucide-react';
 import {
   programs, allPrograms, getProgram, isUnlisted, TIERS, monthlyEmi, emiTenure,
-  formatINR, financing, BAJAJ_EMI_LIVE, accentFor,
+  formatINR, financing, BAJAJ_EMI_LIVE, accentFor, refundPolicy,
 } from '../../../data/certificationPrograms';
 import CertificationEnquiryForm from '../../../components/CertificationEnquiryForm';
 import PaymentPartnersStrip from '../../../components/PaymentPartnersStrip';
@@ -81,6 +81,11 @@ export default async function ProgramPage({ params }) {
   const emi = monthlyEmi(program);
   const tenure = emiTenure(program);
   const isConcierge = program.tier === 'concierge';
+  // Withdrawn from the catalogue under [RULING 12]. The page stays up so an
+  // existing link resolves, but it must not read as an open offer: no enquiry
+  // form, no EMI, and no refund block promising cover under a policy whose
+  // Section 1 now lists the Concierge programmes only.
+  const withdrawn = isUnlisted(program.slug);
   const accent = accentFor(program.tier);
 
   // Always drawn from the listed catalogue, so no page — listed or unlisted —
@@ -163,6 +168,28 @@ export default async function ProgramPage({ params }) {
             <ArrowLeft size={15} /> All certifications
           </Link>
 
+          {/* Said before anything else, so nobody reads the page as a live
+              offer and then finds out at the bottom. */}
+          {withdrawn && (
+            <div
+              role="status"
+              className="flex items-start gap-3 mb-8 rounded-xl border border-[var(--dawn-glow)]/35 bg-[var(--dawn-glow)]/10 px-5 py-4"
+            >
+              <ShieldCheck size={18} className="text-[var(--dawn-glow)] shrink-0 mt-0.5" />
+              <p className="text-sm text-slate-200 leading-relaxed">
+                <span className="font-bold text-[var(--dawn-glow)]">
+                  Withdrawn from the catalogue.
+                </span>{' '}
+                This programme is no longer open for new enrolment and the fee below is the
+                fee when it was last offered. Existing enrolments are unaffected.{' '}
+                <Link href="/certifications" className="font-semibold text-white hover:underline">
+                  See our current programmes
+                </Link>
+                .
+              </p>
+            </div>
+          )}
+
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
             {/* Left — headline + description */}
             <div className="lg:col-span-2">
@@ -191,13 +218,13 @@ export default async function ProgramPage({ params }) {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                <a
-                  href="#enquire"
+                <Link
+                  href={withdrawn ? '/certifications' : '#enquire'}
                   className="inline-flex justify-center items-center px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
                 >
-                  Enquire about this programme
+                  {withdrawn ? 'See our current programmes' : 'Enquire about this programme'}
                   <ArrowRight className="ml-2" size={18} />
-                </a>
+                </Link>
                 <Link
                   href="/bookings"
                   className="inline-flex justify-center items-center px-7 py-3.5 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--storm-electric)]"
@@ -211,14 +238,16 @@ export default async function ProgramPage({ params }) {
             <aside className="lg:col-span-1 lg:sticky lg:top-24">
               <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
                 <div className="pb-4 mb-2 border-b border-white/10">
-                  <div className="text-xs text-slate-500 mb-1">Programme fee</div>
+                  <div className="text-xs text-slate-500 mb-1">
+                    {withdrawn ? 'Fee when last offered' : 'Programme fee'}
+                  </div>
                   <div className="text-4xl font-extrabold text-white">{formatINR(program.price)}</div>
                 </div>
 
                 <QuickFact Icon={Clock} label="Duration" value={program.duration} />
                 <QuickFact Icon={Layers} label="Format" value={program.format} />
                 <QuickFact Icon={Users} label="Cohort size" value={program.cohortSize} />
-                {emi && (
+                {emi && !withdrawn && (
                   <QuickFact
                     Icon={CreditCard}
                     label="EMI available"
@@ -228,12 +257,12 @@ export default async function ProgramPage({ params }) {
                 )}
                 <QuickFact Icon={Award} label="Certificate" value={program.certificate} highlight={!emi} />
 
-                <a
-                  href="#enquire"
+                <Link
+                  href={withdrawn ? '/certifications' : '#enquire'}
                   className="mt-5 inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 min-h-[44px] rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white font-bold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
                 >
-                  Enquire now <ArrowRight size={15} />
-                </a>
+                  {withdrawn ? 'Current programmes' : 'Enquire now'} <ArrowRight size={15} />
+                </Link>
               </div>
             </aside>
           </div>
@@ -320,13 +349,43 @@ export default async function ProgramPage({ params }) {
         </div>
       </section>
 
-      {/* Fee + financing, in the format Indian EdTech actually ships */}
-      <FinancingBlock program={program} />
-
-      {/* Cancellation & Refund — P0, verbatim from the handover, above the enquiry form */}
-      <CancellationRefundBlock />
+      {/* Fee + financing, in the format Indian EdTech actually ships.
+          Both are suppressed on a withdrawn programme: there is nothing to
+          finance, and the published policy no longer covers it. */}
+      {!withdrawn && <FinancingBlock program={program} />}
+      {!withdrawn && <CancellationRefundBlock />}
 
       {/* ------------------------------------------------------ ENQUIRY FORM */}
+      {withdrawn ? (
+        <section className="relative py-20">
+          <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-7 md:p-9 text-center">
+              <h2 className="text-2xl font-bold text-white tracking-tight mb-3">
+                This programme is no longer open for new enrolment
+              </h2>
+              <p className="text-slate-300/85 leading-relaxed mb-7">
+                {program.title} has been withdrawn from the Axelis catalogue and is not
+                accepting new students. This page is kept so existing links resolve. If you
+                are already enrolled, nothing changes &mdash; your programme runs as agreed
+                and your counsellor remains your point of contact. Reach us at{' '}
+                <a
+                  href={`mailto:${refundPolicy.supportEmail}`}
+                  className="text-[var(--storm-electric)] font-semibold hover:underline"
+                >
+                  {refundPolicy.supportEmail}
+                </a>{' '}
+                with any question about an existing enrolment.
+              </p>
+              <Link
+                href="/certifications"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all"
+              >
+                See our current programmes <ArrowRight size={18} />
+              </Link>
+            </div>
+          </div>
+        </section>
+      ) : (
       <section id="enquire" className="relative py-20 scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
@@ -356,6 +415,7 @@ export default async function ProgramPage({ params }) {
           </div>
         </div>
       </section>
+      )}
 
       {/* ---------------------------------------------------------- RELATED */}
       {related.length > 0 && (

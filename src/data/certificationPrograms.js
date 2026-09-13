@@ -80,10 +80,6 @@ export const TIERS = [
 ];
 
 // ---------------------------------------------------------------------------
-// The 16 programmes.
-// `family` maps each one to the five families named in the Bajaj email.
-// ---------------------------------------------------------------------------
-// ---------------------------------------------------------------------------
 // The catalogue.
 //
 // [RULING 12] Every programme under ₹2,00,000 is off the catalogue. The three

@@ -2,30 +2,28 @@
 
 Branch: `p0/cancellation-policy-legal-links`. Nothing merges to `main` without sign-off.
 
-## 1. Cashfree payment links — 16 slugs to mint (ruling 5)
+## 1. Cashfree payment links — 3 slugs to mint (ruling 5)
 
-One link per programme, in one sitting. The slug is the key the site will use.
+[RULING 12] cut this from 16 to 3. The thirteen programmes under ₹2,00,000 are
+withdrawn from the catalogue, so **do not mint links for them** — the table below
+is the whole list. The slug is the key the site will use.
 
 | # | Slug | Programme | Fee |
 |---|---|---|---|
-| 1 | `study-abroad-readiness` | Study Abroad Readiness | ₹4,000 |
-| 2 | `sop-and-personal-statement` | SOP & Personal Statement Craft | ₹7,500 |
-| 3 | `university-shortlisting-strategy` | University Shortlisting & Application Strategy | ₹9,500 |
-| 4 | `student-visa-interview-readiness` | Student Visa & Interview Readiness | ₹12,000 |
-| 5 | `german-a1-a2` | German A1 to A2 (CEFR) | ₹28,000 |
-| 6 | `french-a1-a2` | French A1 to A2 (CEFR) | ₹28,000 |
-| 7 | `application-coaching-undergraduate` | Undergraduate Application Coaching | ₹35,000 |
-| 8 | `application-coaching-postgraduate` | Postgraduate Application Coaching | ₹42,000 |
-| 9 | `scholarship-and-funding-strategy` | Scholarship & Funding Strategy | ₹32,000 |
-| 10 | `german-b1-intensive` | German B1 Intensive (CEFR) | ₹85,000 |
-| 11 | `french-b1-intensive` | French B1 Intensive (CEFR) | ₹85,000 |
-| 12 | `executive-mba-application-coaching` | Executive MBA Application Coaching | ₹1,25,000 |
-| 13 | `phd-research-proposal` | PhD & Research Proposal Certificate | ₹1,10,000 |
-| 14 | `global-career-launch` | Global Career Launch | ₹2,00,000 |
-| 15 | `phd-fellowship-concierge` | PhD & Fellowship Concierge | ₹2,50,000 |
-| 16 | `executive-mba-concierge` | Executive MBA Concierge | ₹3,00,000 |
+| 1 | `global-career-launch` | Global Career Launch | ₹2,00,000 |
+| 2 | `phd-fellowship-concierge` | PhD & Fellowship Concierge | ₹2,50,000 |
+| 3 | `executive-mba-concierge` | Executive MBA Concierge | ₹3,00,000 |
 
-Bundles: none exist as products yet — mint later (ruling 5). Hand the 16 codes back and they go into a JSON map keyed by slug; `Enrol Now` on each page then points at its link.
+All three clear the ₹10,000 EMI floor, so each gets EMI enabled on 6 / 9 / 12 /
+18 / 24-month tenures, with the slug carried in the link's notes or tags.
+
+Bundles: none exist as products yet — mint later (ruling 5). Hand the 3 codes
+back and they go into a JSON map keyed by slug (`src/data/cashfreeLinks.js`);
+the enrol CTA on each programme page then points at its link instead of the
+`#enquire` form it points at today.
+
+**These are real payment instruments.** Confirm each amount before creating the
+link and read back what was created — do not batch-create silently.
 
 ## 2. Policy — items that need your eyes (ruling 4)
 
