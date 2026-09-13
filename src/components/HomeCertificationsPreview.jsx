@@ -51,7 +51,7 @@ export default function HomeCertificationsPreview() {
             <div className="absolute inset-0 bg-gradient-to-r from-[#141210] via-[#141210]/90 to-[#141210]/30" />
             <div className="relative p-7 md:p-8 flex flex-col justify-end">
               <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] text-sm font-semibold mb-2">
-                <Sparkles size={13} /> Our flagship programme
+                <Sparkles aria-hidden="true" size={13} /> Our flagship programme
               </span>
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">{flagship.title}</h3>
               <p className="text-slate-300/85 text-sm leading-relaxed mb-4 max-w-md">{flagship.summary}</p>
@@ -61,7 +61,7 @@ export default function HomeCertificationsPreview() {
                   <div className="text-xs text-slate-400">or {formatINR(monthlyEmi(flagship))} a month</div>
                 </div>
                 <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] font-semibold text-sm group-hover:gap-2.5 transition-all">
-                  Details <ArrowRight size={15} />
+                  Details <ArrowRight aria-hidden="true" size={15} />
                 </span>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function HomeCertificationsPreview() {
                       {formatINR(program.price)}{emi ? ` · ${formatINR(emi)}/mo` : ''}
                     </div>
                   </div>
-                  <ArrowRight size={16} className="text-slate-600 group-hover:text-white transition-colors shrink-0" />
+                  <ArrowRight aria-hidden="true" size={16} className="text-slate-600 group-hover:text-white transition-colors shrink-0" />
                 </Link>
               );
             })}
@@ -106,7 +106,7 @@ export default function HomeCertificationsPreview() {
             className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
           >
             See the programmes
-            <ArrowRight size={18} />
+            <ArrowRight aria-hidden="true" size={18} />
           </Link>
         </div>
       </div>

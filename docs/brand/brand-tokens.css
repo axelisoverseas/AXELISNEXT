@@ -1,0 +1,120 @@
+/* ============================================================
+   AXELIS OVERSEAS — BRAND TOKEN LAYER  v1.0 (2026-09-13)
+   ------------------------------------------------------------
+   Drop-in replacement for the @theme + :root blocks in
+   src/app/globals.css. NOT wired into the app yet — this file is
+   the specification. Migration map is at the bottom.
+   Every pair marked AA/AAA below was measured, not estimated.
+   ============================================================ */
+
+@theme {
+  /* — Ink & field: the dark end — */
+  --color-ink:        #101A16; /* primary text on light; deepest surface   */
+  --color-field:      #0B2B23; /* large dark surfaces, footer, hero        */
+  --color-axis:       #12463A; /* PRIMARY BRAND GREEN — 9.48:1 on bone AAA */
+  --color-axis-lift:  #1A5C4B; /* hover / raised state of axis             */
+
+  /* — Paper: the light end — */
+  --color-bone:       #F4F1EA; /* primary page ground (never pure white)   */
+  --color-bone-deep:  #E8E3D8; /* cards, table stripes, quiet panels       */
+  --color-rule:       #CFC8B8; /* hairlines, dividers, table borders       */
+  --color-paper:      #FFFFFF; /* print only + certificate stock           */
+
+  /* — Brass: the accent. Scarce by rule (see §4.3) — */
+  --color-brass:      #B0862F; /* accent on DARK only  — 5.33:1 on ink AA  */
+  --color-brass-deep: #7E5C1C; /* accent TEXT on light — 5.42:1 on bone AA */
+  --color-gold:       #D9B166; /* accent text on dark  — 8.83:1 on ink AAA */
+
+  /* — Signal — */
+  --color-oxblood:    #8A2B22; /* errors, refusals, refund denials 7.6 AAA */
+  --color-muted:      #5F6660; /* secondary text — 5.24:1 on bone AA       */
+
+  /* — Type — */
+  --font-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-sans:    'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* — Radius: near-square. Documents do not have 16px corners. — */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 6px;   /* maximum. Nothing in this brand is a pill. */
+
+  /* — Elevation: hairlines, not shadows (see §4.5) — */
+  --edge-hair:  0 0 0 1px var(--color-rule);
+  --edge-ink:   0 0 0 1px rgba(16, 26, 22, 0.14);
+  --edge-lift:  0 1px 2px rgba(16, 26, 22, 0.06), 0 0 0 1px rgba(16,26,22,0.08);
+}
+
+:root {
+  --background: var(--color-bone);
+  --foreground: var(--color-ink);
+
+  /* Fluid display scale — 1.250 major third, clamped */
+  --step--1: clamp(0.82rem, 0.79rem + 0.14vw, 0.90rem);
+  --step-0:  clamp(1.00rem, 0.96rem + 0.19vw, 1.10rem);
+  --step-1:  clamp(1.25rem, 1.18rem + 0.34vw, 1.44rem);
+  --step-2:  clamp(1.56rem, 1.44rem + 0.59vw, 1.90rem);
+  --step-3:  clamp(1.95rem, 1.74rem + 1.00vw, 2.50rem);
+  --step-4:  clamp(2.44rem, 2.08rem + 1.68vw, 3.29rem);
+  --step-5:  clamp(3.05rem, 2.45rem + 2.80vw, 4.33rem);
+
+  /* Measure: body copy never exceeds 68 characters */
+  --measure: 62ch;
+}
+
+/* Dark sections are a deliberate choice per-section, never a
+   user-toggled theme. Apply to a section, not to :root. */
+.on-field {
+  --background: var(--color-field);
+  --foreground: var(--color-bone);
+  background: var(--color-field);
+  color: var(--color-bone);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  font-size: var(--step-0);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.015em;
+}
+
+/* Money, cert IDs, EMI tenures, policy clause numbers.
+   Tabular figures so columns of rupees align. */
+.figure, .cert-id, td.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.01em;
+}
+
+/* ============================================================
+   MIGRATION MAP — old token → new token
+   Mechanical find-and-replace in src/. Do NOT run blind; the
+   storm/dawn names carry meaning the new names do not.
+   ------------------------------------------------------------
+   --storm-deep      #0C0A09  → --color-field     #0B2B23
+   --storm-abyss     #141210  → --color-ink       #101A16
+   --storm-mid       #1C1917  → --color-field     #0B2B23
+   --storm-cloud     #292524  → --color-axis      #12463A  (raised)
+   --storm-electric  #FFFFFF  → --color-bone      #F4F1EA
+   --storm-bolt      #FAFAF9  → --color-bone      #F4F1EA
+   --storm-accent    #F59E0B  → --color-brass     #B0862F
+   --dawn-glow       #FBBF24  → --color-gold      #D9B166
+   --dawn-glow-soft  #FDE68A  → --color-gold      #D9B166
+   --dawn-clear      #78716C  → --color-muted     #5F6660
+   --color-axelis-accent #F59E0B → --color-brass  #B0862F
+
+   RETIRE ON SIGHT — these have no home in the new system:
+   #ffde59 (old logo yellow) · #4C9DF0 #3590f3 #8fbcf7 (stray blues)
+   #1B365D #172A7E (two unrelated navies) · #4f46e5 (indigo)
+   #1F4E79 + #FFF4E0 (old certificate navy/cream — superseded by
+   --color-axis on --color-paper; see §6.3)
+   ============================================================ */

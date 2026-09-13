@@ -28,6 +28,8 @@ const Footer = () => {
               <img
                 src="/1yellow svg logoaxelis.svg"
                 alt="Axelis Overseas"
+                width={48}
+                height={48}
                 className="h-12 w-auto opacity-95 hover:opacity-100 transition-opacity [filter:brightness(0)_invert(1)] drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]"
               />
             </Link>
@@ -38,11 +40,11 @@ const Footer = () => {
             {/* Contact Details */}
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3">
-                <MapPin size={18} className="text-[var(--storm-electric)] mt-1 shrink-0" />
+                <MapPin aria-hidden="true" size={18} className="text-[var(--storm-electric)] mt-1 shrink-0" />
                 <span className="text-slate-400">{siteInfo.contact.address}</span>
               </div>
               <div className="flex items-start gap-3">
-                <Phone size={18} className="text-[var(--storm-electric)] mt-1 shrink-0" />
+                <Phone aria-hidden="true" size={18} className="text-[var(--storm-electric)] mt-1 shrink-0" />
                 <div className="flex flex-col gap-1">
                   {siteInfo.contact.phones.map((phone, i) => (
                     <a key={i} href={`tel:${phone}`} className="hover:text-[var(--storm-electric)] transition-colors">{phone}</a>
@@ -50,7 +52,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="flex items-start gap-3">
-                <Mail size={18} className="text-[var(--storm-electric)] mt-1 shrink-0" />
+                <Mail aria-hidden="true" size={18} className="text-[var(--storm-electric)] mt-1 shrink-0" />
                 <div className="flex flex-col gap-1">
                   {siteInfo.contact.emails.map((email, i) => (
                     <a key={i} href={`mailto:${email}`} className="hover:text-[var(--storm-electric)] transition-colors">{email}</a>

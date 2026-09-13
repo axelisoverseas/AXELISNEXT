@@ -52,7 +52,7 @@ function ConciergeRow({ program }) {
       <div className="md:col-span-3 p-6 md:p-8 flex flex-col justify-center">
         {program.flagship && (
           <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] text-sm font-semibold mb-2">
-            <Sparkles size={13} /> Our flagship programme
+            <Sparkles aria-hidden="true" size={13} /> Our flagship programme
           </span>
         )}
         <h3 className="text-2xl md:text-3xl font-bold text-white mb-2.5">{program.title}</h3>
@@ -67,7 +67,7 @@ function ConciergeRow({ program }) {
             {program.duration} &middot; {program.cohortSize}
           </div>
           <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] font-semibold text-sm ml-auto group-hover:gap-2.5 transition-all">
-            Details <ArrowRight size={15} />
+            Details <ArrowRight aria-hidden="true" size={15} />
           </span>
         </div>
       </div>
@@ -170,7 +170,7 @@ export default function CertificationsPage() {
               className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
               Browse the programmes
-              <ArrowRight className="ml-2" size={20} />
+              <ArrowRight aria-hidden="true" className="ml-2" size={20} />
             </a>
             <Link
               href="/bookings"
@@ -214,7 +214,7 @@ export default function CertificationsPage() {
           <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-7 md:p-9 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
             <div className="flex items-start gap-4 mb-5">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--storm-electric)] to-[var(--dawn-glow)] flex items-center justify-center text-[var(--storm-deep)] shrink-0">
-                <CreditCard size={22} strokeWidth={2.3} />
+                <CreditCard aria-hidden="true" size={22} strokeWidth={2.3} />
               </div>
               <div>
                 <h2 className="text-2xl font-bold text-white mb-1">Financing</h2>

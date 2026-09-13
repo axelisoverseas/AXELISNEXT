@@ -92,7 +92,7 @@ export default function Home() {
               className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
               Explore Certifications
-              <ArrowRight className="ml-2" size={20} />
+              <ArrowRight aria-hidden="true" className="ml-2" size={20} />
             </Link>
             <Link
               href="/bookings"
@@ -273,7 +273,7 @@ export default function Home() {
               </div>
               <span className="inline-flex items-center gap-2 text-[var(--storm-electric)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight aria-hidden="true" size={16} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
 
@@ -301,7 +301,7 @@ export default function Home() {
               </div>
               <span className="inline-flex items-center gap-2 text-[var(--dawn-glow)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                <ArrowRight aria-hidden="true" size={16} className="group-hover:translate-x-1 transition-transform" />
               </span>
             </Link>
           </div>
@@ -312,7 +312,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 text-slate-300 hover:text-white text-sm font-semibold underline-offset-4 hover:underline transition-colors"
             >
               Compare Global Admissions Charter vs Europe Public Charter side by side
-              <ArrowRight size={14} />
+              <ArrowRight aria-hidden="true" size={14} />
             </Link>
           </div>
         </div>
@@ -433,7 +433,7 @@ export default function Home() {
               className="inline-flex items-center gap-2 text-slate-300 hover:text-white text-sm font-semibold underline-offset-4 hover:underline transition-colors"
             >
               See plans &amp; pricing across all 29 countries
-              <ArrowRight size={14} />
+              <ArrowRight aria-hidden="true" size={14} />
             </Link>
           </div>
         </div>
@@ -480,7 +480,7 @@ export default function Home() {
                 <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
                   <span className="text-lg font-bold text-white group-hover:text-[var(--dawn-glow)] transition-colors">{faq.question}</span>
                   <div className="w-8 h-8 rounded-full bg-[var(--dawn-horizon)] flex items-center justify-center text-[var(--dawn-glow)] group-open:rotate-180 transition-transform duration-300">
-                    <ChevronDown size={18} />
+                    <ChevronDown aria-hidden="true" size={18} />
                   </div>
                 </summary>
                 <div className="px-6 pb-6 text-slate-300 leading-relaxed border-t border-white/5 pt-4">
@@ -496,7 +496,7 @@ export default function Home() {
               className="inline-flex items-center text-[var(--dawn-glow)] font-bold hover:text-white transition-colors group"
             >
               <span>View All 30+ Questions</span>
-              <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+              <ArrowRight aria-hidden="true" className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
             </Link>
           </div>
         </div>
@@ -526,7 +526,7 @@ export default function Home() {
               >
                 <span className="relative z-10 inline-flex items-center">
                   Apply Now - Start Journey
-                  <ArrowRight className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
+                  <ArrowRight aria-hidden="true" className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
                 </span>
                 <BorderBeam size={160} duration={9} colorFrom="#FBBF24" colorTo="#FFFFFF" />
               </Link>

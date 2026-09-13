@@ -165,17 +165,14 @@ export default async function ProgramPage({ params }) {
             href="/certifications"
             className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors mb-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] rounded"
           >
-            <ArrowLeft size={15} /> All certifications
+            <ArrowLeft aria-hidden="true" size={15} /> All certifications
           </Link>
 
           {/* Said before anything else, so nobody reads the page as a live
               offer and then finds out at the bottom. */}
           {withdrawn && (
-            <div
-              role="status"
-              className="flex items-start gap-3 mb-8 rounded-xl border border-[var(--dawn-glow)]/35 bg-[var(--dawn-glow)]/10 px-5 py-4"
-            >
-              <ShieldCheck size={18} className="text-[var(--dawn-glow)] shrink-0 mt-0.5" />
+            <div className="flex items-start gap-3 mb-8 rounded-xl border border-[var(--dawn-glow)]/35 bg-[var(--dawn-glow)]/10 px-5 py-4">
+              <ShieldCheck size={18} aria-hidden="true" className="text-[var(--dawn-glow)] shrink-0 mt-0.5" />
               <p className="text-sm text-slate-200 leading-relaxed">
                 <span className="font-bold text-[var(--dawn-glow)]">
                   Withdrawn from the catalogue.
@@ -223,7 +220,7 @@ export default async function ProgramPage({ params }) {
                   className="inline-flex justify-center items-center px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
                 >
                   {withdrawn ? 'See our current programmes' : 'Enquire about this programme'}
-                  <ArrowRight className="ml-2" size={18} />
+                  <ArrowRight aria-hidden="true" className="ml-2" size={18} />
                 </Link>
                 <Link
                   href="/bookings"
@@ -261,7 +258,7 @@ export default async function ProgramPage({ params }) {
                   href={withdrawn ? '/certifications' : '#enquire'}
                   className="mt-5 inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 min-h-[44px] rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white font-bold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
                 >
-                  {withdrawn ? 'Current programmes' : 'Enquire now'} <ArrowRight size={15} />
+                  {withdrawn ? 'Current programmes' : 'Enquire now'} <ArrowRight aria-hidden="true" size={15} />
                 </Link>
               </div>
             </aside>
@@ -283,7 +280,7 @@ export default async function ProgramPage({ params }) {
                     key={o}
                     className="flex items-start gap-3 bg-[#141210] border border-white/10 rounded-xl p-4"
                   >
-                    <CheckCircle size={17} className={`${accent.text} shrink-0 mt-0.5`} />
+                    <CheckCircle aria-hidden="true" size={17} className={`${accent.text} shrink-0 mt-0.5`} />
                     <span className="text-slate-200 text-sm leading-relaxed">{o}</span>
                   </li>
                 ))}
@@ -322,7 +319,7 @@ export default async function ProgramPage({ params }) {
             {/* Certificate + guarantee rail */}
             <aside className="lg:col-span-1 space-y-5">
               <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-6">
-                <BadgeCheck size={26} className={`${accent.text} mb-3`} />
+                <BadgeCheck aria-hidden="true" size={26} className={`${accent.text} mb-3`} />
                 <h3 className="text-white font-bold text-base mb-2">Verifiable certificate</h3>
                 <p className="text-slate-300/80 text-sm leading-relaxed">
                   You receive <span className="text-white font-semibold">{program.certificate}</span> on completion,
@@ -332,7 +329,7 @@ export default async function ProgramPage({ params }) {
 
               {program.guarantee && (
                 <div className="bg-[#141210] border-2 border-[var(--dawn-glow)]/30 rounded-2xl p-6">
-                  <ShieldCheck size={26} className="text-[var(--dawn-glow)] mb-3" />
+                  <ShieldCheck aria-hidden="true" size={26} className="text-[var(--dawn-glow)] mb-3" />
                   <h3 className="text-white font-bold text-base mb-2">Outcome guarantee</h3>
                   <p className="text-white font-semibold text-sm leading-relaxed mb-2">{program.guarantee.promise}</p>
                   <p className="text-slate-400 text-xs leading-relaxed mb-3">
@@ -380,7 +377,7 @@ export default async function ProgramPage({ params }) {
                 href="/certifications"
                 className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all"
               >
-                See our current programmes <ArrowRight size={18} />
+                See our current programmes <ArrowRight aria-hidden="true" size={18} />
               </Link>
             </div>
           </div>
@@ -435,7 +432,7 @@ export default async function ProgramPage({ params }) {
                   <h3 className="text-white font-bold mb-2 leading-snug">{p.title}</h3>
                   <div className="flex items-center justify-between gap-2">
                     <span className="text-lg font-extrabold text-white">{formatINR(p.price)}</span>
-                    <ArrowRight size={15} className="text-[var(--storm-electric)] group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight aria-hidden="true" size={15} className="text-[var(--storm-electric)] group-hover:translate-x-1 transition-transform" />
                   </div>
                 </Link>
               ))}

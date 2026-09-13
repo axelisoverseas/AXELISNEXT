@@ -67,7 +67,7 @@ export default function FinancingBlock({ program }) {
               {financing.scheduleHeading}
             </div>
             <div className="overflow-x-auto">
-              <table className="w-full text-sm min-w-[380px]">
+              <table className="w-full text-sm min-w-[380px] tabular-nums">
                 <thead>
                   <tr className="border-b border-white/10">
                     <th scope="col" className="text-left pb-2.5 text-xs font-medium text-slate-500">Tenure</th>
@@ -128,7 +128,7 @@ export default function FinancingBlock({ program }) {
           {/* Fine print */}
           <div className="border-t border-white/10 px-6 md:px-8 py-5 bg-white/[0.02]">
             <p className="text-xs text-slate-500 leading-relaxed">
-              <ShieldCheck size={12} className="inline mr-1.5 -mt-0.5" />
+              <ShieldCheck aria-hidden="true" size={12} className="inline mr-1.5 -mt-0.5" />
               {financing.strip} Monthly amounts shown are the programme fee divided across the tenure;
               your card issuer sets the rate, so the final instalment and total are fixed by your bank.
               Approval sits with the financing provider and is subject to eligibility. A processing fee may

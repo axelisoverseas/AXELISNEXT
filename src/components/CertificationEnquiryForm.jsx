@@ -124,7 +124,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
         <div>
           <label className={LABEL} htmlFor="cert-phone">Phone</label>
           <input
-            id="cert-phone" type="tel" required autoComplete="tel"
+            id="cert-phone" type="tel" required autoComplete="tel" inputMode="tel"
             value={form.phone} onChange={set('phone')}
             placeholder="+91 " className={FIELD}
           />
@@ -134,7 +134,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
       <div className="mb-4">
         <label className={LABEL} htmlFor="cert-email">Email</label>
         <input
-          id="cert-email" type="email" required autoComplete="email"
+          id="cert-email" type="email" required autoComplete="email" spellCheck={false}
           value={form.email} onChange={set('email')}
           placeholder="you@example.com" className={FIELD}
         />

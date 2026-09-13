@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Axelis guarantee seal">
+  <title>Axelis — Guarantee Seal</title>
+  <desc>Certificate and written-guarantee seal. Outer rule, inner hairline, axial A at centre, programme wordmark on the circular path.</desc>
+  <defs>
+    <path id="sealArc" d="M120,120 m-88,0 a88,88 0 1,1 176,0 a88,88 0 1,1 -176,0"/>
+  </defs>
+  <circle cx="120" cy="120" r="112" fill="none" stroke="#12463A" stroke-width="3"/>
+  <circle cx="120" cy="120" r="103" fill="none" stroke="#12463A" stroke-width="1"/>
+  <text font-family="'Source Serif 4', Georgia, serif" font-size="13" letter-spacing="3.4" fill="#12463A">
+    <textPath href="#sealArc" startOffset="50%" text-anchor="middle">AXELIS OVERSEAS · WRITTEN OUTCOME GUARANTEE</textPath>
+  </text>
+  <g transform="translate(120,118) scale(0.62) translate(-60,-60)">
+    <g fill="none" stroke="#12463A" stroke-width="11" stroke-linecap="butt">
+      <path d="M20 100 L58 20"/>
+      <path d="M58 20 L92.6 100"/>
+    </g>
+    <path d="M10 74 L110 74" stroke="#12463A" stroke-width="6" stroke-linecap="butt"/>
+  </g>
+  <text x="120" y="186" text-anchor="middle" font-family="'IBM Plex Mono', ui-monospace, monospace" font-size="11" letter-spacing="1.6" fill="#7E5C1C">AXC-YYYY-####</text>
+</svg>

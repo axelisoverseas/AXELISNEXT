@@ -42,7 +42,7 @@ function Block({ block }) {
   if (block.table) {
     return (
       <div className="overflow-x-auto mb-5">
-        <table className="w-full text-sm border border-white/15 rounded-lg overflow-hidden">
+        <table className="w-full text-sm tabular-nums border border-white/15 rounded-lg overflow-hidden">
           <thead>
             <tr className="bg-white/[0.05]">
               {block.table.head.map((h) => (

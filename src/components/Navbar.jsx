@@ -64,11 +64,11 @@ const Navbar = () => {
           {/* Contact Info */}
           <div className="flex flex-wrap justify-center items-center gap-6 text-slate-300">
             <div className="flex items-center gap-2 hover:text-white transition-colors">
-              <Phone size={14} className="text-[var(--storm-electric)]" />
+              <Phone aria-hidden="true" size={14} className="text-[var(--storm-electric)]" />
               <span>{siteInfo.contact.phones[0]}</span>
             </div>
             <div className="flex items-center gap-2 hover:text-white transition-colors">
-              <Mail size={14} className="text-[var(--storm-electric)]" />
+              <Mail aria-hidden="true" size={14} className="text-[var(--storm-electric)]" />
               <span>{siteInfo.contact.emails[0]}</span>
             </div>
           </div>
@@ -90,20 +90,22 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center">
+            <Link href="/" className="flex items-center shrink-0">
               {/* Note: Using standard img tag for ease of filtering, Next Image can be tricky with invert filters */}
               <img
                 src="/1yellow svg logoaxelis.svg"
                 alt="Axelis Overseas"
-                className="h-16 w-auto object-contain [filter:brightness(0)_invert(1)] drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]"
+                width={64}
+                height={64}
+                className="h-16 w-auto shrink-0 object-contain [filter:brightness(0)_invert(1)] drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]"
               />
             </Link>
 
             {/* Center Navigation Links - Clean Tabs */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden xl:flex items-center space-x-4 2xl:space-x-6 min-w-0">
               <Link
                 href="/"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
                 <span>Home</span>
@@ -111,7 +113,7 @@ const Navbar = () => {
 
               <Link
                 href="/products"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/products') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/products') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
                 <span>Student Plans</span>
@@ -119,7 +121,7 @@ const Navbar = () => {
 
               <Link
                 href="/university-finder"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/university-finder') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/university-finder') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
                 <span>Universities</span>
@@ -127,7 +129,7 @@ const Navbar = () => {
 
               <Link
                 href="/test-prep"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/test-prep') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/test-prep') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
                 <span>Test Prep</span>
@@ -135,7 +137,7 @@ const Navbar = () => {
 
               <Link
                 href="/testimonials"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/testimonials') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/testimonials') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
                 <span>Testimonials</span>
@@ -143,7 +145,7 @@ const Navbar = () => {
 
               <Link
                 href="/certifications"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/certifications') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/certifications') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
                 <span>Certifications</span>
@@ -151,7 +153,7 @@ const Navbar = () => {
 
               <Link
                 href="/accommodation"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/accommodation') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/accommodation') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
                 <span>Housing</span>
@@ -159,7 +161,7 @@ const Navbar = () => {
 
               <Link
                 href="/faq"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/faq') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/faq') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
                 <span>FAQ</span>
@@ -167,7 +169,7 @@ const Navbar = () => {
 
               <Link
                 href="/contact"
-                className={`flex items-center space-x-2 text-sm font-semibold transition-colors ${isActive('/contact') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/contact') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
                   }`}
               >
                 <span>Contact</span>
@@ -175,7 +177,7 @@ const Navbar = () => {
             </nav>
 
             {/* Desktop Navigation - Menu & CTA */}
-            <div className="hidden md:flex items-center space-x-4">
+            <div className="hidden xl:flex items-center space-x-3 shrink-0">
               <Link
                 href="/bookings"
                 className="relative overflow-hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
@@ -197,7 +199,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="md:hidden flex items-center">
+            <div className="xl:hidden flex items-center">
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
@@ -263,7 +265,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
             >
-              <GraduationCap size={18} className="mr-3" />
+              <GraduationCap aria-hidden="true" size={18} className="mr-3" />
               University Finder
             </Link>
             <Link
@@ -287,7 +289,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
             >
-              <Users size={18} className="mr-3" />
+              <Users aria-hidden="true" size={18} className="mr-3" />
               Testimonials
             </Link>
             <Link
@@ -295,7 +297,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
             >
-              <Award size={18} className="mr-3" />
+              <Award aria-hidden="true" size={18} className="mr-3" />
               Certifications
             </Link>
             <Link
@@ -303,7 +305,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
             >
-              <BadgeCheck size={18} className="mr-3" />
+              <BadgeCheck aria-hidden="true" size={18} className="mr-3" />
               Accreditations
             </Link>
             <Link
@@ -335,7 +337,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
             >
-              <Phone size={18} className="mr-3" />
+              <Phone aria-hidden="true" size={18} className="mr-3" />
               Bookings
             </Link>
             <Link
@@ -360,8 +362,8 @@ const Navbar = () => {
             <div>
               <p className="text-xs font-semibold text-[var(--storm-accent)] mb-3">Connect With Us</p>
               <div className="flex flex-col gap-3 text-sm">
-                <a href={`tel:${siteInfo.contact.phones[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2"><Phone size={14} /> {siteInfo.contact.phones[0]}</a>
-                <a href={`mailto:${siteInfo.contact.emails[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2"><Mail size={14} /> {siteInfo.contact.emails[0]}</a>
+                <a href={`tel:${siteInfo.contact.phones[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2"><Phone aria-hidden="true" size={14} /> {siteInfo.contact.phones[0]}</a>
+                <a href={`mailto:${siteInfo.contact.emails[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2"><Mail aria-hidden="true" size={14} /> {siteInfo.contact.emails[0]}</a>
               </div>
             </div>
           </div>

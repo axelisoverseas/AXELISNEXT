@@ -33,7 +33,7 @@ export default function CancellationRefundBlock() {
                 href={refundPolicy.href}
                 className="inline-flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-xl bg-white/8 hover:bg-white/12 border border-white/15 text-white font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
               >
-                Read the full Cancellation &amp; Refund Policy <ArrowRight size={15} />
+                Read the full Cancellation &amp; Refund Policy <ArrowRight aria-hidden="true" size={15} />
               </Link>
             </div>
           </div>
