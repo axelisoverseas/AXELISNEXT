@@ -225,8 +225,8 @@ export const policySections = [
         list: [
           `First line — cancellation and refund support: ${refundPolicy.supportEmail} · ${refundPolicy.supportPhone}`,
           'Escalation: axelisoverseas@overseeducation.com — Rishabh Agrawal, Founder',
-          'Corporate office: WorkFlo, KR Puram Hobli, Bengaluru',
-          'Registered office: Bilaspur',
+          'Corporate office: WorkFlo Ranka Junction, Property No. 224, 3rd Floor, #80/3, Vijinapur Village, Old Madras Road, KR Puram Hobli, Bengaluru, Karnataka 560016',
+          'Registered office: B20, Vrindavan Plaza, Nehru Chowk, Bilaspur, C.G. 495001',
         ],
       },
     ],
