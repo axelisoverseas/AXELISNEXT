@@ -27,7 +27,7 @@ export default function SpecimenCertificate({ programmeTitle = 'Global Career La
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 flex items-center justify-center select-none"
       >
-        <span className="text-[18vw] sm:text-[9rem] font-extrabold tracking-[0.2em] text-white/[0.04] rotate-[-18deg] whitespace-nowrap">
+        <span className="text-[13vw] sm:text-[5.5rem] md:text-[7rem] font-extrabold tracking-[0.15em] text-white/[0.045] rotate-[-16deg] whitespace-nowrap max-w-full">
           SPECIMEN
         </span>
       </div>
@@ -74,7 +74,7 @@ export default function SpecimenCertificate({ programmeTitle = 'Global Career La
           </div>
           <div className="min-w-0 col-span-2 sm:col-span-1">
             <dt className="text-[11px] uppercase tracking-wider text-slate-500 mb-1">Verify at</dt>
-            <dd className="text-sm font-semibold text-slate-300 break-words">
+            <dd className="text-xs sm:text-[13px] font-semibold text-slate-300 whitespace-nowrap">
               overseeducation.com/verify
             </dd>
           </div>
