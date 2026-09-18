@@ -23,6 +23,38 @@ function describe(v) {
   };
 }
 
+/**
+ * Presence is not validity. The variables can be set perfectly and still be
+ * rejected by Cashfree — that is exactly what happened here, and a green
+ * "ready" sent us looking in the wrong place. So actually ask Cashfree.
+ *
+ * Fetches a deliberately nonexistent order: 401 means the credentials are
+ * refused, 404 means they authenticated fine and the order simply is not
+ * there. Cheap, creates nothing, charges nothing.
+ */
+async function probeAuth(appId, secret, sandbox) {
+  if (!appId || !secret) return { checked: false, reason: 'credentials not set' };
+  const base = sandbox ? 'https://sandbox.cashfree.com' : 'https://api.cashfree.com';
+  try {
+    const res = await fetch(`${base}/pg/orders/does-not-exist-probe`, {
+      headers: {
+        'x-api-version': '2023-08-01',
+        'x-client-id': appId,
+        'x-client-secret': secret,
+      },
+      cache: 'no-store',
+    });
+    if (res.status === 401 || res.status === 403) {
+      let msg = '';
+      try { msg = (await res.json()).message || ''; } catch {}
+      return { checked: true, authenticated: false, status: res.status, cashfreeSays: msg };
+    }
+    return { checked: true, authenticated: true, status: res.status };
+  } catch (err) {
+    return { checked: true, authenticated: null, error: 'could not reach Cashfree' };
+  }
+}
+
 export async function GET() {
   const appId = process.env.CASHFREE_APP_ID;
   const secret = process.env.CASHFREE_SECRET_KEY;
@@ -31,8 +63,13 @@ export async function GET() {
   const app = describe(appId);
   const sec = describe(secret);
 
+  const auth = await probeAuth(appId, secret, envMode === 'sandbox');
+
   return NextResponse.json({
-    ready: app.set && sec.set,
+    // Both must hold. Variables present but refused by Cashfree is the exact
+    // failure this endpoint existed to catch and previously reported as ready.
+    ready: app.set && sec.set && auth.authenticated === true,
+    credentialsAccepted: auth,
     CASHFREE_APP_ID: app,
     CASHFREE_SECRET_KEY: sec,
     // Absent means live. If this says "sandbox" on production, payments will
