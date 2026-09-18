@@ -1,3 +1,5 @@
+import { assertAmountsMatchCatalogue } from './cashfreeLinks';
+
 // ============================================================================
 // AXELIS CERTIFICATION CATALOGUE — v2
 // ============================================================================
@@ -684,6 +686,11 @@ export function programsByTier(tierId) {
 export function populatedTiers() {
   return TIERS.filter((t) => programsByTier(t.id).length > 0);
 }
+
+// A link minted for the wrong amount charges a student something the page
+// never quoted, and nothing else in the build would catch it. This throws at
+// import time, so the mismatch fails `npm run build` rather than checkout.
+assertAmountsMatchCatalogue(programs);
 
 export const catalogueStats = {
   programCount: programs.length,
