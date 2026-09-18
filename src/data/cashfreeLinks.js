@@ -27,6 +27,12 @@ export const cashfreeLinks = {
   'global-career-launch': { amount: 200000, url: null, label: 'Global Career Launch' },
   'phd-fellowship-concierge': { amount: 250000, url: null, label: 'PhD & Fellowship Concierge' },
   'executive-mba-concierge': { amount: 300000, url: null, label: 'Executive MBA Concierge' },
+
+  // --- Visa filing ---------------------------------------------------------
+  // Sold on both sides. This is the same service and the same price as
+  // `visa-filing-tourist-uk` in the B2B map on axelisoverseas.com; if one
+  // moves, move both. Filed in-house by Axelis.
+  'visa-filing-tourist-uk': { amount: 10000, url: null, label: 'Tourist visa filing — UK' },
 };
 
 /** The hosted link for a product, or null when it has not been minted yet. */
