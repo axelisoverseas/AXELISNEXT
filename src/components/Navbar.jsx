@@ -293,6 +293,14 @@ const Navbar = () => {
               Vocational (Germany)
             </Link>
             <Link
+              href="/services"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
+            >
+              <Package aria-hidden="true" size={18} className="mr-3" />
+              Student Services
+            </Link>
+            <Link
               href="/testimonials"
               onClick={() => setIsOpen(false)}
               className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
