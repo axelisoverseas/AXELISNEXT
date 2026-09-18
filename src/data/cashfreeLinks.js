@@ -20,8 +20,19 @@
 /** slug -> { amount (paise-free INR), url }. url stays null until minted. */
 export const cashfreeLinks = {
   // --- Student Plans (/products) ------------------------------------------
-  'global-admissions-charter': { amount: 9999, url: null, label: 'Global Admissions Charter (GAC)' },
-  'europe-public-charter': { amount: 19999, url: null, label: 'Europe Public Charter (EPC)' },
+  // `disclosure` renders on the checkout form before payment. The EPC Success
+  // Fee is a further ₹1,80,000 liability; a student who pays ₹19,999 without
+  // being told that has a clean unfair-trade-practice claim under the
+  // Consumer Protection Act 2019. It must be on the surface that takes money,
+  // not only in the charter they receive afterwards.
+  'global-admissions-charter': {
+    amount: 9999, url: null, label: 'Global Admissions Charter (GAC)',
+    disclosure: 'This ₹9,999 is refunded in full once your visa is granted, you have arrived, and you have paid your university tuition in full — see Section 4A of the Global Admissions Charter. GAC carries no other Axelis fee.',
+  },
+  'europe-public-charter': {
+    amount: 19999, url: null, label: 'Europe Public Charter (EPC)',
+    disclosure: 'EPC is a two-part fee. This ₹19,999 Service Fee is payable now. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a tuition-free public university — total ₹1,99,999. No offer, or an offer you decline, means no Success Fee.',
+  },
 
   // --- Certification programmes (/certifications) -------------------------
   'global-career-launch': { amount: 200000, url: null, label: 'Global Career Launch' },

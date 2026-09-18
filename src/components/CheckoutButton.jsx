@@ -101,7 +101,15 @@ export default function CheckoutButton({ product, label, className = '' }) {
   return (
     <form onSubmit={onSubmit} className="rounded-2xl border-2 border-white/10 bg-[#141210] p-5 max-w-md">
       <p className="text-white font-bold mb-1">{item.label}</p>
-      <p className="text-2xl font-extrabold text-white mb-4 tabular-nums">{formatINR(item.amount)}</p>
+      <p className="text-2xl font-extrabold text-white mb-3 tabular-nums">{formatINR(item.amount)}</p>
+
+      {/* Shown before payment, not after. A fee a payer only learns about
+          once they have paid is the thing that turns a refund into a claim. */}
+      {item.disclosure && (
+        <div className="mb-4 rounded-lg border border-[var(--dawn-glow)]/35 bg-[var(--dawn-glow)]/10 px-3.5 py-3">
+          <p className="text-xs leading-relaxed text-slate-200">{item.disclosure}</p>
+        </div>
+      )}
 
       <div className="space-y-3">
         <div>
