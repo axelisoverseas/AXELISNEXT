@@ -227,7 +227,7 @@ function ProductsContent() {
                   <p className="text-stone-200/85 text-sm font-medium">Onboarding deposit &mdash; <span className="text-emerald-300 font-semibold">100% refundable</span></p>
                   <p className="text-slate-300/90 text-xs mt-1.5 leading-relaxed">
                     Refunded in full once your visa is granted, you have arrived, and you have paid your
-                    university tuition in full &mdash; so a placed student pays Axelis nothing. Also refunded
+                    university tuition in full, so a placed student pays Axelis nothing. Also refunded
                     if you receive zero offers. Full conditions in the Global Admissions Charter.
                   </p>
                 </div>
@@ -395,7 +395,7 @@ function ProductsContent() {
                   ['Cost of living', 'Higher (UK/US/AU metros)', 'Moderate (most European cities)'],
                   ['Language requirement', 'IELTS / TOEFL / PTE', 'IELTS + local language (DELF / Goethe A1–A2)'],
                   ['Axelis fee', '₹9,999 onboarding', '₹19,999 service fee + ₹1,80,000 success fee on accepting an offer (₹1,99,999 total)'],
-                  ['Refund policy', 'Refunded in full once visa granted, arrived and tuition paid in full — or if zero offers', 'Service fee refunded if zero offers; success fee refunded on visa refusal not attributable to you'],
+                  ['Refund policy', 'Refunded in full once visa granted, arrived and tuition paid in full, or if zero offers', 'Service fee refunded if zero offers; success fee refunded on visa refusal not attributable to you'],
                   ['Application timeline', 'Rolling intakes, plan 6–9 months ahead', 'Strict deadlines, plan 9–12 months ahead'],
                   ['Post-study work visa', 'UK 2yr, USA 1–3yr OPT, Canada up to 3yr, AU 2–4yr', 'Germany 18mo job seeker, Norway 1yr, Finland 1yr'],
                   ['Scholarship support', 'Yes, every relevant grant applied for', 'Yes: DAAD, Erasmus+, country-specific'],

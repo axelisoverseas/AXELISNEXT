@@ -27,11 +27,11 @@ export const cashfreeLinks = {
   // not only in the charter they receive afterwards.
   'global-admissions-charter': {
     amount: 9999, url: null, label: 'Global Admissions Charter (GAC)',
-    disclosure: 'This ₹9,999 is refunded in full once your visa is granted, you have arrived, and you have paid your university tuition in full — see Section 4A of the Global Admissions Charter. GAC carries no other Axelis fee.',
+    disclosure: 'This ₹9,999 is refunded in full once your visa is granted, you have arrived, and you have paid your university tuition in full. See Section 4A of the Global Admissions Charter. GAC carries no other Axelis fee.',
   },
   'europe-public-charter': {
     amount: 19999, url: null, label: 'Europe Public Charter (EPC)',
-    disclosure: 'EPC is a two-part fee. This ₹19,999 Service Fee is payable now. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a tuition-free public university — total ₹1,99,999. No offer, or an offer you decline, means no Success Fee.',
+    disclosure: 'EPC is a two-part fee. This ₹19,999 Service Fee is payable now. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a tuition-free public university. Total ₹1,99,999. No offer, or an offer you decline, means no Success Fee.',
   },
 
   // --- Certification programmes (/certifications) -------------------------
@@ -43,7 +43,7 @@ export const cashfreeLinks = {
   // Sold on both sides. This is the same service and the same price as
   // `visa-filing-tourist-uk` in the B2B map on axelisoverseas.com; if one
   // moves, move both. Filed in-house by Axelis.
-  'visa-filing-tourist-uk': { amount: 10000, url: null, label: 'Tourist visa filing — UK' },
+  'visa-filing-tourist-uk': { amount: 10000, url: null, label: 'Tourist visa filing (UK)' },
 };
 
 /** The hosted link for a product, or null when it has not been minted yet. */
