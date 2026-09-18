@@ -5,6 +5,8 @@ import {
   emiSchedule, formatINR, monthlyEmi, emiTenure,
   BAJAJ_EMI_LIVE, financing,
 } from '../data/certificationPrograms';
+import { cashfreeLinks } from '../data/cashfreeLinks';
+import CheckoutButton from './CheckoutButton';
 
 /**
  * Fee + financing block.
@@ -110,9 +112,18 @@ export default function FinancingBlock({ program }) {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3">
+              {/* Pay outright, for anyone who does not need financing. Only
+                  rendered for products we can actually take money for. */}
+              {cashfreeLinks[program.slug] && (
+                <CheckoutButton
+                  product={program.slug}
+                  label={`Pay ${formatINR(program.price)}`}
+                  className="inline-flex justify-center items-center gap-2 px-6 py-3 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold text-sm transition-[filter]"
+                />
+              )}
               <a
                 href="#enquire"
-                className="inline-flex justify-center items-center px-6 py-3 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold text-sm transition-[filter]"
+                className="inline-flex justify-center items-center px-6 py-3 min-h-[44px] rounded-xl bg-white/8 hover:bg-white/12 border border-white/15 text-white font-semibold text-sm transition-colors"
               >
                 Apply now
               </a>
