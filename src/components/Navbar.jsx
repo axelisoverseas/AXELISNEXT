@@ -10,7 +10,7 @@ const WhatsAppWidget = dynamic(() => import('./WhatsAppWidget'), { ssr: false })
 import {
   Menu, X, Phone, Mail, Home, Package, MessageCircle,
   Users, ExternalLink, Globe2, Award, HelpCircle, GraduationCap, BookOpen,
-  BadgeCheck
+  BadgeCheck, Briefcase,
 } from 'lucide-react';
 import { siteInfo } from '../data/siteData';
 import { BorderBeam } from './ui/BorderBeam';
@@ -283,6 +283,14 @@ const Navbar = () => {
             >
               <HelpCircle size={18} className="mr-3" />
               Test Prep
+            </Link>
+            <Link
+              href="/vocational"
+              onClick={() => setIsOpen(false)}
+              className="flex items-center p-3 rounded-lg text-slate-200 hover:bg-white/5 hover:text-[var(--storm-electric)] font-medium transition-colors"
+            >
+              <Briefcase aria-hidden="true" size={18} className="mr-3" />
+              Vocational (Germany)
             </Link>
             <Link
               href="/testimonials"
