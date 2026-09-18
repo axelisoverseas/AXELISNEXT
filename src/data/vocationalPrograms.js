@@ -137,6 +137,8 @@ export const vocationalPrograms = [
   {
     slug: 'ausbildung',
     name: 'Ausbildung',
+    image: 'https://images.unsplash.com/photo-1690356107685-3725367f6f3f',
+    imageAlt: 'Trainees in workshop overalls working at a bench vice during vocational training',
     tagline: 'Paid vocational training in Germany, with an employer contract before you fly.',
     summary:
       'A German company takes you on as a trainee, pays you a monthly training wage, and you qualify in a recognised trade in two to three and a half years.',
@@ -170,6 +172,8 @@ export const vocationalPrograms = [
   {
     slug: 'chancenkarte',
     name: 'Chancenkarte (Opportunity Card)',
+    image: 'https://images.unsplash.com/photo-1554072675-66db59dba46f',
+    imageAlt: 'The Brandenburg Gate and Berlin TV tower seen along a city street',
     tagline: 'A points-based visa that lets you enter Germany and look for work on the ground.',
     summary:
       'Germany scores you on qualification, German and English ability, experience and age. Clear the points threshold and you get a one-year visa to be in Germany and find skilled work.',

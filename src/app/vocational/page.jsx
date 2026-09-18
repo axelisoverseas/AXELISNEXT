@@ -33,7 +33,19 @@ export default function VocationalPage() {
     <main className="min-h-screen text-slate-100">
       {/* HERO */}
       <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-white/5">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none">
+          <img
+            src="https://images.unsplash.com/photo-1587330979470-3595ac045ab0?q=80&w=2400&auto=format&fit=crop"
+            alt=""
+            width={2400}
+            height={1600}
+            loading="eager"
+            fetchPriority="high"
+            className="absolute inset-0 w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)]/92 via-[var(--storm-deep)]/80 to-[var(--storm-deep)]" />
+        </div>
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-wider text-[var(--dawn-glow)] mb-4">
             Vocational Skill Programmes
           </p>
@@ -78,8 +90,23 @@ export default function VocationalPage() {
             return (
               <article
                 key={p.slug}
-                className="rounded-2xl border-2 border-white/10 bg-[#141210] p-7 md:p-8 flex flex-col"
+                className="rounded-2xl border-2 border-white/10 bg-[#141210] overflow-hidden flex flex-col"
               >
+                {p.image && (
+                  <div className="relative h-44 sm:h-52 overflow-hidden">
+                    <img
+                      src={`${p.image}?w=1200&q=75&auto=format&fit=crop`}
+                      alt={p.imageAlt}
+                      width={1200}
+                      height={600}
+                      loading="lazy"
+                      decoding="async"
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#141210] via-[#141210]/35 to-transparent" />
+                  </div>
+                )}
+                <div className="p-7 md:p-8 flex flex-col flex-1">
                 <h3 className="text-2xl font-bold text-white tracking-tight mb-2">{p.name}</h3>
                 <p className="text-[var(--dawn-glow)] text-sm font-semibold mb-4">{p.tagline}</p>
                 <p className="text-slate-300/85 leading-relaxed mb-6">{p.summary}</p>
@@ -136,6 +163,7 @@ export default function VocationalPage() {
                     <Clock size={15} aria-hidden="true" className="shrink-0 mt-0.5 text-[var(--dawn-glow)]" />
                     <p className="text-sm text-slate-300/85">{p.duration}</p>
                   </div>
+                </div>
                 </div>
               </article>
             );
