@@ -93,3 +93,21 @@ before a lender does.
 has declined. If task 4 finds Cashfree offers genuine no-cost EMI, that changes
 the answer — but it needs Rishabh's sign-off before it reaches a page, not an
 agent's judgement.
+
+---
+
+## Git author email — deployment gotcha
+
+Vercel refuses to deploy a commit whose author email is not a real address.
+The earlier handover said to pass `rishabhagrawal@Rishabhs-MacBook-Air-2.local`
+per commit; that commits fine but Vercel rejects it with "not a valid email
+address ... prevents Vercel from identifying the commit author".
+
+Both repos now carry a repo-local git identity, so this cannot recur:
+
+```
+git config --local user.email "axelisoverseas@overseeducation.com"
+```
+
+Repo-local, not `--global` — the original handover asked that global config be
+left alone, and this achieves the same thing without touching it.
