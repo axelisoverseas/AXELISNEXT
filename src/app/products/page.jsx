@@ -1,6 +1,7 @@
 "use client";
 import React, { Suspense, useEffect } from 'react';
 import Link from 'next/link';
+import CheckoutButton from '../../components/CheckoutButton';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
@@ -46,6 +47,10 @@ function ProductsContent() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
+    // LEGACY: these two Razorpay payment pages are still live and still
+    // take money. The on-page CTA is Cashfree now, but old links in ads and
+    // email still land here, so the redirect stays until Cashfree has taken
+    // a real payment. Remove both branches then — not before.
     const redirect = searchParams.get('redirect');
     if (redirect === 'zcf') {
       window.location.href = 'https://pages.razorpay.com/pl_Rk1qpiuEJifDx1/view';
@@ -239,16 +244,15 @@ function ProductsContent() {
                   ))}
                 </ul>
 
-                <Link
-                  href="/products?redirect=zcf"
-                  className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
-                  aria-label="Enrol in the Global Admissions Charter (GAC) plan for nine thousand nine hundred and ninety nine rupees"
-                >
-                  Enrol in Global Admissions Charter (GAC) &mdash; ₹9,999
-                  <ArrowRight size={20} />
-                </Link>
+                <div className="mt-auto">
+                  <CheckoutButton
+                    product="global-admissions-charter"
+                    label="Enrol in Global Admissions Charter (GAC) — ₹9,999"
+                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                  />
+                </div>
                 <p className="text-xs text-slate-500 mt-3 text-center flex items-center justify-center gap-1.5">
-                  <ShieldCheck size={12} /> Secure via Razorpay &middot; refund terms in writing
+                  <ShieldCheck size={12} /> Secure via Cashfree &middot; refund terms in writing
                 </p>
               </div>
             </article>
@@ -338,16 +342,15 @@ function ProductsContent() {
                   ))}
                 </ul>
 
-                <Link
-                  href="/products?redirect=ztf"
-                  className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-electric)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
-                  aria-label="Enrol in the Europe Public Charter (EPC) plan for nineteen thousand nine hundred and ninety nine rupees"
-                >
-                  Enrol in Europe Public Charter (EPC) &mdash; ₹19,999
-                  <ArrowRight size={20} />
-                </Link>
+                <div className="mt-auto">
+                  <CheckoutButton
+                    product="europe-public-charter"
+                    label="Enrol in Europe Public Charter (EPC) — ₹19,999"
+                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-electric)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                  />
+                </div>
                 <p className="text-xs text-slate-500 mt-3 text-center flex items-center justify-center gap-1.5">
-                  <ShieldCheck size={12} /> Secure via Razorpay &middot; refund terms in writing
+                  <ShieldCheck size={12} /> Secure via Cashfree &middot; refund terms in writing
                 </p>
               </div>
             </article>
