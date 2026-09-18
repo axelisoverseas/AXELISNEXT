@@ -5,20 +5,16 @@ import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
 import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap, ShieldCheck, GraduationCap, Landmark } from 'lucide-react';
 
-const InstagramSuccessStories = dynamic(() => import('../components/InstagramSuccessStories'), { ssr: false });
-const TeamGlobeCarousel = dynamic(() => import('../components/TeamGlobeCarousel'), { ssr: false });
-const StudyAbroadGuides = dynamic(() => import('../components/StudyAbroadGuides'), { ssr: false });
 const UniversityLogosSection = dynamic(() => import('../components/UniversityLogosSection'), { ssr: false });
 const GoogleReviewsFloat = dynamic(() => import('../components/GoogleReviewsFloat'), { ssr: false });
 const GoogleReviewsSection = dynamic(() => import('../components/GoogleReviewsSection'), { ssr: false });
-const HomeCertificationsPreview = dynamic(() => import('../components/HomeCertificationsPreview'));
 import HeroOrbitalBackdrop from '../components/HeroOrbitalBackdrop';
 
 import { BorderBeam } from '../components/ui/BorderBeam';
 import { RevealText } from '../components/ui/RevealText';
 import { TextEffect, TextEffectInView } from '../components/ui/TextEffect';
 
-import { teamMembers, faqData } from '../data/siteData';
+import { faqData } from '../data/siteData';
 
 const renderMarkdown = (text) => {
   if (!text) return null;
@@ -68,9 +64,9 @@ export default function Home() {
             variants={fadeInUp}
             className="text-4xl md:text-7xl font-extrabold text-white tracking-tight mb-6 max-w-5xl mx-auto"
           >
-            India&rsquo;s certification-first{' '}
+            Study abroad, without{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
-              study-abroad platform.
+              guessing at the cost.
             </span>
           </motion.h1>
 
@@ -78,9 +74,8 @@ export default function Home() {
             variants={fadeInUp}
             className="text-lg md:text-xl text-slate-300/90 max-w-2xl mx-auto leading-relaxed mb-10"
           >
-            End-to-end concierge programmes. Application coaching, languages, executive MBA prep, PhD and fellowship
-            applications, career launch — one counsellor throughout, with a written outcome guarantee. Every student
-            earns a verifiable credential on the way to their offer letter.
+            India&rsquo;s study-abroad consultancy across 29 destination markets. One counsellor from shortlist to
+            arrival, every fee published before you pay, and a refundable deposit on both student plans.
           </motion.p>
 
           <motion.div
@@ -88,10 +83,10 @@ export default function Home() {
             className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
           >
             <Link
-              href="/certifications"
+              href="/products"
               className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
-              Explore Certifications
+              See student plans
               <ArrowRight aria-hidden="true" className="ml-2" size={20} />
             </Link>
             <Link
@@ -228,8 +223,6 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Certifications preview — primary product line, delivers on the hero */}
-      <HomeCertificationsPreview />
 
       {/* Plans preview — GAC + EPC teaser, links to /products */}
       <section className="relative py-20 overflow-hidden">
@@ -445,14 +438,8 @@ export default function Home() {
       {/* Google Reviews — verified 3rd-party proof from Bilaspur branch */}
       <GoogleReviewsSection compact />
 
-      {/* Team Section */}
-      <TeamGlobeCarousel teamMembers={teamMembers} />
 
-      {/* Social Proof Videos */}
-      <InstagramSuccessStories />
 
-      {/* Educational Guides */}
-      <StudyAbroadGuides />
 
       {/* Quick FAQ Section — dawn phase */}
       <section className="py-24 relative overflow-hidden">

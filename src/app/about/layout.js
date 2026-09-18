@@ -1,7 +1,7 @@
 export const metadata = {
     title: 'About Us',
     description:
-        "India's certification-first study-abroad platform. Bengaluru corporate office, Bilaspur registered office, end-to-end certification programmes with a written outcome guarantee.",
+        "India's study-abroad consultancy. Bengaluru corporate office, Bilaspur registered office, 29 destination markets and an in-house certification catalogue.",
     alternates: { canonical: 'https://overseeducation.com/about' },
 };
 
@@ -14,7 +14,7 @@ const organizationLd = {
     url: 'https://overseeducation.com',
     logo: 'https://overseeducation.com/1yellow%20svg%20logoaxelis.svg',
     description:
-        "India's certification-first study-abroad platform. End-to-end certification programmes with a written outcome guarantee, alongside study-abroad advisory across 29 destination markets.",
+        "India's study-abroad consultancy across 29 destination markets, with an in-house certification catalogue and a written outcome guarantee on concierge programmes.",
     foundingDate: '2023-07-18',
     identifier: {
         '@type': 'PropertyValue',

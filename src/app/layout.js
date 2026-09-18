@@ -20,7 +20,7 @@ export const metadata = {
     template: '%s | Axelis Overseas Education',
     default: 'Axelis Overseas — Certification-first Study Abroad | Outcome Guaranteed | EMI Available',
   },
-  description: "India's certification-first study-abroad platform. End-to-end concierge programmes with a written outcome guarantee. EMI available. Bengaluru + Bilaspur.",
+  description: "India's study-abroad consultancy across 29 destination markets. One counsellor from shortlist to arrival, every fee published before you pay. Bengaluru + Bilaspur.",
   keywords: [
     "study abroad", "overseas education", "study abroad consultancy India",
     "study in UK", "study in USA", "study in Ireland", "study in Germany",

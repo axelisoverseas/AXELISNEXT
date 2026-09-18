@@ -145,7 +145,7 @@ const Footer = () => {
         <div className="border-t border-[var(--storm-electric)]/10 mt-12 pt-8">
           <p className="text-sm text-slate-400 leading-relaxed max-w-4xl">
             <span className="text-slate-200 font-semibold">Axelis Overseas Education Pvt Ltd</span>
-            {' '}&mdash; Bengaluru &amp; Bilaspur. India&rsquo;s certification-first study-abroad platform.
+            {' '}&mdash; Bengaluru &amp; Bilaspur. India&rsquo;s study-abroad consultancy across 29 destination markets.
             Certification programmes with a written outcome guarantee. Zero-Tuition-Fee (ZTF) Charter agency.
           </p>
         </div>
