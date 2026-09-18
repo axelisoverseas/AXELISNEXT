@@ -155,7 +155,7 @@ function ProductsContent() {
               Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">One destination &mdash; yours.</span>
             </h2>
             <p className="text-slate-300/85 text-lg">
-              Pick the route that matches where you want to study. Both come with a refundable deposit and a dedicated counsellor. Fees and refund conditions differ — they are set out in full on each card below.
+              Pick the route that matches where you want to study. Both come with a refundable deposit and a dedicated counsellor. Fees and refund conditions differ, and are set out in full on each card below.
             </p>
           </div>
 
