@@ -54,6 +54,19 @@ local machine, so the fault is inside the Cashfree account — not the site.
 >    hypothesis: a pinned IP would produce this exact 401 from both Vercel and a
 >    local machine, and Vercel's IPs are dynamic so it can never satisfy one.
 >
+> ### Task 1b — Confirm the keys are PAYMENT GATEWAY keys
+>
+> Cashfree issues separate credentials per product — Payment Gateway, Payouts,
+> and Secure ID each have their own. A perfectly valid Payouts or Secure ID key
+> returns exactly this `401 authentication Failed` when used against
+> `api.cashfree.com/pg/`. This is now the leading hypothesis alongside the IP
+> allowlist.
+>
+> Report: under which product heading do the API keys live? If the dashboard
+> offers keys in more than one place (e.g. a Payouts section with its own
+> credentials), say so and report which section the `CF1349…` Client ID belongs
+> to. The keys must come from the **Payment Gateway** section.
+>
 > ### Task 2 — Check for account-level gating
 >
 > 1. Open the dashboard home and report any banner about products in review,
