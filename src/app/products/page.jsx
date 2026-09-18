@@ -29,7 +29,7 @@ const howItWorks = [
   {
     Icon: FileText,
     title: 'Sign + pay via Razorpay',
-    body: 'Single onboarding fee, refundable. No hidden agency markup later. Receipt arrives in your inbox the same day.',
+    body: 'Refundable deposit to start. Every fee that can ever apply is stated on the plan card before you pay — no hidden agency markup later. Receipt arrives in your inbox the same day.',
   },
   {
     Icon: GraduationCap,
@@ -90,7 +90,7 @@ function ProductsContent() {
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-10 text-slate-300/90 max-w-3xl mx-auto leading-relaxed">
-            Global Admissions Charter (GAC) for global private universities. Europe Public Charter (EPC) for tuition-free public Europe. Both come with a 100% refundable deposit and a dedicated counsellor.
+            Global Admissions Charter (GAC) for global private universities. Europe Public Charter (EPC) for tuition-free public Europe. Both come with a refundable deposit and a dedicated counsellor.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -114,7 +114,7 @@ function ProductsContent() {
               { Icon: CheckCircle, label: '5,000+ students' },
               { Icon: Globe2, label: '29+ countries' },
               { Icon: Award, label: '₹3 Cr+ scholarships' },
-              { Icon: ShieldCheck, label: '100% refundable' },
+              { Icon: ShieldCheck, label: 'Refundable deposit' },
             ].map(({ Icon, label }) => (
               <div key={label} className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-slate-200 text-sm font-semibold">
                 <Icon size={16} className="text-[var(--storm-electric)] shrink-0" />
@@ -155,7 +155,7 @@ function ProductsContent() {
               Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">One destination &mdash; yours.</span>
             </h2>
             <p className="text-slate-300/85 text-lg">
-              Pick the route that matches where you want to study. Both come with refundable deposits and a dedicated counsellor.
+              Pick the route that matches where you want to study. Both come with a refundable deposit and a dedicated counsellor. Fees and refund conditions differ — they are set out in full on each card below.
             </p>
           </div>
 
@@ -225,7 +225,11 @@ function ProductsContent() {
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">₹9,999</div>
                   <p className="text-stone-200/85 text-sm font-medium">Onboarding deposit &mdash; <span className="text-emerald-300 font-semibold">100% refundable</span></p>
-                  <p className="text-slate-400 text-xs mt-1">Refunded once your student visa is approved, or if you receive zero offers.</p>
+                  <p className="text-slate-300/90 text-xs mt-1.5 leading-relaxed">
+                    Refunded in full once your visa is granted, you have arrived, and you have paid your
+                    university tuition in full &mdash; so a placed student pays Axelis nothing. Also refunded
+                    if you receive zero offers. Full conditions in the Global Admissions Charter.
+                  </p>
                 </div>
 
                 <ul className="space-y-3 mb-8 text-sm">
@@ -323,7 +327,11 @@ function ProductsContent() {
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">₹19,999</div>
                   <p className="text-stone-200/85 text-sm font-medium">Service fee &mdash; <span className="text-emerald-300 font-semibold">refundable</span> if zero offers received.</p>
-                  <p className="text-slate-400 text-xs mt-1">Once you receive any offer, the fee covers the full end-to-end service.</p>
+                  <p className="text-slate-300/90 text-xs mt-1.5 leading-relaxed">
+                    Plus a <span className="text-[var(--dawn-glow)] font-semibold">₹1,80,000 Success Fee</span>, payable only
+                    if and when you accept an offer from a tuition-free public university. Total ₹1,99,999.
+                    No offer, or an offer you decline, means no Success Fee.
+                  </p>
                 </div>
 
                 <ul className="space-y-3 mb-8 text-sm">
@@ -386,8 +394,8 @@ function ProductsContent() {
                   ['Tuition cost', 'University-set fees (₹8–35L/year typical)', 'Free or near-free at public universities'],
                   ['Cost of living', 'Higher (UK/US/AU metros)', 'Moderate (most European cities)'],
                   ['Language requirement', 'IELTS / TOEFL / PTE', 'IELTS + local language (DELF / Goethe A1–A2)'],
-                  ['Axelis fee', '₹9,999 onboarding', '₹19,999 service fee'],
-                  ['Refund policy', '100% refund on visa approval or zero offers', 'Full refund if zero offers received'],
+                  ['Axelis fee', '₹9,999 onboarding', '₹19,999 service fee + ₹1,80,000 success fee on accepting an offer (₹1,99,999 total)'],
+                  ['Refund policy', 'Refunded in full once visa granted, arrived and tuition paid in full — or if zero offers', 'Service fee refunded if zero offers; success fee refunded on visa refusal not attributable to you'],
                   ['Application timeline', 'Rolling intakes, plan 6–9 months ahead', 'Strict deadlines, plan 9–12 months ahead'],
                   ['Post-study work visa', 'UK 2yr, USA 1–3yr OPT, Canada up to 3yr, AU 2–4yr', 'Germany 18mo job seeker, Norway 1yr, Finland 1yr'],
                   ['Scholarship support', 'Yes, every relevant grant applied for', 'Yes: DAAD, Erasmus+, country-specific'],
