@@ -1,0 +1,452 @@
+<meta charset="utf-8">
+<title>Axelis Font Lab</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@400;500;600;700&family=Big+Shoulders+Display:wght@700;800;900&family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Anton&family=Space+Grotesk:wght@500;700&family=Outfit:wght@400;600;800&family=Inter:wght@400;600;800&family=Poppins:wght@400;600;800&family=Rubik:wght@400;600;800&family=Source+Sans+3:wght@400;600;800&family=Farro:wght@500;700&family=Nunito+Sans:wght@400;700;900&family=Montserrat:wght@400;600;800&family=Geist:wght@400;600;800&family=IBM+Plex+Mono:wght@400;500&family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,400;12..96,75..100,700;12..96,75..100,800&family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;600;700&family=Familjen+Grotesk:wght@400;600;700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,400;9..144,700;9..144,900&family=Newsreader:opsz,wght@6..72,400;6..72,600;6..72,800&family=Plus+Jakarta+Sans:wght@400;600;800&family=Azeret+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&f[]=clash-display@400,600,700&f[]=cabinet-grotesk@700,800,900&f[]=switzer@400,600,800&f[]=general-sans@400,600&display=swap">
+<style>
+  :root{
+    /* live tokens driven by the switchers */
+    --display:'Big Shoulders Display','Arial Narrow',sans-serif;
+    --display-weight:800;
+    --display-track:0em;
+    --display-lead:.9;
+    --body:'Archivo',-apple-system,sans-serif;
+    --num:'IBM Plex Mono',ui-monospace,monospace;
+    --num-feat:'tnum';
+    --bg:#0B0B0C; --card:#141416; --line:#2A2A2E;
+    --fg:#F2F2F0; --dim:#9A9A96; --acc:#FFD400; --on-acc:#0B0B0C;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:#0B0B0C; color:#F2F2F0; font-family:'Archivo',-apple-system,sans-serif; line-height:1.55; -webkit-font-smoothing:antialiased}
+  .pad{max-width:1180px; margin:0 auto; padding-inline:24px}
+  p{margin:0} h1,h2,h3,h4{margin:0}
+  .mono{font-family:'IBM Plex Mono',ui-monospace,monospace; font-variant-numeric:tabular-nums}
+  .kicker{font-family:'IBM Plex Mono',monospace; font-size:.7rem; letter-spacing:.2em; text-transform:uppercase; color:#8A8A85}
+  .h-lg{font-family:var(--display); font-weight:var(--display-weight); letter-spacing:var(--display-track); line-height:var(--display-lead); text-transform:uppercase}
+
+  header.top{padding-block:46px 30px; border-bottom:1px solid #26262A}
+  header.top h1{font-family:'Archivo Black',sans-serif; text-transform:uppercase; font-size:clamp(2rem,1.4rem + 3vw,3.4rem); line-height:.95; margin-block:12px 14px}
+  header.top p{max-width:68ch; color:#B6B6B2}
+
+  section{padding-block:44px; border-bottom:1px solid #26262A}
+  .sechead{display:flex; flex-wrap:wrap; gap:8px 20px; align-items:baseline; justify-content:space-between; margin-bottom:22px}
+  .sechead h2{font-family:'Archivo Black',sans-serif; text-transform:uppercase; font-size:clamp(1.2rem,1rem + 1vw,1.7rem)}
+  .sechead .note{font-family:'IBM Plex Mono',monospace; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#8A8A85}
+
+  /* ---------- the rail ---------- */
+  .rail{display:flex; gap:10px; overflow-x:auto; padding-bottom:12px; scroll-snap-type:x proximity}
+  .rail::-webkit-scrollbar{height:8px}
+  .rail::-webkit-scrollbar-thumb{background:#3A3A3F}
+  .rail::-webkit-scrollbar-track{background:#171719}
+  .chip{flex:0 0 auto; scroll-snap-align:start; min-width:172px; background:#141416; border:1px solid #2A2A2E; padding:16px 16px 13px; cursor:pointer; text-align:left; color:#F2F2F0}
+  .chip:hover{border-color:#5A5A60}
+  .chip[aria-pressed="true"]{border-color:var(--acc); background:#1B1B1E; box-shadow:inset 3px 0 0 var(--acc)}
+  .chip .nm{display:block; font-size:1.55rem; line-height:1.05; text-transform:uppercase}
+  .chip .meta{display:block; margin-top:9px; font-family:'IBM Plex Mono',monospace; font-size:.62rem; letter-spacing:.1em; text-transform:uppercase; color:#8A8A85}
+  .chip .who{display:block; margin-top:3px; font-size:.74rem; color:#B6B6B2}
+  .chip.used .meta{color:#FF8A6B}
+  .chip.free .meta{color:#9CD67A}
+  .chip.trend .meta{color:#7FC8FF}
+
+  .stage{background:#0B0B0C; border:1px solid #2A2A2E; padding:34px 28px 28px; margin-bottom:18px}
+  .stage .big{font-family:var(--display); font-weight:var(--display-weight); letter-spacing:var(--display-track); line-height:var(--display-lead); text-transform:uppercase; font-size:clamp(2.2rem,1.4rem + 4.4vw,4.6rem)}
+  .stage .big .hl{color:var(--acc)}
+  .stage .mid{font-family:var(--display); font-weight:var(--display-weight); letter-spacing:var(--display-track); text-transform:uppercase; font-size:1.7rem; margin-top:20px; color:#D8D8D4}
+  .stage .row{display:flex; flex-wrap:wrap; gap:10px 28px; margin-top:20px; padding-top:16px; border-top:1px solid #2A2A2E; font-family:'IBM Plex Mono',monospace; font-size:.76rem; color:#8A8A85}
+  .stage .row b{color:#F2F2F0; font-weight:500}
+
+  /* ---------- colour tabs ---------- */
+  .tabs{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px}
+  .tab{background:transparent; border:1px solid #3A3A3F; color:#F2F2F0; padding:8px 14px; cursor:pointer; font-size:.86rem; display:flex; align-items:center; gap:8px}
+  .tab:hover{border-color:#5A5A60}
+  .tab[aria-pressed="true"]{border-color:#F2F2F0; background:#1B1B1E; font-weight:600}
+  .dot{width:12px; height:12px; display:inline-block; border:1px solid rgba(255,255,255,.25)}
+
+  /* ---------- competitor skin ---------- */
+  .skin{background:var(--bg); color:var(--fg); border:1px solid var(--line); font-family:var(--body)}
+  .skin .inner{padding:36px 30px 30px}
+  .skinlock{display:flex; align-items:center; gap:14px; margin-bottom:24px}
+  .skinlock .wm{font-family:var(--display); font-weight:var(--display-weight); letter-spacing:.06em; font-size:18px; text-transform:uppercase}
+  .skin h3{font-family:var(--display); font-weight:var(--display-weight); letter-spacing:var(--display-track); line-height:var(--display-lead); text-transform:uppercase; font-size:clamp(1.9rem,1.3rem + 3.2vw,3.6rem); max-width:15ch}
+  .skin h3 .hl{color:var(--acc)}
+  .skin .sub{margin-top:18px; max-width:52ch; color:var(--dim)}
+  .skin .btns{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px}
+  .skin .p1{background:var(--acc); color:var(--on-acc); border:2px solid var(--acc); padding:12px 22px; font-weight:700; font-size:.92rem; font-family:var(--body)}
+  .skin .p2{background:transparent; color:var(--fg); border:2px solid var(--line); padding:12px 22px; font-weight:700; font-size:.92rem; font-family:var(--body)}
+  .skin .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(215px,1fr)); gap:12px; margin-top:28px}
+  .skin .c{background:var(--card); border:1px solid var(--line); padding:18px}
+  .skin .c .t{font-family:var(--num); font-size:.64rem; letter-spacing:.14em; text-transform:uppercase; color:var(--acc)}
+  .skin .c h4{font-family:var(--display); font-weight:var(--display-weight); text-transform:uppercase; font-size:1.2rem; line-height:1; margin-top:8px}
+  .skin .c .fee{font-family:var(--num); font-variant-numeric:var(--num-feat); font-size:1.1rem; margin-top:12px; padding-top:10px; border-top:1px solid var(--line)}
+  .skinbar{background:var(--card); border-top:1px solid var(--line); padding:12px 30px; display:flex; flex-wrap:wrap; gap:8px 26px; font-family:var(--num); font-size:.72rem; color:var(--dim)}
+  .skinbar b{color:var(--fg); font-weight:500}
+
+  /* ---------- verdict ---------- */
+  .verdict{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:1px; background:#26262A; border:1px solid #26262A}
+  .vc{background:#111113; padding:22px}
+  .vc h4{font-family:'Archivo Black',sans-serif; text-transform:uppercase; font-size:1rem; margin-bottom:10px}
+  .vc.win h4{color:#FFD400}
+  .vc p, .vc li{font-size:.93rem; color:#A9A9A5}
+  .vc ul{margin:8px 0 0; padding-left:18px; display:flex; flex-direction:column; gap:6px}
+  .vc .spec{font-family:var(--display); font-weight:var(--display-weight); text-transform:uppercase; font-size:2rem; line-height:1; color:#F2F2F0; margin-bottom:12px}
+
+  table{border-collapse:collapse; width:100%; min-width:560px; font-size:.88rem}
+  .tw{overflow-x:auto; border:1px solid #2A2A2E}
+  th{text-align:left; font-family:'IBM Plex Mono',monospace; font-weight:500; font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:#8A8A85; padding:11px 14px; border-bottom:1px solid #2A2A2E}
+  td{padding:10px 14px; border-bottom:1px solid #2A2A2E; color:#C9C9C5}
+  tbody tr:nth-child(even){background:#141416}
+  tbody tr:last-child td{border-bottom:0}
+  .sw{display:inline-block; width:12px; height:12px; margin-right:7px; vertical-align:-1px; border:1px solid rgba(255,255,255,.2)}
+  @media (prefers-reduced-motion:reduce){*{animation:none!important; transition:none!important}}
+</style>
+
+<header class="top pad">
+  <span class="kicker">Axelis Overseas · type &amp; colour lab</span>
+  <h1>Every competitor's font, on your words</h1>
+  <p>Fonts and hex values below were read out of each firm's own stylesheets on 19 September 2026 — Ambitio, Yocket, AECC, IDP, Edvoy, upGrad Abroad, GradRight and Leverage Edu. Scroll the rail to change the heading face. Use the colour tabs to change the palette. Use the competitor skins to put both on at once and see what Axelis would look like wearing their brand.</p>
+</header>
+
+<!-- ============ THE RAIL ============ -->
+<section class="pad">
+  <div class="sechead">
+    <h2>1 · The font rail</h2>
+    <span class="note">Heading only · restores the Axelis body stack</span>
+  </div>
+
+  <div class="stage">
+    <div class="big">Three programmes.<br>One guarantee.<br><span class="hl">In writing.</span></div>
+    <div class="mid">Global Career Launch · ₹2,00,000</div>
+    <div class="row">
+      <span>Face <b class="f-name" id="f-name">Big Shoulders Display</b></span>
+      <span>Weight <b class="f-wt" id="f-wt">800</b></span>
+      <span>Used by <b class="f-who" id="f-who">nobody in the category</b></span>
+      <span>Licence <b class="f-lic" id="f-lic">Google Fonts, free</b></span>
+    </div>
+  </div>
+
+  <div class="rail" id="rail">
+    <button class="chip free" type="button" aria-pressed="true" data-font="'Big Shoulders Display','Arial Narrow',sans-serif" data-wt="800" data-tr="0em" data-ld=".9" data-name="Big Shoulders Display" data-who="nobody in the category" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Big Shoulders Display',sans-serif; font-weight:800">Big Shoulders</span>
+      <span class="meta">Open lane</span><span class="who">Condensed industrial</span></button>
+
+    <button class="chip free" type="button" aria-pressed="false" data-font="'Archivo Black',Impact,sans-serif" data-wt="400" data-tr="-.02em" data-ld=".94" data-name="Archivo Black" data-who="nobody in the category" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Archivo Black',sans-serif">Archivo Black</span>
+      <span class="meta">Open lane</span><span class="who">Wide and heavy</span></button>
+
+    <button class="chip free" type="button" aria-pressed="false" data-font="'Bebas Neue','Arial Narrow',sans-serif" data-wt="400" data-tr=".01em" data-ld=".92" data-name="Bebas Neue" data-who="nobody in the category" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Bebas Neue',sans-serif">Bebas Neue</span>
+      <span class="meta">Open lane</span><span class="who">Closest to your wordmark</span></button>
+
+    <button class="chip free" type="button" aria-pressed="false" data-font="'Oswald','Arial Narrow',sans-serif" data-wt="700" data-tr="0em" data-ld=".96" data-name="Oswald" data-who="nobody in the category" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Oswald',sans-serif; font-weight:700">Oswald</span>
+      <span class="meta">Open lane</span><span class="who">Your logo's lettering</span></button>
+
+    <button class="chip free" type="button" aria-pressed="false" data-font="'Anton',Impact,sans-serif" data-wt="400" data-tr="-.01em" data-ld=".92" data-name="Anton" data-who="nobody in the category" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Anton',sans-serif">Anton</span>
+      <span class="meta">You rejected this</span><span class="who">Heaviest condensed</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Space Grotesk',sans-serif" data-wt="700" data-tr="-.01em" data-ld="1" data-name="Space Grotesk" data-who="Ambitio" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Space Grotesk',sans-serif; font-weight:700">Space Grotesk</span>
+      <span class="meta">Ambitio uses it</span><span class="who">Also every AI startup</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Outfit',sans-serif" data-wt="800" data-tr="-.01em" data-ld="1" data-name="Outfit" data-who="AECC Global" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Outfit',sans-serif; font-weight:800">Outfit</span>
+      <span class="meta">AECC uses it</span><span class="who">Geometric, friendly</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Satoshi',sans-serif" data-wt="900" data-tr="-.01em" data-ld="1" data-name="Satoshi" data-who="Yocket" data-lic="Fontshare, free">
+      <span class="nm" style="font-family:'Satoshi',sans-serif; font-weight:900">Satoshi</span>
+      <span class="meta">Yocket uses it</span><span class="who">Neo-grotesque</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Geist',sans-serif" data-wt="800" data-tr="-.02em" data-ld="1" data-name="Geist" data-who="upGrad Abroad" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Geist',sans-serif; font-weight:800">Geist</span>
+      <span class="meta">upGrad uses it</span><span class="who">Vercel's typeface</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Inter',sans-serif" data-wt="800" data-tr="-.02em" data-ld="1" data-name="Inter" data-who="IDP and Edvoy" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Inter',sans-serif; font-weight:800">Inter</span>
+      <span class="meta">IDP · Edvoy</span><span class="who">The default of defaults</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Poppins',sans-serif" data-wt="800" data-tr="-.01em" data-ld="1" data-name="Poppins" data-who="GradRight" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Poppins',sans-serif; font-weight:800">Poppins</span>
+      <span class="meta">GradRight uses it</span><span class="who">Indian ed-tech default</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Farro',sans-serif" data-wt="700" data-tr="0em" data-ld="1" data-name="Farro" data-who="IDP" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Farro',sans-serif; font-weight:700">Farro</span>
+      <span class="meta">IDP display face</span><span class="who">Soft humanist</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Rubik',sans-serif" data-wt="800" data-tr="-.01em" data-ld="1" data-name="Rubik" data-who="Leverage Edu" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Rubik',sans-serif; font-weight:800">Rubik</span>
+      <span class="meta">Leverage uses it</span><span class="who">Rounded corners</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Source Sans 3',sans-serif" data-wt="800" data-tr="0em" data-ld="1" data-name="Source Sans 3" data-who="Leverage Edu" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Source Sans 3',sans-serif; font-weight:800">Source Sans</span>
+      <span class="meta">Leverage uses it</span><span class="who">Adobe's workhorse</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Nunito Sans',sans-serif" data-wt="900" data-tr="0em" data-ld="1" data-name="Nunito Sans" data-who="Ambitio body text" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Nunito Sans',sans-serif; font-weight:900">Nunito Sans</span>
+      <span class="meta">Ambitio body</span><span class="who">Rounded, soft</span></button>
+
+    <button class="chip used" type="button" aria-pressed="false" data-font="'Montserrat',sans-serif" data-wt="800" data-tr="-.01em" data-ld="1" data-name="Montserrat" data-who="Axelis today" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Montserrat',sans-serif; font-weight:800">Montserrat</span>
+      <span class="meta">Your site today</span><span class="who">The category default</span></button>
+  </div>
+</section>
+
+
+<!-- ============ TRENDING RAIL ============ -->
+<section class="pad">
+  <div class="sechead">
+    <h2>1b · Trending in 2026</h2>
+    <span class="note">Same rail behaviour · trend-forward, not category-safe</span>
+  </div>
+  <p style="max-width:74ch; color:#A9A9A5; margin-bottom:18px; font-size:.95rem">
+    What the type press actually says about 2026: neo-grotesques have displaced geometric sans in premium work,
+    editorial serifs are having their strongest run in decades, and variable fonts with expressive axes are the
+    thing being celebrated. The award lists — TDC, Typographica, Okay Type — crown mostly commercial faces
+    (Edgar, Delusse, Pennyroyal, Altesse) that cost real licensing money and cannot be loaded here, so this rail
+    is the free, loadable end of the same trend. The two most-referenced commercial faces right now are
+    <b style="color:#F2F2F0">Neue Montreal</b> and <b style="color:#F2F2F0">Editorial New</b>; Switzer and
+    Instrument Serif below are their closest free stand-ins.
+  </p>
+  <div class="stage">
+    <div class="big">Three programmes.<br>One guarantee.<br><span class="hl">In writing.</span></div>
+    <div class="mid">Global Career Launch · ₹2,00,000</div>
+    <div class="row">
+      <span>Face <b class="f-name">Big Shoulders Display</b></span>
+      <span>Weight <b class="f-wt">800</b></span>
+      <span>Used by <b class="f-who">nobody in the category</b></span>
+      <span>Licence <b class="f-lic">Google Fonts, free</b></span>
+    </div>
+  </div>
+
+  <div class="rail" id="rail2">
+    <button class="chip trend" type="button" aria-pressed="false" data-font="'Clash Display',sans-serif" data-wt="700" data-tr="-.01em" data-ld=".92" data-name="Clash Display" data-who="The display face of the last two years" data-lic="Fontshare, free">
+      <span class="nm" style="font-family:'Clash Display',sans-serif; font-weight:700">Clash Display</span>
+      <span class="meta">Fontshare, free</span><span class="who">The display face of the last two years</span></button>
+    <button class="chip trend" type="button" aria-pressed="false" data-font="'Bricolage Grotesque',sans-serif" data-wt="800" data-tr="-.02em" data-ld=".94" data-name="Bricolage" data-who="Variable width, deliberately wonky" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Bricolage Grotesque',sans-serif; font-weight:800">Bricolage</span>
+      <span class="meta">Google Fonts, free</span><span class="who">Variable width, deliberately wonky</span></button>
+    <button class="chip trend" type="button" aria-pressed="false" data-font="'Cabinet Grotesk',sans-serif" data-wt="900" data-tr="-.02em" data-ld=".92" data-name="Cabinet Grotesk" data-who="Chunky editorial grotesque" data-lic="Fontshare, free">
+      <span class="nm" style="font-family:'Cabinet Grotesk',sans-serif; font-weight:900">Cabinet Grotesk</span>
+      <span class="meta">Fontshare, free</span><span class="who">Chunky editorial grotesque</span></button>
+    <button class="chip trend" type="button" aria-pressed="false" data-font="'Instrument Serif',Georgia,serif" data-wt="400" data-tr="-.01em" data-ld=".94" data-name="Instrument Serif" data-who="The editorial-serif moment" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Instrument Serif',sans-serif; font-weight:400">Instrument Serif</span>
+      <span class="meta">Google Fonts, free</span><span class="who">The editorial-serif moment</span></button>
+    <button class="chip trend" type="button" aria-pressed="false" data-font="'Fraunces',Georgia,serif" data-wt="900" data-tr="-.015em" data-ld=".94" data-name="Fraunces" data-who="Variable, with a wonk axis" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Fraunces',sans-serif; font-weight:900">Fraunces</span>
+      <span class="meta">Google Fonts, free</span><span class="who">Variable, with a wonk axis</span></button>
+    <button class="chip trend" type="button" aria-pressed="false" data-font="'Newsreader',Georgia,serif" data-wt="800" data-tr="-.01em" data-ld=".98" data-name="Newsreader" data-who="Optical sizing, news-grade" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Newsreader',sans-serif; font-weight:800">Newsreader</span>
+      <span class="meta">Google Fonts, free</span><span class="who">Optical sizing, news-grade</span></button>
+    <button class="chip trend" type="button" aria-pressed="false" data-font="'Switzer',sans-serif" data-wt="800" data-tr="-.02em" data-ld="1" data-name="Switzer" data-who="Closest free match to Neue Montreal" data-lic="Fontshare, free">
+      <span class="nm" style="font-family:'Switzer',sans-serif; font-weight:800">Switzer</span>
+      <span class="meta">Fontshare, free</span><span class="who">Closest free match to Neue Montreal</span></button>
+    <button class="chip trend" type="button" aria-pressed="false" data-font="'Familjen Grotesk',sans-serif" data-wt="700" data-tr="-.01em" data-ld="1" data-name="Familjen Grotesk" data-who="Neo-grotesque with teeth" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Familjen Grotesk',sans-serif; font-weight:700">Familjen Grotesk</span>
+      <span class="meta">Google Fonts, free</span><span class="who">Neo-grotesque with teeth</span></button>
+    <button class="chip trend" type="button" aria-pressed="false" data-font="'Instrument Sans',sans-serif" data-wt="700" data-tr="-.02em" data-ld="1" data-name="Instrument Sans" data-who="Quiet, current, very 2026" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Instrument Sans',sans-serif; font-weight:700">Instrument Sans</span>
+      <span class="meta">Google Fonts, free</span><span class="who">Quiet, current, very 2026</span></button>
+    <button class="chip trend" type="button" aria-pressed="false" data-font="'Plus Jakarta Sans',sans-serif" data-wt="800" data-tr="-.02em" data-ld="1" data-name="Plus Jakarta Sans" data-who="Everywhere in SaaS right now" data-lic="Google Fonts, free">
+      <span class="nm" style="font-family:'Plus Jakarta Sans',sans-serif; font-weight:800">Plus Jakarta Sans</span>
+      <span class="meta">Google Fonts, free</span><span class="who">Everywhere in SaaS right now</span></button>
+  </div>
+</section>
+
+<!-- ============ COLOUR TABS ============ -->
+<section class="pad">
+  <div class="sechead">
+    <h2>2 · Colour tabs</h2>
+    <span class="note">Applies to the skin below</span>
+  </div>
+  <div class="tabs" id="colourtabs">
+    <button class="tab" type="button" aria-pressed="true" data-p='{"bg":"#0B0B0C","card":"#141416","line":"#2A2A2E","fg":"#F2F2F0","dim":"#9A9A96","acc":"#FFD400","on":"#0B0B0C"}'><span class="dot" style="background:#FFD400"></span>Blackout yellow</button>
+    <button class="tab" type="button" aria-pressed="false" data-p='{"bg":"#101010","card":"#1A1616","line":"#332B29","fg":"#FFFFFF","dim":"#96908E","acc":"#FF3B1F","on":"#FFFFFF"}'><span class="dot" style="background:#FF3B1F"></span>Ink vermilion</button>
+    <button class="tab" type="button" aria-pressed="false" data-p='{"bg":"#06231C","card":"#0B3228","line":"#17493B","fg":"#EAF7F0","dim":"#8FAFA1","acc":"#C8FF3D","on":"#06231C"}'><span class="dot" style="background:#C8FF3D"></span>Green lime</button>
+    <button class="tab" type="button" aria-pressed="false" data-p='{"bg":"#0B2B23","card":"#12463A","line":"#1A5C4B","fg":"#F1F3EE","dim":"#9FB3A9","acc":"#D9B166","on":"#0B2B23"}'><span class="dot" style="background:#D9B166"></span>Green brass (round one)</button>
+    <button class="tab" type="button" aria-pressed="false" data-p='{"bg":"#F1F3EE","card":"#E2E8DE","line":"#C8D1C6","fg":"#101A16","dim":"#5F6660","acc":"#12463A","on":"#F1F3EE"}'><span class="dot" style="background:#12463A"></span>Paper light</button>
+  </div>
+</section>
+
+<!-- ============ COMPETITOR SKINS ============ -->
+<section class="pad">
+  <div class="sechead">
+    <h2>3 · Wear a competitor's brand</h2>
+    <span class="note">Heading, body, labels, figures, palette — all theirs</span>
+  </div>
+  <div class="tabs" id="skintabs">
+    <button class="tab" type="button" aria-pressed="true" data-name="Axelis (proposed)" data-body="'Archivo',-apple-system,sans-serif" data-num="'IBM Plex Mono',ui-monospace,monospace" data-feat="tnum" data-font="'Big Shoulders Display','Arial Narrow',sans-serif" data-wt="800" data-tr="0em" data-ld=".9" data-p='{"bg":"#0B0B0C","card":"#141416","line":"#2A2A2E","fg":"#F2F2F0","dim":"#9A9A96","acc":"#FFD400","on":"#0B0B0C"}' data-src="Big Shoulders · Archivo · IBM Plex Mono · #FFD400"><span class="dot" style="background:#FFD400"></span>Axelis (proposed)</button>
+    <button class="tab" type="button" aria-pressed="false" data-name="Ambitio" data-body="'Nunito Sans',sans-serif" data-num="'Nunito Sans',sans-serif" data-feat="normal" data-font="'Space Grotesk',sans-serif" data-wt="700" data-tr="-.01em" data-ld="1.02" data-p='{"bg":"#FAFAFA","card":"#F1F1F1","line":"#E2E2E2","fg":"#212121","dim":"#696969","acc":"#B1060F","on":"#FFFFFF"}' data-src="Space Grotesk · Nunito Sans · #B1060F"><span class="dot" style="background:#B1060F"></span>Ambitio</button>
+    <button class="tab" type="button" aria-pressed="false" data-name="Yocket" data-body="'Satoshi',sans-serif" data-num="'Satoshi',sans-serif" data-feat="normal" data-font="'Satoshi',sans-serif" data-wt="900" data-tr="-.01em" data-ld="1.02" data-p='{"bg":"#FFFAF2","card":"#FFFFFF","line":"#E8DFD2","fg":"#2B3340","dim":"#6E7686","acc":"#E37712","on":"#FFFFFF"}' data-src="Satoshi throughout · #E37712"><span class="dot" style="background:#E37712"></span>Yocket</button>
+    <button class="tab" type="button" aria-pressed="false" data-name="AECC Global" data-body="'Outfit',sans-serif" data-num="'Outfit',sans-serif" data-feat="normal" data-font="'Outfit',sans-serif" data-wt="800" data-tr="-.01em" data-ld="1.02" data-p='{"bg":"#EBE8FF","card":"#FFFFFF","line":"#BEBDDA","fg":"#1E1B3A","dim":"#5F5C80","acc":"#715AE6","on":"#FFFFFF"}' data-src="Outfit throughout · #715AE6"><span class="dot" style="background:#715AE6"></span>AECC</button>
+    <button class="tab" type="button" aria-pressed="false" data-name="IDP Education" data-body="'Inter',sans-serif" data-num="'Inter',sans-serif" data-feat="normal" data-font="'Farro',sans-serif" data-wt="700" data-tr="0em" data-ld="1.05" data-p='{"bg":"#FFFFFF","card":"#EAF3FF","line":"#D3E2F5","fg":"#1C1F2A","dim":"#5C6473","acc":"#28558C","on":"#FFFFFF"}' data-src="Farro · Inter · #28558C"><span class="dot" style="background:#28558C"></span>IDP</button>
+    <button class="tab" type="button" aria-pressed="false" data-name="Edvoy" data-body="'Inter',sans-serif" data-num="'Inter',sans-serif" data-feat="normal" data-font="'Inter',sans-serif" data-wt="800" data-tr="-.02em" data-ld="1.02" data-p='{"bg":"#F7F5FA","card":"#FFFFFF","line":"#E3DCEC","fg":"#321386","dim":"#6B5E8A","acc":"#9317CE","on":"#FFFFFF"}' data-src="Gilroy → Inter · Inter · #9317CE"><span class="dot" style="background:#9317CE"></span>Edvoy</button>
+    <button class="tab" type="button" aria-pressed="false" data-name="upGrad Abroad" data-body="'Geist',sans-serif" data-num="'Geist',sans-serif" data-feat="normal" data-font="'Geist',sans-serif" data-wt="800" data-tr="-.02em" data-ld="1.02" data-p='{"bg":"#FFEACB","card":"#FFFFFF","line":"#E8D3B0","fg":"#1A1A1A","dim":"#6B5E4A","acc":"#B86E00","on":"#FFFFFF"}' data-src="Geist throughout · #B86E00"><span class="dot" style="background:#B86E00"></span>upGrad</button>
+    <button class="tab" type="button" aria-pressed="false" data-name="GradRight" data-body="'Poppins',sans-serif" data-num="'Poppins',sans-serif" data-feat="normal" data-font="'Poppins',sans-serif" data-wt="800" data-tr="-.01em" data-ld="1.02" data-p='{"bg":"#F4F2FF","card":"#FFFFFF","line":"#DCD4F5","fg":"#1B1B1B","dim":"#5E5A70","acc":"#782BFF","on":"#FFFFFF"}' data-src="Poppins throughout · #782BFF"><span class="dot" style="background:#782BFF"></span>GradRight</button>
+    <button class="tab" type="button" aria-pressed="false" data-name="Leverage Edu" data-body="'Source Sans 3',sans-serif" data-num="'Source Sans 3',sans-serif" data-feat="normal" data-font="'Rubik',sans-serif" data-wt="800" data-tr="-.01em" data-ld="1.02" data-p='{"bg":"#FFFFFF","card":"#F1F5F7","line":"#D7E0E5","fg":"#0E3240","dim":"#5A7280","acc":"#4080BD","on":"#FFFFFF"}' data-src="Rubik · Source Sans · #0E3240"><span class="dot" style="background:#4080BD"></span>Leverage</button>
+  </div>
+
+  <div class="skin" id="skin">
+    <div class="inner">
+      <div class="skinlock">
+        <svg width="46" height="46" viewBox="0 0 375 375" role="img" aria-label="Axelis"><use href="#ax-mark"/></svg>
+        <span class="wm">Axelis Overseas</span>
+      </div>
+      <h3>Three programmes. One guarantee. <span class="hl">In writing.</span></h3>
+      <p class="sub">A small number of students, taken end to end — shortlist to offer — on terms that say what happens if we fail.</p>
+      <div class="btns">
+        <span class="p1">Read clause 4</span>
+        <span class="p2">Book a discovery call</span>
+      </div>
+      <div class="cards">
+        <div class="c"><span class="t">01 / Concierge</span><h4>Global Career Launch</h4><div class="fee">₹2,00,000</div></div>
+        <div class="c"><span class="t">02 / Concierge</span><h4>PhD &amp; Fellowship</h4><div class="fee">₹2,50,000</div></div>
+        <div class="c"><span class="t">03 / Concierge</span><h4>Executive MBA</h4><div class="fee">₹3,00,000</div></div>
+      </div>
+    </div>
+    <div class="skinbar"><span>Wearing <b id="skin-name">Axelis (proposed)</b></span><span id="skin-src">Big Shoulders · #FFD400</span></div>
+  </div>
+</section>
+
+<!-- ============ THE DATA ============ -->
+<section class="pad">
+  <div class="sechead">
+    <h2>4 · What they actually use</h2>
+    <span class="note">Read from their stylesheets · 19 Sep 2026</span>
+  </div>
+  <div class="tw">
+    <table>
+      <thead><tr><th>Firm</th><th>Heading face</th><th>Body face</th><th>Primary</th><th>Classification</th></tr></thead>
+      <tbody>
+        <tr><td>Ambitio</td><td>Space Grotesk</td><td>Nunito Sans</td><td><span class="sw" style="background:#B1060F"></span><span class="mono">#B1060F</span></td><td>Geometric grotesque</td></tr>
+        <tr><td>Yocket</td><td>Satoshi</td><td>Satoshi</td><td><span class="sw" style="background:#E37712"></span><span class="mono">#E37712</span></td><td>Neo-grotesque</td></tr>
+        <tr><td>AECC Global</td><td>Outfit</td><td>Outfit</td><td><span class="sw" style="background:#715AE6"></span><span class="mono">#715AE6</span></td><td>Geometric sans</td></tr>
+        <tr><td>IDP Education</td><td>Farro</td><td>Inter</td><td><span class="sw" style="background:#28558C"></span><span class="mono">#28558C</span></td><td>Humanist sans</td></tr>
+        <tr><td>Edvoy</td><td>Gilroy</td><td>Inter</td><td><span class="sw" style="background:#9317CE"></span><span class="mono">#9317CE</span></td><td>Geometric sans</td></tr>
+        <tr><td>upGrad Abroad</td><td>Geist</td><td>Geist</td><td><span class="sw" style="background:#B86E00"></span><span class="mono">#B86E00</span></td><td>Neo-grotesque</td></tr>
+        <tr><td>GradRight</td><td>Poppins</td><td>Poppins</td><td><span class="sw" style="background:#782BFF"></span><span class="mono">#782BFF</span></td><td>Geometric sans</td></tr>
+        <tr><td>Leverage Edu</td><td>Rubik</td><td>Source Sans / Roboto</td><td><span class="sw" style="background:#0E3240"></span><span class="mono">#0E3240</span></td><td>Rounded grotesque</td></tr>
+        <tr><td><b style="color:#F2F2F0">Axelis today</b></td><td>Montserrat</td><td>Montserrat</td><td><span class="sw" style="background:#ffde59"></span><span class="mono">#ffde59</span></td><td>Geometric sans</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============ VERDICT ============ -->
+<section class="pad" style="border-bottom:0; padding-bottom:70px">
+  <div class="sechead">
+    <h2>5 · What I'd pick, and why</h2>
+    <span class="note">One recommendation, two fallbacks</span>
+  </div>
+  <div class="verdict">
+    <div class="vc win">
+      <div class="spec">Big Shoulders</div>
+      <h4>Recommended · headlines</h4>
+      <p>Every firm in the table sets headlines in a <em>wide or geometric</em> sans — Space Grotesk, Outfit, Satoshi, Geist, Poppins, Inter, Rubik, Montserrat. Eight firms, one silhouette. Nothing in the category is condensed.</p>
+      <ul>
+        <li>Condensed is the empty lane, the same way green was in colour</li>
+        <li>It matches your logo's own tall narrow caps, so lockup and headline finally belong together</li>
+        <li>Narrow letters mean a ₹3,00,000 headline fits on one line instead of three</li>
+        <li>Free, on Google Fonts, seven weights, works in Docs and PDFs</li>
+      </ul>
+    </div>
+    <div class="vc">
+      <h4>Fallback A · Archivo Black</h4>
+      <p>If condensed reads too editorial for you. Wide, extremely heavy, immovable — mass instead of height. Also unused in the category. The trade: it eats horizontal space, so headlines have to be shorter.</p>
+      <h4 style="margin-top:18px">Fallback B · Bebas Neue</h4>
+      <p>Closest of all to the lettering already in your logo, and the safest visual match. The catch: it is one of the most-used display faces on the internet, so it buys you the logo match and none of the distinctiveness.</p>
+    </div>
+    <div class="vc">
+      <h4>Trending vs durable</h4>
+      <p>Rail 1b is what the type press is excited about in 2026 — and that is exactly the risk. Clash Display,
+      Bricolage and Instrument Serif are all over new brands right now, which means they will read as
+      "rebranded in 2026" by 2029. A study-abroad firm signing five-year guarantees should not date that fast.</p>
+      <p style="margin-top:10px">If you want trend-forward anyway, the two that survive best are
+      <b style="color:#F2F2F0">Clash Display</b> (bold enough to carry the mark) and
+      <b style="color:#F2F2F0">Cabinet Grotesk</b> (heavy, editorial, less saturated than Clash).</p>
+      <h4 style="margin-top:18px">What stays either way</h4>
+      <ul>
+        <li><b style="color:#F2F2F0">Body:</b> Archivo — quiet, wide range, pairs with all three above</li>
+        <li><b style="color:#F2F2F0">Figures:</b> IBM Plex Mono for every rupee, EMI and certificate ID</li>
+        <li><b style="color:#F2F2F0">Never:</b> Montserrat, Poppins, Inter — the three that make you look like everyone else</li>
+      </ul>
+      <h4 style="margin-top:18px">Worth noticing</h4>
+      <p>Click through Ambitio, AECC, GradRight and Edvoy above. They are different companies with different colours that still feel like one company, because the typography is the same silhouette. That is the whole argument for condensed.</p>
+    </div>
+  </div>
+</section>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ax-mark" viewBox="0 0 375 375">
+<defs><clipPath id="d85e05967a"><path d="M 82.386719 211 L 201.957031 211 L 201.957031 262.730469 L 82.386719 262.730469 Z M 82.386719 211 "/></clipPath><clipPath id="cc655dd03e"><path d="M 201.648438 211.277344 L 201.578125 211.0625 C 196.402344 214.726562 192.066406 217.511719 188.578125 219.730469 C 164.449219 234.84375 140.28125 245.941406 115.269531 253.445312 C 105.265625 256.402344 91.171875 259.609375 85.289062 260.207031 L 82.507812 260.878906 C 91.59375 262.566406 100.261719 262.566406 105.863281 261.757812 C 127.632812 258.480469 154.972656 245.480469 184.738281 224.203125 C 190.234375 220.292969 201.613281 211.558594 201.613281 211.277344 "/></clipPath><clipPath id="b860a55c2c"><path d="M 126 160.101562 L 271.632812 160.101562 L 271.632812 272 L 126 272 Z M 126 160.101562 "/></clipPath><clipPath id="d7ae0c52ce"><path d="M 271.507812 164.84375 L 271.121094 160.335938 L 268.9375 162.308594 C 261.785156 169.847656 251.746094 179.394531 244.242188 185.945312 C 213.945312 212.472656 176.636719 237.238281 138.519531 256.085938 C 131.828125 259.398438 126.332031 262.25 126.332031 262.355469 C 126.296875 262.78125 132.460938 265.246094 137.746094 266.9375 C 143.417969 268.734375 151.90625 270.53125 158.105469 271.199219 C 163.707031 271.761719 178.574219 271.445312 183.71875 270.636719 C 206.335938 266.9375 225.640625 257.214844 241.316406 241.535156 C 246.707031 236.148438 249.914062 232.238281 254.492188 225.367188 C 262.3125 213.636719 267.738281 199.933594 270.167969 185.699219 C 271.261719 179.464844 271.859375 170.234375 271.542969 164.84375 "/></clipPath><clipPath id="44af88d50b"><path d="M 22.128906 65.007812 L 350.71875 65.007812 L 350.71875 242.957031 L 22.128906 242.957031 Z M 22.128906 65.007812 "/></clipPath><clipPath id="46ba1b65d0"><path d="M 316.777344 83.359375 C 320.617188 82.058594 324.246094 82.726562 327.238281 85.367188 C 329.671875 87.515625 330.621094 89.527344 330.867188 92.835938 C 331.113281 96.324219 330.09375 98.824219 327.484375 101.257812 C 322.167969 106.222656 313.78125 104.496094 310.71875 97.839844 C 308.144531 92.34375 311.070312 85.332031 316.8125 83.359375 M 310.398438 134.933594 L 313.007812 140.324219 C 317.023438 148.570312 317.832031 148.675781 322.132812 141.523438 C 326.710938 133.878906 329.671875 125.597656 330.375 118.378906 L 330.796875 115.59375 C 333.226562 112.847656 334.953125 110.523438 336.152344 108.761719 C 342.035156 100.023438 347.144531 85.367188 349.1875 71.453125 L 350.488281 65.570312 C 327.734375 67.085938 309.765625 72.863281 300.078125 80.613281 L 298.316406 81.773438 C 287.570312 82.480469 280.316406 84.628906 272.847656 88.433594 C 267.949219 90.96875 267.070312 91.675781 267.070312 93.011719 C 267.070312 94.386719 267.492188 94.738281 273.375 98.050781 L 278.34375 100.871094 L 277.390625 101.679688 C 274.714844 103.96875 273.761719 107.175781 275.03125 110.027344 L 276.476562 112.496094 C 278.695312 114.996094 278.941406 115.523438 279.152344 117.707031 L 279.433594 120.246094 L 272.917969 125.070312 C 269.394531 127.714844 266.011719 130.144531 265.484375 130.496094 L 264.496094 131.164062 L 262.347656 126.128906 C 256.253906 112.566406 245.753906 98.894531 234.058594 89.242188 C 219.792969 77.511719 202.074219 69.621094 183.753906 66.769531 C 178.996094 66.027344 164.0625 65.5 160.46875 65.921875 C 149.265625 67.226562 142.605469 68.671875 134.574219 71.417969 C 113.261719 78.816406 94.871094 93.222656 82.261719 112.425781 C 76.660156 120.984375 71.410156 132.820312 68.910156 142.472656 C 63.167969 164.597656 64.714844 186.296875 73.59375 208.773438 L 74.085938 210.078125 L 80.253906 209.832031 C 96.773438 209.230469 122.703125 204.089844 153.632812 195.316406 C 163.355469 192.570312 181.253906 187.074219 188.15625 184.785156 L 192.242188 183.480469 C 192.523438 183.726562 180.160156 189.433594 171.28125 193.273438 C 137.144531 208.070312 107.132812 217.371094 79.898438 221.5625 C 72.289062 222.726562 58.023438 222.832031 53.726562 221.738281 C 46.082031 219.871094 42.171875 215.890625 42.945312 210.746094 C 43.648438 206.027344 49.671875 197.253906 57.707031 189.363281 L 60.382812 186.402344 L 59.46875 181.4375 L 55.414062 184.75 C 18.671875 215.042969 12.367188 237.625 39.5625 241.710938 C 44.460938 242.453125 55.308594 242.453125 62.003906 241.710938 C 86.804688 238.964844 123.792969 228.679688 156.875 215.257812 C 206.054688 195.316406 255.691406 165.019531 292.117188 132.679688 L 293.949219 131.199219 L 294.300781 132.46875 L 294.335938 132.996094 L 296.414062 133.703125 C 301.664062 139.058594 305.714844 139.445312 309.238281 136.0625 Z M 310.398438 134.933594 "/></clipPath><clipPath id="3ebc7fea1a"><path d="M 82 210.945312 L 201.957031 210.945312 L 201.957031 262.730469 L 82 262.730469 Z M 82 210.945312 "/></clipPath><clipPath id="3171ba9d40"><path d="M 87.191406 261.757812 L 82.15625 260.523438 C 91.207031 259.609375 105.265625 256.402344 115.269531 253.445312 C 140.28125 245.941406 164.449219 234.84375 188.578125 219.730469 C 192.066406 217.546875 196.402344 214.726562 198.195312 213.460938 L 201.648438 210.992188 C 201.648438 211.523438 190.269531 220.257812 184.773438 224.203125 C 155.007812 245.480469 127.667969 258.480469 105.898438 261.757812 C 100.332031 262.566406 91.628906 262.566406 87.191406 261.757812 "/></clipPath><clipPath id="3bbf78cc42"><path d="M 126 160.101562 L 271.632812 160.101562 L 271.632812 272 L 126 272 Z M 126 160.101562 "/></clipPath><clipPath id="5d8efde5f0"><path d="M 241.28125 241.535156 C 225.640625 257.179688 206.300781 266.9375 183.683594 270.636719 C 178.539062 271.445312 163.671875 271.796875 158.070312 271.199219 C 151.871094 270.496094 143.382812 268.734375 137.710938 266.9375 C 132.390625 265.246094 126.261719 262.78125 126.296875 262.355469 C 126.296875 262.25 131.792969 259.398438 138.484375 256.085938 C 176.601562 237.238281 213.945312 212.4375 244.207031 185.945312 C 251.710938 179.394531 261.75 169.847656 266.679688 164.667969 L 270.839844 160.40625 L 271.332031 162.414062 C 271.789062 170.269531 271.191406 179.5 270.097656 185.734375 C 267.667969 199.96875 262.242188 213.671875 254.421875 225.402344 C 249.84375 232.238281 246.636719 236.183594 241.246094 241.570312 "/></clipPath><clipPath id="5b41557bcc"><path d="M 22.128906 65.007812 L 350.71875 65.007812 L 350.71875 242.957031 L 22.128906 242.957031 Z M 22.128906 65.007812 "/></clipPath><clipPath id="0f4ba45d34"><path d="M 327.484375 101.257812 C 322.167969 106.222656 313.78125 104.496094 310.71875 97.839844 C 308.144531 92.34375 311.070312 85.332031 316.8125 83.359375 C 320.652344 82.058594 324.28125 82.761719 327.273438 85.367188 C 329.707031 87.515625 330.65625 89.527344 330.902344 92.835938 C 331.148438 96.324219 330.128906 98.824219 327.519531 101.257812 M 345.875 65.851562 C 327.699219 67.050781 309.800781 72.863281 300.078125 80.578125 L 298.316406 81.738281 C 287.570312 82.445312 280.316406 84.59375 272.847656 88.398438 C 267.949219 90.933594 267.070312 91.640625 267.070312 92.976562 C 267.070312 94.351562 267.492188 94.703125 273.375 98.015625 L 278.34375 100.832031 L 277.390625 101.644531 C 274.714844 103.898438 273.761719 107.140625 275.03125 109.992188 L 276.476562 112.460938 C 278.695312 114.960938 278.941406 115.488281 279.152344 117.707031 L 279.433594 120.246094 L 272.917969 125.070312 C 269.394531 127.714844 266.046875 130.144531 265.484375 130.496094 L 264.496094 131.128906 L 262.347656 126.128906 C 256.253906 112.601562 245.753906 98.894531 234.058594 89.242188 C 219.792969 77.511719 202.074219 69.621094 183.753906 66.769531 C 178.996094 66.027344 164.0625 65.5 160.46875 65.921875 C 149.265625 67.226562 142.605469 68.671875 134.574219 71.417969 C 113.261719 78.816406 94.871094 93.222656 82.261719 112.425781 C 76.660156 121.019531 71.410156 132.820312 68.910156 142.472656 C 63.167969 164.597656 64.714844 186.296875 73.59375 208.773438 L 74.085938 210.078125 L 80.253906 209.832031 C 96.773438 209.230469 122.703125 204.089844 153.632812 195.316406 C 163.355469 192.570312 181.253906 187.074219 188.15625 184.785156 L 192.242188 183.480469 C 192.523438 183.726562 180.160156 189.433594 171.28125 193.308594 C 137.144531 208.140625 107.132812 217.40625 79.898438 221.597656 C 72.289062 222.761719 57.988281 222.867188 53.726562 221.773438 C 46.082031 219.871094 42.171875 215.925781 42.945312 210.78125 C 43.648438 206.0625 49.671875 197.289062 57.707031 189.398438 L 60.382812 186.4375 L 59.46875 181.472656 L 55.414062 184.785156 C 18.671875 215.042969 12.367188 237.625 39.5625 241.710938 C 44.460938 242.453125 55.308594 242.453125 62.003906 241.710938 C 86.804688 238.964844 123.792969 228.679688 156.875 215.257812 C 206.054688 195.316406 255.691406 165.019531 292.117188 132.679688 L 293.949219 131.199219 L 294.300781 132.46875 L 294.335938 132.996094 L 296.414062 133.703125 C 301.664062 139.058594 305.714844 139.445312 309.238281 136.0625 L 310.398438 134.933594 L 313.007812 140.324219 C 317.023438 148.570312 317.832031 148.675781 322.132812 141.523438 C 326.710938 133.878906 329.671875 125.597656 330.375 118.378906 L 330.796875 115.59375 C 333.226562 112.847656 334.953125 110.523438 336.152344 108.761719 C 342.035156 100.023438 347.144531 85.367188 349.1875 71.453125 L 350.488281 65.570312 "/></clipPath></defs><g id="e867b6e268"><g clip-rule="nonzero" clip-path="url(#d85e05967a)"><g clip-rule="nonzero" clip-path="url(#cc655dd03e)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#b860a55c2c)"><g clip-rule="nonzero" clip-path="url(#d7ae0c52ce)"><path style=" stroke:none;fill-rule:nonzero;fill:var(--axelis-accent, currentColor);fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#44af88d50b)"><g clip-rule="nonzero" clip-path="url(#46ba1b65d0)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#3ebc7fea1a)"><g clip-rule="nonzero" clip-path="url(#3171ba9d40)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#3bbf78cc42)"><g clip-rule="nonzero" clip-path="url(#5d8efde5f0)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#5b41557bcc)"><g clip-rule="nonzero" clip-path="url(#0f4ba45d34)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g></g>  </symbol>
+</svg>
+
+<script>
+(function(){
+  var root = document.documentElement;
+
+  function paint(json){
+    var p = JSON.parse(json);
+    root.style.setProperty('--bg', p.bg);
+    root.style.setProperty('--card', p.card);
+    root.style.setProperty('--line', p.line);
+    root.style.setProperty('--fg', p.fg);
+    root.style.setProperty('--dim', p.dim);
+    root.style.setProperty('--acc', p.acc);
+    root.style.setProperty('--on-acc', p.on);
+  }
+  function setFont(d){
+    root.style.setProperty('--display', d.font);
+    root.style.setProperty('--display-weight', d.wt);
+    root.style.setProperty('--display-track', d.tr);
+    root.style.setProperty('--display-lead', d.ld);
+    if(d.body){ root.style.setProperty('--body', d.body); }
+    if(d.num){ root.style.setProperty('--num', d.num); }
+    if(d.feat){ root.style.setProperty('--num-feat', d.feat); }
+  }
+  function label(cls, text){
+    document.querySelectorAll('.' + cls).forEach(function(el){ el.textContent = text; });
+  }
+  function applyChip(b, group, other){
+    setFont(b.dataset);
+    root.style.setProperty('--body', "'Archivo',-apple-system,sans-serif");
+    root.style.setProperty('--num', "'IBM Plex Mono',ui-monospace,monospace");
+    root.style.setProperty('--num-feat', 'tnum');
+    label('f-name', b.dataset.name);
+    label('f-wt',   b.dataset.wt);
+    label('f-who',  b.dataset.who);
+    label('f-lic',  b.dataset.lic);
+    press(group, b); press(other, null);
+  }
+  function press(group, btn){
+    group.querySelectorAll('[aria-pressed]').forEach(function(b){
+      b.setAttribute('aria-pressed', String(b === btn));
+    });
+  }
+
+  var rail  = document.getElementById('rail');
+  var rail2 = document.getElementById('rail2');
+  rail.addEventListener('click', function(e){
+    var b = e.target.closest('.chip'); if(!b) return;
+    applyChip(b, rail, rail2);
+  });
+
+  rail2.addEventListener('click', function(e){
+    var b = e.target.closest('.chip'); if(!b) return;
+    applyChip(b, rail2, rail);
+  });
+
+  var ctabs = document.getElementById('colourtabs');
+  ctabs.addEventListener('click', function(e){
+    var b = e.target.closest('.tab'); if(!b) return;
+    paint(b.dataset.p); press(ctabs, b);
+  });
+
+  var stabs = document.getElementById('skintabs');
+  stabs.addEventListener('click', function(e){
+    var b = e.target.closest('.tab'); if(!b) return;
+    setFont(b.dataset); paint(b.dataset.p); press(stabs, b);
+    document.getElementById('skin-name').textContent = b.dataset.name;
+    document.getElementById('skin-src').textContent = b.dataset.src;
+    press(ctabs, null);
+  });
+})();
+</script>

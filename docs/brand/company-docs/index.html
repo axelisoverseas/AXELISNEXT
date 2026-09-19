@@ -1,0 +1,89 @@
+<meta charset="utf-8">
+<title>Axelis Document Kit</title>
+<link rel="stylesheet" href="axelis-doc.css">
+<style>
+  body{background:var(--tint-2); padding-block:0}
+  .hero{background:var(--navy); color:#fff; padding-block:48px 40px; margin-inline:-16px; padding-inline:16px}
+  .wrap{max-width:1040px; margin:0 auto; padding-inline:24px}
+  .hero .lock{display:flex; align-items:center; gap:12px; margin-bottom:24px}
+  .hero .lock img{width:34px}
+  .hero .lock span{font-weight:900; font-size:1.05rem}
+  .hero .kick{font-weight:700; font-size:.72rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent-lt)}
+  .hero h1{font-size:clamp(2rem,1.5rem + 2.4vw,3.1rem); font-weight:900; margin-block:12px 14px; max-width:20ch; color:#fff}
+  .hero p{max-width:64ch; color:#A8C3D4; font-size:1.02rem}
+  section{padding-block:44px}
+  .sh{margin-bottom:22px; max-width:60ch}
+  .sh h2{font-size:1.5rem; font-weight:900}
+  .sh p{margin-top:8px; color:var(--dim); font-size:.95rem}
+  .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px}
+  .c{background:#fff; border:1px solid var(--rule); border-radius:14px; padding:20px; display:flex; flex-direction:column; gap:8px}
+  .c .t{font-weight:700; font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--accent)}
+  .c h3{font-size:1.12rem; font-weight:900}
+  .c p{font-size:.9rem; color:var(--dim)}
+  .c .go{margin-top:auto; padding-top:14px}
+  .btn{display:inline-block; background:var(--accent); color:#fff; font-weight:700; font-size:.9rem;
+       padding:11px 20px; border-radius:10px; border:2px solid var(--accent); text-decoration:none}
+  .btn:hover{background:var(--accent-dark); border-color:var(--accent-dark)}
+  .warn{background:#fff; border:1px solid var(--rule); border-left:3px solid var(--accent); border-radius:12px; padding:20px; font-size:.94rem}
+  .warn h3{font-size:1rem; margin-bottom:8px}
+  .warn ul{margin:8px 0 0; padding-left:18px; display:flex; flex-direction:column; gap:6px; color:var(--dim)}
+  footer{background:var(--navy); color:#A8C3D4; padding-block:28px; margin-inline:-16px; padding-inline:16px; font-size:.85rem}
+</style>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="lock"><img src="assets/axelis-mark-white.svg" alt=""><span>Axelis Overseas</span></div>
+    <span class="kick">Company document kit · v3.0 navy</span>
+    <h1>Every document, one format.</h1>
+    <p>One stylesheet, one typeface, one letterhead. Open any of these, print to PDF, and the margins, the rule, the footer and the legal line come out identical. Company details are pulled from overseeducation.com.</p>
+  </div>
+</div>
+
+<section class="wrap">
+  <div class="sh">
+    <h2>Correspondence</h2>
+    <p>The letterhead is the master. Everything else inherits its header, rule and footer.</p>
+  </div>
+  <div class="grid">
+    <div class="c"><span class="t">A4 portrait</span><h3>Letterhead</h3><p>Worked example — an enrolment confirmation letter, so you can see the body style in use.</p><div class="go"><a class="btn" href="letterhead.html">Open</a></div></div>
+    <div class="c"><span class="t">A4 portrait</span><h3>Letterhead, blank</h3><p>The same sheet with bracketed placeholders. Copy this file to start any new letter.</p><div class="go"><a class="btn" href="letterhead-blank.html">Open</a></div></div>
+    <div class="c"><span class="t">210 × 99 mm</span><h3>Compliment slip</h3><p>DL slip for anything posted. Same furniture, a third of the height.</p><div class="go"><a class="btn" href="compliment-slip.html">Open</a></div></div>
+    <div class="c"><span class="t">HTML</span><h3>Email signature</h3><p>Paste into Gmail. Includes the rules on what must never be added to it.</p><div class="go"><a class="btn" href="email-signature.html">Open</a></div></div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-top:0">
+  <div class="sh">
+    <h2>Commercial</h2>
+    <p>Everything a student or a lender receives.</p>
+  </div>
+  <div class="grid">
+    <div class="c"><span class="t">A4 portrait</span><h3>Proposal</h3><p>Two pages. Navy cover, fee and EMI tables, clause 4 in full at body size.</p><div class="go"><a class="btn" href="proposal.html">Open</a></div></div>
+    <div class="c"><span class="t">A4 portrait</span><h3>Tax invoice</h3><p>Line items, HSN/SAC, totals. GST fields deliberately blank until confirmed.</p><div class="go"><a class="btn" href="invoice.html">Open</a></div></div>
+    <div class="c"><span class="t">A4 portrait ×2</span><h3>Engagement letter</h3><p>Commercial terms plus the full guarantee. Needs legal sign-off before issue.</p><div class="go"><a class="btn" href="engagement-letter.html">Open</a></div></div>
+    <div class="c"><span class="t">A4 landscape</span><h3>Certificate</h3><p>Programme certificate with the seal, certificate ID and two signature rules.</p><div class="go"><a class="btn" href="certificate.html">Open</a></div></div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-top:0">
+  <div class="sh"><h2>Identity</h2></div>
+  <div class="grid">
+    <div class="c"><span class="t">90 × 54 mm</span><h3>Business card</h3><p>Front and back, Indian standard size, print-ready at 300 dpi.</p><div class="go"><a class="btn" href="business-card.html">Open</a></div></div>
+  </div>
+</section>
+
+<section class="wrap" style="padding-top:0">
+  <div class="warn">
+    <h3>Before any of these is issued for real</h3>
+    <ul>
+      <li><b>GSTIN, PAN, registered office and bank details are now filled in</b> — recovered from the Axelis invoices already in Google Drive (AX/B2B/26-27/001 and AXLO0002), not invented.</li>
+      <li><b>Confirm the SAC per invoice.</b> 999293 is used here for programme fees; your existing invoices use 998596 for B2B partner support and 996211 for recruitment commission.</li>
+      <li><b>The engagement letter needs counsel.</b> Clauses 5, 6 and 7 are drafted to match the published policy, not reviewed.</li>
+      <li><b>Programme lead names</b> are placeholders throughout.</li>
+    </ul>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Axelis Overseas Education Pvt Ltd · CIN U85500CT2023PTC014913 · Bengaluru &amp; Bilaspur · overseeducation.com</div>
+</footer>

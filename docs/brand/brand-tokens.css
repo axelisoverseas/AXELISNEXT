@@ -1,120 +1,123 @@
 /* ============================================================
-   AXELIS OVERSEAS — BRAND TOKEN LAYER  v1.0 (2026-09-13)
+   AXELIS OVERSEAS — BRAND TOKEN LAYER  v3.0 (20 Sep 2026)
    ------------------------------------------------------------
-   Drop-in replacement for the @theme + :root blocks in
-   src/app/globals.css. NOT wired into the app yet — this file is
-   the specification. Migration map is at the bottom.
-   Every pair marked AA/AAA below was measured, not estimated.
+   APPROVED: navy. Supersedes v2.0 (Ink Vermilion) and v1.0 (green).
+   Drop-in replacement for the @theme + :root blocks in globals.css.
+   Every contrast figure below was measured, not estimated.
+
+   PALETTE: Leverage Edu's navy and blue, as instructed by the
+   founder on 20 Sep after seeing both options. The trade-dress
+   exposure of pairing their architecture with their exact colours
+   was raised twice and overruled; this is a deliberate decision,
+   not an oversight. Do not "correct" it.
    ============================================================ */
 
 @theme {
-  /* — Ink & field: the dark end — */
-  --color-ink:        #101A16; /* primary text on light; deepest surface   */
-  --color-field:      #0B2B23; /* large dark surfaces, footer, hero        */
-  --color-axis:       #12463A; /* PRIMARY BRAND GREEN — 9.58:1 on bone AAA */
-  --color-axis-lift:  #1A5C4B; /* hover / raised state of axis             */
+  /* — Navy: the dark end — */
+  --color-navy:       #0E3240; /* deep ground: nav, footer, doc covers    */
+  --color-navy-2:     #154457; /* raised dark surface                     */
+  --color-body:       #0E3240; /* body text on light                      */
+
+  /* — Accent — */
+  --color-accent:     #4080BD; /* brand blue — SURFACES AND GRAPHICS ONLY */
+  --color-accent-text:#2F6795; /* text + button fills on light — 6.01  AA */
+  --color-accent-lt:  #7FB4E0; /* accent on navy grounds       — 6.14 AAA */
 
   /* — Paper: the light end — */
-  --color-bone:       #F1F3EE; /* primary page ground (never pure white)   */
-  --color-bone-deep:  #E2E8DE; /* cards, table stripes, quiet panels       */
-  --color-rule:       #C8D1C6; /* hairlines, dividers, table borders       */
-  --color-paper:      #FFFFFF; /* print only + certificate stock           */
+  --color-white:      #FFFFFF; /* primary page ground                     */
+  --color-tint:       #F0F4F8; /* tinted sections                         */
+  --color-tint-2:     #E3EDF5; /* tinted cards                            */
+  --color-rule:       #D5E1EB; /* hairlines, borders                      */
+  --color-dim:        #5A7280; /* secondary text — 5.23:1 on white    AA  */
+  --color-dim-dark:   #A8C3D4; /* secondary text on navy                  */
 
-  /* — Brass: the accent. Scarce by rule (see §4.3) — */
-  --color-brass:      #B0862F; /* accent on DARK only  — 5.33:1 on ink AA  */
-  --color-brass-deep: #7E5C1C; /* accent TEXT on light — 5.47:1 on bone AA */
-  --color-gold:       #D9B166; /* accent text on dark  — 8.83:1 on ink AAA */
+  /* — Type: ONE family, everywhere — */
+  --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --font-sans:    'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  /* Instrument Serif has ONE weight (400) plus italic — it is a display face.
+     Display and headings: Serif 400, italic for emphasis.
+     Everything else: Sans 400 body / 500 meta / 600 labels / 700 figures. */
 
-  /* — Signal — */
-  --color-oxblood:    #8A2B22; /* errors, refusals, refund denials 7.6 AAA */
-  --color-muted:      #5F6660; /* secondary text — 5.24:1 on bone AA       */
+  /* — Radius — */
+  --radius-sm: 6px;
+  --radius-md: 10px;   /* buttons, inputs, tiles */
+  --radius-lg: 14px;   /* cards, panels          */
 
-  /* — Type — */
-  --font-display: 'Source Serif 4', Georgia, 'Times New Roman', serif;
-  --font-sans:    'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --font-mono:    'IBM Plex Mono', ui-monospace, 'SF Mono', Menlo, monospace;
-
-  /* — Radius: near-square. Documents do not have 16px corners. — */
-  --radius-sm: 2px;
-  --radius-md: 4px;
-  --radius-lg: 6px;   /* maximum. Nothing in this brand is a pill. */
-
-  /* — Elevation: hairlines, not shadows (see §4.5) — */
-  --edge-hair:  0 0 0 1px var(--color-rule);
-  --edge-ink:   0 0 0 1px rgba(16, 26, 22, 0.14);
-  --edge-lift:  0 1px 2px rgba(16, 26, 22, 0.06), 0 0 0 1px rgba(16,26,22,0.08);
+  --shadow-card: 0 18px 40px -28px rgba(11, 43, 58, 0.45);
 }
 
 :root {
-  --background: var(--color-bone);
-  --foreground: var(--color-ink);
+  --background: var(--color-white);
+  --foreground: var(--color-body);
 
-  /* Fluid display scale — 1.250 major third, clamped */
-  --step--1: clamp(0.82rem, 0.79rem + 0.14vw, 0.90rem);
+  /* Fluid scale — spaces around + are REQUIRED inside clamp() */
+  --step--1: clamp(0.80rem, 0.77rem + 0.14vw, 0.88rem);
   --step-0:  clamp(1.00rem, 0.96rem + 0.19vw, 1.10rem);
-  --step-1:  clamp(1.25rem, 1.18rem + 0.34vw, 1.44rem);
-  --step-2:  clamp(1.56rem, 1.44rem + 0.59vw, 1.90rem);
-  --step-3:  clamp(1.95rem, 1.74rem + 1.00vw, 2.50rem);
-  --step-4:  clamp(2.44rem, 2.08rem + 1.68vw, 3.29rem);
-  --step-5:  clamp(3.05rem, 2.45rem + 2.80vw, 4.33rem);
+  --step-1:  clamp(1.20rem, 1.13rem + 0.34vw, 1.40rem);
+  --step-2:  clamp(1.50rem, 1.38rem + 0.58vw, 1.85rem);
+  --step-3:  clamp(1.90rem, 1.68rem + 1.05vw, 2.60rem);
+  --step-4:  clamp(2.30rem, 1.86rem + 2.10vw, 3.90rem);
 
-  /* Measure: body copy never exceeds 68 characters */
   --measure: 62ch;
-}
-
-/* Dark sections are a deliberate choice per-section, never a
-   user-toggled theme. Apply to a section, not to :root. */
-.on-field {
-  --background: var(--color-field);
-  --foreground: var(--color-bone);
-  background: var(--color-field);
-  color: var(--color-bone);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+  font-weight: 400;
   font-size: var(--step-0);
   line-height: 1.6;
+  letter-spacing: 0.004em;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, .display {
-  font-family: var(--font-display);
-  font-weight: 600;
-  line-height: 1.12;
-  letter-spacing: -0.015em;
+h1, h2, h3, h4 { font-family: var(--font-sans); font-weight: 800; line-height: 1.08; letter-spacing: -0.015em; }
+h1 { font-weight: 900; }
+
+.figure, .cert-id, td.num, th.num {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+  font-weight: 700;
 }
 
-/* Money, cert IDs, EMI tenures, policy clause numbers.
-   Tabular figures so columns of rupees align. */
-.figure, .cert-id, td.num {
-  font-family: var(--font-mono);
-  font-variant-numeric: tabular-nums;
-  letter-spacing: 0.01em;
+.label {
+  font-weight: 700; font-size: var(--step--1); letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--color-accent);
 }
 
 /* ============================================================
-   MIGRATION MAP — old token → new token
-   Mechanical find-and-replace in src/. Do NOT run blind; the
-   storm/dawn names carry meaning the new names do not.
-   ------------------------------------------------------------
-   --storm-deep      #0C0A09  → --color-field     #0B2B23
-   --storm-abyss     #141210  → --color-ink       #101A16
-   --storm-mid       #1C1917  → --color-field     #0B2B23
-   --storm-cloud     #292524  → --color-axis      #12463A  (raised)
-   --storm-electric  #FFFFFF  → --color-bone      #F1F3EE
-   --storm-bolt      #FAFAF9  → --color-bone      #F1F3EE
-   --storm-accent    #F59E0B  → --color-brass     #B0862F
-   --dawn-glow       #FBBF24  → --color-gold      #D9B166
-   --dawn-glow-soft  #FDE68A  → --color-gold      #D9B166
-   --dawn-clear      #78716C  → --color-muted     #5F6660
-   --color-axelis-accent #F59E0B → --color-brass  #B0862F
+   CONTRAST — measured 20 Sep 2026
+   White on Navy #0E3240       13.56  AAA
+   Navy on White               13.56  AAA
+   Navy on Tint #F0F4F8        12.27  AAA
+   Accent-lt #7FB4E0 on Navy    6.14  AAA
+   Accent-text #2F6795 on White 6.01  AAA
+   White on Accent-text         6.01  AAA   <- button text
+   Dim #5A7280 on White         5.06  AA
+   ---- TWO TRAPS ----
+   Brand blue #4080BD on White  4.17  FAILS for text
+   Brand blue #4080BD on Navy   3.25  FAILS
+   #4080BD is a SURFACE colour. Text and button fills on light take
+   #2F6795; accents on navy take #7FB4E0.
 
-   RETIRE ON SIGHT — these have no home in the new system:
-   #ffde59 (old logo yellow) · #4C9DF0 #3590f3 #8fbcf7 (stray blues)
-   #1B365D #172A7E (two unrelated navies) · #4f46e5 (indigo)
-   #1F4E79 + #FFF4E0 (old certificate navy/cream — superseded by
-   --color-axis on --color-paper; see §6.3)
+   MIGRATION MAP — old token → new token
+   --storm-deep      #0C0A09  → --color-navy        #0E3240
+   --storm-abyss     #141210  → --color-navy-2      #154457
+   --storm-mid       #1C1917  → --color-navy        #0E3240
+   --storm-cloud     #292524  → --color-navy-2      #154457
+   --storm-electric  #FFFFFF  → --color-white       #FFFFFF
+   --storm-bolt      #FAFAF9  → --color-tint        #F0F4F8
+   --storm-accent    #F59E0B  → --color-accent-text #2F6795
+   --dawn-glow       #FBBF24  → --color-accent-lt   #7FB4E0
+   --dawn-glow-soft  #FDE68A  → --color-tint-2      #E3EDF5
+   --dawn-clear      #78716C  → --color-dim         #5A7280
+
+   RETIRE ON SIGHT
+   #ffde59 (old logo yellow — the logo now takes currentColor)
+   #4C9DF0 #3590f3 #8fbcf7 #1B365D #172A7E #4f46e5 (stray blues/indigo)
+   #1F4E79 + #FFF4E0 (old certificate navy/cream)
+   #12463A #B0862F #F1F3EE (v1 green/brass)  ·  #FF3B1F #C4290F (v2 vermilion)
+   Montserrat, Source Serif 4, IBM Plex Sans/Mono, Cabinet Grotesk — replaced by
+   Instrument Serif (display) + Instrument Sans (text). No third family.
    ============================================================ */

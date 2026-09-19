@@ -1,0 +1,596 @@
+<meta charset="utf-8">
+<title>Axelis Brand Dark</title>
+<style>
+@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-900.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
+
+  /* ---------- identity showcase ---------- */
+  .idsec{background:var(--char); border-top:1px solid var(--line); padding-block:62px}
+  .idgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(290px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+  .idc{background:var(--ink); padding:24px; display:flex; flex-direction:column; gap:14px}
+  .idc h3{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:1.2rem; line-height:1}
+  .idc .cap{font-size:.86rem; color:var(--dim)}
+  .idc .lab{font-family:var(--num); font-weight:700; font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--verm)}
+  .ladder{display:flex; flex-direction:column; gap:9px}
+  .ladder div{display:flex; align-items:baseline; gap:12px; border-bottom:1px solid var(--line); padding-bottom:8px}
+  .ladder b{flex:0 0 42px; font-weight:500; font-size:.68rem; color:var(--dim)}
+  .bigAa{font-family:var(--display); font-size:4.6rem; font-weight:900; line-height:.85; letter-spacing:-.03em; text-transform:uppercase}
+  .figrow{display:flex; flex-wrap:wrap; gap:6px 18px; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1; font-weight:700}
+  .favrow{display:flex; flex-wrap:wrap; align-items:flex-end; gap:18px}
+  .favrow .u{display:flex; flex-direction:column; align-items:center; gap:6px}
+  .favrow .u span{font-size:.66rem; color:var(--dim)}
+  .tabmock{display:flex; align-items:center; gap:8px; background:var(--char); border:1px solid var(--line);
+           border-radius:9px 9px 0 0; padding:8px 12px; max-width:220px; font-size:.78rem; font-weight:500}
+  .tile{width:64px; height:64px; border-radius:14px; background:var(--verm); display:flex; align-items:center; justify-content:center}
+  .sealrow{display:flex; flex-wrap:wrap; align-items:flex-end; gap:20px}
+  .sealrow .u{display:flex; flex-direction:column; align-items:center; gap:6px}
+  .sealrow .u span{font-size:.66rem; color:var(--dim)}
+    .docprev{display:block; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:#FFF; line-height:0}
+  .docprev img{width:100%; height:auto; display:block}
+  .docprev:hover{border-color:currentColor}
+  .idc .go{margin-top:auto; display:flex; gap:10px; flex-wrap:wrap}
+  .idc.docs2{grid-column:1 / -1}
+  .idc.docs2 .previews{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px}
+  .idc.docs2 .previews figure{margin:0; display:flex; flex-direction:column; gap:8px}
+  .idc.docs2 .previews figcaption{font-size:.84rem}
+
+</style>
+<style>
+  :root{
+    /* ---- LOCKED: Ink Vermilion ---- */
+    --ink:#101010;          /* page ground            */
+    --char:#1A1616;         /* cards, raised surfaces */
+    --line:#332B29;         /* hairlines on dark      */
+    --verm:#FF3B1F;         /* accent on dark only    */
+    --verm-deep:#C4290F;    /* accent text on light   */
+    --paper:#F6F2F0;        /* light sections         */
+    --paper-2:#EBE4E1;      /* light cards            */
+    --paper-line:#D9CEC9;   /* hairlines on light     */
+    --on-paper:#141010;     /* text on light          */
+    --dim:#A39C99;          /* secondary on dark      */
+    --dim-paper:#6B6260;    /* secondary on light     */
+
+    /* one family, everywhere */
+    --display:'Cabinet Grotesk','Arial Black',sans-serif;
+    --body:'Cabinet Grotesk',-apple-system,BlinkMacSystemFont,sans-serif;
+    --num:'Cabinet Grotesk',-apple-system,sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--ink); color:#FFFFFF; font-family:var(--body); font-weight:400; line-height:1.62; letter-spacing:.004em; -webkit-font-smoothing:antialiased}
+  .pad{max-width:1140px; margin:0 auto; padding-inline:24px}
+  p{margin:0} h1,h2,h3,h4{margin:0}
+  a{color:inherit}
+  .d{font-family:var(--display); font-weight:800; text-transform:uppercase; line-height:.95; letter-spacing:-.015em}
+  .num{font-family:var(--num); font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1}
+  .eyebrow{font-family:var(--num); font-weight:700; font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:var(--verm)}
+  .eyebrow.on-light{color:var(--verm-deep)}
+  a:focus-visible,button:focus-visible{outline:2px solid var(--verm); outline-offset:3px}
+
+  /* buttons — ink on vermilion, never white (3.56:1 fails) */
+  .btn{display:inline-block; font-family:var(--display); font-weight:700; text-transform:uppercase; letter-spacing:.03em;
+       font-size:.95rem; padding:14px 26px; text-decoration:none; border:2px solid var(--verm); background:var(--verm); color:var(--ink)}
+  .btn:hover{background:#FF5638; border-color:#FF5638}
+  .btn.ghost{background:transparent; color:#FFFFFF; border-color:#4A403D}
+  .btn.ghost:hover{border-color:#FFFFFF}
+  .btn.on-light{color:#FFFFFF; background:var(--verm-deep); border-color:var(--verm-deep)}
+  .btn.on-light:hover{background:#A81F08; border-color:#A81F08}
+
+  /* ---------- chrome ---------- */
+  .util{background:#000; font-family:var(--num); font-weight:500; font-size:.74rem; letter-spacing:.06em; color:var(--dim); padding-block:8px}
+  .util .pad{display:flex; flex-wrap:wrap; gap:6px 24px; justify-content:space-between}
+  nav{background:var(--ink); border-bottom:1px solid var(--line); position:sticky; top:0; z-index:50}
+  nav .pad{display:flex; align-items:center; gap:22px; padding-block:12px}
+  .lock{display:flex; align-items:center; gap:12px; text-decoration:none; flex:0 0 auto}
+  .lock .wm{font-family:var(--display); font-weight:800; text-transform:uppercase; letter-spacing:.06em; font-size:1.05rem}
+  .nl{display:flex; gap:20px; margin-left:auto; font-size:.9rem}
+  .nl a{text-decoration:none; padding-block:4px; border-bottom:2px solid transparent}
+  .nl a:hover{border-bottom-color:var(--verm)}
+
+  /* ---------- hero (upGrad architecture: claim left, capture right) ---------- */
+  .hero{border-bottom:1px solid var(--line); overflow:hidden}
+  .hero .pad{display:grid; grid-template-columns:1.25fr .75fr; gap:44px; padding-block:64px 54px; align-items:start}
+  .hero h1{font-family:var(--display); font-weight:900; text-transform:uppercase; line-height:.9; letter-spacing:-.02em;
+           font-size:clamp(2.6rem,1.6rem + 4.6vw,5.2rem); max-width:14ch}
+  .hero h1 .hl{color:var(--verm)}
+  .hero .sub{margin-top:22px; max-width:48ch; color:var(--dim); font-size:1.08rem}
+  .hero .acts{display:flex; flex-wrap:wrap; gap:12px; margin-top:28px}
+  .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:26px}
+  .chip{font-family:var(--num); font-weight:500; font-size:.74rem; letter-spacing:.08em; text-transform:uppercase; color:var(--dim);
+        border:1px solid var(--line); padding:7px 11px}
+  .chip b{color:#FFF; font-weight:500}
+
+  .capture{background:var(--char); border:1px solid var(--line); padding:26px 24px}
+  .capture h3{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:1.3rem; line-height:1}
+  .capture p{font-size:.86rem; color:var(--dim); margin-top:8px}
+  .field{display:flex; flex-direction:column; gap:5px; margin-top:16px}
+  .field label{font-family:var(--num); font-weight:700; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--dim)}
+  .field input, .field select{background:var(--ink); border:1px solid var(--line); color:#FFF; padding:11px 12px; font-family:var(--body); font-size:.95rem}
+  .field input:focus, .field select:focus{outline:2px solid var(--verm); outline-offset:0; border-color:var(--verm)}
+  .capture .btn{width:100%; text-align:center; margin-top:18px}
+  .capture .fine{font-size:.72rem; color:var(--dim); margin-top:12px; line-height:1.45}
+
+  /* ---------- stats band ---------- */
+  .stats{background:var(--verm); color:var(--ink); border-bottom:1px solid var(--line)}
+  .stats .pad{display:flex; flex-wrap:wrap; gap:14px 44px; padding-block:18px; justify-content:space-between; align-items:baseline}
+  .stats .n{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(1.15rem,.9rem + 1.1vw,1.7rem); line-height:1}
+  .stats .k{font-family:var(--num); font-weight:500; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; opacity:.7; display:block; margin-top:3px}
+
+  /* ---------- sections ---------- */
+  section{padding-block:66px}
+  section.light{background:var(--paper); color:var(--on-paper)}
+  section.light .dim{color:var(--dim-paper)}
+  .shead{max-width:60ch; margin-bottom:34px; display:flex; flex-direction:column; gap:12px}
+  .shead h2{font-family:var(--display); font-weight:800; text-transform:uppercase; line-height:.95; letter-spacing:-.015em;
+            font-size:clamp(1.7rem,1.2rem + 2.2vw,3rem)}
+  .shead p{color:var(--dim); font-size:1.02rem}
+  section.light .shead p{color:var(--dim-paper)}
+
+  .grid4{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+  .g{background:var(--ink); padding:24px 22px; display:flex; flex-direction:column; gap:10px}
+  .g .no{font-family:var(--num); font-weight:700; font-size:.7rem; letter-spacing:.16em; color:var(--verm)}
+  .g h4{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:1.18rem; line-height:1}
+  .g p{font-size:.92rem; color:var(--dim)}
+
+  /* destinations */
+  .dests{display:flex; flex-wrap:wrap; gap:1px; background:var(--paper-line); border:1px solid var(--paper-line)}
+  .dest{background:var(--paper); padding:14px 18px; flex:1 1 150px; display:flex; flex-direction:column; gap:3px}
+  .dest .c{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:1.05rem}
+  .dest .m{font-family:var(--num); font-weight:500; font-size:.72rem; color:var(--dim-paper)}
+
+  /* partner wall */
+  .wall{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px; background:var(--paper-line); border:1px solid var(--paper-line); margin-top:26px}
+  .wall div{background:#FFF; display:flex; align-items:center; justify-content:center; padding:22px 18px; min-height:104px}
+  .wall img{max-width:100%; max-height:52px; width:auto; height:auto; object-fit:contain}
+
+  /* programmes */
+  .progs{display:grid; grid-template-columns:repeat(auto-fit,minmax(272px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line)}
+  .prog{background:var(--char); padding:28px 24px; display:flex; flex-direction:column; gap:12px}
+  .prog .tag{font-family:var(--num); font-weight:700; font-size:.68rem; letter-spacing:.16em; text-transform:uppercase; color:var(--verm)}
+  .prog h3{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:1.5rem; line-height:.98}
+  .prog .what{font-size:.92rem; color:var(--dim)}
+  .prog ul{margin:0; padding-left:16px; display:flex; flex-direction:column; gap:5px; font-size:.86rem; color:#E4DEDC}
+  .prog .fee{margin-top:auto; padding-top:16px; border-top:1px solid var(--line); display:flex; align-items:baseline; justify-content:space-between; gap:10px}
+  .prog .amt{font-family:var(--num); font-weight:800; font-size:1.5rem; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1}
+  .prog .emi{font-family:var(--num); font-weight:500; font-size:.76rem; line-height:1.3; font-variant-numeric:tabular-nums; color:var(--dim); text-align:right}
+
+  /* guarantee on paper */
+  .guar{display:grid; grid-template-columns:1fr auto; gap:48px; align-items:center}
+  .clauses{display:flex; flex-direction:column; gap:1px; background:var(--paper-line); border:1px solid var(--paper-line); margin-top:22px}
+  .cl{background:var(--paper); padding:14px 16px; display:grid; grid-template-columns:58px 1fr; gap:16px; align-items:baseline}
+  .cl .n{font-family:var(--num); font-weight:700; font-size:.78rem; color:var(--verm-deep)}
+  .cl .t{font-size:.95rem}
+
+  /* financing */
+  .tw{overflow-x:auto; border:1px solid var(--line)}
+  table{border-collapse:collapse; width:100%; min-width:560px; font-size:.92rem}
+  th{text-align:left; font-family:var(--num); font-weight:700; font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:var(--dim); padding:12px 16px; border-bottom:1px solid var(--line)}
+  td{padding:11px 16px; border-bottom:1px solid var(--line)}
+  tbody tr:nth-child(even){background:var(--char)}
+  tbody tr:last-child td{border-bottom:0}
+  th.n,td.n{text-align:right; font-family:var(--num); font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1; white-space:nowrap}
+
+  /* faq */
+  .faq{display:flex; flex-direction:column; gap:1px; background:var(--line); border:1px solid var(--line)}
+  details{background:var(--ink); padding:16px 20px}
+  details[open]{background:var(--char)}
+  summary{font-family:var(--display); font-weight:700; text-transform:uppercase; font-size:1.02rem; cursor:pointer; list-style:none; display:flex; justify-content:space-between; gap:16px}
+  summary::-webkit-details-marker{display:none}
+  summary::after{content:'+'; color:var(--verm); font-family:var(--num)}
+  details[open] summary::after{content:'–'}
+  details p{margin-top:12px; font-size:.94rem; color:var(--dim); max-width:66ch}
+
+  /* closing cta */
+  .cta{background:var(--verm); color:var(--ink)}
+  .cta .pad{display:flex; flex-wrap:wrap; gap:26px; align-items:center; justify-content:space-between; padding-block:44px}
+  .cta h2{font-family:var(--display); font-weight:900; text-transform:uppercase; line-height:.92; font-size:clamp(1.7rem,1.2rem + 2.4vw,3rem); max-width:17ch}
+  .cta .btn{background:var(--ink); border-color:var(--ink); color:#FFF}
+  .cta .btn:hover{background:#000; border-color:#000}
+
+  footer{background:#000; color:var(--dim); padding-block:50px 30px; font-size:.9rem; border-top:1px solid var(--line)}
+  footer .cols{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:30px}
+  footer h4{font-family:var(--display); font-weight:800; text-transform:uppercase; color:#FFF; font-size:.95rem; margin-bottom:12px}
+  footer ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px}
+  footer a{text-decoration:none}
+  footer a:hover{color:var(--verm)}
+  .fbar{margin-top:34px; padding-top:16px; border-top:1px solid var(--line); display:flex; flex-wrap:wrap; gap:8px 24px; justify-content:space-between; font-family:var(--num); font-weight:500; font-size:.74rem; letter-spacing:.05em}
+
+  /* spec sheet */
+  .spec{background:var(--char); border-top:1px solid var(--line)}
+  .specgrid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:22px}
+  .sc{background:var(--ink); padding:20px}
+  .sc h4{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:.95rem; color:var(--verm); margin-bottom:10px}
+  .sc p, .sc li{font-size:.88rem; color:var(--dim)}
+  .sc ul{margin:0; padding-left:16px; display:flex; flex-direction:column; gap:6px}
+  .swat{display:flex; flex-wrap:wrap; margin-top:10px}
+  .swat span{flex:1 1 70px; height:42px; position:relative}
+  .swat span::after{content:attr(data-h); position:absolute; left:5px; bottom:4px; font-family:var(--num); font-weight:500; font-size:.6rem}
+
+  @media (max-width:880px){
+    .hero .pad{grid-template-columns:1fr; gap:32px}
+    .guar{grid-template-columns:1fr; gap:28px}
+    footer .cols{grid-template-columns:1fr 1fr}
+    .nl{display:none}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important; animation:none!important}}
+</style>
+
+<div class="util"><div class="pad"><span>Bengaluru &amp; Bilaspur</span><span>+91 9098522711 · axelisoverseas@overseeducation.com</span></div></div>
+
+<nav>
+  <div class="pad">
+    <a class="lock" href="#top">
+      <svg width="38" height="38" viewBox="0 0 375 375" role="img" aria-label="Axelis Overseas"><use href="#ax-mark"/></svg>
+      <span class="wm">Axelis Overseas</span>
+    </a>
+    <div class="nl">
+      <a href="#programmes">Programmes</a>
+      <a href="#guarantee">The guarantee</a>
+      <a href="#financing">Financing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="btn" href="#capture">Talk to a counsellor</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="pad">
+    <div>
+      <span class="eyebrow">Three concierge programmes</span>
+      <h1 style="margin-top:14px">We put the outcome <span class="hl">in writing.</span></h1>
+      <p class="sub">Axelis takes a small number of students end to end — shortlist to offer — under terms that state what happens if we fail. Not advice. A contract.</p>
+      <div class="acts">
+        <a class="btn" href="#programmes">See the three programmes</a>
+        <a class="btn ghost" href="#guarantee">Read clause 4 first</a>
+      </div>
+      <div class="chips">
+        <span class="chip"><b>5,000+</b> students placed</span>
+        <span class="chip"><b>29</b> countries</span>
+        <span class="chip"><b>60%</b> returned if no offer</span>
+        <span class="chip"><b>24</b>-month EMI</span>
+      </div>
+    </div>
+
+    <aside class="capture" id="capture">
+      <h3>Talk to a counsellor</h3>
+      <p>One call, no obligation. We will tell you if you are not a fit for a concierge programme.</p>
+      <div class="field"><label for="nm">Full name</label><input id="nm" type="text" placeholder="Ananya Krishnamurthy"></div>
+      <div class="field"><label for="ph">Mobile</label><input id="ph" type="tel" placeholder="+91 90000 00000"></div>
+      <div class="field"><label for="pg">Programme of interest</label>
+        <select id="pg">
+          <option>Global Career Launch — ₹2,00,000</option>
+          <option>PhD &amp; Fellowship Concierge — ₹2,50,000</option>
+          <option>Executive MBA Concierge — ₹3,00,000</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <a class="btn" href="#capture">Book the call</a>
+      <p class="fine">Sample form — nothing is submitted. Real enquiries route to HubSpot.</p>
+    </aside>
+  </div>
+</header>
+
+<div class="stats">
+  <div class="pad">
+    <div><div class="n">5,000+</div><span class="k">Students placed</span></div>
+    <div><div class="n">29 countries</div><span class="k">Destinations covered</span></div>
+    <div><div class="n">3 programmes</div><span class="k">Concierge only</span></div>
+    <div><div class="n">30 days</div><span class="k">Refund window, written</span></div>
+    <div><div class="n">6–24 months</div><span class="k">EMI tenures</span></div>
+  </div>
+</div>
+
+<section>
+  <div class="pad">
+    <div class="shead">
+      <span class="eyebrow">What end-to-end actually means</span>
+      <h2>Four things we do that an agent does not</h2>
+      <p>Most consultancies are paid by universities to place you somewhere. We are paid by you to place you correctly, and we sign for it.</p>
+    </div>
+    <div class="grid4">
+      <div class="g"><span class="no">01</span><h4>A shortlist you agree to</h4><p>Six schools minimum, agreed in writing before a single application opens. No surprise additions.</p></div>
+      <div class="g"><span class="no">02</span><h4>Your file, written with you</h4><p>SOP, essays, recommender strategy and interview prep, done together rather than templated.</p></div>
+      <div class="g"><span class="no">03</span><h4>Visa file to submission</h4><p>Documents, financials and interview readiness handled to the point of decision.</p></div>
+      <div class="g"><span class="no">04</span><h4>A remedy if it fails</h4><p>Clause 4 states the refund. You read it before you pay, not after.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="light">
+  <div class="pad">
+    <div class="shead">
+      <span class="eyebrow on-light">One path, many destinations</span>
+      <h2>Where our students actually go</h2>
+      <p class="dim">Twenty-nine countries. These eight carry most of the intake, and each has a different visa reality we handle differently.</p>
+    </div>
+    <div class="dests">
+      <div class="dest"><span class="c">United Kingdom</span><span class="m">Post-study work · 2 yrs</span></div>
+      <div class="dest"><span class="c">Ireland</span><span class="m">Stay-back · 2 yrs</span></div>
+      <div class="dest"><span class="c">Germany</span><span class="m">Low tuition · B1 route</span></div>
+      <div class="dest"><span class="c">United States</span><span class="m">OPT · STEM 36 mo</span></div>
+      <div class="dest"><span class="c">Finland</span><span class="m">Scholarship-led</span></div>
+      <div class="dest"><span class="c">France</span><span class="m">B1 · grandes écoles</span></div>
+      <div class="dest"><span class="c">Netherlands</span><span class="m">English-taught MSc</span></div>
+      <div class="dest"><span class="c">Australia</span><span class="m">Regional advantage</span></div>
+    </div>
+
+    <h3 class="d" style="font-size:1.25rem; margin-top:44px">Universities our students hold offers from</h3>
+    <div class="wall">
+      <div><img src="logos/cardiff.png" alt="Cardiff University"></div>
+      <div><img src="logos/imperial.png" alt="Imperial College London"></div>
+      <div><img src="logos/strathclyde.jpg" alt="University of Strathclyde"></div>
+      <div><img src="logos/limerick.png" alt="University of Limerick"></div>
+      <div><img src="logos/sacredheart.png" alt="Sacred Heart University"></div>
+    </div>
+  </div>
+</section>
+
+<section id="programmes">
+  <div class="pad">
+    <div class="shead">
+      <span class="eyebrow">The catalogue</span>
+      <h2>Three programmes. Nothing we cannot staff properly.</h2>
+      <p>Each is end to end and capped by intake. There is no self-serve tier, because there is no honest way to guarantee an outcome on one.</p>
+    </div>
+    <div class="progs">
+      <article class="prog">
+        <span class="tag">01 / Concierge</span>
+        <h3>Global Career Launch</h3>
+        <p class="what">Shortlist to offer, handled end to end, for a first degree abroad.</p>
+        <ul><li>Shortlist and strategy</li><li>Applications, SOP, references</li><li>Visa file and interview</li></ul>
+        <div class="fee"><span class="amt">₹2,00,000</span><span class="emi">EMI from<br>₹8,334 / 24 mo</span></div>
+        <a class="btn ghost" href="#capture" style="margin-top:14px; align-self:flex-start">Enrol</a>
+      </article>
+      <article class="prog">
+        <span class="tag">02 / Concierge</span>
+        <h3>PhD &amp; Fellowship</h3>
+        <p class="what">Research proposal, supervisor match and funding, to submission.</p>
+        <ul><li>Proposal development</li><li>Supervisor outreach</li><li>Fellowship applications</li></ul>
+        <div class="fee"><span class="amt">₹2,50,000</span><span class="emi">EMI from<br>₹10,417 / 24 mo</span></div>
+        <a class="btn ghost" href="#capture" style="margin-top:14px; align-self:flex-start">Enrol</a>
+      </article>
+      <article class="prog">
+        <span class="tag">03 / Concierge</span>
+        <h3>Executive MBA</h3>
+        <p class="what">For candidates with a career behind them and no time to spare.</p>
+        <ul><li>School selection</li><li>Essays and recommenders</li><li>Scholarship negotiation</li></ul>
+        <div class="fee"><span class="amt">₹3,00,000</span><span class="emi">EMI from<br>₹12,500 / 24 mo</span></div>
+        <a class="btn ghost" href="#capture" style="margin-top:14px; align-self:flex-start">Enrol</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="light" id="guarantee">
+  <div class="pad">
+    <div class="guar">
+      <div>
+        <span class="eyebrow on-light">§4 · The written outcome guarantee</span>
+        <h2 class="d" style="font-size:clamp(1.7rem,1.2rem + 2.2vw,3rem); margin-top:12px; max-width:18ch">What happens if we fail is written down before you pay</h2>
+        <p class="dim" style="margin-top:16px; max-width:56ch">Axelis does not guarantee admission — nobody honestly can. It guarantees a defined remedy on a defined failure, and publishes both.</p>
+        <div class="clauses">
+          <div class="cl"><span class="n">§4.1</span><span class="t">A shortlist of at least six universities, agreed in writing before applications open.</span></div>
+          <div class="cl"><span class="n">§4.2</span><span class="t">No offer from any shortlisted university — 60% of the fee returned within 30 days.</span></div>
+          <div class="cl"><span class="n">§4.3</span><span class="t">Not covered: visa refusal on grounds of document fraud, or withdrawal by the student.</span></div>
+        </div>
+        <a class="btn on-light" href="#guarantee" style="margin-top:22px">Read the full policy</a>
+      </div>
+      <svg width="190" height="190" viewBox="0 0 240 240" role="img" aria-label="Axelis guarantee seal" style="color:#141010; --axelis-accent:#C4290F"><use href="#ax-seal"/></svg>
+    </div>
+  </div>
+</section>
+
+<section id="financing">
+  <div class="pad">
+    <div class="shead">
+      <span class="eyebrow">Financing</span>
+      <h2>The whole fee, or monthly</h2>
+      <p>Every programme clears the ₹10,000 EMI floor. Tenures of 6, 9, 12, 18 and 24 months.</p>
+    </div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Programme</th><th class="n">Fee</th><th class="n">12 months</th><th class="n">18 months</th><th class="n">24 months</th></tr></thead>
+        <tbody>
+          <tr><td>Global Career Launch</td><td class="n">₹2,00,000</td><td class="n">₹16,667</td><td class="n">₹11,112</td><td class="n">₹8,334</td></tr>
+          <tr><td>PhD &amp; Fellowship Concierge</td><td class="n">₹2,50,000</td><td class="n">₹20,834</td><td class="n">₹13,889</td><td class="n">₹10,417</td></tr>
+          <tr><td>Executive MBA Concierge</td><td class="n">₹3,00,000</td><td class="n">₹25,000</td><td class="n">₹16,667</td><td class="n">₹12,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:14px; font-size:.82rem; color:var(--dim); max-width:70ch">Instalments are the fee divided by the tenure, rounded up to the rupee, and exclude any charge levied by the financing partner. The binding schedule is the one on the financing agreement.</p>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="pad">
+    <div class="shead"><span class="eyebrow">Questions we get asked</span><h2>The awkward ones, answered</h2></div>
+    <div class="faq">
+      <details open><summary>Do you guarantee admission?<span></span></summary><p>No. Nobody can. We guarantee a remedy — clause 4.2 — if you receive no offer from any university on the shortlist we agreed in writing. That is a different and enforceable promise.</p></details>
+      <details><summary>Why only three programmes?<span></span></summary><p>Because each one is capped by intake and staffed by a named lead. A cheaper self-serve tier would mean guaranteeing an outcome we cannot control, which is exactly what the rest of the category does.</p></details>
+      <details><summary>What is not covered?<span></span></summary><p>Visa refusal on grounds of document fraud or misrepresentation, withdrawal by the student, and failure to sit a required test on the agreed date. All three are in §4.3, in full, before you pay.</p></details>
+      <details><summary>Are you paid by universities?<span></span></summary><p>The programme fee is paid by you. That is what lets the shortlist be built around your outcome rather than around a commission table.</p></details>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="pad">
+    <h2>Read clause 4 before you speak to anyone else.</h2>
+    <div style="display:flex; gap:12px; flex-wrap:wrap">
+      <a class="btn" href="#guarantee">Read the guarantee</a>
+      <a class="btn" href="#capture" style="background:transparent; color:var(--ink); border-color:var(--ink)">Book a call</a>
+    </div>
+  </div>
+</div>
+
+
+<div class="idsec">
+  <div class="pad">
+    <div class="shead"><h2 class="d" style="font-size:clamp(1.7rem,1.2rem + 2.2vw,3rem)">The identity, in one place</h2>
+      <p>Everything the brand is made of, on one screen — the typeface, the favicon, the stamp, and the two document templates as they actually print.</p>
+    </div>
+    <div class="idgrid">
+
+      <div class="idc">
+        <span class="lab">Typeface</span>
+        <h3>Cabinet Grotesk</h3>
+        <div class="bigAa">Aa</div>
+        <p class="cap">One family everywhere. Hierarchy comes from weight, never from a second font.</p>
+        <div class="ladder">
+          <div><b>900</b><span style="font-weight:900; font-size:1.25rem">Three programmes</span></div>
+          <div><b>800</b><span style="font-weight:800; font-size:1.1rem">One guarantee</span></div>
+          <div><b>700</b><span style="font-weight:700; font-size:.82rem; letter-spacing:.14em; text-transform:uppercase">Written outcome</span></div>
+          <div><b>500</b><span style="font-weight:500">Cohort 2026-A · Bengaluru</span></div>
+          <div><b>400</b><span style="font-weight:400">Body copy sits at four hundred.</span></div>
+        </div>
+        <span class="lab">Figures · tabular</span>
+        <div class="figrow"><span>₹2,00,000</span><span>₹8,334</span><span>AXC-2026-0147</span></div>
+      </div>
+
+      <div class="idc">
+        <span class="lab">Favicon &amp; app icon</span>
+        <h3>The mark, small</h3>
+        <p class="cap">The planet alone, never the lockup. Look closely at 16px and 24px: the rocket and the slipstream merge. Those two slots need a simplified favicon — planet and slipstream, rocket dropped — which is normal practice and still to be drawn.</p>
+        <div class="favrow">
+          <div class="u"><svg width="16" height="16" viewBox="0 0 375 375" style="color:var(--verm-deep)" aria-hidden="true"><use href="#ax-mark"/></svg><span>16px</span></div>
+          <div class="u"><svg width="24" height="24" viewBox="0 0 375 375" style="color:var(--verm-deep)" aria-hidden="true"><use href="#ax-mark"/></svg><span>24px</span></div>
+          <div class="u"><svg width="32" height="32" viewBox="0 0 375 375" style="color:var(--verm-deep)" aria-hidden="true"><use href="#ax-mark"/></svg><span>32px</span></div>
+          <div class="u"><svg width="48" height="48" viewBox="0 0 375 375" style="color:var(--verm-deep)" aria-hidden="true"><use href="#ax-mark"/></svg><span>48px</span></div>
+        </div>
+        <div class="tabmock"><svg width="16" height="16" viewBox="0 0 375 375" style="color:var(--verm-deep)" aria-hidden="true"><use href="#ax-mark"/></svg><span>Axelis Overseas</span></div>
+        <div class="favrow">
+          <div class="u"><div class="tile"><svg width="38" height="38" viewBox="0 0 375 375" style="color:var(--ink)" aria-hidden="true"><use href="#ax-mark"/></svg></div><span>App icon</span></div>
+          <div class="u"><div class="tile" style="background:var(--navy)"><svg width="38" height="38" viewBox="0 0 375 375" style="color:var(--verm)" aria-hidden="true"><use href="#ax-mark"/></svg></div><span>Dark tile</span></div>
+        </div>
+      </div>
+
+      <div class="idc">
+        <span class="lab">Stamp</span>
+        <h3>The guarantee seal</h3>
+        <p class="cap">Your mark inside a double rule, the slipstream breaking the rings. Certificates, signed guarantees and enrolment agreements only.</p>
+        <div class="sealrow">
+          <div class="u"><svg width="118" height="118" viewBox="0 0 240 240" style="color:var(--navy); --axelis-accent:var(--verm)" aria-hidden="true"><use href="#ax-seal"/></svg><span>Primary</span></div>
+          <div class="u"><svg width="72" height="72" viewBox="0 0 240 240" style="color:var(--verm-deep)" aria-hidden="true"><use href="#ax-seal"/></svg><span>72px</span></div>
+          <div class="u"><svg width="44" height="44" viewBox="0 0 240 240" style="color:var(--navy)" aria-hidden="true"><use href="#ax-seal"/></svg><span>44px</span></div>
+        </div>
+      </div>
+
+      <div class="idc docs2">
+        <span class="lab">Documents</span>
+        <h3>Certificate &amp; proposal</h3>
+        <p class="cap">Both templates as they actually print. Open either and use the browser's print dialogue to check the trim.</p>
+        <div class="previews">
+          <figure>
+            <a class="docprev" href="certificate.html"><img src="previews/certificate.jpg" alt="Programme certificate, A4 landscape" loading="lazy"></a>
+            <figcaption class="cap">A4 landscape · seal, certificate ID, two signature rules</figcaption>
+          </figure>
+          <figure>
+            <a class="docprev port" href="proposal.html"><img src="previews/proposal.jpg" alt="Programme proposal cover, A4 portrait" loading="lazy"></a>
+            <figcaption class="cap">A4 portrait, two pages · fee and EMI tables, clause 4 in full</figcaption>
+          </figure>
+        </div>
+        <div class="go">
+          <a class="btn" href="certificate.html">Open certificate</a>
+          <a class="btn ghost" href="proposal.html">Open proposal</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="pad">
+    <div class="cols">
+      <div>
+        <div class="lock" style="margin-bottom:12px">
+          <svg width="34" height="34" viewBox="0 0 375 375" style="color:#FFF" aria-hidden="true"><use href="#ax-mark"/></svg>
+          <span class="wm" style="color:#FFF">Axelis Overseas</span>
+        </div>
+        <p>Three end-to-end concierge programmes. A written outcome guarantee.</p>
+      </div>
+      <div><h4>Programmes</h4><ul><li><a href="#programmes">Global Career Launch</a></li><li><a href="#programmes">PhD &amp; Fellowship</a></li><li><a href="#programmes">Executive MBA</a></li></ul></div>
+      <div><h4>Terms</h4><ul><li><a href="#guarantee">Cancellation &amp; refund</a></li><li><a href="#guarantee">Terms &amp; conditions</a></li><li><a href="#guarantee">Privacy policy</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="#capture">Book a discovery call</a></li><li><a href="#capture">+91 9098522711</a></li><li><a href="#capture">axelisoverseas@overseeducation.com</a></li></ul></div>
+    </div>
+    <div class="fbar"><span>© 2026 Axelis Overseas Education</span><span>Bengaluru · Bilaspur</span><span>overseeducation.com</span></div>
+  </div>
+</footer>
+
+<!-- ============ SIGN-OFF SPEC ============ -->
+<div class="spec">
+  <div class="pad" style="padding-block:44px 56px">
+    <span class="eyebrow">Sign-off sheet</span>
+    <h2 class="d" style="font-size:1.8rem; margin-top:10px">Everything locked in this page</h2>
+    <div class="specgrid">
+      <div class="sc">
+        <h4>Type</h4>
+        <ul>
+          <li><b style="color:#FFF">One family:</b> Cabinet Grotesk — Fontshare, free</li>
+          <li><b style="color:#FFF">Display</b> 800/900 uppercase · <b style="color:#FFF">body</b> 400 · <b style="color:#FFF">labels</b> 700 tracked</li>
+          <li><b style="color:#FFF">Figures</b> 800, tabular — no second face</li>
+          <li>Hierarchy comes from weight and tracking, never from a new font</li>
+        </ul>
+      </div>
+      <div class="sc">
+        <h4>Colour</h4>
+        <div class="swat">
+          <span style="background:#101010; color:#FFF" data-h="#101010"></span>
+          <span style="background:#1A1616; color:#FFF" data-h="#1A1616"></span>
+          <span style="background:#FF3B1F; color:#101010" data-h="#FF3B1F"></span>
+          <span style="background:#C4290F; color:#FFF" data-h="#C4290F"></span>
+          <span style="background:#F6F2F0; color:#101010" data-h="#F6F2F0"></span>
+        </div>
+        <p style="margin-top:10px">Ink · Char · Vermilion · Vermilion Deep · Paper</p>
+      </div>
+      <div class="sc">
+        <h4>Measured contrast</h4>
+        <ul>
+          <li>White on Ink — <span class="num">19.03</span> AAA</li>
+          <li>Vermilion on Ink — <span class="num">5.34</span> AA</li>
+          <li>Ink on Vermilion — <span class="num">5.34</span> AA</li>
+          <li>Vermilion Deep on Paper — <span class="num">5.14</span> AA</li>
+          <li style="color:#FF8A6B">White on Vermilion — <span class="num">3.56</span> FAILS</li>
+        </ul>
+      </div>
+      <div class="sc">
+        <h4>Rules that follow</h4>
+        <ul>
+          <li>Buttons on vermilion use <b style="color:#FFF">ink text</b>, never white</li>
+          <li>Accent text on light is <b style="color:#FFF">#C4290F</b>, never #FF3B1F</li>
+          <li>Vermilion is ~8% of any page — one element at a time</li>
+          <li>Logo takes <span class="num">currentColor</span>; no second file per colour</li>
+          <li>Money and IDs always monospace</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="ax-mark" viewBox="0 0 375 375"><defs><clipPath id="d85e05967a"><path d="M 82.386719 211 L 201.957031 211 L 201.957031 262.730469 L 82.386719 262.730469 Z M 82.386719 211 "/></clipPath><clipPath id="cc655dd03e"><path d="M 201.648438 211.277344 L 201.578125 211.0625 C 196.402344 214.726562 192.066406 217.511719 188.578125 219.730469 C 164.449219 234.84375 140.28125 245.941406 115.269531 253.445312 C 105.265625 256.402344 91.171875 259.609375 85.289062 260.207031 L 82.507812 260.878906 C 91.59375 262.566406 100.261719 262.566406 105.863281 261.757812 C 127.632812 258.480469 154.972656 245.480469 184.738281 224.203125 C 190.234375 220.292969 201.613281 211.558594 201.613281 211.277344 "/></clipPath><clipPath id="b860a55c2c"><path d="M 126 160.101562 L 271.632812 160.101562 L 271.632812 272 L 126 272 Z M 126 160.101562 "/></clipPath><clipPath id="d7ae0c52ce"><path d="M 271.507812 164.84375 L 271.121094 160.335938 L 268.9375 162.308594 C 261.785156 169.847656 251.746094 179.394531 244.242188 185.945312 C 213.945312 212.472656 176.636719 237.238281 138.519531 256.085938 C 131.828125 259.398438 126.332031 262.25 126.332031 262.355469 C 126.296875 262.78125 132.460938 265.246094 137.746094 266.9375 C 143.417969 268.734375 151.90625 270.53125 158.105469 271.199219 C 163.707031 271.761719 178.574219 271.445312 183.71875 270.636719 C 206.335938 266.9375 225.640625 257.214844 241.316406 241.535156 C 246.707031 236.148438 249.914062 232.238281 254.492188 225.367188 C 262.3125 213.636719 267.738281 199.933594 270.167969 185.699219 C 271.261719 179.464844 271.859375 170.234375 271.542969 164.84375 "/></clipPath><clipPath id="44af88d50b"><path d="M 22.128906 65.007812 L 350.71875 65.007812 L 350.71875 242.957031 L 22.128906 242.957031 Z M 22.128906 65.007812 "/></clipPath><clipPath id="46ba1b65d0"><path d="M 316.777344 83.359375 C 320.617188 82.058594 324.246094 82.726562 327.238281 85.367188 C 329.671875 87.515625 330.621094 89.527344 330.867188 92.835938 C 331.113281 96.324219 330.09375 98.824219 327.484375 101.257812 C 322.167969 106.222656 313.78125 104.496094 310.71875 97.839844 C 308.144531 92.34375 311.070312 85.332031 316.8125 83.359375 M 310.398438 134.933594 L 313.007812 140.324219 C 317.023438 148.570312 317.832031 148.675781 322.132812 141.523438 C 326.710938 133.878906 329.671875 125.597656 330.375 118.378906 L 330.796875 115.59375 C 333.226562 112.847656 334.953125 110.523438 336.152344 108.761719 C 342.035156 100.023438 347.144531 85.367188 349.1875 71.453125 L 350.488281 65.570312 C 327.734375 67.085938 309.765625 72.863281 300.078125 80.613281 L 298.316406 81.773438 C 287.570312 82.480469 280.316406 84.628906 272.847656 88.433594 C 267.949219 90.96875 267.070312 91.675781 267.070312 93.011719 C 267.070312 94.386719 267.492188 94.738281 273.375 98.050781 L 278.34375 100.871094 L 277.390625 101.679688 C 274.714844 103.96875 273.761719 107.175781 275.03125 110.027344 L 276.476562 112.496094 C 278.695312 114.996094 278.941406 115.523438 279.152344 117.707031 L 279.433594 120.246094 L 272.917969 125.070312 C 269.394531 127.714844 266.011719 130.144531 265.484375 130.496094 L 264.496094 131.164062 L 262.347656 126.128906 C 256.253906 112.566406 245.753906 98.894531 234.058594 89.242188 C 219.792969 77.511719 202.074219 69.621094 183.753906 66.769531 C 178.996094 66.027344 164.0625 65.5 160.46875 65.921875 C 149.265625 67.226562 142.605469 68.671875 134.574219 71.417969 C 113.261719 78.816406 94.871094 93.222656 82.261719 112.425781 C 76.660156 120.984375 71.410156 132.820312 68.910156 142.472656 C 63.167969 164.597656 64.714844 186.296875 73.59375 208.773438 L 74.085938 210.078125 L 80.253906 209.832031 C 96.773438 209.230469 122.703125 204.089844 153.632812 195.316406 C 163.355469 192.570312 181.253906 187.074219 188.15625 184.785156 L 192.242188 183.480469 C 192.523438 183.726562 180.160156 189.433594 171.28125 193.273438 C 137.144531 208.070312 107.132812 217.371094 79.898438 221.5625 C 72.289062 222.726562 58.023438 222.832031 53.726562 221.738281 C 46.082031 219.871094 42.171875 215.890625 42.945312 210.746094 C 43.648438 206.027344 49.671875 197.253906 57.707031 189.363281 L 60.382812 186.402344 L 59.46875 181.4375 L 55.414062 184.75 C 18.671875 215.042969 12.367188 237.625 39.5625 241.710938 C 44.460938 242.453125 55.308594 242.453125 62.003906 241.710938 C 86.804688 238.964844 123.792969 228.679688 156.875 215.257812 C 206.054688 195.316406 255.691406 165.019531 292.117188 132.679688 L 293.949219 131.199219 L 294.300781 132.46875 L 294.335938 132.996094 L 296.414062 133.703125 C 301.664062 139.058594 305.714844 139.445312 309.238281 136.0625 Z M 310.398438 134.933594 "/></clipPath><clipPath id="3ebc7fea1a"><path d="M 82 210.945312 L 201.957031 210.945312 L 201.957031 262.730469 L 82 262.730469 Z M 82 210.945312 "/></clipPath><clipPath id="3171ba9d40"><path d="M 87.191406 261.757812 L 82.15625 260.523438 C 91.207031 259.609375 105.265625 256.402344 115.269531 253.445312 C 140.28125 245.941406 164.449219 234.84375 188.578125 219.730469 C 192.066406 217.546875 196.402344 214.726562 198.195312 213.460938 L 201.648438 210.992188 C 201.648438 211.523438 190.269531 220.257812 184.773438 224.203125 C 155.007812 245.480469 127.667969 258.480469 105.898438 261.757812 C 100.332031 262.566406 91.628906 262.566406 87.191406 261.757812 "/></clipPath><clipPath id="3bbf78cc42"><path d="M 126 160.101562 L 271.632812 160.101562 L 271.632812 272 L 126 272 Z M 126 160.101562 "/></clipPath><clipPath id="5d8efde5f0"><path d="M 241.28125 241.535156 C 225.640625 257.179688 206.300781 266.9375 183.683594 270.636719 C 178.539062 271.445312 163.671875 271.796875 158.070312 271.199219 C 151.871094 270.496094 143.382812 268.734375 137.710938 266.9375 C 132.390625 265.246094 126.261719 262.78125 126.296875 262.355469 C 126.296875 262.25 131.792969 259.398438 138.484375 256.085938 C 176.601562 237.238281 213.945312 212.4375 244.207031 185.945312 C 251.710938 179.394531 261.75 169.847656 266.679688 164.667969 L 270.839844 160.40625 L 271.332031 162.414062 C 271.789062 170.269531 271.191406 179.5 270.097656 185.734375 C 267.667969 199.96875 262.242188 213.671875 254.421875 225.402344 C 249.84375 232.238281 246.636719 236.183594 241.246094 241.570312 "/></clipPath><clipPath id="5b41557bcc"><path d="M 22.128906 65.007812 L 350.71875 65.007812 L 350.71875 242.957031 L 22.128906 242.957031 Z M 22.128906 65.007812 "/></clipPath><clipPath id="0f4ba45d34"><path d="M 327.484375 101.257812 C 322.167969 106.222656 313.78125 104.496094 310.71875 97.839844 C 308.144531 92.34375 311.070312 85.332031 316.8125 83.359375 C 320.652344 82.058594 324.28125 82.761719 327.273438 85.367188 C 329.707031 87.515625 330.65625 89.527344 330.902344 92.835938 C 331.148438 96.324219 330.128906 98.824219 327.519531 101.257812 M 345.875 65.851562 C 327.699219 67.050781 309.800781 72.863281 300.078125 80.578125 L 298.316406 81.738281 C 287.570312 82.445312 280.316406 84.59375 272.847656 88.398438 C 267.949219 90.933594 267.070312 91.640625 267.070312 92.976562 C 267.070312 94.351562 267.492188 94.703125 273.375 98.015625 L 278.34375 100.832031 L 277.390625 101.644531 C 274.714844 103.898438 273.761719 107.140625 275.03125 109.992188 L 276.476562 112.460938 C 278.695312 114.960938 278.941406 115.488281 279.152344 117.707031 L 279.433594 120.246094 L 272.917969 125.070312 C 269.394531 127.714844 266.046875 130.144531 265.484375 130.496094 L 264.496094 131.128906 L 262.347656 126.128906 C 256.253906 112.601562 245.753906 98.894531 234.058594 89.242188 C 219.792969 77.511719 202.074219 69.621094 183.753906 66.769531 C 178.996094 66.027344 164.0625 65.5 160.46875 65.921875 C 149.265625 67.226562 142.605469 68.671875 134.574219 71.417969 C 113.261719 78.816406 94.871094 93.222656 82.261719 112.425781 C 76.660156 121.019531 71.410156 132.820312 68.910156 142.472656 C 63.167969 164.597656 64.714844 186.296875 73.59375 208.773438 L 74.085938 210.078125 L 80.253906 209.832031 C 96.773438 209.230469 122.703125 204.089844 153.632812 195.316406 C 163.355469 192.570312 181.253906 187.074219 188.15625 184.785156 L 192.242188 183.480469 C 192.523438 183.726562 180.160156 189.433594 171.28125 193.308594 C 137.144531 208.140625 107.132812 217.40625 79.898438 221.597656 C 72.289062 222.761719 57.988281 222.867188 53.726562 221.773438 C 46.082031 219.871094 42.171875 215.925781 42.945312 210.78125 C 43.648438 206.0625 49.671875 197.289062 57.707031 189.398438 L 60.382812 186.4375 L 59.46875 181.472656 L 55.414062 184.785156 C 18.671875 215.042969 12.367188 237.625 39.5625 241.710938 C 44.460938 242.453125 55.308594 242.453125 62.003906 241.710938 C 86.804688 238.964844 123.792969 228.679688 156.875 215.257812 C 206.054688 195.316406 255.691406 165.019531 292.117188 132.679688 L 293.949219 131.199219 L 294.300781 132.46875 L 294.335938 132.996094 L 296.414062 133.703125 C 301.664062 139.058594 305.714844 139.445312 309.238281 136.0625 L 310.398438 134.933594 L 313.007812 140.324219 C 317.023438 148.570312 317.832031 148.675781 322.132812 141.523438 C 326.710938 133.878906 329.671875 125.597656 330.375 118.378906 L 330.796875 115.59375 C 333.226562 112.847656 334.953125 110.523438 336.152344 108.761719 C 342.035156 100.023438 347.144531 85.367188 349.1875 71.453125 L 350.488281 65.570312 "/></clipPath></defs><g id="e867b6e268"><g clip-rule="nonzero" clip-path="url(#d85e05967a)"><g clip-rule="nonzero" clip-path="url(#cc655dd03e)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#b860a55c2c)"><g clip-rule="nonzero" clip-path="url(#d7ae0c52ce)"><path style=" stroke:none;fill-rule:nonzero;fill:var(--axelis-accent, currentColor);fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#44af88d50b)"><g clip-rule="nonzero" clip-path="url(#46ba1b65d0)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#3ebc7fea1a)"><g clip-rule="nonzero" clip-path="url(#3171ba9d40)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#3bbf78cc42)"><g clip-rule="nonzero" clip-path="url(#5d8efde5f0)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#5b41557bcc)"><g clip-rule="nonzero" clip-path="url(#0f4ba45d34)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g></g></symbol>
+  <symbol id="ax-seal" viewBox="0 0 240 240">
+  <title>Axelis — Guarantee Seal</title>
+  <desc>The founder's own mark set inside a double rule; the slipstream breaks the rings on its way out.</desc>
+  <defs>
+    <path id="seal-top" d="M120,120 m-84,0 a84,84 0 1,1 168,0"/>
+    <path id="seal-bot" d="M120,120 m84,0 a84,84 0 1,1 -168,0"/>
+    <mask id="seal-gap">
+      <rect width="240" height="240" fill="#fff"/>
+      <ellipse cx="120" cy="128" rx="160" ry="30" fill="none" stroke="#000" stroke-width="18" transform="rotate(-24 120 128)"/>
+    </mask>
+  </defs>
+  <g mask="url(#seal-gap)" fill="none" stroke="currentColor">
+    <circle cx="120" cy="120" r="112" stroke-width="6"/>
+    <circle cx="120" cy="120" r="100" stroke-width="1.5"/>
+  </g>
+  <g transform="translate(120,102) scale(.255) translate(-187.5,-187.5)">
+<defs><clipPath id="d85e05967a"><path d="M 82.386719 211 L 201.957031 211 L 201.957031 262.730469 L 82.386719 262.730469 Z M 82.386719 211 "/></clipPath><clipPath id="cc655dd03e"><path d="M 201.648438 211.277344 L 201.578125 211.0625 C 196.402344 214.726562 192.066406 217.511719 188.578125 219.730469 C 164.449219 234.84375 140.28125 245.941406 115.269531 253.445312 C 105.265625 256.402344 91.171875 259.609375 85.289062 260.207031 L 82.507812 260.878906 C 91.59375 262.566406 100.261719 262.566406 105.863281 261.757812 C 127.632812 258.480469 154.972656 245.480469 184.738281 224.203125 C 190.234375 220.292969 201.613281 211.558594 201.613281 211.277344 "/></clipPath><clipPath id="b860a55c2c"><path d="M 126 160.101562 L 271.632812 160.101562 L 271.632812 272 L 126 272 Z M 126 160.101562 "/></clipPath><clipPath id="d7ae0c52ce"><path d="M 271.507812 164.84375 L 271.121094 160.335938 L 268.9375 162.308594 C 261.785156 169.847656 251.746094 179.394531 244.242188 185.945312 C 213.945312 212.472656 176.636719 237.238281 138.519531 256.085938 C 131.828125 259.398438 126.332031 262.25 126.332031 262.355469 C 126.296875 262.78125 132.460938 265.246094 137.746094 266.9375 C 143.417969 268.734375 151.90625 270.53125 158.105469 271.199219 C 163.707031 271.761719 178.574219 271.445312 183.71875 270.636719 C 206.335938 266.9375 225.640625 257.214844 241.316406 241.535156 C 246.707031 236.148438 249.914062 232.238281 254.492188 225.367188 C 262.3125 213.636719 267.738281 199.933594 270.167969 185.699219 C 271.261719 179.464844 271.859375 170.234375 271.542969 164.84375 "/></clipPath><clipPath id="44af88d50b"><path d="M 22.128906 65.007812 L 350.71875 65.007812 L 350.71875 242.957031 L 22.128906 242.957031 Z M 22.128906 65.007812 "/></clipPath><clipPath id="46ba1b65d0"><path d="M 316.777344 83.359375 C 320.617188 82.058594 324.246094 82.726562 327.238281 85.367188 C 329.671875 87.515625 330.621094 89.527344 330.867188 92.835938 C 331.113281 96.324219 330.09375 98.824219 327.484375 101.257812 C 322.167969 106.222656 313.78125 104.496094 310.71875 97.839844 C 308.144531 92.34375 311.070312 85.332031 316.8125 83.359375 M 310.398438 134.933594 L 313.007812 140.324219 C 317.023438 148.570312 317.832031 148.675781 322.132812 141.523438 C 326.710938 133.878906 329.671875 125.597656 330.375 118.378906 L 330.796875 115.59375 C 333.226562 112.847656 334.953125 110.523438 336.152344 108.761719 C 342.035156 100.023438 347.144531 85.367188 349.1875 71.453125 L 350.488281 65.570312 C 327.734375 67.085938 309.765625 72.863281 300.078125 80.613281 L 298.316406 81.773438 C 287.570312 82.480469 280.316406 84.628906 272.847656 88.433594 C 267.949219 90.96875 267.070312 91.675781 267.070312 93.011719 C 267.070312 94.386719 267.492188 94.738281 273.375 98.050781 L 278.34375 100.871094 L 277.390625 101.679688 C 274.714844 103.96875 273.761719 107.175781 275.03125 110.027344 L 276.476562 112.496094 C 278.695312 114.996094 278.941406 115.523438 279.152344 117.707031 L 279.433594 120.246094 L 272.917969 125.070312 C 269.394531 127.714844 266.011719 130.144531 265.484375 130.496094 L 264.496094 131.164062 L 262.347656 126.128906 C 256.253906 112.566406 245.753906 98.894531 234.058594 89.242188 C 219.792969 77.511719 202.074219 69.621094 183.753906 66.769531 C 178.996094 66.027344 164.0625 65.5 160.46875 65.921875 C 149.265625 67.226562 142.605469 68.671875 134.574219 71.417969 C 113.261719 78.816406 94.871094 93.222656 82.261719 112.425781 C 76.660156 120.984375 71.410156 132.820312 68.910156 142.472656 C 63.167969 164.597656 64.714844 186.296875 73.59375 208.773438 L 74.085938 210.078125 L 80.253906 209.832031 C 96.773438 209.230469 122.703125 204.089844 153.632812 195.316406 C 163.355469 192.570312 181.253906 187.074219 188.15625 184.785156 L 192.242188 183.480469 C 192.523438 183.726562 180.160156 189.433594 171.28125 193.273438 C 137.144531 208.070312 107.132812 217.371094 79.898438 221.5625 C 72.289062 222.726562 58.023438 222.832031 53.726562 221.738281 C 46.082031 219.871094 42.171875 215.890625 42.945312 210.746094 C 43.648438 206.027344 49.671875 197.253906 57.707031 189.363281 L 60.382812 186.402344 L 59.46875 181.4375 L 55.414062 184.75 C 18.671875 215.042969 12.367188 237.625 39.5625 241.710938 C 44.460938 242.453125 55.308594 242.453125 62.003906 241.710938 C 86.804688 238.964844 123.792969 228.679688 156.875 215.257812 C 206.054688 195.316406 255.691406 165.019531 292.117188 132.679688 L 293.949219 131.199219 L 294.300781 132.46875 L 294.335938 132.996094 L 296.414062 133.703125 C 301.664062 139.058594 305.714844 139.445312 309.238281 136.0625 Z M 310.398438 134.933594 "/></clipPath><clipPath id="3ebc7fea1a"><path d="M 82 210.945312 L 201.957031 210.945312 L 201.957031 262.730469 L 82 262.730469 Z M 82 210.945312 "/></clipPath><clipPath id="3171ba9d40"><path d="M 87.191406 261.757812 L 82.15625 260.523438 C 91.207031 259.609375 105.265625 256.402344 115.269531 253.445312 C 140.28125 245.941406 164.449219 234.84375 188.578125 219.730469 C 192.066406 217.546875 196.402344 214.726562 198.195312 213.460938 L 201.648438 210.992188 C 201.648438 211.523438 190.269531 220.257812 184.773438 224.203125 C 155.007812 245.480469 127.667969 258.480469 105.898438 261.757812 C 100.332031 262.566406 91.628906 262.566406 87.191406 261.757812 "/></clipPath><clipPath id="3bbf78cc42"><path d="M 126 160.101562 L 271.632812 160.101562 L 271.632812 272 L 126 272 Z M 126 160.101562 "/></clipPath><clipPath id="5d8efde5f0"><path d="M 241.28125 241.535156 C 225.640625 257.179688 206.300781 266.9375 183.683594 270.636719 C 178.539062 271.445312 163.671875 271.796875 158.070312 271.199219 C 151.871094 270.496094 143.382812 268.734375 137.710938 266.9375 C 132.390625 265.246094 126.261719 262.78125 126.296875 262.355469 C 126.296875 262.25 131.792969 259.398438 138.484375 256.085938 C 176.601562 237.238281 213.945312 212.4375 244.207031 185.945312 C 251.710938 179.394531 261.75 169.847656 266.679688 164.667969 L 270.839844 160.40625 L 271.332031 162.414062 C 271.789062 170.269531 271.191406 179.5 270.097656 185.734375 C 267.667969 199.96875 262.242188 213.671875 254.421875 225.402344 C 249.84375 232.238281 246.636719 236.183594 241.246094 241.570312 "/></clipPath><clipPath id="5b41557bcc"><path d="M 22.128906 65.007812 L 350.71875 65.007812 L 350.71875 242.957031 L 22.128906 242.957031 Z M 22.128906 65.007812 "/></clipPath><clipPath id="0f4ba45d34"><path d="M 327.484375 101.257812 C 322.167969 106.222656 313.78125 104.496094 310.71875 97.839844 C 308.144531 92.34375 311.070312 85.332031 316.8125 83.359375 C 320.652344 82.058594 324.28125 82.761719 327.273438 85.367188 C 329.707031 87.515625 330.65625 89.527344 330.902344 92.835938 C 331.148438 96.324219 330.128906 98.824219 327.519531 101.257812 M 345.875 65.851562 C 327.699219 67.050781 309.800781 72.863281 300.078125 80.578125 L 298.316406 81.738281 C 287.570312 82.445312 280.316406 84.59375 272.847656 88.398438 C 267.949219 90.933594 267.070312 91.640625 267.070312 92.976562 C 267.070312 94.351562 267.492188 94.703125 273.375 98.015625 L 278.34375 100.832031 L 277.390625 101.644531 C 274.714844 103.898438 273.761719 107.140625 275.03125 109.992188 L 276.476562 112.460938 C 278.695312 114.960938 278.941406 115.488281 279.152344 117.707031 L 279.433594 120.246094 L 272.917969 125.070312 C 269.394531 127.714844 266.046875 130.144531 265.484375 130.496094 L 264.496094 131.128906 L 262.347656 126.128906 C 256.253906 112.601562 245.753906 98.894531 234.058594 89.242188 C 219.792969 77.511719 202.074219 69.621094 183.753906 66.769531 C 178.996094 66.027344 164.0625 65.5 160.46875 65.921875 C 149.265625 67.226562 142.605469 68.671875 134.574219 71.417969 C 113.261719 78.816406 94.871094 93.222656 82.261719 112.425781 C 76.660156 121.019531 71.410156 132.820312 68.910156 142.472656 C 63.167969 164.597656 64.714844 186.296875 73.59375 208.773438 L 74.085938 210.078125 L 80.253906 209.832031 C 96.773438 209.230469 122.703125 204.089844 153.632812 195.316406 C 163.355469 192.570312 181.253906 187.074219 188.15625 184.785156 L 192.242188 183.480469 C 192.523438 183.726562 180.160156 189.433594 171.28125 193.308594 C 137.144531 208.140625 107.132812 217.40625 79.898438 221.597656 C 72.289062 222.761719 57.988281 222.867188 53.726562 221.773438 C 46.082031 219.871094 42.171875 215.925781 42.945312 210.78125 C 43.648438 206.0625 49.671875 197.289062 57.707031 189.398438 L 60.382812 186.4375 L 59.46875 181.472656 L 55.414062 184.785156 C 18.671875 215.042969 12.367188 237.625 39.5625 241.710938 C 44.460938 242.453125 55.308594 242.453125 62.003906 241.710938 C 86.804688 238.964844 123.792969 228.679688 156.875 215.257812 C 206.054688 195.316406 255.691406 165.019531 292.117188 132.679688 L 293.949219 131.199219 L 294.300781 132.46875 L 294.335938 132.996094 L 296.414062 133.703125 C 301.664062 139.058594 305.714844 139.445312 309.238281 136.0625 L 310.398438 134.933594 L 313.007812 140.324219 C 317.023438 148.570312 317.832031 148.675781 322.132812 141.523438 C 326.710938 133.878906 329.671875 125.597656 330.375 118.378906 L 330.796875 115.59375 C 333.226562 112.847656 334.953125 110.523438 336.152344 108.761719 C 342.035156 100.023438 347.144531 85.367188 349.1875 71.453125 L 350.488281 65.570312 "/></clipPath></defs><g id="e867b6e268"><g clip-rule="nonzero" clip-path="url(#d85e05967a)"><g clip-rule="nonzero" clip-path="url(#cc655dd03e)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#b860a55c2c)"><g clip-rule="nonzero" clip-path="url(#d7ae0c52ce)"><path style=" stroke:none;fill-rule:nonzero;fill:var(--axelis-accent, currentColor);fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#44af88d50b)"><g clip-rule="nonzero" clip-path="url(#46ba1b65d0)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#3ebc7fea1a)"><g clip-rule="nonzero" clip-path="url(#3171ba9d40)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#3bbf78cc42)"><g clip-rule="nonzero" clip-path="url(#5d8efde5f0)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g><g clip-rule="nonzero" clip-path="url(#5b41557bcc)"><g clip-rule="nonzero" clip-path="url(#0f4ba45d34)"><path style=" stroke:none;fill-rule:nonzero;fill:currentColor;fill-opacity:1;" d="M 5.179688 48.0625 L 367.667969 48.0625 L 367.667969 289.089844 L 5.179688 289.089844 Z M 5.179688 48.0625 "/></g></g></g>
+  </g>
+  <text font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="600" font-size="15" letter-spacing="4.2" fill="currentColor"><textPath href="#seal-top" startOffset="50%" text-anchor="middle">AXELIS OVERSEAS</textPath></text>
+  <text font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="600" font-size="12.5" letter-spacing="3" fill="currentColor"><textPath href="#seal-bot" startOffset="50%" text-anchor="middle">WRITTEN OUTCOME GUARANTEE</textPath></text>
+  <text x="120" y="168" text-anchor="middle" font-family="'Cabinet Grotesk', sans-serif" font-weight="700" font-size="13" letter-spacing="1.8" fill="currentColor">AXC-YYYY-####</text>
+</symbol>
+</svg>

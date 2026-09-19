@@ -1,110 +1,379 @@
 <meta charset="utf-8">
-<title>Axelis Programme Certificate</title>
-<style>
-@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
-@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-900.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
-</style>
+<title>Axelis in Leverage Layout</title>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@400,500,700,800,900&display=swap">
 <style>
   :root{
-    --ink:#141010; --verm:#FF3B1F; --verm-deep:#C4290F;
-    --rule:#D9CEC9; --dim:#6B6260; --paper:#F6F2F0; --white:#FFFFFF;
+    /* Leverage Edu palette, read from their stylesheet */
+    --navy:#0E3240; --navy-2:#154457; --blue:#4080BD; --blue-dark:#2F6795;
+    --tint:#F0F4F8; --tint-2:#E3EDF5; --line:#D5E1EB;
+    --ink:#0E3240; --dim:#5A7280; --white:#FFFFFF;
     --font:'Cabinet Grotesk',-apple-system,BlinkMacSystemFont,sans-serif;
+    --r:10px;
+  }
+  /* alternative: the Ink Vermilion you locked */
+  body.verm{
+    --navy:#101010; --navy-2:#1A1616; --blue:#FF3B1F; --blue-dark:#C4290F;
+    --tint:#F6F2F0; --tint-2:#EBE4E1; --line:#D9CEC9;
+    --ink:#141010; --dim:#6B6260;
   }
   *{box-sizing:border-box}
-  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--font); font-weight:400;
-       line-height:1.6; letter-spacing:.004em; padding-block:28px; padding-inline:16px}
-  .note{max-width:297mm; margin:0 auto 20px; font-size:.88rem; color:var(--dim);
-        display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between; align-items:baseline}
-  .note b{color:var(--ink)}
+  body{margin:0; background:var(--white); color:var(--ink); font-family:var(--font); font-weight:400;
+       line-height:1.6; letter-spacing:.004em; -webkit-font-smoothing:antialiased}
+  .pad{max-width:1180px; margin:0 auto; padding-inline:24px}
+  p{margin:0} h1,h2,h3,h4{margin:0; font-weight:800; line-height:1.08; letter-spacing:-.015em}
+  a{color:inherit; text-decoration:none}
   .tnum{font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1}
+  a:focus-visible,button:focus-visible{outline:3px solid var(--blue); outline-offset:2px}
 
-  /* A4 landscape */
-  .sheet{width:297mm; max-width:100%; aspect-ratio:297/210; background:var(--white);
-         margin:0 auto; position:relative; padding:12mm; box-shadow:0 18px 40px -30px rgba(16,16,16,.5)}
-  .frame{position:absolute; inset:12mm; border:1.4mm solid var(--ink)}
-  .accent{position:absolute; left:12mm; right:12mm; top:12mm; height:3.4mm; background:var(--verm)}
-  .inner{position:relative; height:100%; padding:16mm 16mm 14mm; display:flex; flex-direction:column}
+  .btn{display:inline-block; background:var(--blue); color:#FFF; font-weight:700; font-size:.95rem;
+       padding:13px 24px; border-radius:var(--r); border:2px solid var(--blue)}
+  .btn:hover{background:var(--blue-dark); border-color:var(--blue-dark)}
+  .btn.out{background:transparent; color:var(--navy); border-color:var(--line)}
+  .btn.out:hover{border-color:var(--blue); color:var(--blue)}
+  .btn.white{background:#FFF; color:var(--navy); border-color:#FFF}
 
-  .head{display:flex; align-items:center; justify-content:space-between; gap:16px}
-  .lock{display:flex; align-items:center; gap:3.5mm}
-  .lock .wm{font-weight:900; font-size:clamp(13px,1.7vw,19px); letter-spacing:-.01em}
-  .docline{font-weight:700; font-size:clamp(7px,.85vw,10px); letter-spacing:.14em; text-transform:uppercase;
-           color:var(--verm-deep); text-align:right; line-height:1.5}
+  /* ---------- top bars ---------- */
+  .ribbon{background:var(--navy); color:#CFE0EA; font-size:.78rem; padding-block:8px}
+  .ribbon .pad{display:flex; flex-wrap:wrap; gap:6px 22px; justify-content:space-between; align-items:center}
+  .ribbon .swap{background:transparent; border:1px solid rgba(255,255,255,.3); color:#FFF; border-radius:999px;
+                padding:4px 12px; font-family:var(--font); font-weight:700; font-size:.72rem; cursor:pointer}
+  nav{background:#FFF; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:50}
+  nav .pad{display:flex; align-items:center; gap:24px; padding-block:12px}
+  .lock{display:flex; align-items:center; gap:11px}
+  .lock .wm{font-weight:900; font-size:1.06rem; letter-spacing:-.01em}
+  .nl{display:flex; gap:22px; margin-left:auto; font-weight:500; font-size:.93rem}
+  .nl a:hover{color:var(--blue)}
+  .dash{font-weight:700; color:var(--blue)}
 
-  .body{flex:1; display:flex; flex-direction:column; justify-content:center; gap:1mm; max-width:76%}
-  .conferred{font-size:clamp(9px,1.05vw,12px); color:var(--dim)}
-  .name{font-weight:900; font-size:clamp(26px,4.4vw,50px); line-height:1.02; letter-spacing:-.02em}
-  .namerule{height:1px; background:var(--rule); margin-block:3.5mm 4mm}
-  .for{font-size:clamp(9px,1.05vw,12px); color:var(--dim); margin-bottom:1.5mm}
-  .prog{font-weight:800; font-size:clamp(15px,2.1vw,25px); line-height:1.1; color:var(--verm-deep)}
-  .dates{font-weight:500; font-size:clamp(8px,.95vw,11px); color:var(--dim); margin-top:3.5mm}
+  /* ---------- hero ---------- */
+  .hero{background:linear-gradient(180deg,var(--tint) 0%, #FFF 100%); border-bottom:1px solid var(--line)}
+  .hero .pad{display:grid; grid-template-columns:1.15fr .85fr; gap:44px; padding-block:56px 48px; align-items:center}
+  .hero h1{font-size:clamp(2.1rem,1.4rem + 3.4vw,3.9rem); font-weight:900; max-width:15ch}
+  .hero h1 em{font-style:normal; color:var(--blue)}
+  .hero .sub{margin-top:18px; max-width:50ch; color:var(--dim); font-size:1.08rem}
+  .hero .acts{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px}
+  .trust{display:flex; flex-wrap:wrap; gap:18px 30px; margin-top:28px; padding-top:20px; border-top:1px solid var(--line)}
+  .trust div{display:flex; flex-direction:column}
+  .trust b{font-size:1.5rem; font-weight:900; line-height:1}
+  .trust span{font-size:.8rem; color:var(--dim)}
 
-  .foot{display:flex; align-items:flex-end; justify-content:space-between; gap:10mm}
-  .sigs{display:flex; gap:14mm}
-  .sig{min-width:52mm}
-  .sig .line{height:1px; background:var(--ink); margin-bottom:2mm}
-  .sig .who{font-weight:700; font-size:clamp(8px,.95vw,11px)}
-  .sig .role{font-size:clamp(7px,.85vw,10px); color:var(--dim)}
-  .sealwrap{flex:0 0 auto; line-height:0}
-  .sealwrap svg{width:clamp(68px,9.5vw,108px); height:auto; color:var(--ink)}
-  .idblock{display:flex; flex-direction:column; gap:1mm}
-  .idblock .id{font-weight:700; font-size:clamp(8px,1vw,11px); color:var(--verm-deep); letter-spacing:.08em}
-  .idblock .verify{font-weight:500; font-size:clamp(7px,.8vw,9px); color:var(--dim)}
+  .card-form{background:#FFF; border:1px solid var(--line); border-radius:calc(var(--r) + 4px); padding:26px 24px;
+             box-shadow:0 18px 40px -28px rgba(14,50,64,.45)}
+  .card-form h3{font-size:1.3rem}
+  .card-form p{font-size:.88rem; color:var(--dim); margin-top:6px}
+  .f{display:flex; flex-direction:column; gap:5px; margin-top:15px}
+  .f label{font-size:.76rem; font-weight:700; color:var(--dim)}
+  .f input,.f select{border:1px solid var(--line); border-radius:var(--r); padding:12px; font-family:var(--font); font-size:.95rem; color:var(--ink); background:#FFF}
+  .card-form .btn{width:100%; text-align:center; margin-top:18px}
+  .card-form .fine{font-size:.74rem; color:var(--dim); margin-top:10px}
 
-  @media print{
-    @page{size:A4 landscape; margin:0}
-    body{background:#fff; padding:0}
-    .note{display:none}
-    .sheet{width:297mm; height:210mm; box-shadow:none; margin:0}
+  /* ---------- outcomes strip ---------- */
+  .outcomes{background:var(--navy); color:#FFF; padding-block:40px}
+  .outcomes h2{font-size:clamp(1.4rem,1.1rem + 1.4vw,2.1rem); max-width:22ch}
+  .logos{display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:12px; margin-top:26px}
+  .logos div{background:#FFF; border-radius:var(--r); display:flex; align-items:center; justify-content:center; padding:18px; min-height:92px}
+  .logos img{max-width:100%; max-height:46px; object-fit:contain}
+
+  /* ---------- pillars ---------- */
+  section{padding-block:62px}
+  .shead{max-width:62ch; margin-bottom:30px}
+  .shead h2{font-size:clamp(1.6rem,1.2rem + 1.9vw,2.6rem); font-weight:900}
+  .shead h2 em{font-style:normal; color:var(--blue)}
+  .shead p{margin-top:12px; color:var(--dim); font-size:1.02rem}
+
+  .pillar{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:20px}
+  .pcol{border:1px solid var(--line); border-radius:calc(var(--r) + 4px); overflow:hidden; background:#FFF}
+  .pcol .top{background:var(--tint); padding:20px 22px; border-bottom:1px solid var(--line)}
+  .pcol .top h3{font-size:1.4rem; font-weight:900}
+  .pcol .top p{font-size:.9rem; color:var(--dim); margin-top:6px}
+  .tiles{display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--line)}
+  .tile{background:#FFF; padding:16px 18px; display:flex; flex-direction:column; gap:3px}
+  .tile:hover{background:var(--tint)}
+  .tile b{font-size:1rem; font-weight:800}
+  .tile span{font-size:.78rem; color:var(--dim)}
+
+  /* ---------- programme cards ---------- */
+  .cards{display:grid; grid-template-columns:repeat(auto-fit,minmax(288px,1fr)); gap:20px}
+  .pc{border:1px solid var(--line); border-radius:calc(var(--r) + 4px); background:#FFF; display:flex; flex-direction:column; overflow:hidden}
+  .pc .band{background:var(--navy); color:#FFF; padding:8px 18px; font-size:.76rem; font-weight:700; letter-spacing:.06em; text-transform:uppercase}
+  .pc .body{padding:20px 20px 22px; display:flex; flex-direction:column; gap:10px; flex:1}
+  .pc h3{font-size:1.3rem; font-weight:900}
+  .pc .what{font-size:.92rem; color:var(--dim)}
+  .pc ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:5px; font-size:.88rem}
+  .pc .money{margin-top:auto; padding-top:16px; border-top:1px solid var(--line); display:flex; align-items:baseline; justify-content:space-between; gap:10px}
+  .pc .amt{font-size:1.45rem; font-weight:900}
+  .pc .emi{font-size:.8rem; line-height:1.3; color:var(--dim); text-align:right}
+  .pc .btn{margin-top:14px; text-align:center; align-self:stretch}
+
+  /* ---------- guarantee ---------- */
+  .guar{background:var(--tint)}
+  .guar .pad{display:grid; grid-template-columns:1fr auto; gap:46px; align-items:center; padding-block:60px}
+  .guar h2{font-size:clamp(1.6rem,1.2rem + 1.9vw,2.6rem); font-weight:900; max-width:18ch}
+  .clauses{margin-top:20px; display:flex; flex-direction:column; gap:10px}
+  .cl{background:#FFF; border:1px solid var(--line); border-radius:var(--r); padding:14px 16px; display:grid; grid-template-columns:54px 1fr; gap:14px; align-items:baseline}
+  .cl b{color:var(--blue); font-size:.84rem; font-weight:800}
+  .cl span{font-size:.95rem}
+
+  /* ---------- financing ---------- */
+  .tw{overflow-x:auto; border:1px solid var(--line); border-radius:calc(var(--r) + 4px)}
+  table{border-collapse:collapse; width:100%; min-width:560px; font-size:.93rem}
+  th{text-align:left; font-size:.76rem; font-weight:800; letter-spacing:.06em; text-transform:uppercase; color:var(--dim); padding:13px 16px; background:var(--tint); border-bottom:1px solid var(--line)}
+  td{padding:12px 16px; border-bottom:1px solid var(--line)}
+  tbody tr:last-child td{border-bottom:0}
+  th.n,td.n{text-align:right; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1; white-space:nowrap}
+  td.n{font-weight:700}
+
+  /* ---------- cta ---------- */
+  .cta{background:var(--navy); color:#FFF}
+  .cta .pad{display:flex; flex-wrap:wrap; gap:24px; align-items:center; justify-content:space-between; padding-block:46px}
+  .cta h2{font-size:clamp(1.5rem,1.2rem + 1.7vw,2.4rem); font-weight:900; max-width:20ch}
+
+  footer{background:#08222C; color:#A9C2CE; padding-block:48px 28px; font-size:.9rem}
+  body.verm footer{background:#000}
+  footer h4{color:#FFF; font-size:.98rem; margin-bottom:12px; font-weight:800}
+  footer .cols{display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:28px}
+  footer ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px}
+  footer a:hover{color:#FFF}
+  .fbar{margin-top:32px; padding-top:16px; border-top:1px solid rgba(255,255,255,.14); display:flex; flex-wrap:wrap; gap:8px 22px; justify-content:space-between; font-size:.78rem}
+
+  .note{background:var(--tint-2); border-top:1px solid var(--line)}
+  .note .pad{padding-block:26px; font-size:.9rem; color:var(--dim); max-width:none}
+  .note b{color:var(--ink)}
+
+  @media (max-width:900px){
+    .hero .pad{grid-template-columns:1fr; gap:30px}
+    .guar .pad{grid-template-columns:1fr; gap:28px}
+    footer .cols{grid-template-columns:1fr 1fr}
+    .nl{display:none}
   }
-  @media (max-width:760px){
-    .body{max-width:100%}
-    .foot{flex-direction:column; align-items:flex-start; gap:8mm}
-  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 
-<div class="note">
-  <span><b>Programme certificate.</b> A4 landscape, white stock. Cabinet Grotesk throughout. Print to PDF to check the trim.</span>
-  <span>Supersedes navy #1F4E79 / cream #FFF4E0</span>
+<div class="ribbon">
+  <div class="pad">
+    <span>Bengaluru &amp; Bilaspur · +91 9098522711</span>
+    <button class="swap" id="swap" type="button">Palette: Leverage navy → switch to Ink Vermilion</button>
+  </div>
 </div>
 
-<div class="sheet">
-  <div class="frame"></div>
-  <div class="accent"></div>
-  <div class="inner">
-    <div class="head">
-      <div class="lock">
-        <svg width="36" height="36" viewBox="0 0 375 375" role="img" aria-label="Axelis"><use href="#ax-mark"/></svg>
-        <span class="wm">Axelis Overseas</span>
-      </div>
-      <div class="docline">Certificate of completion<br>Concierge programme</div>
+<nav>
+  <div class="pad">
+    <a class="lock" href="#top">
+      <svg width="36" height="36" viewBox="0 0 375 375" role="img" aria-label="Axelis Overseas"><use href="#ax-mark"/></svg>
+      <span class="wm">Axelis Overseas</span>
+    </a>
+    <div class="nl">
+      <a href="#study">Study Global</a>
+      <a href="#apply">Apply Global</a>
+      <a href="#programmes">Programmes</a>
+      <a href="#guarantee">Guarantee</a>
+      <a class="dash" href="#capture">Dashboard</a>
     </div>
+    <a class="btn" href="#capture">Talk to a counsellor</a>
+  </div>
+</nav>
 
-    <div class="body">
-      <span class="conferred">This certifies that</span>
-      <span class="name">Ananya Krishnamurthy</span>
-      <div class="namerule"></div>
-      <span class="for">has completed, in full, the concierge programme</span>
-      <span class="prog">Executive MBA Concierge</span>
-      <span class="dates tnum">Cohort 2026-A · 14 February 2026 — 11 September 2026 · Bengaluru</span>
+<header class="hero" id="top">
+  <div class="pad">
+    <div>
+      <h1>We put the outcome <em>in writing.</em></h1>
+      <p class="sub">Three end-to-end concierge programmes. A shortlist you agree to, a file we build with you, and a refund clause you read before you pay.</p>
+      <div class="acts">
+        <a class="btn" href="#programmes">Explore programmes</a>
+        <a class="btn out" href="#guarantee">Read clause 4</a>
+      </div>
+      <div class="trust">
+        <div><b class="tnum">5,000+</b><span>Students placed</span></div>
+        <div><b class="tnum">29</b><span>Countries</span></div>
+        <div><b class="tnum">60%</b><span>Returned if no offer</span></div>
+        <div><b class="tnum">24 mo</b><span>EMI available</span></div>
+      </div>
     </div>
+    <aside class="card-form" id="capture">
+      <h3>Talk to a counsellor</h3>
+      <p>One call, no obligation. We will tell you if a concierge programme is not right for you.</p>
+      <div class="f"><label for="n1">Full name</label><input id="n1" type="text" placeholder="Ananya Krishnamurthy"></div>
+      <div class="f"><label for="p1">Mobile</label><input id="p1" type="tel" placeholder="+91 90000 00000"></div>
+      <div class="f"><label for="g1">Programme of interest</label>
+        <select id="g1">
+          <option>Global Career Launch — ₹2,00,000</option>
+          <option>PhD &amp; Fellowship Concierge — ₹2,50,000</option>
+          <option>Executive MBA Concierge — ₹3,00,000</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <a class="btn" href="#capture">Book the call</a>
+      <p class="fine">Sample form — nothing is submitted.</p>
+    </aside>
+  </div>
+</header>
 
-    <div class="foot">
-      <div class="sigs">
-        <div class="sig"><div class="line"></div><div class="who">Rishabh Agrawal</div><div class="role">Founder, Axelis Overseas Education</div></div>
-        <div class="sig"><div class="line"></div><div class="who">Programme lead</div><div class="role">Executive MBA Concierge</div></div>
+<div class="outcomes">
+  <div class="pad">
+    <h2>Our students are holding offers from universities that do not hand them out.</h2>
+    <div class="logos">
+      <div><img src="logos/cardiff.png" alt="Cardiff University"></div>
+      <div><img src="logos/imperial.png" alt="Imperial College London"></div>
+      <div><img src="logos/strathclyde.jpg" alt="University of Strathclyde"></div>
+      <div><img src="logos/limerick.png" alt="University of Limerick"></div>
+      <div><img src="logos/sacredheart.png" alt="Sacred Heart University"></div>
+    </div>
+  </div>
+</div>
+
+<section id="study">
+  <div class="pad">
+    <div class="shead">
+      <h2>Study Global <em>·</em> Apply Global</h2>
+      <p>Two pillars, the way a student actually thinks about it: where you go, and who builds the application that gets you there.</p>
+    </div>
+    <div class="pillar">
+      <div class="pcol">
+        <div class="top">
+          <h3>Study Global</h3>
+          <p>Twenty-nine countries. Eight carry most of the intake, each with a different visa reality.</p>
+        </div>
+        <div class="tiles">
+          <a class="tile" href="#programmes"><b>United Kingdom</b><span>Post-study work · 2 yrs</span></a>
+          <a class="tile" href="#programmes"><b>Ireland</b><span>Stay-back · 2 yrs</span></a>
+          <a class="tile" href="#programmes"><b>United States</b><span>OPT · STEM 36 mo</span></a>
+          <a class="tile" href="#programmes"><b>Australia</b><span>Regional advantage</span></a>
+          <a class="tile" href="#programmes"><b>Germany</b><span>Low tuition · B1 route</span></a>
+          <a class="tile" href="#programmes"><b>Finland</b><span>Scholarship-led</span></a>
+          <a class="tile" href="#programmes"><b>France</b><span>B1 · grandes écoles</span></a>
+          <a class="tile" href="#programmes"><b>Netherlands</b><span>English-taught MSc</span></a>
+        </div>
       </div>
-      <div class="sealwrap">
-        <svg viewBox="0 0 240 240" role="img" aria-label="Axelis guarantee seal" style="--axelis-accent:#C4290F"><use href="#ax-seal"/></svg>
-      </div>
-      <div class="idblock">
-        <span class="id tnum">AXC-2026-0147</span>
-        <span class="verify">Verify at overseeducation.com/verify</span>
+      <div class="pcol" id="apply">
+        <div class="top">
+          <h3>Apply Global</h3>
+          <p>What we actually do between your shortlist and your offer letter.</p>
+        </div>
+        <div class="tiles">
+          <a class="tile" href="#guarantee"><b>Shortlist</b><span>Six schools, agreed in writing</span></a>
+          <a class="tile" href="#guarantee"><b>SOP &amp; essays</b><span>Written with you, not for you</span></a>
+          <a class="tile" href="#guarantee"><b>Recommenders</b><span>Strategy and sequencing</span></a>
+          <a class="tile" href="#guarantee"><b>Interviews</b><span>Mock panels, real questions</span></a>
+          <a class="tile" href="#guarantee"><b>Visa file</b><span>Documents to submission</span></a>
+          <a class="tile" href="#guarantee"><b>Funding</b><span>Scholarships and loans</span></a>
+          <a class="tile" href="#guarantee"><b>Clause 4</b><span>The remedy if it fails</span></a>
+          <a class="tile" href="#guarantee"><b>Certificate</b><span>Issued on completion</span></a>
+        </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section id="programmes" style="background:var(--tint); padding-block:62px">
+  <div class="pad">
+    <div class="shead">
+      <h2>Explore your <em>learning path</em></h2>
+      <p>Three programmes, each capped by intake and run by a named lead. No self-serve tier, because there is no honest way to guarantee an outcome on one.</p>
+    </div>
+    <div class="cards">
+      <article class="pc">
+        <div class="band">01 · Concierge</div>
+        <div class="body">
+          <h3>Global Career Launch</h3>
+          <p class="what">Shortlist to offer, handled end to end, for a first degree abroad.</p>
+          <ul><li>Shortlist and strategy</li><li>Applications, SOP, references</li><li>Visa file and interview</li></ul>
+          <div class="money"><span class="amt tnum">₹2,00,000</span><span class="emi tnum">EMI from<br>₹8,334 / 24 mo</span></div>
+          <a class="btn out" href="#capture">Enrol</a>
+        </div>
+      </article>
+      <article class="pc">
+        <div class="band">02 · Concierge</div>
+        <div class="body">
+          <h3>PhD &amp; Fellowship</h3>
+          <p class="what">Research proposal, supervisor match and funding, to submission.</p>
+          <ul><li>Proposal development</li><li>Supervisor outreach</li><li>Fellowship applications</li></ul>
+          <div class="money"><span class="amt tnum">₹2,50,000</span><span class="emi tnum">EMI from<br>₹10,417 / 24 mo</span></div>
+          <a class="btn out" href="#capture">Enrol</a>
+        </div>
+      </article>
+      <article class="pc">
+        <div class="band">03 · Concierge</div>
+        <div class="body">
+          <h3>Executive MBA</h3>
+          <p class="what">For candidates with a career behind them and no time to spare.</p>
+          <ul><li>School selection</li><li>Essays and recommenders</li><li>Scholarship negotiation</li></ul>
+          <div class="money"><span class="amt tnum">₹3,00,000</span><span class="emi tnum">EMI from<br>₹12,500 / 24 mo</span></div>
+          <a class="btn out" href="#capture">Enrol</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="guar" id="guarantee">
+  <div class="pad">
+    <div>
+      <h2>What happens if we fail is written down before you pay</h2>
+      <p style="margin-top:14px; color:var(--dim); max-width:54ch">Axelis does not guarantee admission — nobody honestly can. It guarantees a defined remedy on a defined failure, and publishes both.</p>
+      <div class="clauses">
+        <div class="cl"><b>§4.1</b><span>A shortlist of at least six universities, agreed in writing before applications open.</span></div>
+        <div class="cl"><b>§4.2</b><span>No offer from any shortlisted university — 60% of the fee returned within 30 days.</span></div>
+        <div class="cl"><b>§4.3</b><span>Not covered: visa refusal on grounds of document fraud, or withdrawal by the student.</span></div>
+      </div>
+      <a class="btn" href="#guarantee" style="margin-top:20px">Read the full policy</a>
+    </div>
+    <svg width="186" height="186" viewBox="0 0 240 240" role="img" aria-label="Axelis guarantee seal" style="color:var(--navy); --axelis-accent:var(--blue)"><use href="#ax-seal"/></svg>
+  </div>
+</div>
+
+<section id="financing">
+  <div class="pad">
+    <div class="shead"><h2>The whole fee, or <em>monthly</em></h2><p>Every programme clears the ₹10,000 EMI floor. Tenures of 6, 9, 12, 18 and 24 months.</p></div>
+    <div class="tw">
+      <table>
+        <thead><tr><th>Programme</th><th class="n">Fee</th><th class="n">12 months</th><th class="n">18 months</th><th class="n">24 months</th></tr></thead>
+        <tbody>
+          <tr><td>Global Career Launch</td><td class="n">₹2,00,000</td><td class="n">₹16,667</td><td class="n">₹11,112</td><td class="n">₹8,334</td></tr>
+          <tr><td>PhD &amp; Fellowship Concierge</td><td class="n">₹2,50,000</td><td class="n">₹20,834</td><td class="n">₹13,889</td><td class="n">₹10,417</td></tr>
+          <tr><td>Executive MBA Concierge</td><td class="n">₹3,00,000</td><td class="n">₹25,000</td><td class="n">₹16,667</td><td class="n">₹12,500</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:12px; font-size:.84rem; color:var(--dim); max-width:72ch">Instalments are the fee divided by the tenure, rounded up to the rupee, and exclude any charge levied by the financing partner.</p>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="pad">
+    <h2>Read clause 4 before you speak to anyone else.</h2>
+    <div style="display:flex; gap:12px; flex-wrap:wrap">
+      <a class="btn white" href="#guarantee">Read the guarantee</a>
+      <a class="btn" href="#capture" style="background:transparent; border-color:rgba(255,255,255,.45); color:#FFF">Book a call</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="pad">
+    <div class="cols">
+      <div>
+        <div class="lock" style="margin-bottom:12px">
+          <svg width="32" height="32" viewBox="0 0 375 375" style="color:#FFF" aria-hidden="true"><use href="#ax-mark"/></svg>
+          <span class="wm" style="color:#FFF">Axelis Overseas</span>
+        </div>
+        <p>Three end-to-end concierge programmes. A written outcome guarantee.</p>
+      </div>
+      <div><h4>Study Global</h4><ul><li><a href="#study">Traditional destinations</a></li><li><a href="#study">Emerging destinations</a></li><li><a href="#study">Scholarships</a></li></ul></div>
+      <div><h4>Programmes</h4><ul><li><a href="#programmes">Global Career Launch</a></li><li><a href="#programmes">PhD &amp; Fellowship</a></li><li><a href="#programmes">Executive MBA</a></li></ul></div>
+      <div><h4>Contact</h4><ul><li><a href="#capture">Book a discovery call</a></li><li><a href="#capture">+91 9098522711</a></li><li><a href="#capture">axelisoverseas@overseeducation.com</a></li></ul></div>
+    </div>
+    <div class="fbar"><span>© 2026 Axelis Overseas Education</span><span>Bengaluru · Bilaspur</span><span>overseeducation.com</span></div>
+  </div>
+</footer>
+
+<div class="note">
+  <div class="pad">
+    <b>What this page is.</b> Leverage Edu's page architecture end to end — sticky nav with a Dashboard link, claim-plus-capture hero,
+    outcome proof on a navy band, the Study&nbsp;Global / Apply&nbsp;Global two-pillar tile grid, programme cards on a tinted section,
+    guarantee block, financing table, closing CTA — rebuilt with Axelis content and set entirely in <b>Cabinet Grotesk</b>: one family,
+    weights 400 / 500 / 700 / 800 / 900, no second face anywhere, figures on tabular numerals.
+    The palette defaults to Leverage's own <b>#0E3240 / #4080BD</b>; the button at the top right switches it to the
+    <b>Ink Vermilion</b> you locked, so you can see the same layout both ways.
   </div>
 </div>
 
@@ -133,3 +402,14 @@
   <text x="120" y="168" text-anchor="middle" font-family="'Cabinet Grotesk', sans-serif" font-weight="700" font-size="13" letter-spacing="1.8" fill="currentColor">AXC-YYYY-####</text>
 </symbol>
 </svg>
+
+<script>
+(function(){
+  var b=document.body, btn=document.getElementById('swap');
+  btn.addEventListener('click', function(){
+    var on=b.classList.toggle('verm');
+    btn.textContent = on ? 'Palette: Ink Vermilion → switch to Leverage navy'
+                         : 'Palette: Leverage navy → switch to Ink Vermilion';
+  });
+})();
+</script>

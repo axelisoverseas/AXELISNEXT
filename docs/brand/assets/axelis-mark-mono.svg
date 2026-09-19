@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Axelis axial A mark, single colour">
-  <title>Axelis — Axial A (currentColor)</title>
-  <g fill="none" stroke="currentColor" stroke-width="11" stroke-linecap="butt">
-    <path d="M20 100 L58 20"/>
-    <path d="M58 20 L92.6 100"/>
-  </g>
-  <path d="M10 74 L110 74" stroke="currentColor" stroke-width="6" stroke-linecap="butt"/>
-</svg>

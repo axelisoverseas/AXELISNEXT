@@ -1,0 +1,54 @@
+<meta charset="utf-8">
+<title>Axelis Email Signature</title>
+<link rel="stylesheet" href="axelis-doc.css">
+<style>
+  body{background:var(--tint-2); padding-block:40px}
+  .wrap{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:22px}
+  .panel{background:#fff; border:1px solid var(--rule); border-radius:12px; padding:26px}
+  .panel h2{font-size:1.1rem; margin-bottom:6px}
+  .panel p.cap{font-size:.88rem; color:var(--dim); margin-bottom:16px}
+  .sigblock{font-family:var(--font); font-size:13px; line-height:1.5; color:var(--navy)}
+  .sigblock .nm{font-weight:800; font-size:15px}
+  .sigblock .rl{color:var(--accent); font-weight:700; font-size:12px}
+  .sigblock .rule{height:2px; background:var(--navy); width:150px; margin:10px 0; position:relative}
+  .sigblock .rule::after{content:''; position:absolute; left:0; top:0; bottom:0; width:44px; background:var(--accent)}
+  .sigblock .meta{color:var(--dim); font-size:12px}
+  .sigblock a{color:var(--accent-dark); text-decoration:none}
+  .sigrow{display:flex; gap:14px; align-items:flex-start}
+  .sigrow img{width:44px; height:auto}
+  pre{background:var(--tint); border:1px solid var(--rule); border-radius:8px; padding:14px; font-size:11px;
+      overflow-x:auto; white-space:pre-wrap; word-break:break-word; color:var(--navy)}
+</style>
+
+<div class="wrap">
+  <div class="panel">
+    <h2>Email signature</h2>
+    <p class="cap">Paste into Gmail → Settings → Signature. Keep the rule, keep the order, never add a quote or a banner.</p>
+    <div class="sigblock">
+      <div class="sigrow">
+        <img src="assets/axelis-lockup-navy.svg" alt="Axelis Overseas" style="width:58px">
+        <div>
+          <div class="nm">Rishabh Agrawal</div>
+          <div class="rl">Founder &amp; Director</div>
+          <div class="rule"></div>
+          <div class="meta">
+            Axelis Overseas Education Pvt Ltd<br>
+            <span class="tnum">+91 90985 22711</span> · <a href="mailto:axelisoverseas@overseeducation.com">axelisoverseas@overseeducation.com</a><br>
+            <a href="https://overseeducation.com">overseeducation.com</a> · Bengaluru &amp; Bilaspur
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h2>Rules</h2>
+    <ul style="font-size:.92rem; color:var(--dim); padding-left:18px; display:flex; flex-direction:column; gap:6px; margin:0">
+      <li>Name at 800 weight, role in accent at 700, everything else at 400</li>
+      <li>The mark only — never the stacked lockup, never a photograph</li>
+      <li>No marketing banner, no award badge, no inspirational quote</li>
+      <li>No "guaranteed admission" anywhere, including in a tagline</li>
+      <li>Phone number in tabular figures, with the space after +91</li>
+    </ul>
+  </div>
+</div>

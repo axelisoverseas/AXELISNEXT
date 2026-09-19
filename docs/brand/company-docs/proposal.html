@@ -1,110 +1,168 @@
 <meta charset="utf-8">
-<title>Axelis Programme Certificate</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap">
+<title>Axelis Proposal Document</title>
 <style>
-@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap}
-@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:swap}
-@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-700.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap}
-@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-800.woff2') format('woff2');font-weight:800;font-style:normal;font-display:swap}
-@font-face{font-family:'Cabinet Grotesk';src:url('fonts/cabinet-grotesk-900.woff2') format('woff2');font-weight:900;font-style:normal;font-display:swap}
 </style>
 <style>
   :root{
-    --ink:#141010; --verm:#FF3B1F; --verm-deep:#C4290F;
-    --rule:#D9CEC9; --dim:#6B6260; --paper:#F6F2F0; --white:#FFFFFF;
-    --font:'Cabinet Grotesk',-apple-system,BlinkMacSystemFont,sans-serif;
+    --ink:#0E3240; --ink-2:#154457; --body:#0E3240;
+    --verm:#4080BD; --verm-deep:#2F6795;
+    --white:#FFFFFF; --paper:#F0F4F8; --paper-2:#E3EDF5; --rule:#D5E1EB; --dim:#5A7280; --dim-dark:#A8C3D4;
+    --font:'Instrument Sans',-apple-system,BlinkMacSystemFont,sans-serif;
   }
   *{box-sizing:border-box}
-  body{margin:0; background:var(--paper); color:var(--ink); font-family:var(--font); font-weight:400;
-       line-height:1.6; letter-spacing:.004em; padding-block:28px; padding-inline:16px}
-  .note{max-width:297mm; margin:0 auto 20px; font-size:.88rem; color:var(--dim);
-        display:flex; flex-wrap:wrap; gap:8px 20px; justify-content:space-between; align-items:baseline}
-  .note b{color:var(--ink)}
+  body{margin:0; background:var(--paper-2); color:var(--body); font-family:var(--font); font-weight:400;
+       line-height:1.55; letter-spacing:.004em; padding-block:28px; padding-inline:16px}
+  .note{max-width:210mm; margin:0 auto 20px; font-size:.88rem; color:var(--dim)}
+  .note b{color:var(--body)}
   .tnum{font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1}
+  h1,h2,h3{margin:0; font-weight:800; line-height:1.1; letter-spacing:-.015em}
+  p{margin:0}
 
-  /* A4 landscape */
-  .sheet{width:297mm; max-width:100%; aspect-ratio:297/210; background:var(--white);
-         margin:0 auto; position:relative; padding:12mm; box-shadow:0 18px 40px -30px rgba(16,16,16,.5)}
-  .frame{position:absolute; inset:12mm; border:1.4mm solid var(--ink)}
-  .accent{position:absolute; left:12mm; right:12mm; top:12mm; height:3.4mm; background:var(--verm)}
-  .inner{position:relative; height:100%; padding:16mm 16mm 14mm; display:flex; flex-direction:column}
+  .page{width:210mm; max-width:100%; min-height:297mm; background:var(--white); margin:0 auto 22px;
+        position:relative; padding:24mm; display:flex; flex-direction:column;
+        box-shadow:0 18px 40px -30px rgba(16,16,16,.5)}
+  .page.cover{background:var(--ink); color:#FFF; justify-content:space-between}
+  .page.cover::after{content:''; position:absolute; left:0; right:0; bottom:0; height:6mm; background:var(--verm)}
 
-  .head{display:flex; align-items:center; justify-content:space-between; gap:16px}
-  .lock{display:flex; align-items:center; gap:3.5mm}
-  .lock .wm{font-weight:900; font-size:clamp(13px,1.7vw,19px); letter-spacing:-.01em}
-  .docline{font-weight:700; font-size:clamp(7px,.85vw,10px); letter-spacing:.14em; text-transform:uppercase;
-           color:var(--verm-deep); text-align:right; line-height:1.5}
+  /* ---------- cover ---------- */
+  .lock{display:flex; align-items:center; gap:4mm}
+  .lock .wm{font-weight:900; font-size:18px; letter-spacing:-.01em}
+  .cover h1{font-size:36px; font-weight:900; max-width:15ch}
+  .cover .kick{font-weight:700; font-size:10px; letter-spacing:.16em; text-transform:uppercase; color:var(--verm); margin-bottom:6mm}
+  .cover .mid{display:flex; flex-direction:column; gap:5mm}
+  .cover .lede{font-size:12.5px; color:var(--dim-dark); max-width:50ch}
+  .cover .prepared{border-top:1px solid rgba(255,255,255,.18); padding-top:5mm; display:grid;
+                   grid-template-columns:repeat(2,1fr); gap:5mm 8mm; font-size:11px; color:var(--dim-dark); margin-bottom:8mm}
+  .cover .prepared b{display:block; font-weight:700; font-size:9px; letter-spacing:.14em; text-transform:uppercase;
+                     color:var(--verm); margin-bottom:1.5mm}
 
-  .body{flex:1; display:flex; flex-direction:column; justify-content:center; gap:1mm; max-width:76%}
-  .conferred{font-size:clamp(9px,1.05vw,12px); color:var(--dim)}
-  .name{font-weight:900; font-size:clamp(26px,4.4vw,50px); line-height:1.02; letter-spacing:-.02em}
-  .namerule{height:1px; background:var(--rule); margin-block:3.5mm 4mm}
-  .for{font-size:clamp(9px,1.05vw,12px); color:var(--dim); margin-bottom:1.5mm}
-  .prog{font-weight:800; font-size:clamp(15px,2.1vw,25px); line-height:1.1; color:var(--verm-deep)}
-  .dates{font-weight:500; font-size:clamp(8px,.95vw,11px); color:var(--dim); margin-top:3.5mm}
+  /* ---------- interior ---------- */
+  .head{display:flex; align-items:center; justify-content:space-between; padding-bottom:4mm;
+        border-bottom:1px solid var(--rule); margin-bottom:9mm}
+  .head .lk{display:flex; align-items:center; gap:3mm}
+  .head .lk span{font-weight:800; font-size:12px}
+  .head .pg{font-weight:500; font-size:9.5px; color:var(--dim); letter-spacing:.08em}
+  .sec{margin-bottom:9mm}
+  .sec h2{font-size:19px; color:var(--verm-deep); margin-bottom:4mm}
+  .sec h3{font-size:13px; margin:6mm 0 2.5mm}
+  .sec p{font-size:11.5px; max-width:62ch; margin-bottom:3mm}
+  .clausenum{display:block; font-weight:700; font-size:9.5px; letter-spacing:.1em; color:var(--verm-deep); margin-bottom:1.5mm}
 
-  .foot{display:flex; align-items:flex-end; justify-content:space-between; gap:10mm}
-  .sigs{display:flex; gap:14mm}
-  .sig{min-width:52mm}
-  .sig .line{height:1px; background:var(--ink); margin-bottom:2mm}
-  .sig .who{font-weight:700; font-size:clamp(8px,.95vw,11px)}
-  .sig .role{font-size:clamp(7px,.85vw,10px); color:var(--dim)}
-  .sealwrap{flex:0 0 auto; line-height:0}
-  .sealwrap svg{width:clamp(68px,9.5vw,108px); height:auto; color:var(--ink)}
-  .idblock{display:flex; flex-direction:column; gap:1mm}
-  .idblock .id{font-weight:700; font-size:clamp(8px,1vw,11px); color:var(--verm-deep); letter-spacing:.08em}
-  .idblock .verify{font-weight:500; font-size:clamp(7px,.8vw,9px); color:var(--dim)}
+  table{border-collapse:collapse; width:100%; font-size:11px; margin-block:3mm}
+  th{text-align:left; font-weight:700; font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:var(--dim);
+     padding:2.5mm 3mm; background:var(--paper); border-bottom:1px solid var(--rule)}
+  td{padding:2.5mm 3mm; border-bottom:1px solid var(--rule)}
+  th.n,td.n{text-align:right; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1; white-space:nowrap}
+  td.n{font-weight:700}
+  tfoot td{font-weight:800; border-top:1.5px solid var(--body); border-bottom:0; background:var(--paper)}
+
+  .terms{border:1px solid var(--rule); border-radius:10px; padding:6mm; margin-top:4mm; background:var(--paper)}
+  .terms h3{margin-top:0; font-size:12.5px}
+  .terms ol{margin:0; padding-left:5mm; font-size:11px; display:flex; flex-direction:column; gap:2.5mm}
+  .terms .excl{color:var(--verm-deep); font-weight:500}
+
+  .signblock{margin-top:auto; padding-top:8mm; display:flex; align-items:flex-end; justify-content:space-between; gap:8mm}
+  .sig{min-width:54mm}
+  .sig .line{height:1px; background:var(--body); margin-bottom:2mm}
+  .sig .who{font-weight:700; font-size:10.5px}
+  .sig .role{font-size:9px; color:var(--dim)}
+  .signblock svg{width:84px; height:auto; color:var(--body)}
+
+  .foot{margin-top:8mm; padding-top:3mm; border-top:1px solid var(--rule); display:flex; flex-wrap:wrap;
+        gap:3mm 8mm; justify-content:space-between; font-weight:500; font-size:9px; color:var(--dim); letter-spacing:.05em}
 
   @media print{
-    @page{size:A4 landscape; margin:0}
+    @page{size:A4 portrait; margin:0}
     body{background:#fff; padding:0}
     .note{display:none}
-    .sheet{width:297mm; height:210mm; box-shadow:none; margin:0}
-  }
-  @media (max-width:760px){
-    .body{max-width:100%}
-    .foot{flex-direction:column; align-items:flex-start; gap:8mm}
+    .page{box-shadow:none; margin:0; page-break-after:always; min-height:297mm}
+    .page:last-child{page-break-after:auto}
   }
 </style>
 
-<div class="note">
-  <span><b>Programme certificate.</b> A4 landscape, white stock. Cabinet Grotesk throughout. Print to PDF to check the trim.</span>
-  <span>Supersedes navy #1F4E79 / cream #FFF4E0</span>
+<div class="note"><b>Proposal PDF, two pages.</b> A4 portrait, Instrument Serif throughout, navy. Cover on ink with the mark reversed out; interior on white. The terms are set at body size, never in small print, because the terms are the product.</div>
+
+<!-- ============ COVER ============ -->
+<div class="page cover">
+  <div class="lock">
+    <svg width="36" height="36" viewBox="0 0 375 375" style="color:#FFF" role="img" aria-label="Axelis Overseas"><use href="#ax-mark"/></svg>
+    <img src="assets/axelis-lockup-navy.svg" alt="Axelis Overseas" style="height:34px; width:auto">
+  </div>
+
+  <div class="mid">
+    <span class="kick">Programme proposal · private &amp; confidential</span>
+    <h1>Executive MBA Concierge</h1>
+    <p class="lede">Prepared for a single candidate. It states the scope, the fee, the schedule, and what is returned if the outcome named in clause 4 is not reached.</p>
+  </div>
+
+  <div class="prepared">
+    <div><b>Prepared for</b>Ananya Krishnamurthy</div>
+    <div><b>Date</b><span class="tnum">20 September 2026</span></div>
+    <div><b>Reference</b><span class="tnum">AXP-2026-0147</span></div>
+    <div><b>Valid until</b><span class="tnum">20 October 2026</span></div>
+  </div>
 </div>
 
-<div class="sheet">
-  <div class="frame"></div>
-  <div class="accent"></div>
-  <div class="inner">
-    <div class="head">
-      <div class="lock">
-        <svg width="36" height="36" viewBox="0 0 375 375" role="img" aria-label="Axelis"><use href="#ax-mark"/></svg>
-        <span class="wm">Axelis Overseas</span>
-      </div>
-      <div class="docline">Certificate of completion<br>Concierge programme</div>
+<!-- ============ INTERIOR ============ -->
+<div class="page">
+  <div class="head">
+    <div class="lk">
+      <svg width="24" height="24" viewBox="0 0 375 375" aria-hidden="true"><use href="#ax-mark"/></svg>
+      <span>Axelis Overseas</span>
     </div>
+    <span class="pg tnum">AXP-2026-0147 · 2/2</span>
+  </div>
 
-    <div class="body">
-      <span class="conferred">This certifies that</span>
-      <span class="name">Ananya Krishnamurthy</span>
-      <div class="namerule"></div>
-      <span class="for">has completed, in full, the concierge programme</span>
-      <span class="prog">Executive MBA Concierge</span>
-      <span class="dates tnum">Cohort 2026-A · 14 February 2026 — 11 September 2026 · Bengaluru</span>
-    </div>
+  <div class="sec">
+    <h2>Fee and schedule</h2>
+    <p>One programme, one fee. Nothing below is an estimate — these are the amounts that appear on the payment link and the financing agreement.</p>
+    <table>
+      <thead><tr><th>Item</th><th>Basis</th><th class="n">Amount</th></tr></thead>
+      <tbody>
+        <tr><td>Executive MBA Concierge</td><td>Programme fee, inclusive</td><td class="n">₹3,00,000</td></tr>
+        <tr><td>School applications</td><td>Up to 6, included</td><td class="n">₹0</td></tr>
+        <tr><td>Scholarship negotiation</td><td>Included</td><td class="n">₹0</td></tr>
+      </tbody>
+      <tfoot><tr><td colspan="2">Payable</td><td class="n">₹3,00,000</td></tr></tfoot>
+    </table>
 
-    <div class="foot">
-      <div class="sigs">
-        <div class="sig"><div class="line"></div><div class="who">Rishabh Agrawal</div><div class="role">Founder, Axelis Overseas Education</div></div>
-        <div class="sig"><div class="line"></div><div class="who">Programme lead</div><div class="role">Executive MBA Concierge</div></div>
-      </div>
-      <div class="sealwrap">
-        <svg viewBox="0 0 240 240" role="img" aria-label="Axelis guarantee seal" style="--axelis-accent:#C4290F"><use href="#ax-seal"/></svg>
-      </div>
-      <div class="idblock">
-        <span class="id tnum">AXC-2026-0147</span>
-        <span class="verify">Verify at overseeducation.com/verify</span>
-      </div>
+    <h3>If paid monthly</h3>
+    <table>
+      <thead><tr><th>Tenure</th><th class="n">Instalment</th><th class="n">Instalments</th><th class="n">Total</th></tr></thead>
+      <tbody>
+        <tr><td>12 months</td><td class="n">₹25,000</td><td class="n">12</td><td class="n">₹3,00,000</td></tr>
+        <tr><td>18 months</td><td class="n">₹16,667</td><td class="n">18</td><td class="n">₹3,00,006</td></tr>
+        <tr><td>24 months</td><td class="n">₹12,500</td><td class="n">24</td><td class="n">₹3,00,000</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:10px; color:var(--dim)">Instalments are the fee divided by the tenure, rounded up to the rupee, and exclude any charge levied by the financing partner. The binding schedule is the one on the financing agreement.</p>
+  </div>
+
+  <div class="sec">
+    <h2>The written outcome guarantee</h2>
+    <div class="terms">
+      <h3>Clause 4 — in full</h3>
+      <ol>
+        <li><span class="clausenum">§4.1</span>Axelis agrees a shortlist of at least six schools with the candidate in writing before any application is opened.</li>
+        <li><span class="clausenum">§4.2</span>If no offer is received from any shortlisted school, 60% of the programme fee is returned within 30 days of the final decision.</li>
+        <li><span class="clausenum">§4.3</span><span class="excl">Not covered: visa refusal on grounds of document fraud or misrepresentation; withdrawal by the candidate; failure to sit a required test on the agreed date.</span></li>
+        <li><span class="clausenum">§4.4</span>Axelis does not guarantee admission. It guarantees the remedy stated in §4.2 on the failure defined in §4.2.</li>
+      </ol>
     </div>
+  </div>
+
+  <div class="signblock">
+    <div class="sig"><div class="line"></div><div class="who">Ananya Krishnamurthy</div><div class="role">Candidate</div></div>
+    <div class="sig"><div class="line"></div><div class="who">Rishabh Agrawal</div><div class="role">Founder, Axelis Overseas Education</div></div>
+    <svg viewBox="0 0 240 240" role="img" aria-label="Axelis guarantee seal" style="--axelis-accent:#2F6795"><use href="#ax-seal"/></svg>
+  </div>
+
+  <div class="foot">
+    <span>Axelis Overseas Education</span>
+    <span>axelisoverseas@overseeducation.com</span>
+    <span class="tnum">+91 9098522711</span>
+    <span>overseeducation.com</span>
   </div>
 </div>
 
@@ -130,6 +188,6 @@
   </g>
   <text font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="600" font-size="15" letter-spacing="4.2" fill="currentColor"><textPath href="#seal-top" startOffset="50%" text-anchor="middle">AXELIS OVERSEAS</textPath></text>
   <text font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="600" font-size="12.5" letter-spacing="3" fill="currentColor"><textPath href="#seal-bot" startOffset="50%" text-anchor="middle">WRITTEN OUTCOME GUARANTEE</textPath></text>
-  <text x="120" y="168" text-anchor="middle" font-family="'Cabinet Grotesk', sans-serif" font-weight="700" font-size="13" letter-spacing="1.8" fill="currentColor">AXC-YYYY-####</text>
+  <text x="120" y="168" text-anchor="middle" font-family="'Instrument Serif', Georgia, serif" font-weight="700" font-size="13" letter-spacing="1.8" fill="currentColor">AXC-YYYY-####</text>
 </symbol>
 </svg>

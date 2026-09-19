@@ -1,0 +1,92 @@
+/* ============================================================
+   AXELIS OVERSEAS — COMPANY DOCUMENT STYLESHEET
+   One stylesheet behind every printed document. v3.0 navy.
+   A4 portrait unless a document overrides it.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap');
+
+:root{
+  --navy:#0E3240; --navy-2:#154457;
+  --accent:#4080BD;        /* brand blue — surfaces and graphics           */
+  --accent-text:#2F6795;   /* text and button fills on light — 6.01:1  AA  */
+  --accent-lt:#7FB4E0;     /* accent on navy grounds       — 6.14:1  AAA   */
+  --white:#FFFFFF; --tint:#F0F4F8; --tint-2:#E3EDF5; --rule:#D5E1EB; --dim:#5A7280;
+  --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
+  --font:'Instrument Sans',-apple-system,BlinkMacSystemFont,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0; background:var(--tint-2); color:var(--navy); font-family:var(--font); font-weight:400;
+     line-height:1.55; letter-spacing:.004em; padding-block:28px; padding-inline:16px; -webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{margin:0; font-family:var(--serif); font-weight:400; line-height:1.1; letter-spacing:-.01em}
+p{margin:0}
+a{color:var(--accent-text)}
+.tnum{font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1}
+
+/* screen-only note above each sheet */
+.note{max-width:210mm; margin:0 auto 18px; font-size:.88rem; color:var(--dim)}
+.note b{color:var(--navy)}
+.note.wide{max-width:297mm}
+
+/* ---------- the sheet ---------- */
+.sheet{width:210mm; max-width:100%; min-height:297mm; background:var(--white); margin:0 auto 22px;
+       position:relative; padding:22mm 20mm 18mm; display:flex; flex-direction:column;
+       box-shadow:0 18px 40px -30px rgba(11,43,58,.5)}
+.sheet.land{width:297mm; min-height:210mm; aspect-ratio:297/210}
+
+/* ---------- letterhead furniture ---------- */
+.lh-top{display:flex; align-items:flex-start; justify-content:space-between; gap:14mm; padding-bottom:6mm}
+.lh-lock{display:flex; align-items:center; gap:4mm}
+.lh-lock img{width:14mm; height:auto; display:block}
+.lh-lock .wm{font-family:var(--serif); font-weight:400; font-size:19px; letter-spacing:-.01em; line-height:1.05}
+.lh-lock .wm small{display:block; font-family:var(--font); font-weight:600; font-size:8px; letter-spacing:.14em;
+                   text-transform:uppercase; color:var(--accent-text); margin-top:1.5mm}
+.lh-contact{text-align:right; font-size:8.6px; line-height:1.65; color:var(--dim)}
+.lh-contact b{display:block; color:var(--navy); font-weight:700}
+.lh-rule{height:2.6mm; background:var(--navy); position:relative; margin-bottom:9mm}
+.lh-rule::after{content:''; position:absolute; left:0; top:0; bottom:0; width:38mm; background:var(--accent)}
+.serif{font-family:var(--serif); font-weight:400}
+
+.lh-foot{margin-top:auto; padding-top:6mm; border-top:1px solid var(--rule);
+         display:flex; flex-wrap:wrap; gap:2mm 8mm; justify-content:space-between;
+         font-size:8px; color:var(--dim); letter-spacing:.03em}
+.lh-foot .legal{flex:1 1 100%; color:var(--dim)}
+.lh-foot b{color:var(--navy); font-weight:700}
+
+/* ---------- body content ---------- */
+.doc-title{font-family:var(--serif); font-weight:400; font-size:27px; letter-spacing:-.01em; margin-bottom:2mm}
+.doc-kick{font-weight:700; font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--accent-text); margin-bottom:3mm}
+.meta-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:4mm 10mm; margin-block:6mm;
+           padding:5mm; background:var(--tint); border:1px solid var(--rule); border-radius:8px; font-size:10px}
+.meta-grid b{display:block; font-weight:700; font-size:8px; letter-spacing:.12em; text-transform:uppercase;
+             color:var(--dim); margin-bottom:1mm}
+.body-copy{font-size:11px; line-height:1.7; max-width:62ch}
+.body-copy p + p{margin-top:3.5mm}
+
+table{border-collapse:collapse; width:100%; font-size:10px; margin-block:4mm}
+th{text-align:left; font-weight:700; font-size:8.4px; letter-spacing:.1em; text-transform:uppercase;
+   color:var(--dim); padding:2.6mm 3mm; background:var(--tint); border-bottom:1px solid var(--rule)}
+td{padding:2.6mm 3mm; border-bottom:1px solid var(--rule)}
+th.n,td.n{text-align:right; font-variant-numeric:tabular-nums; font-feature-settings:'tnum' 1; white-space:nowrap}
+td.n{font-weight:700}
+tfoot td{font-weight:800; background:var(--tint); border-top:1.5px solid var(--navy); border-bottom:0}
+
+.callout{border:1px solid var(--rule); border-left:3px solid var(--accent-text); border-radius:8px;
+         padding:5mm; background:var(--tint); font-size:10px; margin-block:4mm}
+.callout h3{font-size:11px; margin-bottom:2mm}
+
+.sig-row{display:flex; gap:12mm; margin-top:10mm; flex-wrap:wrap}
+.sig{min-width:58mm; flex:1}
+.sig .line{height:1px; background:var(--navy); margin-bottom:2mm}
+.sig .who{font-weight:700; font-size:10px}
+.sig .role{font-size:8.5px; color:var(--dim)}
+
+.stamp{width:32mm; height:auto; display:block}
+
+@media print{
+  @page{size:A4 portrait; margin:0}
+  @page land{size:A4 landscape}
+  body{background:#fff; padding:0}
+  .note{display:none}
+  .sheet{box-shadow:none; margin:0; page-break-after:always}
+  .sheet:last-of-type{page-break-after:auto}
+}
