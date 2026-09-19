@@ -5,6 +5,7 @@ import { serviceGroups, servicesPromise } from '../../data/studentServices';
 import { refundPolicy } from '../../data/certificationPrograms';
 import TrustBand from '../../components/TrustBand';
 import ServiceCheckout from '../../components/ServiceCheckout';
+import DocumentUpload from '../../components/DocumentUpload';
 import { GST_NOTE } from '../../data/cashfreeLinks';
 
 export const metadata = {
@@ -89,6 +90,7 @@ export default function ServicesPage() {
                   )}
                   <div className="mt-auto">
                     <ServiceCheckout payKey={s.payKey} payHref={s.payHref} name={s.name} />
+                    {s.docKey && <DocumentUpload serviceKey={s.docKey} />}
                   </div>
                 </div>
               ))}

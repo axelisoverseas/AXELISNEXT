@@ -18,6 +18,7 @@ export const serviceGroups = [
     services: [
       {
         name: 'MEA apostille',
+        docKey: 'mea-apostille',
         payKey: 'mea-apostille',
         price: '₹1,500',
         per: 'per document',
@@ -27,6 +28,7 @@ export const serviceGroups = [
       },
       {
         name: 'Sworn translation',
+        docKey: 'sworn-translation',
         payKey: 'sworn-translation',
         price: '₹2,500',
         per: 'per document',
@@ -36,6 +38,7 @@ export const serviceGroups = [
       },
       {
         name: 'APS certificate support',
+        docKey: 'aps-certificate-support',
         price: 'Included in your charter',
         per: null,
         body:
@@ -44,6 +47,7 @@ export const serviceGroups = [
       },
       {
         name: 'ZAB recognition report',
+        docKey: 'zab-recognition-report',
         price: 'Included in your charter',
         per: null,
         body:
@@ -59,6 +63,7 @@ export const serviceGroups = [
     services: [
       {
         name: 'Tourist visa filing, UK',
+        docKey: 'visa-filing-tourist-uk',
         payKey: 'visa-filing-tourist-uk',
         price: '₹10,000',
         per: 'per application',
@@ -68,6 +73,7 @@ export const serviceGroups = [
       },
       {
         name: 'Student visa file build',
+        docKey: 'student-visa-file-build',
         price: 'Included in your charter',
         per: null,
         body:
@@ -76,6 +82,7 @@ export const serviceGroups = [
       },
       {
         name: 'Blocked account setup',
+        docKey: 'blocked-account-setup',
         price: 'Included in your charter',
         per: null,
         body:
