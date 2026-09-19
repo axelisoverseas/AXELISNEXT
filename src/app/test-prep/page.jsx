@@ -4,6 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
+import PayRail from '../../components/PayRail';
+import { cashfreeTestPrepForms } from '../../data/cashfreeLinks';
 
 const RAZORPAY_URL = 'https://rzp.io/rzp/c5K4pKY';
 
@@ -183,7 +185,7 @@ const faqs = [
   },
   {
     q: 'How do I enrol and pay?',
-    a: 'Enrol securely via Razorpay at rzp.io/rzp/c5K4pKY. You will receive a tax invoice the same day, your diagnostic call is scheduled within 24 hours, and your first 1-on-1 session is booked within the week.',
+    a: 'Enrol securely from any pack on this page. You will receive a tax invoice the same day, your diagnostic call is scheduled within 24 hours, and your first 1-on-1 session is booked within the week.',
   },
   {
     q: 'Where is Axelis Overseas based and do you teach students outside India?',
@@ -368,19 +370,12 @@ export default function TestPrepPage() {
                         <p className="text-[11px] text-slate-400 mb-4">{p.footnote}</p>
                       )}
 
-                      <a
-                        href={p.razorpayUrl || RAZORPAY_URL}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={`mt-3 inline-flex w-full items-center justify-center px-4 py-3 rounded-xl font-bold text-sm transition-all ${
-                          p.highlight
-                            ? 'bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] shadow-[0_0_30px_-10px_var(--storm-accent-glow)]'
-                            : 'bg-white/8 hover:bg-white/15 text-white border border-white/15'
-                        }`}
-                      >
-                        Enrol via Razorpay
-                        <ArrowRight className="ml-1.5" size={16} />
-                      </a>
+                      <PayRail
+                        razorpayUrl={p.razorpayUrl || RAZORPAY_URL}
+                        cashfreeUrl={cashfreeTestPrepForms[p.code]}
+                        highlight={p.highlight}
+                        label="Enrol"
+                      />
                     </div>
                   ))}
                 </div>

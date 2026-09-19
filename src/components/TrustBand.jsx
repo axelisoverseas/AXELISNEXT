@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ShieldCheck, Lock, RotateCcw, FileCheck } from 'lucide-react';
+import { SHOW_RAZORPAY } from '../data/cashfreeLinks';
 
 /**
  * Credibility band.
@@ -18,7 +19,8 @@ const ACCREDITATIONS = [
 
 const ASSURANCES = [
   { Icon: RotateCcw, title: 'Written refund terms', body: 'Refund conditions are set out in your engagement letter before you pay, not after.' },
-  { Icon: Lock, title: 'Payments via Razorpay & Cashfree', body: 'PCI-DSS compliant gateways. We never see or store your card details.' },
+  // Named gateways, so the claim stays true as the Razorpay rail is retired.
+  { Icon: Lock, title: SHOW_RAZORPAY ? 'Payments via Cashfree & Razorpay' : 'Payments via Cashfree', body: 'PCI-DSS compliant gateways. We never see or store your card details.' },
   { Icon: FileCheck, title: 'Verifiable certificates', body: 'Every certificate carries a unique ID that anyone can check against our register at overseeducation.com/verify.' },
 ];
 

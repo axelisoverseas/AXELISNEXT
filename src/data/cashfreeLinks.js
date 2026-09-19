@@ -82,3 +82,65 @@ export function assertAmountsMatchCatalogue(programs) {
   }
   return true;
 }
+
+// ---------------------------------------------------------------------------
+// RAZORPAY -> CASHFREE MIGRATION
+// ---------------------------------------------------------------------------
+//
+// Razorpay currently carries 21 live payment surfaces: 19 Test Prep packs and
+// the two student plans. Cashfree is to replace them.
+//
+// The order matters. Pulling Razorpay before the Cashfree form exists would
+// leave a priced card with no way to pay it, which costs real enrolments. So
+// both rails run side by side, and Razorpay is withdrawn per item, only once
+// that item has a Cashfree form. `payRails()` below enforces that: it will not
+// return an item with no rail at all, whatever the flags say.
+//
+// TO FINISH THE MIGRATION: paste each minted form URL into the maps below.
+// When every value is filled, set SHOW_RAZORPAY to false and Razorpay
+// disappears everywhere in one edit.
+// ---------------------------------------------------------------------------
+
+/** Set false once every item below has a Cashfree form. */
+export const SHOW_RAZORPAY = true;
+
+/** Test Prep packs, keyed by the pack code shown on /test-prep. */
+export const cashfreeTestPrepForms = {
+  'BL-103': null, // IELTS 1-on-1 Crash        ₹6,000
+  'BL-101': null, // IELTS Couple Batch        ₹5,300
+  'BL-102': null, // IELTS Batch of 3          ₹6,000
+  'BL-106': null, // PTE 1-on-1 Crash          ₹5,300
+  'BL-104': null, // PTE Couple Batch          ₹4,600
+  'BL-105': null, // PTE Batch of 3            ₹5,300
+  'BL-110': null, // TOEFL 1-on-1              ₹625 per session
+  'BL-201': null, // SAT 1-on-1                ₹760 per session
+  'BL-202': null, // SAT Batch of 2            ₹1,175 per session
+  'BL-203': null, // SAT Batch of 3            ₹1,600 per session
+  'BL-109': null, // Spoken English 1-on-1     ₹460 per session
+  'BL-108': null, // Spoken English Batch of 2 ₹620 per session
+  'BL-107': null, // Spoken English Batch of 3 ₹920 per session
+  'FR-1': null,   // French DELF 1-on-1        ₹900 per session
+  'FR-2': null,   // French DELF Batch of 2    ₹1,300 per session
+  'FR-3': null,   // French DELF Batch of 3    ₹1,725 per session
+  'DE-1': null,   // German Goethe 1-on-1      ₹900 per session
+  'DE-2': null,   // German Goethe Batch of 2  ₹1,300 per session
+  'DE-3': null,   // German Goethe Batch of 3  ₹1,725 per session
+};
+
+/**
+ * Which rails to show for one item.
+ *
+ * Razorpay is hidden only when Cashfree can actually take the payment. That
+ * invariant is the point of this function: flipping SHOW_RAZORPAY can never
+ * strand an item with no way to pay.
+ */
+export function payRails({ razorpayUrl = null, cashfreeUrl = null }) {
+  const cashfree = cashfreeUrl || null;
+  const razorpay = razorpayUrl || null;
+  const showRazorpay = razorpay && (SHOW_RAZORPAY || !cashfree);
+  return {
+    cashfree,
+    razorpay: showRazorpay ? razorpay : null,
+    count: (cashfree ? 1 : 0) + (showRazorpay ? 1 : 0),
+  };
+}

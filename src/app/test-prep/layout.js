@@ -5,7 +5,7 @@ const OG_IMAGE = 'https://overseeducation.com/og-image.jpg';
 export const metadata = {
   title: 'IELTS, TOEFL, PTE, SAT, DET Coaching — Premium 1-on-1 Test Prep',
   description:
-    'Premium 1-on-1 IELTS, TOEFL, PTE Academic, SAT and Duolingo English Test coaching with in-house tutors who have 8+ years of teaching experience. Score-targeted plans from ₹460/session, full-length mocks, flexible scheduling, and Razorpay-secured enrolment. Bengaluru, India — live online worldwide.',
+    'Premium 1-on-1 IELTS, TOEFL, PTE Academic, SAT and Duolingo English Test coaching with in-house tutors who have 8+ years of teaching experience. Score-targeted plans from ₹460/session, full-length mocks, flexible scheduling, and secure online enrolment. Bengaluru, India — live online worldwide.',
   keywords: [
     'IELTS coaching',
     'IELTS classes',
@@ -43,7 +43,7 @@ export const metadata = {
     siteName: 'Axelis Overseas Education',
     title: 'IELTS, TOEFL, PTE, SAT, DET Coaching — Premium 1-on-1 Test Prep | Axelis Overseas',
     description:
-      'Crack IELTS, TOEFL, PTE, SAT and DET with tutors who have 8+ years of teaching behind them. Live 1-on-1 sessions, full-length mocks, score-targeted plans from ₹460/session. Enrol via Razorpay.',
+      'Crack IELTS, TOEFL, PTE, SAT and DET with tutors who have 8+ years of teaching behind them. Live 1-on-1 sessions, full-length mocks, score-targeted plans from ₹460/session. Enrol online in minutes.',
     locale: 'en_IN',
     images: [
       {
@@ -282,7 +282,7 @@ const faq = {
       name: 'How do I enrol and pay?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Enrol securely via Razorpay at rzp.io/rzp/c5K4pKY. You will receive a tax invoice the same day, your diagnostic call is scheduled within 24 hours, and your first 1-on-1 session is booked within the week.',
+        text: 'Enrol securely from any pack on this page. You will receive a tax invoice the same day, your diagnostic call is scheduled within 24 hours, and your first 1-on-1 session is booked within the week.',
       },
     },
     {

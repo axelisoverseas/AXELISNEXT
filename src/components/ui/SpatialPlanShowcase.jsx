@@ -16,7 +16,8 @@ import {
   Briefcase,
   Trophy,
 } from 'lucide-react';
-import RazorpayEmbed from '../RazorpayEmbed';
+import PayRail from '../PayRail';
+import { cashfreeLinks } from '../../data/cashfreeLinks';
 import { allCountries, europeanCountries } from '../../data/siteData';
 import { TextEffectInView } from './TextEffect';
 
@@ -42,8 +43,9 @@ const PLAN_CONFIG = {
       refundBody:
         'Fully refunded once your student visa is approved, or if you receive no offer.',
       razorpayUrl: 'https://pages.razorpay.com/pl_Rk1qpiuEJifDx1/view',
+      payKey: 'global-admissions-charter',
       ctaText: 'Enroll Now — ₹9,999',
-      secureNote: 'Secure payment via Razorpay · 100% Refundable',
+      secureNote: 'Secure hosted checkout · 100% Refundable',
       countries: allCountries,
       features: [
         'Expert University Shortlisting & Status Tracker',
@@ -116,8 +118,9 @@ const PLAN_CONFIG = {
       refundTitle: 'Conditional Refund',
       refundBody: '₹19,999 fee is fully refundable if no offers are received.',
       razorpayUrl: 'https://pages.razorpay.com/pl_Rk1J9M0s2qvgUz/view',
+      payKey: 'europe-public-charter',
       ctaText: 'Enroll Now — ₹19,999',
-      secureNote: 'Secure payment via Razorpay · Conditional Refund',
+      secureNote: 'Secure hosted checkout · Conditional Refund',
       countries: europeanCountries,
       features: [
         'Admission to Tuition-Free Public Universities',
@@ -501,7 +504,12 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
           </ul>
 
           <div className="mt-auto">
-            <RazorpayEmbed url={pricing.razorpayUrl} text={pricing.ctaText} />
+            <PayRail
+              razorpayUrl={pricing.razorpayUrl}
+              cashfreeUrl={cashfreeLinks[pricing.payKey]?.url}
+              highlight
+              label={pricing.ctaText}
+            />
             <p className="text-xs text-slate-500 font-medium text-center mt-4 flex items-center justify-center gap-2">
               <Shield size={12} />
               {pricing.secureNote}

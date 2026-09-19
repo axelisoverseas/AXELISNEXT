@@ -28,7 +28,7 @@ const howItWorks = [
   },
   {
     Icon: FileText,
-    title: 'Sign + pay via Razorpay',
+    title: 'Sign + pay online',
     body: 'Refundable deposit to start. Every fee that can ever apply is stated on the plan card before you pay — no hidden agency markup later. Receipt arrives in your inbox the same day.',
   },
   {
