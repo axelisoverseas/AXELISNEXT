@@ -101,6 +101,29 @@ export function assertAmountsMatchCatalogue(programs) {
 // disappears everywhere in one edit.
 // ---------------------------------------------------------------------------
 
+// ---------------------------------------------------------------------------
+// GST ON HOSTED FORMS
+// ---------------------------------------------------------------------------
+//
+// Ruling: Test Prep charges 18% GST on top of the listed price. That matches
+// what /test-prep already tells the buyer ("GST applicable as per Indian tax
+// law"), so a form that adds 18% is consistent with the page.
+//
+// It is NOT applied to the other surfaces, because their pages say the
+// opposite and the page is the offer:
+//
+//   /services      states in its promise block, "Every price here is what you
+//                  pay Axelis. Nothing else is added later." Adding 18% at
+//                  checkout would contradict a written promise on the same
+//                  screen.
+//   /certifications  quotes Rs 2,00,000 to Rs 3,00,000 with no mention of tax,
+//                  so the figure reads as final. The three live forms collect
+//                  exactly that.
+//
+// To charge GST on those too, the page copy has to change first. Change the
+// copy, then the forms, in that order.
+export const GST_RATE_TEST_PREP = 18;
+
 /** Set false once every item below has a Cashfree form. */
 export const SHOW_RAZORPAY = true;
 
