@@ -35,9 +35,9 @@ export const cashfreeLinks = {
   },
 
   // --- Certification programmes (/certifications) -------------------------
-  'global-career-launch': { url: 'https://payments.cashfree.com/forms/axelis-global-career-launch', amount: 200000, label: 'Global Career Launch' },
-  'phd-fellowship-concierge': { url: 'https://payments.cashfree.com/forms/axelis-phd-fellowship-concierge', amount: 250000, label: 'PhD & Fellowship Concierge' },
-  'executive-mba-concierge': { url: 'https://payments.cashfree.com/forms/axelis-executive-mba-concierge', amount: 300000, label: 'Executive MBA Concierge' },
+  'global-career-launch': { url: 'https://payments.cashfree.com/forms/axelis-global-career-launch-fee', amount: 200000, label: 'Global Career Launch' },
+  'phd-fellowship-concierge': { url: 'https://payments.cashfree.com/forms/axelis-phd-fellowship-fee', amount: 250000, label: 'PhD & Fellowship Concierge' },
+  'executive-mba-concierge': { url: 'https://payments.cashfree.com/forms/axelis-executive-mba-fee', amount: 300000, label: 'Executive MBA Concierge' },
 
   // --- Student services (/services) ----------------------------------------
   // Apostille and translation are priced PER DOCUMENT. There is no honest
@@ -130,6 +130,26 @@ export const GST_NOTE = `+ ${GST_RATE}% GST`;
 
 /** Set false once every item below has a Cashfree form. */
 export const SHOW_RAZORPAY = true;
+
+// WHAT AMOUNT EACH TEST PREP FORM CHARGES
+//
+// The packs are not priced the same way as each other, so one rule would be
+// wrong for most of them. Three cases, decided from what /test-prep actually
+// promises the buyer:
+//
+//   Fixed per student (IELTS, PTE)     -> the listed price. "12 sessions,
+//                                         Rs 6,000 per student" is one price
+//                                         for one commitment.
+//   Minimum sessions with a total      -> the stated total. SAT reads "Min 16
+//     (SAT, Spoken English)               sessions, from Rs 12,160", so the
+//                                         form charges Rs 12,160. Charging one
+//                                         session would let someone think
+//                                         Rs 760 bought the course.
+//   Genuinely per session, no minimum  -> the per-session price. TOEFL, French
+//     (TOEFL, French, German)             and German are sold session by
+//                                         session and the page says so.
+//
+// GST at 18% is set on every form, so the receipt itemises it.
 
 /** Test Prep packs, keyed by the pack code shown on /test-prep. */
 export const cashfreeTestPrepForms = {

@@ -89,6 +89,10 @@ function buildComment({ serviceName, candidate, payment, files, naveen }) {
     `*Email:* ${candidate.email}`,
   ];
 
+  // On the partner site the submitter and the document owner are different
+  // people, and ops needs to know who to chase as well as whose file it is.
+  if (candidate.partner) lines.push(`*Submitted by partner:* ${candidate.partner}`);
+
   if (payment.reference) lines.push(`*Payment reference:* \`${payment.reference}\``);
   lines.push(`*Payment status:* ${payment.paid ? 'Paid' : 'NOT YET PAID — confirm before starting work'}`);
   if (payment.amount) lines.push(`*Amount quoted:* ${INR(payment.amount)}`);

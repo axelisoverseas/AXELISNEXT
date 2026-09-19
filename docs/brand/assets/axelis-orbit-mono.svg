@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Axelis orbit mark">
+  <title>Axelis — Orbit mark (single colour)</title>
+  <desc>Descends from the original Axelis planet-and-orbit logo. The orbit cuts a real notch through the disc, so the mark is one shape in one colour and takes whatever colour it is given via currentColor.</desc>
+  <mask id="notch">
+    <rect width="120" height="120" fill="#000"/>
+    <circle cx="60" cy="60" r="42" fill="#fff"/>
+    <ellipse cx="60" cy="72" rx="80" ry="21" fill="none" stroke="#000" stroke-width="10" transform="rotate(-20 60 72)"/>
+  </mask>
+  <circle cx="60" cy="60" r="42" fill="currentColor" mask="url(#notch)"/>
+  <ellipse cx="60" cy="72" rx="80" ry="21" fill="none" stroke="currentColor" stroke-width="5" transform="rotate(-20 60 72)"/>
+</svg>

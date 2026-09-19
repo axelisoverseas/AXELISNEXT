@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Axelis slipstream mark with rocket">
+  <title>Axelis — Slipstream with rocket (heritage)</title>
+  <desc>The full original composition, redrawn: planet, slipstream, wake lines and the rocket riding the tip.</desc>
+  <defs>
+    <path id="axh-w" d="M6,92 C40,80 86,52 116,22 C100,48 58,84 6,92 Z"/>
+    <path id="axh-t1" d="M10,104 C34,100 60,90 84,74 C64,96 36,106 10,104 Z"/>
+    <path id="axh-t2" d="M30,112 C48,110 66,103 82,93 C68,110 48,116 30,112 Z"/>
+    <g id="axh-rocket">
+      <path d="M0,0 L17,0 C23,0 29,3 33,6 C29,9 23,12 17,12 L0,12 C-2,9 -2,3 0,0 Z"/>
+      <path d="M3,1 L-7,-8 L11,0 Z"/>
+      <path d="M3,11 L-7,20 L11,12 Z"/>
+    </g>
+    <mask id="axh-cut">
+      <rect width="120" height="120" fill="#000"/>
+      <circle cx="56" cy="58" r="36" fill="#fff"/>
+      <use href="#axh-w" fill="#000" transform="translate(-1,-4)"/>
+    </mask>
+    <mask id="axh-port">
+      <rect width="120" height="120" fill="#fff"/>
+      <g transform="translate(80,30) rotate(-34) scale(.86)"><circle cx="21" cy="6" r="3.6" fill="#000"/></g>
+    </mask>
+  </defs>
+  <g mask="url(#axh-port)" transform="translate(0,6) scale(.94)" fill="currentColor">
+    <circle cx="56" cy="58" r="36" mask="url(#axh-cut)"/>
+    <use href="#axh-w"/><use href="#axh-t1"/><use href="#axh-t2"/>
+    <use href="#axh-rocket" transform="translate(80,30) rotate(-34) scale(.86)"/>
+  </g>
+</svg>

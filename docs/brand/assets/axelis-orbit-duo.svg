@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" role="img" aria-label="Axelis orbit mark, two tone">
+  <title>Axelis — Orbit mark (two tone)</title>
+  <desc>Disc takes currentColor; the orbit takes --axelis-accent, so the pair recolours per context without editing the file.</desc>
+  <mask id="notch2">
+    <rect width="120" height="120" fill="#000"/>
+    <circle cx="60" cy="60" r="42" fill="#fff"/>
+    <ellipse cx="60" cy="72" rx="80" ry="21" fill="none" stroke="#000" stroke-width="10" transform="rotate(-20 60 72)"/>
+  </mask>
+  <circle cx="60" cy="60" r="42" fill="currentColor" mask="url(#notch2)"/>
+  <ellipse cx="60" cy="72" rx="80" ry="21" fill="none" stroke="var(--axelis-accent, #FFD400)" stroke-width="5" transform="rotate(-20 60 72)"/>
+</svg>

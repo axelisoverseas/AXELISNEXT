@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Axelis guarantee seal">
+  <title>Axelis — Guarantee Seal (orbit)</title>
+  <desc>Certificate and guarantee seal built from the Axelis planet-and-orbit mark. The orbit breaks the outer ring, as it breaks the disc.</desc>
+  <defs>
+    <path id="sealArcTop" d="M120,120 m-84,0 a84,84 0 1,1 168,0"/>
+    <path id="sealArcBot" d="M120,120 m84,0 a84,84 0 1,1 -168,0"/>
+    <mask id="ringGap">
+      <rect width="240" height="240" fill="#fff"/>
+      <ellipse cx="120" cy="140" rx="150" ry="40" fill="none" stroke="#000" stroke-width="15" transform="rotate(-20 120 140)"/>
+    </mask>
+    <mask id="discNotch">
+      <rect width="240" height="240" fill="#000"/>
+      <circle cx="120" cy="116" r="34" fill="#fff"/>
+      <ellipse cx="120" cy="126" rx="64" ry="17" fill="none" stroke="#000" stroke-width="8" transform="rotate(-20 120 126)"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#ringGap)">
+    <circle cx="120" cy="120" r="112" fill="none" stroke="currentColor" stroke-width="6"/>
+    <circle cx="120" cy="120" r="100" fill="none" stroke="currentColor" stroke-width="1.5"/>
+  </g>
+
+  <circle cx="120" cy="116" r="34" fill="currentColor" mask="url(#discNotch)"/>
+  <ellipse cx="120" cy="126" rx="64" ry="17" fill="none" stroke="var(--axelis-accent, currentColor)" stroke-width="4" transform="rotate(-20 120 126)"/>
+
+  <text font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="600" font-size="15" letter-spacing="4.2" fill="currentColor">
+    <textPath href="#sealArcTop" startOffset="50%" text-anchor="middle">AXELIS OVERSEAS</textPath>
+  </text>
+  <text font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="600" font-size="12.5" letter-spacing="3" fill="currentColor">
+    <textPath href="#sealArcBot" startOffset="50%" text-anchor="middle">WRITTEN OUTCOME GUARANTEE</textPath>
+  </text>
+  <text x="120" y="182" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10.5" letter-spacing="1.4" fill="currentColor" opacity=".75">AXC-YYYY-####</text>
+</svg>

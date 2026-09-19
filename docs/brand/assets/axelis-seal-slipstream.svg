@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" width="240" height="240" role="img" aria-label="Axelis guarantee seal">
+  <title>Axelis — Guarantee Seal (slipstream)</title>
+  <desc>Built from the Axelis planet and slipstream. The slipstream breaks the seal's rings on its way out, exactly as it breaks the disc.</desc>
+  <defs>
+    <path id="sl-arc-top" d="M120,120 m-84,0 a84,84 0 1,1 168,0"/>
+    <path id="sl-arc-bot" d="M120,120 m84,0 a84,84 0 1,1 -168,0"/>
+    <path id="sl-w" d="M6,92 C40,80 86,52 116,22 C100,48 58,84 6,92 Z"/>
+    <path id="sl-t1" d="M10,104 C34,100 60,90 84,74 C64,96 36,106 10,104 Z"/>
+    <path id="sl-t2" d="M30,112 C48,110 66,103 82,93 C68,110 48,116 30,112 Z"/>
+    <mask id="sl-cut">
+      <rect width="120" height="120" fill="#000"/>
+      <circle cx="56" cy="58" r="36" fill="#fff"/>
+      <use href="#sl-w" fill="#000" transform="translate(-1,-4)"/>
+    </mask>
+    <mask id="sl-ringgap">
+      <rect width="240" height="240" fill="#fff"/>
+      <ellipse cx="120" cy="132" rx="160" ry="34" fill="none" stroke="#000" stroke-width="20" transform="rotate(-32 120 132)"/>
+    </mask>
+  </defs>
+
+  <g mask="url(#sl-ringgap)" fill="none" stroke="currentColor">
+    <circle cx="120" cy="120" r="112" stroke-width="6"/>
+    <circle cx="120" cy="120" r="100" stroke-width="1.5"/>
+  </g>
+
+  <g transform="translate(120,112) scale(.60) translate(-60,-60)">
+    <circle cx="56" cy="58" r="36" fill="currentColor" mask="url(#sl-cut)"/>
+    <g fill="var(--axelis-accent, currentColor)">
+      <use href="#sl-w"/><use href="#sl-t1"/><use href="#sl-t2"/>
+    </g>
+  </g>
+
+  <text font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="600" font-size="15" letter-spacing="4.2" fill="currentColor">
+    <textPath href="#sl-arc-top" startOffset="50%" text-anchor="middle">AXELIS OVERSEAS</textPath>
+  </text>
+  <text font-family="Oswald, 'Arial Narrow', sans-serif" font-weight="600" font-size="12.5" letter-spacing="3" fill="currentColor">
+    <textPath href="#sl-arc-bot" startOffset="50%" text-anchor="middle">WRITTEN OUTCOME GUARANTEE</textPath>
+  </text>
+  <text x="120" y="188" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="10.5" letter-spacing="1.4" fill="currentColor" opacity=".75">AXC-YYYY-####</text>
+</svg>
