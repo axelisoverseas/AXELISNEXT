@@ -235,8 +235,10 @@ accent segment, and the four-part legal footer repeat on every document.
   #80/3, Vijinapur Village, Old Madras Road, KR Puram Hobli, Bengaluru,
   Karnataka 560016
 - +91 9098522711 · axelisoverseas@overseeducation.com · info@overseeducation.com
-- Bank: IDFC FIRST Bank Ltd., Bilaspur Branch · A/c 10181616802 ·
-  IFSC IDFB0060367 · SWIFT IDFBINBBMUM · UPI 9098522711@jupiteraxis
+- Bank: IDFC FIRST Bank Ltd., Bilaspur Branch — **account number, IFSC, SWIFT
+  and UPI are deliberately NOT recorded in this repository.** They are on the
+  existing invoices in the company Google Drive. Fill them into the invoice
+  template at issue time; never commit them.
 - Signatory: Rishabh Agrawal, Director & Authorised Signatory
 
 GST registration is in **Chhattisgarh (22)**. Supply to any other state is
