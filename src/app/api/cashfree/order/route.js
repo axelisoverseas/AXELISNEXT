@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { cashfreeLinks, withGst } from '../../../../data/cashfreeLinks';
+import { cashfreeLinks, withGst, MAX_UNITS } from '../../../../data/cashfreeLinks';
 
 // Creates a Cashfree order and hands the browser a payment_session_id.
 //
@@ -34,7 +34,7 @@ export async function POST(request) {
     return NextResponse.json({ error: 'bad_request' }, { status: 400 });
   }
 
-  const { product, customer } = payload || {};
+  const { product, customer, quantity } = payload || {};
   const item = cashfreeLinks[product];
 
   // An unknown product must never fall through to an arbitrary amount.
@@ -50,22 +50,36 @@ export async function POST(request) {
     );
   }
 
-  // The amount is taken from the catalogue, never from the request body, and
-  // GST is added here rather than trusted from the client. The buyer is shown
-  // this same gross figure on the page before they press pay.
-  const amount = withGst(item.amount).gross;
+  // Per-document services are billed by count, so a quantity is accepted for
+  // them and rejected for everything else. Sending qty=6 for a fixed-price
+  // programme must not multiply the fee.
+  let qty = 1;
+  if (item.perUnit) {
+    qty = Number.parseInt(quantity, 10);
+    if (!Number.isInteger(qty) || qty < 1 || qty > MAX_UNITS) {
+      return NextResponse.json(
+        { error: 'invalid_quantity', message: `Enter a document count between 1 and ${MAX_UNITS}.` },
+        { status: 400 },
+      );
+    }
+  }
+
+  // The unit price comes from the catalogue, never from the request body, and
+  // GST is applied to the computed total here rather than trusted from the
+  // client. The buyer is shown this same gross figure before they press pay.
+  const amount = withGst(item.amount * qty).gross;
 
   const body = {
     order_amount: amount,
     order_currency: 'INR',
-    order_note: item.label,
+    order_note: item.perUnit ? `${item.label} x ${qty}` : item.label,
     customer_details: {
       customer_id: `web-${Date.now()}`,
       customer_phone: phone,
       customer_name: customer?.name?.slice(0, 100) || undefined,
       customer_email: customer?.email?.slice(0, 100) || undefined,
     },
-    order_tags: { product, site: 'overseeducation.com', segment: 'd2c' },
+    order_tags: { product, quantity: String(qty), site: 'overseeducation.com', segment: 'd2c' },
     order_meta: {
       return_url: `https://overseeducation.com/payment-status?order_id={order_id}`,
     },

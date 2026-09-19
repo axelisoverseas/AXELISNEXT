@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { ArrowRight, Minus, Plus } from 'lucide-react';
-import { cashfreeLinks, withGst, GST_RATE } from '../data/cashfreeLinks';
+import { cashfreeLinks, withGst, GST_RATE, MAX_UNITS } from '../data/cashfreeLinks';
+import CheckoutButton from './CheckoutButton';
 
 // The pay control on /services.
 //
@@ -10,17 +11,16 @@ import { cashfreeLinks, withGst, GST_RATE } from '../data/cashfreeLinks';
 // pretending otherwise is how someone gets charged the wrong amount:
 //
 //  1. FIXED PRICE with a hosted form  -> straight to Cashfree.
-//  2. PER DOCUMENT                    -> count first, then an exact total.
-//     There is no fixed hosted form that can be right for both a candidate
-//     with one document and one with eight, so the page works out the total
-//     and hands it to a counsellor, which is how these are already sold.
+//  2. PER DOCUMENT                    -> count first, then pay that exact
+//     total. A hosted form carries one fixed figure and cannot serve both a
+//     candidate with one document and one with eight, so these go through the
+//     order API instead, which mints an order for the counted amount. The
+//     count is re-validated server side; the browser does not set the price.
 //  3. NOT YET MINTED (url is null)    -> ask, rather than show a dead button.
 //
 // Services included in a charter pass no payKey at all and render nothing,
 // because there is no Axelis fee to collect.
 
-const MAX_UNITS = 20;
-const SUPPORT_EMAIL = 'axelisoverseas@overseeducation.com';
 
 const INR = (n) => `₹${n.toLocaleString('en-IN')}`;
 
@@ -51,15 +51,6 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
   // ---- Per document -------------------------------------------------------
   if (item.perUnit) {
     const { net, gst, gross } = withGst(item.amount * units);
-    const subject = `${name}: ${units} ${item.unit}${units > 1 ? 's' : ''} — ${INR(gross)}`;
-    const body =
-      `I would like to proceed with ${name}.\n\n` +
-      `Number of ${item.unit}s: ${units}\n` +
-      `Rate: ${INR(item.amount)} per ${item.unit}\n` +
-      `Subtotal: ${INR(net)}\n` +
-      `GST at ${GST_RATE}%: ${INR(gst)}\n` +
-      `Total payable: ${INR(gross)}\n\n` +
-      `Please send me a payment link for this amount.\n\nName:\nPhone:\n`;
 
     return (
       <div className="mt-5 pt-5 border-t border-white/10">
@@ -107,16 +98,18 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
           </p>
         </div>
 
-        <a
-          href={`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`}
-          className={`${CTA} mt-4`}
-        >
-          Request a payment link <ArrowRight size={15} aria-hidden="true" />
-        </a>
+        <div className="mt-4">
+          <CheckoutButton
+            product={payKey}
+            quantity={units}
+            label={`Pay ${INR(gross)}`}
+            className={CTA}
+          />
+        </div>
 
         <p className="mt-2.5 text-xs text-slate-500 leading-relaxed">
-          We confirm the document count with you first, then send a link for exactly that amount.
-          You are never charged for documents you do not need.
+          You are charged for the documents you count here and nothing else. If the count turns out
+          to be wrong once we have seen them, we adjust it before any work starts.
         </p>
       </div>
     );
@@ -137,15 +130,20 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
     );
   }
 
-  // ---- Priced, but no hosted form yet -------------------------------------
+  // ---- Priced, no hosted form ---------------------------------------------
+  // Not every service needs a minted form. The order API creates one for the
+  // catalogue amount on demand, so a price on the page is always payable.
   return (
     <div className="mt-5 pt-5 border-t border-white/10">
-      <a
-        href={`mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(`${name} — ${INR(item.amount)}`)}`}
-        className={GHOST}
-      >
-        Request a payment link <ArrowRight size={15} aria-hidden="true" />
-      </a>
+      <CheckoutButton
+        product={payKey}
+        label={`Pay ${INR(withGst(item.amount).gross)}`}
+        className={CTA}
+      />
+      <p className="mt-2.5 text-xs text-slate-500">
+        {INR(item.amount)} + {INR(withGst(item.amount).gst)} GST. Card details are entered on
+        Cashfree's page, never here.
+      </p>
     </div>
   );
 }

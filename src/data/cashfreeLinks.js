@@ -60,6 +60,14 @@ export const cashfreeLinks = {
   'visa-filing-tourist-uk': { url: 'https://payments.cashfree.com/forms/axelis-uk-tourist-visa-filing', amount: 10000, label: 'Tourist visa filing (UK)' },
 };
 
+/**
+ * Ceiling on a per-document order. Shared by the stepper and the order API so
+ * the two cannot disagree: a limit enforced only in the browser is a
+ * suggestion, and a limit only on the server is a form that fails after the
+ * buyer has filled it in.
+ */
+export const MAX_UNITS = 20;
+
 /** The hosted link for a product, or null when it has not been minted yet. */
 export function payLink(slug) {
   return cashfreeLinks[slug]?.url || null;

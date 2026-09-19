@@ -40,7 +40,7 @@ function loadSdk() {
 const CTA_CLASS =
   'inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]';
 
-export default function CheckoutButton({ product, label, className = '' }) {
+export default function CheckoutButton({ product, label, className = '', quantity = 1 }) {
   const item = cashfreeLinks[product];
   const [open, setOpen] = useState(false);
   const [busy, setBusy] = useState(false);
@@ -67,7 +67,7 @@ export default function CheckoutButton({ product, label, className = '' }) {
         rel="noopener noreferrer"
         className={className || CTA_CLASS}
       >
-        {label || `Pay ${formatINR(withGst(item.amount).gross)}`}
+        {label || `Pay ${formatINR(withGst(item.amount * quantity).gross)}`}
         <ArrowRight size={18} aria-hidden="true" />
       </a>
     );
@@ -84,7 +84,7 @@ export default function CheckoutButton({ product, label, className = '' }) {
       const res = await fetch('/api/cashfree/order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ product, customer: form }),
+        body: JSON.stringify({ product, customer: form, quantity }),
       });
       const data = await res.json();
 
@@ -117,7 +117,7 @@ export default function CheckoutButton({ product, label, className = '' }) {
         onClick={() => setOpen(true)}
         className={className || CTA_CLASS}
       >
-        {label || `Pay ${formatINR(withGst(item.amount).gross)}`}
+        {label || `Pay ${formatINR(withGst(item.amount * quantity).gross)}`}
         <ArrowRight size={18} aria-hidden="true" />
       </button>
     );
@@ -127,10 +127,10 @@ export default function CheckoutButton({ product, label, className = '' }) {
     <form onSubmit={onSubmit} className="rounded-2xl border-2 border-white/10 bg-[#141210] p-5 max-w-md">
       <p className="text-white font-bold mb-1">{item.label}</p>
       <p className="text-2xl font-extrabold text-white mb-1 tabular-nums">
-        {formatINR(withGst(item.amount).gross)}
+        {formatINR(withGst(item.amount * quantity).gross)}
       </p>
       <p className="text-xs text-slate-400 mb-3">
-        {formatINR(item.amount)} + {formatINR(withGst(item.amount).gst)} GST at {GST_RATE}%
+        {formatINR(item.amount * quantity)} + {formatINR(withGst(item.amount * quantity).gst)} GST at {GST_RATE}%
       </p>
 
       {/* Shown before payment, not after. A fee a payer only learns about
