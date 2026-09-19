@@ -7,6 +7,7 @@ import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap, ShieldC
 
 const UniversityLogosSection = dynamic(() => import('../components/UniversityLogosSection'), { ssr: false });
 const GoogleReviewsFloat = dynamic(() => import('../components/GoogleReviewsFloat'), { ssr: false });
+const TeamGlobeCarousel = dynamic(() => import('../components/TeamGlobeCarousel'), { ssr: false });
 const GoogleReviewsSection = dynamic(() => import('../components/GoogleReviewsSection'), { ssr: false });
 import HeroOrbitalBackdrop from '../components/HeroOrbitalBackdrop';
 
@@ -14,7 +15,7 @@ import { BorderBeam } from '../components/ui/BorderBeam';
 import { RevealText } from '../components/ui/RevealText';
 import { TextEffect, TextEffectInView } from '../components/ui/TextEffect';
 
-import { faqData } from '../data/siteData';
+import { teamMembers, faqData } from '../data/siteData';
 
 const renderMarkdown = (text) => {
   if (!text) return null;
@@ -437,6 +438,9 @@ export default function Home() {
 
       {/* Google Reviews — verified 3rd-party proof from Bilaspur branch */}
       <GoogleReviewsSection compact />
+
+      {/* Team Section */}
+      <TeamGlobeCarousel teamMembers={teamMembers} />
 
 
 

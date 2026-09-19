@@ -47,6 +47,7 @@ const recentPlacements = [
 ];
 
 const GoogleReviewsFloat = dynamic(() => import('../../components/GoogleReviewsFloat'), { ssr: false });
+const InstagramSuccessStories = dynamic(() => import('../../components/InstagramSuccessStories'), { ssr: false });
 const GoogleReviewsSection = dynamic(() => import('../../components/GoogleReviewsSection'), { ssr: false });
 
 const TestimonialRealisticGlobe = dynamic(
@@ -524,6 +525,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Google Reviews — verified 3rd-party proof from Bilaspur branch */}
+      <InstagramSuccessStories />
       <GoogleReviewsSection />
 
       {/* Floating Google Reviews badge — bottom-left to avoid WhatsApp widget */}

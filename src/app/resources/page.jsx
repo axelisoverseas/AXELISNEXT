@@ -1,4 +1,5 @@
 import { Download } from 'lucide-react';
+import StudyAbroadGuides from '../../components/StudyAbroadGuides';
 
 export const metadata = {
   title: 'Free Study-Abroad Guides & Resources',
@@ -63,6 +64,7 @@ export default function ResourcesPage() {
           ))}
         </div>
       </section>
+      <StudyAbroadGuides />
     </div>
   );
 }
