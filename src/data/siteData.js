@@ -956,7 +956,7 @@ export const products = [
     applicableCountries: "Germany, France, Finland, Norway, Italy, Spain, Switzerland, Austria",
     paymentModel: "Pay After Offer",
     paymentDescription: "₹19,999 Service Fee - 50% Limited Time Discount",
-    paymentDetails: "Comprehensive support for tuition-free public universities. One-time fee with 100% transparency. Check Razorpay for full program terms.",
+    paymentDetails: "Comprehensive support for tuition-free public universities. One-time fee with 100% transparency. Full programme terms are on the Payment Terms page.",
     originalPrice: "₹39,998",
     currentPrice: "₹19,999",
     premium: true,

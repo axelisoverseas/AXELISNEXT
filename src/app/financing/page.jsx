@@ -9,7 +9,7 @@ import TrustBand from '../../components/TrustBand';
 export const metadata = {
   title: 'Financing Your Programme | Card EMI, Merchant EMI and Study Loans',
   description:
-    'Three ways to fund an Axelis programme: card EMI through Cashfree and Razorpay, merchant EMI where a lender is onboarded, and study loans through specialist NBFCs for offshore tuition.',
+    'Three ways to fund an Axelis programme: card EMI through Cashfree, merchant EMI where a lender is onboarded, and study loans through specialist NBFCs for offshore tuition.',
   alternates: { canonical: 'https://overseeducation.com/financing' },
   robots: { index: true, follow: true },
 };
@@ -31,7 +31,7 @@ const ROUTES = [
     points: [
       `Available on programmes priced ${formatINR(EMI_MIN_TICKET)} and above`,
       `Tenures of ${EMI_TENURES.join(', ')} months where your card issuer supports them`,
-      'Processed by Cashfree and Razorpay, both PCI-DSS compliant',
+      'Processed by Cashfree, PCI-DSS compliant',
       'Your bank sets the interest rate, so the final instalment is fixed by your card issuer',
     ],
     cta: { label: 'See programmes', href: '/certifications' },

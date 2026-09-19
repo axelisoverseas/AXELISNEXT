@@ -57,7 +57,7 @@ export const cashfreeLinks = {
   // Sold on both sides. This is the same service and the same price as
   // `visa-filing-tourist-uk` in the B2B map on axelisoverseas.com; if one
   // moves, move both. Filed in-house by Axelis.
-  'visa-filing-tourist-uk': { amount: 10000, url: null, label: 'Tourist visa filing (UK)' },
+  'visa-filing-tourist-uk': { url: 'https://payments.cashfree.com/forms/axelis-uk-tourist-visa-filing', amount: 10000, label: 'Tourist visa filing (UK)' },
 };
 
 /** The hosted link for a product, or null when it has not been minted yet. */
@@ -129,7 +129,7 @@ export function withGst(amount, rate = GST_RATE) {
 export const GST_NOTE = `+ ${GST_RATE}% GST`;
 
 /** Set false once every item below has a Cashfree form. */
-export const SHOW_RAZORPAY = true;
+export const SHOW_RAZORPAY = false;
 
 // WHAT AMOUNT EACH TEST PREP FORM CHARGES
 //
@@ -153,25 +153,25 @@ export const SHOW_RAZORPAY = true;
 
 /** Test Prep packs, keyed by the pack code shown on /test-prep. */
 export const cashfreeTestPrepForms = {
-  'BL-103': null, // IELTS 1-on-1 Crash        ₹6,000
-  'BL-101': null, // IELTS Couple Batch        ₹5,300
-  'BL-102': null, // IELTS Batch of 3          ₹6,000
-  'BL-106': null, // PTE 1-on-1 Crash          ₹5,300
-  'BL-104': null, // PTE Couple Batch          ₹4,600
-  'BL-105': null, // PTE Batch of 3            ₹5,300
-  'BL-110': null, // TOEFL 1-on-1              ₹625 per session
-  'BL-201': null, // SAT 1-on-1                ₹760 per session
-  'BL-202': null, // SAT Batch of 2            ₹1,175 per session
-  'BL-203': null, // SAT Batch of 3            ₹1,600 per session
-  'BL-109': null, // Spoken English 1-on-1     ₹460 per session
-  'BL-108': null, // Spoken English Batch of 2 ₹620 per session
-  'BL-107': null, // Spoken English Batch of 3 ₹920 per session
-  'FR-1': null,   // French DELF 1-on-1        ₹900 per session
-  'FR-2': null,   // French DELF Batch of 2    ₹1,300 per session
-  'FR-3': null,   // French DELF Batch of 3    ₹1,725 per session
-  'DE-1': null,   // German Goethe 1-on-1      ₹900 per session
-  'DE-2': null,   // German Goethe Batch of 2  ₹1,300 per session
-  'DE-3': null,   // German Goethe Batch of 3  ₹1,725 per session
+  'BL-103': 'https://payments.cashfree.com/forms/axelis-ielts-1on1-crash', // IELTS 1-on-1 Crash        ₹6,000
+  'BL-101': 'https://payments.cashfree.com/forms/axelis-ielts-couple-batch', // IELTS Couple Batch        ₹5,300
+  'BL-102': 'https://payments.cashfree.com/forms/axelis-ielts-batch-of-3', // IELTS Batch of 3          ₹6,000
+  'BL-106': 'https://payments.cashfree.com/forms/axelis-pte-1on1-crash', // PTE 1-on-1 Crash          ₹5,300
+  'BL-104': 'https://payments.cashfree.com/forms/axelis-pte-couple-batch', // PTE Couple Batch          ₹4,600
+  'BL-105': 'https://payments.cashfree.com/forms/axelis-pte-batch-of-3', // PTE Batch of 3            ₹5,300
+  'BL-110': 'https://payments.cashfree.com/forms/axelis-toefl-1on1-session', // TOEFL 1-on-1              ₹625 per session
+  'BL-201': 'https://payments.cashfree.com/forms/axelis-sat-1on1', // SAT 1-on-1                ₹760 per session
+  'BL-202': 'https://payments.cashfree.com/forms/axelis-sat-batch-of-2', // SAT Batch of 2            ₹1,175 per session
+  'BL-203': 'https://payments.cashfree.com/forms/axelis-sat-batch-of-3', // SAT Batch of 3            ₹1,600 per session
+  'BL-109': 'https://payments.cashfree.com/forms/axelis-spoken-english-1on1', // Spoken English 1-on-1     ₹460 per session
+  'BL-108': 'https://payments.cashfree.com/forms/axelis-spoken-english-batch-of-2', // Spoken English Batch of 2 ₹620 per session
+  'BL-107': 'https://payments.cashfree.com/forms/axelis-spoken-english-batch-of-3', // Spoken English Batch of 3 ₹920 per session
+  'FR-1': 'https://payments.cashfree.com/forms/axelis-french-delf-1on1',   // French DELF 1-on-1        ₹900 per session
+  'FR-2': 'https://payments.cashfree.com/forms/axelis-french-delf-batch-of-2',   // French DELF Batch of 2    ₹1,300 per session
+  'FR-3': 'https://payments.cashfree.com/forms/axelis-french-delf-batch-of-3',   // French DELF Batch of 3    ₹1,725 per session
+  'DE-1': 'https://payments.cashfree.com/forms/axelis-german-goethe-1on1',   // German Goethe 1-on-1      ₹900 per session
+  'DE-2': 'https://payments.cashfree.com/forms/axelis-german-goethe-batch-of-2',   // German Goethe Batch of 2  ₹1,300 per session
+  'DE-3': 'https://payments.cashfree.com/forms/axelis-german-goethe-batch-of-3',   // German Goethe Batch of 3  ₹1,725 per session
 };
 
 /**

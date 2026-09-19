@@ -1,5 +1,7 @@
 const PAGE_URL = 'https://overseeducation.com/test-prep';
-const RAZORPAY_URL = 'https://rzp.io/rzp/c5K4pKY';
+// Structured-data Offer url. Points at the pack list, because there are 19
+// packs each with its own Cashfree form, and no single link represents them.
+const OFFER_URL = 'https://www.overseeducation.com/test-prep#tracks';
 const OG_IMAGE = 'https://overseeducation.com/og-image.jpg';
 
 export const metadata = {
@@ -128,7 +130,7 @@ const buildCourse = ({ name, alt, abstract, price, priceUnit = 'per student per 
   },
   offers: {
     '@type': 'Offer',
-    url: RAZORPAY_URL,
+    url: OFFER_URL,
     availability: 'https://schema.org/InStock',
     priceCurrency: 'INR',
     price,
@@ -225,7 +227,7 @@ const service = {
       '@type': 'Offer',
       position: i + 1,
       itemOffered: { '@type': 'Course', name: c.name },
-      url: RAZORPAY_URL,
+      url: OFFER_URL,
       priceCurrency: 'INR',
       availability: 'https://schema.org/InStock',
     })),

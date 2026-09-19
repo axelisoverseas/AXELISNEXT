@@ -6,7 +6,6 @@ import { financing } from '../data/certificationPrograms';
 // rights to the partner brand assets. Only gateways that are actually live
 // appear here — a partner is listed when the integration is real, not before.
 const GATEWAYS = [
-  { name: 'Razorpay', note: 'Live' },
   { name: 'Cashfree', note: 'Live' },
 ];
 

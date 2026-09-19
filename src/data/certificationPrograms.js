@@ -707,14 +707,14 @@ export const catalogueStats = {
 // ---------------------------------------------------------------------------
 // Financing copy.
 //
-// What is live today: card EMI through Razorpay and Cashfree, where the
+// What is live today: card EMI through Cashfree, where the
 // issuing bank sets the rate. No-cost EMI is a Bajaj Finserv product and
 // Bajaj is not onboarded, so no no-cost claim appears anywhere on the site
 // until BAJAJ_EMI_LIVE is true.
 // ---------------------------------------------------------------------------
 export const financing = {
   liveCopy:
-    'Card EMI on 6, 9, 12, 18 and 24-month tenures through Razorpay and Cashfree, where your card issuer supports it.',
+    'Card EMI on 6, 9, 12, 18 and 24-month tenures through Cashfree, where your card issuer supports it.',
   // Rendered only once Bajaj is genuinely live.
   bajajLiveCopy:
     'No-cost EMI on the Bajaj Finserv Insta EMI Card, on 6, 9, 12, 18 and 24-month tenures.',
@@ -724,8 +724,8 @@ export const financing = {
   /** Live gateways only. Bajaj joins this list when it is real. */
   get partners() {
     return BAJAJ_EMI_LIVE
-      ? ['Razorpay', 'Cashfree', 'Bajaj Finserv Insta EMI Card']
-      : ['Razorpay', 'Cashfree'];
+      ? ['Cashfree', 'Bajaj Finserv Insta EMI Card']
+      : ['Cashfree'];
   },
   /** Table framing changes entirely depending on whether no-cost is real. */
   get scheduleHeading() {

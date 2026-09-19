@@ -454,7 +454,7 @@ function ProductsContent() {
               The receipts &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">real students, real declarations, real visas.</span>
             </h2>
             <p className="text-slate-300/85 text-lg max-w-3xl mx-auto leading-relaxed">
-              Every plan flows through Razorpay. Every ZTF student signs a Zero Tuition Fee declaration before we process anything. Every visa we claim is a real stamp in a real passport. Personal info is blacked out below; the rest is exactly what we have on file.
+              Every plan flows through a PCI-DSS compliant gateway. Every ZTF student signs a Zero Tuition Fee declaration before we process anything. Every visa we claim is a real stamp in a real passport. Personal info is blacked out below; the rest is exactly what we have on file.
             </p>
           </div>
 

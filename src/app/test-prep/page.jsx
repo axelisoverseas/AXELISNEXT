@@ -7,8 +7,6 @@ import { ArrowRight, ChevronDown } from 'lucide-react';
 import PayRail from '../../components/PayRail';
 import { cashfreeTestPrepForms, GST_NOTE } from '../../data/cashfreeLinks';
 
-const RAZORPAY_URL = 'https://rzp.io/rzp/c5K4pKY';
-
 // Top-of-page exam recognition strip. White rounded tiles, real brand assets.
 const examLogos = [
   { code: 'IELTS', src: '/logos/exams/ielts.svg', alt: 'IELTS', sub: 'Academic & General Training' },
@@ -29,9 +27,9 @@ const tracks = [
     headline: 'Academic + General Training',
     note: 'Score-targeted, full mock cycle, line-by-line writing and speaking review.',
     packs: [
-      { code: 'BL-103', label: '1-on-1 Crash', sessions: '12 sessions', price: '₹6,000', per: 'per student', highlight: true, razorpayUrl: 'https://rzp.io/rzp/c5K4pKY' },
-      { code: 'BL-101', label: 'Couple Batch', sessions: '15 sessions', price: '₹5,300', per: 'per student', razorpayUrl: 'https://rzp.io/rzp/VsE7bw5' },
-      { code: 'BL-102', label: 'Batch of 3', sessions: '20 sessions', price: '₹6,000', per: 'per student', razorpayUrl: 'https://rzp.io/rzp/igwSnc1w' },
+      { code: 'BL-103', label: '1-on-1 Crash', sessions: '12 sessions', price: '₹6,000', per: 'per student', highlight: true },
+      { code: 'BL-101', label: 'Couple Batch', sessions: '15 sessions', price: '₹5,300', per: 'per student' },
+      { code: 'BL-102', label: 'Batch of 3', sessions: '20 sessions', price: '₹6,000', per: 'per student' },
     ],
   },
   {
@@ -41,9 +39,9 @@ const tracks = [
     headline: 'Includes Alpha PTE subscription (worth ₹1,299)',
     note: 'Speaking + writing fluency drills, integrated-skills strategy, full-length mocks.',
     packs: [
-      { code: 'BL-106', label: '1-on-1 Crash', sessions: '9 sessions', price: '₹5,300', per: 'per student', highlight: true, razorpayUrl: 'https://rzp.io/rzp/OnS615Im' },
-      { code: 'BL-104', label: 'Couple Batch', sessions: '15 sessions', price: '₹4,600', per: 'per student', razorpayUrl: 'https://rzp.io/rzp/8StNsmXo' },
-      { code: 'BL-105', label: 'Batch of 3', sessions: '15 sessions', price: '₹5,300', per: 'per student', razorpayUrl: 'https://rzp.io/rzp/lbjyo9re' },
+      { code: 'BL-106', label: '1-on-1 Crash', sessions: '9 sessions', price: '₹5,300', per: 'per student', highlight: true },
+      { code: 'BL-104', label: 'Couple Batch', sessions: '15 sessions', price: '₹4,600', per: 'per student' },
+      { code: 'BL-105', label: 'Batch of 3', sessions: '15 sessions', price: '₹5,300', per: 'per student' },
     ],
   },
   {
@@ -53,7 +51,7 @@ const tracks = [
     headline: 'Per-session pricing, flexible length',
     note: 'Same per-session rate covers TOEFL iBT, Duolingo English Test, CELPIP and other language certs. Practice portal cost is separate. Pick a session count after the diagnostic call.',
     packs: [
-      { code: 'BL-110', label: '1-on-1 Sessions', sessions: 'Per session', price: '₹625', per: 'per session', highlight: true, footnote: '+ practice portal extra', razorpayUrl: 'https://rzp.io/rzp/IdUkpgfn' },
+      { code: 'BL-110', label: '1-on-1 Sessions', sessions: 'Per session', price: '₹625', per: 'per session', highlight: true, footnote: '+ practice portal extra' },
     ],
   },
   {
@@ -63,9 +61,9 @@ const tracks = [
     headline: 'College Board · Digital SAT',
     note: 'Reading & Writing modules and the adaptive Math sections, full Bluebook mock cycle.',
     packs: [
-      { code: 'BL-201', label: '1-on-1', sessions: 'Min 16 sessions', price: '₹760', per: 'per session', total: 'from ₹12,160', highlight: true, razorpayUrl: 'https://rzp.io/rzp/KlhRqQHE' },
-      { code: 'BL-202', label: 'Batch of 2', sessions: 'Min 20 sessions', price: '₹1,175', per: 'per session', total: 'from ₹23,500', razorpayUrl: 'https://rzp.io/rzp/sYj1gru' },
-      { code: 'BL-203', label: 'Batch of 3', sessions: 'Min 30 sessions', price: '₹1,600', per: 'per session', total: 'from ₹48,000', razorpayUrl: 'https://rzp.io/rzp/nMt9pWxg' },
+      { code: 'BL-201', label: '1-on-1', sessions: 'Min 16 sessions', price: '₹760', per: 'per session', total: 'from ₹12,160', highlight: true },
+      { code: 'BL-202', label: 'Batch of 2', sessions: 'Min 20 sessions', price: '₹1,175', per: 'per session', total: 'from ₹23,500' },
+      { code: 'BL-203', label: 'Batch of 3', sessions: 'Min 30 sessions', price: '₹1,600', per: 'per session', total: 'from ₹48,000' },
     ],
   },
   {
@@ -75,9 +73,9 @@ const tracks = [
     headline: 'Fluency, confidence, interview-ready',
     note: 'For students prepping for visa interviews, university interviews, or workplace English.',
     packs: [
-      { code: 'BL-109', label: '1-on-1', sessions: 'Min 3 sessions', price: '₹460', per: 'per session', total: 'from ₹1,380', highlight: true, razorpayUrl: 'https://rzp.io/rzp/OIySj9Gs' },
-      { code: 'BL-108', label: 'Batch of 2', sessions: 'Min 5 sessions', price: '₹620', per: 'per session', total: 'from ₹3,100', razorpayUrl: 'https://rzp.io/rzp/RCFl8GH1' },
-      { code: 'BL-107', label: 'Batch of 3', sessions: 'Min 10 sessions', price: '₹920', per: 'per session', total: 'from ₹9,200', razorpayUrl: 'https://rzp.io/rzp/C93UP6rr' },
+      { code: 'BL-109', label: '1-on-1', sessions: 'Min 3 sessions', price: '₹460', per: 'per session', total: 'from ₹1,380', highlight: true },
+      { code: 'BL-108', label: 'Batch of 2', sessions: 'Min 5 sessions', price: '₹620', per: 'per session', total: 'from ₹3,100' },
+      { code: 'BL-107', label: 'Batch of 3', sessions: 'Min 10 sessions', price: '₹920', per: 'per session', total: 'from ₹9,200' },
     ],
   },
   {
@@ -95,9 +93,9 @@ const tracks = [
     headline: 'A1 and A2 levels — France Éducation International',
     note: 'Built for French university admissions and Schengen visa language thresholds. Same tutor for grammar, oral and the official DELF format.',
     packs: [
-      { code: 'FR-1', label: '1-on-1', sessions: 'Per session', price: '₹900', per: 'per session', highlight: true, razorpayUrl: 'https://rzp.io/rzp/rA7oMF8' },
-      { code: 'FR-2', label: 'Batch of 2', sessions: 'Per session', price: '₹1,300', per: 'per session', razorpayUrl: 'https://rzp.io/rzp/LyWT0x0N' },
-      { code: 'FR-3', label: 'Batch of 3', sessions: 'Per session', price: '₹1,725', per: 'per session', razorpayUrl: 'https://rzp.io/rzp/OHMe0KQS' },
+      { code: 'FR-1', label: '1-on-1', sessions: 'Per session', price: '₹900', per: 'per session', highlight: true },
+      { code: 'FR-2', label: 'Batch of 2', sessions: 'Per session', price: '₹1,300', per: 'per session' },
+      { code: 'FR-3', label: 'Batch of 3', sessions: 'Per session', price: '₹1,725', per: 'per session' },
     ],
   },
   {
@@ -113,9 +111,9 @@ const tracks = [
     headline: 'A1 and A2 levels — Goethe-Zertifikat format',
     note: 'Required for German student-visa applicants and Ausbildung tracks. Native-speaker-style fluency drills aligned to the Goethe exam pattern.',
     packs: [
-      { code: 'DE-1', label: '1-on-1', sessions: 'Per session', price: '₹900', per: 'per session', highlight: true, razorpayUrl: 'https://rzp.io/rzp/GWQpBiR' },
-      { code: 'DE-2', label: 'Batch of 2', sessions: 'Per session', price: '₹1,300', per: 'per session', razorpayUrl: 'https://rzp.io/rzp/8YGN6cFA' },
-      { code: 'DE-3', label: 'Batch of 3', sessions: 'Per session', price: '₹1,725', per: 'per session', razorpayUrl: 'https://rzp.io/rzp/8x0EDfj' },
+      { code: 'DE-1', label: '1-on-1', sessions: 'Per session', price: '₹900', per: 'per session', highlight: true },
+      { code: 'DE-2', label: 'Batch of 2', sessions: 'Per session', price: '₹1,300', per: 'per session' },
+      { code: 'DE-3', label: 'Batch of 3', sessions: 'Per session', price: '₹1,725', per: 'per session' },
     ],
   },
 ];
@@ -302,7 +300,7 @@ export default function TestPrepPage() {
               Plans &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">pricing</span>
             </h2>
             <p className="text-slate-300/85 text-lg">
-              Pick a track, pick a pack. Every Enrol button is a real Razorpay payment link.
+              Pick a track, pick a pack. Every Enrol button opens a secure Cashfree payment page.
             </p>
           </div>
 
@@ -372,7 +370,6 @@ export default function TestPrepPage() {
                       )}
 
                       <PayRail
-                        razorpayUrl={p.razorpayUrl || RAZORPAY_URL}
                         cashfreeUrl={cashfreeTestPrepForms[p.code]}
                         highlight={p.highlight}
                         label="Enrol"
@@ -386,9 +383,9 @@ export default function TestPrepPage() {
 
           <p className="text-center text-xs text-slate-400 mt-8 max-w-3xl mx-auto">
             All prices in INR and inclusive of tutor fee. 18% GST is added at checkout and
-            itemised on your receipt. Payment opens on{' '}
-            <span className="text-slate-200">rzp.io</span>{' '}
-            and is secured by Razorpay. Tax invoice issued the same day.
+            itemised on your receipt. Payment opens on Cashfree's secure hosted page, which shows
+            the full terms and takes your agreement before anything is charged. Tax invoice issued
+            the same day.
           </p>
         </div>
       </section>
@@ -489,12 +486,10 @@ export default function TestPrepPage() {
               Book a free demo
             </Link>
             <a
-              href={RAZORPAY_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#tracks"
               className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
-              Enrol now
+              See packs and enrol
               <ArrowRight className="ml-2" size={20} />
             </a>
           </div>
