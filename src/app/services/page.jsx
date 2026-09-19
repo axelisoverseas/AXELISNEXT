@@ -5,6 +5,7 @@ import { serviceGroups, servicesPromise } from '../../data/studentServices';
 import { refundPolicy } from '../../data/certificationPrograms';
 import TrustBand from '../../components/TrustBand';
 import ServiceCheckout from '../../components/ServiceCheckout';
+import { GST_NOTE } from '../../data/cashfreeLinks';
 
 export const metadata = {
   title: 'Student Services | Apostille, Translation, Visa Filing & Language Training',
@@ -69,6 +70,13 @@ export default function ServicesPage() {
                       {s.price}
                       {s.per && (
                         <span className="ml-1.5 text-xs font-semibold text-slate-400">{s.per}</span>
+                      )}
+                      {/* Shown wherever a net price is, so nobody meets the
+                          tax for the first time on the payment page. */}
+                      {(s.payKey || s.payHref) && (
+                        <span className="ml-1.5 text-xs font-semibold text-slate-500">
+                          {GST_NOTE}
+                        </span>
                       )}
                     </p>
                   </div>

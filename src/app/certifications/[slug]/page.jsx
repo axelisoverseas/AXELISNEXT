@@ -14,6 +14,7 @@ import PaymentPartnersStrip from '../../../components/PaymentPartnersStrip';
 import FinancingBlock from '../../../components/FinancingBlock';
 import TrustBand from '../../../components/TrustBand';
 import CancellationRefundBlock from '../../../components/CancellationRefundBlock';
+import { GST_NOTE } from '../../../data/cashfreeLinks';
 
 export function generateStaticParams() {
   // Unlisted programmes are built too. Withholding them from the listings is
@@ -239,6 +240,7 @@ export default async function ProgramPage({ params }) {
                     {withdrawn ? 'Fee when last offered' : 'Programme fee'}
                   </div>
                   <div className="text-4xl font-extrabold text-white">{formatINR(program.price)}</div>
+                  <div className="text-xs text-slate-500 mt-0.5">{GST_NOTE}</div>
                 </div>
 
                 <QuickFact Icon={Clock} label="Duration" value={program.duration} />

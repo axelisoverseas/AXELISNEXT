@@ -13,6 +13,7 @@ import {
 import CertificationEnquiryForm from '../../components/CertificationEnquiryForm';
 import PaymentPartnersStrip from '../../components/PaymentPartnersStrip';
 import TrustBand from '../../components/TrustBand';
+import { GST_NOTE } from '../../data/cashfreeLinks';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
@@ -61,6 +62,7 @@ function ConciergeRow({ program }) {
         <div className="flex flex-wrap items-end gap-x-8 gap-y-3">
           <div>
             <div className="text-3xl font-bold text-white">{formatINR(program.price)}</div>
+            <div className="text-xs text-slate-500">{GST_NOTE}</div>
             {emi && <div className="text-sm text-slate-400">or {formatINR(emi)} a month</div>}
           </div>
           <div className="text-sm text-slate-400">
@@ -98,6 +100,7 @@ function AdvancedCard({ program }) {
         <div className="flex items-end justify-between gap-3">
           <div>
             <div className="text-xl font-bold text-white">{formatINR(program.price)}</div>
+            <div className="text-[11px] text-slate-500">{GST_NOTE}</div>
             {emi && <div className="text-xs text-slate-400">or {formatINR(emi)} a month</div>}
           </div>
           <span className="text-sm text-slate-400">{program.duration}</span>

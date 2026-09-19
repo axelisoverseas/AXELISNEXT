@@ -133,7 +133,7 @@ export const serviceGroups = [
 
 /** Stated once, prominently, rather than buried per service. */
 export const servicesPromise = [
-  'Every price here is what you pay Axelis. Nothing else is added later.',
+  'Every price here is the Axelis fee, shown before GST. 18% GST is added at checkout and itemised on your receipt. Nothing else is added.',
   'Where a government, university or exam body charges you separately, we say so on the service itself.',
   'Axelis does not take a margin on third-party fees. You pay them directly wherever we can arrange it that way.',
   'If a service will not help your case, we will tell you before you buy it.',

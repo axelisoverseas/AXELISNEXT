@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { ArrowRight, Loader2, AlertCircle } from 'lucide-react';
-import { cashfreeLinks } from '../data/cashfreeLinks';
+import { cashfreeLinks, withGst, GST_RATE } from '../data/cashfreeLinks';
 import { formatINR, refundPolicy } from '../data/certificationPrograms';
 
 // Opens Cashfree's hosted checkout for one catalogue product.
@@ -67,7 +67,7 @@ export default function CheckoutButton({ product, label, className = '' }) {
         rel="noopener noreferrer"
         className={className || CTA_CLASS}
       >
-        {label || `Pay ${formatINR(item.amount)}`}
+        {label || `Pay ${formatINR(withGst(item.amount).gross)}`}
         <ArrowRight size={18} aria-hidden="true" />
       </a>
     );
@@ -117,7 +117,7 @@ export default function CheckoutButton({ product, label, className = '' }) {
         onClick={() => setOpen(true)}
         className={className || CTA_CLASS}
       >
-        {label || `Pay ${formatINR(item.amount)}`}
+        {label || `Pay ${formatINR(withGst(item.amount).gross)}`}
         <ArrowRight size={18} aria-hidden="true" />
       </button>
     );
@@ -126,7 +126,12 @@ export default function CheckoutButton({ product, label, className = '' }) {
   return (
     <form onSubmit={onSubmit} className="rounded-2xl border-2 border-white/10 bg-[#141210] p-5 max-w-md">
       <p className="text-white font-bold mb-1">{item.label}</p>
-      <p className="text-2xl font-extrabold text-white mb-3 tabular-nums">{formatINR(item.amount)}</p>
+      <p className="text-2xl font-extrabold text-white mb-1 tabular-nums">
+        {formatINR(withGst(item.amount).gross)}
+      </p>
+      <p className="text-xs text-slate-400 mb-3">
+        {formatINR(item.amount)} + {formatINR(withGst(item.amount).gst)} GST at {GST_RATE}%
+      </p>
 
       {/* Shown before payment, not after. A fee a payer only learns about
           once they have paid is the thing that turns a refund into a claim. */}

@@ -5,7 +5,7 @@ import {
   emiSchedule, formatINR, monthlyEmi, emiTenure,
   BAJAJ_EMI_LIVE, financing,
 } from '../data/certificationPrograms';
-import { cashfreeLinks } from '../data/cashfreeLinks';
+import { cashfreeLinks, withGst, GST_RATE } from '../data/cashfreeLinks';
 import CheckoutButton from './CheckoutButton';
 
 /**
@@ -38,7 +38,9 @@ export default function FinancingBlock({ program }) {
           Programme fee and financing
         </h2>
         <p className="text-slate-400 text-sm mb-6">
-          The fee for this programme is {formatINR(program.price)}, inclusive of taxes.
+          The fee for this programme is {formatINR(program.price)} plus {GST_RATE}% GST,
+          which comes to {formatINR(withGst(program.price).gross)} payable. GST is itemised
+          separately on your receipt.
         </p>
 
         <div className="bg-[#141210] border-2 border-white/12 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
@@ -46,8 +48,12 @@ export default function FinancingBlock({ program }) {
             {/* Total */}
             <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-white/10">
               <div className="text-sm font-medium text-slate-400 mb-2">Total programme fee</div>
-              <div className="text-4xl font-bold text-white mb-1">{formatINR(program.price)}</div>
-              <div className="text-sm text-slate-500">Inclusive of taxes</div>
+              <div className="text-4xl font-bold text-white mb-1">
+                {formatINR(withGst(program.price).gross)}
+              </div>
+              <div className="text-sm text-slate-500">
+                {formatINR(program.price)} + {formatINR(withGst(program.price).gst)} GST
+              </div>
             </div>
 
             {/* EMI — equal visual weight to the total */}
@@ -117,7 +123,7 @@ export default function FinancingBlock({ program }) {
               {cashfreeLinks[program.slug] && (
                 <CheckoutButton
                   product={program.slug}
-                  label={`Pay ${formatINR(program.price)}`}
+                  label={`Pay ${formatINR(withGst(program.price).gross)}`}
                   className="inline-flex justify-center items-center gap-2 px-6 py-3 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold text-sm transition-[filter]"
                 />
               )}

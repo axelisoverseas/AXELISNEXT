@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server';
-import { cashfreeLinks } from '../../../../data/cashfreeLinks';
+import { cashfreeLinks, withGst } from '../../../../data/cashfreeLinks';
 
 // Creates a Cashfree order and hands the browser a payment_session_id.
 //
@@ -50,8 +50,10 @@ export async function POST(request) {
     );
   }
 
-  // The amount is taken from the catalogue, never from the request body.
-  const amount = item.amount;
+  // The amount is taken from the catalogue, never from the request body, and
+  // GST is added here rather than trusted from the client. The buyer is shown
+  // this same gross figure on the page before they press pay.
+  const amount = withGst(item.amount).gross;
 
   const body = {
     order_amount: amount,

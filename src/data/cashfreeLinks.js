@@ -102,27 +102,31 @@ export function assertAmountsMatchCatalogue(programs) {
 // ---------------------------------------------------------------------------
 
 // ---------------------------------------------------------------------------
-// GST ON HOSTED FORMS
+// GST
 // ---------------------------------------------------------------------------
 //
-// Ruling: Test Prep charges 18% GST on top of the listed price. That matches
-// what /test-prep already tells the buyer ("GST applicable as per Indian tax
-// law"), so a form that adds 18% is consistent with the page.
+// 18% is charged on top of every listed price, on every surface. The page copy
+// was changed to say so before any form was minted, because the page is the
+// offer: a form that adds tax the page did not mention is a price the buyer
+// never agreed to.
 //
-// It is NOT applied to the other surfaces, because their pages say the
-// opposite and the page is the offer:
+// In particular the /services promise block used to read "Every price here is
+// what you pay Axelis. Nothing else is added later." That sentence could not
+// survive this ruling and has been rewritten rather than quietly dropped.
 //
-//   /services      states in its promise block, "Every price here is what you
-//                  pay Axelis. Nothing else is added later." Adding 18% at
-//                  checkout would contradict a written promise on the same
-//                  screen.
-//   /certifications  quotes Rs 2,00,000 to Rs 3,00,000 with no mention of tax,
-//                  so the figure reads as final. The three live forms collect
-//                  exactly that.
-//
-// To charge GST on those too, the page copy has to change first. Change the
-// copy, then the forms, in that order.
-export const GST_RATE_TEST_PREP = 18;
+// Every hosted Cashfree form carries this as its GST Rate, so tax is itemised
+// on the receipt instead of being buried in the total.
+// ---------------------------------------------------------------------------
+export const GST_RATE = 18;
+
+/** Net, tax and gross for a listed price. Rounded to the rupee. */
+export function withGst(amount, rate = GST_RATE) {
+  const gst = Math.round((amount * rate) / 100);
+  return { net: amount, gst, gross: amount + gst, rate };
+}
+
+/** The line that must appear anywhere a net price is shown. */
+export const GST_NOTE = `+ ${GST_RATE}% GST`;
 
 /** Set false once every item below has a Cashfree form. */
 export const SHOW_RAZORPAY = true;

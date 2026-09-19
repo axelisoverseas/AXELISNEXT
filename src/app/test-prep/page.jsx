@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { ArrowRight, ChevronDown } from 'lucide-react';
 import PayRail from '../../components/PayRail';
-import { cashfreeTestPrepForms } from '../../data/cashfreeLinks';
+import { cashfreeTestPrepForms, GST_NOTE } from '../../data/cashfreeLinks';
 
 const RAZORPAY_URL = 'https://rzp.io/rzp/c5K4pKY';
 
@@ -359,9 +359,10 @@ export default function TestPrepPage() {
                       <h4 className="text-lg font-bold text-white mb-1">{p.label}</h4>
                       <p className="text-stone-200/75 text-xs mb-5">{p.sessions}</p>
 
-                      <div className="mb-1 flex items-baseline gap-2">
+                      <div className="mb-1 flex items-baseline gap-2 flex-wrap">
                         <span className="text-3xl md:text-4xl font-extrabold text-white">{p.price}</span>
                         <span className="text-xs text-slate-400">{p.per}</span>
+                        <span className="text-xs text-slate-500">{GST_NOTE}</span>
                       </div>
                       {p.total && (
                         <p className="text-xs text-[var(--dawn-glow)] font-semibold mb-4">{p.total}</p>
@@ -384,7 +385,8 @@ export default function TestPrepPage() {
           </div>
 
           <p className="text-center text-xs text-slate-400 mt-8 max-w-3xl mx-auto">
-            All prices in INR, inclusive of tutor fee. GST applicable as per Indian tax law. Payment opens on{' '}
+            All prices in INR and inclusive of tutor fee. 18% GST is added at checkout and
+            itemised on your receipt. Payment opens on{' '}
             <span className="text-slate-200">rzp.io</span>{' '}
             and is secured by Razorpay. Tax invoice issued the same day.
           </p>

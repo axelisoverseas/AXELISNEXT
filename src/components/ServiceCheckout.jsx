@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { ArrowRight, Minus, Plus } from 'lucide-react';
-import { cashfreeLinks } from '../data/cashfreeLinks';
+import { cashfreeLinks, withGst, GST_RATE } from '../data/cashfreeLinks';
 
 // The pay control on /services.
 //
@@ -50,13 +50,15 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
 
   // ---- Per document -------------------------------------------------------
   if (item.perUnit) {
-    const total = item.amount * units;
-    const subject = `${name}: ${units} ${item.unit}${units > 1 ? 's' : ''} — ${INR(total)}`;
+    const { net, gst, gross } = withGst(item.amount * units);
+    const subject = `${name}: ${units} ${item.unit}${units > 1 ? 's' : ''} — ${INR(gross)}`;
     const body =
       `I would like to proceed with ${name}.\n\n` +
       `Number of ${item.unit}s: ${units}\n` +
       `Rate: ${INR(item.amount)} per ${item.unit}\n` +
-      `Total: ${INR(total)}\n\n` +
+      `Subtotal: ${INR(net)}\n` +
+      `GST at ${GST_RATE}%: ${INR(gst)}\n` +
+      `Total payable: ${INR(gross)}\n\n` +
       `Please send me a payment link for this amount.\n\nName:\nPhone:\n`;
 
     return (
@@ -98,7 +100,10 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
 
           <p className="text-sm text-slate-300">
             Total{' '}
-            <span className="text-lg font-bold tabular-nums text-white">{INR(total)}</span>
+            <span className="text-lg font-bold tabular-nums text-white">{INR(gross)}</span>{' '}
+            <span className="text-xs text-slate-500">
+              ({INR(net)} + {INR(gst)} GST)
+            </span>
           </p>
         </div>
 
@@ -122,10 +127,11 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
     return (
       <div className="mt-5 pt-5 border-t border-white/10">
         <a href={item.url} target="_blank" rel="noopener noreferrer" className={CTA}>
-          Pay {INR(item.amount)} <ArrowRight size={15} aria-hidden="true" />
+          Pay {INR(withGst(item.amount).gross)} <ArrowRight size={15} aria-hidden="true" />
         </a>
         <p className="mt-2.5 text-xs text-slate-500">
-          Processed by Cashfree. Axelis never sees your card details.
+          {INR(item.amount)} + {INR(withGst(item.amount).gst)} GST. Processed by Cashfree, which
+          shows the full terms and takes your agreement before any payment.
         </p>
       </div>
     );
