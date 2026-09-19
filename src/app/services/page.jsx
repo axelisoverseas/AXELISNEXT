@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle, Info } from 'lucide-react';
 import { serviceGroups, servicesPromise } from '../../data/studentServices';
 import { refundPolicy } from '../../data/certificationPrograms';
 import TrustBand from '../../components/TrustBand';
+import ServiceCheckout from '../../components/ServiceCheckout';
 
 export const metadata = {
   title: 'Student Services | Apostille, Translation, Visa Filing & Language Training',
@@ -78,6 +79,9 @@ export default function ServicesPage() {
                       <p className="text-xs text-slate-400 leading-relaxed">{s.thirdParty}</p>
                     </div>
                   )}
+                  <div className="mt-auto">
+                    <ServiceCheckout payKey={s.payKey} payHref={s.payHref} name={s.name} />
+                  </div>
                 </div>
               ))}
             </div>

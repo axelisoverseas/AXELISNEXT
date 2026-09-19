@@ -39,6 +39,20 @@ export const cashfreeLinks = {
   'phd-fellowship-concierge': { url: 'https://payments.cashfree.com/forms/axelis-phd-fellowship-concierge', amount: 250000, label: 'PhD & Fellowship Concierge' },
   'executive-mba-concierge': { url: 'https://payments.cashfree.com/forms/axelis-executive-mba-concierge', amount: 300000, label: 'Executive MBA Concierge' },
 
+  // --- Student services (/services) ----------------------------------------
+  // Apostille and translation are priced PER DOCUMENT. There is no honest
+  // fixed-amount hosted form for them: a candidate needing six documents and
+  // one needing one document owe different totals, and a single-price form
+  // would overcharge the first or undercharge us on the second. The page
+  // therefore computes the exact total from a document count and hands it to
+  // a counsellor, which is how these are already sold in practice.
+  'mea-apostille': {
+    amount: 1500, url: null, perUnit: true, unit: 'document', label: 'MEA apostille',
+  },
+  'sworn-translation': {
+    amount: 2500, url: null, perUnit: true, unit: 'document', label: 'Sworn translation',
+  },
+
   // --- Visa filing ---------------------------------------------------------
   // Sold on both sides. This is the same service and the same price as
   // `visa-filing-tourist-uk` in the B2B map on axelisoverseas.com; if one

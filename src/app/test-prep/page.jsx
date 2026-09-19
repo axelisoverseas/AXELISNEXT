@@ -306,7 +306,7 @@ export default function TestPrepPage() {
 
           <div className="space-y-12">
             {tracks.map((t) => (
-              <div key={t.id} className="glass-panel p-6 md:p-8">
+              <div key={t.id} id={t.id} className="glass-panel p-6 md:p-8 scroll-mt-24">
                 <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-5 mb-6 pb-6 border-b border-white/10">
                   <div className="flex items-center gap-5">
                     {t.logo ? (

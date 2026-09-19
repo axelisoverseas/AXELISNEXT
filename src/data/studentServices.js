@@ -18,6 +18,7 @@ export const serviceGroups = [
     services: [
       {
         name: 'MEA apostille',
+        payKey: 'mea-apostille',
         price: '₹1,500',
         per: 'per document',
         body:
@@ -26,6 +27,7 @@ export const serviceGroups = [
       },
       {
         name: 'Sworn translation',
+        payKey: 'sworn-translation',
         price: '₹2,500',
         per: 'per document',
         body:
@@ -57,6 +59,7 @@ export const serviceGroups = [
     services: [
       {
         name: 'Tourist visa filing, UK',
+        payKey: 'visa-filing-tourist-uk',
         price: '₹10,000',
         per: 'per application',
         body:
@@ -90,6 +93,7 @@ export const serviceGroups = [
     services: [
       {
         name: 'German A1 and A2',
+        payHref: '/test-prep#german-goethe',
         price: 'From ₹900',
         per: 'per session, 1-on-1',
         body:
@@ -99,6 +103,7 @@ export const serviceGroups = [
       },
       {
         name: 'French A1 and A2',
+        payHref: '/test-prep#french-delf',
         price: 'From ₹900',
         per: 'per session, 1-on-1',
         body: 'DELF format, for France and francophone Europe. Batch rates are lower per student.',
@@ -115,6 +120,7 @@ export const serviceGroups = [
       },
       {
         name: 'IELTS, PTE and TOEFL',
+        payHref: '/test-prep',
         price: 'From ₹4,600',
         per: 'per student',
         body:
