@@ -35,9 +35,9 @@ export const cashfreeLinks = {
   },
 
   // --- Certification programmes (/certifications) -------------------------
-  'global-career-launch': { amount: 200000, url: null, label: 'Global Career Launch' },
-  'phd-fellowship-concierge': { amount: 250000, url: null, label: 'PhD & Fellowship Concierge' },
-  'executive-mba-concierge': { amount: 300000, url: null, label: 'Executive MBA Concierge' },
+  'global-career-launch': { url: 'https://payments.cashfree.com/forms/axelis-global-career-launch', amount: 200000, label: 'Global Career Launch' },
+  'phd-fellowship-concierge': { url: 'https://payments.cashfree.com/forms/axelis-phd-fellowship-concierge', amount: 250000, label: 'PhD & Fellowship Concierge' },
+  'executive-mba-concierge': { url: 'https://payments.cashfree.com/forms/axelis-executive-mba-concierge', amount: 300000, label: 'Executive MBA Concierge' },
 
   // --- Visa filing ---------------------------------------------------------
   // Sold on both sides. This is the same service and the same price as

@@ -35,6 +35,11 @@ function loadSdk() {
   return sdkPromise;
 }
 
+// Shared styling, so the hosted-form link and the API-backed button are the
+// same control to a visitor. Only the mechanism behind them differs.
+const CTA_CLASS =
+  'inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]';
+
 export default function CheckoutButton({ product, label, className = '' }) {
   const item = cashfreeLinks[product];
   const [open, setOpen] = useState(false);
@@ -44,6 +49,29 @@ export default function CheckoutButton({ product, label, className = '' }) {
 
   // A product that isn't in the catalogue must not render a pay button at all.
   if (!item) return null;
+
+  // A minted Cashfree Payment Form is a hosted page that already collects the
+  // payer's name, phone and email and shows the amount as a fixed, read-only
+  // line. Re-collecting those fields here and then calling the order API would
+  // ask for the same three things twice, and would fail for want of gateway
+  // keys where the hosted form needs none. So when a form exists, we send the
+  // visitor to it and get out of the way.
+  //
+  // A product carrying a `disclosure` keeps the two-step flow: the disclosure
+  // has to be read on our side, because Cashfree's page cannot show it.
+  if (item.url && !item.disclosure) {
+    return (
+      <a
+        href={item.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={className || CTA_CLASS}
+      >
+        {label || `Pay ${formatINR(item.amount)}`}
+        <ArrowRight size={18} aria-hidden="true" />
+      </a>
+    );
+  }
 
   const set = (k) => (e) => setForm((f) => ({ ...f, [k]: e.target.value }));
 
@@ -87,10 +115,7 @@ export default function CheckoutButton({ product, label, className = '' }) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className={
-          className ||
-          'inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]'
-        }
+        className={className || CTA_CLASS}
       >
         {label || `Pay ${formatINR(item.amount)}`}
         <ArrowRight size={18} aria-hidden="true" />
