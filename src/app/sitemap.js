@@ -25,6 +25,7 @@ export default function sitemap() {
     { url: `${BASE_URL}/financing`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${BASE_URL}/accreditations`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/policies/cancellation-refund`, changeFrequency: 'monthly', priority: 0.5 },
+    { url: `${BASE_URL}/policies/payment-terms`, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/terms-conditions`, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/delivery-policy`, changeFrequency: 'monthly', priority: 0.5 },
     { url: `${BASE_URL}/privacy-policy`, changeFrequency: 'monthly', priority: 0.5 },

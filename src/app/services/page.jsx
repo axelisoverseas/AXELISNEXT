@@ -125,7 +125,12 @@ export default function ServicesPage() {
               </Link>
             </div>
             <p className="mt-6 text-xs text-slate-500 leading-relaxed">
-              Refunds on any service purchased on its own are governed by the{' '}
+              Every service above has its scope, exclusions, turnaround and refund treatment set
+              out in full in the{' '}
+              <Link href="/policies/payment-terms" className="text-slate-300 underline underline-offset-2">
+                Payment Terms
+              </Link>
+              , which is also what you agree to at checkout. Refunds are governed by the{' '}
               <Link href={refundPolicy.href} className="text-slate-300 underline underline-offset-2">
                 Cancellation &amp; Refund Policy
               </Link>
