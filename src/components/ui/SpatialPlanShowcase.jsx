@@ -65,8 +65,8 @@ const PLAN_CONFIG = {
           'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop',
         colors: {
           gradient: 'from-stone-900 to-stone-900',
-          glow: 'bg-stone-700',
-          bar: 'bg-stone-700',
+          glow: 'bg-[var(--color-tint)]',
+          bar: 'bg-[var(--color-tint)]',
           accent: 'text-[var(--color-navy)]',
         },
         stats: { status: 'Active Dossier', headline: '5,000+ Students Placed' },
@@ -161,8 +161,8 @@ const PLAN_CONFIG = {
           'https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop',
         colors: {
           gradient: 'from-stone-900 to-stone-900',
-          glow: 'bg-stone-700',
-          bar: 'bg-stone-700',
+          glow: 'bg-[var(--color-tint)]',
+          bar: 'bg-[var(--color-tint)]',
           accent: 'text-[var(--color-navy)]',
         },
         stats: { status: 'Relocation Kit', headline: 'Housing · Visa · Part-time' },
@@ -392,21 +392,21 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
 
   const flagPillClass =
     plan === 'ztf'
-      ? 'bg-stone-700/10 text-[var(--color-navy)] border-[var(--color-rule)] hover:bg-stone-700/15'
-      : 'bg-stone-700/10 text-[var(--color-navy)] border-[var(--color-rule)] hover:bg-stone-700/15';
+      ? 'bg-[var(--color-axelis)]/10 text-white border-[var(--color-rule)] hover:bg-[var(--color-navy)]/15'
+      : 'bg-[var(--color-axelis)]/10 text-white border-[var(--color-rule)] hover:bg-[var(--color-navy)]/15';
 
   const discountPillClass =
     plan === 'ztf'
-      ? 'bg-stone-700/15 text-[var(--color-navy)] border-[var(--color-rule)]'
+      ? 'bg-[var(--color-tint)]/15 text-[var(--color-navy)] border-[var(--color-rule)]'
       : 'bg-rose-500/15 text-rose-200 border-rose-400/30';
 
   const badgePillClass =
     plan === 'ztf'
       ? 'bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white'
-      : 'bg-stone-700/15 text-[var(--color-navy)] border border-[var(--color-rule)]';
+      : 'bg-[var(--color-tint)]/15 text-[var(--color-navy)] border border-[var(--color-rule)]';
 
   const featureDotClass =
-    plan === 'ztf' ? 'bg-[var(--color-tint)] text-[var(--color-navy)]' : 'bg-stone-700/20 text-[var(--color-navy)]';
+    plan === 'ztf' ? 'bg-[var(--color-tint)] text-[var(--color-navy)]' : 'bg-[var(--color-tint)]/20 text-[var(--color-navy)]';
 
   const shortCode = (name) =>
     name === 'United Kingdom' ? 'UK' : name === 'United States' ? 'USA' : name;
@@ -536,8 +536,8 @@ export default function SpatialPlanShowcase({ plan = 'zcf' }) {
 
   const eyebrowClass =
     plan === 'ztf'
-      ? 'bg-stone-700/10 text-[var(--color-navy)] border-stone-700/20'
-      : 'bg-stone-700/10 text-[var(--color-navy)] border-stone-700/20';
+      ? 'bg-[var(--color-tint)]/10 text-[var(--color-navy)] border-[var(--color-rule)]/20'
+      : 'bg-[var(--color-tint)]/10 text-[var(--color-navy)] border-[var(--color-rule)]/20';
 
   const options = facetKeys.map((k) => ({ id: k, label: config.facets[k].label }));
 

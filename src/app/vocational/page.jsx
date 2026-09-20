@@ -32,7 +32,7 @@ export default function VocationalPage() {
   return (
     <main className="min-h-screen text-[var(--color-navy)]">
       {/* HERO */}
-      <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-[var(--color-rule)]">
+      <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-white/15">
         <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none">
           <img
             src="https://images.unsplash.com/photo-1587330979470-3595ac045ab0?q=80&w=2400&auto=format&fit=crop"
@@ -49,10 +49,10 @@ export default function VocationalPage() {
           <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-axelis)] mb-4">
             Vocational Skill Programmes
           </p>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] tracking-tight text-balance mb-6 max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight text-balance mb-6 max-w-4xl">
             Work and train in Germany, without tuition.
           </h1>
-          <p className="text-lg md:text-xl text-[var(--color-navy)]/90 leading-relaxed max-w-3xl mb-8">
+          <p className="text-lg md:text-xl text-white/90 leading-relaxed max-w-3xl mb-8">
             Two routes into Germany that do not depend on paying university fees. Ausbildung puts
             you in a paid training contract with a German employer. Chancenkarte gets you into the
             country on points so you can find skilled work on the ground.
@@ -66,7 +66,7 @@ export default function VocationalPage() {
             </Link>
             <Link
               href="#costs"
-              className="inline-flex justify-center items-center gap-2 px-7 py-3.5 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
+              className="inline-flex justify-center items-center gap-2 px-7 py-3.5 glass-storm text-white font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
             >
               What it costs, in full
             </Link>

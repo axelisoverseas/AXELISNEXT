@@ -226,7 +226,7 @@ const InstagramSuccessStories = () => {
                 onClick={() => go(idx)}
                 aria-label={`Go to reel ${idx + 1}`}
                 className={`h-2 rounded-full transition-all ${
-                  idx === active ? 'w-8 bg-stone-900' : 'w-2 bg-slate-300 hover:bg-slate-400'
+                  idx === active ? 'w-8 bg-[var(--color-axelis)]' : 'w-2 bg-slate-300 hover:bg-slate-400'
                 }`}
               />
             ))}
@@ -235,8 +235,8 @@ const InstagramSuccessStories = () => {
 
         {/* CTA Banner */}
         <div className="mt-16 bg-[var(--color-tint)] rounded-3xl p-10 md:p-12 text-center text-[var(--color-navy)] relative overflow-hidden border border-slate-800">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-stone-900/15 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-72 h-72 bg-stone-700/15 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[var(--color-axelis)]/15 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+          <div className="absolute bottom-0 left-0 w-72 h-72 bg-[var(--color-axelis)]/15 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-bold mb-3 tracking-tight">
               Ready to be our next success story?

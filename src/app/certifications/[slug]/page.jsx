@@ -145,7 +145,7 @@ export default async function ProgramPage({ params }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 
       {/* ---------------------------------------------------------- HERO */}
-      <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-[var(--color-rule)]">
+      <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-white/15">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
             src={program.image}
@@ -164,7 +164,7 @@ export default async function ProgramPage({ params }) {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/certifications"
-            className="inline-flex items-center gap-2 text-sm text-[var(--color-dim)] hover:text-[var(--color-navy)] transition-colors mb-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] rounded"
+            className="inline-flex items-center gap-2 text-sm text-[var(--color-dim-dark)] hover:text-white transition-colors mb-8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] rounded"
           >
             <ArrowLeft aria-hidden="true" size={15} /> All certifications
           </Link>
@@ -174,13 +174,13 @@ export default async function ProgramPage({ params }) {
           {withdrawn && (
             <div className="flex items-start gap-3 mb-8 rounded-xl border border-[var(--color-axelis)]/35 bg-[var(--dawn-glow)]/10 px-5 py-4">
               <ShieldCheck size={18} aria-hidden="true" className="text-[var(--color-axelis)] shrink-0 mt-0.5" />
-              <p className="text-sm text-[var(--color-navy)] leading-relaxed">
+              <p className="text-sm text-white leading-relaxed">
                 <span className="font-bold text-[var(--color-axelis)]">
                   Withdrawn from the catalogue.
                 </span>{' '}
                 This programme is no longer open for new enrolment and the fee below is the
                 fee when it was last offered. Existing enrolments are unaffected.{' '}
-                <Link href="/certifications" className="font-semibold text-[var(--color-navy)] hover:underline">
+                <Link href="/certifications" className="font-semibold text-white hover:underline">
                   See our current programmes
                 </Link>
                 .
@@ -191,8 +191,8 @@ export default async function ProgramPage({ params }) {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
             {/* Left — headline + description */}
             <div className="lg:col-span-2">
-              <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-[var(--color-dim)] mb-5">
-                <span className="text-[var(--color-navy)] font-semibold">{tier?.name}</span>
+              <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-[var(--color-dim-dark)] mb-5">
+                <span className="text-white font-semibold">{tier?.name}</span>
                 <span aria-hidden="true">&middot;</span>
                 <span>{program.family}</span>
                 {program.flagship && (
@@ -203,15 +203,15 @@ export default async function ProgramPage({ params }) {
                 )}
               </p>
 
-              <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] tracking-tight mb-5 text-balance">
+              <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight mb-5 text-balance">
                 {program.title}
               </h1>
 
-              <p className="text-lg md:text-xl text-[var(--color-navy)]/90 leading-relaxed mb-6">
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed mb-6">
                 {program.summary}
               </p>
 
-              <p className="text-[var(--color-navy)]/80 leading-relaxed mb-8 max-w-2xl">
+              <p className="text-white/80 leading-relaxed mb-8 max-w-2xl">
                 {program.description}
               </p>
 
@@ -225,7 +225,7 @@ export default async function ProgramPage({ params }) {
                 </Link>
                 <Link
                   href="/bookings"
-                  className="inline-flex justify-center items-center px-7 py-3.5 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
+                  className="inline-flex justify-center items-center px-7 py-3.5 glass-storm text-white font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
                 >
                   Book a discovery call
                 </Link>
@@ -234,13 +234,13 @@ export default async function ProgramPage({ params }) {
 
             {/* Right rail — quick facts */}
             <aside className="lg:col-span-1 lg:sticky lg:top-24">
-              <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
-                <div className="pb-4 mb-2 border-b border-[var(--color-rule)]">
-                  <div className="text-xs text-[var(--color-dim)] mb-1">
+              <div className="bg-white border-2 border-white/15 rounded-2xl p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+                <div className="pb-4 mb-2 border-b border-white/15">
+                  <div className="text-xs text-[var(--color-dim-dark)] mb-1">
                     {withdrawn ? 'Fee when last offered' : 'Programme fee'}
                   </div>
-                  <div className="text-4xl font-extrabold text-[var(--color-navy)]">{formatINR(program.price)}</div>
-                  <div className="text-xs text-[var(--color-dim)] mt-0.5">{GST_NOTE}</div>
+                  <div className="text-4xl font-extrabold text-white">{formatINR(program.price)}</div>
+                  <div className="text-xs text-[var(--color-dim-dark)] mt-0.5">{GST_NOTE}</div>
                 </div>
 
                 <QuickFact Icon={Clock} label="Duration" value={program.duration} />
@@ -258,7 +258,7 @@ export default async function ProgramPage({ params }) {
 
                 <Link
                   href={withdrawn ? '/certifications' : '#enquire'}
-                  className="mt-5 inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 min-h-[44px] rounded-xl bg-[var(--color-tint)] hover:bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] font-bold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                  className="mt-5 inline-flex w-full items-center justify-center gap-2 px-5 py-3.5 min-h-[44px] rounded-xl bg-white/10 hover:bg-white/10 border border-white/15 text-white font-bold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                 >
                   {withdrawn ? 'Current programmes' : 'Enquire now'} <ArrowRight aria-hidden="true" size={15} />
                 </Link>

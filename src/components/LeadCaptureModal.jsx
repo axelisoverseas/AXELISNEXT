@@ -363,14 +363,14 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                 className={`flex items-center justify-center w-6 sm:w-8 h-6 sm:h-8 rounded-full text-xs font-bold transition-all duration-500 ${
                   step >= num
                     ? 'bg-gradient-to-r from-white to-stone-700 text-slate-900 shadow-lg shadow-white/25'
-                    : 'bg-slate-700 text-gray-400 border border-slate-600'
+                    : 'bg-[var(--color-tint)] text-gray-400 border border-slate-600'
                 }`}
               >
                 {step > num ? <CheckCircle size={14} className="text-slate-900" /> : num}
               </div>
             ))}
           </div>
-          <div className="w-full bg-slate-700 rounded-full h-1.5 shadow-inner border border-slate-600">
+          <div className="w-full bg-[var(--color-axelis)] rounded-full h-1.5 shadow-inner border border-slate-600">
             <div
               className="bg-gradient-to-r from-white to-stone-700 h-1.5 rounded-full transition-all duration-700 shadow-sm shadow-white/50"
               style={{ width: `${(step / 4) * 100}%` }}
@@ -401,7 +401,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     className={`p-2 sm:p-3 text-left rounded-lg sm:rounded-xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-sm ${
                       formData.country === country
                         ? 'border-white bg-gradient-to-r from-white/20 to-stone-700/20 text-[var(--color-navy)] shadow-lg shadow-white/25'
-                        : 'border-slate-600 bg-slate-700/50 text-gray-300 hover:border-[var(--color-rule)] hover:bg-[var(--color-tint)]'
+                        : 'border-slate-600 bg-[var(--color-tint)]/50 text-gray-300 hover:border-[var(--color-rule)] hover:bg-[var(--color-tint)]'
                     }`}
                   >
                     <span className="text-xs sm:text-sm font-semibold">
@@ -434,7 +434,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     className={`w-full p-3 text-left rounded-xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-sm ${
                       formData.service === service
                         ? 'border-white bg-gradient-to-r from-white/20 to-stone-700/20 text-[var(--color-navy)] shadow-lg shadow-white/25'
-                        : 'border-slate-600 bg-slate-700/50 text-gray-300 hover:border-[var(--color-rule)] hover:bg-[var(--color-tint)]'
+                        : 'border-slate-600 bg-[var(--color-tint)]/50 text-gray-300 hover:border-[var(--color-rule)] hover:bg-[var(--color-tint)]'
                     }`}
                   >
                     <span className="text-sm font-semibold">
@@ -463,7 +463,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     placeholder="Full Name"
                     value={formData.fullName}
                     onChange={(e) => handleInputChange('fullName', e.target.value)}
-                    className={`w-full p-3 sm:p-4 border-2 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-slate-700/50 text-[var(--color-navy)] placeholder-gray-400 backdrop-blur-sm transition-all duration-300 text-sm sm:text-base ${
+                    className={`w-full p-3 sm:p-4 border-2 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-[var(--color-axelis)]/50 text-white placeholder-gray-400 backdrop-blur-sm transition-all duration-300 text-sm sm:text-base ${
                       errors.fullName ? 'border-white bg-[var(--color-tint)]' : 'border-slate-600 hover:border-[var(--color-rule)]'
                     }`}
                     required
@@ -478,7 +478,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     placeholder="Email Address"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
-                    className={`w-full p-4 border-2 rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-slate-700/50 text-[var(--color-navy)] placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ${
+                    className={`w-full p-4 border-2 rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-[var(--color-axelis)]/50 text-white placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ${
                       errors.email ? 'border-white bg-[var(--color-tint)]' : 'border-slate-600 hover:border-[var(--color-rule)]'
                     }`}
                     required
@@ -493,7 +493,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className={`w-full p-4 border-2 rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-slate-700/50 text-[var(--color-navy)] placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ${
+                    className={`w-full p-4 border-2 rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-[var(--color-axelis)]/50 text-white placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ${
                       errors.phone ? 'border-white bg-[var(--color-tint)]' : 'border-slate-600 hover:border-[var(--color-rule)]'
                     }`}
                     required
@@ -506,7 +506,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
               <div className="flex gap-2 sm:gap-3 mt-4 sm:mt-6">
                 <button
                   onClick={handleBack}
-                  className="flex-1 px-4 sm:px-6 py-2 sm:py-3 border-2 border-slate-600 text-gray-300 bg-slate-700/50 rounded-lg sm:rounded-xl hover:bg-slate-600 hover:border-slate-500 transition-all duration-300 font-semibold backdrop-blur-sm text-sm sm:text-base"
+                  className="flex-1 px-4 sm:px-6 py-2 sm:py-3 border-2 border-slate-600 text-gray-300 bg-[var(--color-axelis)]/50 rounded-lg sm:rounded-xl hover:bg-slate-600 hover:border-slate-500 transition-all duration-300 font-semibold backdrop-blur-sm text-sm sm:text-base"
                 >
                   Back
                 </button>
@@ -539,7 +539,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-sm ${
                       formData.preferredTime === time
                         ? 'border-white bg-gradient-to-r from-white/20 to-stone-700/20 text-[var(--color-navy)] shadow-lg shadow-white/25'
-                        : 'border-slate-600 bg-slate-700/50 text-gray-300 hover:border-[var(--color-rule)] hover:bg-[var(--color-tint)]'
+                        : 'border-slate-600 bg-[var(--color-tint)]/50 text-gray-300 hover:border-[var(--color-rule)] hover:bg-[var(--color-tint)]'
                     }`}
                   >
                     <span className="text-sm font-semibold">
@@ -551,7 +551,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
               <div className="flex gap-3">
                 <button
                   onClick={handleBack}
-                  className="flex-1 px-6 py-3 border-2 border-slate-600 text-gray-300 bg-slate-700/50 rounded-xl hover:bg-slate-600 hover:border-slate-500 transition-all duration-300 font-semibold backdrop-blur-sm"
+                  className="flex-1 px-6 py-3 border-2 border-slate-600 text-gray-300 bg-[var(--color-axelis)]/50 rounded-xl hover:bg-slate-600 hover:border-slate-500 transition-all duration-300 font-semibold backdrop-blur-sm"
                 >
                   Back
                 </button>

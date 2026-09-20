@@ -13,7 +13,7 @@ const SocialMediaButtons = ({
       url: 'https://www.facebook.com/profile.php?id=61552129672233',
       icon: Facebook,
       label: 'Follow on Facebook',
-      color: 'bg-stone-900 hover:bg-stone-950',
+      color: 'bg-[var(--color-axelis)] hover:bg-[var(--color-navy)]',
       textColor: 'text-[var(--color-navy)]'
     },
     instagram: {
@@ -27,14 +27,14 @@ const SocialMediaButtons = ({
       url: 'https://www.linkedin.com/company/axelis-overseas/',
       icon: Linkedin,
       label: 'Follow on LinkedIn',
-      color: 'bg-stone-950 hover:bg-stone-900',
+      color: 'bg-stone-950 hover:bg-[var(--color-navy)]',
       textColor: 'text-[var(--color-navy)]'
     },
     youtube: {
       url: 'https://www.youtube.com/@axelisoverseas',
       icon: Youtube,
       label: 'Subscribe on YouTube',
-      color: 'bg-stone-900 hover:bg-stone-950',
+      color: 'bg-[var(--color-axelis)] hover:bg-[var(--color-navy)]',
       textColor: 'text-[var(--color-navy)]'
     }
   };

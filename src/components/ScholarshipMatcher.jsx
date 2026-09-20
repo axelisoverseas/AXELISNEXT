@@ -99,7 +99,7 @@ const ScholarshipMatcher = () => {
         <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 overflow-hidden max-w-4xl mx-auto">
             {/* Header */}
             <div className="bg-gradient-to-r from-stone-900 to-slate-900 text-[var(--color-navy)] p-8 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-stone-700/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-axelis)]/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
                 <div className="relative z-10 text-center">
                     <h3 className="text-3xl font-black mb-3 flex items-center justify-center">
                         <Award className="mr-3 text-[var(--color-navy)] w-8 h-8" />
@@ -144,7 +144,7 @@ const ScholarshipMatcher = () => {
                         <button
                             onClick={handleSearch}
                             disabled={isSearching}
-                            className="w-full h-[50px] bg-white hover:bg-stone-700 text-slate-900 font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed group"
+                            className="w-full h-[50px] bg-white hover:bg-[var(--color-navy)] text-[var(--color-axelis)] font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed group"
                         >
                             {isSearching ? (
                                 <span className="flex items-center">

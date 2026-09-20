@@ -25,7 +25,7 @@ export default function ScholarshipsPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/75 to-[var(--storm-deep)]"></div>
                 <div className="absolute inset-0 bg-[var(--storm-deep)]/45"></div>
-                <div className="absolute top-0 right-0 w-96 h-96 bg-stone-900/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-axelis)]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
                     <span className="inline-block px-4 py-1 bg-yellow-500/10 text-yellow-400 font-bold text-sm tracking-wide rounded-full mb-6 border border-yellow-500/20">
@@ -43,13 +43,13 @@ export default function ScholarshipsPage() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                        <Link href="#finder" className="relative overflow-hidden px-8 py-4 bg-stone-900 hover:bg-stone-700 text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-stone-700/30 flex items-center">
+                        <Link href="#finder" className="relative overflow-hidden px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-stone-700/30 flex items-center">
                             <span className="relative z-10 flex items-center">
                                 Check Your Eligibility <ArrowRight size={18} className="ml-2" />
                             </span>
                             <BorderBeam size={130} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />
                         </Link>
-                        <Link href="#finder" className="px-8 py-4 bg-slate-800 hover:bg-slate-700 text-white font-bold rounded-xl transition-all border border-slate-700 flex items-center">
+                        <Link href="#finder" className="px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all border border-[var(--color-axelis)] flex items-center">
                             Find Applicable Programs
                         </Link>
                     </div>
@@ -205,7 +205,7 @@ export default function ScholarshipsPage() {
                     <p className="text-lg text-[var(--color-dim)] mb-8 max-w-2xl mx-auto">
                         Don't let financial constraints stop your study abroad dream. Our Zero Consultation Fee Student Plan covers dedicated scholarship and financial aid assistance.
                     </p>
-                    <Link href="/products" className="inline-flex items-center px-8 py-4 bg-stone-900 hover:bg-stone-950 text-[var(--color-navy)] font-bold rounded-xl transition-all shadow-md">
+                    <Link href="/products" className="inline-flex items-center px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-md">
                         Explore Our Student Plans <ArrowRight size={20} className="ml-2" />
                     </Link>
                 </div>

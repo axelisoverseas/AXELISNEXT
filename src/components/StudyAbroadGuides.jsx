@@ -112,7 +112,7 @@ const StudyAbroadGuides = () => {
                   className="absolute inset-0 flex items-center justify-center group/btn"
                   aria-label={`Play ${guide.title}`}
                 >
-                  <div className="w-16 h-16 bg-[var(--color-tint)] backdrop-blur-md rounded-full flex items-center justify-center group-hover/btn:bg-stone-900 group-hover/btn:scale-110 transition-all duration-300 shadow-xl border border-[var(--color-rule)]">
+                  <div className="w-16 h-16 bg-[var(--color-tint)] backdrop-blur-md rounded-full flex items-center justify-center group-hover/btn:bg-[var(--color-axelis)] group-hover/btn:scale-110 transition-all duration-300 shadow-xl border border-[var(--color-rule)]">
                     <Play className="text-[var(--color-navy)] fill-current ml-1" size={24} />
                   </div>
                 </button>

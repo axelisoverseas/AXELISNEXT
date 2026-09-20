@@ -49,10 +49,10 @@ export default function ContactPage() {
     return (
         <div className="min-h-screen bg-storm-to-dawn">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 bg-slate-900 border-b border-slate-800 overflow-hidden">
+            <section className="relative pt-32 pb-24 bg-[var(--color-tint)] border-b border-[var(--color-rule)] overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-stone-900/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
-                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-stone-700/10 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--color-axelis)]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+                <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[var(--color-axelis)]/10 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] mb-6 tracking-tight">
@@ -66,15 +66,15 @@ export default function ContactPage() {
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-6">
-                        <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-slate-700 shadow-sm text-[var(--color-navy)]">
+                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-sm text-white">
                             <Phone size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">24/7 Support</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-slate-700 shadow-sm text-[var(--color-navy)]">
+                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-sm text-white">
                             <Globe size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">29+ Countries</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-slate-700 shadow-sm text-[var(--color-navy)]">
+                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-sm text-white">
                             <Award size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">Expert Counsellors</span>
                         </div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full flex items-center justify-center px-6 py-4 bg-stone-900 hover:bg-stone-950 disabled:bg-slate-300 disabled:text-[var(--color-dim)] text-[var(--color-navy)] font-bold rounded-xl transition-all shadow-md mt-4"
+                                    className="w-full flex items-center justify-center px-6 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] disabled:bg-slate-300 disabled:text-[var(--color-dim)] text-white font-bold rounded-xl transition-all shadow-md mt-4"
                                 >
                                     {isSubmitting ? 'Sending...' : (
                                         <><Send className="mr-2" size={18} /> Send Message</>
@@ -196,12 +196,12 @@ export default function ContactPage() {
 
                         {/* Information Section */}
                         <div className="space-y-8">
-                            <div className="bg-slate-900 rounded-3xl shadow-sm border border-slate-800 p-8 md:p-12 text-[var(--color-navy)]">
+                            <div className="bg-[var(--color-tint)] rounded-3xl shadow-sm border border-[var(--color-rule)] p-8 md:p-12 text-[var(--color-navy)]">
                                 <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl font-bold mb-8 tracking-tight">Get in Touch</TextEffectInView>
 
                                 <div className="space-y-8">
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><MapPin className="text-[var(--color-navy)]" size={24} /></div>
+                                        <div className="p-3 bg-[var(--color-axelis)]/50 rounded-xl shrink-0"><MapPin className="text-white" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Office Address</h3>
                                             <p className="text-[var(--color-dim)] leading-relaxed">{siteInfo.contact.address}</p>
@@ -209,7 +209,7 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><Phone className="text-[var(--color-navy)]" size={24} /></div>
+                                        <div className="p-3 bg-[var(--color-axelis)]/50 rounded-xl shrink-0"><Phone className="text-white" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Phone Numbers</h3>
                                             <div className="space-y-1">
@@ -223,7 +223,7 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><Mail className="text-[var(--color-navy)]" size={24} /></div>
+                                        <div className="p-3 bg-[var(--color-axelis)]/50 rounded-xl shrink-0"><Mail className="text-white" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Email Addresses</h3>
                                             <div className="space-y-1">
@@ -237,7 +237,7 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><Clock className="text-[var(--color-navy)]" size={24} /></div>
+                                        <div className="p-3 bg-[var(--color-axelis)]/50 rounded-xl shrink-0"><Clock className="text-white" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Office Hours</h3>
                                             <p className="text-[var(--color-dim)]">Monday - Friday: 9:00 AM - 6:00 PM</p>

@@ -44,7 +44,7 @@ const CTAButton = ({
       case 'warning':
         return 'btn bg-white text-slate-900 border hover:bg-stone-300 border-stone-700 shadow-[0_0_15px_rgba(250,204,21,0.5)]';
       case 'primary':
-        return 'btn bg-stone-900 text-[var(--color-navy)] hover:bg-stone-700 border border-stone-900 shadow-md';
+        return 'btn bg-[var(--color-axelis)] text-white hover:bg-[var(--color-navy)] border border-[var(--color-axelis)] shadow-md';
       case 'light':
         return 'btn bg-white text-slate-900 border-2 border-white hover:bg-gray-50 hover:border-gray-50 shadow-xl hover:shadow-2xl hover:shadow-white/25';
       case 'electric':

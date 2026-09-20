@@ -20,9 +20,9 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen bg-storm-to-dawn">
             {/* Hero Section */}
-            <section className="relative pt-24 pb-16 bg-slate-900 overflow-hidden border-b border-slate-800">
+            <section className="relative pt-24 pb-16 bg-[var(--color-tint)] overflow-hidden border-b border-[var(--color-rule)]">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
-                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-stone-900/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
+                <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--color-axelis)]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
                 <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     {/* Minimal Logo Integration */}
@@ -154,7 +154,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* Podcast CTA */}
-                    <div className="bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl mt-12 flex flex-col md:flex-row relative">
+                    <div className="bg-[var(--color-tint)] rounded-[2.5rem] overflow-hidden shadow-2xl mt-12 flex flex-col md:flex-row relative">
                         <div className="md:w-1/2 p-12 md:p-16 flex flex-col justify-center relative z-10">
                             <h3 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-6">
                                 Hear The Untold Stories
@@ -181,7 +181,7 @@ export default function AboutPage() {
             </section>
 
             {/* Clean Final CTA */}
-            <section className="py-32 bg-slate-900 text-center border-t border-slate-800" data-section="cta">
+            <section className="py-32 bg-[var(--color-tint)] text-center border-t border-[var(--color-rule)]" data-section="cta">
                 <div className="max-w-3xl mx-auto px-4">
                     <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl font-extrabold text-[var(--color-navy)] mb-6 tracking-tight">Ready to Transform Your Future?</TextEffectInView>
                     <p className="text-lg text-[var(--color-dim)] mb-10 leading-relaxed max-w-2xl mx-auto">
@@ -192,7 +192,7 @@ export default function AboutPage() {
                             href="https://calendly.com/axelisoverseas/counsellingsession"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="relative overflow-hidden inline-flex justify-center items-center px-8 py-4 bg-stone-900 hover:bg-stone-950 text-[var(--color-navy)] font-bold rounded-xl transition-all shadow-lg"
+                            className="relative overflow-hidden inline-flex justify-center items-center px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-lg"
                         >
                             <span className="relative z-10">Book Your Counselling Call Today</span>
                             <BorderBeam size={140} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />

@@ -154,7 +154,7 @@ export default function CertificationsPage() {
         >
           <motion.h1
             variants={fadeInUp}
-            className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] tracking-tight mb-6 max-w-4xl mx-auto"
+            className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 max-w-4xl mx-auto"
           >
             Earn a credential on the way to{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">
@@ -162,7 +162,7 @@ export default function CertificationsPage() {
             </span>
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="text-lg md:text-xl text-[var(--color-navy)]/90 max-w-3xl mx-auto leading-relaxed mb-10">
+          <motion.p variants={fadeInUp} className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10">
             End-to-end concierge programmes, {formatINR(catalogueStats.priceFloor)} to {formatINR(catalogueStats.priceCeiling)},
             each carrying a written outcome guarantee. One counsellor, start to finish.
           </motion.p>
@@ -177,7 +177,7 @@ export default function CertificationsPage() {
             </a>
             <Link
               href="/bookings"
-              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
+              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
             >
               Book a discovery call
             </Link>

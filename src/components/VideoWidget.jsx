@@ -99,7 +99,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
   if (videos.length === 0) return null;
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700">
+    <div className="bg-white dark:bg-[var(--color-axelis)] rounded-xl shadow-lg p-6 border border-gray-100 dark:border-[var(--color-axelis)]">
         <div className="flex items-center mb-4">
           <Youtube className="text-stone-900 mr-2" size={20} />
           <h3 className="text-lg font-semibold text-gray-900 dark:text-[var(--color-navy)]">{title}</h3>
@@ -109,7 +109,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
           {videos.map((video, index) => (
             <div
               key={video.id}
-              className="flex gap-3 cursor-pointer group hover:bg-gray-50 dark:hover:bg-gray-700 p-2 rounded-lg transition-colors"
+              className="flex gap-3 cursor-pointer group hover:bg-gray-50 dark:hover:bg-[var(--color-navy)] p-2 rounded-lg transition-colors"
               onClick={() => {
                 console.log('🖱️ Video clicked:', video.title);
                 openVideoOnYouTube(video);
@@ -147,7 +147,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
                   <span>{video.publishedAt}</span>
                 </div>
                 <button
-                  className="mt-2 bg-stone-700 hover:bg-stone-900 text-[var(--color-navy)] px-2 py-1 rounded text-xs transition-colors"
+                  className="mt-2 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white px-2 py-1 rounded text-xs transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     openVideoOnYouTube(video);

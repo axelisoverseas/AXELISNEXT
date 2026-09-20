@@ -143,15 +143,15 @@ const PlanComparison = () => {
             </h3>
             <ul className="space-y-3 text-stone-950">
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-[var(--color-axelis)] rounded-full mt-2 flex-shrink-0"></div>
                 <span>100% Refundable ₹9,999 Deposit</span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-[var(--color-axelis)] rounded-full mt-2 flex-shrink-0"></div>
                 <span>Access to all 29+ countries</span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-[var(--color-axelis)] rounded-full mt-2 flex-shrink-0"></div>
                 <span>Complete application & visa assistance</span>
               </li>
             </ul>
@@ -166,19 +166,19 @@ const PlanComparison = () => {
             </h3>
             <ul className="space-y-3 text-stone-900">
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-[var(--color-axelis)] rounded-full mt-2 flex-shrink-0"></div>
                 <span>₹19,999 Service Fee (Discounted from ₹39,998)</span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-[var(--color-axelis)] rounded-full mt-2 flex-shrink-0"></div>
                 <span>One-time Service Fee Structure</span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-[var(--color-axelis)] rounded-full mt-2 flex-shrink-0"></div>
                 <span>Save ₹80+ lakhs in tuition fees</span>
               </li>
               <li className="flex items-start gap-2">
-                <div className="w-2 h-2 bg-stone-700 rounded-full mt-2 flex-shrink-0"></div>
+                <div className="w-2 h-2 bg-[var(--color-axelis)] rounded-full mt-2 flex-shrink-0"></div>
                 <span>Premium public European university access</span>
               </li>
             </ul>

@@ -170,7 +170,7 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
                 setSearchTerm('');
                 setSelectedCategory('All');
               }}
-              className="px-4 py-2 bg-stone-700 text-[var(--color-navy)] rounded-lg hover:bg-stone-900 transition-colors"
+              className="px-4 py-2 bg-[var(--color-axelis)] text-white rounded-lg hover:bg-[var(--color-navy)] transition-colors"
             >
               Clear Filters
             </button>
@@ -204,7 +204,7 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
                 <div className="ml-4 flex-shrink-0">
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                     openItems.has(faq.id)
-                      ? 'bg-stone-700 text-[var(--color-navy)]'
+                      ? 'bg-[var(--color-tint)] text-[var(--color-navy)]'
                       : 'bg-slate-100 text-[var(--color-dim)] group-hover:bg-stone-100 group-hover:text-stone-700'
                   }`}>
                     {openItems.has(faq.id) ? (
@@ -258,13 +258,13 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={`tel:${siteInfo.contact.phones[0]}`}
-            className="inline-flex items-center justify-center px-6 py-3 bg-stone-900 hover:bg-stone-950 text-[var(--color-navy)] font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
           >
             Call Us: {siteInfo.contact.phones[0]}
           </a>
           <a
             href={`mailto:${siteInfo.contact.emails[0]}`}
-            className="inline-flex items-center justify-center px-6 py-3 border-2 border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-[var(--color-navy)] font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center px-6 py-3 border-2 border-[var(--color-axelis)] text-[var(--color-axelis)] hover:bg-[var(--color-navy)] hover:text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
           >
             Email Us
           </a>

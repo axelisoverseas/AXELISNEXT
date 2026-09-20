@@ -102,7 +102,7 @@ const VisaSuccessPredictor = () => {
         <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 overflow-hidden max-w-2xl mx-auto">
             {/* Header */}
             <div className="bg-gradient-to-r from-slate-900 to-stone-900 text-[var(--color-navy)] p-6 relative overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-stone-700/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-axelis)]/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
                 <div className="relative z-10">
                     <h3 className="text-2xl font-bold mb-2 flex items-center">
                         <CheckCircle className="mr-2 text-[var(--color-navy)]" />
@@ -117,7 +117,7 @@ const VisaSuccessPredictor = () => {
                 <div className="bg-gray-50 p-4 border-b border-gray-100 flex justify-between items-center px-8 relative">
                     <div className="absolute left-0 top-1/2 w-full h-0.5 bg-gray-200 -z-0 -translate-y-1/2"></div>
                     <div
-                        className="absolute left-0 top-1/2 h-0.5 bg-stone-900 -z-0 -translate-y-1/2 transition-all duration-500"
+                        className="absolute left-0 top-1/2 h-0.5 bg-[var(--color-tint)] -z-0 -translate-y-1/2 transition-all duration-500"
                         style={{ width: `${((currentStep - 1) / 3) * 100}%` }}
                     ></div>
 
@@ -125,7 +125,7 @@ const VisaSuccessPredictor = () => {
                         <div
                             key={step.id}
                             className={`relative z-10 flex flex-col items-center justify-center w-10 h-10 rounded-full border-2 transition-all duration-300 bg-white
-                ${currentStep > step.id ? 'border-stone-900 bg-stone-900/10 text-stone-900' :
+                ${currentStep > step.id ? 'border-[var(--color-rule)] bg-[var(--color-tint)]/10 text-stone-900' :
                                     currentStep === step.id ? 'border-stone-900 shadow-[0_0_15px_rgba(251, 191, 36,0.3)] text-stone-900' :
                                         'border-gray-200 text-gray-400'}`}
                         >
@@ -214,7 +214,7 @@ const VisaSuccessPredictor = () => {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting || !formData.name || formData.phone.length < 10}
-                                        className="w-full py-4 mt-6 bg-white hover:bg-stone-700 text-slate-900 font-bold rounded-xl shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center"
+                                        className="w-full py-4 mt-6 bg-white hover:bg-[var(--color-navy)] text-[var(--color-axelis)] font-bold rounded-xl shadow-lg transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex justify-center items-center"
                                     >
                                         {isSubmitting ? (
                                             <span className="flex items-center">

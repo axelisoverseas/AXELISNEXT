@@ -195,7 +195,7 @@ export default function TestimonialsPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-[var(--storm-deep)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.65)_0%,transparent_75%)]" />
-          <div className="absolute top-10 left-10 w-72 h-72 bg-[var(--color-tint)] rounded-full blur-[120px]" />
+          <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -204,25 +204,25 @@ export default function TestimonialsPage() {
               <Star key={i} className="text-[var(--color-axelis)] fill-current" size={26} />
             ))}
           </div>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] mb-6 tracking-tight">
-            Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">globe.</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+            Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--dawn-glow)]">globe.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-[var(--color-navy)]/90 max-w-3xl mx-auto leading-relaxed mb-10">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10">
             Real placements across 29+ countries. Named students, signed declarations, verifiable visas.
           </p>
 
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">5,000+</div>
-              <div className="text-[var(--color-navy)]/85 text-[10px] md:text-xs mt-1">Students placed</div>
+              <div className="text-white/85 text-[10px] md:text-xs mt-1">Students placed</div>
             </div>
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">29+</div>
-              <div className="text-[var(--color-navy)]/85 text-[10px] md:text-xs mt-1">Countries</div>
+              <div className="text-white/85 text-[10px] md:text-xs mt-1">Countries</div>
             </div>
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">100%</div>
-              <div className="text-[var(--color-navy)]/85 text-[10px] md:text-xs mt-1">Visa success</div>
+              <div className="text-white/85 text-[10px] md:text-xs mt-1">Visa success</div>
             </div>
           </div>
         </div>

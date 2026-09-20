@@ -6,8 +6,8 @@ const CibilScoreWidget = () => {
 
   const scoreRanges = [
     { range: '750-900', label: 'Excellent', color: 'bg-green-500', description: 'Best loan rates & instant approvals' },
-    { range: '700-749', label: 'Good', color: 'bg-stone-700', description: 'Good loan rates & quick approvals' },
-    { range: '650-699', label: 'Fair', color: 'bg-stone-700', description: 'Moderate rates with some conditions' },
+    { range: '700-749', label: 'Good', color: 'bg-[var(--color-tint)]', description: 'Good loan rates & quick approvals' },
+    { range: '650-699', label: 'Fair', color: 'bg-[var(--color-tint)]', description: 'Moderate rates with some conditions' },
     { range: '600-649', label: 'Poor', color: 'bg-orange-500', description: 'Higher rates & stricter conditions' },
     { range: '300-599', label: 'Very Poor', color: 'bg-gray-500', description: 'Loan approval may be difficult' }
   ];
@@ -35,7 +35,7 @@ const CibilScoreWidget = () => {
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
-          <div className="p-3 bg-stone-900 rounded-xl">
+          <div className="p-3 bg-[var(--color-axelis)] rounded-xl">
             <CreditCard className="text-[var(--color-navy)]" size={24} />
           </div>
           <div>
@@ -79,7 +79,7 @@ const CibilScoreWidget = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-stone-700 rounded-full"></div>
+                <div className="w-2 h-2 bg-[var(--color-axelis)] rounded-full"></div>
                 <span className="text-sm text-gray-700">{benefit}</span>
               </div>
             ))}
@@ -92,7 +92,7 @@ const CibilScoreWidget = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <button
             onClick={handleCheckScore}
-            className="flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-950 text-[var(--color-navy)] px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+            className="flex items-center justify-center gap-2 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
           >
             <CreditCard size={18} />
             Check on CIBIL Official

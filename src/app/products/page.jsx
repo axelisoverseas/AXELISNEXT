@@ -74,7 +74,7 @@ function ProductsContent() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/60 to-[var(--storm-deep)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.7)_0%,transparent_75%)]" />
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px]" />
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
 
@@ -84,12 +84,12 @@ function ProductsContent() {
           variants={staggerContainer}
           className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
-          <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-extrabold mb-6 text-[var(--color-navy)] tracking-tight">
+          <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight">
             <TextEffect as="span" per="word" preset="blur">Pick the plan that matches</TextEffect>{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">where you want to study.</span>
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-10 text-[var(--color-navy)]/90 max-w-3xl mx-auto leading-relaxed">
+          <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
             Global Admissions Charter (GAC) for global private universities. Europe Public Charter (EPC) for tuition-free public Europe. Both come with a refundable deposit and a dedicated counsellor.
           </motion.p>
 
@@ -103,7 +103,7 @@ function ProductsContent() {
             </Link>
             <Link
               href="/bookings"
-              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
+              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
             >
               Free first call
             </Link>
@@ -116,7 +116,7 @@ function ProductsContent() {
               { Icon: Award, label: '₹3 Cr+ scholarships' },
               { Icon: ShieldCheck, label: 'Refundable deposit' },
             ].map(({ Icon, label }) => (
-              <div key={label} className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-[var(--color-navy)] text-sm font-semibold">
+              <div key={label} className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-white text-sm font-semibold">
                 <Icon size={16} className="text-[var(--color-axelis)] shrink-0" />
                 <span>{label}</span>
               </div>

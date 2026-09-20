@@ -231,10 +231,10 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-storm-to-dawn">
       {/* Hero */}
-      <section className="relative pt-28 pb-16 bg-slate-900 overflow-hidden border-b border-slate-800">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-stone-900/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <section className="relative pt-28 pb-16 bg-[var(--color-tint)] overflow-hidden border-b border-[var(--color-rule)]">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--color-axelis)]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-stone-900/15 border border-stone-700/30 mb-6">
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-axelis)]/15 border border-[var(--color-axelis)]/30 mb-6">
             <Shield className="w-8 h-8 text-[var(--color-navy)]" />
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-5 tracking-tight">
@@ -293,7 +293,7 @@ export default function PrivacyPolicyPage() {
                     <ul className="space-y-2 text-slate-700">
                       {block.list.map((item, j) => (
                         <li key={j} className="flex items-start gap-3">
-                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-stone-700 shrink-0" />
+                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-axelis)] shrink-0" />
                           <span className="leading-relaxed">{item}</span>
                         </li>
                       ))}
@@ -362,7 +362,7 @@ export default function PrivacyPolicyPage() {
           <div className="mt-8 pt-6 border-t border-white/10 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 bg-stone-900 hover:bg-stone-950 text-white font-semibold rounded-lg transition-colors"
+              className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-semibold rounded-lg transition-colors"
             >
               Get in Touch
             </Link>

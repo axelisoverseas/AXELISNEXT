@@ -22,7 +22,7 @@ export default function AccommodationPage() {
     return (
         <div className="min-h-screen bg-storm-to-dawn text-[var(--color-navy)]">
             {/* Hero Section */}
-            <section className="relative pt-24 pb-20 overflow-hidden border-b border-[var(--color-rule)]/10">
+            <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/15/10">
                 <img
                     src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80&auto=format&fit=crop"
                     alt=""
@@ -36,8 +36,8 @@ export default function AccommodationPage() {
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     {/* In partnership with — amber's wordmark, lowercase per their brand rules */}
-                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[var(--color-tint)] backdrop-blur border border-[var(--color-rule)] mb-8">
-                        <span className="text-[10px] text-[var(--color-navy)] font-bold">In partnership with</span>
+                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 backdrop-blur border border-white/15 mb-8">
+                        <span className="text-[10px] text-white font-bold">In partnership with</span>
                         <a
                             href={AMBER_PARTNER_URL}
                             target="_blank"
@@ -53,14 +53,14 @@ export default function AccommodationPage() {
                         </a>
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-[var(--color-navy)] tracking-tight">
+                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight">
                         <TextEffect as="span" per="word" preset="blur">Find your perfect</TextEffect>{' '}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--dawn-glow)]">
                             student home
                         </span>
                     </h1>
-                    <p className="text-lg md:text-xl mb-10 text-[var(--color-navy)]/85 max-w-3xl mx-auto leading-relaxed">
-                        Live, learn and thrive. Book bills-inclusive student accommodation across <strong className="text-[var(--color-navy)]">29+ countries</strong> through our partnership with <strong className="text-[var(--color-navy)]">amber</strong>, the world&apos;s largest student housing marketplace.
+                    <p className="text-lg md:text-xl mb-10 text-white/85 max-w-3xl mx-auto leading-relaxed">
+                        Live, learn and thrive. Book bills-inclusive student accommodation across <strong className="text-white">29+ countries</strong> through our partnership with <strong className="text-white">amber</strong>, the world&apos;s largest student housing marketplace.
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -73,7 +73,7 @@ export default function AccommodationPage() {
                         </Link>
                         <Link
                             href="/contact"
-                            className="inline-flex justify-center items-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
+                            className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
                         >
                             Get free housing assistance
                         </Link>
@@ -148,13 +148,13 @@ export default function AccommodationPage() {
             </section>
 
             {/* Popular Cities photo grid — visual destination teasers */}
-            <section className="py-20 bg-[var(--storm-deep)]/40 border-y border-[var(--color-rule)]">
+            <section className="py-20 bg-[var(--storm-deep)]/40 border-y border-white/15">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12 max-w-2xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
                             Where our students live
                         </h2>
-                        <p className="text-[var(--color-navy)]/85">
+                        <p className="text-white/85">
                             Tap any city to browse live amber listings for that destination.
                         </p>
                     </div>
@@ -166,7 +166,7 @@ export default function AccommodationPage() {
                                 href={`https://amberstudent.com/search/${c.loc.replace(/\s+/g, '-')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-[var(--color-rule)] hover:border-[var(--color-rule)]/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white text-left block"
+                                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/15 hover:border-white/15/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white text-left block"
                                 aria-label={`Browse amber listings for ${c.label}, ${c.country} (opens in new tab)`}
                             >
                                 <img
@@ -179,16 +179,16 @@ export default function AccommodationPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--storm-deep)] via-[var(--storm-deep)]/45 to-transparent" />
 
-                                <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-[var(--storm-deep)]/80 backdrop-blur border border-[var(--color-rule)] text-[10px] font-bold text-[var(--color-axelis)]">
+                                <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-[var(--storm-deep)]/80 backdrop-blur border border-white/15 text-[10px] font-bold text-[var(--color-axelis)]">
                                     from {c.from}
                                 </div>
 
                                 <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <span aria-hidden="true" className="text-base">{c.flag}</span>
-                                        <span className="text-[10px] text-[var(--color-navy)] font-bold">{c.country}</span>
+                                        <span className="text-[10px] text-white font-bold">{c.country}</span>
                                     </div>
-                                    <h3 className="text-[var(--color-navy)] text-lg md:text-xl font-bold leading-tight flex items-center gap-2">
+                                    <h3 className="text-white text-lg md:text-xl font-bold leading-tight flex items-center gap-2">
                                         {c.label}
                                         <Search size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-[var(--color-axelis)]" />
                                     </h3>

@@ -316,10 +316,10 @@ export default function Home() {
       <section className="relative py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-3 text-balance">
-              Twenty-nine countries. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">Twenty-nine photos.</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-balance">
+              Twenty-nine countries. <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--dawn-glow)]">Twenty-nine photos.</span>
             </h2>
-            <p className="text-[var(--color-navy)]/85 text-base md:text-lg">
+            <p className="text-white/85 text-base md:text-lg">
               Every destination we place students into &mdash; pictured. The first nine carry the bulk of our volume; the remaining twenty run on the same plans.
             </p>
           </div>
@@ -339,7 +339,7 @@ export default function Home() {
             ].map((d) => (
               <article
                 key={d.name}
-                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-[var(--color-rule)] hover:border-[var(--storm-electric)]/40 transition-colors"
+                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/15 hover:border-[var(--storm-electric)]/40 transition-colors"
               >
                 <img
                   src={d.img}
@@ -353,10 +353,10 @@ export default function Home() {
                   <div>
                     <div className="flex items-center gap-2 text-[10px] font-bold mb-1">
                       <span className={d.plan === 'GAC' ? 'text-[var(--color-axelis)]' : 'text-[var(--color-axelis)]'}>{d.plan}</span>
-                      <span className="text-[var(--color-dim)]">·</span>
-                      <span className="text-[var(--color-navy)]">Plan</span>
+                      <span className="text-[var(--color-dim-dark)]">·</span>
+                      <span className="text-white">Plan</span>
                     </div>
-                    <h3 className="text-[var(--color-navy)] text-base md:text-lg font-bold leading-tight">
+                    <h3 className="text-white text-base md:text-lg font-bold leading-tight">
                       {d.name} <span aria-hidden="true">{d.flag}</span>
                     </h3>
                   </div>
@@ -367,11 +367,11 @@ export default function Home() {
 
           {/* Compact tier — remaining 20 countries */}
           <div className="flex items-center gap-4 mb-5">
-            <span className="h-px flex-1 bg-[var(--color-tint)]" aria-hidden="true" />
+            <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
             <span className="text-[10px] text-[var(--color-axelis)] font-bold">
               Plus twenty more on the same plans
             </span>
-            <span className="h-px flex-1 bg-[var(--color-tint)]" aria-hidden="true" />
+            <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
@@ -399,7 +399,7 @@ export default function Home() {
             ].map((d) => (
               <article
                 key={d.name}
-                className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-[var(--color-rule)] hover:border-[var(--storm-electric)]/40 transition-colors"
+                className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-white/15 hover:border-[var(--storm-electric)]/40 transition-colors"
               >
                 <img
                   src={d.img}
@@ -413,7 +413,7 @@ export default function Home() {
                   <div className="flex items-center gap-1.5 text-[9px] font-bold mb-0.5">
                     <span className={d.plan === 'GAC' ? 'text-[var(--color-axelis)]' : 'text-[var(--color-axelis)]'}>{d.plan}</span>
                   </div>
-                  <h3 className="text-[var(--color-navy)] text-xs md:text-sm font-bold leading-tight">
+                  <h3 className="text-white text-xs md:text-sm font-bold leading-tight">
                     {d.name} <span aria-hidden="true">{d.flag}</span>
                   </h3>
                 </div>
@@ -424,7 +424,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               href="/products#plans"
-              className="inline-flex items-center gap-2 text-[var(--color-navy)] hover:text-[var(--color-navy)] text-sm font-semibold underline-offset-4 hover:underline transition-colors"
+              className="inline-flex items-center gap-2 text-white hover:text-white text-sm font-semibold underline-offset-4 hover:underline transition-colors"
             >
               See plans &amp; pricing across all 29 countries
               <ArrowRight aria-hidden="true" size={14} />

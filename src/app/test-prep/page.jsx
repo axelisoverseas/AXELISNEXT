@@ -224,7 +224,7 @@ export default function TestPrepPage() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-[var(--storm-deep)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.65)_0%,transparent_75%)]" />
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px]" />
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-white/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
 
@@ -233,11 +233,11 @@ export default function TestPrepPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
-            className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] tracking-tight mb-6"
+            className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6"
           >
             Crack IELTS, TOEFL, PTE, SAT and more
             <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--dawn-glow)]">
               with tutors who&rsquo;ve actually done it.
             </span>
           </motion.h1>
@@ -246,7 +246,7 @@ export default function TestPrepPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
-            className="text-lg md:text-xl text-[var(--color-navy)]/90 max-w-3xl mx-auto leading-relaxed mb-10"
+            className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10"
           >
             Premium 1-on-1 classes with trainers who have eight-plus years of teaching behind them. No batches you didn&apos;t choose. No filler hours. Just your target score, your tutor, your timeline.
           </motion.p>
@@ -266,7 +266,7 @@ export default function TestPrepPage() {
             </Link>
             <Link
               href="/bookings"
-              className="inline-flex items-center justify-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
+              className="inline-flex items-center justify-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
             >
               Book a free demo
             </Link>

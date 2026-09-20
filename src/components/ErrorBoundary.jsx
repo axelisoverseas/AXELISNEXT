@@ -23,7 +23,7 @@ class ErrorBoundary extends React.Component {
             <p className="text-gray-300 mb-6">We're sorry, but something unexpected happened.</p>
             <button
               onClick={() => window.location.reload()}
-              className="bg-stone-900 hover:bg-stone-950 text-[var(--color-navy)] px-6 py-3 rounded-lg font-semibold transition-colors"
+              className="bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white px-6 py-3 rounded-lg font-semibold transition-colors"
             >
               Reload Page
             </button>

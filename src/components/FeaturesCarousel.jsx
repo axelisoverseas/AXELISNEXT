@@ -142,7 +142,7 @@ const FeaturesCarousel = ({ features = [] }) => {
             key={index}
             onClick={() => goToSlide(index)}
             className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentIndex
-                ? 'bg-stone-900 scale-125'
+                ? 'bg-[var(--color-tint)] scale-125'
                 : 'bg-gray-300 hover:bg-gray-400'
               }`}
             aria-label={`Go to feature ${index + 1}`}

@@ -73,7 +73,7 @@ export default async function CourseGuidePage({ params }) {
                     </nav>
 
                     <header className="bg-gradient-to-r from-stone-900 to-slate-900 p-10 rounded-3xl text-[var(--color-navy)] mb-10 shadow-xl relative overflow-hidden">
-                        <div className="absolute top-0 right-0 w-64 h-64 bg-stone-700/20 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
+                        <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-axelis)]/20 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
                         <span className="inline-block bg-[var(--color-tint)] px-4 py-1.5 rounded-full text-[var(--color-navy)] font-semibold text-sm mb-4 backdrop-blur-md">Course Guide</span>
                         <h1 className="text-4xl md:text-5xl font-black mb-4 flex items-center leading-tight">
                             <TextEffect as="span" per="word" preset="blur">{`Study ${data.course} in ${data.country}`}</TextEffect>

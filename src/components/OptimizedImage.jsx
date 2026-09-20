@@ -43,7 +43,7 @@ const OptimizedImage = ({
 
   if (hasError) {
     return (
-      <div className={`bg-gray-200 dark:bg-gray-700 flex items-center justify-center ${className}`}>
+      <div className={`bg-gray-200 dark:bg-[var(--color-tint)] flex items-center justify-center ${className}`}>
         <span className="text-gray-500 dark:text-gray-400 text-sm">
           Failed to load image
         </span>
@@ -55,7 +55,7 @@ const OptimizedImage = ({
     <div className={`relative overflow-hidden ${className}`}>
       {/* Placeholder/Loading state */}
       {!isLoaded && placeholder === 'blur' && (
-        <div className="absolute inset-0 bg-gray-200 dark:bg-gray-700 animate-pulse" />
+        <div className="absolute inset-0 bg-gray-200 dark:bg-[var(--color-tint)] animate-pulse" />
       )}
       
       {/* Actual image */}

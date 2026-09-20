@@ -42,15 +42,15 @@ const FAQPage = () => {
       <section className="relative pt-32 pb-24 bg-[var(--storm-deep)] border-b border-[var(--storm-electric)]/10 overflow-hidden">
         {/* Abstract Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-stone-700 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-stone-700 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-64 h-64 bg-[var(--color-axelis)] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-axelis)] rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-stone-700/10 border border-stone-700/30 text-white text-sm font-bold mb-8"
+            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[var(--color-axelis)]/10 border border-[var(--color-axelis)]/30 text-white text-sm font-bold mb-8"
           >
             <HelpCircle size={16} />
             <span>KNOWLEDGE HUB</span>
@@ -90,7 +90,7 @@ const FAQPage = () => {
             <input 
               type="text" 
               placeholder="Search for questions (e.g. 'Scholarship', 'Visa', 'UK')"
-              className="w-full h-16 pl-16 pr-8 bg-slate-800/50 backdrop-blur-xl border border-slate-700 rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-stone-700 transition-all font-medium text-lg shadow-2xl"
+              className="w-full h-16 pl-16 pr-8 bg-[var(--color-axelis)]/50 backdrop-blur-xl border border-[var(--color-axelis)] rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-stone-700 transition-all font-medium text-lg shadow-2xl"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -116,7 +116,7 @@ const FAQPage = () => {
                         onClick={() => setActiveCategory(cat)}
                         className={`px-5 py-3 rounded-xl text-sm font-bold text-left transition-all ${
                           activeCategory === cat 
-                            ? 'bg-stone-900 text-[var(--color-navy)] shadow-lg' 
+                            ? 'bg-[var(--color-tint)] text-[var(--color-navy)] shadow-lg' 
                             : 'bg-slate-100 text-[var(--color-dim)] hover:bg-slate-200'
                         }`}
                       >
@@ -128,12 +128,12 @@ const FAQPage = () => {
 
                 {/* Trust Indicators */}
                 <div className="grid grid-cols-1 gap-4">
-                  <div className="bg-slate-900 p-6 rounded-3xl text-[var(--color-navy)]">
+                  <div className="bg-[var(--color-tint)] p-6 rounded-3xl text-[var(--color-navy)]">
                     <Globe className="text-[var(--color-navy)] mb-4" size={32} />
                     <h4 className="font-bold mb-2">29+ Countries</h4>
                     <p className="text-[var(--color-dim)] text-xs leading-relaxed">Expert guidance across 4 continents and 29+ study destinations.</p>
                   </div>
-                  <div className="bg-stone-900 p-6 rounded-3xl text-[var(--color-navy)] shadow-xl">
+                  <div className="bg-[var(--color-tint)] p-6 rounded-3xl text-[var(--color-navy)] shadow-xl">
                     <ShieldCheck className="text-[var(--color-navy)] mb-4" size={32} />
                     <h4 className="font-bold mb-2">95% Visa Success</h4>
                     <p className="text-[var(--color-navy)] text-xs leading-relaxed">Highly specialized visa assistance with guaranteed results.</p>
@@ -160,7 +160,7 @@ const FAQPage = () => {
                         className="w-full p-8 flex items-center justify-between text-left group"
                       >
                         <div className="flex items-start space-x-4">
-                          <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center transition-colors ${openId === faq.id ? 'bg-stone-900 text-[var(--color-navy)]' : 'bg-slate-100 text-[var(--color-dim)] group-hover:bg-stone-50 group-hover:text-stone-700'}`}>
+                          <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center transition-colors ${openId === faq.id ? 'bg-[var(--color-axelis)] text-white' : 'bg-slate-100 text-[var(--color-dim)] group-hover:bg-stone-50 group-hover:text-[var(--color-axelis)]'}`}>
                             <span className="text-xs font-bold leading-none">{index + 1}</span>
                           </div>
                           <span className={`text-lg font-bold transition-colors ${openId === faq.id ? 'text-stone-900' : 'text-slate-900'}`}>{faq.question}</span>
@@ -225,7 +225,7 @@ const FAQPage = () => {
                       href="https://wa.me/919098522711?text=Hey%2C%20I%20have%20questions%20regarding%20studying%20abroad"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-8 py-4 bg-stone-700/20 border border-[var(--color-rule)] backdrop-blur-md text-[var(--color-navy)] text-lg font-bold rounded-2xl hover:bg-stone-700/30 transition-all flex items-center space-x-3"
+                      className="px-8 py-4 bg-[var(--color-axelis)]/20 border border-[var(--color-rule)] backdrop-blur-md text-white text-lg font-bold rounded-2xl hover:bg-[var(--color-navy)]/30 transition-all flex items-center space-x-3"
                     >
                       <MessageCircle size={24} />
                       <span>WhatsApp Experts</span>
