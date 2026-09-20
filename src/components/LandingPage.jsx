@@ -129,7 +129,7 @@ export default function LandingPage({ page }) {
       <section className="sec border-t border-[var(--color-rule)] bg-[var(--color-tint)]">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
           <img
-            src="/brand/axelis-seal.svg"
+            src="/brand/axelis-seal-navy.svg"
             alt=""
             aria-hidden="true"
             width={44}

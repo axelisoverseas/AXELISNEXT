@@ -61,6 +61,29 @@ export default function SpecimenCertificate({ programmeTitle = 'Global Career La
           {programmeTitle}
         </h3>
 
+        {/* Seal and signatory.
+            A certificate with neither reads as a draft, and this one is shown
+            to lenders. The seal is the real mark, in its light variant because
+            currentColor does not resolve through <img>. The signature stays a
+            ruled blank for the same reason the student name does: a specimen
+            carrying a plausible signature is a forgeable template. */}
+        <div className="mb-8 flex flex-wrap items-end justify-between gap-8">
+          <div className="min-w-0">
+            <div className="h-12 max-w-[220px] border-b border-dashed border-white/30" />
+            <p className="mt-2 text-[11px] uppercase tracking-wider text-[var(--color-dim-dark)]">
+              Authorised signatory
+            </p>
+          </div>
+          <img
+            src="/brand/axelis-seal-white.svg"
+            alt=""
+            aria-hidden="true"
+            width={96}
+            height={96}
+            className="h-20 w-20 shrink-0 opacity-90 sm:h-24 sm:w-24"
+          />
+        </div>
+
         <dl className="grid grid-cols-2 sm:grid-cols-3 gap-x-6 gap-y-5 border-t border-white/20 pt-6">
           <div className="min-w-0">
             <dt className="text-[11px] uppercase tracking-wider text-[var(--color-dim-dark)] mb-1">Certificate ID</dt>
