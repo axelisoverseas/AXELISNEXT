@@ -161,10 +161,21 @@ accents on navy use `#7FB4E0`.
 for surfaces, rules and graphics only. Text and button fills on light take
 `#2F6795`; accents on navy take `#7FB4E0`.
 
-### 5.2 Proportion
+### 5.2 The ground, and proportion
 
-White and Tint 70% · Navy 20% · blue in all three variants 8% · everything else 2%. The accent
-marks one thing at a time: the primary action, the guarantee, or the seal.
+**The site is white.** `--background` is `#FFFFFF`; navy is a band colour used
+for the utility bar, the nav on dark sections, the outcome strip, the closing
+CTA and the footer. The approved reference page is 11 white sections, 6 tint,
+6 navy — that ratio is the spec, not an accident of one page.
+
+This matters because the previous brand was a dark site, and a token-by-token
+migration reproduces a dark site while appearing to follow every rule. If a
+converted page reads mostly navy, the conversion is wrong regardless of which
+tokens it uses.
+
+White and Tint 70% · Navy 20% · blue in all three variants 8% · everything
+else 2%. The accent marks one thing at a time: the primary action, the
+guarantee, or the seal.
 
 ---
 
