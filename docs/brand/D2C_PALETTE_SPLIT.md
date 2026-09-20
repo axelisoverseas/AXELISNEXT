@@ -120,10 +120,25 @@ Judge a page only once both halves have landed.
 
 ## Working agreement
 
-Both machines branch **from `brand/d2c-palette`**, not from `main`:
+Both machines branch **from `brand/d2c-palette`**, not from `main`.
 
-    git fetch && git checkout brand/d2c-palette && git pull
-    git checkout -b brand/d2c-palette-b     # machine B
+This clone's fetch refspec is narrowed to main only:
+
+    +refs/heads/main:refs/remotes/origin/main
+
+So a plain `git fetch` never sees any other branch, and
+`git checkout brand/d2c-palette` fails with "pathspec did not match" even
+though the branch is on the remote. It hid four other branches here too, and
+it is why this branch was read as unpushed. Widen it once, on each machine:
+
+    git config --add remote.origin.fetch '+refs/heads/*:refs/remotes/origin/*'
+    git fetch origin
+    git checkout brand/d2c-palette
+    git checkout -b brand/d2c-palette-b     # machine B only
+
+Confirm with `git ls-remote --heads origin`, which asks the server. Never
+judge whether a branch was pushed from `git branch -r` in this clone — that
+reads local tracking refs, which the narrowed refspec leaves stale.
 
 The file lists do not overlap, so the only conflict risk is `globals.css` —
 **neither machine edits it.** If a token is missing, say so rather than adding
