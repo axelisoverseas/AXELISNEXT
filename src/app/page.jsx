@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap, ShieldCheck, GraduationCap, Landmark } from 'lucide-react';
+import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap, GraduationCap, Landmark } from 'lucide-react';
 
 const UniversityLogosSection = dynamic(() => import('../components/UniversityLogosSection'), { ssr: false });
 const GoogleReviewsFloat = dynamic(() => import('../components/GoogleReviewsFloat'), { ssr: false });
@@ -81,7 +81,7 @@ export default function Home() {
 
           <motion.div
             variants={fadeInUp}
-            className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
             <Link
               href="/products"
@@ -98,51 +98,8 @@ export default function Home() {
             </Link>
           </motion.div>
 
-          <motion.div
-            variants={fadeInUp}
-            className="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-3xl mx-auto mb-12"
-          >
-            {[
-              { Icon: Users, label: '5,000+ students' },
-              { Icon: Globe, label: '29+ countries' },
-              { Icon: Award, label: '₹3 Cr+ scholarships' },
-              { Icon: ShieldCheck, label: '100% visa honesty' },
-            ].map(({ Icon, label }) => (
-              <div
-                key={label}
-                className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-[var(--color-navy)] text-sm font-semibold"
-              >
-                <Icon size={16} className="text-[var(--color-axelis)] shrink-0" />
-                <span>{label}</span>
-              </div>
-            ))}
-          </motion.div>
-
-          {/* Country chips strip: 29 countries demonstrated inline */}
-          <motion.div variants={fadeInUp} className="max-w-4xl mx-auto">
-            <p className="text-[10px] text-[var(--color-axelis)] font-bold mb-3 text-center">
-              Twenty-nine countries &middot; one trusted team
-            </p>
-            <div className="flex flex-wrap gap-2 justify-center mb-4" aria-label="Some of the 29 countries Axelis Overseas serves">
-              {['🇬🇧 UK', '🇺🇸 USA', '🇨🇦 Canada', '🇮🇪 Ireland', '🇩🇪 Germany', '🇫🇷 France', '🇫🇮 Finland', '🇵🇱 Poland', '🇦🇺 Australia', '🇳🇱 Netherlands', '🇸🇪 Sweden', '🇳🇴 Norway'].map((label) => (
-                <span
-                  key={label}
-                  className="text-xs px-3 py-1.5 rounded-full bg-white/8 backdrop-blur border border-white/15 text-white font-semibold"
-                >
-                  {label}
-                </span>
-              ))}
-              <Link
-                href="/testimonials"
-                className="text-xs px-3 py-1.5 rounded-full bg-[var(--storm-electric)]/15 border border-[var(--storm-electric)]/40 text-[var(--storm-electric)] font-bold hover:bg-[var(--storm-electric)]/25 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]"
-              >
-                + 17 more &rarr;
-              </Link>
-            </div>
-            <p className="text-white text-sm md:text-base text-center">
-              <span className="text-[var(--dawn-glow)] font-bold">5,000+ students</span> placed and on-ground.
-            </p>
-          </motion.div>
+          {/* The numbers and the twenty-nine destinations both have their own
+              sections below; the hero no longer restates them. */}
         </motion.div>
       </section>
 
@@ -257,13 +214,6 @@ export default function Home() {
               <p className="text-[var(--color-navy)] text-sm">
                 Paid-tuition universities. <span className="text-emerald-300 font-semibold">100% refundable</span> on visa or no-offer.
               </p>
-              <div className="flex flex-wrap gap-1.5" aria-label="Countries covered under Global Admissions Charter">
-                {['🇬🇧 UK', '🇺🇸 USA', '🇨🇦 Canada', '🇦🇺 Australia', '🇮🇪 Ireland', '🇳🇿 NZ', '🇸🇬 Singapore', '🇨🇭 Switzerland', '🇦🇪 UAE', '+5'].map((c) => (
-                  <span key={c} className="px-2 py-1 rounded-full bg-[var(--color-tint)] border border-[var(--storm-electric)]/25 text-[var(--color-navy)] text-[11px] font-semibold">
-                    {c}
-                  </span>
-                ))}
-              </div>
               <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included
                 <ArrowRight aria-hidden="true" size={16} className="group-hover:translate-x-1 transition-transform" />
@@ -285,13 +235,6 @@ export default function Home() {
               <p className="text-[var(--color-navy)] text-sm">
                 Public tuition-free Europe. <span className="text-emerald-300 font-semibold">Refundable</span> if zero offers.
               </p>
-              <div className="flex flex-wrap gap-1.5" aria-label="Countries covered under Europe Public Charter">
-                {['🇩🇪 Germany', '🇫🇷 France', '🇳🇴 Norway', '🇸🇪 Sweden', '🇫🇮 Finland', '🇩🇰 Denmark', '🇳🇱 Netherlands', '🇮🇹 Italy', '🇪🇸 Spain', '+6'].map((c) => (
-                  <span key={c} className="px-2 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--color-axelis)]/25 text-[var(--color-navy)] text-[11px] font-semibold">
-                    {c}
-                  </span>
-                ))}
-              </div>
               <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included
                 <ArrowRight aria-hidden="true" size={16} className="group-hover:translate-x-1 transition-transform" />

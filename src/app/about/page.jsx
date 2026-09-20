@@ -3,18 +3,9 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Target, Eye, Users, Award, Globe, Heart, Play } from 'lucide-react';
+import { Target, Eye, Play } from 'lucide-react';
 import { BorderBeam } from '@/components/ui/BorderBeam';
 import { TextEffect, TextEffectInView } from '@/components/ui/TextEffect';
-
-// Static Data specific to this page can be imported or mock-provided for Next.js 
-// We simplify it here to reduce file boilerplate, but keeping true to Axelis narrative
-const stats = [
-    { icon: <Globe size={32} />, value: '29+', label: 'Countries' },
-    { icon: <Award size={32} />, value: '2000+', label: 'Scholarships' },
-    { icon: <Users size={32} />, value: '5,000+', label: 'Students Sent' },
-    { icon: <Heart size={32} />, value: '100%', label: 'Free Service' }
-];
 
 export default function AboutPage() {
     return (
@@ -75,18 +66,13 @@ export default function AboutPage() {
                                 </div>
                             </div>
                             
-                            {/* Minimal Grid Stats Moved Under Text */}
-                            <div className="grid grid-cols-2 gap-4 mt-8">
-                                {stats.map((stat, idx) => (
-                                    <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 px-4 py-8 text-center hover:bg-white hover:border-stone-200 transition-colors shadow-e-1 hover:shadow-e-2">
-                                        <div className="mx-auto mb-3 text-stone-900 flex justify-center">
-                                            {stat.icon}
-                                        </div>
-                                        <div className="text-2xl font-extrabold text-slate-900 mb-1">{stat.value}</div>
-                                        <div className="text-xs font-semibold text-[var(--color-dim)]">{stat.label}</div>
-                                    </div>
-                                ))}
-                            </div>
+                            {/* The headline numbers live on the home page. */}
+                            <p className="text-[var(--color-dim)]">
+                                <Link href="/" className="text-[var(--color-axelis)] underline underline-offset-2">
+                                    See the numbers behind that
+                                </Link>{' '}
+                                &mdash; students placed, countries, scholarships won.
+                            </p>
                         </div>
 
                         {/* Image Content Right Side */}

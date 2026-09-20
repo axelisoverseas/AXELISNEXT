@@ -5,7 +5,7 @@ import CheckoutButton from '../../components/CheckoutButton';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
-  CheckCircle, Award, Globe2, BadgeCheck, ShieldCheck, ArrowRight,
+  CheckCircle, ShieldCheck, ArrowRight,
   FileText, Phone, Plane, GraduationCap,
 } from 'lucide-react';
 import { TextEffect } from '../../components/ui/TextEffect';
@@ -109,37 +109,15 @@ function ProductsContent() {
             </Link>
           </motion.div>
 
-          <motion.div variants={fadeInUp} className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-3xl mx-auto">
-            {[
-              { Icon: CheckCircle, label: '5,000+ students' },
-              { Icon: Globe2, label: '29+ countries' },
-              { Icon: Award, label: '₹3 Cr+ scholarships' },
-              { Icon: ShieldCheck, label: 'Refundable deposit' },
-            ].map(({ Icon, label }) => (
-              <div key={label} className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-[var(--color-navy)] text-sm font-semibold">
-                <Icon size={16} className="text-[var(--color-axelis)] shrink-0" />
-                <span>{label}</span>
-              </div>
-            ))}
-          </motion.div>
-        </motion.div>
-      </section>
-
-      {/* TRUST BAND. DPIIT / British Council / AIRC */}
- <section className="relative py-10 border-y border-[var(--color-rule)]">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-xs text-[var(--color-dim)] font-semibold">
-              Certified by independent bodies
-            </p>
-            <Link href="/accreditations" className="flex flex-wrap items-center gap-8 opacity-80 hover:opacity-100 transition-opacity group">
-              <img src="/logos/dppit logo.png" alt="DPIIT Startup India" className="h-7 object-contain" />
-              <img src="/trust-badges/british-council-logo.webp" alt="British Council" className="h-5 object-contain" />
-              <img src="/logos/Airc-logo-full-color-centered-LG.jpg" alt="AIRC" className="h-7 rounded-sm object-contain" />
-              <span className="text-xs text-[var(--color-axelis)] group-hover:underline">View certificates &rarr;</span>
+          {/* Headline numbers live on the home page; credentials on
+              /accreditations. This page owns the plans and their pricing. */}
+          <motion.p variants={fadeInUp} className="text-sm text-white/85">
+            5,000+ students placed across 29+ countries &middot;{' '}
+            <Link href="/accreditations" className="text-[var(--dawn-glow)] font-semibold hover:underline">
+              Certified by independent bodies &rarr;
             </Link>
-          </div>
-        </div>
+          </motion.p>
+        </motion.div>
       </section>
 
       {/* PLANS: two charters: GAC and EPC */}
@@ -446,139 +424,18 @@ function ProductsContent() {
         </div>
       </section>
 
-      {/* REAL PROOF GALLERY: payments + declarations + visas (PII redacted) */}
- <section className="relative sec">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
-              The receipts: <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">real students, real declarations, real visas.</span>
-            </h2>
-            <p className="text-[var(--color-navy)]/85 text-lg max-w-3xl mx-auto leading-relaxed">
-              Every plan flows through a PCI-DSS compliant gateway. Every ZTF student signs a Zero Tuition Fee declaration before we process anything. Every visa we claim is a real stamp in a real passport. Personal info is blacked out below; the rest is exactly what we have on file.
-            </p>
-          </div>
-
-          {/* Razorpay payments */}
-          <div className="mb-14">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px bg-[var(--color-tint)] flex-1" />
-              <h3 className="text-[var(--color-axelis)] text-xs font-bold whitespace-nowrap">
-                Razorpay payments
-              </h3>
-              <div className="h-px bg-[var(--color-tint)] flex-1" />
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-              {[
-                { src: '/proof/razorpay-prepay.jpeg', cap: 'ZTF Razorpay page', tone: 'sky' },
-                { src: '/proof/razorpay-receipt-1.jpeg', cap: '₹10,000 paid', tone: 'emerald' },
-                { src: '/proof/razorpay-receipt-2.jpeg', cap: '14 May 2025', tone: 'emerald' },
-                { src: '/proof/razorpay-receipt-3.jpeg', cap: '14 May 2025', tone: 'emerald' },
-              ].map((item, i) => (
-                <div key={i} className="glass-storm p-2.5 group hover:scale-[1.02] transition-transform">
-                  <div className="relative rounded-lg overflow-hidden bg-white aspect-[4/5]">
-                    <img
-                      src={item.src}
-                      alt={`Razorpay payment proof ${i + 1}`}
-                      className="absolute inset-0 w-full h-full object-contain"
-                      loading="lazy"
-                    />
-                  </div>
-                  <p className={`mt-2 text-center text-[11px] font-bold flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-[var(--color-navy)]'}`}>
-                    <BadgeCheck className="w-3 h-3" />
-                    {item.cap}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* ZTF declarations */}
-          <div className="mb-14">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
-              <h3 className="text-[var(--color-axelis)] text-xs font-bold whitespace-nowrap">
-                Zero Tuition Fee declarations
-              </h3>
-              <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
-            </div>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
-              {[
-                { src: '/proof/esign-zft-1.jpeg', cap: 'Sai Krishna P' },
-                { src: '/proof/esign-zft-2.jpeg', cap: 'Karthik Hegde' },
-                { src: '/proof/esign-zft-3.jpeg', cap: 'Hrashikesh Hegde' },
-                { src: '/proof/esign-zft-4.jpeg', cap: 'Monika Nataraj' },
-              ].map((item, i) => (
-                <div key={i} className="glass-storm p-2.5 group hover:scale-[1.02] transition-transform">
-                  <div className="relative rounded-lg overflow-hidden bg-white aspect-[16/9] sm:aspect-[5/4]">
-                    <img
-                      src={item.src}
-                      alt={`Zero Tuition Fee declaration sent to ${item.cap}`}
-                      className="absolute inset-0 w-full h-full object-cover object-top"
-                      loading="lazy"
-                    />
-                  </div>
-                  <p className="mt-2 text-center text-[11px] font-bold text-[var(--color-axelis)] flex items-center justify-center gap-1.5">
-                    <BadgeCheck className="w-3 h-3" />
-                    {item.cap}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Visa + UPI featured */}
-          <div>
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px bg-emerald-400/30 flex-1" />
-              <h3 className="text-emerald-300 text-xs font-bold whitespace-nowrap">
-                Visa + bank transfer proofs
-              </h3>
-              <div className="h-px bg-emerald-400/30 flex-1" />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-              <div className="glass-storm p-3">
-                <div className="relative rounded-xl overflow-hidden bg-white aspect-[3/4]">
-                  <img
-                    src="/proof/visa-poland-raghav.jpeg"
-                    alt="Polish student visa stamp issued to Raghav Verma"
-                    className="absolute inset-0 w-full h-full object-cover"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="pt-3 px-2 text-center">
-                  <p className="text-[var(--color-navy)] font-bold">Raghav Verma &middot; Polish student visa</p>
-                  <p className="text-emerald-300 text-xs font-bold mt-1 inline-flex items-center gap-1.5">
-                    <BadgeCheck className="w-3 h-3" />
-                    Issued by the Embassy of Poland, New Delhi
-                  </p>
-                </div>
-              </div>
-
-              <div className="glass-storm p-3">
-                <div className="relative rounded-xl overflow-hidden bg-black aspect-[3/4]">
-                  <img
-                    src="/proof/upi-transaction-monika.jpeg"
-                    alt="UPI transfer of ₹65,000 from Monika Nataraj to Axelis Overseas Education Private Limited"
-                    className="absolute inset-0 w-full h-full object-cover object-top"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="pt-3 px-2 text-center">
-                  <p className="text-[var(--color-navy)] font-bold">Monika Nataraj &middot; ZTF service fee</p>
-                  <p className="text-emerald-300 text-xs font-bold mt-1 inline-flex items-center gap-1.5">
-                    <BadgeCheck className="w-3 h-3" />
-                    ₹65,000 via HDFC Bank UPI &middot; 30 Sept 2025
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <p className="mt-10 text-center text-[var(--color-dim)] text-xs max-w-2xl mx-auto">
-            Personal contact details, account numbers, and government identifiers are blacked out. Anything you want to verify is available on a call, with the student&apos;s consent.
+      {/* PROOF. The full gallery of payments, declarations and visas lives on
+          /testimonials, which owns it. This is the pointer, not a second copy. */}
+ <section className="relative sec-sm">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
+            The receipts
+          </h2>
+          <p className="text-[var(--color-navy)]/85 leading-relaxed">
+            Every plan flows through a PCI-DSS compliant gateway. Real payments, real declarations
+            and real visas are published in full on the student stories page.
           </p>
-
-          <div className="mt-8 text-center">
+          <div className="mt-7">
             <Link
               href="/testimonials"
               className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-bold hover:text-[var(--color-navy)] transition-colors"
