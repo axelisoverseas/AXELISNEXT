@@ -230,7 +230,7 @@ export default function TestPrepPage() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.h1
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: 'easeOut' }}
             className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6"
@@ -243,7 +243,7 @@ export default function TestPrepPage() {
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1, ease: 'easeOut' }}
             className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10"
@@ -252,7 +252,7 @@ export default function TestPrepPage() {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2, ease: 'easeOut' }}
             className="flex flex-col sm:flex-row gap-4 justify-center"

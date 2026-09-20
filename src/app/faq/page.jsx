@@ -48,7 +48,7 @@ const FAQPage = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[var(--color-axelis)]/10 border border-[var(--color-axelis)]/30 text-white text-sm font-bold mb-8"
           >
@@ -57,7 +57,7 @@ const FAQPage = () => {
           </motion.div>
           
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight"
@@ -69,7 +69,7 @@ const FAQPage = () => {
           </motion.h1>
           
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed"
@@ -79,7 +79,7 @@ const FAQPage = () => {
 
           {/* Premium Search Bar */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="max-w-2xl mx-auto relative group"
@@ -150,7 +150,7 @@ const FAQPage = () => {
                     <motion.div
                       layout
                       key={faq.id}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={false}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.05 }}
                       className={`bg-white rounded-3xl border border-slate-200 overflow-hidden transition-all duration-300 ${openId === faq.id ? 'shadow-e-3 border-stone-200' : 'hover:border-slate-300'}`}

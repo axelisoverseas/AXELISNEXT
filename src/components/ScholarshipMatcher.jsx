@@ -176,7 +176,7 @@ const ScholarshipMatcher = () => {
                             {isSearching ? (
                                 <motion.div
                                     key="loading"
-                                    initial={{ opacity: 0 }}
+                                    initial={false}
                                     animate={{ opacity: 1 }}
                                     exit={{ opacity: 0 }}
                                     className="grid grid-cols-1 md:grid-cols-2 gap-4"
@@ -188,14 +188,14 @@ const ScholarshipMatcher = () => {
                             ) : results.length > 0 ? (
                                 <motion.div
                                     key="results"
-                                    initial={{ opacity: 0, y: 20 }}
+                                    initial={false}
                                     animate={{ opacity: 1, y: 0 }}
                                     className="grid grid-cols-1 md:grid-cols-2 gap-6"
                                 >
                                     {results.map((scholarship, index) => (
                                         <motion.div
                                             key={scholarship.id}
-                                            initial={{ opacity: 0, y: 20 }}
+                                            initial={false}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: index * 0.1 }}
                                             className="bg-white border border-gray-200 hover:border-white rounded-2xl p-6 shadow-e-1 hover:shadow-e-3 transition-all duration-300 group"
@@ -237,7 +237,7 @@ const ScholarshipMatcher = () => {
                             ) : (
                                 <motion.div
                                     key="empty"
-                                    initial={{ opacity: 0 }}
+                                    initial={false}
                                     animate={{ opacity: 1 }}
                                     className="absolute inset-0 flex flex-col items-center justify-center text-gray-500"
                                 >

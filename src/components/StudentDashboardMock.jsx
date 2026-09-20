@@ -64,9 +64,8 @@ const StudentDashboardMock = () => {
                                     {applicationSteps.map((step, index) => (
                                         <motion.div
                                             key={step.id}
-                                            initial={{ opacity: 0, x: -20 }}
-                                            whileInView={{ opacity: 1, x: 0 }}
-                                            viewport={{ once: true }}
+                                            initial={false}
+                                            animate={{ opacity: 1, x: 0 }}
                                             transition={{ delay: index * 0.1 }}
                                             className="relative flex items-center justify-between group"
                                         >

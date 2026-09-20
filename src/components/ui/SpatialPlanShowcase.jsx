@@ -281,7 +281,7 @@ const FacetDetails = ({ data, isLeft, cta, ctaLabel }) => {
   return (
     <motion.div
       variants={ANIMATIONS.container}
-      initial="hidden"
+      initial={false}
       animate="visible"
       exit="exit"
       className={`flex flex-col ${alignClass}`}
@@ -413,9 +413,8 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-80px' }}
+      initial={false}
+      animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
       className="relative mt-24 rounded-[2rem] bg-[var(--color-tint)]/60 border border-[var(--color-rule)] backdrop-blur-xl shadow-e-3 overflow-hidden"
     >

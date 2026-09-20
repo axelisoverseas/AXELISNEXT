@@ -18,10 +18,9 @@ export default function UniversityLogosSection() {
  <section className="bg-transition-sky sec relative overflow-hidden">
       {/* Hero-sized heading, full-bleed centered */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={false}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-        viewport={{ once: true }}
         className="px-4 sm:px-6 lg:px-8 text-center mb-16 relative z-10"
       >
         <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] text-[var(--color-navy)]">

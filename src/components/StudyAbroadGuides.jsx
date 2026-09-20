@@ -86,10 +86,9 @@ const StudyAbroadGuides = () => {
           return (
             <motion.div
               key={guide.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.08 }}
-              viewport={{ once: true }}
               className="group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 hover:border-stone-300 transition-all duration-500 hover:shadow-e-3"
             >
               <div className="relative aspect-video overflow-hidden bg-[var(--color-tint)]">
@@ -171,22 +170,22 @@ const StudyAbroadGuides = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.span
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={false}
+            animate={{ opacity: 1, y: 0 }}
             className="inline-block px-4 py-1.5 bg-[var(--color-tint)] border border-[var(--color-rule)]/20 text-[var(--color-axelis)] text-sm font-bold rounded-full mb-6"
           >
             STUDY ABROAD GUIDES
           </motion.span>
           <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={false}
+            animate={{ opacity: 1, y: 0 }}
             className="text-4xl md:text-5xl font-bold text-[var(--color-navy)] mb-6 tracking-tight"
           >
             Expert <span className="text-[var(--color-axelis)]">Video Tutorials</span>
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
+            initial={false}
+            animate={{ opacity: 1, y: 0 }}
             className="text-xl text-[var(--color-navy)] max-w-3xl mx-auto"
           >
             Fresh videos straight from our YouTube channel — application process, visa
@@ -212,7 +211,7 @@ const StudyAbroadGuides = () => {
       <AnimatePresence>
         {activeVideo && (
           <motion.div
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[var(--color-navy)]/95 backdrop-blur-md"

@@ -56,7 +56,7 @@ export default function Home() {
         <HeroOrbitalBackdrop />
 
         <motion.div
-          initial="hidden"
+          initial={false}
           animate="visible"
           variants={staggerContainer}
           className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
@@ -154,9 +154,8 @@ export default function Home() {
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--storm-accent)]/10 rounded-full blur-[120px] translate-y-1/2 pointer-events-none"></div>
 
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: "-50px" }}
+          initial={false}
+          animate="visible"
           variants={staggerContainer}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         >
@@ -463,8 +462,8 @@ export default function Home() {
             {faqData.slice(0, 5).map((faq, index) => (
               <motion.details
                 key={faq.id}
-                initial={{ opacity: 0, y: 10 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={false}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
                 className="group glass-dawn rounded-2xl overflow-hidden"
               >
@@ -494,10 +493,9 @@ export default function Home() {
       </section>
  <section className="sec-lg bg-dawn-glow relative overflow-hidden">
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={false}
+          animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true }}
           className="max-w-6xl mx-auto px-4 relative z-10"
         >
           <div className="bg-[var(--dawn-horizon)] rounded-[2.5rem] overflow-hidden shadow-e-lift border border-[var(--dawn-glow)]/20 flex flex-col md:flex-row">

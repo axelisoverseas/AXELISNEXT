@@ -141,7 +141,7 @@ const VisaSuccessPredictor = () => {
                     {!isSuccess ? (
                         <motion.div
                             key={currentStep}
-                            initial={{ opacity: 0, x: 20 }}
+                            initial={false}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -20 }}
                             transition={{ duration: 0.3 }}
@@ -236,7 +236,7 @@ const VisaSuccessPredictor = () => {
                     ) : (
                         /* Success State */
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
+                            initial={false}
                             animate={{ opacity: 1, scale: 1 }}
                             className="flex-1 flex flex-col items-center justify-center text-center py-8"
                         >

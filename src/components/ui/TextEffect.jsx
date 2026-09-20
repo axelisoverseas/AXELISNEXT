@@ -1,209 +1,40 @@
 'use client';
 
 import React from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
 import { cn } from '../../lib/utils';
 
-const defaultStaggerTimes = {
-  char: 0.03,
-  word: 0.05,
-  line: 0.1,
-};
-
-const defaultContainerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: { staggerChildren: 0.05 },
-  },
-  exit: {
-    transition: { staggerChildren: 0.05, staggerDirection: -1 },
-  },
-};
-
-const defaultItemVariants = {
-  hidden: { opacity: 0 },
-  visible: { opacity: 1 },
-  exit: { opacity: 0 },
-};
-
-const presetVariants = {
-  blur: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { opacity: 0, filter: 'blur(5px)' },
-      visible: { opacity: 1, filter: 'blur(0px)', transition: { duration: 0.35 } },
-      exit: { opacity: 0, filter: 'blur(5px)' },
-    },
-  },
-  shake: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { x: 0 },
-      visible: { x: [-5, 5, -5, 5, 0], transition: { duration: 0.5 } },
-      exit: { x: 0 },
-    },
-  },
-  scale: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { opacity: 0, scale: 0 },
-      visible: { opacity: 1, scale: 1 },
-      exit: { opacity: 0, scale: 0 },
-    },
-  },
-  fade: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { opacity: 0 },
-      visible: { opacity: 1 },
-      exit: { opacity: 0 },
-    },
-  },
-  slide: {
-    container: defaultContainerVariants,
-    item: {
-      hidden: { opacity: 0, y: 20 },
-      visible: { opacity: 1, y: 0 },
-      exit: { opacity: 0, y: 20 },
-    },
-  },
-};
-
-const AnimationComponent = React.memo(function AnimationComponent({
-  segment,
-  variants,
-  per,
-  segmentWrapperClassName,
-}) {
-  let content;
-  if (per === 'line') {
-    content = (
-      <motion.span variants={variants} className="block">
-        {segment}
-      </motion.span>
-    );
-  } else if (per === 'word') {
-    content = (
-      <motion.span
-        aria-hidden="true"
-        variants={variants}
-        className="inline-block whitespace-pre"
-      >
-        {segment}
-      </motion.span>
-    );
-  } else {
-    content = (
-      <motion.span className="inline-block whitespace-pre">
-        {segment.split('').map((char, charIndex) => (
-          <motion.span
-            key={`char-${charIndex}`}
-            aria-hidden="true"
-            variants={variants}
-            className="inline-block whitespace-pre"
-          >
-            {char}
-          </motion.span>
-        ))}
-      </motion.span>
-    );
-  }
-
-  if (!segmentWrapperClassName) return content;
-  const defaultWrapperClassName = per === 'line' ? 'block' : 'inline-block';
-  return (
-    <span className={cn(defaultWrapperClassName, segmentWrapperClassName)}>
-      {content}
-    </span>
-  );
-});
-
+/**
+ * Renders text. That is the whole component now.
+ *
+ * It used to split the string into per-character or per-word motion spans and
+ * reveal them through AnimatePresence with `hidden`/`visible` variants. Every
+ * heading that used it therefore depended on JavaScript finishing before its
+ * own words became visible, and when the stagger stalled the heading was not
+ * "late" — it was gone. The /faq H1 shipped that way: correct colour, correct
+ * position, opacity 0.
+ *
+ * A headline is the one thing on a page that must never wait on a runtime. The
+ * props are all still accepted so no call site has to change; the animation
+ * ones are simply ignored.
+ */
 export function TextEffect({
   children,
-  per = 'word',
   as = 'p',
-  variants,
   className,
-  preset,
-  delay = 0.12,
-  trigger = true,
-  onAnimationComplete,
   segmentWrapperClassName,
+  // Accepted and ignored — kept so the 16 existing call sites keep compiling.
+  per, variants, preset, delay, trigger, onAnimationComplete, // eslint-disable-line no-unused-vars
+  ...rest
 }) {
-  let segments;
-  if (per === 'line') {
-    segments = String(children).split('\n');
-  } else if (per === 'word') {
-    segments = String(children).split(/(\s+)/);
-  } else {
-    segments = String(children).split('');
-  }
-
-  const MotionTag = motion[as] || motion.p;
-  const selectedVariants = preset
-    ? presetVariants[preset]
-    : { container: defaultContainerVariants, item: defaultItemVariants };
-  const containerVariants = variants?.container || selectedVariants.container;
-  const itemVariants = variants?.item || selectedVariants.item;
-  const ariaLabel = per === 'line' ? undefined : String(children);
-  const stagger = defaultStaggerTimes[per];
-
-  const visible = containerVariants.visible || {};
-  const delayedContainerVariants = {
-    hidden: containerVariants.hidden,
-    visible: {
-      ...visible,
-      transition: {
-        ...(visible.transition || {}),
-        staggerChildren: visible.transition?.staggerChildren || stagger,
-        delayChildren: delay,
-      },
-    },
-    exit: containerVariants.exit,
-  };
-
+  const Tag = as || 'p';
   return (
-    <AnimatePresence>
-      {trigger && (
-        <MotionTag
-          initial="hidden"
-          animate="visible"
-          exit="exit"
-          aria-label={ariaLabel}
-          variants={delayedContainerVariants}
-          className={cn('whitespace-pre-wrap', className)}
-          onAnimationComplete={onAnimationComplete}
-        >
-          {segments.map((segment, index) => (
-            <AnimationComponent
-              key={`${per}-${index}-${segment}`}
-              segment={segment}
-              variants={itemVariants}
-              per={per}
-              segmentWrapperClassName={segmentWrapperClassName}
-            />
-          ))}
-        </MotionTag>
-      )}
-    </AnimatePresence>
+    <Tag className={cn('whitespace-pre-wrap', className)} {...rest}>
+      {children}
+    </Tag>
   );
 }
 
-/**
- * Wrapper kept for API compatibility with existing call sites.
- *
- * It used to defer the reveal until the element scrolled into view using
- * `useInView`, with the ref on a `<span className="contents">`. But a
- * `display:contents` element generates no layout box, so IntersectionObserver
- * (which useInView is built on) can never observe it — the trigger stayed false
- * forever and the heading never rendered, reading as empty space. This is a
- * genuine, environment-independent framer-motion footgun.
- *
- * We now render immediately and let the blur-in play on mount (the same reliable
- * path the direct TextEffect uses). `margin`/`once` are accepted and ignored so
- * no call site needs to change.
- */
+/** Same thing. The in-view variant never reliably fired; see above. */
 export function TextEffectInView({ margin, once, ...props }) { // eslint-disable-line no-unused-vars
   return <TextEffect {...props} />;
 }
