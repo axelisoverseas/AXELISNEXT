@@ -26,17 +26,17 @@ const ASSURANCES = [
 
 export default function TrustBand() {
   return (
-    <section className="relative py-16 border-t border-white/5" aria-labelledby="trust-heading">
+ <section className="relative sec-sm border-t border-[var(--color-rule)]" aria-labelledby="trust-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 id="trust-heading" className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-2">
+        <h2 id="trust-heading" className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight mb-2">
           Why you can check us
         </h2>
-        <p className="text-slate-400 mb-10 max-w-2xl">
+        <p className="text-[var(--color-dim)] mb-10 max-w-2xl">
           Three independent bodies have assessed how we work. The certificates are on file and a counsellor
           will show you the references on the call.
         </p>
 
-        {/* Accreditations — logo, what it means, and the reference to verify */}
+        {/* Accreditations: logo, what it means, and the reference to verify */}
         <Link
           href="/accreditations"
           className="group grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10 focus-visible:outline-none"
@@ -44,14 +44,14 @@ export default function TrustBand() {
           {ACCREDITATIONS.map((a) => (
             <div
               key={a.label}
-              className="flex items-center gap-4 bg-[#141210] border border-white/10 group-hover:border-white/25 rounded-xl p-5 transition-colors"
+              className="flex items-center gap-4 bg-white border border-[var(--color-rule)] group-hover:border-[var(--color-rule)] rounded-xl p-5 transition-colors"
             >
               <div className="w-14 h-14 rounded-lg bg-white flex items-center justify-center shrink-0 p-2">
                 <img src={a.src} alt={a.alt} className="max-w-full max-h-full object-contain" loading="lazy" />
               </div>
               <div className="min-w-0">
-                <div className="text-white font-semibold text-sm leading-tight">{a.label}</div>
-                <div className="text-slate-500 text-xs mt-0.5 truncate">{a.ref}</div>
+                <div className="text-[var(--color-navy)] font-semibold text-sm leading-tight">{a.label}</div>
+                <div className="text-[var(--color-dim)] text-xs mt-0.5 truncate">{a.ref}</div>
               </div>
             </div>
           ))}
@@ -61,16 +61,16 @@ export default function TrustBand() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {ASSURANCES.map(({ Icon, title, body }) => (
             <div key={title} className="flex gap-3.5">
-              <Icon size={18} className="text-white/70 shrink-0 mt-0.5" />
+              <Icon size={18} className="text-[var(--color-navy)]/70 shrink-0 mt-0.5" />
               <div>
-                <div className="text-white font-semibold text-sm mb-1">{title}</div>
-                <p className="text-slate-400 text-sm leading-relaxed">{body}</p>
+                <div className="text-[var(--color-navy)] font-semibold text-sm mb-1">{title}</div>
+                <p className="text-[var(--color-dim)] text-sm leading-relaxed">{body}</p>
               </div>
             </div>
           ))}
         </div>
 
-        <p className="text-xs text-slate-500 mt-10 pt-6 border-t border-white/5">
+        <p className="text-xs text-[var(--color-dim)] mt-10 pt-6 border-t border-[var(--color-rule)]">
           <ShieldCheck size={12} className="inline mr-1.5 -mt-0.5" />
           Axelis Overseas Education Pvt Ltd, incorporated 18 July 2023. CIN U85500CT2023PTC014913,
           on the Ministry of Corporate Affairs register. Corporate office Bengaluru, registered office Bilaspur.

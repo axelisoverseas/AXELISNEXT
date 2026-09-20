@@ -9,8 +9,8 @@ import logoManifest from "@/data/finder-university-logos.json";
 import { COUNTRY_FLAG_CODES } from "@/data/finder-country-codes";
 
 // Midnight Dodger palette (ported from the B2B site).
-const DODGER = "#3590f3";
-const CERULEAN = "#4d7298";
+const DODGER = "#1C6BB0";
+const CERULEAN = "#1C6BB0";
 
 const FILTERS = [
   { id: "all", label: "All destinations" },
@@ -44,13 +44,13 @@ function UniversityCard({ u }) {
   return (
     <motion.div
       variants={item}
-      className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-3.5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+      className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-3.5 shadow-e-1 transition-all hover:-translate-y-0.5 hover:shadow-e-2"
     >
       <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-slate-100 bg-slate-50">
         {logo ? (
           <Image src={logo} alt="" width={32} height={32} unoptimized className="h-8 w-8 object-contain" />
         ) : (
-          <span className="text-xs font-bold text-slate-500">{initials(u.university)}</span>
+          <span className="text-xs font-bold text-[var(--color-dim)]">{initials(u.university)}</span>
         )}
       </div>
       <p className="min-w-0 truncate text-sm font-semibold text-slate-900" title={u.university}>
@@ -70,12 +70,12 @@ function CountryGroup({ country, universities }) {
         )}
         <h3 className="text-sm font-semibold tracking-wide" style={{ color: DODGER }}>
           {country}
-          <span className="ml-2 font-normal normal-case text-slate-500">({universities.length})</span>
+          <span className="ml-2 font-normal normal-case text-[var(--color-dim)]">({universities.length})</span>
         </h3>
       </div>
       <motion.div
         variants={container}
-        initial="hidden"
+        initial={false}
         animate="show"
         className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3"
       >
@@ -94,9 +94,9 @@ function CharterSection({ icon: Icon, title, subtitle, groups, total }) {
       <div className="flex items-center gap-2.5">
         <Icon className="h-5 w-5" style={{ color: DODGER }} />
         <h2 className="text-xl font-bold tracking-tight text-slate-900">{title}</h2>
-        <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold text-slate-600">{total}</span>
+        <span className="rounded-full bg-slate-100 px-2.5 py-0.5 text-xs font-semibold text-[var(--color-dim)]">{total}</span>
       </div>
-      <p className="mt-1 text-sm text-slate-600">{subtitle}</p>
+      <p className="mt-1 text-sm text-[var(--color-dim)]">{subtitle}</p>
       <div className="mt-6 space-y-8">
         {groups.map(([country, universities]) => (
           <CountryGroup key={country} country={country} universities={universities} />
@@ -125,25 +125,25 @@ export default function UniversityFinder() {
   }, [query, filter]);
 
   return (
-    <section className="bg-white px-6 py-14 sm:py-20">
+ <section className="bg-white px-6 sec-sm ">
       <div className="mx-auto max-w-6xl">
         <div className="relative max-w-sm">
           <label htmlFor="university-search" className="sr-only">Search universities</label>
-          <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-slate-500" />
+          <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--color-dim)]" />
           <input
             id="university-search"
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             placeholder="Search a university or country…"
-            className="w-full rounded-full border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-9 text-sm text-slate-900 placeholder:text-slate-500 focus:outline-none focus:ring-2"
+            className="w-full rounded-full border border-slate-200 bg-slate-50 py-2.5 pl-10 pr-9 text-sm text-slate-900 placeholder:text-[var(--color-dim)] focus:outline-none focus:ring-2"
             style={{ "--tw-ring-color": `${DODGER}55` }}
           />
           {query && (
             <button
               onClick={() => setQuery("")}
               aria-label="Clear search"
-              className="absolute right-0 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center text-slate-500 transition-transform hover:text-slate-700 active:scale-90"
+              className="absolute right-0 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center text-[var(--color-dim)] transition-transform hover:text-slate-700 active:scale-90"
             >
               <X className="h-4 w-4" />
             </button>
@@ -159,7 +159,7 @@ export default function UniversityFinder() {
               style={
                 filter === f.id
                   ? { borderColor: DODGER, background: DODGER, color: "#fff" }
-                  : { borderColor: "#e2e8f0", color: "#475569" }
+                  : { borderColor: "#E2E4E9", color: "#5A6072" }
               }
             >
               {f.label}
@@ -167,7 +167,7 @@ export default function UniversityFinder() {
           ))}
         </div>
 
-        <p className="mt-4 text-sm text-slate-600">
+        <p className="mt-4 text-sm text-[var(--color-dim)]">
           Showing <span className="font-semibold text-slate-900">{totalCount}</span>{" "}
           {totalCount === 1 ? "university" : "universities"}
           {query && <> matching &ldquo;{query}&rdquo;</>}.
@@ -175,7 +175,7 @@ export default function UniversityFinder() {
 
         <div className="mt-10 space-y-14">
           {totalCount === 0 && (
-            <p className="text-sm text-slate-500">
+            <p className="text-sm text-[var(--color-dim)]">
               No universities match &ldquo;{query}&rdquo;. Try a different spelling, or{" "}
               <button onClick={() => setQuery("")} className="font-medium underline" style={{ color: CERULEAN }}>
                 clear the search

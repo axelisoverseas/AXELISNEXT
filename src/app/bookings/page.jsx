@@ -19,16 +19,16 @@ export default function BookingsPage() {
 
   return (
     <div className="min-h-screen bg-storm-to-dawn">
-      <section className="bg-gradient-to-br from-[var(--storm-deep)] via-[var(--storm-abyss)] to-[var(--dawn-horizon)] text-white pt-28 pb-16">
+ <section className="bg-gradient-to-br from-[var(--storm-deep)] via-[var(--storm-abyss)] to-[var(--dawn-horizon)] text-white pt-28 pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
             <TextEffect as="span" per="word" preset="blur">Book a</TextEffect>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-stone-300">Free Counselling Call</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--color-axelis)]">Free Counselling Call</span>
           </h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto">
-            Pick a time that works for you. Our counsellors will walk you through eligibility, scholarships, and next steps — end-to-end.
+          <p className="text-lg text-white max-w-2xl mx-auto">
+            Pick a time that works for you. Our counsellors will walk you through eligibility, scholarships, and next steps, end-to-end.
           </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-slate-300">
+          <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white">
             <span className="inline-flex items-center gap-2"><Clock size={16} className="text-white" /> 30-minute session</span>
             <span className="inline-flex items-center gap-2"><Calendar size={16} className="text-white" /> Flexible slots</span>
             <span className="inline-flex items-center gap-2"><CheckCircle size={16} className="text-white" /> Zero obligation</span>
@@ -36,9 +36,9 @@ export default function BookingsPage() {
         </div>
       </section>
 
-      <section className="py-12">
+ <section className="sec-sm">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-e-3 border border-slate-200 overflow-hidden">
             <div
               className="calendly-inline-widget"
               data-url={CALENDLY_URL}

@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Star, X, ExternalLink } from 'lucide-react';
 import { googleReviewsMeta, verifiedReviews, hasVerifiedReviews, getGoogleMapsHref } from '../data/googleReviews';
 
-// Google "G" logomark — inline SVG so it renders without an external asset.
+// Google "G" logomark: inline SVG so it renders without an external asset.
 function GoogleG({ size = 18 }) {
     return (
         <svg viewBox="0 0 48 48" width={size} height={size} aria-hidden="true">
@@ -27,7 +27,7 @@ function Stars({ rating, size = 12 }) {
                     <Star
                         key={i}
                         size={size}
-                        className={filled ? 'text-[#FBBC05] fill-[#FBBC05]' : 'text-slate-500/60'}
+                        className={filled ? 'text-[#FBBC05] fill-[#FBBC05]' : 'text-[var(--color-dim)]/60'}
                     />
                 );
             })}
@@ -61,7 +61,7 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
         };
     }, [open]);
 
-    // No verified reviews yet — render nothing rather than a placeholder rating.
+    // No verified reviews yet, render nothing rather than a placeholder rating.
     if (!hasVerifiedReviews) return null;
 
     const positionClass = position === 'bottom-left'
@@ -78,19 +78,19 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
                 <div
                     role="dialog"
                     aria-label="Google Reviews for Axelis Overseas Bilaspur"
-                    className="mb-3 w-[92vw] max-w-sm bg-[#141210] border-2 border-white/15 rounded-2xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] overflow-hidden animate-in fade-in slide-in-from-bottom-2 duration-200 motion-reduce:animate-none"
+                    className="mb-3 w-[92vw] max-w-sm bg-white border-2 border-[var(--color-rule)] rounded-2xl shadow-e-lift overflow-hidden animate-in fade-in slide-in-from-bottom-2 duration-200 motion-reduce:animate-none"
                 >
-                    <header className="flex items-start justify-between gap-3 p-4 border-b border-white/10 bg-white/[0.03]">
+                    <header className="flex items-start justify-between gap-3 p-4 border-b border-[var(--color-rule)] bg-[var(--color-tint)]">
                         <div className="flex items-center gap-3">
                             <div className="w-9 h-9 rounded-full bg-white flex items-center justify-center shrink-0">
                                 <GoogleG size={18} />
                             </div>
                             <div className="min-w-0">
-                                <div className="text-white text-sm font-bold leading-tight truncate">{googleReviewsMeta.businessName}</div>
+                                <div className="text-[var(--color-navy)] text-sm font-bold leading-tight truncate">{googleReviewsMeta.businessName}</div>
                                 <div className="flex items-center gap-1.5 mt-0.5">
-                                    <span className="text-white font-bold text-sm">{googleReviewsMeta.rating.toFixed(1)}</span>
+                                    <span className="text-[var(--color-navy)] font-bold text-sm">{googleReviewsMeta.rating.toFixed(1)}</span>
                                     <Stars rating={googleReviewsMeta.rating} size={11} />
-                                    <span className="text-slate-400 text-xs">({googleReviewsMeta.totalReviews})</span>
+                                    <span className="text-[var(--color-dim)] text-xs">({googleReviewsMeta.totalReviews})</span>
                                 </div>
                             </div>
                         </div>
@@ -98,28 +98,28 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
                             type="button"
                             onClick={() => setOpen(false)}
                             aria-label="Close reviews"
-                            className="p-1.5 rounded-md text-slate-400 hover:text-white hover:bg-white/10 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]"
+                            className="p-1.5 rounded-md text-[var(--color-dim)] hover:text-[var(--color-navy)] hover:bg-[var(--color-tint)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
                         >
                             <X size={16} />
                         </button>
                     </header>
 
-                    <ul className="max-h-[60vh] overflow-y-auto divide-y divide-white/5">
+                    <ul className="max-h-[60vh] overflow-y-auto divide-y divide-[var(--color-rule)]">
                         {displayReviews.map((r, i) => (
                             <li key={i} className="p-4">
                                 <div className="flex items-center gap-2.5 mb-1.5">
-                                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[var(--storm-electric)]/40 to-[var(--dawn-glow)]/40 flex items-center justify-center text-white text-[11px] font-bold shrink-0">
+                                    <div className="w-7 h-7 rounded-full bg-gradient-to-br from-[var(--storm-electric)]/40 to-[var(--dawn-glow)]/40 flex items-center justify-center text-[var(--color-navy)] text-[11px] font-bold shrink-0">
                                         {r.avatarInitials}
                                     </div>
                                     <div className="min-w-0 flex-1">
-                                        <div className="text-white text-xs font-semibold truncate">{r.name}</div>
+                                        <div className="text-[var(--color-navy)] text-xs font-semibold truncate">{r.name}</div>
                                         <div className="flex items-center gap-1.5">
                                             <Stars rating={r.rating} size={10} />
-                                            <span className="text-slate-500 text-[10px]">· {r.relativeDate}</span>
+                                            <span className="text-[var(--color-dim)] text-[10px]">· {r.relativeDate}</span>
                                         </div>
                                     </div>
                                 </div>
-                                <p className="text-slate-300/85 text-xs leading-relaxed">{r.text}</p>
+                                <p className="text-[var(--color-navy)]/85 text-xs leading-relaxed">{r.text}</p>
                             </li>
                         ))}
                     </ul>
@@ -128,7 +128,7 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center justify-center gap-1.5 p-3 border-t border-white/10 bg-white/[0.03] text-[var(--storm-electric)] hover:text-white hover:bg-white/10 text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]"
+                        className="flex items-center justify-center gap-1.5 p-3 border-t border-[var(--color-rule)] bg-[var(--color-tint)] text-[var(--color-axelis)] hover:text-[var(--color-navy)] hover:bg-[var(--color-tint)] text-xs font-bold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
                     >
                         See all reviews on Google <ExternalLink size={12} />
                     </a>
@@ -141,7 +141,7 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
                 onClick={() => setOpen((v) => !v)}
                 aria-expanded={open}
                 aria-label={`Google reviews: ${googleReviewsMeta.rating} out of 5 stars, ${googleReviewsMeta.totalReviews} reviews. Click to expand.`}
-                className="group inline-flex items-center gap-2.5 pl-2 pr-3.5 py-2 min-h-[44px] bg-white text-slate-900 rounded-full shadow-[0_12px_40px_-8px_rgba(0,0,0,0.5)] hover:shadow-[0_16px_50px_-8px_rgba(0,0,0,0.6)] hover:-translate-y-0.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                className="group inline-flex items-center gap-2.5 pl-2 pr-3.5 py-2 min-h-[44px] bg-white text-slate-900 rounded-full shadow-e-3 hover:shadow-e-3 hover:-translate-y-0.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
                 <span className="w-7 h-7 rounded-full bg-white flex items-center justify-center ring-1 ring-slate-200 shrink-0">
                     <GoogleG size={16} />
@@ -150,7 +150,7 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
                     <span className="font-bold text-sm">{googleReviewsMeta.rating.toFixed(1)}</span>
                     <Stars rating={googleReviewsMeta.rating} size={12} />
                 </span>
-                <span className="hidden sm:inline text-xs text-slate-600 font-semibold">
+                <span className="hidden sm:inline text-xs text-[var(--color-dim)] font-semibold">
                     · {googleReviewsMeta.totalReviews} reviews
                 </span>
             </button>

@@ -30,9 +30,8 @@ const AnimatedSection = ({ children, className = '', animationType = 'fadeInUp',
 
   return (
     <motion.div
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      initial={false}
+      animate="visible"
       variants={selectedVariant}
       className={className}
       style={{ perspective: 1000 }} // Enable 3D perspective

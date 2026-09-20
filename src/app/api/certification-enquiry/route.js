@@ -89,7 +89,7 @@ export async function POST(request) {
     if (contactRes.ok) {
       contactId = (await contactRes.json()).id;
     } else if (contactRes.status === 409) {
-      // Already exists — pull the id out of the conflict message.
+      // Already exists: pull the id out of the conflict message.
       const conflict = await contactRes.json().catch(() => ({}));
       contactId = conflict?.message?.match(/\b(\d{4,})\b/)?.[1] || null;
     } else {
@@ -103,7 +103,7 @@ export async function POST(request) {
     const dealstage = process.env.HUBSPOT_CERT_STAGE_ENQUIRY;
 
     const dealProperties = {
-      dealname: `${name} — ${programTitle || 'Certification enquiry'}`,
+      dealname: `${name}: ${programTitle || 'Certification enquiry'}`,
       ...(pipeline ? { pipeline } : {}),
       ...(dealstage ? { dealstage } : {}),
     };

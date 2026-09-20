@@ -32,8 +32,8 @@ const REFERRAL_SOURCES = [
 ];
 
 const FIELD =
-  'w-full px-4 py-3 min-h-[44px] rounded-xl bg-white/[0.04] border border-white/15 text-white placeholder:text-slate-500 text-sm transition-colors focus:outline-none focus:border-[var(--storm-electric)] focus:ring-2 focus:ring-[var(--storm-electric)]/40';
-const LABEL = 'block text-sm font-medium text-slate-300 mb-1.5';
+  'w-full px-4 py-3 min-h-[44px] rounded-xl bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] placeholder:text-[var(--color-dim)] text-sm transition-colors focus:outline-none focus:border-[var(--color-rule)] focus:ring-2 focus:ring-[var(--color-axelis)]/40';
+const LABEL = 'block text-sm font-medium text-[var(--color-navy)] mb-1.5';
 
 /**
  * Certification enquiry form. Posts to /api/certification-enquiry, which
@@ -92,13 +92,13 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
     return (
       <div
         role="status"
-        className="bg-[#141210] border-2 border-emerald-500/40 rounded-2xl p-8 text-center shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]"
+        className="bg-white border-2 border-emerald-500/40 rounded-2xl p-8 text-center shadow-e-3"
       >
         <div className="w-14 h-14 rounded-full bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center mx-auto mb-5">
           <CheckCircle size={28} className="text-emerald-300" />
         </div>
-        <h3 className="text-xl font-bold text-white mb-2">Enquiry received</h3>
-        <p className="text-slate-300/85 text-sm leading-relaxed">
+        <h3 className="text-xl font-bold text-[var(--color-navy)] mb-2">Enquiry received</h3>
+        <p className="text-[var(--color-navy)]/85 text-sm leading-relaxed">
           A counsellor will call you on {form.phone || 'the number you gave us'} within one working day.
           If you would rather pick a slot yourself, book a discovery call and it goes straight into the diary.
         </p>
@@ -109,7 +109,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
   return (
     <form
       onSubmit={onSubmit}
-      className="bg-[#141210] border-2 border-white/10 rounded-2xl p-6 md:p-7 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]"
+      className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-6 md:p-7 shadow-e-3"
       noValidate
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -143,8 +143,8 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
       <div className="mb-4">
         <label className={LABEL} htmlFor="cert-program">Target programme</label>
         {presetProgram ? (
-          <div className="flex items-center gap-2 px-4 py-3 min-h-[44px] rounded-xl bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/30 text-white text-sm font-semibold">
-            <CheckCircle size={15} className="text-[var(--storm-electric)] shrink-0" />
+          <div className="btn btn-secondary flex text-[var(--color-navy)] text-sm">
+            <CheckCircle size={15} className="text-[var(--color-axelis)] shrink-0" />
             {presetProgram.title}
           </div>
         ) : (
@@ -153,7 +153,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
             {programs.map((p) => (
               <option key={p.slug} value={p.slug}>{p.title}</option>
             ))}
-            <option value="not-sure">Not sure yet — advise me</option>
+            <option value="not-sure">Not sure yet: advise me</option>
           </select>
         )}
       </div>
@@ -183,10 +183,10 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
             return (
               <label
                 key={opt.value}
-                className={`inline-flex items-center px-4 py-2.5 min-h-[44px] rounded-xl border text-sm font-semibold cursor-pointer transition-colors focus-within:ring-2 focus-within:ring-[var(--storm-electric)] ${
+                className={`inline-flex items-center px-4 py-2.5 min-h-[44px] rounded-xl border text-sm font-semibold cursor-pointer transition-colors focus-within:ring-2 focus-within:ring-[var(--color-axelis)] ${
                   active
-                    ? 'bg-[var(--storm-electric)] border-[var(--storm-electric)] text-[var(--storm-deep)]'
-                    : 'bg-white/[0.04] border-white/15 text-slate-200 hover:bg-white/10'
+                    ? 'bg-[var(--storm-electric)] border-[var(--color-rule)] text-[var(--color-navy)]'
+                    : 'bg-[var(--color-tint)] border-[var(--color-rule)] text-[var(--color-navy)] hover:bg-[var(--color-tint)]'
                 }`}
               >
                 <input
@@ -211,14 +211,14 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="inline-flex w-full items-center justify-center gap-2 px-6 py-4 min-h-[44px] bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+        className="btn btn-primary btn-lg w-full disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
       >
         {status === 'sending'
           ? <><Loader2 size={18} className="animate-spin" /> Sending</>
           : <>Send enquiry <Send size={16} /></>}
       </button>
 
-      <p className="text-[11px] text-slate-500 text-center mt-3 leading-relaxed">
+      <p className="text-[11px] text-[var(--color-dim)] text-center mt-3 leading-relaxed">
         We use your details to respond to this enquiry. No spam, and we do not sell your data.
       </p>
     </form>

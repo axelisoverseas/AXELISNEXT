@@ -1,16 +1,25 @@
-import { Montserrat } from "next/font/google";
+import { Lato } from "next/font/google";
+
+// Metabase's stack is Lato with a Helvetica fallback. Lato is SIL OFL and
+// served by Google Fonts, so it is licensed for this use. next/font self-hosts
+// it at build time and emits a size-adjusted fallback, so there is no layout
+// shift on first paint.
+const lato = Lato({
+  variable: "--font-lato",
+  weight: ["400", "700", "900"],
+  style: ["normal", "italic"],
+  subsets: ["latin"],
+  display: "swap",
+});
 import Script from "next/script";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
-const montserrat = Montserrat({
-  subsets: ["latin"],
-  variable: "--font-montserrat",
-  display: 'swap',
-});
-
+// Self-hosted at build time by next/font: no third-party request, and
+// next/font emits a size-adjusted fallback so there is no layout shift.
+// Display face. Ships in one weight. See the type note in globals.css.
 export const metadata = {
   metadataBase: new URL('https://overseeducation.com'),
   icons: {
@@ -18,7 +27,7 @@ export const metadata = {
   },
   title: {
     template: '%s | Axelis Overseas Education',
-    default: 'Axelis Overseas — Certification-first Study Abroad | Outcome Guaranteed | EMI Available',
+    default: 'Axelis Overseas. Certification-first Study Abroad | Outcome Guaranteed | EMI Available',
   },
   description: "India's study-abroad consultancy across 29 destination markets. One counsellor from shortlist to arrival, every fee published before you pay. Bengaluru + Bilaspur.",
   keywords: [
@@ -41,7 +50,7 @@ export const metadata = {
     canonical: 'https://overseeducation.com',
   },
   openGraph: {
-    title: 'Axelis Overseas — Certification-first Study Abroad | Outcome Guaranteed',
+    title: 'Axelis Overseas. Certification-first Study Abroad | Outcome Guaranteed',
     description: 'End-to-end certification programmes with a written outcome guarantee. Application coaching, languages to CEFR B1, executive MBA and PhD support. EMI available.',
     url: 'https://overseeducation.com',
     siteName: 'Axelis Overseas Education',
@@ -52,13 +61,13 @@ export const metadata = {
         url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Axelis Overseas Education — Study Abroad',
+        alt: 'Axelis Overseas Education. Study Abroad',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axelis Overseas — Certification-first Study Abroad',
+    title: 'Axelis Overseas. Certification-first Study Abroad',
     description: 'Certification programmes with a written outcome guarantee. EMI available. Bengaluru + Bilaspur.',
     images: ['/og-image.jpg'],
   },
@@ -114,7 +123,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={montserrat.variable} suppressHydrationWarning>
+    <html lang="en" className={lato.variable} suppressHydrationWarning>
       <head>
         <Script
           id="json-ld-organization"
@@ -122,13 +131,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans antialiased text-[var(--storm-bolt)] bg-[var(--storm-deep)] flex flex-col min-h-screen site-body">
-        <div className="site-wallpaper" aria-hidden="true">
-          <div className="site-wallpaper__layer site-wallpaper__layer--gradient" />
-          <div className="site-wallpaper__layer site-wallpaper__layer--stars" />
-          <div className="site-wallpaper__layer site-wallpaper__layer--stars site-wallpaper__layer--stars-far" />
-          <div className="site-wallpaper__layer site-wallpaper__layer--nebula" />
-        </div>
+      <body className="font-sans antialiased text-[var(--foreground)] bg-[var(--background)] flex flex-col min-h-screen site-body">
         <Navbar />
         <main className="flex-grow relative z-[1]">
           {children}

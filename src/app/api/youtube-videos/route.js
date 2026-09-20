@@ -2,9 +2,9 @@
 // YouTube channel (@axelisoverseas) using YouTube's public RSS feed.
 //
 // Strategy: RSS needs a channel UC... ID, but we only know the @handle.
-// Step 1 — fetch the channel page HTML and extract `"channelId":"UC..."`.
-// Step 2 — fetch the RSS feed for that channel and parse <entry> blocks.
-// Step 3 — return normalized JSON. Results are cached on the server for 1h
+// Step 1: fetch the channel page HTML and extract `"channelId":"UC..."`.
+// Step 2: fetch the RSS feed for that channel and parse <entry> blocks.
+// Step 3: return normalized JSON. Results are cached on the server for 1h
 // (revalidate = 3600) so we don't hammer YouTube on every request.
 
 export const revalidate = 3600;
@@ -33,7 +33,7 @@ async function resolveChannelId(handle) {
         'Mozilla/5.0 (compatible; AxelisBot/1.0; +https://www.overseeducation.com)',
       'Accept-Language': 'en-US,en;q=0.9',
     },
-    // Cache resolution result for a day — channel ID never changes
+    // Cache resolution result for a day, channel ID never changes
     next: { revalidate: 86400 },
   });
   if (!res.ok) throw new Error(`channel page ${res.status}`);

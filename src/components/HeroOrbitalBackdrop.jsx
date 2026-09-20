@@ -14,7 +14,7 @@ const DESCENT_PX = 700;
  * planes and reads as descent rather than as a parallax trick.
  *
  * This is the page's single orchestrated motion moment. Everything below the
- * fold stays still on purpose — scattering effects through every section is
+ * fold stays still on purpose, scattering effects through every section is
  * what makes a site feel generated rather than designed.
  *
  * Driven by a native scroll listener rather than framer's useScroll: this
@@ -67,7 +67,7 @@ export default function HeroOrbitalBackdrop() {
 
   return (
     <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-      {/* Star field — sits behind the planet and rises as you descend */}
+      {/* Star field: sits behind the planet and rises as you descend */}
       <div
         ref={starsRef}
         aria-hidden="true"
@@ -92,7 +92,7 @@ export default function HeroOrbitalBackdrop() {
       {/* Earth */}
       <img
         ref={earthRef}
-        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=2400&q=80&auto=format&fit=crop"
+        src="/photos/photo-1451187580459-43490279c0fa-1600.jpg"
         alt=""
         aria-hidden="true"
         loading="eager"
@@ -100,14 +100,14 @@ export default function HeroOrbitalBackdrop() {
         className="absolute inset-0 w-full h-full object-cover will-change-transform"
       />
 
-      {/* Top and bottom fades — the middle stays clear so the planet reads */}
+      {/* Top and bottom fades, the middle stays clear so the planet reads */}
       <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
 
       {/* Vignette keeps the headline legible over the planet */}
       <div
         aria-hidden="true"
         className="absolute inset-0"
-        style={{ background: 'radial-gradient(ellipse 55% 45% at 50% 55%, rgba(0,0,0,0.65) 0%, transparent 75%)' }}
+        style={{ background: 'radial-gradient(ellipse 55% 45% at 50% 55%, rgba(18,67,110,0.62) 0%, transparent 75%)' }}
       />
 
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />

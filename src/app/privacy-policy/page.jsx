@@ -22,7 +22,7 @@ const LEGAL_NAME = 'Axelis Overseas Education Pvt Ltd';
 export const metadata = {
   title: 'Privacy Policy | Axelis Overseas',
   description:
-    'How Axelis Overseas collects, uses, and protects your personal information — data we collect, how it is used and shared, your rights, and how to reach us.',
+    'How Axelis Overseas collects, uses, and protects your personal information: data we collect, how it is used and shared, your rights, and how to reach us.',
   keywords:
     'privacy policy, data protection, personal information, DPDP Act, GDPR, data security, Axelis Overseas',
   alternates: { canonical: '/privacy-policy' },
@@ -231,26 +231,26 @@ export default function PrivacyPolicyPage() {
   return (
     <div className="min-h-screen bg-storm-to-dawn">
       {/* Hero */}
-      <section className="relative pt-28 pb-16 bg-slate-900 overflow-hidden border-b border-slate-800">
-        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-stone-900/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <section className="relative pt-28 pb-16 bg-[var(--color-tint)] overflow-hidden border-b border-[var(--color-rule)]">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--color-axelis)]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-stone-900/15 border border-stone-700/30 mb-6">
-            <Shield className="w-8 h-8 text-white" />
+          <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-[var(--color-axelis)]/15 border border-[var(--color-axelis)]/30 mb-6">
+            <Shield className="w-8 h-8 text-[var(--color-navy)]" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-5 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-5 tracking-tight">
             Privacy Policy
           </h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-[var(--color-navy)] max-w-2xl mx-auto leading-relaxed">
             At Axelis Overseas, we are committed to protecting your privacy and safeguarding the
             personal information you entrust to us.
           </p>
-          <p className="text-sm text-slate-500 mt-6">Last Updated: {LAST_UPDATED}</p>
+          <p className="text-sm text-[var(--color-dim)] mt-6">Last Updated: {LAST_UPDATED}</p>
         </div>
       </section>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-8">
         {/* Introduction */}
-        <div className="bg-white rounded-2xl shadow-lg border border-slate-200 p-8">
+        <div className="bg-white rounded-2xl shadow-e-2 border border-slate-200 p-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Introduction</h2>
           <p className="text-slate-700 leading-relaxed mb-4">
             {LEGAL_NAME} (&ldquo;Axelis Overseas&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or
@@ -272,7 +272,7 @@ export default function PrivacyPolicyPage() {
             <section
               key={section.id}
               id={section.id}
-              className="bg-white rounded-2xl shadow-lg border border-slate-200 p-8 scroll-mt-24"
+              className="bg-white rounded-2xl shadow-e-2 border border-slate-200 p-8 scroll-mt-24"
             >
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-stone-50 rounded-xl mr-4 shrink-0">
@@ -293,7 +293,7 @@ export default function PrivacyPolicyPage() {
                     <ul className="space-y-2 text-slate-700">
                       {block.list.map((item, j) => (
                         <li key={j} className="flex items-start gap-3">
-                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-stone-700 shrink-0" />
+                          <span className="mt-2 w-1.5 h-1.5 rounded-full bg-[var(--color-axelis)] shrink-0" />
                           <span className="leading-relaxed">{item}</span>
                         </li>
                       ))}
@@ -306,7 +306,7 @@ export default function PrivacyPolicyPage() {
         })}
 
         {/* Contact */}
-        <section className="bg-[var(--storm-deep)] text-white rounded-2xl shadow-lg p-8">
+        <section className="bg-[var(--storm-deep)] text-white rounded-2xl shadow-e-2 p-8">
           <h2 className="text-2xl font-bold mb-3 text-center">Contact Us</h2>
           <p className="text-slate-300 text-center mb-8 max-w-2xl mx-auto">
             If you have any questions about this Privacy Policy or how we handle your data, please
@@ -362,7 +362,7 @@ export default function PrivacyPolicyPage() {
           <div className="mt-8 pt-6 border-t border-white/10 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 bg-stone-900 hover:bg-stone-950 text-white font-semibold rounded-lg transition-colors"
+              className="btn btn-primary"
             >
               Get in Touch
             </Link>

@@ -5,9 +5,9 @@ const OFFER_URL = 'https://www.overseeducation.com/test-prep#tracks';
 const OG_IMAGE = 'https://overseeducation.com/og-image.jpg';
 
 export const metadata = {
-  title: 'IELTS, TOEFL, PTE, SAT, DET Coaching — Premium 1-on-1 Test Prep',
+  title: 'IELTS, TOEFL, PTE, SAT, DET Coaching. Premium 1-on-1 Test Prep',
   description:
-    'Premium 1-on-1 IELTS, TOEFL, PTE Academic, SAT and Duolingo English Test coaching with in-house tutors who have 8+ years of teaching experience. Score-targeted plans from ₹460/session, full-length mocks, flexible scheduling, and secure online enrolment. Bengaluru, India — live online worldwide.',
+    'Premium 1-on-1 IELTS, TOEFL, PTE Academic, SAT and Duolingo English Test coaching with in-house tutors who have 8+ years of teaching experience. Score-targeted plans from ₹460/session, full-length mocks, flexible scheduling, and secure online enrolment. Bengaluru, India, live online worldwide.',
   keywords: [
     'IELTS coaching',
     'IELTS classes',
@@ -43,7 +43,7 @@ export const metadata = {
     type: 'website',
     url: PAGE_URL,
     siteName: 'Axelis Overseas Education',
-    title: 'IELTS, TOEFL, PTE, SAT, DET Coaching — Premium 1-on-1 Test Prep | Axelis Overseas',
+    title: 'IELTS, TOEFL, PTE, SAT, DET Coaching. Premium 1-on-1 Test Prep | Axelis Overseas',
     description:
       'Crack IELTS, TOEFL, PTE, SAT and DET with tutors who have 8+ years of teaching behind them. Live 1-on-1 sessions, full-length mocks, score-targeted plans from ₹460/session. Enrol online in minutes.',
     locale: 'en_IN',
@@ -52,13 +52,13 @@ export const metadata = {
         url: OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: 'Axelis Overseas — Premium 1-on-1 IELTS, TOEFL, PTE, SAT and DET coaching',
+        alt: 'Axelis Overseas: Premium 1-on-1 IELTS, TOEFL, PTE, SAT and DET coaching',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'IELTS, TOEFL, PTE, SAT, DET — Premium 1-on-1 Test Prep | Axelis Overseas',
+    title: 'IELTS, TOEFL, PTE, SAT, DET. Premium 1-on-1 Test Prep | Axelis Overseas',
     description:
       'Live 1-on-1 coaching with 8+ year tutors. Score-targeted plans for IELTS, TOEFL, PTE, SAT and DET. From ₹460/session.',
     images: [OG_IMAGE],
@@ -135,7 +135,7 @@ const buildCourse = ({ name, alt, abstract, price, priceUnit = 'per student per 
     priceCurrency: 'INR',
     price,
     category: 'Premium 1-on-1 tutoring',
-    description: `Indicative starting price (${priceUnit}). Multiple packs available — see /test-prep for the full matrix.`,
+    description: `Indicative starting price (${priceUnit}). Multiple packs available. See /test-prep for the full matrix.`,
   },
   hasCourseInstance: [
     {
@@ -182,7 +182,7 @@ const courses = [
     priceUnit: 'per session',
   }),
   buildCourse({
-    name: 'SAT (Digital) Premium Coaching — Axelis Overseas',
+    name: 'SAT (Digital) Premium Coaching. Axelis Overseas',
     alt: 'Digital SAT (College Board) preparation',
     abstract:
       'Live coaching for the Digital SAT. Reading & Writing modules and the adaptive Math sections, full Bluebook mock cycle. 1-on-1 (min 16 sessions) from ₹760/session; batch of 2 (min 20) from ₹1,175/session; batch of 3 (min 30) from ₹1,600/session.',
@@ -249,7 +249,7 @@ const faq = {
   mainEntity: [
     {
       '@type': 'Question',
-      name: 'Which English test should I take — IELTS, TOEFL, PTE or DET?',
+      name: 'Which English test should I take: IELTS, TOEFL, PTE or DET?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'It depends on the country and university you are applying to. UK and most European universities accept all four; the US accepts TOEFL, IELTS and increasingly DET; Canadian and Australian universities accept IELTS, TOEFL and PTE. The free 30-minute Axelis demo includes a diagnostic that picks the test most likely to get you to your target band fastest.',
@@ -300,7 +300,7 @@ const faq = {
 
 export default function TestPrepLayout({ children }) {
   // Plain <script type="application/ld+json"> tags so the JSON-LD is part of
-  // the initial server-rendered HTML — visible to search-engine crawlers and
+  // the initial server-rendered HTML, visible to search-engine crawlers and
   // generative-AI fetchers on first request, not deferred behind hydration.
   return (
     <>

@@ -82,7 +82,7 @@ export default async function CountryGuidePage({ params }) {
                     </nav>
 
                     <header className="mb-12">
-                        <h1 className="text-4xl md:text-5xl font-black text-white mb-6 flex items-center">
+                        <h1 className="text-4xl md:text-5xl font-black text-[var(--color-navy)] mb-6 flex items-center">
                             <TextEffect as="span" per="word" preset="blur">{`Study in ${data.name} Guide 2024`}</TextEffect>
                         </h1>
                         <p className="text-xl text-gray-600 max-w-3xl leading-relaxed">
@@ -114,7 +114,7 @@ export default async function CountryGuidePage({ params }) {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                     {[1, 2, 3, 4].map(i => (
                                         <Link key={i} href={`/universities/${countryParam}/university-${i}`} className="block group">
-                                            <div className="border border-gray-200 rounded-xl p-4 hover:border-stone-700 hover:shadow-md transition-all">
+                                            <div className="border border-gray-200 rounded-xl p-4 hover:border-stone-700 hover:shadow-e-2 transition-all">
                                                 <h3 className="font-bold text-lg text-slate-800 group-hover:text-stone-900">University {i} of {data.name}</h3>
                                                 <p className="text-sm text-gray-500 mt-1">{data.capital}, {data.name}</p>
                                             </div>
@@ -125,10 +125,10 @@ export default async function CountryGuidePage({ params }) {
                         </div>
 
                         <div className="space-y-6">
-                            <div className="bg-stone-900 border border-stone-900 rounded-2xl p-6 text-white sticky top-24 shadow-xl">
+                            <div className="bg-[var(--color-axelis)] border border-[var(--color-axelis)] rounded-2xl p-6 text-white sticky top-24 shadow-e-3">
                                 <h3 className="text-xl font-bold mb-4">Need personalized guidance?</h3>
-                                <p className="text-stone-100 mb-6 text-sm">Our expert counsellors can help you find the right university and course in {data.name}.</p>
-                                <Link href="/contact" className="w-full block text-center bg-white hover:bg-stone-700 text-slate-900 font-bold py-3 px-4 rounded-xl transition-colors">
+                                <p className="text-[var(--color-navy)] mb-6 text-sm">Our expert counsellors can help you find the right university and course in {data.name}.</p>
+                                <Link href="/contact" className="w-full block text-center bg-white hover:bg-[var(--color-navy)] text-[var(--color-axelis)] font-bold py-3 px-4 rounded-xl transition-colors">
                                     Get Free Consultation
                                 </Link>
                             </div>

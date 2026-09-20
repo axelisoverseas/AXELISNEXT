@@ -13,8 +13,8 @@ import { TextEffectInView } from './ui/TextEffect';
 
 const PLAN_OPTIONS = [
   { value: 'ALL', label: 'All plans' },
-  { value: 'ZTF', label: 'ZTF — Zero Tuition Fee' },
-  { value: 'ZCF', label: 'ZCF — Zero Consultation Fee' },
+  { value: 'ZTF', label: 'ZTF. Zero Tuition Fee' },
+  { value: 'ZCF', label: 'ZCF. Zero Consultation Fee' },
 ];
 
 export default function ScholarshipFinder() {
@@ -59,7 +59,7 @@ export default function ScholarshipFinder() {
   ].filter(Boolean);
 
   return (
-    <section id="finder" className="py-20 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
+ <section id="finder" className="sec bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-100 text-stone-950 text-sm font-semibold mb-4">
@@ -68,16 +68,16 @@ export default function ScholarshipFinder() {
           <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-3">
             Find scholarships across all 29 countries we cover
           </TextEffectInView>
-          <p className="text-slate-600 max-w-2xl mx-auto">
+          <p className="text-[var(--color-dim)] max-w-2xl mx-auto">
             Filter by destination, study level, plan (ZTF / ZCF) or scholarship type.
-            Every listing here is applicable to Indian students going abroad — public or private universities.
+            Every listing here is applicable to Indian students going abroad, public or private universities.
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 md:p-6">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-e-1 p-5 md:p-6">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
             <div className="md:col-span-5 lg:col-span-2 relative">
-              <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+              <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-dim)]" />
               <input
                 type="text"
                 value={query}
@@ -88,7 +88,7 @@ export default function ScholarshipFinder() {
               {query && (
                 <button
                   onClick={() => setQuery('')}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-[var(--color-dim)] hover:text-[var(--color-dim)]"
                   aria-label="Clear search"
                 >
                   <X size={16} />
@@ -137,8 +137,8 @@ export default function ScholarshipFinder() {
                 onClick={() => setPlan(p.value)}
                 className={`px-4 py-2 rounded-full text-xs font-semibold transition-all border ${
                   plan === p.value
-                    ? 'bg-slate-900 text-white border-slate-900'
-                    : 'bg-white text-slate-600 border-slate-200 hover:border-slate-400'
+                    ? 'bg-[var(--color-tint)] text-[var(--color-navy)] border-slate-900'
+                    : 'bg-white text-[var(--color-dim)] border-slate-200 hover:border-slate-400'
                 }`}
               >
                 {p.label}
@@ -147,7 +147,7 @@ export default function ScholarshipFinder() {
             {activeFilters.length > 0 && (
               <button
                 onClick={clearAll}
-                className="ml-auto px-3 py-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 inline-flex items-center gap-1"
+                className="ml-auto px-3 py-1.5 text-xs font-semibold text-[var(--color-dim)] hover:text-slate-900 inline-flex items-center gap-1"
               >
                 <X size={14} /> Clear all
               </button>
@@ -156,10 +156,10 @@ export default function ScholarshipFinder() {
         </div>
 
         <div className="flex items-center justify-between my-6 px-1">
-          <p className="text-sm text-slate-600">
+          <p className="text-sm text-[var(--color-dim)]">
             <span className="font-bold text-slate-900">{filtered.length}</span> scholarship{filtered.length === 1 ? '' : 's'} found
           </p>
-          <p className="hidden sm:block text-xs text-slate-500">
+          <p className="hidden sm:block text-xs text-[var(--color-dim)]">
             Every scholarship is covered by our ZCF plan; ZTF plans open up public-university tracks.
           </p>
         </div>
@@ -173,10 +173,10 @@ export default function ScholarshipFinder() {
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-2xl border border-slate-200 p-5 hover:border-white/60 hover:shadow-lg transition-all flex flex-col"
+                className="group bg-white rounded-2xl border border-slate-200 p-5 hover:border-[var(--color-rule)] hover:shadow-e-2 transition-all flex flex-col"
               >
                 <div className="flex items-start justify-between gap-3 mb-3">
-                  <div className="inline-flex items-center gap-2 text-xs font-semibold text-slate-500">
+                  <div className="inline-flex items-center gap-2 text-xs font-semibold text-[var(--color-dim)]">
                     <span className="text-lg">{c?.flag}</span>
                     <span>{c?.name}</span>
                   </div>
@@ -197,14 +197,14 @@ export default function ScholarshipFinder() {
                 </div>
                 <h3 className="font-bold text-slate-900 mb-1 text-[15px] leading-snug group-hover:text-stone-950 transition-colors flex items-start gap-1.5">
                   <span>{s.name}</span>
-                  <ExternalLink size={13} className="shrink-0 mt-1 text-slate-400 group-hover:text-stone-900 transition-colors" />
+                  <ExternalLink size={13} className="shrink-0 mt-1 text-[var(--color-dim)] group-hover:text-stone-900 transition-colors" />
                 </h3>
-                <p className="text-xs text-slate-600 leading-relaxed mb-3 min-h-[36px]">{s.summary}</p>
+                <p className="text-xs text-[var(--color-dim)] leading-relaxed mb-3 min-h-[36px]">{s.summary}</p>
                 <div className="flex flex-wrap items-center gap-1.5 text-[10px] font-semibold mt-auto">
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-slate-100 text-slate-600">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-slate-100 text-[var(--color-dim)]">
                     <GraduationCap size={12} /> {s.level.join(' / ')}
                   </span>
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-slate-100 text-slate-600">
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-slate-100 text-[var(--color-dim)]">
                     {s.type}
                   </span>
                   <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-100">
@@ -217,25 +217,25 @@ export default function ScholarshipFinder() {
         </div>
 
         {filtered.length === 0 && (
-          <div className="text-center py-16 text-slate-500 text-sm">
-            <Globe2 size={28} className="mx-auto mb-3 text-slate-400" />
+          <div className="text-center py-16 text-[var(--color-dim)] text-sm">
+            <Globe2 size={28} className="mx-auto mb-3 text-[var(--color-dim)]" />
             No scholarships match these filters. Try loosening a filter or <button onClick={clearAll} className="text-stone-900 font-semibold hover:underline">reset all</button>.
           </div>
         )}
 
-        <div className="mt-12 bg-slate-900 rounded-3xl p-10 text-center text-white">
+        <div className="mt-12 bg-[var(--color-tint)] rounded-3xl p-10 text-center text-[var(--color-navy)]">
           <h3 className="text-2xl font-bold mb-3">Not sure which scholarship fits your profile?</h3>
-          <p className="text-slate-300 max-w-xl mx-auto mb-6 text-sm">
-            Our counsellors map scholarships against your academic profile, destination, and plan — free under ZCF and ZTF.
+          <p className="text-[var(--color-navy)] max-w-xl mx-auto mb-6 text-sm">
+            Our counsellors map scholarships against your academic profile, destination, and plan, free under ZCF and ZTF.
           </p>
           <a
             href="/bookings"
-            className="relative overflow-hidden inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-stone-700 to-white text-white font-semibold hover:shadow-lg hover:shadow-stone-700/30 transition-all"
+            className="relative overflow-hidden inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-stone-700 to-white text-[var(--color-navy)] font-semibold hover:shadow-e-2 hover:shadow-stone-700/30 transition-all"
           >
             <span className="relative z-10 inline-flex items-center">
               Book a free counselling call <ArrowRight size={16} className="ml-2" />
             </span>
-            <BorderBeam size={120} duration={8} colorFrom="#ffffff" colorTo="#22d3ee" />
+            <BorderBeam size={120} duration={8} colorFrom="#ffffff" colorTo="#509EE3" />
           </a>
         </div>
       </div>

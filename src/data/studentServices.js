@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// STUDENT SERVICES — sold on their own, not only inside a charter
+// STUDENT SERVICES: sold on their own, not only inside a charter
 // ---------------------------------------------------------------------------
 //
 // These run inside GAC, EPC, Ausbildung and Chancenkarte, and they are also

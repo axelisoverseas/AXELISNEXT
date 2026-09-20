@@ -81,7 +81,7 @@ const INR = (n) => `₹${Number(n).toLocaleString('en-IN')}`;
 function buildComment({ serviceName, candidate, payment, files, naveen }) {
   const tag = naveen ? `<@${naveen}>` : '@Naveen';
   const lines = [
-    `${tag} — new document submission`,
+    `${tag}: new document submission`,
     '',
     `*Service:* ${serviceName}`,
     `*Candidate:* ${candidate.name}`,
@@ -94,7 +94,7 @@ function buildComment({ serviceName, candidate, payment, files, naveen }) {
   if (candidate.partner) lines.push(`*Submitted by partner:* ${candidate.partner}`);
 
   if (payment.reference) lines.push(`*Payment reference:* \`${payment.reference}\``);
-  lines.push(`*Payment status:* ${payment.paid ? 'Paid' : 'NOT YET PAID — confirm before starting work'}`);
+  lines.push(`*Payment status:* ${payment.paid ? 'Paid' : 'NOT YET PAID, confirm before starting work'}`);
   if (payment.amount) lines.push(`*Amount quoted:* ${INR(payment.amount)}`);
   if (payment.documentCount) lines.push(`*Documents billed:* ${payment.documentCount}`);
 

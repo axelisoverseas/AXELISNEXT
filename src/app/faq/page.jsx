@@ -39,25 +39,25 @@ const FAQPage = () => {
   return (
     <div className="min-h-screen bg-storm-to-dawn">
       {/* Premium Hero Section */}
-      <section className="relative pt-32 pb-24 bg-[var(--storm-deep)] border-b border-[var(--storm-electric)]/10 overflow-hidden">
+ <section className="relative pt-32 pb-24 bg-[var(--storm-deep)] border-b border-[var(--storm-electric)]/10 overflow-hidden">
         {/* Abstract Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
-          <div className="absolute top-20 left-10 w-64 h-64 bg-stone-700 rounded-full blur-3xl"></div>
-          <div className="absolute bottom-20 right-10 w-96 h-96 bg-stone-700 rounded-full blur-3xl"></div>
+          <div className="absolute top-20 left-10 w-64 h-64 bg-[var(--color-axelis)] rounded-full blur-3xl"></div>
+          <div className="absolute bottom-20 right-10 w-96 h-96 bg-[var(--color-axelis)] rounded-full blur-3xl"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-stone-700/10 border border-stone-700/30 text-white text-sm font-bold mb-8"
+            className="btn btn-primary space-x-2 text-sm mb-8"
           >
             <HelpCircle size={16} />
             <span>KNOWLEDGE HUB</span>
           </motion.div>
           
           <motion.h1 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight"
@@ -69,17 +69,17 @@ const FAQPage = () => {
           </motion.h1>
           
           <motion.p 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed"
+            className="text-xl text-[var(--color-dim-dark)] max-w-3xl mx-auto mb-12 leading-relaxed"
           >
             Everything you need to know about your study abroad journey. From visa processes and scholarships to living arrangements and loan assistance.
           </motion.p>
 
           {/* Premium Search Bar */}
           <motion.div 
-            initial={{ opacity: 0, y: 20 }}
+            initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
             className="max-w-2xl mx-auto relative group"
@@ -90,7 +90,7 @@ const FAQPage = () => {
             <input 
               type="text" 
               placeholder="Search for questions (e.g. 'Scholarship', 'Visa', 'UK')"
-              className="w-full h-16 pl-16 pr-8 bg-slate-800/50 backdrop-blur-xl border border-slate-700 rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-stone-700 transition-all font-medium text-lg shadow-2xl"
+              className="w-full h-16 pl-16 pr-8 bg-[var(--color-axelis)]/50 backdrop-blur-xl border border-[var(--color-axelis)] rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-stone-700 transition-all font-medium text-lg shadow-e-3"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -99,7 +99,7 @@ const FAQPage = () => {
       </section>
 
       {/* Main Content Area */}
-      <section className="py-24 bg-slate-50">
+ <section className="sec bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12">
             
@@ -107,7 +107,7 @@ const FAQPage = () => {
             <aside className="lg:w-1/4">
               <div className="sticky top-8 space-y-8">
                 {/* Category Filter */}
-                <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-e-1">
                   <h3 className="text-sm font-bold text-slate-900 mb-6">Explore Categories</h3>
                   <div className="flex flex-wrap lg:flex-col gap-2">
                     {categories.map((cat) => (
@@ -116,8 +116,8 @@ const FAQPage = () => {
                         onClick={() => setActiveCategory(cat)}
                         className={`px-5 py-3 rounded-xl text-sm font-bold text-left transition-all ${
                           activeCategory === cat 
-                            ? 'bg-stone-900 text-white shadow-lg' 
-                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                            ? 'bg-[var(--color-tint)] text-[var(--color-navy)] shadow-e-2' 
+                            : 'bg-slate-100 text-[var(--color-dim)] hover:bg-slate-200'
                         }`}
                       >
                         {cat}
@@ -128,15 +128,15 @@ const FAQPage = () => {
 
                 {/* Trust Indicators */}
                 <div className="grid grid-cols-1 gap-4">
-                  <div className="bg-slate-900 p-6 rounded-3xl text-white">
-                    <Globe className="text-white mb-4" size={32} />
+                  <div className="bg-[var(--color-tint)] p-6 rounded-3xl text-[var(--color-navy)]">
+                    <Globe className="text-[var(--color-navy)] mb-4" size={32} />
                     <h4 className="font-bold mb-2">29+ Countries</h4>
-                    <p className="text-slate-400 text-xs leading-relaxed">Expert guidance across 4 continents and 29+ study destinations.</p>
+                    <p className="text-[var(--color-dim)] text-xs leading-relaxed">Expert guidance across 4 continents and 29+ study destinations.</p>
                   </div>
-                  <div className="bg-stone-900 p-6 rounded-3xl text-white shadow-xl">
-                    <ShieldCheck className="text-stone-200 mb-4" size={32} />
+                  <div className="bg-[var(--color-tint)] p-6 rounded-3xl text-[var(--color-navy)] shadow-e-3">
+                    <ShieldCheck className="text-[var(--color-navy)] mb-4" size={32} />
                     <h4 className="font-bold mb-2">95% Visa Success</h4>
-                    <p className="text-stone-100 text-xs leading-relaxed">Highly specialized visa assistance with guaranteed results.</p>
+                    <p className="text-[var(--color-navy)] text-xs leading-relaxed">Highly specialized visa assistance with guaranteed results.</p>
                   </div>
                 </div>
               </div>
@@ -150,22 +150,22 @@ const FAQPage = () => {
                     <motion.div
                       layout
                       key={faq.id}
-                      initial={{ opacity: 0, y: 20 }}
+                      initial={false}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.05 }}
-                      className={`bg-white rounded-3xl border border-slate-200 overflow-hidden transition-all duration-300 ${openId === faq.id ? 'shadow-xl border-stone-200' : 'hover:border-slate-300'}`}
+                      className={`bg-white rounded-3xl border border-slate-200 overflow-hidden transition-all duration-300 ${openId === faq.id ? 'shadow-e-3 border-stone-200' : 'hover:border-slate-300'}`}
                     >
                       <button 
                         onClick={() => toggleFaq(faq.id)}
                         className="w-full p-8 flex items-center justify-between text-left group"
                       >
                         <div className="flex items-start space-x-4">
-                          <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center transition-colors ${openId === faq.id ? 'bg-stone-900 text-white' : 'bg-slate-100 text-slate-400 group-hover:bg-stone-50 group-hover:text-stone-700'}`}>
+                          <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center transition-colors ${openId === faq.id ? 'bg-[var(--color-axelis)] text-white' : 'bg-slate-100 text-[var(--color-dim)] group-hover:bg-stone-50 group-hover:text-[var(--color-axelis)]'}`}>
                             <span className="text-xs font-bold leading-none">{index + 1}</span>
                           </div>
                           <span className={`text-lg font-bold transition-colors ${openId === faq.id ? 'text-stone-900' : 'text-slate-900'}`}>{faq.question}</span>
                         </div>
-                        <div className={`p-2 rounded-full transition-all duration-500 ${openId === faq.id ? 'rotate-180 bg-stone-50 text-stone-900' : 'bg-slate-100 text-slate-400'}`}>
+                        <div className={`p-2 rounded-full transition-all duration-500 ${openId === faq.id ? 'rotate-180 bg-stone-50 text-stone-900' : 'bg-slate-100 text-[var(--color-dim)]'}`}>
                           <ChevronDown size={20} />
                         </div>
                       </button>
@@ -196,10 +196,10 @@ const FAQPage = () => {
               ) : (
                 <div className="text-center py-20 bg-white rounded-[3rem] border border-slate-200 border-dashed">
                   <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Search className="text-slate-300" size={32} />
+                    <Search className="text-[var(--color-navy)]" size={32} />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">No results found</h3>
-                  <p className="text-slate-500 max-w-md mx-auto">Try adjusting your search terms or choosing a different category.</p>
+                  <p className="text-[var(--color-dim)] max-w-md mx-auto">Try adjusting your search terms or choosing a different category.</p>
                   <button 
                     onClick={() => {setSearchTerm(''); setActiveCategory('All');}}
                     className="mt-8 text-stone-900 font-bold hover:underline"
@@ -210,14 +210,14 @@ const FAQPage = () => {
               )}
 
               {/* Bottom CTA Card */}
-              <div className="mt-16 bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] rounded-[3rem] p-12 md:p-16 text-white text-center shadow-2xl relative overflow-hidden group">
+              <div className="mt-16 bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] rounded-[3rem] p-12 md:p-16 text-white text-center shadow-e-3 relative overflow-hidden group">
                 <div className="relative z-10 flex flex-col items-center">
                   <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Still looking for answers?</TextEffectInView>
                   <p className="text-xl text-stone-50/80 mb-10 max-w-2xl leading-relaxed">Our expert counsellors are available 24/7 to provide personalized guidance for your unique profile.</p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link 
                       href="/contact"
-                      className="px-8 py-4 bg-white text-stone-900 text-lg font-bold rounded-2xl hover:bg-slate-50 transition-all hover:-translate-y-1 shadow-xl"
+                      className="px-8 py-4 bg-white text-stone-900 text-lg font-bold rounded-2xl hover:bg-slate-50 transition-all hover:-translate-y-1 shadow-e-3"
                     >
                       Book Free Consultation
                     </Link>
@@ -225,7 +225,7 @@ const FAQPage = () => {
                       href="https://wa.me/919098522711?text=Hey%2C%20I%20have%20questions%20regarding%20studying%20abroad"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-8 py-4 bg-stone-700/20 border border-white/30 backdrop-blur-md text-white text-lg font-bold rounded-2xl hover:bg-stone-700/30 transition-all flex items-center space-x-3"
+                      className="btn btn-primary btn-lg backdrop-blur-md text-lg flex space-x-3"
                     >
                       <MessageCircle size={24} />
                       <span>WhatsApp Experts</span>
@@ -234,8 +234,8 @@ const FAQPage = () => {
                 </div>
                 
                 {/* Visual Flair */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-1000"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl -ml-20 -mb-20"></div>
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-tint)] rounded-full blur-3xl -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-1000"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--color-tint)] rounded-full blur-3xl -ml-20 -mb-20"></div>
               </div>
             </main>
           </div>

@@ -12,16 +12,16 @@ import { refundPolicy, formatINR } from '../data/certificationPrograms';
  */
 export default function CancellationRefundBlock() {
   return (
-    <section id="cancellation-refund" className="relative py-14 scroll-mt-24">
+ <section id="cancellation-refund" className="relative sec-sm scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#141210] border-2 border-white/12 rounded-2xl p-6 md:p-8 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-6 md:p-8 shadow-e-3">
           <div className="flex items-start gap-4">
-            <div className="w-11 h-11 rounded-xl bg-white/8 border border-white/12 flex items-center justify-center shrink-0">
-              <RotateCcw size={20} className="text-white" />
+            <div className="w-11 h-11 rounded-xl bg-[var(--color-tint)] border border-[var(--color-rule)] flex items-center justify-center shrink-0">
+              <RotateCcw size={20} className="text-[var(--color-navy)]" />
             </div>
             <div className="min-w-0 flex-1">
-              <h2 className="text-2xl font-bold text-white tracking-tight mb-4">Cancellation &amp; Refund</h2>
-              <ul className="space-y-2 text-slate-300/90 leading-relaxed mb-6">
+              <h2 className="text-2xl font-bold text-[var(--color-navy)] tracking-tight mb-4">Cancellation &amp; Refund</h2>
+              <ul className="space-y-2 text-[var(--color-navy)]/90 leading-relaxed mb-6">
                 <li>
                   {refundPolicy.coolingOffBusinessDays}-business-day cooling-off from enrolment: full refund minus{' '}
                   {formatINR(refundPolicy.adminFee)} admin fee.
@@ -31,7 +31,7 @@ export default function CancellationRefundBlock() {
               </ul>
               <Link
                 href={refundPolicy.href}
-                className="inline-flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-xl bg-white/8 hover:bg-white/12 border border-white/15 text-white font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                className="btn btn-secondary text-[var(--color-navy)] text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
               >
                 Read the full Cancellation &amp; Refund Policy <ArrowRight aria-hidden="true" size={15} />
               </Link>

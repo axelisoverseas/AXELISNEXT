@@ -15,25 +15,24 @@ const [col1, col2, col3, col4] = splitInto(universityLogos, 4);
 
 export default function UniversityLogosSection() {
   return (
-    <section className="bg-transition-sky py-24 relative overflow-hidden">
+ <section className="bg-transition-sky sec relative overflow-hidden">
       {/* Hero-sized heading, full-bleed centered */}
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
+        initial={false}
+        animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-        viewport={{ once: true }}
         className="px-4 sm:px-6 lg:px-8 text-center mb-16 relative z-10"
       >
-        <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] text-white">
+        <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] text-[var(--color-navy)]">
           30k+ universities.
         </h2>
-        <p className="text-slate-300 mt-6 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-          A snapshot of the institutions Axelis students have been placed at — from Oxford and
+        <p className="text-[var(--color-navy)] mt-6 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+          A snapshot of the institutions Axelis students have been placed at, from Oxford and
           MIT to ETH Zürich, NUS and beyond.
         </p>
       </motion.div>
 
-      {/* Marquee — full-width. Column count climbs with breakpoint so the row
+      {/* Marquee: full-width. Column count climbs with breakpoint so the row
           never overflows the viewport (which would clip cards on both sides). */}
       <div className="w-full flex justify-center gap-6 px-4 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[720px] overflow-hidden">
         <LogoColumn logos={col1} duration={26} />

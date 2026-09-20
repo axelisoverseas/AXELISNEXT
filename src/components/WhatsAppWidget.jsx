@@ -175,9 +175,9 @@ const WhatsAppWidget = () => {
         
         {/* Chat Window */}
         {isOpen && (
-          <div className="bg-white rounded-2xl shadow-2xl border border-gray-200 mb-4 overflow-hidden animate-in slide-in-from-bottom-4 duration-300">
+          <div className="bg-white rounded-2xl shadow-e-3 border border-gray-200 mb-4 overflow-hidden animate-in slide-in-from-bottom-4 duration-300">
             {/* Header */}
-            <div className="bg-gradient-to-r from-green-500 to-green-600 text-white p-4">
+            <div className="bg-gradient-to-r from-green-500 to-green-600 text-[var(--color-navy)] p-4">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center">
@@ -196,7 +196,7 @@ const WhatsAppWidget = () => {
                     e.stopPropagation();
                     setIsOpen(false);
                   }}
-                  className="text-white hover:text-green-200 transition-colors p-1 rounded cursor-pointer"
+                  className="text-[var(--color-navy)] hover:text-green-200 transition-colors p-1 rounded cursor-pointer"
                   type="button"
                   aria-label="Close WhatsApp chat"
                 >
@@ -246,7 +246,7 @@ const WhatsAppWidget = () => {
                         onClick={() => setFormData({...formData, degree: 'UG'})}
                         className={`p-2.5 text-sm font-semibold rounded-xl border transition-all ${
                           formData.degree === 'UG' 
-                            ? 'bg-green-600 border-green-600 text-white shadow-md' 
+                            ? 'bg-green-600 border-green-600 text-white shadow-e-2' 
                             : 'bg-white border-gray-200 text-gray-600 hover:border-green-200'
                         }`}
                       >
@@ -257,7 +257,7 @@ const WhatsAppWidget = () => {
                         onClick={() => setFormData({...formData, degree: 'PG'})}
                         className={`p-2.5 text-sm font-semibold rounded-xl border transition-all ${
                           formData.degree === 'PG' 
-                            ? 'bg-green-600 border-green-600 text-white shadow-md' 
+                            ? 'bg-green-600 border-green-600 text-white shadow-e-2' 
                             : 'bg-white border-gray-200 text-gray-600 hover:border-green-200'
                         }`}
                       >
@@ -269,7 +269,7 @@ const WhatsAppWidget = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-slate-900 hover:bg-black text-white py-3 rounded-xl text-sm font-bold shadow-lg transform transition-transform active:scale-95 flex items-center justify-center space-x-2 disabled:opacity-50"
+                    className="w-full bg-[var(--color-tint)] hover:bg-black text-[var(--color-navy)] py-3 rounded-xl text-sm font-bold shadow-e-2 transform transition-transform active:scale-95 flex items-center justify-center space-x-2 disabled:opacity-50"
                   >
                     <span>Start Chatting</span>
                     <Send size={16} />
@@ -331,7 +331,7 @@ const WhatsAppWidget = () => {
                     />
                     <button
                       onClick={() => handleSendMessage()}
-                      className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-xl text-sm font-bold flex items-center justify-center space-x-2 shadow-md"
+                      className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-4 rounded-xl text-sm font-bold flex items-center justify-center space-x-2 shadow-e-2"
                     >
                       <Send size={18} />
                       <span>Message on WhatsApp</span>
@@ -346,7 +346,7 @@ const WhatsAppWidget = () => {
         {/* Floating Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className={`bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-110 ${
+          className={`bg-green-500 hover:bg-green-600 text-white rounded-full p-4 shadow-e-2 hover:shadow-e-3 transition-all duration-300 transform hover:scale-110 ${
             isOpen ? 'rotate-180' : ''
           }`}
           style={{

@@ -4,7 +4,7 @@ import { financing } from '../data/certificationPrograms';
 
 // Typographic wordmarks rather than logo files: we do not hold redistribution
 // rights to the partner brand assets. Only gateways that are actually live
-// appear here — a partner is listed when the integration is real, not before.
+// appear here: a partner is listed when the integration is real, not before.
 const GATEWAYS = [
   { name: 'Cashfree', note: 'Live' },
 ];
@@ -13,11 +13,11 @@ const CARD_NETWORKS = ['Visa', 'Mastercard', 'Amex', 'RuPay'];
 
 export default function PaymentPartnersStrip() {
   return (
-    <section className="relative py-14 border-t border-white/5" aria-labelledby="payment-partners-heading">
+ <section className="relative sec-sm border-t border-[var(--color-rule)]" aria-labelledby="payment-partners-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           id="payment-partners-heading"
-          className="text-sm text-slate-500 text-center mb-8"
+          className="text-sm text-[var(--color-dim)] text-center mb-8"
         >
           Payment &amp; financing partners
         </h2>
@@ -26,9 +26,9 @@ export default function PaymentPartnersStrip() {
           {GATEWAYS.map((g) => (
             <div
               key={g.name}
-              className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-white/[0.04] border border-white/10"
+              className="btn btn-secondary"
             >
-              <span className="text-white font-bold tracking-tight">{g.name}</span>
+              <span className="text-[var(--color-navy)] font-bold tracking-tight">{g.name}</span>
               <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/15 border border-emerald-400/30 text-emerald-300">
                 {g.note}
               </span>
@@ -41,14 +41,14 @@ export default function PaymentPartnersStrip() {
           {CARD_NETWORKS.map((c) => (
             <span
               key={c}
-              className="px-3 py-1.5 rounded-lg bg-white/[0.03] border border-white/10 text-slate-400 text-xs font-semibold"
+              className="px-3 py-1.5 rounded-lg bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-dim)] text-xs font-semibold"
             >
               {c}
             </span>
           ))}
         </div>
 
-        <p className="flex items-center justify-center gap-2 text-xs text-slate-500 text-center max-w-2xl mx-auto">
+        <p className="flex items-center justify-center gap-2 text-xs text-[var(--color-dim)] text-center max-w-2xl mx-auto">
           <CreditCard size={13} className="shrink-0" />
           {financing.strip}
         </p>

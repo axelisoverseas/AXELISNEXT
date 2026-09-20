@@ -1,6 +1,6 @@
 // Country data for /countries/[country] pages.
 // `details` is populated only where the B2B partner enablement pack provided a
-// brochure — figures are copied verbatim from that source, never estimated.
+// brochure: figures are copied verbatim from that source, never estimated.
 // Countries without a `details` block still get a page, just without brochure
 // facts, so we never fabricate numbers for the ones the pack doesn't cover.
 

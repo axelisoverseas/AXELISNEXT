@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------------------
 //
 // The site has claimed since launch that "every certificate carries a unique ID
-// that anyone can check against our register" — on the trust band, on every
+// that anyone can check against our register", on the trust band, on every
 // programme page, and now in the Terms of Service and Delivery Policy. Until
 // this file existed there was no register, so the claim failed the moment
 // anyone tested it. A checkable claim that fails when checked is worse than no
@@ -14,7 +14,7 @@
 // to correctly beats a schema nobody maintains.
 //
 // WHEN YOU ISSUE A REAL CERTIFICATE, append an entry here. `id` is what the
-// student types into /verify. Never reuse an id, and never delete an entry —
+// student types into /verify. Never reuse an id, and never delete an entry
 // revoke it instead, so a revoked certificate reports as revoked rather than
 // as "not found", which is indistinguishable from a typo.
 // ---------------------------------------------------------------------------
@@ -33,9 +33,9 @@ export const certificateRegister = [
   {
     id: SPECIMEN_ID,
     status: 'specimen',
-    holder: 'Specimen — not issued to a student',
+    holder: 'Specimen: not issued to a student',
     programme: 'Global Career Launch',
-    certificate: 'Axelis Certified — Global Career Launch',
+    certificate: 'Axelis Certified. Global Career Launch',
     issued: null,
     note:
       'This entry exists so the specimen certificate published on this page resolves. It is not a record of any student and confers nothing.',

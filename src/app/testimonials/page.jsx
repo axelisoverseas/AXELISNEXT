@@ -13,7 +13,7 @@ const testimonials = allTestimonials.filter(
   (t) => t.image && !t.image.includes('ui-avatars.com')
 );
 
-// Video testimonials — students who recorded a review on camera.
+// Video testimonials: students who recorded a review on camera.
 // `youtubeId` for embedded YouTube Shorts, `src` for self-hosted mp4.
 const videoTestimonials = [
   {
@@ -56,7 +56,7 @@ const TestimonialRealisticGlobe = dynamic(
     ssr: false,
     loading: () => (
       <div className="w-full h-[500px] rounded-2xl glass-storm flex items-center justify-center">
-        <div className="animate-spin h-12 w-12 border-2 border-[var(--storm-electric)]/40 border-t-[var(--storm-electric)] rounded-full" />
+        <div className="animate-spin h-12 w-12 border-2 border-[var(--color-rule)]/40 border-t-[var(--storm-electric)] rounded-full" />
       </div>
     ),
   }
@@ -104,7 +104,7 @@ function TestimonialCard({ testimonial, index, onCountryFocus }) {
             <img
               src={testimonial.image}
               alt={testimonial.name}
-              className={`w-16 h-16 rounded-full border-2 object-cover transition-all duration-200 ${isExpanded ? 'border-[var(--storm-electric)] shadow-lg shadow-[var(--storm-electric)]/30' : 'border-white/20'}`}
+              className={`w-16 h-16 rounded-full border-2 object-cover transition-all duration-200 ${isExpanded ? 'border-[var(--color-rule)] shadow-e-2 shadow-e-2/30' : 'border-[var(--color-rule)]'}`}
             />
           </div>
         )}
@@ -112,15 +112,15 @@ function TestimonialCard({ testimonial, index, onCountryFocus }) {
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between mb-3">
             <div className="space-y-1">
-              <h3 className={`text-lg font-bold mb-1 transition-colors ${isExpanded ? 'text-white' : 'text-[var(--storm-electric)]'}`}>
+              <h3 className={`text-lg font-bold mb-1 transition-colors ${isExpanded ? 'text-[var(--color-navy)]' : 'text-[var(--color-axelis)]'}`}>
                 {testimonial.name}
               </h3>
-              <div className="flex items-center text-stone-200/85 text-sm mb-1">
+              <div className="flex items-center text-[var(--color-navy)]/85 text-sm mb-1">
                 <GraduationCap className="w-4 h-4 mr-1.5" />
                 <span>{testimonial.course}</span>
               </div>
-              <div className="text-white/85 text-sm">{testimonial.university}</div>
-              <div className="flex items-center text-white/55 text-sm mt-1">
+              <div className="text-[var(--color-navy)]/85 text-sm">{testimonial.university}</div>
+              <div className="flex items-center text-[var(--color-navy)]/55 text-sm mt-1">
                 <MapPin className="w-3 h-3 mr-1.5" />
                 <span>{testimonial.country}</span>
               </div>
@@ -128,19 +128,19 @@ function TestimonialCard({ testimonial, index, onCountryFocus }) {
 
             <div className="flex space-x-1">
               {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-[var(--dawn-glow)] fill-current" />
+                <Star key={i} className="w-4 h-4 text-[var(--color-axelis)] fill-current" />
               ))}
             </div>
           </div>
 
-          <div className={`text-white/85 text-sm leading-relaxed transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-16 overflow-hidden'}`}>
-            <span className="text-[var(--storm-electric)]/80 font-medium">&ldquo;</span>
+          <div className={`text-[var(--color-navy)]/85 text-sm leading-relaxed transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-16 overflow-hidden'}`}>
+            <span className="text-[var(--color-axelis)]/80 font-medium">&ldquo;</span>
             {testimonial.content}
-            <span className="text-[var(--storm-electric)]/80 font-medium">&rdquo;</span>
+            <span className="text-[var(--color-axelis)]/80 font-medium">&rdquo;</span>
           </div>
 
           {!isExpanded && testimonial.content.length > 100 && (
-            <div className="text-stone-300/70 text-xs mt-2">Hover to read more</div>
+            <div className="text-[var(--color-navy)]/70 text-xs mt-2">Hover to read more</div>
           )}
         </div>
       </div>
@@ -172,8 +172,8 @@ export default function TestimonialsPage() {
       } else {
         el.scrollIntoView({ behavior: 'smooth', block: 'center' });
       }
-      el.classList.add('ring-2', 'ring-[var(--storm-electric)]', 'ring-opacity-80');
-      setTimeout(() => el.classList.remove('ring-2', 'ring-[var(--storm-electric)]', 'ring-opacity-80'), 2200);
+      el.classList.add('ring-2', 'ring-[var(--color-axelis)]', 'ring-opacity-80');
+      setTimeout(() => el.classList.remove('ring-2', 'ring-[var(--color-axelis)]', 'ring-opacity-80'), 2200);
     };
     window.addEventListener('testimonialSelect', handler);
     return () => window.removeEventListener('testimonialSelect', handler);
@@ -182,11 +182,11 @@ export default function TestimonialsPage() {
   const uniqueCountries = [...new Set(testimonials.map((t) => t.country))].length;
 
   return (
-    <div className="min-h-screen text-slate-100">
-      <section className="relative py-20 lg:py-28 overflow-hidden">
+    <div className="min-h-screen text-[var(--color-navy)]">
+ <section className="relative sec overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
-            src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=2400&q=80&auto=format&fit=crop"
+            src="/photos/photo-1517486808906-6ca8b3f04846-1600.jpg"
             alt=""
             aria-hidden="true"
             loading="eager"
@@ -194,41 +194,41 @@ export default function TestimonialsPage() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-[var(--storm-deep)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.65)_0%,transparent_75%)]" />
-          <div className="absolute top-10 left-10 w-72 h-72 bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(18,67,110,0.62)_0%,transparent_75%)]" />
+          <div className="absolute top-10 left-10 w-72 h-72 bg-white/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-10 right-10 w-80 h-80 bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="flex justify-center mb-6">
             {Array.from({ length: 5 }).map((_, i) => (
-              <Star key={i} className="text-[var(--dawn-glow)] fill-current" size={26} />
+              <Star key={i} className="text-[var(--color-axelis)] fill-current" size={26} />
             ))}
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-            Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">globe.</span>
+            Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--dawn-glow)]">globe.</span>
           </h1>
-          <p className="text-xl md:text-2xl text-slate-300/90 max-w-3xl mx-auto leading-relaxed mb-10">
+          <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10">
             Real placements across 29+ countries. Named students, signed declarations, verifiable visas.
           </p>
 
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="glass-storm py-4">
-              <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">5,000+</div>
-              <div className="text-stone-200/85 text-[10px] md:text-xs mt-1">Students placed</div>
+              <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">5,000+</div>
+              <div className="text-[var(--color-dim)] text-[10px] md:text-xs mt-1">Students placed</div>
             </div>
             <div className="glass-storm py-4">
-              <div className="text-2xl md:text-3xl font-bold text-[var(--storm-electric)]">29+</div>
-              <div className="text-stone-200/85 text-[10px] md:text-xs mt-1">Countries</div>
+              <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">29+</div>
+              <div className="text-[var(--color-dim)] text-[10px] md:text-xs mt-1">Countries</div>
             </div>
             <div className="glass-storm py-4">
-              <div className="text-2xl md:text-3xl font-bold text-[var(--dawn-glow)]">100%</div>
-              <div className="text-stone-200/85 text-[10px] md:text-xs mt-1">Visa success</div>
+              <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">100%</div>
+              <div className="text-[var(--color-dim)] text-[10px] md:text-xs mt-1">Visa success</div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="relative pb-20">
+ <section className="relative pb-20">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div className="lg:sticky lg:top-28">
@@ -241,10 +241,10 @@ export default function TestimonialsPage() {
 
             <div className="relative">
               <div className="mb-6">
-                <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-                  Real student <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">experiences</span>
+                <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] mb-2">
+                  Real student <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">experiences</span>
                 </h2>
-                <p className="text-stone-200/80 text-sm">Hover a card to rotate the globe to that country.</p>
+                <p className="text-[var(--color-navy)]/80 text-sm">Hover a card to rotate the globe to that country.</p>
               </div>
 
               <div className="testimonial-scroller space-y-4 max-h-[640px] overflow-y-auto pr-2 scrollbar-thin">
@@ -258,14 +258,14 @@ export default function TestimonialsPage() {
                 ))}
               </div>
 
-              <div className="mt-6 pt-4 border-t border-white/10 grid grid-cols-2 gap-4 text-center">
+              <div className="mt-6 pt-4 border-t border-[var(--color-rule)] grid grid-cols-2 gap-4 text-center">
                 <div className="glass-storm py-3">
-                  <div className="text-2xl font-bold text-[var(--storm-electric)]">{testimonials.length}</div>
-                  <div className="text-stone-200/80 text-xs">Featured stories</div>
+                  <div className="text-2xl font-bold text-[var(--color-axelis)]">{testimonials.length}</div>
+                  <div className="text-[var(--color-navy)]/80 text-xs">Featured stories</div>
                 </div>
                 <div className="glass-storm py-3">
-                  <div className="text-2xl font-bold text-[var(--storm-electric)]">{uniqueCountries}</div>
-                  <div className="text-stone-200/80 text-xs">On this page</div>
+                  <div className="text-2xl font-bold text-[var(--color-axelis)]">{uniqueCountries}</div>
+                  <div className="text-[var(--color-navy)]/80 text-xs">On this page</div>
                 </div>
               </div>
             </div>
@@ -273,15 +273,15 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Video reviews — students who filmed a thank-you on camera */}
-      <section className="relative py-16">
+      {/* Video reviews: students who filmed a thank-you on camera */}
+ <section className="relative sec-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 inline-flex items-center gap-3">
-              <Play className="w-7 h-7 text-[var(--storm-electric)]" />
-              Watch them <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">tell it on camera.</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-3 inline-flex items-center gap-3">
+              <Play className="w-7 h-7 text-[var(--color-axelis)]" />
+              Watch them <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">tell it on camera.</span>
             </h2>
-            <p className="text-slate-300/85 text-base md:text-lg max-w-2xl mx-auto">
+            <p className="text-[var(--color-navy)]/85 text-base md:text-lg max-w-2xl mx-auto">
               Real students, in their own words, after their visa cleared.
             </p>
           </div>
@@ -289,7 +289,7 @@ export default function TestimonialsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
             {videoTestimonials.map((v) => (
               <div key={v.id} className="glass-storm p-5 group">
-                <div className="relative aspect-[9/16] sm:aspect-video rounded-xl overflow-hidden bg-black border border-white/10">
+                <div className="relative aspect-[9/16] sm:aspect-video rounded-xl overflow-hidden bg-black border border-[var(--color-rule)]">
                   {v.youtubeId ? (
                     <iframe
                       className="absolute inset-0 w-full h-full"
@@ -312,9 +312,9 @@ export default function TestimonialsPage() {
                 </div>
                 <div className="pt-4 flex items-start justify-between gap-3">
                   <div>
-                    <h3 className="text-white font-bold text-lg">{v.name}</h3>
-                    <p className="text-stone-200/85 text-sm">{v.course}</p>
-                    <p className="text-white/70 text-sm">{v.university}</p>
+                    <h3 className="text-[var(--color-navy)] font-bold text-lg">{v.name}</h3>
+                    <p className="text-[var(--color-navy)]/85 text-sm">{v.course}</p>
+                    <p className="text-[var(--color-navy)]/70 text-sm">{v.university}</p>
                   </div>
                   <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-400/30 text-emerald-300 text-xs font-bold whitespace-nowrap">
                     <BadgeCheck className="w-3.5 h-3.5" />
@@ -327,15 +327,15 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Recent placements — visa-received students without a written quote yet */}
-      <section className="relative py-16">
+      {/* Recent placements: visa-received students without a written quote yet */}
+ <section className="relative sec-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-3 inline-flex items-center gap-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-3 inline-flex items-center gap-3">
               <BadgeCheck className="w-7 h-7 text-emerald-300" />
-              Recent <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">placements with visa in hand.</span>
+              Recent <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">placements with visa in hand.</span>
             </h2>
-            <p className="text-slate-300/85 text-base md:text-lg max-w-2xl mx-auto">
+            <p className="text-[var(--color-navy)]/85 text-base md:text-lg max-w-2xl mx-auto">
               Fall 2025 cohort. Classes started.
             </p>
           </div>
@@ -346,13 +346,13 @@ export default function TestimonialsPage() {
                 <div className="text-3xl mt-0.5" aria-hidden>{p.flag}</div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center justify-between gap-2 mb-1">
-                    <h3 className="text-white font-bold text-base truncate">{p.name}</h3>
-                    <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[var(--storm-electric)]/15 border border-[var(--storm-electric)]/30 text-[var(--storm-electric)] whitespace-nowrap">
+                    <h3 className="text-[var(--color-navy)] font-bold text-base truncate">{p.name}</h3>
+                    <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[var(--color-tint)] border border-[var(--color-rule)]/30 text-[var(--color-axelis)] whitespace-nowrap">
                       {p.plan}
                     </span>
                   </div>
-                  <p className="text-stone-200/85 text-sm mb-1 leading-snug">{p.course}</p>
-                  <p className="text-white/70 text-xs mb-2 leading-snug">{p.university}</p>
+                  <p className="text-[var(--color-navy)]/85 text-sm mb-1 leading-snug">{p.course}</p>
+                  <p className="text-[var(--color-navy)]/70 text-xs mb-2 leading-snug">{p.university}</p>
                   <div className="inline-flex items-center gap-1.5 text-emerald-300 text-xs font-semibold">
                     <BadgeCheck className="w-3.5 h-3.5" />
                     Visa received &middot; {p.country}
@@ -364,14 +364,14 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Proof gallery — payments, declarations, visas, transfers (PII redacted) */}
-      <section className="relative py-20">
+      {/* Proof gallery: payments, declarations, visas, transfers (PII redacted) */}
+ <section className="relative sec">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 tracking-tight">
-              The receipts &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">real payments, real declarations, real visas.</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] mb-4 tracking-tight">
+              The receipts: <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">real payments, real declarations, real visas.</span>
             </h2>
-            <p className="text-slate-300/85 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
+            <p className="text-[var(--color-navy)]/85 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
               Every plan flows through a PCI-DSS compliant gateway. Every ZTF student signs a Zero Tuition Fee declaration before we process anything. Every visa we claim is a real stamp in a real passport. Personal info is blacked out below; the rest is exactly what we have on file.
             </p>
           </div>
@@ -379,11 +379,11 @@ export default function TestimonialsPage() {
           {/* Group 1: Razorpay payments */}
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-px bg-[var(--storm-electric)]/30 flex-1" />
-              <h3 className="text-[var(--storm-electric)] text-xs font-bold whitespace-nowrap">
+              <div className="h-px bg-[var(--color-tint)] flex-1" />
+              <h3 className="text-[var(--color-axelis)] text-xs font-bold whitespace-nowrap">
                 Razorpay payments
               </h3>
-              <div className="h-px bg-[var(--storm-electric)]/30 flex-1" />
+              <div className="h-px bg-[var(--color-tint)] flex-1" />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
               {[
@@ -401,7 +401,7 @@ export default function TestimonialsPage() {
                       loading="lazy"
                     />
                   </div>
-                  <p className={`mt-2 text-center text-[11px] font-bold flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-stone-300'}`}>
+                  <p className={`mt-2 text-center text-[11px] font-bold flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-[var(--color-navy)]'}`}>
                     <BadgeCheck className="w-3 h-3" />
                     {item.cap}
                   </p>
@@ -414,7 +414,7 @@ export default function TestimonialsPage() {
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
-              <h3 className="text-[var(--dawn-glow)] text-xs font-bold whitespace-nowrap">
+              <h3 className="text-[var(--color-axelis)] text-xs font-bold whitespace-nowrap">
                 Zero Tuition Fee declarations
               </h3>
               <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
@@ -435,7 +435,7 @@ export default function TestimonialsPage() {
                       loading="lazy"
                     />
                   </div>
-                  <p className="mt-2 text-center text-[11px] font-bold text-[var(--dawn-glow)] flex items-center justify-center gap-1.5">
+                  <p className="mt-2 text-center text-[11px] font-bold text-[var(--color-axelis)] flex items-center justify-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     {item.cap}
                   </p>
@@ -444,7 +444,7 @@ export default function TestimonialsPage() {
             </div>
           </div>
 
-          {/* Group 3: Visas + UPI — featured 2-up */}
+          {/* Group 3: Visas + UPI, featured 2-up */}
           <div className="mb-6">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-emerald-400/30 flex-1" />
@@ -464,7 +464,7 @@ export default function TestimonialsPage() {
                   />
                 </div>
                 <div className="pt-3 px-2 text-center">
-                  <p className="text-white font-bold">Raghav Verma &middot; Polish student visa</p>
+                  <p className="text-[var(--color-navy)] font-bold">Raghav Verma &middot; Polish student visa</p>
                   <p className="text-emerald-300 text-xs font-bold mt-1 inline-flex items-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     Issued by the Embassy of Poland, New Delhi
@@ -482,7 +482,7 @@ export default function TestimonialsPage() {
                   />
                 </div>
                 <div className="pt-3 px-2 text-center">
-                  <p className="text-white font-bold">Monika Nataraj &middot; ZTF service fee</p>
+                  <p className="text-[var(--color-navy)] font-bold">Monika Nataraj &middot; ZTF service fee</p>
                   <p className="text-emerald-300 text-xs font-bold mt-1 inline-flex items-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     ₹65,000 via HDFC Bank UPI &middot; 30 Sept 2025
@@ -492,31 +492,31 @@ export default function TestimonialsPage() {
             </div>
           </div>
 
-          <p className="mt-8 text-center text-slate-400 text-xs max-w-2xl mx-auto">
-            Names are shown only for students whose stories already feature publicly on this site. Personal contact details, account numbers, and government identifiers are blacked out. Anything you want to verify is available on a call &mdash; with the student&apos;s consent.
+          <p className="mt-8 text-center text-[var(--color-dim)] text-xs max-w-2xl mx-auto">
+            Names are shown only for students whose stories already feature publicly on this site. Personal contact details, account numbers, and government identifiers are blacked out. Anything you want to verify is available on a call, with the student&apos;s consent.
           </p>
         </div>
       </section>
 
-      <section className="py-20 relative">
+ <section className="sec relative">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
-            Ready to write <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">yours?</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-navy)]">
+            Ready to write <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">yours?</span>
           </h2>
-          <p className="text-lg text-slate-300/85 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-[var(--color-navy)]/85 mb-8 max-w-2xl mx-auto">
             Talk to a counsellor who has actually done it. Free first call, no commitment.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/bookings"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="btn btn-primary btn-lg"
             >
               Book a free call
               <ArrowRight className="ml-2" size={20} />
             </Link>
             <Link
               href="/products"
-              className="inline-flex items-center justify-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--storm-electric)]"
+              className="inline-flex items-center justify-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
             >
               View Student Plans
             </Link>
@@ -524,11 +524,11 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Google Reviews — verified 3rd-party proof from Bilaspur branch */}
+      {/* Google Reviews: verified 3rd-party proof from Bilaspur branch */}
       <InstagramSuccessStories />
       <GoogleReviewsSection />
 
-      {/* Floating Google Reviews badge — bottom-left to avoid WhatsApp widget */}
+      {/* Floating Google Reviews badge, bottom-left to avoid WhatsApp widget */}
       <GoogleReviewsFloat position="bottom-left" />
     </div>
   );

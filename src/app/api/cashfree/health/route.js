@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 // Diagnostic: is this deployment actually seeing the Cashfree credentials?
 //
 // Reports only whether each variable is present, its length, and whether it
-// has stray whitespace — never the values. Length and whitespace are what
+// has stray whitespace: never the values. Length and whitespace are what
 // distinguish "not set" from "set but pasted with a trailing newline", which
 // is the failure that looks identical from the outside.
 //
@@ -25,7 +25,7 @@ function describe(v) {
 
 /**
  * Presence is not validity. The variables can be set perfectly and still be
- * rejected by Cashfree — that is exactly what happened here, and a green
+ * rejected by Cashfree: that is exactly what happened here, and a green
  * "ready" sent us looking in the wrong place. So actually ask Cashfree.
  *
  * Fetches a deliberately nonexistent order: 401 means the credentials are
@@ -74,7 +74,7 @@ export async function GET() {
     CASHFREE_SECRET_KEY: sec,
     // Absent means live. If this says "sandbox" on production, payments will
     // appear to work and no money will move.
-    CASHFREE_ENV: envMode || '(not set — live mode)',
+    CASHFREE_ENV: envMode || '(not set, live mode)',
     apiTarget: envMode === 'sandbox'
       ? 'https://sandbox.cashfree.com/pg/orders'
       : 'https://api.cashfree.com/pg/orders',

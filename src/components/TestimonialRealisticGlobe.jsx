@@ -31,7 +31,7 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
   };
 
   // Function to focus on a country (called imperatively via ref).
-  // Do NOT call onCountryFocus here — the parent already triggered this,
+  // Do NOT call onCountryFocus here, the parent already triggered this,
   // calling back would create an infinite loop. The pin click handler
   // dispatches its own event for parent consumption.
   const focusOnCountry = (country) => {
@@ -104,7 +104,7 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
       .height(containerRef.current.clientHeight)
       .enablePointerInteraction(true)
       .showAtmosphere(true)
-      .atmosphereColor('#4f46e5')
+      .atmosphereColor('#1C6BB0')
       .atmosphereAltitude(0.15)
       .htmlElementsData(markerData)
       .htmlElement(d => {
@@ -122,7 +122,7 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
               left: 0;
               width: 100%;
               height: 100%;
-              background: ${d.isSelected ? '#ff6b35' : d.isHovered ? '#ff8c42' : '#4f46e5'};
+              background: ${d.isSelected ? '#ff6b35' : d.isHovered ? '#ff8c42' : '#1C6BB0'};
               border-radius: 50%;
               box-shadow: 0 0 ${d.isSelected ? '20px' : d.isHovered ? '15px' : '10px'} rgba(79, 70, 229, 0.6);
             "></div>

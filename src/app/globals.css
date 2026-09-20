@@ -3,60 +3,212 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-navy: #0C0A09;
-  --color-axelis: #1C1917;
-  --color-axelis-light: #57534E;
-  --color-axelis-accent: #F59E0B;
 
-  /* Storm palette — top of page, electric drama */
-  --color-storm-deep: #0C0A09;
-  --color-storm-abyss: #141210;
-  --color-storm-mid: #1C1917;
-  --color-storm-cloud: #292524;
+    /* ---- PALETTE: metabase.com, harvested from their live token set --------
+     Their values, with one correction that is not optional. Their primary
+     #509ee3 measures 2.86:1 against white — it fails AA for text AND the 3:1
+     floor for large text and UI. Their own Get-started button ships that way.
+     So #509ee3 is bound here to a SURFACE token no text utility can reach,
+     and their hover blue #1c6bb0 (5.56:1 on white, 5.56:1 under white) does
+     the work of both a link colour and a CTA fill.
+     Their muted grey #8d93a5 is 3.07:1 and is likewise caption-only; body
+     secondary text uses #5a6072 at 6.27:1. Their footer is white, not dark;
+     the dark band value is their blue-25 #12436e, which carries white at
+     10.23:1. */
+  /* AXELIS BRAND v4.0 — see docs/brand/BRAND_GUIDELINES.md §5.
+     #4080BD is a SURFACE colour: 4.17:1 on white, 3.25:1 on navy, so it
+     fails AA as text on either ground. It is bound to --color-accent-surface
+     and to no text utility. Same rule as the B2B codebase. */
+  --color-navy: #12436E;
+  --color-navy-2: #1C6BB0;
+  --color-axelis: #1C6BB0;
+  --color-axelis-accent: #1C6BB0;
+  --color-accent-surface: #509EE3;
+  --color-axelis-light: #87BCEC;
+  --color-on-accent: #FFFFFF;
+  --color-tint: #F9FAFB;
+  --color-tint-2: #F1F2F4;
+  --color-rule: #E2E4E9;
+  --color-dim: #5A6072;
+  --color-dim-dark: #C6C9D2;
+
+  /* Storm palette — retained names, brand values.
+     These read as "dark band" throughout the codebase, and the brand keeps
+     dark bands (§5.2: navy is 20% of the page). Remapping in place means the
+     657 token references land on brand colour without 105 files of edits. */
+  --color-storm-deep: #12436E;
+  --color-storm-abyss: #0E3557;
+  --color-storm-mid: #1C6BB0;
+  --color-storm-cloud: #3685CA;
   --color-storm-electric: #FFFFFF;
-  --color-storm-bolt: #FAFAF9;
-  --color-storm-accent: #F59E0B;
+  --color-storm-bolt: #FFFFFF;
+  --color-storm-accent: #1C6BB0;
 
-  /* Dawn palette — near CTA, clearing and warmth */
-  --color-dawn-horizon: #292524;
-  --color-dawn-mid: #44403C;
-  --color-dawn-clear: #78716C;
-  --color-dawn-glow: #FBBF24;
-  --color-dawn-glow-soft: #FDE68A;
+  /* Dawn palette — was amber. The CTA is now a solid brand blue carrying
+     white text, exactly as the approved reference page sets it
+     (.btn{background:var(--blue-dark); color:#FFF}). Both gradient stops are
+     dark enough for white, so a CTA is legible wherever it is cut. */
+  --color-dawn-horizon: #1C6BB0;
+  --color-dawn-mid: #3685CA;
+  --color-dawn-clear: #5A6072;
+  --color-dawn-glow: #1C6BB0;
+  --color-dawn-glow-soft: #509EE3;
+
+  /* ---- Neutral ramps, remapped to metabase.com's neutral scale ----------
+     1,193 built-in Tailwind palette classes are in this codebase and 936 of
+     them are stone / slate / gray — body copy, rules and card surfaces. None
+     of that is reachable from a --color-* swap, because those classes resolve
+     to stock Tailwind values.
+
+     Redefining the ramps here captures all of them at once. The stops are
+     their published neutrals: neutral-15 #22242B, -20 #4C5773, -40 #5A6072,
+     -60 #8D93A5, -80 #C6C9D2, -90 #E2E4E9, -95 #F1F2F4, -99 #FCFCFD.
+     700/800 are interpolated; they have no published stop there.
+
+     Warm (stone) and cool (slate) both collapse onto one ramp on purpose —
+     that is what stops a page reading as two different greys. */
+
+  --color-slate-50: #F9FAFB;
+  --color-slate-100: #F1F2F4;
+  --color-slate-200: #E2E4E9;
+  --color-slate-300: #C6C9D2;
+  --color-slate-400: #8D93A5;
+  --color-slate-500: #5A6072;
+  --color-slate-600: #4C5773;
+  --color-slate-700: #3B4152;
+  --color-slate-800: #2B2E38;
+  --color-slate-900: #22242B;
+  --color-slate-950: #15171C;
+
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F1F2F4;
+  --color-gray-200: #E2E4E9;
+  --color-gray-300: #C6C9D2;
+  --color-gray-400: #8D93A5;
+  --color-gray-500: #5A6072;
+  --color-gray-600: #4C5773;
+  --color-gray-700: #3B4152;
+  --color-gray-800: #2B2E38;
+  --color-gray-900: #22242B;
+  --color-gray-950: #15171C;
+
+  --color-zinc-50: #F9FAFB;
+  --color-zinc-100: #F1F2F4;
+  --color-zinc-200: #E2E4E9;
+  --color-zinc-300: #C6C9D2;
+  --color-zinc-400: #8D93A5;
+  --color-zinc-500: #5A6072;
+  --color-zinc-600: #4C5773;
+  --color-zinc-700: #3B4152;
+  --color-zinc-800: #2B2E38;
+  --color-zinc-900: #22242B;
+  --color-zinc-950: #15171C;
+
+  --color-neutral-50: #F9FAFB;
+  --color-neutral-100: #F1F2F4;
+  --color-neutral-200: #E2E4E9;
+  --color-neutral-300: #C6C9D2;
+  --color-neutral-400: #8D93A5;
+  --color-neutral-500: #5A6072;
+  --color-neutral-600: #4C5773;
+  --color-neutral-700: #3B4152;
+  --color-neutral-800: #2B2E38;
+  --color-neutral-900: #22242B;
+  --color-neutral-950: #15171C;
+
+  --color-stone-50: #F9FAFB;
+  --color-stone-100: #F1F2F4;
+  --color-stone-200: #E2E4E9;
+  --color-stone-300: #C6C9D2;
+  --color-stone-400: #8D93A5;
+  --color-stone-500: #5A6072;
+  --color-stone-600: #4C5773;
+  --color-stone-700: #3B4152;
+  --color-stone-800: #2B2E38;
+  --color-stone-900: #22242B;
+  --color-stone-950: #15171C;
+
+  /* Elevation and radius as utilities, so the JSX asks for a step on the
+     scale (shadow-e-2, rounded-lg) instead of inventing another one-off. */
+  --shadow-ring: 0 0 0 1px rgba(18, 67, 110, .07);
+  --shadow-e-1: 0 1px 2px rgba(18, 67, 110, .04);
+  --shadow-e-2: 0 0 0 1px rgba(18, 67, 110, .06), 0 1px 3px rgba(18, 67, 110, .05);
+  --shadow-e-3: 0 0 0 .5px rgba(18, 67, 110, .05), 0 8px 32px rgba(18, 67, 110, .06);
+  --shadow-e-lift: 0 16px 28px -6px rgba(18, 67, 110, .12), 0 32px 88px -4px rgba(18, 67, 110, .10);
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
 }
 
 :root {
-  --background: #0C0A09;
-  --foreground: #FAFAF9;
+  /* ---- Elevation ------------------------------------------------------
+     Measured off a reference build (metabase.com) for the craft, not the
+     colours: resting shadows there sit at 4-7% alpha, a hairline is drawn
+     as a RING shadow rather than a border so it costs no layout size, and
+     exactly one dramatic lift is reserved for things that float.
 
-  --storm-deep: #0C0A09;
-  --storm-abyss: #141210;
-  --storm-mid: #1C1917;
-  --storm-cloud: #292524;
+     What this replaces: 32 one-off shadows, the heaviest of them
+     rgba(0,0,0,0.9) and an amber glow. Both were tuned for a black page.
+     On white, 90% black is a smudge. Alphas below are navy-tinted, so the
+     shade belongs to the palette instead of greying it. */
+  --ring:   0 0 0 1px rgba(18, 67, 110, .07);
+  --e-1:    0 1px 2px rgba(18, 67, 110, .04);
+  --e-2:    0 0 0 1px rgba(18, 67, 110, .06), 0 1px 3px rgba(18, 67, 110, .05);
+  --e-3:    0 0 0 .5px rgba(18, 67, 110, .05), 0 8px 32px rgba(18, 67, 110, .06);
+  --e-lift: 0 16px 28px -6px rgba(18, 67, 110, .12), 0 32px 88px -4px rgba(18, 67, 110, .10);
+  --e-focus: 0 0 0 2px #FFFFFF, 0 0 0 4px var(--color-axelis, #2F6795);
+
+  /* ---- Radius ---------------------------------------------------------
+     A scale, because the codebase had seven radii and no rule: 435
+     rounded-full, 286 xl, 241 lg, 160 2xl and a tail of one-offs. */
+  --r-xs: 4px;   /* chips, tags            */
+  --r-sm: 6px;   /* inputs, small controls */
+  --r-md: 8px;   /* buttons                */
+  --r-lg: 12px;  /* cards                  */
+  --r-xl: 16px;  /* panels, modals         */
+  --r-2xl: 24px; /* feature blocks         */
+
+  /* §5.2 ground: white and tint 70%, navy 20%, accent 10%. The approved
+     reference page (docs/brand/samples/axelis-final-navy.html) sets
+     body{background:var(--white)} and fills 11 sections white, 6 tint and 6
+     navy. BRAND_GUIDELINES.md line 13 makes that page authoritative where it
+     and the prose disagree, which is why the ground is white here and the
+     migration map's dark-to-dark table is not followed. */
+  --background: #FFFFFF;
+  --foreground: #22242B;
+
+  --storm-deep: #12436E;
+  --storm-abyss: #0E3557;
+  --storm-mid: #1C6BB0;
+  --storm-cloud: #3685CA;
   --storm-electric: #FFFFFF;
-  --storm-bolt: #FAFAF9;
-  --storm-accent: #F59E0B;
-  --storm-accent-glow: rgba(245, 158, 11, 0.45);
+  --storm-bolt: #FFFFFF;
+  --storm-accent: #1C6BB0;
+  --storm-accent-glow: rgba(28, 107, 176, 0.45);
 
-  --dawn-horizon: #292524;
-  --dawn-mid: #44403C;
-  --dawn-clear: #78716C;
-  --dawn-glow: #FBBF24;
-  --dawn-glow-soft: #FDE68A;
-  --dawn-mist: rgba(251, 191, 36, 0.18);
+  --dawn-horizon: #1C6BB0;
+  --dawn-mid: #3685CA;
+  --dawn-clear: #5A6072;
+  --dawn-glow: #1C6BB0;
+  --dawn-glow-soft: #509EE3;
+  --dawn-mist: rgba(28, 107, 176, 0.18);
+
+  /* Accent that survives a navy ground. #2F6795 measures 2.26:1 there and
+     must never be an accent on dark; this is the token for that job. */
+  --accent-on-dark: #87BCEC;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0C0A09;
-    --foreground: #FAFAF9;
-  }
-}
+/* No dark-scheme inversion. The brand ground is white on every device;
+   §5.2 gives no dark variant, and the reference page declares none. */
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Montserrat', var(--font-montserrat), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-lato), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -176,60 +328,292 @@ body {
 .animate-bg-fourth { animation: bg-fourth 24s ease-in-out infinite; }
 .animate-bg-fifth  { animation: bg-fifth  28s ease-in-out infinite; }
 
-/* ===== Storm → Dawn theme utilities ===== */
+/* ===== Section grounds and card surfaces =====
+   These were hard-coded dark surfaces and no class-level sweep could reach
+   them from the JSX, which is why cards still rendered as grey slabs after
+   every utility had been converted. They are now the light equivalents.
+
+   .bg-dawn-glow is the exception and stays dark: it is the closing CTA band,
+   and the reference page sets .cta{background:var(--navy); color:#FFF}. §5.2
+   gives navy 20% of the page, which is what a band like this is for. */
 
 .bg-storm-top {
-  background: linear-gradient(180deg, var(--storm-deep) 0%, var(--storm-abyss) 60%, var(--storm-mid) 100%);
+  background: linear-gradient(180deg, var(--color-tint) 0%, #FFFFFF 100%);
 }
 .bg-storm-to-dawn {
-  background: linear-gradient(180deg,
-    var(--storm-deep) 0%,
-    var(--storm-abyss) 18%,
-    var(--storm-mid) 38%,
-    var(--dawn-horizon) 68%,
-    var(--dawn-mid) 88%,
-    var(--dawn-clear) 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-tint) 55%, var(--color-tint-2) 100%);
 }
 .bg-transition-sky {
-  background: linear-gradient(180deg, var(--storm-mid) 0%, var(--dawn-horizon) 100%);
+  background: linear-gradient(180deg, var(--color-tint) 0%, #FFFFFF 100%);
 }
 .bg-dawn-bottom {
-  background: linear-gradient(180deg, var(--dawn-horizon) 0%, var(--dawn-mid) 55%, var(--dawn-clear) 100%);
+  background: linear-gradient(180deg, var(--color-tint-2) 0%, var(--color-tint) 100%);
 }
 .bg-dawn-glow {
-  background: radial-gradient(ellipse at 50% 110%, var(--dawn-glow) 0%, var(--dawn-mid) 45%, var(--storm-mid) 100%);
+  background: var(--color-navy);
 }
 
-/* Glass surfaces for storm/dawn sections */
+/* Cards. The reference page builds these as a white panel with a hairline
+   rule and a soft shadow, not as a translucent pane over a dark ground. */
 .glass-storm {
-  background: rgba(16, 24, 48, 0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 40px -20px rgba(0, 0, 0, 0.8);
-  border-radius: 16px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-rule);
+  box-shadow: 0 18px 40px -30px rgba(18, 67, 110, 0.45);
+  border-radius: var(--radius-card, 14px);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .glass-storm:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.20), 0 20px 60px -20px rgba(251, 191, 36, 0.35);
+  border-color: var(--color-dim);
+  box-shadow: 0 22px 50px -28px rgba(18, 67, 110, 0.55);
 }
 
 .glass-dawn {
-  background: rgba(58, 70, 128, 0.38);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(251, 191, 36, 0.18);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 40px -20px rgba(30, 42, 85, 0.7);
-  border-radius: 16px;
+  background: var(--color-tint);
+  border: 1px solid var(--color-rule);
+  box-shadow: 0 18px 40px -30px rgba(18, 67, 110, 0.40);
+  border-radius: var(--radius-card, 14px);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .glass-dawn:hover {
-  border-color: rgba(251, 191, 36, 0.35);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(251, 191, 36, 0.22), 0 20px 60px -20px rgba(251, 191, 36, 0.30);
+  border-color: var(--color-axelis);
+  box-shadow: 0 22px 50px -28px rgba(47, 103, 149, 0.45);
 }
 
-/* Bolt pulse — amber drop-shadow expand/contract */
+
+/* ---- Motion -----------------------------------------------------------
+   One duration and one curve for everything that moves. "Smooth" is not
+   longer animation, it is the same easing everywhere and nothing animating
+   that should not. Layout properties are never transitioned. */
+:root {
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --t-fast: 120ms;
+  --t: 180ms;
+  --t-slow: 260ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Buttons ----------------------------------------------------------
+   The codebase had no button system: 7 radii, 8 padding pairs and fills
+   ranging from brand tokens to bg-yellow-500. These are the four that
+   exist, sized on the radius scale.
+
+   Fill is the hover blue, not the reference's primary: white on #509EE3 is
+   2.86:1 and fails AA, so that value stays a surface and #1C6BB0 carries
+   the label at 5.56:1. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .75rem 1.5rem;
+  border-radius: var(--r-md, 8px);
+  font-weight: 700;
+  font-size: .95rem;
+  line-height: 1.25;
+  min-height: 44px;              /* pointer target floor */
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--t) var(--ease),
+              border-color var(--t) var(--ease),
+              color var(--t) var(--ease),
+              box-shadow var(--t) var(--ease);
+}
+.btn:disabled, .btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+
+.btn-primary {
+  background: var(--color-axelis);
+  border-color: var(--color-axelis);
+  color: #FFFFFF;
+}
+.btn-primary:hover { background: var(--color-navy); border-color: var(--color-navy); }
+
+.btn-secondary {
+  background: #FFFFFF;
+  border-color: var(--color-dim);
+  color: var(--color-navy);
+}
+.btn-secondary:hover { background: var(--color-tint); border-color: var(--color-navy); }
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-axelis);
+}
+.btn-ghost:hover { background: var(--color-tint); }
+
+/* On a navy band the white button is the primary one. */
+.btn-on-dark {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: var(--color-navy);
+}
+.btn-on-dark:hover { background: var(--color-tint); border-color: var(--color-tint); }
+
+.btn-lg { padding: .95rem 1.9rem; font-size: 1rem; min-height: 52px; }
+.btn-sm { padding: .5rem 1rem; font-size: .85rem; min-height: 36px; }
+
+
+/* ---- Navigation: grouped three-column panel ---------------------------
+   Fifteen routes in one flat row gave a visitor no way to tell a plan from
+   a policy. They are grouped by what someone is trying to do, and each link
+   carries a line of description so the eye has something to land on. */
+.nav-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .55rem .7rem;
+  border: 0;
+  background: transparent;
+  border-radius: var(--r-sm, 6px);
+  font-family: inherit;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--color-dim);
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--t) var(--ease), background-color var(--t) var(--ease);
+}
+.nav-trigger:hover,
+.nav-trigger.is-open { color: var(--color-navy); background: var(--color-tint); }
+.nav-caret { transition: transform var(--t) var(--ease); }
+.nav-trigger.is-open .nav-caret { transform: rotate(180deg); }
+
+.mega {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--color-rule);
+  box-shadow: var(--e-3);
+  animation: mega-in var(--t-slow) var(--ease);
+}
+@keyframes mega-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) { .mega { animation: none; } }
+
+.mega-inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 1.5rem 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+.mega-heading {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--color-dim);
+  margin: 0 0 .85rem;
+}
+.mega-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .15rem; }
+.mega-link {
+  display: block;
+  padding: .6rem .7rem;
+  margin-inline: -.7rem;
+  border-radius: var(--r-md, 8px);
+  text-decoration: none;
+  transition: background-color var(--t) var(--ease);
+}
+.mega-link:hover { background: var(--color-tint); }
+.mega-title {
+  display: block;
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.3;
+}
+.mega-link:hover .mega-title { color: var(--color-axelis); }
+.mega-blurb {
+  display: block;
+  font-size: .82rem;
+  color: var(--color-dim);
+  line-height: 1.45;
+  margin-top: .1rem;
+}
+@media (max-width: 1100px) {
+  .mega-inner { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 1.5rem; }
+}
+
+
+/* ---- EMI chart --------------------------------------------------------
+   Drawn as a table with bars as cell widths rather than an SVG plot: a
+   screen reader gets real figures, it survives CSS being off, and no axis
+   can drift out of agreement with the numbers printed beside it. */
+.emi-chart { border: 1px solid var(--color-rule); border-radius: var(--r-xl, 16px);
+             background: #FFFFFF; box-shadow: var(--e-2); padding: 1.6rem 1.6rem 1.4rem; }
+.emi-head { margin-bottom: 1.1rem; }
+.emi-title { font-size: 1.4rem; line-height: 1.2; margin: .35rem 0 0; }
+.emi-tabs { display: flex; flex-wrap: wrap; gap: .4rem; margin-bottom: 1.1rem; }
+.emi-tab { padding: .45rem .85rem; border-radius: 999px; border: 1px solid var(--color-rule);
+           background: #FFFFFF; color: var(--color-dim); font: inherit; font-size: .82rem;
+           font-weight: 700; cursor: pointer;
+           transition: background-color var(--t) var(--ease), color var(--t) var(--ease),
+                       border-color var(--t) var(--ease); }
+.emi-tab:hover { border-color: var(--color-dim); color: var(--color-navy); }
+.emi-tab.is-active { background: var(--color-axelis); border-color: var(--color-axelis); color: #FFFFFF; }
+
+.emi-table { width: 100%; border-collapse: collapse; }
+.emi-table th { text-align: left; font-size: .68rem; font-weight: 700; letter-spacing: .1em;
+                text-transform: uppercase; color: var(--color-dim); padding: .5rem .6rem;
+                border-bottom: 1px solid var(--color-rule); }
+.emi-table td, .emi-table tbody th { padding: .7rem .6rem; border-bottom: 1px solid var(--color-rule);
+                                     vertical-align: middle; }
+.emi-table tbody tr:last-child td, .emi-table tbody tr:last-child th { border-bottom: 0; }
+.emi-tenure { white-space: nowrap; font-size: .9rem !important; font-weight: 700 !important;
+              letter-spacing: normal !important; text-transform: none !important;
+              color: var(--color-navy) !important; }
+.emi-bar-cell { position: relative; width: 100%; }
+.emi-bar { display: flex; align-items: center; min-height: 30px; padding: 0 .75rem;
+           border-radius: var(--r-xs, 4px); background: var(--color-axelis);
+           box-sizing: border-box; min-width: max-content; }
+.emi-value { color: #FFFFFF; font-size: .88rem; white-space: nowrap; }
+.emi-total, .emi-total-head { text-align: right; white-space: nowrap; }
+.emi-total { color: var(--color-dim); font-size: .88rem; }
+.emi-note { margin-top: 1rem; font-size: .82rem; line-height: 1.55; color: var(--color-dim);
+            max-width: 62ch; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+           overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+@media (max-width: 560px) {
+  .emi-total, .emi-total-head { display: none; }
+  .emi-value { font-size: .8rem; }
+}
+
+/* ---- Section rhythm ---------------------------------------------------
+   Vertical space was the least systematic thing left: sections ran from
+   48px to 128px with nothing deciding which got what. A reference build
+   (metabase.com, measured) runs 80-140px and reads composed because the
+   figure repeats, not because it is large.
+
+   Three steps, fluid, so the rhythm holds from phone to desktop without a
+   breakpoint for every section. §4 of the brand book governs leading and
+   tracking and says nothing about spacing, so this fills a gap rather than
+   overriding an approved value. */
+.sec    { padding-block: clamp(3.5rem, 7vw, 7rem); }    /*  56 - 112px  default */
+.sec-sm { padding-block: clamp(2.75rem, 5vw, 5rem); }   /*  44 -  80px  tighter */
+.sec-lg { padding-block: clamp(4.5rem, 9vw, 8.75rem); } /*  72 - 140px  openers */
+
+/* The measure a section's content sits in. Six different max-widths were in
+   use; these are the two that earn their place. */
+.hold     { width: 100%; max-width: 1200px; margin-inline: auto; }
+.hold-narrow { width: 100%; max-width: 760px; margin-inline: auto; }
+
+/* Bolt pulse */
 @keyframes bolt-pulse {
   0%, 100% { filter: drop-shadow(0 0 4px var(--storm-accent-glow)); }
   50% { filter: drop-shadow(0 0 12px var(--storm-accent-glow)) drop-shadow(0 0 2px var(--storm-accent)); }
@@ -244,10 +628,14 @@ body {
   95% { opacity: 0.85; }
 }
 
-/* Focus ring — storm-accent bolt yellow for keyboard users */
+/* Focus ring — two-tone, so it clears WCAG 1.4.11 (3:1) on BOTH grounds.
+   No single colour does: #2F6795 is 6.01:1 on white but 2.26:1 on navy, and
+   #7FB4E0 is the exact reverse. The white band carries the indicator on navy
+   (8.4:1), the blue ring carries it on white (6.01:1). */
 :focus-visible {
-  outline: 2px solid var(--storm-accent);
-  outline-offset: 3px;
+  outline: 2px solid var(--color-axelis, #2F6795);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #FFFFFF;
   border-radius: 4px;
 }
 
@@ -279,69 +667,69 @@ body {
   animation: shiny-sweep 3.5s ease-in-out infinite;
 }
 
-/* ===== Unified site wallpaper — single backdrop across every page ===== */
+/* The starfield wallpaper that used to sit behind every page was removed
+   with the white ground: it is a dark-ground device, and §5.2 puts 70% of
+   the page on white and tint. Its stacking helpers go with it. */
 .site-body { position: relative; }
 
-.site-wallpaper {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.site-wallpaper__layer { position: absolute; inset: 0; }
-
-.site-wallpaper__layer--gradient {
-  background: linear-gradient(180deg,
-    var(--storm-deep) 0%,
-    var(--storm-abyss) 22%,
-    var(--storm-mid) 48%,
-    var(--dawn-horizon) 72%,
-    var(--dawn-mid) 92%,
-    var(--dawn-clear) 100%);
-}
-
-.site-wallpaper__layer--stars {
-  inset: -60px;
-  background-image:
-    radial-gradient(1px 1px at 11% 19%, rgba(255,255,255,0.85), transparent 50%),
-    radial-gradient(1px 1px at 29% 73%, rgba(255,255,255,0.55), transparent 50%),
-    radial-gradient(1.4px 1.4px at 43% 36%, rgba(186,222,255,0.7), transparent 50%),
-    radial-gradient(1px 1px at 60% 11%, rgba(255,255,255,0.78), transparent 50%),
-    radial-gradient(1.6px 1.6px at 74% 62%, rgba(255,255,255,0.55), transparent 50%),
-    radial-gradient(1px 1px at 88% 28%, rgba(186,222,255,0.7), transparent 50%),
-    radial-gradient(1px 1px at 9% 88%, rgba(255,255,255,0.40), transparent 50%),
-    radial-gradient(1.2px 1.2px at 53% 92%, rgba(255,255,255,0.55), transparent 50%),
-    radial-gradient(1px 1px at 95% 78%, rgba(186,222,255,0.6), transparent 50%);
-  animation: site-wallpaper-drift 280s linear infinite;
-}
-
-.site-wallpaper__layer--stars-far {
-  inset: -120px;
-  opacity: 0.5;
-  animation: site-wallpaper-drift 420s linear infinite reverse;
-  filter: blur(0.4px);
-}
-
-.site-wallpaper__layer--nebula {
-  background:
-    radial-gradient(60% 50% at 18% 12%, rgba(255,255,255,0.16) 0%, transparent 60%),
-    radial-gradient(50% 50% at 82% 22%, rgba(139,92,246,0.12) 0%, transparent 65%),
-    radial-gradient(55% 60% at 50% 95%, rgba(251,191,36,0.18) 0%, transparent 65%);
-  filter: blur(20px);
-}
-
-@keyframes site-wallpaper-drift {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50px, -80px, 0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-wallpaper__layer--stars,
-  .site-wallpaper__layer--stars-far { animation: none !important; }
-}
-
-/* Pages keep transparent so the wallpaper shows through every section. */
 main > *,
 main section { position: relative; }
+/* ---------------------------------------------------------------------------
+   TYPE — BRAND_GUIDELINES.md §4, implemented in full
+   ---------------------------------------------------------------------------
+   The leading and tracking below are the spec, not house style: §4 gives a
+   setting for every role and the approved reference page uses these values.
+
+     H1                Serif 400, 1.06 leading, -1% tracking
+     H2-H4             Serif 400, 1.1 leading
+     Emphasis in head  Serif 400 italic in the accent, never heavier
+     Labels, eyebrows  Sans 600, +14% tracking, uppercase
+     Figures           Sans 700, tabular numerals
+     Meta, captions    Sans 500
+     Body              Sans 400, 1.6 leading, max 62 characters
+
+   Weight 800 on headings is deliberately absent: Instrument Serif ships one
+   weight, so a heavier request is synthesised and looks broken. §4 says
+   emphasis inside a heading is italic.
+--------------------------------------------------------------------------- */
+
+body {
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-lato), "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: normal;
+}
+
+h1 {
+  /* Their H1 is 60px on 60px — leading 1.0 — with -0.04em tracking. */
+  line-height: 1.0;
+  letter-spacing: -0.04em;
+}
+
+h1 em, h2 em, h3 em, h4 em,
+h1 i, h2 i, h3 i, h4 i {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-axelis);
+}
+
+.label, .eyebrow {
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.figure, .tabular {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.meta, figcaption, caption { font-weight: 500; }
+
+.measure { max-width: 62ch; }

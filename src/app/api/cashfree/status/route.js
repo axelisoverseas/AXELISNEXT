@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 
 // Reads an order's real status from Cashfree. The browser is told only the
-// status and amount — never Cashfree's raw payload, which carries customer
+// status and amount: never Cashfree's raw payload, which carries customer
 // and payment metadata the payer's own page has no need for.
 
 const BASE = process.env.CASHFREE_ENV === 'sandbox'

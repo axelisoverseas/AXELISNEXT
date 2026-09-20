@@ -34,7 +34,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-50 to-stone-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
+      <div className="bg-white rounded-2xl shadow-e-3 p-8 w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -86,7 +86,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
           <button
             type="submit"
             disabled={loading || !otp.trim()}
-            className="w-full bg-stone-900 text-white py-3 px-4 rounded-lg font-medium hover:bg-stone-950 focus:ring-2 focus:ring-stone-700 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="w-full bg-[var(--color-axelis)] text-white py-3 px-4 rounded-lg font-medium hover:bg-[var(--color-navy)] focus:ring-2 focus:ring-stone-700 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             {loading ? (
               <div className="flex items-center justify-center">

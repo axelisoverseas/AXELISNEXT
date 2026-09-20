@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// VOCATIONAL SKILL PROGRAMMES — Ausbildung and Chancenkarte (Germany)
+// VOCATIONAL SKILL PROGRAMMES. Ausbildung and Chancenkarte (Germany)
 // ---------------------------------------------------------------------------
 //
 // Launched WITHOUT the bundled premium language package. That bundle was
@@ -137,7 +137,7 @@ export const vocationalPrograms = [
   {
     slug: 'ausbildung',
     name: 'Ausbildung',
-    image: 'https://images.unsplash.com/photo-1690356107685-3725367f6f3f',
+    image: '/photos/photo-1690356107685-3725367f6f3f-1600.jpg',
     imageAlt: 'Trainees in workshop overalls working at a bench vice during vocational training',
     tagline: 'Paid vocational training in Germany, with an employer contract before you fly.',
     summary:
@@ -172,7 +172,7 @@ export const vocationalPrograms = [
   {
     slug: 'chancenkarte',
     name: 'Chancenkarte (Opportunity Card)',
-    image: 'https://images.unsplash.com/photo-1554072675-66db59dba46f',
+    image: '/photos/photo-1554072675-66db59dba46f-1600.jpg',
     imageAlt: 'The Brandenburg Gate and Berlin TV tower seen along a city street',
     tagline: 'A points-based visa that lets you enter Germany and look for work on the ground.',
     summary:

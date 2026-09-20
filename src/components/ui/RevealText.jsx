@@ -1,36 +1,27 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
 
-export function RevealText({
-  text = '',
+/**
+ * Renders text.
+ *
+ * It used to split the string into one motion span per letter, each starting
+ * at scale 0 and opacity 0 and springing in on a per-letter delay. This is on
+ * the home hero headline, so the single most important line on the site began
+ * life invisible and stayed that way if the springs did not run. It also meant
+ * a headline was dozens of nested spans rather than a string.
+ *
+ * Props are still accepted so the call site does not change.
+ */
+export default function RevealText({
+  text,
   className = '',
   letterClassName = '',
-  letterDelay = 0.06,
+  letterDelay, // eslint-disable-line no-unused-vars
 }) {
   return (
-    <span className={`inline-flex ${className}`} aria-label={text}>
-      {text.split('').map((letter, index) => (
-        <motion.span
-          key={index}
-          className={`inline-block ${letterClassName}`}
-          initial={{ scale: 0, opacity: 0, y: 20 }}
-          animate={{ scale: 1, opacity: 1, y: 0 }}
-          transition={{
-            delay: index * letterDelay,
-            type: 'spring',
-            damping: 10,
-            stiffness: 180,
-            mass: 0.7,
-          }}
-          aria-hidden="true"
-        >
-          {letter === ' ' ? '\u00A0' : letter}
-        </motion.span>
-      ))}
+    <span className={`inline-flex ${className}`}>
+      <span className={letterClassName}>{text}</span>
     </span>
   );
 }
-
-export default RevealText;

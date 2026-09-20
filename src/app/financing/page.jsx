@@ -5,6 +5,7 @@ import {
   financing, EMI_TENURES, EMI_MIN_TICKET, BAJAJ_EMI_LIVE, formatINR, refundPolicy,
 } from '../../data/certificationPrograms';
 import TrustBand from '../../components/TrustBand';
+import EmiChart from '../../components/EmiChart';
 
 export const metadata = {
   title: 'Financing Your Programme | Card EMI, Merchant EMI and Study Loans',
@@ -74,22 +75,22 @@ const ROUTES = [
 
 const TONE = {
   emerald: 'border-emerald-400/35 bg-emerald-400/10 text-emerald-300',
-  amber: 'border-[var(--dawn-glow)]/35 bg-[var(--dawn-glow)]/10 text-[var(--dawn-glow)]',
-  slate: 'border-white/15 bg-white/5 text-slate-300',
+  amber: 'border-[var(--color-axelis)]/35 bg-[var(--dawn-glow)]/10 text-[var(--color-axelis)]',
+  slate: 'border-[var(--color-rule)] bg-[var(--color-tint)] text-[var(--color-navy)]',
 };
 
 export default function FinancingPage() {
   return (
-    <main className="min-h-screen text-slate-100">
-      <section className="relative pt-28 lg:pt-32 pb-14 overflow-hidden border-b border-white/5">
+    <main className="min-h-screen text-[var(--color-navy)]">
+ <section className="relative pt-28 lg:pt-32 pb-14 overflow-hidden border-b border-[var(--color-rule)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--dawn-glow)] mb-4">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-axelis)] mb-4">
             Financing
           </p>
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight text-balance mb-6 max-w-4xl">
+          <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] tracking-tight text-balance mb-6 max-w-4xl">
             Three ways to pay, kept separate on purpose.
           </h1>
-          <p className="text-lg md:text-xl text-slate-300/90 leading-relaxed max-w-3xl">
+          <p className="text-lg md:text-xl text-[var(--color-navy)]/90 leading-relaxed max-w-3xl">
             Two of these fund your Axelis programme fee. The third funds your tuition and living
             costs abroad. They are different products from different providers, and we do not mix
             them.
@@ -97,7 +98,7 @@ export default function FinancingPage() {
         </div>
       </section>
 
-      <section className="relative py-14">
+ <section className="relative sec-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             {ROUTES.map((r) => {
@@ -105,22 +106,22 @@ export default function FinancingPage() {
               return (
                 <article
                   key={r.id}
-                  className="rounded-2xl border-2 border-white/10 bg-[#141210] p-6 md:p-7 flex flex-col"
+                  className="rounded-2xl border-2 border-[var(--color-rule)] bg-white p-6 md:p-7 flex flex-col"
                 >
                   <div className="flex items-start justify-between gap-3 mb-4">
-                    <Icon size={22} aria-hidden="true" className="text-[var(--storm-electric)]" />
+                    <Icon size={22} aria-hidden="true" className="text-[var(--color-axelis)]" />
                     <span className={`rounded-md border px-2.5 py-0.5 text-[11px] font-bold uppercase tracking-wide ${TONE[r.labelTone]}`}>
                       {r.label}
                     </span>
                   </div>
-                  <h2 className="text-xl font-bold text-white tracking-tight">{r.title}</h2>
-                  <p className="text-xs font-semibold text-[var(--dawn-glow)] uppercase tracking-wide mt-1 mb-3">
+                  <h2 className="text-xl font-bold text-[var(--color-navy)] tracking-tight">{r.title}</h2>
+                  <p className="text-xs font-semibold text-[var(--color-axelis)] uppercase tracking-wide mt-1 mb-3">
                     {r.sub}
                   </p>
-                  <p className="text-sm text-slate-300/85 leading-relaxed mb-5">{r.body}</p>
+                  <p className="text-sm text-[var(--color-navy)]/85 leading-relaxed mb-5">{r.body}</p>
                   <ul className="space-y-2 mb-6">
                     {r.points.map((pt) => (
-                      <li key={pt} className="flex gap-2.5 text-sm text-slate-300/85">
+                      <li key={pt} className="flex gap-2.5 text-sm text-[var(--color-navy)]/85">
                         <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[var(--storm-electric)]" />
                         <span>{pt}</span>
                       </li>
@@ -128,7 +129,7 @@ export default function FinancingPage() {
                   </ul>
                   <Link
                     href={r.cta.href}
-                    className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-3 min-h-[44px] rounded-xl bg-white/8 hover:bg-white/12 border border-white/15 text-white font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]"
+                    className="btn btn-secondary mt-auto text-[var(--color-navy)] text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
                   >
                     {r.cta.label} <ArrowRight size={15} aria-hidden="true" />
                   </Link>
@@ -140,31 +141,37 @@ export default function FinancingPage() {
       </section>
 
       {/* What we will not say */}
-      <section className="relative py-10 border-y border-white/5">
+ <section className="relative sec-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <EmiChart />
+        </div>
+      </section>
+
+      <section className="relative py-10 border-y border-[var(--color-rule)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 md:p-7">
+          <div className="rounded-2xl border border-[var(--color-rule)] bg-[var(--color-tint)] p-6 md:p-7">
             <div className="flex items-start gap-3">
-              <ShieldCheck size={18} aria-hidden="true" className="text-[var(--dawn-glow)] shrink-0 mt-0.5" />
+              <ShieldCheck size={18} aria-hidden="true" className="text-[var(--color-axelis)] shrink-0 mt-0.5" />
               <div>
-                <h2 className="text-lg font-bold text-white mb-3">What we will not tell you</h2>
-                <ul className="space-y-2.5 text-sm text-slate-300/85 leading-relaxed">
+                <h2 className="text-lg font-bold text-[var(--color-navy)] mb-3">What we will not tell you</h2>
+                <ul className="space-y-2.5 text-sm text-[var(--color-navy)]/85 leading-relaxed">
                   <li>
-                    <span className="text-white font-semibold">That any of this is no-cost.</span>{' '}
+                    <span className="text-[var(--color-navy)] font-semibold">That any of this is no-cost.</span>{' '}
                     Where interest applies, it applies. If a genuine no-cost offer ever exists here,
                     it will name the lender funding the subvention.
                   </li>
                   <li>
-                    <span className="text-white font-semibold">That approval is assured.</span>{' '}
+                    <span className="text-[var(--color-navy)] font-semibold">That approval is assured.</span>{' '}
                     Credit decisions belong to the lender or your card issuer. Axelis has no
                     influence over them and no Axelis employee may suggest otherwise.
                   </li>
                   <li>
-                    <span className="text-white font-semibold">That a loan is part of our fee.</span>{' '}
+                    <span className="text-[var(--color-navy)] font-semibold">That a loan is part of our fee.</span>{' '}
                     Study loans fund your university, not us. We receive no part of your loan and
                     take no commission that changes what you repay.
                   </li>
                 </ul>
-                <p className="mt-4 text-xs text-slate-500 leading-relaxed">
+                <p className="mt-4 text-xs text-[var(--color-dim)] leading-relaxed">
                   {financing.strip}{' '}
                   {!BAJAJ_EMI_LIVE && 'Lender partners are named here only once they are live, not while onboarding is in progress.'}
                 </p>
@@ -175,16 +182,16 @@ export default function FinancingPage() {
       </section>
 
       {/* Refund routing */}
-      <section className="relative py-12">
+ <section className="relative sec-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-start gap-3 rounded-2xl border border-white/10 bg-[#141210] p-6">
-            <Info size={17} aria-hidden="true" className="text-[var(--storm-electric)] shrink-0 mt-0.5" />
-            <p className="text-sm text-slate-300/85 leading-relaxed">
-              <span className="text-white font-semibold">If you cancel an EMI-financed enrolment,</span>{' '}
+          <div className="flex items-start gap-3 rounded-2xl border border-[var(--color-rule)] bg-white p-6">
+            <Info size={17} aria-hidden="true" className="text-[var(--color-axelis)] shrink-0 mt-0.5" />
+            <p className="text-sm text-[var(--color-navy)]/85 leading-relaxed">
+              <span className="text-[var(--color-navy)] font-semibold">If you cancel an EMI-financed enrolment,</span>{' '}
               your refund is routed to the financing partner rather than to you, because they paid
               us on your behalf. Your obligation to them continues under their agreement until they
               apply the credit. This is set out in full in the{' '}
-              <Link href={refundPolicy.href} className="text-white underline underline-offset-2">
+              <Link href={refundPolicy.href} className="text-[var(--color-navy)] underline underline-offset-2">
                 Cancellation &amp; Refund Policy
               </Link>
               .

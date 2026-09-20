@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { CheckCircle, AlertCircle, XCircle, Search } from 'lucide-react';
 import { lookupCertificate, isWellFormedId, SPECIMEN_ID } from '../../data/certificateRegister';
 
-// Lookup runs against the register bundled with the page — no network call, so
+// Lookup runs against the register bundled with the page, no network call, so
 // there is nothing to rate-limit and nothing to leak. The register holds no
 // personal data beyond what a holder already has on their own certificate.
 export default function CertificateLookup() {
@@ -31,7 +31,7 @@ export default function CertificateLookup() {
       <form onSubmit={onSubmit} className="mb-6">
         <label
           htmlFor="cert-id"
-          className="block text-sm font-semibold text-slate-300 mb-2"
+          className="block text-sm font-semibold text-[var(--color-navy)] mb-2"
         >
           Certificate ID
         </label>
@@ -46,21 +46,21 @@ export default function CertificateLookup() {
             autoComplete="off"
             spellCheck={false}
             aria-describedby="cert-id-hint"
-            className="flex-1 min-w-0 rounded-xl border border-white/15 bg-white/5 px-4 py-3 text-white font-mono placeholder:text-slate-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]"
+            className="btn btn-secondary flex-1 min-w-0 text-[var(--color-navy)] placeholder:text-[var(--color-dim)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
           />
           <button
             type="submit"
-            className="inline-flex items-center justify-center gap-2 shrink-0 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] px-6 py-3 font-bold text-[var(--storm-deep)] hover:brightness-110 transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+            className="btn btn-primary shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
             <Search size={17} aria-hidden="true" /> Verify Certificate
           </button>
         </div>
-        <p id="cert-id-hint" className="mt-2 text-xs text-slate-500">
+        <p id="cert-id-hint" className="mt-2 text-xs text-[var(--color-dim)]">
           The ID is printed on the certificate. Try{' '}
           <button
             type="button"
             onClick={() => setValue(SPECIMEN_ID)}
-            className="font-mono text-[var(--storm-electric)] underline underline-offset-2 hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] rounded"
+            className="font-mono text-[var(--color-axelis)] underline underline-offset-2 hover:text-[var(--color-navy)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] rounded"
           >
             {SPECIMEN_ID}
           </button>{' '}
@@ -68,13 +68,13 @@ export default function CertificateLookup() {
         </p>
       </form>
 
-      {/* Results announce themselves — the lookup is async to a screen reader
+      {/* Results announce themselves: the lookup is async to a screen reader
           even though it resolves locally. */}
       <div aria-live="polite" role="status">
         {result?.kind === 'specimen' && (
           <Panel tone="amber" Icon={AlertCircle} title="This is a specimen, not an issued certificate">
             <p>
-              <span className="font-mono text-slate-200">{result.cert.id}</span> is the sample
+              <span className="font-mono text-[var(--color-navy)]">{result.cert.id}</span> is the sample
               published on this page to show what an Axelis certificate looks like. It is not a
               record of any student and confers nothing.
             </p>
@@ -87,7 +87,7 @@ export default function CertificateLookup() {
               <Field label="Holder" value={result.cert.holder} />
               <Field label="Programme" value={result.cert.programme} />
               <Field label="Credential" value={result.cert.certificate} />
-              <Field label="Issued" value={result.cert.issued || '—'} />
+              <Field label="Issued" value={result.cert.issued || ', '} />
             </dl>
           </Panel>
         )}
@@ -95,7 +95,7 @@ export default function CertificateLookup() {
         {result?.kind === 'revoked' && (
           <Panel tone="red" Icon={XCircle} title="This certificate has been revoked">
             <p>
-              <span className="font-mono text-slate-200">{result.cert.id}</span> is no longer
+              <span className="font-mono text-[var(--color-navy)]">{result.cert.id}</span> is no longer
               valid. {result.cert.note || ''} Contact us if you believe this is an error.
             </p>
           </Panel>
@@ -104,8 +104,8 @@ export default function CertificateLookup() {
         {result?.kind === 'not-found' && (
           <Panel tone="red" Icon={XCircle} title="No certificate with that ID">
             <p>
-              <span className="font-mono text-slate-200">{result.id}</span> is not in our
-              register. Check the ID against the certificate — if it matches, write to us and we
+              <span className="font-mono text-[var(--color-navy)]">{result.id}</span> is not in our
+              register. Check the ID against the certificate, if it matches, write to us and we
               will look into it.
             </p>
           </Panel>
@@ -115,7 +115,7 @@ export default function CertificateLookup() {
           <Panel tone="amber" Icon={AlertCircle} title="That does not look like an Axelis ID">
             <p>
               Axelis certificate IDs look like{' '}
-              <span className="font-mono text-slate-200">AXL-SPEC-0000-DEMO</span>. Check the ID
+              <span className="font-mono text-[var(--color-navy)]">AXL-SPEC-0000-DEMO</span>. Check the ID
               printed on the certificate and try again.
             </p>
           </Panel>
@@ -134,15 +134,15 @@ export default function CertificateLookup() {
 function Field({ label, value }) {
   return (
     <div className="min-w-0">
-      <dt className="text-[11px] uppercase tracking-wider text-slate-500 mb-0.5">{label}</dt>
-      <dd className="text-sm font-semibold text-white break-words">{value}</dd>
+      <dt className="text-[11px] uppercase tracking-wider text-[var(--color-dim)] mb-0.5">{label}</dt>
+      <dd className="text-sm font-semibold text-[var(--color-navy)] break-words">{value}</dd>
     </div>
   );
 }
 
 const TONES = {
   emerald: 'border-emerald-400/35 bg-emerald-400/10 text-emerald-300',
-  amber: 'border-[var(--dawn-glow)]/35 bg-[var(--dawn-glow)]/10 text-[var(--dawn-glow)]',
+  amber: 'border-[var(--color-axelis)]/35 bg-[var(--dawn-glow)]/10 text-[var(--color-axelis)]',
   red: 'border-red-400/35 bg-red-400/10 text-red-300',
 };
 
@@ -153,7 +153,7 @@ function Panel({ tone, Icon, title, children }) {
         <Icon size={18} aria-hidden="true" className="shrink-0 mt-0.5" />
         <div className="min-w-0">
           <p className="font-bold mb-1">{title}</p>
-          <div className="text-sm text-slate-300/90 leading-relaxed space-y-2">{children}</div>
+          <div className="text-sm text-[var(--color-navy)]/90 leading-relaxed space-y-2">{children}</div>
         </div>
       </div>
     </div>
