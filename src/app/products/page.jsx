@@ -112,7 +112,7 @@ function ProductsContent() {
           {/* Headline numbers live on the home page; credentials on
               /accreditations. This page owns the plans and their pricing. */}
           <motion.p variants={fadeInUp} className="text-sm text-white/85">
-            5,000+ students placed across 29+ countries &middot;{' '}
+            4,500+ visas done successfully across 29+ countries &middot;{' '}
             <Link href="/accreditations" className="text-[var(--accent-on-dark)] font-semibold underline underline-offset-2 hover:no-underline">
               Certified by independent bodies &rarr;
             </Link>

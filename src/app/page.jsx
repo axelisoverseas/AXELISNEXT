@@ -129,7 +129,7 @@ export default function Home() {
               Every icon: gradient halo + circular ring + dark inner disc + amber bolt accent. */}
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              { icon: Users, value: '5,000+', label: 'Students Placed' },
+              { icon: Users, value: '4,500+', label: 'Visas Done Successfully' },
               { icon: Globe, value: '29+', label: 'Countries' },
               { icon: GraduationCap, value: '35,000+', label: 'Universities' },
               { icon: Award, value: '₹3+ Cr', label: 'Scholarships Won', gradient: true },

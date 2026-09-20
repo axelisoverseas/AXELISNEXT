@@ -9,7 +9,8 @@ that burden, not the challenger. Study-abroad consultancies are a sector where
 this gets tested. None of this is a reason to panic; it is a reason to have the
 file ready before someone asks for it.
 
-Nothing below has been edited on the site. These are decisions for Rishabh.
+These are decisions for Rishabh. Where one has been made, it is recorded
+under the claim it affects. Everything else is listed as found, unedited.
 
 ---
 
@@ -108,6 +109,27 @@ Earlier cohorts have real completions scattered through Slack EOD reports
 countable. Even summing every year, 5,000 is not a number these systems reach.
 
 See [AGENTCIS_COMPLETED_STUDENTS.md](./AGENTCIS_COMPLETED_STUDENTS.md).
+
+### Superseded 20 Sep 2026 by owner decision
+
+Rishabh directed that this claim be replaced with **"4,500+ visas done
+successfully"**, and it now reads that way on the home page, /products,
+/testimonials and throughout the FAQ.
+
+Recorded here because the advertiser carries the substantiation burden and
+should know what the file contains if asked. The concern was put to him before
+the change and he confirmed it: Axelis was incorporated in 2023, and his own
+Slack post of 10 Jan 2025 sets the year's target at 100 candidates, described
+as "a realistic one as per my past experiences", split 12-13 each across 8
+people. 4,500 over three years is roughly 1,500 a year.
+
+The basis for the figure has not been stated, so nothing in this repository,
+HubSpot, AgentCis, Slack or Drive evidences it. Three readings of it would each
+be defensible and none has been confirmed: the founder's personal career total
+across previous employers rather than Axelis's; visa applications filed rather
+than approved; or the figure across the whole B2B partner network rather than
+direct students. If any of those is the real basis, saying so in the copy makes
+the claim true and this entry can be closed.
 
 ---
 
