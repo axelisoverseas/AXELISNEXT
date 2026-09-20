@@ -252,7 +252,7 @@ export const faqData = [
   {
     id: 2,
     question: "Do you charge any fees for our services?",
-    answer: "Two plans, both paid after a result rather than before.\n\nZCF Student Plan, ₹10,000: you pay only after a university offer arrives. It covers the full application, visa guidance and documentation, with nothing upfront.\n\nZTF Student Plan, ₹10,000 plus ₹1,65,000: this is the route to tuition-free universities. The ₹10,000 starts it and the ₹1,65,000 falls due only once admission is confirmed. Tuition-free study in Europe is what makes the second figure worth paying, and it saves ₹80+ lakhs in tuition fees.\n\nFree either way: the first consultation and profile assessment, university shortlisting, and general guidance on how the process works.\n\nThis risk-free approach has helped 5,000+ students achieve their study abroad dreams without financial stress.\n\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
+    answer: "Two charters, both structured so the large payment follows a result rather than preceding it.\n\nGlobal Admissions Charter, ₹9,999: a refundable onboarding deposit for paid-tuition universities. It is returned in full once your visa is granted, you have arrived and your tuition is paid, so a placed student pays Axelis nothing. It is also refunded if you receive zero offers.\n\nEurope Public Charter, ₹19,999 plus a ₹1,80,000 success fee, ₹1,99,999 in total: the route to tuition-free public universities. The success fee is payable only if and when you accept an offer. Tuition-free study in Europe is what makes it worth paying, and it saves ₹80+ lakhs in tuition fees.\n\nFree either way: the first consultation and profile assessment, university shortlisting, and general guidance on how the process works.\n\nThis risk-free approach has helped 5,000+ students achieve their study abroad dreams without financial stress.\n\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
     category: "Pricing",
     multimedia: {
       video: "https://youtu.be/I7EzLc62Y6c",
@@ -900,7 +900,7 @@ export const europeanCountries = allCountries.filter(country => country.region =
 export const products = [
   {
     id: 1,
-    title: "ZCF Student Plan",
+    title: "Global Admissions Charter",
     subtitle: "Complete Study Abroad Support - All 29+ Countries",
     applicableCountries: "UK, USA, Canada, Australia, Ireland, New Zealand, and 23+ more",
     paymentModel: "Refundable Deposit",
@@ -930,12 +930,11 @@ export const products = [
       "Offer letter negotiation",
       "Visa application support"
     ],
-    icon: "🎓",
     color: "blue"
   },
   {
     id: 2,
-    title: "ZTF Student Plan",
+    title: "Europe Public Charter",
     subtitle: "Access to Tuition-Free European Universities",
     applicableCountries: "Germany, France, Finland, Norway, Italy, Spain, Switzerland, Austria",
     paymentModel: "Pay After Offer",
@@ -955,7 +954,6 @@ export const products = [
       "Alumni mentorship program",
       "Part-time job assistance"
     ],
-    icon: "🏆",
     color: "gold"
   }
 ];

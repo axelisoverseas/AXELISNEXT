@@ -121,6 +121,67 @@ function ProductsContent() {
       </section>
 
       {/* PLANS: two charters: GAC and EPC */}
+      {/* WHICH ONE IS YOURS
+          The page previously opened straight onto two long cards and a ten-row
+          table, leaving the reader to work out which charter applied to them.
+          Ambitio opens each product with a single "For students who..." line,
+          and it is the one device this page was missing. Red Hat's variants
+          model is the right shape for the rest: these are parallel routes
+          chosen by destination, not a good-better-best ladder, so no tier is
+          marked superior and each carries its own call to action. */}
+      <section className="relative sec-sm border-y border-[var(--color-rule)] bg-[var(--color-tint)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="label">Start here</p>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-[var(--color-navy)]">
+              Which charter is yours?
+            </h2>
+            <p className="mt-3 text-[var(--color-dim)] measure">
+              The two are not a cheaper option and a better one. They are two different
+              funding routes, and the one that fits you is decided by where you want to
+              study, not by budget.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
+            {ROUTES.map((r) => (
+              <div
+                key={r.name}
+                className="rounded-[var(--radius-xl)] border border-[var(--color-rule)] bg-white p-6 sm:p-7 flex flex-col"
+              >
+                <span aria-hidden="true" className="block h-0.5 w-8 rounded-full bg-[var(--color-axelis)]" />
+                <h3 className="mt-4 text-xl font-bold text-[var(--color-navy)]">{r.name}</h3>
+                <p className="mt-2 leading-relaxed text-[var(--color-navy)]">{r.forWho}</p>
+
+                <dl className="mt-5 space-y-2.5 text-sm">
+                  {r.facts.map((f) => (
+                    <div key={f.k} className="flex gap-3">
+                      <dt className="w-28 shrink-0 text-[var(--color-dim)]">{f.k}</dt>
+                      <dd className="font-semibold text-[var(--color-navy)]">{f.v}</dd>
+                    </div>
+                  ))}
+                </dl>
+
+                <p className="mt-5 text-sm leading-relaxed text-[var(--color-dim)]">{r.catch}</p>
+
+                <a href={r.href} className="btn btn-secondary mt-6 self-start">
+                  {r.cta}
+                  <ArrowRight size={15} aria-hidden="true" />
+                </a>
+              </div>
+            ))}
+          </div>
+
+          <p className="mt-8 text-sm text-[var(--color-dim)]">
+            Not sure which describes you?{' '}
+            <Link href="/bookings" className="font-semibold text-[var(--color-axelis)] hover:underline">
+              The free first call ends with a recommendation
+            </Link>
+            , and sometimes that recommendation is neither.
+          </p>
+        </div>
+      </section>
+
  <section id="plans" className="relative sec scroll-mt-24">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px]" />
@@ -130,7 +191,7 @@ function ProductsContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
-              Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">One destination, yours.</span>
+              Two charters. One destination, yours.
             </h2>
             <p className="text-[var(--color-navy)]/85 text-lg">
               Pick the route that matches where you want to study. Both come with a refundable deposit and a dedicated counsellor. Fees and refund conditions differ, and are set out in full on each card below.
@@ -163,7 +224,6 @@ function ProductsContent() {
                 <h3 id="plan-gac-title" className="text-3xl md:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight mb-2">
                   Global Admissions Charter <span className="text-base font-semibold text-[var(--color-navy)]/70">(GAC)</span>
                 </h3>
-                <p className="text-[var(--color-dim)] text-xs mb-6">Internal code: ZCF</p>
 
                 <p className="text-[var(--color-navy)]/90 mb-4 leading-relaxed">
                   For students applying to <strong className="text-[var(--color-navy)]">paid-tuition universities</strong> in the UK, USA, Canada, Australia, Ireland, New Zealand, and more.
@@ -171,26 +231,25 @@ function ProductsContent() {
 
                 <div className="flex flex-wrap gap-1.5 mb-6" aria-label="Countries covered under Global Admissions Charter">
                   {[
-                    { f: '🇬🇧', n: 'UK' },
-                    { f: '🇺🇸', n: 'USA' },
-                    { f: '🇨🇦', n: 'Canada' },
-                    { f: '🇦🇺', n: 'Australia' },
-                    { f: '🇮🇪', n: 'Ireland' },
-                    { f: '🇳🇿', n: 'NZ' },
-                    { f: '🇸🇬', n: 'Singapore' },
-                    { f: '🇨🇭', n: 'Switzerland' },
-                    { f: '🇦🇪', n: 'UAE' },
-                    { f: '🇲🇾', n: 'Malaysia' },
-                    { f: '🇯🇵', n: 'Japan' },
-                    { f: '🇰🇷', n: 'Korea' },
-                    { f: '🇭🇰', n: 'HK' },
-                    { f: '🇲🇹', n: 'Malta' },
+                    { n: 'UK' },
+                    { n: 'USA' },
+                    { n: 'Canada' },
+                    { n: 'Australia' },
+                    { n: 'Ireland' },
+                    { n: 'NZ' },
+                    { n: 'Singapore' },
+                    { n: 'Switzerland' },
+                    { n: 'UAE' },
+                    { n: 'Malaysia' },
+                    { n: 'Japan' },
+                    { n: 'Korea' },
+                    { n: 'HK' },
+                    { n: 'Malta' },
                   ].map((c) => (
                     <span
                       key={c.n}
                       className="btn btn-secondary text-[var(--color-navy)] text-[11px]"
                     >
-                      <span aria-hidden="true">{c.f}</span>
                       <span>{c.n}</span>
                     </span>
                   ))}
@@ -199,10 +258,10 @@ function ProductsContent() {
                 <div className="bg-[var(--color-tint)] rounded-2xl border border-[var(--color-rule)] p-5 mb-6">
                   <div className="flex items-baseline gap-2 mb-1">
                     <span className="text-[var(--color-dim)] line-through text-base">₹19,999</span>
-                    <span className="px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[10px] font-bold">50% OFF</span>
+                    <span className="px-2 py-0.5 rounded-md bg-rose-50 border border-rose-200 text-rose-700 text-[10px] font-bold">50% OFF</span>
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-2">₹9,999</div>
-                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Onboarding deposit, <span className="text-emerald-300 font-semibold">100% refundable</span></p>
+                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Onboarding deposit, <span className="text-emerald-700 font-semibold">100% refundable</span></p>
                   <p className="text-[var(--color-navy)]/90 text-xs mt-1.5 leading-relaxed">
                     Refunded in full once your visa is granted, you have arrived, and you have paid your
                     university tuition in full, so a placed student pays Axelis nothing. Also refunded
@@ -264,7 +323,6 @@ function ProductsContent() {
                 <h3 id="plan-epc-title" className="text-3xl md:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight mb-2">
                   Europe Public Charter <span className="text-base font-semibold text-[var(--color-navy)]/70">(EPC)</span>
                 </h3>
-                <p className="text-[var(--color-dim)] text-xs mb-6">Internal code: ZTF</p>
 
                 <p className="text-[var(--color-navy)]/90 mb-4 leading-relaxed">
                   For students who want <strong className="text-[var(--color-navy)]">zero tuition</strong> at public universities in Germany, France, Norway, Sweden, Finland, Italy, Spain, Poland and more.
@@ -272,27 +330,26 @@ function ProductsContent() {
 
                 <div className="flex flex-wrap gap-1.5 mb-6" aria-label="Countries covered under Europe Public Charter">
                   {[
-                    { f: '🇩🇪', n: 'Germany' },
-                    { f: '🇫🇷', n: 'France' },
-                    { f: '🇳🇴', n: 'Norway' },
-                    { f: '🇸🇪', n: 'Sweden' },
-                    { f: '🇫🇮', n: 'Finland' },
-                    { f: '🇩🇰', n: 'Denmark' },
-                    { f: '🇳🇱', n: 'Netherlands' },
-                    { f: '🇮🇹', n: 'Italy' },
-                    { f: '🇪🇸', n: 'Spain' },
-                    { f: '🇵🇱', n: 'Poland' },
-                    { f: '🇦🇹', n: 'Austria' },
-                    { f: '🇧🇪', n: 'Belgium' },
-                    { f: '🇨🇿', n: 'Czechia' },
-                    { f: '🇭🇺', n: 'Hungary' },
-                    { f: '🇵🇹', n: 'Portugal' },
+                    { n: 'Germany' },
+                    { n: 'France' },
+                    { n: 'Norway' },
+                    { n: 'Sweden' },
+                    { n: 'Finland' },
+                    { n: 'Denmark' },
+                    { n: 'Netherlands' },
+                    { n: 'Italy' },
+                    { n: 'Spain' },
+                    { n: 'Poland' },
+                    { n: 'Austria' },
+                    { n: 'Belgium' },
+                    { n: 'Czechia' },
+                    { n: 'Hungary' },
+                    { n: 'Portugal' },
                   ].map((c) => (
                     <span
                       key={c.n}
                       className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--color-axelis)]/25 text-[var(--color-navy)] text-[11px] font-semibold"
                     >
-                      <span aria-hidden="true">{c.f}</span>
                       <span>{c.n}</span>
                     </span>
                   ))}
@@ -304,7 +361,7 @@ function ProductsContent() {
                     <span className="px-2 py-0.5 rounded-md bg-[var(--dawn-glow)]/20 border border-[var(--color-axelis)]/30 text-[var(--color-axelis)] text-[10px] font-bold">50% OFF</span>
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-2">₹19,999</div>
-                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Service fee, <span className="text-emerald-300 font-semibold">refundable</span> if zero offers received.</p>
+                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Service fee, <span className="text-emerald-700 font-semibold">refundable</span> if zero offers received.</p>
                   <p className="text-[var(--color-navy)]/90 text-xs mt-1.5 leading-relaxed">
                     Plus a <span className="text-[var(--color-axelis)] font-semibold">₹1,80,000 Success Fee</span>, payable only
                     if and when you accept an offer from a tuition-free public university. Total ₹1,99,999.
@@ -349,7 +406,7 @@ function ProductsContent() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
             <h2 className="text-2xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">
-              Global Admissions Charter (GAC) vs Europe Public Charter (EPC) <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">at a glance</span>
+              Global Admissions Charter vs Europe Public Charter, at a glance
             </h2>
             <p className="text-[var(--color-navy)]/85">
               Same human team, same honest counselling, built for two different student profiles.
@@ -361,8 +418,8 @@ function ProductsContent() {
               <thead>
                 <tr className="border-b border-[var(--color-rule)] bg-[var(--color-tint)]">
                   <th scope="col" className="text-left p-4 md:p-5 text-[var(--color-dim)] font-semibold text-[10px]">Compare</th>
-                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--color-axelis)] font-bold">Global Admissions Charter <span className="text-[var(--color-dim)] font-normal text-xs">(GAC · ZCF)</span></th>
-                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--color-axelis)] font-bold">Europe Public Charter <span className="text-[var(--color-dim)] font-normal text-xs">(EPC · ZTF)</span></th>
+                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--color-axelis)] font-bold">Global Admissions Charter <span className="text-[var(--color-dim)] font-normal text-xs">(GAC)</span></th>
+                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--color-axelis)] font-bold">Europe Public Charter <span className="text-[var(--color-dim)] font-normal text-xs">(EPC)</span></th>
                 </tr>
               </thead>
               <tbody className="text-[var(--color-navy)]">
@@ -514,6 +571,37 @@ function ProductsContent() {
     </div>
   );
 }
+
+const ROUTES = [
+  {
+    name: 'Global Admissions Charter',
+    forWho:
+      'For students set on the UK, USA, Canada, Australia, Ireland or New Zealand, who accept that tuition will be paid and want the application run properly.',
+    facts: [
+      { k: 'You pay', v: '\u20b99,999, refunded once you are placed' },
+      { k: 'Tuition', v: 'University-set, \u20b98 to 35 lakh a year' },
+      { k: 'Plan ahead', v: '6 to 9 months, rolling intakes' },
+    ],
+    catch:
+      'The trade-off is cost. These destinations have the strongest post-study work routes and the highest fees, and the fees are not negotiable.',
+    cta: 'See the Global Admissions Charter',
+    href: '#plans',
+  },
+  {
+    name: 'Europe Public Charter',
+    forWho:
+      'For students who would rather pay no tuition at all, and are open to Germany, France, the Nordics and the rest of public Europe to get it.',
+    facts: [
+      { k: 'You pay', v: '\u20b919,999, then \u20b91,80,000 only on an offer' },
+      { k: 'Tuition', v: 'Free or near-free at public universities' },
+      { k: 'Plan ahead', v: '9 to 12 months, hard deadlines' },
+    ],
+    catch:
+      'The trade-off is time and paperwork. Deadlines are fixed, a blocked account and document attestation come before the application, and some routes want a local language.',
+    cta: 'See the Europe Public Charter',
+    href: '#plans',
+  },
+];
 
 const LANDING_LINKS = [
   {
