@@ -221,7 +221,7 @@ export default function TestimonialsPage() {
                 <p className="text-[var(--color-navy)]/80 text-sm">Named students, signed declarations, verifiable visas.</p>
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+              <div className="testimonial-scroller grid gap-4 sm:grid-cols-2 xl:grid-cols-3 max-h-[70vh] overflow-y-auto pr-2 scroll-smooth overscroll-contain">
                 {testimonials.map((t, i) => (
                   <TestimonialCard
                     key={t.id}
@@ -231,16 +231,6 @@ export default function TestimonialsPage() {
                 ))}
               </div>
 
-              <div className="mt-6 pt-4 border-t border-[var(--color-rule)] grid grid-cols-2 gap-4 text-center">
-                <div className="glass-storm py-3">
-                  <div className="text-2xl font-bold text-[var(--color-axelis)]">{testimonials.length}</div>
-                  <div className="text-[var(--color-navy)]/80 text-xs">Featured stories</div>
-                </div>
-                <div className="glass-storm py-3">
-                  <div className="text-2xl font-bold text-[var(--color-axelis)]">{uniqueCountries}</div>
-                  <div className="text-[var(--color-navy)]/80 text-xs">On this page</div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
