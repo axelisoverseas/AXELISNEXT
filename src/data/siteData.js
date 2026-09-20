@@ -694,7 +694,7 @@ export const applicationProcess = [
   {
     id: 5,
     step: "Approval & Sanction",
-    description: "Follow up with lenders and facilitate the loan approval and sanction process.",
+    description: "Follow up with lenders and push the loan approval and sanction through.",
     icon: "✅"
   },
   {

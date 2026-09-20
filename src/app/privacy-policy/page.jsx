@@ -85,7 +85,7 @@ const sections = [
         list: [
           'With educational institutions and universities to process your applications',
           'With government agencies and embassies for visa and immigration purposes',
-          'With banks and lending partners to facilitate education loans, with your consent',
+          'With banks and lending partners to arrange education loans, with your consent',
           'With third-party service providers who help us operate our business',
           'With your explicit consent for specific purposes',
           'To comply with legal obligations or protect our rights and safety',
