@@ -195,7 +195,7 @@ export default function AboutPage() {
                             className="btn btn-primary btn-lg relative overflow-hidden"
                         >
                             <span className="relative z-10">Book Your Counselling Call Today</span>
-                            <BorderBeam size={140} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />
+                            <BorderBeam size={140} duration={9} colorFrom="#509EE3" colorTo="#ffffff" />
                         </a>
                     </div>
                 </div>

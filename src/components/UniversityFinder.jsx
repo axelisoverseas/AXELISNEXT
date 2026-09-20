@@ -9,8 +9,8 @@ import logoManifest from "@/data/finder-university-logos.json";
 import { COUNTRY_FLAG_CODES } from "@/data/finder-country-codes";
 
 // Midnight Dodger palette (ported from the B2B site).
-const DODGER = "#3590f3";
-const CERULEAN = "#4d7298";
+const DODGER = "#1C6BB0";
+const CERULEAN = "#1C6BB0";
 
 const FILTERS = [
   { id: "all", label: "All destinations" },
@@ -159,7 +159,7 @@ export default function UniversityFinder() {
               style={
                 filter === f.id
                   ? { borderColor: DODGER, background: DODGER, color: "#fff" }
-                  : { borderColor: "#e2e8f0", color: "#475569" }
+                  : { borderColor: "#E2E4E9", color: "#5A6072" }
               }
             >
               {f.label}

@@ -6,8 +6,8 @@ export const BorderBeam = ({
   className = '',
   duration = 6,
   borderWidth = 2,
-  colorFrom = '#22d3ee',
-  colorTo = '#0b5cff',
+  colorFrom = '#509EE3',
+  colorTo = '#1C6BB0',
   delay = 0,
   // legacy props (size, anchor) accepted but unused
   size,

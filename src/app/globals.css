@@ -461,6 +461,95 @@ body {
 .btn-lg { padding: .95rem 1.9rem; font-size: 1rem; min-height: 52px; }
 .btn-sm { padding: .5rem 1rem; font-size: .85rem; min-height: 36px; }
 
+
+/* ---- Navigation: grouped three-column panel ---------------------------
+   Fifteen routes in one flat row gave a visitor no way to tell a plan from
+   a policy. They are grouped by what someone is trying to do, and each link
+   carries a line of description so the eye has something to land on. */
+.nav-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  padding: .55rem .7rem;
+  border: 0;
+  background: transparent;
+  border-radius: var(--r-sm, 6px);
+  font-family: inherit;
+  font-size: .9rem;
+  font-weight: 700;
+  color: var(--color-dim);
+  white-space: nowrap;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--t) var(--ease), background-color var(--t) var(--ease);
+}
+.nav-trigger:hover,
+.nav-trigger.is-open { color: var(--color-navy); background: var(--color-tint); }
+.nav-caret { transition: transform var(--t) var(--ease); }
+.nav-trigger.is-open .nav-caret { transform: rotate(180deg); }
+
+.mega {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  border-top: 1px solid var(--color-rule);
+  border-bottom: 1px solid var(--color-rule);
+  box-shadow: var(--e-3);
+  animation: mega-in var(--t-slow) var(--ease);
+}
+@keyframes mega-in {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (prefers-reduced-motion: reduce) { .mega { animation: none; } }
+
+.mega-inner {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 2rem 1.5rem 2.25rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2.5rem;
+}
+.mega-heading {
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--color-dim);
+  margin: 0 0 .85rem;
+}
+.mega-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .15rem; }
+.mega-link {
+  display: block;
+  padding: .6rem .7rem;
+  margin-inline: -.7rem;
+  border-radius: var(--r-md, 8px);
+  text-decoration: none;
+  transition: background-color var(--t) var(--ease);
+}
+.mega-link:hover { background: var(--color-tint); }
+.mega-title {
+  display: block;
+  font-size: .95rem;
+  font-weight: 700;
+  color: var(--color-navy);
+  line-height: 1.3;
+}
+.mega-link:hover .mega-title { color: var(--color-axelis); }
+.mega-blurb {
+  display: block;
+  font-size: .82rem;
+  color: var(--color-dim);
+  line-height: 1.45;
+  margin-top: .1rem;
+}
+@media (max-width: 1100px) {
+  .mega-inner { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 1.5rem; }
+}
+
 /* ---- Section rhythm ---------------------------------------------------
    Vertical space was the least systematic thing left: sections ran from
    48px to 128px with nothing deciding which got what. A reference build

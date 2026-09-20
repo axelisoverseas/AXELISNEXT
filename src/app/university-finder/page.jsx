@@ -24,7 +24,7 @@ export default function UniversityFinderPage() {
           <div>
             <span
               className="inline-block rounded-full px-4 py-1 text-sm font-semibold"
-              style={{ background: 'rgba(53,144,243,0.12)', color: '#8fbcf7' }}
+              style={{ background: 'rgba(53,144,243,0.12)', color: '#87BCEC' }}
             >
               {TOTAL.toLocaleString('en-IN')} universities · 29 destinations
             </span>
@@ -40,13 +40,13 @@ export default function UniversityFinderPage() {
           {/* Stat cluster: balances the hero and surfaces the two facts students care about most */}
           <div className="flex shrink-0 gap-8 sm:gap-10">
             <div>
-              <div className="text-3xl font-bold sm:text-4xl" style={{ color: '#3590f3' }}>
+              <div className="text-3xl font-bold sm:text-4xl" style={{ color: '#1C6BB0' }}>
                 {TOTAL.toLocaleString('en-IN')}
               </div>
               <div className="mt-1 text-xs font-semibold text-[var(--color-dim)]">Universities</div>
             </div>
             <div>
-              <div className="text-3xl font-bold sm:text-4xl" style={{ color: '#beb7a4' }}>
+              <div className="text-3xl font-bold sm:text-4xl" style={{ color: '#8D93A5' }}>
                 {EPA.toLocaleString('en-IN')}
               </div>
               <div className="mt-1 text-xs font-semibold text-[var(--color-dim)]">Tuition-free</div>

@@ -26,8 +26,103 @@ const SocialMediaInline = ({ className }) => {
   );
 };
 
+
+// Three groups, ordered by what a visitor is trying to do rather than by how
+// the site is built: choose a route, enrol in something, or check us out.
+// Each entry carries a one-line description, because a bare link list in a
+// wide panel gives the eye nothing to land on.
+const MENU = [
+  {
+    label: 'Study abroad',
+    columns: [
+      {
+        heading: 'Plan your route',
+        items: [
+          { href: '/products', title: 'Student plans', blurb: 'Two charters, priced in full before you pay' },
+          { href: '/university-finder', title: 'Universities', blurb: '35,000+ programmes across 29 countries' },
+          { href: '/courses', title: 'Courses by country', blurb: 'What a subject costs, destination by destination' },
+        ],
+      },
+      {
+        heading: 'Pay for it',
+        items: [
+          { href: '/scholarships', title: 'Scholarships', blurb: 'Agent awards and university bursaries' },
+          { href: '/financing', title: 'Financing', blurb: 'Card EMI, merchant EMI and study loans' },
+          { href: '/services', title: 'Student services', blurb: 'Apostille, translation and visa filing' },
+        ],
+      },
+      {
+        heading: 'Once you land',
+        items: [
+          { href: '/accommodation', title: 'Housing', blurb: 'Bills-inclusive rooms in 250+ cities' },
+          { href: '/test-prep', title: 'Test prep', blurb: 'IELTS, TOEFL, PTE, SAT and German' },
+          { href: '/bookings', title: 'Book a call', blurb: 'Free first call, no upsell' },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Programmes',
+    columns: [
+      {
+        heading: 'Certifications',
+        items: [
+          { href: '/certifications', title: 'All programmes', blurb: 'Concierge tiers with a written outcome guarantee' },
+          { href: '/verify', title: 'Verify a certificate', blurb: 'Check an Axelis certificate ID' },
+        ],
+      },
+      {
+        heading: 'Germany',
+        items: [
+          { href: '/vocational', title: 'Ausbildung', blurb: 'Paid training contract, no tuition' },
+          { href: '/vocational', title: 'Chancenkarte', blurb: 'Points-based entry to find skilled work' },
+        ],
+      },
+      {
+        heading: 'Guidance',
+        items: [
+          { href: '/resources', title: 'Resources', blurb: 'Guides, checklists and country briefings' },
+          { href: '/faq', title: 'FAQ', blurb: 'Visas, fees, refunds and timelines' },
+        ],
+      },
+    ],
+  },
+  {
+    label: 'Company',
+    columns: [
+      {
+        heading: 'About us',
+        items: [
+          { href: '/about', title: 'Who we are', blurb: 'A counsellor from shortlist to arrival' },
+          { href: '/accreditations', title: 'Accreditations', blurb: 'DPIIT, British Council and AIRC' },
+        ],
+      },
+      {
+        heading: 'Proof',
+        items: [
+          { href: '/testimonials', title: 'Student stories', blurb: 'Named students and verifiable visas' },
+        ],
+      },
+      {
+        heading: 'Talk to us',
+        items: [
+          { href: '/contact', title: 'Contact', blurb: 'Offices, phone and email' },
+        ],
+      },
+    ],
+  },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [openMenu, setOpenMenu] = useState(null);
+
+  useEffect(() => {
+    if (!openMenu) return undefined;
+    const onKey = (e) => { if (e.key === 'Escape') setOpenMenu(null); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, [openMenu]);
   const pathname = usePathname();
 
   const isActive = (path) => pathname === path;
@@ -86,7 +181,7 @@ const Navbar = () => {
       </div>
 
       {/* Main Navigation - storm glass */}
-      <div className="bg-white border-b border-[var(--color-rule)] sticky top-0 z-50 transition-all shadow-e-2">
+      <div className="relative bg-white border-b border-[var(--color-rule)] sticky top-0 z-50 transition-all shadow-e-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
@@ -100,79 +195,29 @@ const Navbar = () => {
               />
             </Link>
 
-            {/* Center Navigation Links - Clean Tabs */}
-            <nav className="hidden xl:flex items-center space-x-4 2xl:space-x-6 min-w-0">
-              <Link
-                href="/"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
-                  }`}
-              >
-                <span>Home</span>
-              </Link>
-
-              <Link
-                href="/products"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/products') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
-                  }`}
-              >
-                <span>Student Plans</span>
-              </Link>
-
-              <Link
-                href="/university-finder"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/university-finder') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
-                  }`}
-              >
-                <span>Universities</span>
-              </Link>
-
-              <Link
-                href="/test-prep"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/test-prep') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
-                  }`}
-              >
-                <span>Test Prep</span>
-              </Link>
-
-              <Link
-                href="/testimonials"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/testimonials') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
-                  }`}
-              >
-                <span>Testimonials</span>
-              </Link>
-
-              <Link
-                href="/certifications"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/certifications') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
-                  }`}
-              >
-                <span>Certifications</span>
-              </Link>
-
-              <Link
-                href="/accommodation"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/accommodation') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
-                  }`}
-              >
-                <span>Housing</span>
-              </Link>
-
-              <Link
-                href="/faq"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/faq') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
-                  }`}
-              >
-                <span>FAQ</span>
-              </Link>
-
-              <Link
-                href="/contact"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/contact') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
-                  }`}
-              >
-                <span>Contact</span>
-              </Link>
+            {/* Center navigation: three grouped panels plus two direct links */}
+            <nav className="hidden xl:flex items-center gap-1 min-w-0" onMouseLeave={() => setOpenMenu(null)}>
+              {MENU.map((group) => {
+                const open = openMenu === group.label;
+                return (
+                  <div key={group.label} onMouseEnter={() => setOpenMenu(group.label)}>
+                    <button
+                      type="button"
+                      aria-expanded={open}
+                      aria-haspopup="true"
+                      onClick={() => setOpenMenu(open ? null : group.label)}
+                      className={`nav-trigger ${open ? 'is-open' : ''}`}
+                    >
+                      {group.label}
+                      <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true" className="nav-caret">
+                        <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
+                      </svg>
+                    </button>
+                  </div>
+                );
+              })}
+              <Link href="/services" className="nav-trigger">Services</Link>
+              <Link href="/contact" className="nav-trigger">Contact</Link>
             </nav>
 
             {/* Desktop Navigation - Menu & CTA */}
@@ -182,7 +227,7 @@ const Navbar = () => {
                 className="relative overflow-hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-[transform,filter,box-shadow] shadow-e-2 hover:shadow-e-2 transform hover:-translate-y-0.5"
               >
                 <span className="relative z-10">Book a Discovery Call</span>
-                <BorderBeam size={80} duration={7} colorFrom="#FFFFFF" colorTo="#FBBF24" />
+                <BorderBeam size={80} duration={7} colorFrom="#FFFFFF" colorTo="#87BCEC" />
               </Link>
               <button
                 type="button"
@@ -212,6 +257,37 @@ const Navbar = () => {
             </div>
           </div>
         </div>
+
+          {/* Three-column panel. Rendered only for the open group; closing is
+              handled by the nav's onMouseLeave and by Escape. */}
+          {MENU.map((group) => (
+            openMenu === group.label ? (
+              <div
+                key={group.label}
+                className="mega"
+                onMouseEnter={() => setOpenMenu(group.label)}
+                onMouseLeave={() => setOpenMenu(null)}
+              >
+                <div className="mega-inner">
+                  {group.columns.map((col) => (
+                    <div key={col.heading} className="mega-col">
+                      <p className="mega-heading">{col.heading}</p>
+                      <ul className="mega-list">
+                        {col.items.map((item) => (
+                          <li key={item.title}>
+                            <Link href={item.href} className="mega-link" onClick={() => setOpenMenu(null)}>
+                              <span className="mega-title">{item.title}</span>
+                              <span className="mega-blurb">{item.blurb}</span>
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : null
+          ))}
       </div>
 
       {/* Slide-out Side Menu - Minimalist */}
@@ -372,7 +448,7 @@ const Navbar = () => {
               className="relative overflow-hidden block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-[filter] shadow-e-2"
             >
               <span className="relative z-10">Book a Discovery Call</span>
-              <BorderBeam size={120} duration={8} colorFrom="#FFFFFF" colorTo="#FBBF24" />
+              <BorderBeam size={120} duration={8} colorFrom="#FFFFFF" colorTo="#87BCEC" />
             </Link>
             <div>
               <p className="text-xs font-semibold text-[var(--storm-accent)] mb-3">Connect With Us</p>

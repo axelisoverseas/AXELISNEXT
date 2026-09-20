@@ -517,7 +517,7 @@ export default function Home() {
                   Apply Now - Start Journey
                   <ArrowRight aria-hidden="true" className="ml-3 group-hover:translate-x-1 transition-transform" size={24} />
                 </span>
-                <BorderBeam size={160} duration={9} colorFrom="#FBBF24" colorTo="#FFFFFF" />
+                <BorderBeam size={160} duration={9} colorFrom="#87BCEC" colorTo="#FFFFFF" />
               </Link>
             </div>
           </div>
