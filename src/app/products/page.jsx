@@ -773,8 +773,8 @@ const LANDING_LINKS = [
   },
   {
     href: '/lp/pay-after-offer',
-    title: 'Pay \u20b910,000 now, the rest after an offer',
-    body: 'Why the order you pay in changes the advice you get, and what happens if no offer arrives.',
+    title: 'Pay upfront, then only on an offer',
+    body: 'Why the order you pay in changes the advice you get, and what happens if no offer ever arrives.',
     cta: 'See how the pricing works',
   },
   {
