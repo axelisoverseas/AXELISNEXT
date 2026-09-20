@@ -82,10 +82,26 @@ lockup artwork — not typeset — wherever it appears at legible size.
 ### 7 · Certification badges disagree across the properties
 
 D2C shows AIRC + DPIIT + British Council. B2B shows AIRC + Startup India +
-British Council, with a different British Council file. Standardise on one set,
-one file per badge, same order, on white or `--color-tint` — never on navy,
-never recoloured. **Ask the founder which is real, DPIIT or Startup India,
-before changing either.**
+British Council, with a different British Council file.
+
+**The founder has decided: DPIIT.** Note that DPIIT and Startup India are the
+same recognition — DPIIT is the department, Startup India the scheme it
+recognises startups under, and the D2C badge is already labelled
+`alt="DPIIT Startup India"`. So replacing the B2B "Startup India" badge with
+the DPIIT badge removes a duplicate presentation, not a credential.
+
+Standardise both properties on, in this order:
+
+1. AIRC
+2. British Council — the colour file, one copy, shared
+3. DPIIT
+
+On white or `--color-tint`, never on navy, never recoloured or stretched.
+Alt text on both: `DPIIT Recognised — Startup India`.
+
+While you are in there: the asset is `public/logos/dppit logo.png`. **"dppit"
+is a misspelling** of DPIIT and the space forces `%20` into a public URL.
+Rename to `dpiit-recognition.png` and update every reference.
 
 ### 8 · Bring `axelisoverseas.com` onto the brand
 

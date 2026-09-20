@@ -151,19 +151,31 @@ Navy on transparent, so it survives Google's white card. Never the white variant
 
 ## 4 · Certification policy
 
+**Decided 20 September 2026: DPIIT.**
+
 One set, both properties, same files, same order:
 
 1. **AIRC** — American International Recruitment Council
 2. **British Council** — one file, the colour version, on white or tint
-3. **DPIIT / Startup India** — decide which is the real recognition and show
-   only that one. Showing DPIIT on one site and Startup India on the other
-   reads as two different companies.
+3. **DPIIT** — recognition under the Startup India initiative
+
+**DPIIT and Startup India are the same recognition, not two.** DPIIT is the
+department; Startup India is the scheme it recognises startups under. The D2C
+site already labels its badge `alt="DPIIT Startup India"`. So the B2B site's
+"Startup India" badge is not an extra credential — it is the same one wearing a
+different face, and replacing it with the DPIIT badge loses nothing and claims
+nothing new.
 
 Badges sit on white or `--color-tint`, never on navy, never recoloured, never
 stretched. The `/accreditations` page is the canonical list; badges elsewhere
 link to it.
 
----
+**Two file hygiene fixes while this is being touched:**
+
+- The asset is `public/logos/dppit logo.png` — **"dppit" is a misspelling** of
+  DPIIT, and the space forces `%20` into a public URL. Rename to
+  `dpiit-recognition.png`.
+- Standardise alt text on `DPIIT Recognised — Startup India` across both sites.
 
 ## 5 · Known defects in the source artwork
 
@@ -189,7 +201,6 @@ fixed-colour asset with two variants, and use the mark — which is clean vector
 ## 6 · Open, needing the founder
 
 - The simplified small-size favicon variant (§3)
-- Which recognition is real: DPIIT or Startup India (§4)
 - Vectorised "OVERSEAS" wordmark (§5)
 - Founder photo and bio; programme lead names and credentials
 - Legal sign-off on the engagement letter
