@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { Target, Eye, Play } from 'lucide-react';
 import { BorderBeam } from '@/components/ui/BorderBeam';
 import { TextEffect, TextEffectInView } from '@/components/ui/TextEffect';
+import YouTubeFeed from '../../components/YouTubeFeed';
+import FounderProfile from '../../components/FounderProfile';
 
 export default function AboutPage() {
     return (
@@ -139,30 +141,7 @@ export default function AboutPage() {
                         </div>
                     </div>
 
-                    {/* Podcast CTA */}
-                    <div className="bg-[var(--color-tint)] rounded-[2.5rem] overflow-hidden shadow-e-3 mt-12 flex flex-col md:flex-row relative">
-                        <div className="md:w-1/2 p-12 md:p-16 flex flex-col justify-center relative z-10">
-                            <h3 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-6">
-                                Hear The Untold Stories
-                            </h3>
-                            <p className="text-[var(--color-navy)] mb-10 text-lg">
-                                Discover the real-world experiences, strategies, and successes from students who have navigated the path before you.
-                            </p>
-                            <a
-                                href="https://www.youtube.com/@axelisoverseas"
-                                target="_blank"
-                                rel="noreferrer"
-                                className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-xl transition-all shadow-e-2 text-lg group self-start"
-                            >
-                                <Play className="mr-3 text-[var(--color-navy)] group-hover:scale-110 transition-transform" size={24} fill="currentColor" />
-                                Watch Our YouTube Podcast
-                            </a>
-                        </div>
-                        <div className="md:w-1/2 min-h-[300px] relative">
-                            <img src="/photos/photo-1581368135153-a506cf13b1e1-1000.jpg" alt="Podcast Recording" className="absolute inset-0 w-full h-full object-cover" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent md:bg-gradient-to-r md:from-slate-900 md:to-transparent"></div>
-                        </div>
-                    </div>
+    
                 </div>
             </section>
 
@@ -198,6 +177,9 @@ export default function AboutPage() {
                 </div>
             </section>
 
+
+            <FounderProfile />
+            <YouTubeFeed />
         </div>
     );
 }
