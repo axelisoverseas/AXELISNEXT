@@ -30,7 +30,7 @@ const Footer = () => {
                 alt="Axelis Overseas"
                 width={160}
                 height={56}
-                className="h-14 w-auto opacity-95 hover:opacity-100 transition-opacity"
+                className="w-40 h-auto opacity-95 hover:opacity-100 transition-opacity"
               />
             </Link>
             <p className="text-sm leading-relaxed mb-8 text-[var(--color-dim-dark)]">

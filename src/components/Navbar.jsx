@@ -224,9 +224,9 @@ const Navbar = () => {
               <img
                 src="/brand/axelis-mark-navy.svg"
                 alt="Axelis Overseas"
-                width={56}
-                height={56}
-                className="h-14 w-14 shrink-0 object-contain"
+                width={40}
+                height={40}
+                className="h-8 w-8 sm:h-10 sm:w-10 shrink-0 object-contain"
               />
             </Link>
 

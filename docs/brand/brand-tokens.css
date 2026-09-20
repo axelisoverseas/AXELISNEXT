@@ -187,3 +187,61 @@ h1 { font-weight: 900; }
    Montserrat, Source Serif 4, IBM Plex Sans/Mono, Cabinet Grotesk — replaced by
    Instrument Serif (display) + Instrument Sans (text). No third family.
    ============================================================ */
+
+
+/* ============================================================
+   DARK SURFACES  (added 21 Sep 2026, BRAND_DECISIONS.md §4)
+   ------------------------------------------------------------
+   The gap that produced two production defects: a footer and a
+   specimen certificate, both written for a light ground, both
+   later moved onto navy, both keeping their light tokens. The
+   certificate's programme title measured 1.10:1 and its
+   anti-forgery watermark did not render at all.
+
+   FORBIDDEN ON NAVY (#16265C), measured:
+     --foreground   #1B2233   1.11:1   never
+     --color-axelis #1D4ED8   2.14:1   never
+     --color-dim    #586179   2.32:1   never
+     #4F80F0                  3.87:1   large graphics only
+
+   Use .on-dark rather than picking these by hand. It remaps the
+   four light tokens so a component moved onto navy inherits
+   correct values instead of silently keeping light ones.
+   ============================================================ */
+:root {
+  --dark-bg:        #16265C;  /* ground                                  */
+  --dark-surface:   #1E3270;  /* raised card on navy, 12.03:1 with white */
+  --dark-rule:      #33437E;  /* hairline on navy                        */
+  --dark-fg:        #FFFFFF;  /* primary text, 14.33:1  AAA              */
+  --dark-dim:       #C3CBDD;  /* secondary text, 8.80:1 AAA              */
+  --dark-accent:    #9EC0FF;  /* links, accents, focus, 7.80:1 AAA       */
+  --dark-btn-fill:  #FFFFFF;  /* button fill; label is --dark-bg         */
+}
+
+.on-dark {
+  --foreground:     var(--dark-fg);
+  --color-dim:      var(--dark-dim);
+  --color-axelis:   var(--dark-accent);
+  --color-rule:     var(--dark-rule);
+  color:            var(--dark-fg);
+}
+
+/* ============================================================
+   TYPEFACE  (updated 21 Sep 2026, BRAND_DECISIONS.md §3)
+   ------------------------------------------------------------
+   Lato, one family, 400 / 700 / 900, via next/font/google.
+   The Instrument Serif + Instrument Sans pairing is RETIRED.
+
+   Tabular numerals are not the fix for shifting money columns.
+   Measured with Lato loaded: 1111111111 and 0000000000 both
+   render at 185.60px, and tabular-nums changes neither. Lato's
+   digits already share one advance width; tnum is a no-op here.
+   The shift is layout: right-align the cell, fix the column in
+   ch, keep the currency string non-breaking. The token below is
+   kept because it costs nothing and is correct if the family
+   ever changes.
+   ============================================================ */
+:root {
+  --font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --figure-numeric: tabular-nums;
+}

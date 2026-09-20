@@ -14,7 +14,10 @@ import { SPECIMEN_ID } from '../data/certificateRegister';
 //   3. Claim to be a degree or a nationally-framed qualification. The footer
 //      text says so explicitly.
 //
-// Design is not signed off by the founder yet. See TODO_FROM_FOUNDER.md.
+// Design conformance signed off 21 Sep 2026 (BRAND_DECISIONS.md section 6).
+// Issuing a certificate is a separate, commercial approval that only the
+// founder can give, so the standing specimen mark below stays permanently
+// rather than being removed on some future sign-off nobody will remember.
 export default function SpecimenCertificate({ programmeTitle = 'Global Career Launch' }) {
   return (
     <div
@@ -112,5 +115,22 @@ export default function SpecimenCertificate({ programmeTitle = 'Global Career La
         </p>
       </div>
     </div>
+  );
+}
+
+/**
+ * The standing specimen mark.
+ *
+ * Sits under the sheet, not on it. Written to be true forever, so there is no
+ * future edit to forget: it describes what the artefact is rather than what
+ * stage it is at.
+ */
+export function SpecimenNote() {
+  return (
+    <p className="mt-4 text-xs leading-relaxed text-[var(--color-dim)]">
+      <span className="font-bold uppercase tracking-[0.12em]">Specimen</span>
+      {' '}&mdash; layout and security features only. Not a valid certificate.
+      Issued certificates carry a unique ID verifiable at overseeducation.com/verify.
+    </p>
   );
 }

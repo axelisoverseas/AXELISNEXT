@@ -128,7 +128,7 @@ export default async function CountryGuidePage({ params }) {
                             <div className="bg-[var(--color-axelis)] border border-[var(--color-axelis)] rounded-2xl p-6 text-white sticky top-24 shadow-e-3">
                                 <h3 className="text-xl font-bold mb-4">Need personalized guidance?</h3>
                                 <p className="text-[var(--color-navy)] mb-6 text-sm">Our expert counsellors can help you find the right university and course in {data.name}.</p>
-                                <Link href="/contact" className="w-full block text-center bg-white hover:bg-[var(--color-navy)] text-[var(--color-axelis)] font-bold py-3 px-4 rounded-xl transition-colors">
+                                <Link href="/contact" className="w-full block text-center bg-white hover:bg-[var(--color-navy)] text-[var(--color-axelis)] hover:text-white font-bold py-3 px-4 rounded-xl transition-colors">
                                     Get Free Consultation
                                 </Link>
                             </div>

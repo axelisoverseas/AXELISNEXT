@@ -1,140 +1,141 @@
-# Brand handover — what the docs still need
+# Handover to brand design — CLOSED
 
-Written 20 September 2026, after the palette lock. For whoever maintains the
-brand documents next. Everything here is a discrepancy between what the
-guidelines say and what the two sites actually do, or a gap the guidelines
-never covered.
+**Raised 20 September 2026. Answered 21 September in `BRAND_DECISIONS.md`.
+Implemented the same day.**
 
-Source of truth for colour is now `brand-tokens.css`. If that file and a
-running site disagree, the site is wrong.
+Seven items went to brand design. Six are closed. One is carried forward to the
+founder because it was never a design question.
 
 ---
 
-## 1. The mark is used against its own spec
+## 1. The mark used against its own spec — CLOSED
 
-§3 is unambiguous:
+**Answer:** the spec was wrong, not the usage. `WEB_AGENT_PROMPT.md` item 5
+instructed the seal onto the homepage guarantee block and the refund page.
+Brand design has **withdrawn that instruction** and restated the rule:
+
+> The seal is **documents only**: the programme certificate, the signed
+> guarantee page of a proposal, and the engagement agreement signature block.
+
+A seal earns credibility by appearing only on instruments someone signs. On the
+web the guarantee is carried typographically with the clause number.
+
+**Implemented:** the seal has been removed from the three landing pages, where
+this session had added it before the rule existed. It remains on the specimen
+certificate.
+
+## 2. No logo sizing table — CLOSED
+
+**Answer:** clear space is **half the mark's height** on all four sides, and
+there is now a full placement table.
+
+**Implemented:**
+
+| Surface | Was | Now |
+|---|---|---|
+| Navbar, desktop | 56 px | **40 px** |
+| Navbar, mobile | 56 px | **32 px** |
+| Footer lockup | height-driven, ~56 px tall | **160 px wide** |
+
+The mark read small twice because 28–32 px sat in a 64–72 px bar. 40 px is
+about 55% of bar height.
+
+**Left open by design:** the 16 px favicon slot. Below ~24 px the rocket and
+slipstream merge, and the simplified variant has not been drawn. The
+instruction is explicit: ship the full mark at 16 px and log it, do not invent
+a simplification in code. Logged here.
+
+## 3. Colour locked, provenance changed — CLOSED
+
+The palette stands. The two older documents have been marked superseded on
+colour and typeface by brand design, so the repository no longer carries two
+palettes.
+
+## 4. Typography documented but not implemented — CLOSED
+
+**Answer:** **Lato ratified as the single family**, 400 / 700 / 900. The
+Instrument Serif + Instrument Sans pairing is **retired**: a second family for
+no defect it fixes.
+
+A full scale with line-heights and tracking is in `BRAND_DECISIONS.md` section 3.
+
+**One finding worth keeping.** Tabular numerals were assumed to be the fix for
+money columns shifting. Measured in the browser, `1111111111` and `0000000000`
+both render at **185.60 px** in Lato, and `tabular-nums` changes neither — the
+family's digits already share one advance width, so `tnum` is a no-op here.
+
+The money shift is **layout, not type**: right-align the cell, fix the column
+width in `ch`, keep the ₹ and digits in one non-breaking string. The token is
+kept anyway, because it costs nothing and is correct the day the family changes.
+
+**Implemented:** the dead `// Display face. Ships in one weight.` comment in
+`layout.js`, left from the Instrument plan, has been removed.
+
+## 5. Section rhythm, elevation, radius undocumented — CLOSED
+
+**Answer: ratified as written.** The `globals.css` scale stands, including
+navy-tinted alphas and hairline-as-ring-shadow, which is why nothing shifts on
+hover. There is now an assignment table so pages stop improvising, and a
+rhythm of 96 / 64 / 48.
+
+**Two amendments, both implemented:**
+
+- `.glass-card` **deleted** — black-alpha shadows and a dark-mode variant from
+  the retired brand, contradicting the navy-tinted scale directly above it. It
+  had zero users, so removing it was free.
+- Nothing above `2xl` (24 px). A design needing 32 px is wrong, not the scale.
+
+## 6. Two claims the brand cannot settle — CARRIED FORWARD
+
+Still open, still not design questions. Now recorded with evidence in
+`docs/CLAIMS_SUBSTANTIATION.md`:
+
+- **The visa claim.** 100%, 95% and "guaranteed results" have all appeared for
+  what looks like one metric, and `/terms-conditions` contradicts `/faq` on
+  what a guarantee is.
+- **"100% Free Service"** beside published prices of ₹9,999 and ₹19,999.
+  Removed from `/about`; the claim needs a ruling.
+
+Brand design's note: *"'100% Free Service' beside ₹9,999 is the one I'd fix
+first — it's the contradiction a lender or consumer forum notices."*
+
+**A third has since joined them:** charter pricing did not agree across
+`/products`, the FAQ and a landing page. Everything now matches `/products`
+because that is the page wired to the payment gateway, but which figure is
+contractually correct still needs confirming.
+
+## 7. Assets staged in both repos — CLOSED
+
+Confirmed, plus a new rule that came out of implementation.
+
+**`currentColor` does not cross the `<img>` boundary.** An external SVG has no
+inherited colour to resolve, so it falls back to black. This is expected
+behaviour, not a defect in the artwork, and it silently affected every seal on
+the site.
+
+Three files, and the right one must be chosen per surface:
 
 | File | Use |
 |---|---|
-| `axelis-mark.svg` | Mark alone. **Nav**, favicon, seal, small sizes. |
-| `axelis-lockup.svg` | Mark + wordmark. Hero, letterhead, avatars. |
+| `axelis-seal.svg` | `currentColor` — **inline `<svg>` only** |
+| `axelis-seal-navy.svg` | flat navy — `<img>` on light |
+| `axelis-seal-white.svg` | flat white — `<img>` on navy |
 
-Both sites put the **lockup** in the nav. The wordmark repeats a company name
-that is already in the page title, the footer and the URL, and it forces the
-whole thing smaller to fit the bar. The mark alone can then be larger and read
-better at the same width.
-
-**Fix:** nav uses `axelis-mark.svg`. Minimum 28px per §3; 40–44px is the
-comfortable size in a 64–80px bar.
-
-### The part the spec gets wrong
-
-§3 says colour is dynamic: the fills are `fill:currentColor` and
-`fill:var(--axelis-accent, currentColor)`, so "set `color` on a parent,
-nothing else."
-
-**That only works when the SVG is inlined in the DOM.** Referenced through
-`<img src="...">` or `next/image`, the file renders in an isolated context,
-`currentColor` has nothing to inherit, and the custom property never reaches
-it. This is almost certainly why `-navy` and `-white` copies exist in
-`assets/` despite §3 saying "there must never be one".
-
-Either:
-- inline the mark as a React component so `currentColor` works as designed,
-  and delete the per-colour copies; or
-- amend §3 to state that `<img>` usage requires a per-colour file, and treat
-  the existing copies as intended rather than as a mistake.
-
-Pick one. The current state documents the first and practises the second.
+The same pattern already applies to the lockup and the mark.
 
 ---
 
-## 2. The guidelines have no logo sizing table
+## What came out of this that nobody asked for
 
-§3 gives a minimum and nothing else, so every implementation has invented its
-own. Add a table covering nav, footer, favicon, OG image, letterhead, seal and
-email signature, in px, with the clear-space rule restated per context.
+The most expensive item was not on the original list. Twice this month a
+component written for a light surface was moved onto a dark one and kept its
+light tokens: the footer, and the specimen certificate, where the programme
+title measured **1.10:1** and the anti-forgery watermark did not render at all.
 
-Clear space is defined as "the height of the planet". That is unmeasurable
-without opening the file. Give it a number or express it as a fraction of the
-mark's own height.
+Brand design's section 4 names a dark-surface set, and it is now implemented as
+first-class tokens plus an `.on-dark` class that remaps the four light tokens.
+A component moved onto navy inherits correct values instead of silently keeping
+light ones.
 
----
-
-## 3. Colour is locked, and the provenance changed
-
-`#1D4ED8` is the accent, locked 20 September 2026. `brand-tokens.css` carries
-the reasoning and the full set. §5 and §5.1 in the guidelines are updated, and
-all eleven contrast pairings were re-measured against the new values rather
-than carried over.
-
-Two things a maintainer needs to know:
-
-- The competitor analysis in §2 and §5 cites **Leverage Edu's** own navy and
-  blue. Those are facts about a third party. Do not sweep them up in a
-  find-and-replace when the palette next changes. It has already happened once
-  and it made the document claim a competitor uses our colour.
-- The comparison pages under `samples/` record Leverage Edu's real values on
-  purpose. They are research. Repainting them destroys the record of what was
-  compared against what.
-
-The palette no longer contains any value taken from a competitor's stylesheet.
-The trade-dress note in the old `brand-tokens.css` header is therefore
-obsolete, and the new header explains why.
-
----
-
-## 4. Typography is documented but not implemented
-
-§4 specifies Instrument Serif for display and gives leading and tracking per
-role. Both sites run **Lato** for everything, including headings at 700.
-
-That was a deliberate choice, not drift, but §4 has not been updated to match
-and now describes a site that does not exist. Either restore the serif or
-rewrite §4. Leaving it is the worst of the three, because the next person will
-implement the document and produce a third look.
-
-If §4 is rewritten for Lato, note that Instrument Serif ships a **single
-weight**: any bold heading in it is browser-synthesised and smears. That
-constraint belongs in the document.
-
----
-
-## 5. Section rhythm, elevation and radius are undocumented
-
-The sites run three systems the guidelines never mention:
-
-- **Elevation** — five steps, `--shadow-e-1` to `--shadow-e-lift`, alphas
-  between 4% and 12%, tinted with the navy rather than neutral black.
-- **Radius** — six steps, `--radius-xs` 4px through `--radius-2xl` 24px.
-- **Section rhythm** — `.sec` / `.sec-sm` / `.sec-lg`, fluid via `clamp()`.
-
-These are as much a part of the brand as the palette and are currently only
-discoverable by reading `globals.css`. They belong in the guidelines.
-
----
-
-## 6. Two claims the brand cannot settle
-
-Not design problems, but they are on brand surfaces and nobody has resolved
-them:
-
-- **Visa success rate.** The sites state 100%, 95%, and "guaranteed results"
-  for what looks like one metric. `/terms-conditions` correctly defines a
-  guarantee as "a specific, conditional commitment", and `/faq` contradicts it.
-- **"100% Free Service"** appeared on `/about` alongside published plan prices
-  of ₹9,999 and ₹19,999. It has been removed; the claim itself needs a ruling.
-
-Both need a decision from the founder, not a designer.
-
----
-
-## 7. Assets now staged in both repos
-
-`public/brand/` in each repo holds `axelis-mark.svg`, `axelis-lockup.svg` and
-`axelis-seal.svg`, copied from `docs/brand/assets/`. They were previously only
-in the docs folder, which is why the sites were using ad-hoc recoloured files
-instead.
-
-**These are copies.** If the source changes, re-copy. A build step that syncs
-them would be better than trusting anyone to remember.
+That guard is the single most useful thing in this round, because it is the one
+item that stops the defect recurring rather than fixing an instance of it.

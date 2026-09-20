@@ -1,3 +1,44 @@
+# RETIRED — D2C palette split
+
+**Retired 21 September 2026** by `BRAND_DECISIONS.md` section 8.
+
+This file described a palette split between overseeducation.com and
+axelisoverseas.com. It was a **work-allocation device** for converting two
+sites in parallel on two machines, not a brand rule, and both sites have since
+converged on one palette.
+
+It is retired rather than deleted because the commit history references it, and
+a file that silently vanishes is harder to reason about than one that says why
+it stopped being true.
+
+## What replaced it
+
+**The brand is one system.** Same palette, same type scale, same asset
+manifest, same certification set on both properties.
+
+The only legitimate differences are content and proof:
+
+- **B2B** leads with partner economics and carries partner badges.
+- **D2C** leads with the guarantee and carries student proof.
+
+Nothing in the visual system forks. If you find yourself wanting a B2B-only
+colour or a D2C-only radius, that is a content problem wearing a design
+costume.
+
+## Where the current answers live
+
+| Question | File |
+|---|---|
+| Palette, tokens, dark surfaces | `BRAND_DECISIONS.md` sections 4 and 5 |
+| Logo sizing and clear space | `BRAND_DECISIONS.md` section 1 |
+| Typography | `BRAND_DECISIONS.md` section 3 |
+| Everything implemented | `src/app/globals.css` |
+
+---
+
+<details>
+<summary>Original contents, kept for history</summary>
+
 # overseeducation.com — palette conversion
 
 > **The two-machine split is no longer needed. Both halves were taken on one
@@ -156,3 +197,6 @@ one locally; it needs to land once, for both.
 Before pushing: `npm run build` (the price-drift assertion runs in it), then
 check one navy band and one white card in the browser for leftover
 white-on-white.
+
+
+</details>

@@ -178,3 +178,52 @@ attributable to the student. That is a guarantee that can be kept.
 
 All confirmed reachable on 20 Sep 2026 except TEQSA, which refused every
 attempt.
+
+
+---
+
+## 4. Referred by brand design, 21 September 2026
+
+`docs/brand/BRAND_DECISIONS.md` closed nine design questions and referred three
+items here, because they are commercial rather than design decisions.
+
+### "100% Free Service"
+
+It appeared on `/about` beside published plan prices of ₹9,999 and ₹19,999. It
+has been removed from the page. The claim itself still needs a ruling on
+whether it may be used at all, and if so with what qualification.
+
+Brand design's note: *"the one I'd fix first — it's the contradiction a lender
+or consumer forum notices."* That judgement is right. A free-service claim
+sitting beside a published price is not a nuance a reader has to work out; it
+is visible in one glance, on the page that describes the company.
+
+### The visa claim
+
+100%, 95% and "guaranteed results" have all appeared for what looks like one
+metric. `/terms-conditions` defines a guarantee as "a specific, conditional
+commitment" and `/faq` contradicts it. AgentCis records three completed cases
+this cycle, so a percentage may not be expressible at all. Section 3 above has
+the detail.
+
+### Charter pricing, which did not agree across three pages
+
+| Surface | Global Admissions | Europe Public |
+|---|---|---|
+| `/products`, wired to Cashfree | ₹9,999 refundable | ₹19,999 + ₹1,80,000 = ₹1,99,999 |
+| FAQ, before 20 Sep | ₹10,000 | ₹10,000 + ₹1,65,000 = ₹1,75,000 |
+| `/lp/pay-after-offer`, as first shipped | ₹10,000 | ₹10,000 + ₹1,65,000 |
+
+A ₹25,000 gap, with the advertised figure **below** what checkout charges. The
+two pages also described different arrangements: a refundable deposit returned
+after arrival, versus pay-after-offer.
+
+Everything now matches `/products`, on the basis that it is the page wired to
+the payment gateway and therefore what actually bills. **That is an assumption,
+not a ruling.** Someone has to confirm which figure is contractually correct.
+The ₹1,65,000 predates this week; it was in the FAQ and was copied from there
+onto a landing page, which is how one wrong number reached three surfaces.
+
+See also `docs/brand/NAMING_DECISION_RECORD.md`: the product *names* are open
+for the same reason, and a wrong name on a gateway-wired page is a mis-sold
+service rather than a design error.

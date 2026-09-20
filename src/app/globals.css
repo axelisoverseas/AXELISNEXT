@@ -222,22 +222,7 @@ body {
 }
 
 
-/* Minimalist Glass Card */
-.glass-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(10, 17, 40, 0.05);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
-  border-radius: 12px;
-}
 
-.dark .glass-card {
-  background: rgba(10, 17, 40, 0.7);
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-}
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -828,3 +813,51 @@ h1 i, h2 i, h3 i, h4 i {
 .meta, figcaption, caption { font-weight: 500; }
 
 .measure { max-width: 62ch; }
+
+
+/* ------------------------------------------------------------------ *
+ * DARK SURFACES
+ *
+ * Per docs/brand/BRAND_DECISIONS.md section 4. On a navy ground three
+ * light-palette tokens are forbidden, and using them is exactly what produced
+ * a 1.10:1 certificate title and an unreadable footer this month:
+ *
+ *   --foreground   #1B2233 on navy = 1.11:1   never
+ *   --color-axelis #1D4ED8 on navy = 2.14:1   never
+ *   --color-dim    #586179 on navy = 2.32:1   never
+ *
+ * Put .on-dark on any element rendering over navy. It remaps those tokens, so
+ * a component written for a light surface and later moved onto a dark one
+ * inherits correct values instead of silently keeping light ones. The guard
+ * has to be cheaper than remembering, or it will not be used.
+ * ------------------------------------------------------------------ */
+:root {
+  --dark-bg: #16265C;        /* the ground                               */
+  --dark-surface: #1E3270;   /* raised card on navy, 12.03:1 with white  */
+  --dark-rule: #33437E;      /* hairline on navy                         */
+  --dark-fg: #FFFFFF;        /* primary text, 14.33:1 AAA                */
+  --dark-dim: #C3CBDD;       /* secondary text, 8.80:1 AAA               */
+  --dark-accent: #9EC0FF;    /* links, accents, focus, 7.80:1 AAA        */
+  --dark-btn-fill: #FFFFFF;  /* button fill on navy; label is --dark-bg  */
+}
+
+.on-dark {
+  --foreground: var(--dark-fg);
+  --color-dim: var(--dark-dim);
+  --color-axelis: var(--dark-accent);
+  --color-rule: var(--dark-rule);
+  color: var(--dark-fg);
+}
+
+/* A primary button on navy is white-filled with a navy label.
+   --color-axelis as a fill on navy is 2.14:1 against its own ground. */
+.on-dark .btn-primary {
+  background: var(--dark-btn-fill);
+  border-color: var(--dark-btn-fill);
+  color: var(--dark-bg);
+}
+.on-dark .btn-primary:hover {
+  background: var(--dark-dim);
+  border-color: var(--dark-dim);
+  color: var(--dark-bg);
+}

@@ -128,14 +128,6 @@ export default function LandingPage({ page }) {
       {/* 6. Close */}
       <section className="sec border-t border-[var(--color-rule)] bg-[var(--color-tint)]">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
-          <img
-            src="/brand/axelis-seal-navy.svg"
-            alt=""
-            aria-hidden="true"
-            width={44}
-            height={44}
-            className="mx-auto mb-5 h-11 w-auto opacity-80"
-          />
           <h2 className="text-2xl font-bold tracking-tight text-[var(--color-navy)] sm:text-3xl">
             Find out where you stand, before you spend anything.
           </h2>

@@ -20,7 +20,6 @@ import "./globals.css";
 
 // Self-hosted at build time by next/font: no third-party request, and
 // next/font emits a size-adjusted fallback so there is no layout shift.
-// Display face. Ships in one weight. See the type note in globals.css.
 export const metadata = {
   metadataBase: new URL('https://overseeducation.com'),
   icons: {

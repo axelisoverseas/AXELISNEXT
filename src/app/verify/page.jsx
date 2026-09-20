@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import CertificateLookup from './CertificateLookup';
-import SpecimenCertificate from '../../components/SpecimenCertificate';
+import SpecimenCertificate, { SpecimenNote } from '../../components/SpecimenCertificate';
 import { refundPolicy } from '../../data/certificationPrograms';
 import { registerStats } from '../../data/certificateRegister';
 
@@ -39,6 +39,7 @@ export default function VerifyPage() {
             passed off as an issued certificate.
           </p>
           <SpecimenCertificate />
+          <SpecimenNote />
         </section>
 
         <section className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-tint)] p-6">

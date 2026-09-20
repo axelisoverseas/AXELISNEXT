@@ -28,7 +28,7 @@ implemented there; if the two ever disagree, the page is right.
 |---|---|
 | **Positioning** | Three end-to-end concierge programmes. A written outcome guarantee. |
 | **Logo** | The founder's own SVG — planet, slipstream, rocket. Not redrawn. |
-| **Typefaces** | **Instrument Serif** (display) + **Instrument Sans** (text) |
+| **Typefaces** | **Lato** (one family, 400 / 700 / 900) |
 | **Palette** | Leverage Edu's navy and blue — `#0E3240` / `#4080BD` |
 | **Architecture** | Derived from Leverage Edu's page structure |
 | **Radius** | 10px buttons and tiles, 14px cards |
@@ -59,7 +59,13 @@ in an unreferenced stylesheet. Nine firms is a sample, not a census.
 geometric sans — eight companies, one silhouette. Not one of them is
 condensed, and every one is a sans. **Instrument Serif takes the lane none of
 them occupy** — a serif display face in a category that is unanimously
-grotesque. The palette deliberately does not differentiate: it matches
+grotesque.
+>
+> *The audit finding stands; the conclusion drawn from it does not. Instrument
+> was retired on 21 September because a second family costs a second load and
+> a re-do of every heading, and differentiation by typeface was not worth that
+> against a category this uniform. The differentiation now sits in the palette
+> and the voice. See `BRAND_DECISIONS.md` section 3.* The palette deliberately does not differentiate: it matches
 Leverage Edu's, by the founder's decision (see §5).
 
 ---
@@ -87,40 +93,58 @@ size** 28px for the mark, 120px wide for the lockup.
 
 **Do not:** recolour outside the palette · rotate · add shadow or glow ·
 stretch · outline · place on a busy photograph · rebuild the wordmark in
-Instrument Serif — the lockup carries its own lettering.
+any typeface — the lockup carries its own lettering.
 
 ---
 
 ## 4 · Typography
 
-**Two faces, and a reason for each.**
+> **Superseded 21 September 2026.** The Instrument Serif + Instrument Sans
+> pairing described here previously is **retired**. It meant a second family,
+> a second load, and re-doing every heading, for no defect it fixed. See
+> `BRAND_DECISIONS.md` section 3.
 
-| Role | Face | Weights |
-|---|---|---|
-| Display, headings, wordmark, pull quotes | **Instrument Serif** | 400 + italic |
-| Body, nav, labels, tables, forms, figures | **Instrument Sans** | 400 / 500 / 600 / 700 |
+**Ratified: Lato, one family.** Weights **400 / 700 / 900**, roman and italic,
+loaded through `next/font/google`. SIL OFL, self-hosted at build, with a
+size-adjusted fallback so there is no layout shift.
 
-**Why two and not one.** Instrument Serif ships a single weight plus italic. It
-is a display face: it cannot carry body copy, and it has no bold. Faking one
-with `font-weight: 800` makes the browser synthesise an outline, which looks
-broken at any size. So emphasis inside a heading is **italic**, never heavier.
+### The scale
 
-| Role | Setting |
-|---|---|
-| H1 | Serif 400, 1.06 leading, −1% tracking |
-| H2–H4 | Serif 400, 1.1 leading |
-| Emphasis in a heading | Serif 400 *italic*, in the accent |
-| Labels, eyebrows | Sans 600, +14% tracking, uppercase |
-| Figures — fees, EMI, IDs | Sans 700, tabular numerals |
-| Meta, captions | Sans 500 |
-| Body | Sans 400, 1.6 leading |
+| Role | Desktop | Mobile | Weight | Line-height | Tracking |
+|---|---|---|---|---|---|
+| Display | 56 px | 36 px | 900 | 1.05 | −0.02em |
+| H1 | 40 px | 30 px | 900 | 1.10 | −0.015em |
+| H2 | 30 px | 24 px | 700 | 1.15 | −0.01em |
+| H3 | 22 px | 20 px | 700 | 1.25 | −0.005em |
+| Lead | 20 px | 18 px | 400 | 1.55 | 0 |
+| Body | 17 px | 16 px | 400 | 1.65 | 0 |
+| Small | 15 px | 14 px | 400 | 1.55 | 0 |
+| Label / eyebrow | 12 px | 12 px | 700 | 1.4 | +0.12em, uppercase |
+| Figure | inherits | inherits | 700 | 1.2 | 0 |
 
-Body copy is never wider than 62 characters. Headings are sentence case;
-uppercase is reserved for labels.
+Body copy never exceeds **68 characters**. Lato runs small for its point size,
+so **17 px body is deliberate**: 16 px reads thin at this measure.
 
-Both faces are on Google Fonts, so they work on the web, in Google Docs and in
-anything that can reach `fonts.googleapis.com`. Nothing to self-host, nothing
-to license.
+Headings are sentence case. Emphasis inside a heading is weight, not italic,
+now that the family has a real 900.
+
+### Figures: tabular numerals are not the fix
+
+Assumed, then measured. With Lato loaded, `1111111111` and `0000000000` both
+render at **185.60 px**, and `font-variant-numeric: tabular-nums` changes
+neither — **185.60 px either way**. Lato's digits already share one advance
+width, so `tnum` is a no-op on this family.
+
+The money shift is **layout, not type**. Fix it by:
+
+- right-aligning every currency cell
+- giving the column a fixed width in `ch`, so ₹9,999 and ₹2,00,000 share a box
+- keeping the ₹, the digits and the commas in one non-breaking string
+
+The token stays anyway. It costs nothing and is correct the day the family
+changes.
+
+---
 
 ## 5 · Colour
 
@@ -298,7 +322,7 @@ Nothing here has been applied to the running site.
 
 1. **Reissue the mark** — favicons, `og-image.jpg`, email signature, social avatars
 2. **Swap the token layer** — `brand-tokens.css` into `globals.css` via the migration map at the foot of that file
-3. **Fonts** — Montserrat out of `layout.js`, Instrument Serif + Instrument Sans in via `next/font/google`
+3. **Fonts** — Lato via `next/font/google`, one family (done)
 4. **Rebuild the homepage** to the architecture in `samples/axelis-final.html`
 5. **Reissue documents** — letter, proposal, certificate
 6. **Finish the copy purge** — one stale comment at `certificationPrograms.js:14`
@@ -320,3 +344,129 @@ competitor's navy and Rubik alongside their layout would edge from convention
 into trade dress, and would undo the differentiation the rest of this document
 is built on. `samples/axelis-final.html` carries a comparison toggle that swaps
 in Leverage's navy — that is a reference tool, not a brand option.
+
+
+---
+
+## 10 · Logo sizing and clear space
+
+*Added 21 September 2026 from `BRAND_DECISIONS.md` section 1. This table did
+not exist, which is why the mark was reported as too small twice.*
+
+**Clear space = half the mark's height**, measured on the planet disc, on all
+four sides. Nothing enters it: not a badge, not a tagline, not a nav link.
+
+### Minimums
+
+| Asset | Screen | Print |
+|---|---|---|
+| Mark | 24 px | 8 mm |
+| Lockup | 120 px wide | 32 mm wide |
+| Seal | 96 px | 28 mm |
+
+### Placements
+
+| Context | Asset | Size |
+|---|---|---|
+| Navbar, desktop | Mark | 40 px |
+| Navbar, mobile | Mark | 32 px |
+| Footer | Lockup | 160 px wide |
+| Favicon | Mark | 16 / 32 / 48 |
+| App icon | Mark, white on navy | 180 / 192 / 512 |
+| OG image 1200×630 | Lockup, white | 360 px wide, optically centred |
+| Document header | Lockup | 34 mm wide |
+| Certificate | Lockup | 42 mm wide |
+| Business card front | Lockup | 28 mm wide |
+| Email signature | Mark | 58 px |
+
+40 px desktop is roughly 55% of a 72 px bar, which is where a mark stops
+looking apologetic. 28–32 px in that bar is what produced the complaints.
+
+**Open:** the 16 px favicon. Below ~24 px the rocket and slipstream merge and
+no simplified variant has been drawn. Ship the full mark at 16 px and log it.
+Do not invent a simplification in code.
+
+### Which asset, and which file
+
+| Asset | When |
+|---|---|
+| Mark | Anywhere the lockup would fall under 120 px |
+| Lockup | Where the name must be read: footer, OG, document headers, cards |
+| Seal | **Documents only.** Certificate, signed guarantee page, engagement signature block |
+
+The seal is not a web device. It earns credibility by appearing only on
+instruments someone signs; decorating a marketing page with it makes it a
+graphic. On the web the guarantee is carried typographically with its clause
+number.
+
+**`currentColor` does not cross the `<img>` boundary.** An external SVG has no
+inherited colour to resolve and falls back to black. Three files exist and the
+right one must be picked per surface:
+
+| File | Use |
+|---|---|
+| `axelis-seal.svg` | inline `<svg>` only |
+| `axelis-seal-navy.svg` | `<img>` on light |
+| `axelis-seal-white.svg` | `<img>` on navy |
+
+---
+
+## 11 · Dark surfaces
+
+*Added 21 September 2026 from `BRAND_DECISIONS.md` section 4. This gap caused
+two production defects.*
+
+**Three light-palette tokens are forbidden on navy:**
+
+| Token | On `#16265C` | |
+|---|---|---|
+| `--foreground` `#1B2233` | 1.11:1 | never |
+| `--color-axelis` `#1D4ED8` | 2.14:1 | never |
+| `--color-dim` `#586179` | 2.32:1 | never |
+| `#4F80F0` | 3.87:1 | large graphics only, never text |
+
+**The dark set:**
+
+| Token | Hex | On navy |
+|---|---|---|
+| `--dark-bg` | `#16265C` | the ground |
+| `--dark-surface` | `#1E3270` | 12.03:1 with white |
+| `--dark-rule` | `#33437E` | hairline |
+| `--dark-fg` | `#FFFFFF` | 14.33:1 AAA |
+| `--dark-dim` | `#C3CBDD` | 8.80:1 AAA |
+| `--dark-accent` | `#9EC0FF` | 7.80:1 AAA |
+| `--dark-btn-fill` | `#FFFFFF` | fill; label in `--dark-bg` |
+
+**Use `.on-dark`.** It remaps the four light tokens, so a component written
+against a light surface and later moved onto navy inherits correct values
+instead of silently keeping light ones. The guard has to be cheaper than
+remembering, or nobody uses it.
+
+Buttons on navy are **white-filled with a navy label**. `--color-axelis` as a
+fill on navy is 2.14:1 against its own ground.
+
+---
+
+## 12 · Elevation, radius, rhythm
+
+*Ratified as implemented, 21 September 2026. Assignment table added so pages
+stop improvising.*
+
+| Element | Radius | Elevation |
+|---|---|---|
+| Input, chip, badge | `sm` 6 | ring |
+| Button | `md` 8 | none resting, `e-1` hover |
+| Card, tile | `lg` 12 | `e-2` |
+| Panel, modal, hero capture | `xl` 16 | `e-3` |
+| Full-bleed media | `2xl` 24 | none |
+| Document sheets (print) | 0 | none |
+
+**Section rhythm**, desktop / mobile: major **96 / 64**, sub-section
+**64 / 40**, band **48 / 32**. Grid gap **20**. One rhythm, no page-level
+exceptions.
+
+**Nothing above `2xl`.** A design needing 32 px is wrong, not the scale.
+
+`.glass-card` was deleted on 21 September: black-alpha shadows and a dark-mode
+variant from the retired brand, contradicting the navy-tinted scale. It had no
+users.
