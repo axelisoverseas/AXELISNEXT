@@ -66,7 +66,7 @@ export default function Home() {
             className="text-4xl md:text-7xl font-extrabold text-white tracking-tight mb-6 max-w-5xl mx-auto"
           >
             Study abroad, without{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--accent-on-dark)]">
               guessing at the cost.
             </span>
           </motion.h1>

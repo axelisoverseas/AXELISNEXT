@@ -672,7 +672,17 @@ body {
 @keyframes follow-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
 @media (prefers-reduced-motion: reduce) { .follow-rail[data-open='true'] .follow-list { animation: none; } }
 
-/* On a phone the label costs more than it earns; the icons carry it. */
+/* Two floating clusters on a 390px screen is one too many: the rail and the
+   WhatsApp button between them were landing on hero CTAs — "Book a free
+   demo" on /test-prep and "What it costs, in full" on /vocational were both
+   covered. The footer already carries every one of these links, so on a
+   phone the rail is redundant rather than missing. WhatsApp keeps the corner
+   because it is the one that starts a conversation. */
+@media (max-width: 639px) {
+  .follow-rail { display: none; }
+}
+
+/* On a narrow tablet the label costs more than it earns; the icons carry it. */
 @media (max-width: 480px) {
   .follow-name, .follow-toggle-text { position: absolute; width: 1px; height: 1px;
     padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }

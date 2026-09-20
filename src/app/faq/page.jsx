@@ -89,8 +89,8 @@ const FAQPage = () => {
             </div>
             <input 
               type="text" 
-              placeholder="Search for questions (e.g. 'Scholarship', 'Visa', 'UK')"
-              className="w-full h-16 pl-16 pr-8 bg-[var(--color-axelis)]/50 backdrop-blur-xl border border-[var(--color-axelis)] rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-stone-700 transition-all font-medium text-lg shadow-e-3"
+              placeholder="Search questions…"
+              className="w-full h-16 pl-16 pr-8 bg-[var(--color-axelis)]/50 backdrop-blur-xl border border-[var(--color-axelis)] rounded-2xl text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-stone-700 transition-all font-medium text-lg shadow-e-3"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />

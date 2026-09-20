@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { ArrowRight, Star, MapPin, GraduationCap, Play, BadgeCheck } from 'lucide-react';
 import { testimonials as allTestimonials } from '../../data/siteData';
 import InstagramFeed from '../../components/InstagramFeed';
+import WebGLBoundary from '../../components/WebGLBoundary';
 
 // Show only testimonials with a real student photo. Entries that fall back to
 // auto-generated initials avatars (ui-avatars.com) are placeholders, not real
@@ -206,7 +207,7 @@ export default function TestimonialsPage() {
             ))}
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-            Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--dawn-glow)]">globe.</span>
+            Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--accent-on-dark)]">globe.</span>
           </h1>
           <p className="text-xl md:text-2xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10">
             Real placements across 29+ countries. Named students, signed declarations, verifiable visas.
@@ -233,11 +234,21 @@ export default function TestimonialsPage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div className="lg:sticky lg:top-28">
-              <TestimonialRealisticGlobe
-                ref={globeRef}
-                testimonials={testimonials}
-                onCountryFocus={handleCountryFocus}
-              />
+              <WebGLBoundary
+                fallback={
+                  <div className="rounded-[var(--radius-xl)] border border-[var(--color-rule)] bg-[var(--color-tint)] p-8 text-center">
+                    <p className="text-sm text-[var(--color-dim)]">
+                      Students placed across 29 destinations. The stories are listed beside this.
+                    </p>
+                  </div>
+                }
+              >
+                <TestimonialRealisticGlobe
+                  ref={globeRef}
+                  testimonials={testimonials}
+                  onCountryFocus={handleCountryFocus}
+                />
+              </WebGLBoundary>
             </div>
 
             <div className="relative">

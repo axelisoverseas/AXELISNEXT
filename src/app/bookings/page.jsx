@@ -23,7 +23,7 @@ export default function BookingsPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
             <TextEffect as="span" per="word" preset="blur">Book a</TextEffect>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--color-axelis)]">Free Counselling Call</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--accent-on-dark)]">Free Counselling Call</span>
           </h1>
           <p className="text-lg text-white max-w-2xl mx-auto">
             Pick a time that works for you. Our counsellors will walk you through eligibility, scholarships, and next steps, end-to-end.

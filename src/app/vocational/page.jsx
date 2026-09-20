@@ -46,7 +46,7 @@ export default function VocationalPage() {
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)]/92 via-[var(--storm-deep)]/80 to-[var(--storm-deep)]" />
         </div>
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-axelis)] mb-4">
+          <p className="text-sm font-semibold uppercase tracking-wider text-[var(--accent-on-dark)] mb-4">
             Vocational Skill Programmes
           </p>
           <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight text-balance mb-6 max-w-4xl">

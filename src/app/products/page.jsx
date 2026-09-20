@@ -86,7 +86,7 @@ function ProductsContent() {
         >
           <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight">
             <TextEffect as="span" per="word" preset="blur">Pick the plan that matches</TextEffect>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">where you want to study.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--accent-on-dark)]">where you want to study.</span>
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
@@ -113,7 +113,7 @@ function ProductsContent() {
               /accreditations. This page owns the plans and their pricing. */}
           <motion.p variants={fadeInUp} className="text-sm text-white/85">
             5,000+ students placed across 29+ countries &middot;{' '}
-            <Link href="/accreditations" className="text-[var(--dawn-glow)] font-semibold hover:underline">
+            <Link href="/accreditations" className="text-[var(--accent-on-dark)] font-semibold underline underline-offset-2 hover:no-underline">
               Certified by independent bodies &rarr;
             </Link>
           </motion.p>

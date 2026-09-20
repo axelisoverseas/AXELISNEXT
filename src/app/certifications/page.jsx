@@ -157,7 +157,7 @@ export default function CertificationsPage() {
             className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 max-w-4xl mx-auto"
           >
             Earn a credential on the way to{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--accent-on-dark)]">
               your offer letter.
             </span>
           </motion.h1>

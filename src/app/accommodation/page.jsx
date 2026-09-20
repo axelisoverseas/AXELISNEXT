@@ -55,7 +55,7 @@ export default function AccommodationPage() {
 
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight">
                         <TextEffect as="span" per="word" preset="blur">Find your perfect</TextEffect>{' '}
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--dawn-glow)]">
+                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--accent-on-dark)]">
                             student home
                         </span>
                     </h1>

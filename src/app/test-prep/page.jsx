@@ -237,7 +237,7 @@ export default function TestPrepPage() {
           >
             Crack IELTS, TOEFL, PTE, SAT and more
             <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--dawn-glow)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--accent-on-dark)]">
               with tutors who&rsquo;ve actually done it.
             </span>
           </motion.h1>
