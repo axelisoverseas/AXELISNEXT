@@ -308,77 +308,18 @@ body {
   animation: shiny-sweep 3.5s ease-in-out infinite;
 }
 
-/* ===== Unified site wallpaper — single backdrop across every page ===== */
+/* The starfield wallpaper that used to sit behind every page was removed
+   with the white ground: it is a dark-ground device, and §5.2 puts 70% of
+   the page on white and tint. Its stacking helpers go with it. */
 .site-body { position: relative; }
 
-.site-wallpaper {
-  position: fixed;
-  inset: 0;
-  z-index: 0;
-  pointer-events: none;
-  overflow: hidden;
-}
-
-.site-wallpaper__layer { position: absolute; inset: 0; }
-
-.site-wallpaper__layer--gradient {
-  background: linear-gradient(180deg,
-    var(--storm-deep) 0%,
-    var(--storm-abyss) 22%,
-    var(--storm-mid) 48%,
-    var(--dawn-horizon) 72%,
-    var(--dawn-mid) 92%,
-    var(--dawn-clear) 100%);
-}
-
-.site-wallpaper__layer--stars {
-  inset: -60px;
-  background-image:
-    radial-gradient(1px 1px at 11% 19%, rgba(255,255,255,0.85), transparent 50%),
-    radial-gradient(1px 1px at 29% 73%, rgba(255,255,255,0.55), transparent 50%),
-    radial-gradient(1.4px 1.4px at 43% 36%, rgba(186,222,255,0.7), transparent 50%),
-    radial-gradient(1px 1px at 60% 11%, rgba(255,255,255,0.78), transparent 50%),
-    radial-gradient(1.6px 1.6px at 74% 62%, rgba(255,255,255,0.55), transparent 50%),
-    radial-gradient(1px 1px at 88% 28%, rgba(186,222,255,0.7), transparent 50%),
-    radial-gradient(1px 1px at 9% 88%, rgba(255,255,255,0.40), transparent 50%),
-    radial-gradient(1.2px 1.2px at 53% 92%, rgba(255,255,255,0.55), transparent 50%),
-    radial-gradient(1px 1px at 95% 78%, rgba(186,222,255,0.6), transparent 50%);
-  animation: site-wallpaper-drift 280s linear infinite;
-}
-
-.site-wallpaper__layer--stars-far {
-  inset: -120px;
-  opacity: 0.5;
-  animation: site-wallpaper-drift 420s linear infinite reverse;
-  filter: blur(0.4px);
-}
-
-.site-wallpaper__layer--nebula {
-  background:
-    radial-gradient(60% 50% at 18% 12%, rgba(255,255,255,0.16) 0%, transparent 60%),
-    radial-gradient(50% 50% at 82% 22%, rgba(139,92,246,0.12) 0%, transparent 65%),
-    radial-gradient(55% 60% at 50% 95%, rgba(251,191,36,0.18) 0%, transparent 65%);
-  filter: blur(20px);
-}
-
-@keyframes site-wallpaper-drift {
-  from { transform: translate3d(0, 0, 0); }
-  to { transform: translate3d(-50px, -80px, 0); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .site-wallpaper__layer--stars,
-  .site-wallpaper__layer--stars-far { animation: none !important; }
-}
-
-/* Pages keep transparent so the wallpaper shows through every section. */
 main > *,
 main section { position: relative; }
 /* ---------------------------------------------------------------------------
    TYPE — BRAND_GUIDELINES.md §4, implemented in full
    ---------------------------------------------------------------------------
-   Faces and spacing only. The palette flip is a separate piece of work; these
-   settings are ground-agnostic and correct on the current dark ground too.
+   The leading and tracking below are the spec, not house style: §4 gives a
+   setting for every role and the approved reference page uses these values.
 
      H1                Serif 400, 1.06 leading, -1% tracking
      H2-H4             Serif 400, 1.1 leading

@@ -25,10 +25,10 @@ import CheckoutButton from './CheckoutButton';
 const INR = (n) => `₹${n.toLocaleString('en-IN')}`;
 
 const CTA =
-  'inline-flex justify-center items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold text-sm transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]';
+  'inline-flex justify-center items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--color-navy)] font-bold text-sm transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]';
 
 const GHOST =
-  'inline-flex justify-center items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-xl bg-white/[0.06] hover:bg-white/[0.11] border border-white/15 text-white font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]';
+  'inline-flex justify-center items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-xl bg-white hover:bg-[var(--color-tint)] border border-[var(--color-dim)] text-[var(--color-navy)] font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]';
 
 export default function ServiceCheckout({ payKey, payHref, name }) {
   const item = payKey ? cashfreeLinks[payKey] : null;
@@ -38,7 +38,7 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
   // Test Prep page. Sending someone there beats duplicating a price ladder.
   if (payHref) {
     return (
-      <div className="mt-5 pt-5 border-t border-white/10">
+      <div className="mt-5 pt-5 border-t border-[var(--color-rule)]">
         <a href={payHref} className={GHOST}>
           See packs and pay <ArrowRight size={15} aria-hidden="true" />
         </a>
@@ -53,7 +53,7 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
     const { net, gst, gross } = withGst(item.amount * units);
 
     return (
-      <div className="mt-5 pt-5 border-t border-white/10">
+      <div className="mt-5 pt-5 border-t border-[var(--color-rule)]">
         <div className="flex flex-wrap items-center gap-4">
           <div className="flex items-center gap-1">
             <span id={`qty-label-${payKey}`} className="sr-only">
@@ -64,13 +64,13 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
               onClick={() => setUnits((n) => Math.max(1, n - 1))}
               disabled={units <= 1}
               aria-label={`One fewer ${item.unit}`}
-              className="h-9 w-9 inline-flex items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-white transition-colors hover:bg-white/[0.09] disabled:opacity-35 disabled:hover:bg-white/[0.04]"
+              className="h-9 w-9 inline-flex items-center justify-center rounded-lg border border-[var(--color-dim)] bg-white text-[var(--color-navy)] transition-colors hover:bg-[var(--color-tint)] disabled:opacity-35 disabled:hover:bg-white"
             >
               <Minus size={14} aria-hidden="true" />
             </button>
             <output
               aria-labelledby={`qty-label-${payKey}`}
-              className="w-12 text-center text-base font-bold tabular-nums text-white"
+              className="w-12 text-center text-base font-bold tabular-nums text-[var(--color-navy)]"
             >
               {units}
             </output>
@@ -79,20 +79,20 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
               onClick={() => setUnits((n) => Math.min(MAX_UNITS, n + 1))}
               disabled={units >= MAX_UNITS}
               aria-label={`One more ${item.unit}`}
-              className="h-9 w-9 inline-flex items-center justify-center rounded-lg border border-white/15 bg-white/[0.04] text-white transition-colors hover:bg-white/[0.09] disabled:opacity-35 disabled:hover:bg-white/[0.04]"
+              className="h-9 w-9 inline-flex items-center justify-center rounded-lg border border-[var(--color-dim)] bg-white text-[var(--color-navy)] transition-colors hover:bg-[var(--color-tint)] disabled:opacity-35 disabled:hover:bg-white"
             >
               <Plus size={14} aria-hidden="true" />
             </button>
-            <span className="ml-2 text-xs text-slate-400">
+            <span className="ml-2 text-xs text-[var(--color-dim)]">
               {item.unit}
               {units > 1 ? 's' : ''}
             </span>
           </div>
 
-          <p className="text-sm text-slate-300">
+          <p className="text-sm text-[var(--color-navy)]">
             Total{' '}
-            <span className="text-lg font-bold tabular-nums text-white">{INR(gross)}</span>{' '}
-            <span className="text-xs text-slate-500">
+            <span className="text-lg font-bold tabular-nums text-[var(--color-navy)]">{INR(gross)}</span>{' '}
+            <span className="text-xs text-[var(--color-dim)]">
               ({INR(net)} + {INR(gst)} GST)
             </span>
           </p>
@@ -107,7 +107,7 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
           />
         </div>
 
-        <p className="mt-2.5 text-xs text-slate-500 leading-relaxed">
+        <p className="mt-2.5 text-xs text-[var(--color-dim)] leading-relaxed">
           You are charged for the documents you count here and nothing else. If the count turns out
           to be wrong once we have seen them, we adjust it before any work starts.
         </p>
@@ -118,11 +118,11 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
   // ---- Fixed price --------------------------------------------------------
   if (item.url) {
     return (
-      <div className="mt-5 pt-5 border-t border-white/10">
+      <div className="mt-5 pt-5 border-t border-[var(--color-rule)]">
         <a href={item.url} target="_blank" rel="noopener noreferrer" className={CTA}>
           Pay {INR(withGst(item.amount).gross)} <ArrowRight size={15} aria-hidden="true" />
         </a>
-        <p className="mt-2.5 text-xs text-slate-500">
+        <p className="mt-2.5 text-xs text-[var(--color-dim)]">
           {INR(item.amount)} + {INR(withGst(item.amount).gst)} GST. Processed by Cashfree, which
           shows the full terms and takes your agreement before any payment.
         </p>
@@ -134,13 +134,13 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
   // Not every service needs a minted form. The order API creates one for the
   // catalogue amount on demand, so a price on the page is always payable.
   return (
-    <div className="mt-5 pt-5 border-t border-white/10">
+    <div className="mt-5 pt-5 border-t border-[var(--color-rule)]">
       <CheckoutButton
         product={payKey}
         label={`Pay ${INR(withGst(item.amount).gross)}`}
         className={CTA}
       />
-      <p className="mt-2.5 text-xs text-slate-500">
+      <p className="mt-2.5 text-xs text-[var(--color-dim)]">
         {INR(item.amount)} + {INR(withGst(item.amount).gst)} GST. Card details are entered on
         Cashfree's page, never here.
       </p>

@@ -102,13 +102,13 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
 
   if (done !== null) {
     return (
-      <div className="mt-5 pt-5 border-t border-white/10">
+      <div className="mt-5 pt-5 border-t border-[var(--color-rule)]">
         <div className="rounded-xl border border-emerald-400/35 bg-emerald-400/10 px-4 py-3.5">
           <p className="flex items-center gap-2 text-sm font-bold text-emerald-200">
             <Check size={15} aria-hidden="true" />
             {done} document{done === 1 ? '' : 's'} received
           </p>
-          <p className="mt-1.5 text-xs text-slate-300 leading-relaxed">
+          <p className="mt-1.5 text-xs text-[var(--color-navy)] leading-relaxed">
             Your counsellor has them and will confirm by email within one working day. If anything
             is unreadable we will tell you which file and why, rather than sending the whole set
             back.
@@ -124,7 +124,7 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--storm-electric)] hover:text-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] rounded"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-axelis)] hover:text-[var(--color-navy)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] rounded"
         >
           <Upload size={15} aria-hidden="true" />
           Upload your documents for this service
@@ -134,20 +134,20 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
   }
 
   const fieldClass =
-    'w-full rounded-lg border border-white/15 bg-white/5 px-3 py-2.5 text-sm text-white placeholder:text-slate-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]';
+    'w-full rounded-lg border border-[var(--color-dim)] bg-white px-3 py-2.5 text-sm text-[var(--color-navy)] placeholder:text-[var(--color-dim)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]';
 
   return (
-    <form onSubmit={onSubmit} className="mt-4 rounded-xl border border-white/12 bg-black/25 p-5">
+    <form onSubmit={onSubmit} className="mt-4 rounded-xl border border-[var(--color-rule)] bg-[var(--color-tint)] p-5">
       <div className="flex items-start justify-between gap-4 mb-4">
         <div>
-          <h4 className="text-base font-bold text-white">Send your documents</h4>
-          <p className="mt-1 text-xs text-slate-400 leading-relaxed">{req.intro}</p>
+          <h4 className="text-base font-bold text-[var(--color-navy)]">Send your documents</h4>
+          <p className="mt-1 text-xs text-[var(--color-dim)] leading-relaxed">{req.intro}</p>
         </div>
         <button
           type="button"
           onClick={() => setOpen(false)}
           aria-label="Close the upload form"
-          className="shrink-0 rounded-lg p-1.5 text-slate-400 hover:bg-white/10 hover:text-white transition-colors"
+          className="shrink-0 rounded-lg p-1.5 text-[var(--color-dim)] hover:bg-white hover:text-[var(--color-navy)] transition-colors"
         >
           <X size={16} aria-hidden="true" />
         </button>
@@ -156,13 +156,13 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
       {/* What we need */}
       <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
         <div>
-          <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">
+          <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-dim)] mb-2">
             Required
           </p>
           <ul className="space-y-1.5">
             {req.required.map((r) => (
-              <li key={r} className="flex gap-2 text-xs text-slate-300 leading-relaxed">
-                <FileText size={12} aria-hidden="true" className="shrink-0 mt-0.5 text-[var(--storm-electric)]" />
+              <li key={r} className="flex gap-2 text-xs text-[var(--color-navy)] leading-relaxed">
+                <FileText size={12} aria-hidden="true" className="shrink-0 mt-0.5 text-[var(--color-axelis)]" />
                 <span>{r}</span>
               </li>
             ))}
@@ -170,13 +170,13 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
         </div>
         {req.conditional?.length > 0 && (
           <div>
-            <p className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-2">
+            <p className="text-[11px] font-bold uppercase tracking-wider text-[var(--color-dim)] mb-2">
               If it applies to you
             </p>
             <ul className="space-y-1.5">
               {req.conditional.map((r) => (
-                <li key={r} className="flex gap-2 text-xs text-slate-400 leading-relaxed">
-                  <FileText size={12} aria-hidden="true" className="shrink-0 mt-0.5 text-slate-600" />
+                <li key={r} className="flex gap-2 text-xs text-[var(--color-dim)] leading-relaxed">
+                  <FileText size={12} aria-hidden="true" className="shrink-0 mt-0.5 text-[var(--color-dim)]" />
                   <span>{r}</span>
                 </li>
               ))}
@@ -186,21 +186,21 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
       </div>
 
       {req.note && (
-        <div className="mb-4 flex items-start gap-2 rounded-lg border border-[var(--dawn-glow)]/30 bg-[var(--dawn-glow)]/10 px-3 py-2.5">
-          <Info size={13} aria-hidden="true" className="shrink-0 mt-0.5 text-[var(--dawn-glow)]" />
-          <p className="text-xs text-slate-200 leading-relaxed">{req.note}</p>
+        <div className="mb-4 flex items-start gap-2 rounded-lg border border-[var(--color-axelis)]/30 bg-[var(--dawn-glow)]/10 px-3 py-2.5">
+          <Info size={13} aria-hidden="true" className="shrink-0 mt-0.5 text-[var(--color-axelis)]" />
+          <p className="text-xs text-[var(--color-navy)] leading-relaxed">{req.note}</p>
         </div>
       )}
 
       {/* How to scan — above the picker, so it is read before files are chosen */}
-      <details className="mb-4 rounded-lg border border-white/10 bg-white/[0.03]">
-        <summary className="cursor-pointer px-3 py-2.5 text-xs font-semibold text-slate-300 marker:text-slate-600">
+      <details className="mb-4 rounded-lg border border-[var(--color-rule)] bg-white">
+        <summary className="cursor-pointer px-3 py-2.5 text-xs font-semibold text-[var(--color-navy)] marker:text-[var(--color-dim)]">
           How to scan so nothing gets sent back
         </summary>
         <ul className="px-3 pb-3 space-y-1.5">
           {uploadGuidance.map((g) => (
-            <li key={g} className="flex gap-2 text-xs text-slate-400 leading-relaxed">
-              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-slate-600" />
+            <li key={g} className="flex gap-2 text-xs text-[var(--color-dim)] leading-relaxed">
+              <span className="mt-1.5 h-1 w-1 shrink-0 rounded-full bg-[var(--color-dim)]" />
               <span>{g}</span>
             </li>
           ))}
@@ -214,7 +214,7 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
           e.preventDefault();
           addFiles(e.dataTransfer.files);
         }}
-        className="rounded-xl border-2 border-dashed border-white/15 bg-white/[0.02] px-4 py-6 text-center"
+        className="rounded-xl border-2 border-dashed border-[var(--color-dim)] bg-white px-4 py-6 text-center"
       >
         <input
           ref={inputRef}
@@ -227,12 +227,12 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
         />
         <label
           htmlFor={`files-${serviceKey}`}
-          className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-white/[0.08] px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-white/[0.14]"
+          className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-[var(--color-navy)] transition-colors hover:bg-white"
         >
           <Upload size={15} aria-hidden="true" />
           Choose files
         </label>
-        <p className="mt-2.5 text-xs text-slate-500">
+        <p className="mt-2.5 text-xs text-[var(--color-dim)]">
           or drag them here · {UPLOAD_LIMITS.acceptLabel} · up to {MAX_MB} MB in total
         </p>
       </div>
@@ -242,26 +242,26 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
           {files.map((f, i) => (
             <li
               key={`${f.name}-${i}`}
-              className="flex items-center justify-between gap-3 rounded-lg border border-white/10 bg-white/[0.04] px-3 py-2"
+              className="flex items-center justify-between gap-3 rounded-lg border border-[var(--color-rule)] bg-white px-3 py-2"
             >
               <span className="flex min-w-0 items-center gap-2">
-                <FileText size={13} aria-hidden="true" className="shrink-0 text-slate-500" />
-                <span className="truncate text-xs text-slate-200">{f.name}</span>
+                <FileText size={13} aria-hidden="true" className="shrink-0 text-[var(--color-dim)]" />
+                <span className="truncate text-xs text-[var(--color-navy)]">{f.name}</span>
               </span>
               <span className="flex shrink-0 items-center gap-2">
-                <span className="text-[11px] tabular-nums text-slate-500">{MB(f.size)}</span>
+                <span className="text-[11px] tabular-nums text-[var(--color-dim)]">{MB(f.size)}</span>
                 <button
                   type="button"
                   onClick={() => setFiles(files.filter((_, j) => j !== i))}
                   aria-label={`Remove ${f.name}`}
-                  className="rounded p-1 text-slate-500 transition-colors hover:bg-white/10 hover:text-white"
+                  className="rounded p-1 text-[var(--color-dim)] transition-colors hover:bg-white hover:text-[var(--color-navy)]"
                 >
                   <X size={13} aria-hidden="true" />
                 </button>
               </span>
             </li>
           ))}
-          <li className={`pt-1 text-[11px] tabular-nums ${overLimit ? 'text-red-300' : 'text-slate-500'}`}>
+          <li className={`pt-1 text-[11px] tabular-nums ${overLimit ? 'text-red-300' : 'text-[var(--color-dim)]'}`}>
             {files.length} file{files.length === 1 ? '' : 's'} · {MB(total)} of {MAX_MB} MB
           </li>
         </ul>
@@ -270,25 +270,25 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
       {/* Who these belong to */}
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="sm:col-span-2">
-          <label htmlFor={`nm-${serviceKey}`} className="mb-1 block text-xs text-slate-400">
-            Full name, as printed on the documents <span className="text-[var(--dawn-glow)]">*</span>
+          <label htmlFor={`nm-${serviceKey}`} className="mb-1 block text-xs text-[var(--color-dim)]">
+            Full name, as printed on the documents <span className="text-[var(--color-axelis)]">*</span>
           </label>
           <input id={`nm-${serviceKey}`} required autoComplete="name" value={form.name} onChange={set('name')} className={fieldClass} />
         </div>
         <div>
-          <label htmlFor={`ph-${serviceKey}`} className="mb-1 block text-xs text-slate-400">
-            Mobile number <span className="text-[var(--dawn-glow)]">*</span>
+          <label htmlFor={`ph-${serviceKey}`} className="mb-1 block text-xs text-[var(--color-dim)]">
+            Mobile number <span className="text-[var(--color-axelis)]">*</span>
           </label>
           <input id={`ph-${serviceKey}`} required type="tel" inputMode="tel" autoComplete="tel" value={form.phone} onChange={set('phone')} className={fieldClass} />
         </div>
         <div>
-          <label htmlFor={`em-${serviceKey}`} className="mb-1 block text-xs text-slate-400">
-            Email <span className="text-[var(--dawn-glow)]">*</span>
+          <label htmlFor={`em-${serviceKey}`} className="mb-1 block text-xs text-[var(--color-dim)]">
+            Email <span className="text-[var(--color-axelis)]">*</span>
           </label>
           <input id={`em-${serviceKey}`} required type="email" autoComplete="email" spellCheck={false} value={form.email} onChange={set('email')} className={fieldClass} />
         </div>
         <div className="sm:col-span-2">
-          <label htmlFor={`rf-${serviceKey}`} className="mb-1 block text-xs text-slate-400">
+          <label htmlFor={`rf-${serviceKey}`} className="mb-1 block text-xs text-[var(--color-dim)]">
             Payment reference, from your Cashfree receipt
           </label>
           <input
@@ -298,13 +298,13 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
             placeholder="Order ID or transaction ID"
             className={fieldClass}
           />
-          <p className="mt-1 text-[11px] text-slate-500">
+          <p className="mt-1 text-[11px] text-[var(--color-dim)]">
             This is how we match your documents to your payment. If you have not paid yet, leave it
             blank and send it later.
           </p>
         </div>
         <div className="sm:col-span-2">
-          <label htmlFor={`nt-${serviceKey}`} className="mb-1 block text-xs text-slate-400">
+          <label htmlFor={`nt-${serviceKey}`} className="mb-1 block text-xs text-[var(--color-dim)]">
             Anything we should know
           </label>
           <textarea id={`nt-${serviceKey}`} rows={2} value={form.notes} onChange={set('notes')} className={fieldClass} />
@@ -316,16 +316,16 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
           type="checkbox"
           checked={paid}
           onChange={(e) => setPaid(e.target.checked)}
-          className="mt-0.5 h-4 w-4 shrink-0 rounded border-white/25 bg-white/10 accent-[var(--storm-accent)]"
+          className="mt-0.5 h-4 w-4 shrink-0 rounded border-[var(--color-dim)] bg-white accent-[var(--storm-accent)]"
         />
-        <span className="text-xs leading-relaxed text-slate-300">
+        <span className="text-xs leading-relaxed text-[var(--color-navy)]">
           I have completed payment for this service. I confirm these documents are mine and that
           Axelis may use them to deliver the service, on the{' '}
           <a
             href="/policies/payment-terms"
             target="_blank"
             rel="noopener noreferrer"
-            className="underline underline-offset-2 hover:text-white"
+            className="underline underline-offset-2 hover:text-[var(--color-navy)]"
           >
             Payment Terms
           </a>
@@ -336,14 +336,14 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
       {error && (
         <div role="alert" className="mt-4 flex items-start gap-2 rounded-lg border border-red-400/35 bg-red-400/10 px-3 py-2.5">
           <AlertCircle size={14} aria-hidden="true" className="mt-0.5 shrink-0 text-red-300" />
-          <p className="text-xs leading-relaxed text-slate-200">{error}</p>
+          <p className="text-xs leading-relaxed text-[var(--color-navy)]">{error}</p>
         </div>
       )}
 
       <button
         type="submit"
         disabled={busy || overLimit}
-        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] px-6 py-3 text-sm font-bold text-white transition-[filter] hover:brightness-110 disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] px-6 py-3 text-sm font-bold text-[var(--color-navy)] transition-[filter] hover:brightness-110 disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
       >
         {busy ? (
           <>
@@ -358,7 +358,7 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
         )}
       </button>
 
-      <p className="mt-2.5 text-[11px] leading-relaxed text-slate-500">
+      <p className="mt-2.5 text-[11px] leading-relaxed text-[var(--color-dim)]">
         Your files go straight to your counsellor. We do not store them on the website, and we never
         share them outside Axelis and the authority the service is for.
       </p>

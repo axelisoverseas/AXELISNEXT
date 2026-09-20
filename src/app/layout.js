@@ -132,13 +132,7 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className="font-sans antialiased text-[var(--storm-bolt)] bg-[var(--storm-deep)] flex flex-col min-h-screen site-body">
-        <div className="site-wallpaper" aria-hidden="true">
-          <div className="site-wallpaper__layer site-wallpaper__layer--gradient" />
-          <div className="site-wallpaper__layer site-wallpaper__layer--stars" />
-          <div className="site-wallpaper__layer site-wallpaper__layer--stars site-wallpaper__layer--stars-far" />
-          <div className="site-wallpaper__layer site-wallpaper__layer--nebula" />
-        </div>
+      <body className="font-sans antialiased text-[var(--foreground)] bg-[var(--background)] flex flex-col min-h-screen site-body">
         <Navbar />
         <main className="flex-grow relative z-[1]">
           {children}
