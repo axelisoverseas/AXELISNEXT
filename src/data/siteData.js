@@ -948,7 +948,7 @@ export const products = [
     features: [
       "Exclusive access to 50+ tuition-free universities",
       "Pay After Offer model - reduced risk",
-      "Personalized university matching algorithm",
+      "Personalised university shortlisting",
       "Priority enrollment with fast-track processing",
       "Direct university representative contact",
       "Comprehensive pre-departure support",

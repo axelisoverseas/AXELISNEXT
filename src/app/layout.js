@@ -13,6 +13,7 @@ const lato = Lato({
 });
 import Script from "next/script";
 import Navbar from '@/components/Navbar';
+import FollowRail from '@/components/FollowRail';
 import Footer from '@/components/Footer';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
@@ -137,6 +138,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+        <FollowRail />
         <SpeedInsights />
       </body>
     </html>

@@ -1,4 +1,4 @@
-// University data from ai guy sheet.xlsx - Axelis Overseas partner universities
+// Axelis Overseas partner universities.
 // Each university includes: name, slug, country, programs, logo, website domain
 
 export const universities = [

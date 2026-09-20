@@ -398,7 +398,7 @@ export default async function ProgramPage({ params }) {
               <ul className="space-y-3">
                 {[
                   { Icon: Clock, text: 'Reply within one working day' },
-                  { Icon: Users, text: 'A counsellor, not a chatbot' },
+                  { Icon: Users, text: 'One named counsellor, start to finish' },
                   { Icon: ShieldCheck, text: 'No obligation to enrol' },
                 ].map(({ Icon, text }) => (
                   <li key={text} className="flex items-center gap-3 text-sm text-[var(--color-navy)]">

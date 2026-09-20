@@ -133,7 +133,7 @@ const offerings = [
   },
   {
     title: 'Real mock reviews',
-    body: 'Full-length exam-condition mocks, with line-by-line writing and speaking feedback from a human, not an algorithm.',
+    body: 'Full-length exam-condition mocks, with line-by-line writing and speaking feedback from your tutor.',
   },
   {
     title: 'Flexible scheduling',

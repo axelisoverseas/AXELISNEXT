@@ -12,6 +12,7 @@ const reels = [
   {
     id: 'ardnav',
     videoSrc: '/reels/ardnav_success_story.mp4',
+    poster: '/reels/posters/ardnav_success_story.jpg',
     studentName: 'Ardnav',
     university: 'International University',
     country: 'Germany',
@@ -22,6 +23,7 @@ const reels = [
   {
     id: 'rajat',
     videoSrc: '/reels/rajat_dublin_success.mp4',
+    poster: '/reels/posters/rajat_dublin_success.jpg',
     studentName: 'Rajat Limaye',
     university: 'Dublin City University',
     country: 'Ireland',
@@ -32,6 +34,7 @@ const reels = [
   {
     id: 'loan',
     videoSrc: '/reels/education_loan_no_collateral.mp4',
+    poster: '/reels/posters/education_loan_no_collateral.jpg',
     studentName: 'Loan Support',
     university: 'Collateral-Free Financing',
     country: 'India → Global',
@@ -42,6 +45,7 @@ const reels = [
   {
     id: 'netherlands',
     videoSrc: '/reels/netherlands_top_destination.mp4',
+    poster: '/reels/posters/netherlands_top_destination.jpg',
     studentName: 'Netherlands Track',
     university: 'Top Dutch Universities',
     country: 'Netherlands',
@@ -83,7 +87,8 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
         muted
         loop
         playsInline
-        preload="metadata"
+        poster={reel.poster}
+        preload="none"
         onLoadedData={() => setLoaded(true)}
         className="absolute inset-0 w-full h-full object-cover"
       />

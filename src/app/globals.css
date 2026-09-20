@@ -602,6 +602,69 @@ body {
   .emi-value { font-size: .8rem; }
 }
 
+
+/* ---- Follow rail ------------------------------------------------------
+   Bottom-left: the WhatsApp button owns bottom-right, and two floating
+   clusters in one corner read as a toolbar. Collapsed to one control until
+   asked, because a persistent stack of five icons is clutter on a phone. */
+.follow-rail {
+  position: fixed;
+  left: 1rem;
+  bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .5rem;
+}
+.follow-list { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; }
+.follow-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .55rem;
+  padding: .5rem .8rem .5rem .6rem;
+  min-height: 40px;
+  border-radius: 999px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-rule);
+  box-shadow: var(--e-2);
+  color: var(--color-navy);
+  font-size: .82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background-color var(--t) var(--ease), color var(--t) var(--ease),
+              border-color var(--t) var(--ease);
+}
+.follow-link:hover { background: var(--color-axelis); border-color: var(--color-axelis); color: #FFFFFF; }
+.follow-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .6rem 1rem .6rem .85rem;
+  min-height: 44px;
+  border-radius: 999px;
+  border: 1px solid var(--color-axelis);
+  background: var(--color-axelis);
+  color: #FFFFFF;
+  font: inherit;
+  font-size: .85rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: var(--e-2);
+  transition: background-color var(--t) var(--ease), border-color var(--t) var(--ease);
+}
+.follow-toggle:hover { background: var(--color-navy); border-color: var(--color-navy); }
+.follow-rail[data-open='true'] .follow-list { animation: follow-in var(--t-slow) var(--ease); }
+@keyframes follow-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { .follow-rail[data-open='true'] .follow-list { animation: none; } }
+
+/* On a phone the label costs more than it earns; the icons carry it. */
+@media (max-width: 480px) {
+  .follow-name, .follow-toggle-text { position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+  .follow-link, .follow-toggle { padding: .6rem; justify-content: center; width: 44px; }
+}
+
 /* ---- Section rhythm ---------------------------------------------------
    Vertical space was the least systematic thing left: sections ran from
    48px to 128px with nothing deciding which got what. A reference build
