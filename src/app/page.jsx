@@ -3,7 +3,7 @@ import React from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap, GraduationCap, Landmark } from 'lucide-react';
+import { ArrowRight, ChevronDown } from 'lucide-react';
 
 const UniversityLogosSection = dynamic(() => import('../components/UniversityLogosSection'), { ssr: false });
 const GoogleReviewsFloat = dynamic(() => import('../components/GoogleReviewsFloat'), { ssr: false });
@@ -116,66 +116,44 @@ export default function Home() {
           variants={staggerContainer}
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         >
-          <motion.div variants={fadeInUp} className="text-center mb-16 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[var(--color-navy)] text-balance">
-              Real <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] via-[var(--color-axelis)] to-[var(--dawn-glow)]">impact</span>
+          <motion.div variants={fadeInUp} className="mb-12 md:mb-16 max-w-2xl">
+            <p className="label">By the numbers</p>
+            <h2 className="mt-3 text-3xl md:text-5xl font-bold tracking-tight text-[var(--color-navy)] text-balance">
+              Real impact
             </h2>
-            <p className="text-[var(--color-navy)] mt-4">
-              One focus: placing students at universities they can actually get into and afford. Free first call, no upsell.
+            <p className="mt-4 text-[var(--color-dim)] leading-relaxed">
+              One focus: placing students at universities they can actually get into and afford.
+              Free first call, no upsell.
             </p>
           </motion.div>
 
-          {/* 4-stat grid: storm-glass cards with unified icon treatment.
-              Every icon: gradient halo + circular ring + dark inner disc + amber bolt accent. */}
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {/* Stats, Metabase/Red Hat register: no cards, no icon discs, no
+              hover lift. A short rule in the locked blue, the figure, the
+              label. The ornament was carrying no information and six haloed
+              discs with pulsing bolts read as a template, not a firm. */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 md:gap-y-12">
             {[
-              { icon: Users, value: '4,500+', label: 'Visas Done Successfully' },
-              { icon: Globe, value: '29+', label: 'Countries' },
-              { icon: GraduationCap, value: '35,000+', label: 'Universities' },
-              { icon: Award, value: '₹3+ Cr', label: 'Scholarships Won', gradient: true },
-              { icon: Landmark, value: '₹30+ Cr', label: 'Loans Facilitated' },
-              { icon: CheckCircle, value: '95%', label: 'Success Rate' },
-            ].map((stat, i) => {
-              const Icon = stat.icon;
-              return (
-                <motion.div
-                  key={i}
-                  variants={fadeInUp}
-                  className="group relative glass-storm rounded-2xl p-8 flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-500"
-                >
-                  {/* Unified icon: halo → ring → disc → bolt accent */}
-                  <div className="relative w-20 h-20 mb-6">
-                    {/* Soft gradient halo behind the disc */}
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--storm-electric)] via-white/40 to-[var(--dawn-glow)] opacity-30 blur-lg group-hover:opacity-70 transition-opacity duration-500" />
-                    {/* Crisp gradient ring */}
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-[var(--storm-electric)] via-white/70 to-[var(--dawn-glow)] p-[1.5px] group-hover:p-[2px] transition-all duration-500">
-                      <div className="w-full h-full rounded-full bg-[var(--storm-deep)]" />
-                    </div>
-                    {/* Inner disc with the icon */}
-                    <div className="absolute inset-[1.5px] rounded-full bg-[var(--storm-deep)]/95 backdrop-blur-md flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <Icon size={34} strokeWidth={1.6} className="text-white" />
-                    </div>
-                    {/* Amber lightning-bolt accent (universal, same on every card) */}
-                    <div
-                      className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center shadow-e-2 ring-2 ring-[var(--storm-deep)]"
-                      style={{ animation: 'bolt-pulse 3.5s ease-in-out infinite' }}
-                    >
-                      <Zap size={13} strokeWidth={3} className="text-white" fill="currentColor" />
-                    </div>
-                  </div>
-                  <span className={`text-4xl md:text-5xl font-bold mb-2 tracking-tight ${
-                    stat.gradient
-                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] via-[var(--color-axelis)] to-[var(--dawn-glow)]'
-                      : 'text-[var(--color-navy)]'
-                  }`}>
-                    {stat.value}
-                  </span>
-                  <span className="text-[var(--color-navy)] font-medium tracking-wide text-xs md:text-sm">
-                    {stat.label}
-                  </span>
-                </motion.div>
-              );
-            })}
+              { value: '5,000+', label: 'Students placed' },
+              { value: '4,500+', label: 'Visas approved' },
+              { value: '90%', label: 'Visa success rate' },
+              { value: '29+', label: 'Countries' },
+              { value: '35,000+', label: 'Universities' },
+              { value: '\u20b93+ Cr', label: 'Scholarships won' },
+              { value: '\u20b930+ Cr', label: 'Loans facilitated' },
+            ].map((stat) => (
+              <motion.div key={stat.label} variants={fadeInUp}>
+                <span
+                  aria-hidden="true"
+                  className="block h-0.5 w-8 rounded-full bg-[var(--color-axelis)]"
+                />
+                <p className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-[var(--color-navy)] tabular-nums">
+                  {stat.value}
+                </p>
+                <p className="mt-1.5 text-sm leading-snug text-[var(--color-dim)]">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </section>

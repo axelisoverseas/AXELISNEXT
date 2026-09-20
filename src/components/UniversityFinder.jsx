@@ -329,7 +329,7 @@ function CourseResults({ query, active }) {
           </h3>
           <p className="mt-2 text-sm leading-relaxed text-[var(--color-dim)] measure">
             This index only holds programmes we have a verifiable record for, which today means
-            mostly Germany. It is not a statement about what you can study — it is a statement
+            mostly Germany. It is not a statement about what you can study. It is a statement
             about what is published as open data. Tell us the subject and destination and a
             counsellor will check the university&rsquo;s own catalogue.
           </p>

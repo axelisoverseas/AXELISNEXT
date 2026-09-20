@@ -31,8 +31,8 @@ export const features = [
   },
   {
     id: 3,
-    title: "4,500+ Visas Done Successfully",
-    description: "4,500+ visas done successfully across top universities worldwide, with 2025 applications now open.",
+    title: "5,000+ Students Sent",
+    description: "Successfully placed 5,000+ students across top universities worldwide, with 2025 applications now open.",
     icon: "👥"
   },
   {
@@ -252,7 +252,7 @@ export const faqData = [
   {
     id: 2,
     question: "Do you charge any fees for our services?",
-    answer: "We offer innovative pricing models designed to make study abroad accessible:\n\n**ZCF Student Plan (₹10,000):**\n• Pay only after receiving university offer\n• Complete application assistance\n• Visa guidance and documentation\n• No upfront fees required\n\n**ZTF Student Plan (₹10,000 + ₹1,65,000):**\n• Access to tuition-free universities\n• ₹10,000 initial investment\n• ₹1,65,000 only after admission confirmation\n• Save ₹80+ lakhs in tuition fees\n\n**Free Services Include:**\n• Initial consultation and profile assessment\n• University shortlisting recommendations\n• Basic application guidance\n• General study abroad information\n\nOur 'Pay After Results' model ensures you only invest when you see concrete outcomes. This risk-free approach is behind 4,500+ visas done successfully, without financial stress.\n\n**Watch the detailed explanation:**\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n**Learn more:**\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
+    answer: "We offer innovative pricing models designed to make study abroad accessible:\n\n**ZCF Student Plan (₹10,000):**\n• Pay only after receiving university offer\n• Complete application assistance\n• Visa guidance and documentation\n• No upfront fees required\n\n**ZTF Student Plan (₹10,000 + ₹1,65,000):**\n• Access to tuition-free universities\n• ₹10,000 initial investment\n• ₹1,65,000 only after admission confirmation\n• Save ₹80+ lakhs in tuition fees\n\n**Free Services Include:**\n• Initial consultation and profile assessment\n• University shortlisting recommendations\n• Basic application guidance\n• General study abroad information\n\nOur 'Pay After Results' model ensures you only invest when you see concrete outcomes. This risk-free approach has helped 5,000+ students achieve their study abroad dreams without financial stress.\n\n**Watch the detailed explanation:**\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n**Learn more:**\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
     category: "Pricing",
     multimedia: {
       video: "https://youtu.be/I7EzLc62Y6c",
@@ -310,7 +310,7 @@ export const faqData = [
   {
     id: 10,
     question: "What makes Axelis different from other consultancies?",
-    answer: "Axelis stands out through our unique value propositions and proven track record:\n\n**Innovative Pricing Models:**\n• Pay After Offer - No upfront fees\n• ZCF Student Plan\n• ZTF Student Plan\n• Risk-free investment approach\n\n**Comprehensive Service Portfolio:**\n• 29+ destination countries\n• 35,000+ universities\n• 2000+ scholarship opportunities\n• 25+ loan provider partnerships\n• End-to-end support from application to settlement\n\n**Proven Success Metrics:**\n• 4,500+ visas done successfully\n• ₹3+ Cr in scholarships won\n• ₹30+ Cr in education loans facilitated\n• 95%+ visa approval rate\n• 85% scholarship success rate\n• ₹80+ lakhs saved through tuition-free programs\n\n**Technology-Driven Approach:**\n• Advanced university matching algorithms\n• Scholarship matching system\n• Application tracking platform\n• Digital document management\n\n**Expert Team:**\n• Experienced counsellors with international education backgrounds\n• Country-specific specialists\n• Visa experts with embassy connections\n• Alumni network for peer support\n\n**Unique Guarantees:**\n• Agent scholarships guaranteed across 1600+ universities\n• Visa approval guarantee (conditions apply)\n• Post-arrival support commitment\n• Transparent pricing with no hidden costs\n\n**Industry Partnerships:**\n• Direct university partnerships\n• Accommodation provider tie-ups\n• Financial institution collaborations\n• Professional service networks\n\nOur holistic approach, combined with innovative pricing and guaranteed results, makes us the preferred choice for ambitious students.",
+    answer: "Axelis stands out through our unique value propositions and proven track record:\n\n**Innovative Pricing Models:**\n• Pay After Offer - No upfront fees\n• ZCF Student Plan\n• ZTF Student Plan\n• Risk-free investment approach\n\n**Comprehensive Service Portfolio:**\n• 29+ destination countries\n• 35,000+ universities\n• 2000+ scholarship opportunities\n• 25+ loan provider partnerships\n• End-to-end support from application to settlement\n\n**Proven Success Metrics:**\n• 5,000+ students placed\n• 4,500+ visas approved\n• ₹3+ Cr in scholarships won\n• ₹30+ Cr in education loans facilitated\n• 95%+ visa approval rate\n• 85% scholarship success rate\n• ₹80+ lakhs saved through tuition-free programs\n\n**Technology-Driven Approach:**\n• Advanced university matching algorithms\n• Scholarship matching system\n• Application tracking platform\n• Digital document management\n\n**Expert Team:**\n• Experienced counsellors with international education backgrounds\n• Country-specific specialists\n• Visa experts with embassy connections\n• Alumni network for peer support\n\n**Unique Guarantees:**\n• Agent scholarships guaranteed across 1600+ universities\n• Visa approval guarantee (conditions apply)\n• Post-arrival support commitment\n• Transparent pricing with no hidden costs\n\n**Industry Partnerships:**\n• Direct university partnerships\n• Accommodation provider tie-ups\n• Financial institution collaborations\n• Professional service networks\n\nOur holistic approach, combined with innovative pricing and guaranteed results, makes us the preferred choice for ambitious students.",
     category: "About Us"
   },
   {
@@ -505,7 +505,7 @@ export const blogPosts = [
   // Course-Specific Guides
   {
     id: 5,
-    title: "🎓 MBA Abroad 2025 - Complete Guide",
+    title: "MBA Abroad 2025: Complete Guide",
     date: "2025-01-11",
     description: "Complete guide to pursuing MBA abroad. 500+ business schools, $10,000+ scholarships, 80-150% salary increase.",
     link: "/mba-abroad",
@@ -520,7 +520,7 @@ export const blogPosts = [
   // Traditional Blog Posts
   {
     id: 6,
-    title: "💰 Scholarship Opportunities in Canada",
+    title: "Scholarship Opportunities in Canada",
     date: "2025-01-10",
     description: "Discover the best scholarship opportunities available for international students in Canada.",
     link: "/blog/canada-scholarships",
@@ -530,7 +530,7 @@ export const blogPosts = [
   },
   {
     id: 7,
-    title: "💼 Part-time Work Options for International Students",
+    title: "Part-time Work Options for International Students",
     date: "2025-01-05",
     description: "Learn about part-time work opportunities and regulations for international students.",
     link: "/blog/part-time-work",
@@ -540,7 +540,7 @@ export const blogPosts = [
   },
   {
     id: 8,
-    title: "🏦 Education Loan Guide for Study Abroad",
+    title: "Education Loan Guide for Study Abroad",
     date: "2023-12-28",
     description: "A comprehensive guide to securing education loans for your study abroad journey.",
     link: "/blog/education-loans",
@@ -976,7 +976,7 @@ export const productBenefits = [
   {
     id: 3,
     title: "Expert Guidance",
-    description: "Work with experienced counsellors behind 4,500+ visas done successfully.",
+    description: "Work with experienced counsellors who have helped 5,000+ students.",
     icon: "👨‍🎓"
   },
   {

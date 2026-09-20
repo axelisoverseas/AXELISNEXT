@@ -195,8 +195,8 @@ export default function TestimonialsPage() {
 
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="glass-storm py-4">
-              <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">4,500+</div>
-              <div className="text-[var(--color-dim)] text-[10px] md:text-xs mt-1">Visas done successfully</div>
+              <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">5,000+</div>
+              <div className="text-[var(--color-dim)] text-[10px] md:text-xs mt-1">Students placed</div>
             </div>
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">29+</div>

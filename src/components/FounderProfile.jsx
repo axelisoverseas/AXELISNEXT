@@ -75,7 +75,7 @@ export default function FounderProfile() {
                     {founder.almaMater.name}
                   </strong>
                   {founder.almaMater.country ? `, ${founder.almaMater.country}` : ''}
-                  {founder.studiedAbroad ? ` — ${founder.studiedAbroad}` : ''}.
+                  {founder.studiedAbroad ? `, ${founder.studiedAbroad}` : ''}.
                 </span>
               </p>
             )}
