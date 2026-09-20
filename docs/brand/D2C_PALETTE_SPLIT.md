@@ -1,13 +1,22 @@
-# overseeducation.com — palette work, split across two MacBooks
+# overseeducation.com — palette conversion
 
-> ## Do not merge this branch to `main` until BOTH halves are done.
->
-> `main` is untouched and production still serves the old site — keep it that
-> way. Half-converted, this branch renders light-on-light text on pages that
-> take money. It is safe as a branch and unsafe as a deploy.
+> **The two-machine split is no longer needed. Both halves were taken on one
+> machine and the conversion is complete.** This file is kept as the record of
+> what was done and the rules that were followed.
 
-Foundation is on branch `brand/d2c-palette`. **Pull it before starting.** It sets the ground, the tokens and the focus ring. What is
-left is per-file, and it is the larger half.
+**Status: converted.** ~90 files, every page and component. The branch builds
+and every route has been looked at in a browser.
+
+Still deliberately dark, and correct that way: the Footer, the 3D globes and
+backdrops, the Navbar drawer and its scrim, the photographic heroes, the
+closing CTA band, and the navy regions on /faq, /scholarships and
+/privacy-policy.
+
+**One pre-existing bug, not from this work:** the `/faq` H1 renders at
+`opacity: 0`. Its colour is correct white on the navy hero; the framer-motion
+`animate` never completes. The markup is byte-identical to `7d9db48`, before
+any palette work, so it is broken on production today for an unrelated
+reason. Worth a separate fix.
 
 ## Why a white ground
 
