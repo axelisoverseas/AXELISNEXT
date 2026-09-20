@@ -186,7 +186,7 @@ export default function TestimonialsPage() {
  <section className="relative sec overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
-            src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=2400&q=80&auto=format&fit=crop"
+            src="/photos/photo-1517486808906-6ca8b3f04846-1600.jpg"
             alt=""
             aria-hidden="true"
             loading="eager"

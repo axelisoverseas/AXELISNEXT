@@ -136,7 +136,7 @@ export default function CertificationsPage() {
  <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
-            src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2400&auto=format&fit=crop"
+            src="/photos/photo-1524178232363-1fb2b075b655-1600.jpg"
             alt=""
             aria-hidden="true"
             loading="eager"

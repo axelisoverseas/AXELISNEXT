@@ -92,7 +92,7 @@ export default function HeroOrbitalBackdrop() {
       {/* Earth */}
       <img
         ref={earthRef}
-        src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=2400&q=80&auto=format&fit=crop"
+        src="/photos/photo-1451187580459-43490279c0fa-1600.jpg"
         alt=""
         aria-hidden="true"
         loading="eager"

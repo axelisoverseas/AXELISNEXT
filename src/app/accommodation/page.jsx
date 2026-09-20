@@ -7,12 +7,12 @@ import { TextEffect, TextEffectInView } from '../../components/ui/TextEffect';
 
 // Top student cities, each linking to amber's live city search.
 const cities = [
-    { label: 'London',     loc: 'london',      country: 'United Kingdom', flag: '🇬🇧', from: '£280/wk',  img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80&auto=format&fit=crop' },
-    { label: 'Manchester', loc: 'manchester',  country: 'United Kingdom', flag: '🇬🇧', from: '£165/wk',  img: 'https://images.unsplash.com/photo-1543832923-44667a44c804?w=800&q=80&auto=format&fit=crop' },
-    { label: 'Birmingham', loc: 'birmingham',  country: 'United Kingdom', flag: '🇬🇧', from: '£145/wk',  img: 'https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=800&q=80&auto=format&fit=crop' },
-    { label: 'Dublin',     loc: 'dublin',      country: 'Ireland',        flag: '🇮🇪', from: '€220/wk',  img: 'https://images.unsplash.com/photo-1549918864-48ac978761a4?w=800&q=80&auto=format&fit=crop' },
-    { label: 'Sydney',     loc: 'sydney',      country: 'Australia',      flag: '🇦🇺', from: 'A$320/wk', img: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80&auto=format&fit=crop' },
-    { label: 'New York',   loc: 'new york',    country: 'United States',  flag: '🇺🇸', from: '$2,100/mo',img: 'https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=800&q=80&auto=format&fit=crop' },
+    { label: 'London',     loc: 'london',      country: 'United Kingdom', flag: '🇬🇧', from: '£280/wk',  img: '/photos/photo-1513635269975-59663e0ac1ad-800.jpg' },
+    { label: 'Manchester', loc: 'manchester',  country: 'United Kingdom', flag: '🇬🇧', from: '£165/wk',  img: '/photos/photo-1543832923-44667a44c804-800.jpg' },
+    { label: 'Birmingham', loc: 'birmingham',  country: 'United Kingdom', flag: '🇬🇧', from: '£145/wk',  img: '/photos/photo-1532581140115-3e355d1ed1de-800.jpg' },
+    { label: 'Dublin',     loc: 'dublin',      country: 'Ireland',        flag: '🇮🇪', from: '€220/wk',  img: '/photos/photo-1549918864-48ac978761a4-800.jpg' },
+    { label: 'Sydney',     loc: 'sydney',      country: 'Australia',      flag: '🇦🇺', from: 'A$320/wk', img: '/photos/photo-1506973035872-a4ec16b8e8d9-800.jpg' },
+    { label: 'New York',   loc: 'new york',    country: 'United States',  flag: '🇺🇸', from: '$2,100/mo',img: '/photos/photo-1485871981521-5b1fd3805eee-800.jpg' },
 ];
 
 // Axelis × amber partner marketplace, outbound housing links go here.
@@ -24,7 +24,7 @@ export default function AccommodationPage() {
             {/* Hero Section */}
  <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/15/10">
                 <img
-                    src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80&auto=format&fit=crop"
+                    src="/photos/photo-1502672260266-1c1ef2d93688-1600.jpg"
                     alt=""
                     aria-hidden="true"
                     loading="eager"
@@ -216,7 +216,7 @@ export default function AccommodationPage() {
                         <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-8 overflow-hidden shadow-e-3">
                             <div className="-mx-8 -mt-8 mb-6 h-40 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1200&q=80&auto=format&fit=crop"
+                                    src="/photos/photo-1555854877-bab0e564b8d5-1200.jpg"
                                     alt=""
                                     aria-hidden="true"
                                     loading="lazy"
@@ -243,7 +243,7 @@ export default function AccommodationPage() {
                         <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-8 overflow-hidden shadow-e-3">
                             <div className="-mx-8 -mt-8 mb-6 h-40 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80&auto=format&fit=crop"
+                                    src="/photos/photo-1493809842364-78817add7ffb-1200.jpg"
                                     alt=""
                                     aria-hidden="true"
                                     loading="lazy"

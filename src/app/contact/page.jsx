@@ -201,7 +201,7 @@ export default function ContactPage() {
 
                                 <div className="space-y-8">
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-[var(--color-axelis)]/50 rounded-xl shrink-0"><MapPin className="text-white" size={24} /></div>
+                                        <div className="p-3 bg-[var(--color-axelis)] rounded-xl shrink-0"><MapPin className="text-white" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Office Address</h3>
                                             <p className="text-[var(--color-dim)] leading-relaxed">{siteInfo.contact.address}</p>
@@ -209,7 +209,7 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-[var(--color-axelis)]/50 rounded-xl shrink-0"><Phone className="text-white" size={24} /></div>
+                                        <div className="p-3 bg-[var(--color-axelis)] rounded-xl shrink-0"><Phone className="text-white" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Phone Numbers</h3>
                                             <div className="space-y-1">
@@ -223,7 +223,7 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-[var(--color-axelis)]/50 rounded-xl shrink-0"><Mail className="text-white" size={24} /></div>
+                                        <div className="p-3 bg-[var(--color-axelis)] rounded-xl shrink-0"><Mail className="text-white" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Email Addresses</h3>
                                             <div className="space-y-1">
@@ -237,7 +237,7 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-[var(--color-axelis)]/50 rounded-xl shrink-0"><Clock className="text-white" size={24} /></div>
+                                        <div className="p-3 bg-[var(--color-axelis)] rounded-xl shrink-0"><Clock className="text-white" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Office Hours</h3>
                                             <p className="text-[var(--color-dim)]">Monday - Friday: 9:00 AM - 6:00 PM</p>

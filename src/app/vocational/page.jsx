@@ -35,7 +35,7 @@ export default function VocationalPage() {
  <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-white/15">
         <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none">
           <img
-            src="https://images.unsplash.com/photo-1587330979470-3595ac045ab0?q=80&w=2400&auto=format&fit=crop"
+            src="/photos/photo-1587330979470-3595ac045ab0-1600.jpg"
             alt=""
             width={2400}
             height={1600}

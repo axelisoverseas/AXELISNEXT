@@ -42,7 +42,7 @@ export default function CertificationsPage() {
  <section className="relative sec overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
-            src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?q=80&w=2400&auto=format&fit=crop"
+            src="/photos/photo-1532619675605-1ede6c2ed2b0-1600.jpg"
             alt=""
             aria-hidden="true"
             loading="eager"

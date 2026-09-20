@@ -16,7 +16,7 @@ export default function ScholarshipsPage() {
             {/* Hero Section */}
  <section className="relative pt-32 pb-24 bg-[var(--storm-deep)] overflow-hidden border-b border-[var(--storm-accent)]/20">
                 <img
-                    src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1600&q=80&auto=format&fit=crop"
+                    src="/photos/photo-1454165804606-c3d57bc86b40-1600.jpg"
                     alt=""
                     aria-hidden="true"
                     loading="eager"
@@ -99,7 +99,7 @@ export default function ScholarshipsPage() {
                         <div className="bg-white p-8 rounded-2xl shadow-e-1 border border-slate-100 overflow-hidden">
                             <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1200&q=80&auto=format&fit=crop"
+                                    src="/photos/photo-1614935151651-0bea6508db6b-1200.jpg"
                                     alt=""
                                     aria-hidden="true"
                                     loading="lazy"
@@ -123,7 +123,7 @@ export default function ScholarshipsPage() {
                         <div className="bg-white p-8 rounded-2xl shadow-e-1 border border-slate-100 overflow-hidden">
                             <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1200&q=80&auto=format&fit=crop"
+                                    src="/photos/photo-1579621970795-87facc2f976d-1200.jpg"
                                     alt=""
                                     aria-hidden="true"
                                     loading="lazy"
@@ -147,7 +147,7 @@ export default function ScholarshipsPage() {
                         <div className="bg-white p-8 rounded-2xl shadow-e-1 border border-slate-100 overflow-hidden">
                             <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=1200&q=80&auto=format&fit=crop"
+                                    src="/photos/photo-1607013251379-e6eecfffe234-1200.jpg"
                                     alt=""
                                     aria-hidden="true"
                                     loading="lazy"
@@ -171,7 +171,7 @@ export default function ScholarshipsPage() {
                         <div className="bg-white p-8 rounded-2xl shadow-e-1 border border-slate-100 overflow-hidden">
                             <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
                                 <img
-                                    src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=1200&q=80&auto=format&fit=crop"
+                                    src="/photos/photo-1589998059171-988d887df646-1200.jpg"
                                     alt=""
                                     aria-hidden="true"
                                     loading="lazy"

@@ -315,10 +315,10 @@ export default function Home() {
  <section className="relative sec overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-balance">
-              Twenty-nine countries. <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--dawn-glow)]">Twenty-nine photos.</span>
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-3 text-balance">
+              Twenty-nine countries. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--color-axelis)]">Twenty-nine photos.</span>
             </h2>
-            <p className="text-white/85 text-base md:text-lg">
+            <p className="text-[var(--color-dim)] text-base md:text-lg">
               Every destination we place students into, pictured. The first nine carry the bulk of our volume; the remaining twenty run on the same plans.
             </p>
           </div>
@@ -326,15 +326,15 @@ export default function Home() {
           {/* Feature tier: 9 large cards */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 mb-10">
             {[
-              { name: 'United Kingdom', flag: '🇬🇧', plan: 'GAC', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=80&auto=format&fit=crop' },
-              { name: 'United States', flag: '🇺🇸', plan: 'GAC', img: 'https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=1200&q=80&auto=format&fit=crop' },
-              { name: 'Canada', flag: '🇨🇦', plan: 'GAC', img: 'https://images.unsplash.com/photo-1517935706615-2717063c2225?w=1200&q=80&auto=format&fit=crop' },
-              { name: 'Ireland', flag: '🇮🇪', plan: 'GAC', img: 'https://images.unsplash.com/photo-1590089415225-401ed6f9db8e?w=1200&q=80&auto=format&fit=crop' },
-              { name: 'Germany', flag: '🇩🇪', plan: 'EPC', img: 'https://images.unsplash.com/photo-1527866959252-deab85ef7d1b?w=1200&q=80&auto=format&fit=crop' },
-              { name: 'Finland', flag: '🇫🇮', plan: 'EPC', img: 'https://images.unsplash.com/photo-1531366936337-7c912a4589a7?w=1200&q=80&auto=format&fit=crop' },
-              { name: 'Australia', flag: '🇦🇺', plan: 'GAC', img: 'https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1200&q=80&auto=format&fit=crop' },
-              { name: 'France', flag: '🇫🇷', plan: 'EPC', img: 'https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1200&q=80&auto=format&fit=crop' },
-              { name: 'Netherlands', flag: '🇳🇱', plan: 'EPC', img: 'https://images.unsplash.com/photo-1512470876302-972faa2aa9a4?w=1200&q=80&auto=format&fit=crop' },
+              { name: 'United Kingdom', flag: '🇬🇧', plan: 'GAC', img: '/photos/photo-1513635269975-59663e0ac1ad-1200.jpg' },
+              { name: 'United States', flag: '🇺🇸', plan: 'GAC', img: '/photos/photo-1485871981521-5b1fd3805eee-1200.jpg' },
+              { name: 'Canada', flag: '🇨🇦', plan: 'GAC', img: '/photos/photo-1517935706615-2717063c2225-1200.jpg' },
+              { name: 'Ireland', flag: '🇮🇪', plan: 'GAC', img: '/photos/photo-1590089415225-401ed6f9db8e-1200.jpg' },
+              { name: 'Germany', flag: '🇩🇪', plan: 'EPC', img: '/photos/photo-1527866959252-deab85ef7d1b-1200.jpg' },
+              { name: 'Finland', flag: '🇫🇮', plan: 'EPC', img: '/photos/photo-1531366936337-7c912a4589a7-1200.jpg' },
+              { name: 'Australia', flag: '🇦🇺', plan: 'GAC', img: '/photos/photo-1506973035872-a4ec16b8e8d9-1200.jpg' },
+              { name: 'France', flag: '🇫🇷', plan: 'EPC', img: '/photos/photo-1502602898657-3e91760cbb34-1200.jpg' },
+              { name: 'Netherlands', flag: '🇳🇱', plan: 'EPC', img: '/photos/photo-1512470876302-972faa2aa9a4-1200.jpg' },
             ].map((d) => (
               <article
                 key={d.name}
@@ -375,26 +375,26 @@ export default function Home() {
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
             {[
-              { name: 'New Zealand', flag: '🇳🇿', plan: 'GAC', img: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Singapore', flag: '🇸🇬', plan: 'GAC', img: 'https://images.unsplash.com/photo-1565967511849-76a60a516170?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Italy', flag: '🇮🇹', plan: 'EPC', img: 'https://images.unsplash.com/photo-1525874684015-58379d421a52?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Spain', flag: '🇪🇸', plan: 'EPC', img: 'https://images.unsplash.com/photo-1509840841025-9088ba78a826?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Sweden', flag: '🇸🇪', plan: 'EPC', img: 'https://images.unsplash.com/photo-1509356843151-3e7d96241e11?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Norway', flag: '🇳🇴', plan: 'EPC', img: 'https://images.unsplash.com/photo-1601439678777-b2b3c56fa627?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Denmark', flag: '🇩🇰', plan: 'EPC', img: 'https://images.unsplash.com/photo-1513622470522-26c3c8a854bc?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Poland', flag: '🇵🇱', plan: 'EPC', img: 'https://images.unsplash.com/photo-1607427293702-036933bbf746?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Switzerland', flag: '🇨🇭', plan: 'GAC', img: 'https://images.unsplash.com/photo-1530122037265-a5f1f91d3b99?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Austria', flag: '🇦🇹', plan: 'EPC', img: 'https://images.unsplash.com/photo-1516550893923-42d28e5677af?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Belgium', flag: '🇧🇪', plan: 'EPC', img: 'https://images.unsplash.com/photo-1559113202-c916b8e44373?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Czech Republic', flag: '🇨🇿', plan: 'EPC', img: 'https://images.unsplash.com/photo-1519677100203-a0e668c92439?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Hungary', flag: '🇭🇺', plan: 'EPC', img: 'https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Portugal', flag: '🇵🇹', plan: 'EPC', img: 'https://images.unsplash.com/photo-1555881400-74d7acaacd8b?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Malta', flag: '🇲🇹', plan: 'GAC', img: 'https://images.unsplash.com/photo-1551801841-ecad875a5142?w=800&q=80&auto=format&fit=crop' },
-              { name: 'UAE', flag: '🇦🇪', plan: 'GAC', img: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Malaysia', flag: '🇲🇾', plan: 'GAC', img: 'https://images.unsplash.com/photo-1596422846543-75c6fc197f07?w=800&q=80&auto=format&fit=crop' },
-              { name: 'South Korea', flag: '🇰🇷', plan: 'GAC', img: 'https://images.unsplash.com/photo-1517154421773-0529f29ea451?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Japan', flag: '🇯🇵', plan: 'GAC', img: 'https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80&auto=format&fit=crop' },
-              { name: 'Hong Kong', flag: '🇭🇰', plan: 'GAC', img: 'https://images.unsplash.com/photo-1536599018102-9f803c140fc1?w=800&q=80&auto=format&fit=crop' },
+              { name: 'New Zealand', flag: '🇳🇿', plan: 'GAC', img: '/photos/photo-1469854523086-cc02fe5d8800-800.jpg' },
+              { name: 'Singapore', flag: '🇸🇬', plan: 'GAC', img: '/photos/photo-1565967511849-76a60a516170-800.jpg' },
+              { name: 'Italy', flag: '🇮🇹', plan: 'EPC', img: '/photos/photo-1525874684015-58379d421a52-800.jpg' },
+              { name: 'Spain', flag: '🇪🇸', plan: 'EPC', img: '/photos/photo-1509840841025-9088ba78a826-800.jpg' },
+              { name: 'Sweden', flag: '🇸🇪', plan: 'EPC', img: '/photos/photo-1509356843151-3e7d96241e11-800.jpg' },
+              { name: 'Norway', flag: '🇳🇴', plan: 'EPC', img: '/photos/photo-1601439678777-b2b3c56fa627-800.jpg' },
+              { name: 'Denmark', flag: '🇩🇰', plan: 'EPC', img: '/photos/photo-1513622470522-26c3c8a854bc-800.jpg' },
+              { name: 'Poland', flag: '🇵🇱', plan: 'EPC', img: '/photos/photo-1607427293702-036933bbf746-800.jpg' },
+              { name: 'Switzerland', flag: '🇨🇭', plan: 'GAC', img: '/photos/photo-1530122037265-a5f1f91d3b99-800.jpg' },
+              { name: 'Austria', flag: '🇦🇹', plan: 'EPC', img: '/photos/photo-1516550893923-42d28e5677af-800.jpg' },
+              { name: 'Belgium', flag: '🇧🇪', plan: 'EPC', img: '/photos/photo-1559113202-c916b8e44373-800.jpg' },
+              { name: 'Czech Republic', flag: '🇨🇿', plan: 'EPC', img: '/photos/photo-1519677100203-a0e668c92439-800.jpg' },
+              { name: 'Hungary', flag: '🇭🇺', plan: 'EPC', img: '/photos/photo-1565008576549-57569a49371d-800.jpg' },
+              { name: 'Portugal', flag: '🇵🇹', plan: 'EPC', img: '/photos/photo-1555881400-74d7acaacd8b-800.jpg' },
+              { name: 'Malta', flag: '🇲🇹', plan: 'GAC', img: '/photos/photo-1551801841-ecad875a5142-800.jpg' },
+              { name: 'UAE', flag: '🇦🇪', plan: 'GAC', img: '/photos/photo-1512453979798-5ea266f8880c-800.jpg' },
+              { name: 'Malaysia', flag: '🇲🇾', plan: 'GAC', img: '/photos/photo-1596422846543-75c6fc197f07-800.jpg' },
+              { name: 'South Korea', flag: '🇰🇷', plan: 'GAC', img: '/photos/photo-1517154421773-0529f29ea451-800.jpg' },
+              { name: 'Japan', flag: '🇯🇵', plan: 'GAC', img: '/photos/photo-1540959733332-eab4deabeeaf-800.jpg' },
+              { name: 'Hong Kong', flag: '🇭🇰', plan: 'GAC', img: '/photos/photo-1536599018102-9f803c140fc1-800.jpg' },
             ].map((d) => (
               <article
                 key={d.name}
@@ -501,7 +501,7 @@ export default function Home() {
           <div className="bg-[var(--dawn-horizon)] rounded-[2.5rem] overflow-hidden shadow-e-lift border border-[var(--dawn-glow)]/20 flex flex-col md:flex-row">
             {/* Image Pane */}
             <div className="md:w-5/12 h-64 md:h-auto relative">
-              <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop" alt="Graduation Joy" className="absolute inset-0 w-full h-full object-cover" />
+              <img src="/photos/photo-1523240795612-9a054b0db644-1000.jpg" alt="Graduation Joy" className="absolute inset-0 w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[var(--dawn-horizon)] md:bg-gradient-to-l opacity-80 md:opacity-40"></div>
             </div>
             

@@ -91,7 +91,7 @@ export default function AboutPage() {
 
                         {/* Image Content Right Side */}
                         <div className="relative h-full min-h-[500px] rounded-3xl overflow-hidden shadow-e-3">
-                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop" alt="Students walking on campus" className="absolute inset-0 w-full h-full object-cover" />
+                            <img src="/photos/photo-1523240795612-9a054b0db644-1000.jpg" alt="Students walking on campus" className="absolute inset-0 w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
                             {/* Overlay Badge */}
                             <div className="absolute bottom-6 left-6 right-6 bg-[var(--color-tint)] backdrop-blur-md rounded-2xl p-6 shadow-e-2 border border-[var(--color-rule)]">
@@ -173,7 +173,7 @@ export default function AboutPage() {
                             </a>
                         </div>
                         <div className="md:w-1/2 min-h-[300px] relative">
-                            <img src="https://images.unsplash.com/photo-1581368135153-a506cf13b1e1?q=80&w=1000&auto=format&fit=crop" alt="Podcast Recording" className="absolute inset-0 w-full h-full object-cover" />
+                            <img src="/photos/photo-1581368135153-a506cf13b1e1-1000.jpg" alt="Podcast Recording" className="absolute inset-0 w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900 via-transparent to-transparent md:bg-gradient-to-r md:from-slate-900 md:to-transparent"></div>
                         </div>
                     </div>

@@ -215,7 +215,7 @@ export default function TestPrepPage() {
  <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
-            src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=1600&q=80&auto=format&fit=crop"
+            src="/photos/photo-1606326608606-aa0b62935f2b-1600.jpg"
             alt=""
             aria-hidden="true"
             loading="eager"
