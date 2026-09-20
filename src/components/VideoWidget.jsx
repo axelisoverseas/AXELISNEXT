@@ -76,7 +76,7 @@ const ThumbnailImage = ({ videoId, title, index, duration }) => {
 
       {/* Duration Badge */}
       {duration && (
-        <div className="absolute bottom-1 right-1 bg-black bg-opacity-80 text-white text-xs px-1 py-0.5 rounded font-medium">
+        <div className="absolute bottom-1 right-1 bg-black bg-opacity-80 text-[var(--color-navy)] text-xs px-1 py-0.5 rounded font-medium">
           {duration}
         </div>
       )}
@@ -102,7 +102,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 border border-gray-100 dark:border-gray-700">
         <div className="flex items-center mb-4">
           <Youtube className="text-stone-900 mr-2" size={20} />
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{title}</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-[var(--color-navy)]">{title}</h3>
         </div>
         
         <div className="space-y-4">
@@ -130,7 +130,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
                   {/* Play Button Overlay - TEMPORARILY REMOVED FOR TESTING */}
                   {/* <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center hover:bg-opacity-50 transition-all duration-300 rounded">
                     <div className="bg-red-600 rounded-full p-1.5 transform hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <Play className="text-white" size={10} fill="currentColor" />
+                      <Play className="text-[var(--color-navy)]" size={10} fill="currentColor" />
                     </div>
                   </div> */}
                 </div>
@@ -138,7 +138,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
               
               {/* Video Info */}
               <div className="flex-1 min-w-0">
-                <h4 className="text-sm font-medium text-gray-900 dark:text-white line-clamp-2 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
+                <h4 className="text-sm font-medium text-gray-900 dark:text-[var(--color-navy)] line-clamp-2 group-hover:text-red-600 dark:group-hover:text-red-400 transition-colors">
                   {video.title}
                 </h4>
                 <div className="flex items-center gap-2 text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -147,7 +147,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
                   <span>{video.publishedAt}</span>
                 </div>
                 <button
-                  className="mt-2 bg-stone-700 hover:bg-stone-900 text-white px-2 py-1 rounded text-xs transition-colors"
+                  className="mt-2 bg-stone-700 hover:bg-stone-900 text-[var(--color-navy)] px-2 py-1 rounded text-xs transition-colors"
                   onClick={(e) => {
                     e.stopPropagation();
                     openVideoOnYouTube(video);

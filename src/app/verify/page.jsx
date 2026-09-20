@@ -15,25 +15,25 @@ export const metadata = {
 
 export default function VerifyPage() {
   return (
-    <main className="min-h-screen text-slate-100">
+    <main className="min-h-screen text-[var(--color-navy)]">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-24">
-        <h1 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight text-balance mb-5">
+        <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] tracking-tight text-balance mb-5">
           Verify a Certificate
         </h1>
-        <p className="text-lg text-slate-300/90 leading-relaxed mb-10">
+        <p className="text-lg text-[var(--color-navy)]/90 leading-relaxed mb-10">
           Every Axelis certificate carries a unique ID. Enter it below and we will tell you
           whether it is ours, which programme it is for, and whether it is still valid.
         </p>
 
-        <section className="rounded-2xl border-2 border-white/10 bg-[#141210] p-6 sm:p-8 mb-14 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+        <section className="rounded-2xl border-2 border-[var(--color-rule)] bg-white p-6 sm:p-8 mb-14 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
           <CertificateLookup />
         </section>
 
         <section className="mb-14">
-          <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight text-balance mb-3">
+          <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight text-balance mb-3">
             What an Axelis certificate looks like
           </h2>
-          <p className="text-slate-300/85 leading-relaxed mb-7">
+          <p className="text-[var(--color-navy)]/85 leading-relaxed mb-7">
             This is a specimen. It carries no student name, its ID resolves in our register as a
             specimen rather than a credential, and it is marked accordingly so it cannot be
             passed off as an issued certificate.
@@ -41,9 +41,9 @@ export default function VerifyPage() {
           <SpecimenCertificate />
         </section>
 
-        <section className="rounded-xl border border-white/10 bg-white/[0.03] p-6">
-          <h2 className="text-lg font-bold text-white mb-3">About the register</h2>
-          <div className="space-y-3 text-sm text-slate-300/85 leading-relaxed">
+        <section className="rounded-xl border border-[var(--color-rule)] bg-[var(--color-tint)] p-6">
+          <h2 className="text-lg font-bold text-[var(--color-navy)] mb-3">About the register</h2>
+          <div className="space-y-3 text-sm text-[var(--color-navy)]/85 leading-relaxed">
             <p>
               {registerStats.issuedCount === 0 ? (
                 <>
@@ -60,7 +60,7 @@ export default function VerifyPage() {
             </p>
             <p>
               A certificate records completion of an Axelis programme. As set out in our{' '}
-              <Link href="/terms-conditions" className="text-white underline underline-offset-4">
+              <Link href="/terms-conditions" className="text-[var(--color-navy)] underline underline-offset-4">
                 Terms of Service
               </Link>
               , it is not a degree, a diploma under any national qualifications framework, or a
@@ -72,7 +72,7 @@ export default function VerifyPage() {
               what is printed on a certificate you hold, write to{' '}
               <a
                 href={`mailto:${refundPolicy.supportEmail}`}
-                className="text-white underline underline-offset-4"
+                className="text-[var(--color-navy)] underline underline-offset-4"
               >
                 {refundPolicy.supportEmail}
               </a>

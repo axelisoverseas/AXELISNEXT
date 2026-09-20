@@ -65,7 +65,7 @@ const TestimonialCarousel = ({ testimonials, autoPlay = true, autoPlayInterval =
                         }}
                       />
                       <div
-                        className="w-full h-full bg-gradient-to-br from-primary-600 to-primary-800 rounded-full hidden items-center justify-center text-white font-bold text-2xl"
+                        className="w-full h-full bg-gradient-to-br from-primary-600 to-primary-800 rounded-full hidden items-center justify-center text-[var(--color-navy)] font-bold text-2xl"
                       >
                         {testimonial.name.charAt(0)}
                       </div>

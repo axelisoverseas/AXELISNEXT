@@ -25,7 +25,7 @@ const GUIDES = [
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative overflow-hidden bg-black px-6 pt-32 pb-16 text-white">
+      <section className="relative overflow-hidden bg-black px-6 pt-32 pb-16 text-[var(--color-navy)]">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full blur-3xl" style={{ background: 'rgba(53,144,243,0.18)' }} />
         </div>
@@ -36,7 +36,7 @@ export default function ResourcesPage() {
           <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
             Study-abroad guides & resources.
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate-300">
+          <p className="mt-4 max-w-2xl text-lg text-[var(--color-navy)]">
             Free guides for students and parents, from scholarships and cost of living to visa
             checklists and intake calendars.
           </p>
@@ -58,7 +58,7 @@ export default function ResourcesPage() {
               </span>
               <span>
                 <span className="block text-sm font-semibold text-slate-900">{g.title}</span>
-                <span className="mt-0.5 block text-xs leading-relaxed text-slate-600">{g.description}</span>
+                <span className="mt-0.5 block text-xs leading-relaxed text-[var(--color-dim)]">{g.description}</span>
               </span>
             </a>
           ))}

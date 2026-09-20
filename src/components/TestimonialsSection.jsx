@@ -34,7 +34,7 @@ export default function TestimonialsSection() {
           <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
             What our students say
           </TextEffectInView>
-          <p className="text-slate-600 mt-4">
+          <p className="text-[var(--color-dim)] mt-4">
             Real stories from students placed across 29+ countries — UK, USA, Canada, Ireland,
             Germany and more.
           </p>

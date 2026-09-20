@@ -72,7 +72,7 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
       onClick={onOpen}
       className={`group relative shrink-0 w-[78vw] sm:w-[320px] md:w-[360px] aspect-[9/16] rounded-3xl overflow-hidden border transition-all duration-500 snap-center text-left ${
         isActive
-          ? 'border-white/60 shadow-[0_30px_80px_-30px_rgba(34,211,238,0.55)] scale-100'
+          ? 'border-[var(--color-rule)] shadow-[0_30px_80px_-30px_rgba(34,211,238,0.55)] scale-100'
           : 'border-slate-200/70 shadow-md scale-[0.94] opacity-80 hover:opacity-100'
       }`}
       aria-label={`Play reel — ${reel.studentName}`}
@@ -87,17 +87,17 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
         onLoadedData={() => setLoaded(true)}
         className="absolute inset-0 w-full h-full object-cover"
       />
-      {!loaded && <div className="absolute inset-0 bg-slate-800 animate-pulse" />}
+      {!loaded && <div className="absolute inset-0 bg-[var(--color-tint)] animate-pulse" />}
 
       {/* Vignette */}
       <div className="absolute inset-0 bg-gradient-to-t from-slate-900/85 via-slate-900/10 to-slate-900/30" />
 
       {/* Top row */}
       <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur text-[10px] font-bold text-stone-950">
+        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-tint)] backdrop-blur text-[10px] font-bold text-stone-950">
           <Instagram size={12} /> {reel.tag}
         </span>
-        <span className="px-2 py-1 rounded-md bg-slate-900/70 text-white text-[10px] font-semibold backdrop-blur">
+        <span className="px-2 py-1 rounded-md bg-[var(--color-tint)]/70 text-[var(--color-navy)] text-[10px] font-semibold backdrop-blur">
           {reel.country}
         </span>
       </div>
@@ -105,17 +105,17 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
       {/* Play pulse — only when inactive */}
       {!isActive && (
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="w-16 h-16 rounded-full bg-white/15 backdrop-blur-md border border-white/40 flex items-center justify-center">
-            <Play size={26} className="text-white fill-white ml-1" />
+          <div className="w-16 h-16 rounded-full bg-[var(--color-tint)] backdrop-blur-md border border-[var(--color-rule)] flex items-center justify-center">
+            <Play size={26} className="text-[var(--color-navy)] fill-white ml-1" />
           </div>
         </div>
       )}
 
       {/* Bottom info */}
-      <div className="absolute bottom-0 left-0 right-0 p-5 text-white">
+      <div className="absolute bottom-0 left-0 right-0 p-5 text-[var(--color-navy)]">
         <h3 className="text-lg font-bold mb-1">{reel.studentName}</h3>
-        <p className="text-xs text-stone-200/90 font-semibold mb-2">{reel.university}</p>
-        <p className="text-xs text-slate-200/90 line-clamp-2 leading-snug">{reel.caption}</p>
+        <p className="text-xs text-[var(--color-navy)]/90 font-semibold mb-2">{reel.university}</p>
+        <p className="text-xs text-[var(--color-navy)]/90 line-clamp-2 leading-snug">{reel.caption}</p>
       </div>
     </button>
   );
@@ -171,17 +171,17 @@ const InstagramSuccessStories = () => {
   }, [selected]);
 
   return (
-    <AnimatedSection className="py-24 bg-transition-sky border-y border-[var(--storm-electric)]/10">
+    <AnimatedSection className="py-24 bg-transition-sky border-y border-[var(--color-rule)]/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4 inline-flex items-center gap-3 flex-wrap justify-center">
-            <Instagram className="w-7 h-7 text-[var(--storm-electric)]" />
+          <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4 inline-flex items-center gap-3 flex-wrap justify-center">
+            <Instagram className="w-7 h-7 text-[var(--color-axelis)]" />
             <TextEffectInView as="span" per="word" preset="blur">Real student journeys</TextEffectInView>{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
               on Instagram
             </span>
           </h2>
-          <p className="text-slate-300 max-w-2xl mx-auto text-base md:text-lg">
+          <p className="text-[var(--color-navy)] max-w-2xl mx-auto text-base md:text-lg">
             Four short reels — straight from the counselling floor. Tap any card to play.
           </p>
         </div>
@@ -192,14 +192,14 @@ const InstagramSuccessStories = () => {
           <button
             onClick={prev}
             aria-label="Previous reel"
-            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 items-center justify-center rounded-full glass-storm text-white hover:text-[var(--storm-electric)] transition-all"
+            className="hidden md:flex absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 items-center justify-center rounded-full glass-storm text-[var(--color-navy)] hover:text-[var(--color-axelis)] transition-all"
           >
             <ChevronLeft size={22} />
           </button>
           <button
             onClick={next}
             aria-label="Next reel"
-            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 items-center justify-center rounded-full glass-storm text-white hover:text-[var(--storm-electric)] transition-all"
+            className="hidden md:flex absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 items-center justify-center rounded-full glass-storm text-[var(--color-navy)] hover:text-[var(--color-axelis)] transition-all"
           >
             <ChevronRight size={22} />
           </button>
@@ -234,14 +234,14 @@ const InstagramSuccessStories = () => {
         </div>
 
         {/* CTA Banner */}
-        <div className="mt-16 bg-slate-900 rounded-3xl p-10 md:p-12 text-center text-white relative overflow-hidden border border-slate-800">
+        <div className="mt-16 bg-[var(--color-tint)] rounded-3xl p-10 md:p-12 text-center text-[var(--color-navy)] relative overflow-hidden border border-slate-800">
           <div className="absolute top-0 right-0 w-80 h-80 bg-stone-900/15 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2 pointer-events-none" />
           <div className="absolute bottom-0 left-0 w-72 h-72 bg-stone-700/15 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2 pointer-events-none" />
           <div className="relative z-10">
             <h3 className="text-2xl md:text-3xl font-bold mb-3 tracking-tight">
               Ready to be our next success story?
             </h3>
-            <p className="text-slate-300 max-w-xl mx-auto mb-7 text-sm md:text-base">
+            <p className="text-[var(--color-navy)] max-w-xl mx-auto mb-7 text-sm md:text-base">
               Book a free counselling call and we'll map your admit, scholarship and visa plan — end to end.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
@@ -250,7 +250,7 @@ const InstagramSuccessStories = () => {
                 href="https://www.instagram.com/axelis_overseas/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-700 text-slate-200 hover:border-white hover:text-stone-300 transition-all text-sm font-semibold"
+                className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-slate-700 text-[var(--color-navy)] hover:border-white hover:text-[var(--color-navy)] transition-all text-sm font-semibold"
               >
                 <Instagram size={18} />
                 <span>Follow on Instagram</span>
@@ -267,7 +267,7 @@ const InstagramSuccessStories = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/95 backdrop-blur-md"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-[var(--color-tint)]/95 backdrop-blur-md"
             onClick={() => setSelected(null)}
           >
             <motion.div
@@ -289,14 +289,14 @@ const InstagramSuccessStories = () => {
               <button
                 onClick={() => setSelected(null)}
                 aria-label="Close reel"
-                className="absolute top-3 right-3 w-10 h-10 rounded-full bg-white/15 backdrop-blur border border-white/30 flex items-center justify-center text-white hover:bg-white/25"
+                className="absolute top-3 right-3 w-10 h-10 rounded-full bg-[var(--color-tint)] backdrop-blur border border-[var(--color-rule)] flex items-center justify-center text-[var(--color-navy)] hover:bg-[var(--color-tint)]"
               >
                 <X size={18} />
               </button>
-              <div className="absolute left-4 right-4 bottom-4 text-white">
+              <div className="absolute left-4 right-4 bottom-4 text-[var(--color-navy)]">
                 <h3 className="font-bold text-lg leading-tight">{selected.studentName}</h3>
-                <p className="text-xs text-stone-200 font-semibold mb-1">{selected.university}</p>
-                <p className="text-xs text-slate-200/90 line-clamp-3">{selected.caption}</p>
+                <p className="text-xs text-[var(--color-navy)] font-semibold mb-1">{selected.university}</p>
+                <p className="text-xs text-[var(--color-navy)]/90 line-clamp-3">{selected.caption}</p>
               </div>
             </motion.div>
           </motion.div>

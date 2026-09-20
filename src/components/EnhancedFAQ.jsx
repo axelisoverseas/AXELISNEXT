@@ -81,7 +81,7 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
         <div className="mb-8 space-y-6">
           {showSearch && (
             <div className="relative">
-              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400" size={20} />
+              <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-[var(--color-dim)]" size={20} />
               <input
                 type="text"
                 placeholder="Search frequently asked questions... (e.g., 'visa requirements', 'scholarships', 'living costs')"
@@ -92,7 +92,7 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
               {searchTerm && (
                 <button
                   onClick={() => setSearchTerm('')}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-slate-400 hover:text-slate-600 transition-colors"
+                  className="absolute right-4 top-1/2 transform -translate-y-1/2 text-[var(--color-dim)] hover:text-[var(--color-dim)] transition-colors"
                 >
                   <X size={20} />
                 </button>
@@ -107,7 +107,7 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
                   <Filter className="mr-2 text-stone-900" size={20} />
                   Filter by Category
                 </h3>
-                <span className="text-sm text-slate-500 bg-slate-100 px-3 py-1 rounded-full">
+                <span className="text-sm text-[var(--color-dim)] bg-slate-100 px-3 py-1 rounded-full">
                   {filteredFAQs.length} question{filteredFAQs.length !== 1 ? 's' : ''} found
                 </span>
               </div>
@@ -120,13 +120,13 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:scale-105 ${
                         selectedCategory === category
-                          ? 'bg-gradient-to-r from-stone-700 to-stone-900 text-white shadow-lg'
+                          ? 'bg-gradient-to-r from-stone-700 to-stone-900 text-[var(--color-navy)] shadow-lg'
                           : 'bg-white border-2 border-slate-200 text-slate-700 hover:border-stone-300 hover:bg-stone-50 shadow-sm'
                       }`}
                     >
                       {category}
                       <span className={`ml-2 text-xs ${
-                        selectedCategory === category ? 'text-stone-100' : 'text-slate-500'
+                        selectedCategory === category ? 'text-[var(--color-navy)]' : 'text-[var(--color-dim)]'
                       }`}>
                         ({categoryCount})
                       </span>
@@ -159,10 +159,10 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
         {filteredFAQs.length === 0 ? (
           <div className="text-center py-12">
             <div className="w-16 h-16 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <Search className="text-slate-400" size={32} />
+              <Search className="text-[var(--color-dim)]" size={32} />
             </div>
             <h3 className="text-lg font-semibold text-slate-900 mb-2">No questions found</h3>
-            <p className="text-slate-500 mb-4">
+            <p className="text-[var(--color-dim)] mb-4">
               No questions found matching your search criteria. Try different keywords or browse categories.
             </p>
             <button
@@ -170,7 +170,7 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
                 setSearchTerm('');
                 setSelectedCategory('All');
               }}
-              className="px-4 py-2 bg-stone-700 text-white rounded-lg hover:bg-stone-900 transition-colors"
+              className="px-4 py-2 bg-stone-700 text-[var(--color-navy)] rounded-lg hover:bg-stone-900 transition-colors"
             >
               Clear Filters
             </button>
@@ -180,7 +180,7 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
             <div
               key={faq.id}
               id={`category-${faq.category.toLowerCase()}`}
-              className="bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl border border-slate-200 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] group"
+              className="bg-[var(--color-tint)] backdrop-blur-sm rounded-2xl shadow-xl border border-slate-200 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] group"
             >
               <button
                 onClick={() => toggleItem(faq.id)}
@@ -204,8 +204,8 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
                 <div className="ml-4 flex-shrink-0">
                   <div className={`w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 ${
                     openItems.has(faq.id)
-                      ? 'bg-stone-700 text-white'
-                      : 'bg-slate-100 text-slate-400 group-hover:bg-stone-100 group-hover:text-stone-700'
+                      ? 'bg-stone-700 text-[var(--color-navy)]'
+                      : 'bg-slate-100 text-[var(--color-dim)] group-hover:bg-stone-100 group-hover:text-stone-700'
                   }`}>
                     {openItems.has(faq.id) ? (
                       <ChevronUp size={20} />
@@ -258,13 +258,13 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={`tel:${siteInfo.contact.phones[0]}`}
-            className="inline-flex items-center justify-center px-6 py-3 bg-stone-900 hover:bg-stone-950 text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center px-6 py-3 bg-stone-900 hover:bg-stone-950 text-[var(--color-navy)] font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
           >
             Call Us: {siteInfo.contact.phones[0]}
           </a>
           <a
             href={`mailto:${siteInfo.contact.emails[0]}`}
-            className="inline-flex items-center justify-center px-6 py-3 border-2 border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center px-6 py-3 border-2 border-stone-900 text-stone-900 hover:bg-stone-900 hover:text-[var(--color-navy)] font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
           >
             Email Us
           </a>

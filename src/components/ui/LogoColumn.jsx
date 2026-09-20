@@ -55,7 +55,7 @@ export const LogoColumn = ({ className = '', logos, duration = 22 }) => {
                   <div className="font-semibold tracking-tight text-sm text-slate-900 leading-5 truncate">
                     {u.name}
                   </div>
-                  <div className="leading-5 text-xs text-slate-500 tracking-tight">{u.country}</div>
+                  <div className="leading-5 text-xs text-[var(--color-dim)] tracking-tight">{u.country}</div>
                 </div>
               </div>
             ))}

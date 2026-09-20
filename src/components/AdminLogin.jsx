@@ -86,7 +86,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
           <button
             type="submit"
             disabled={loading || !otp.trim()}
-            className="w-full bg-stone-900 text-white py-3 px-4 rounded-lg font-medium hover:bg-stone-950 focus:ring-2 focus:ring-stone-700 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            className="w-full bg-stone-900 text-[var(--color-navy)] py-3 px-4 rounded-lg font-medium hover:bg-stone-950 focus:ring-2 focus:ring-stone-700 focus:ring-offset-2 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
           >
             {loading ? (
               <div className="flex items-center justify-center">

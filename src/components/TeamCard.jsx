@@ -35,7 +35,7 @@ const TeamCard = ({ member, className = "", style = {} }) => {
       className="h-full block"
     >
       <div
-        className={`bg-white/80 backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 border border-stone-100 group hover:border-white/50 h-80 flex flex-col ${className}`}
+        className={`bg-[var(--color-tint)] backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 border border-stone-100 group hover:border-[var(--color-rule)] h-80 flex flex-col ${className}`}
         style={style}
       >
         <div className="text-center flex-1 flex flex-col">
@@ -54,14 +54,14 @@ const TeamCard = ({ member, className = "", style = {} }) => {
 
             {/* Loading state */}
             {imageLoading && member.image && !imageError && (
-              <div className="absolute inset-0 bg-gradient-to-br from-stone-700 to-stone-900 rounded-full flex items-center justify-center text-white">
+              <div className="absolute inset-0 bg-gradient-to-br from-stone-700 to-stone-900 rounded-full flex items-center justify-center text-[var(--color-navy)]">
                 <div className="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div>
               </div>
             )}
 
             {/* Fallback avatar with initials */}
             {(!member.image || imageError) && (
-              <div className="w-full h-full bg-gradient-to-br from-stone-700 to-stone-900 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+              <div className="w-full h-full bg-gradient-to-br from-stone-700 to-stone-900 rounded-full flex items-center justify-center text-[var(--color-navy)] text-2xl font-bold shadow-lg">
                 {getInitials(member.name)}
               </div>
             )}
@@ -90,7 +90,7 @@ const TeamCard = ({ member, className = "", style = {} }) => {
           </p>
 
           {member.description && (
-            <p className="text-slate-600 text-sm mb-4 leading-relaxed flex-grow">
+            <p className="text-[var(--color-dim)] text-sm mb-4 leading-relaxed flex-grow">
               {member.description}
             </p>
           )}
@@ -101,7 +101,7 @@ const TeamCard = ({ member, className = "", style = {} }) => {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-white rounded-full transition-all duration-300 shadow-lg hover:scale-110 hover:shadow-xl transform relative z-10"
+                className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-[var(--color-navy)] rounded-full transition-all duration-300 shadow-lg hover:scale-110 hover:shadow-xl transform relative z-10"
                 aria-label={`${member.name} LinkedIn Profile`}
               >
                 <Linkedin size={18} />

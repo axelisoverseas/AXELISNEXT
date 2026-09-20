@@ -98,14 +98,14 @@ const ScholarshipMatcher = () => {
     return (
         <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 overflow-hidden max-w-4xl mx-auto">
             {/* Header */}
-            <div className="bg-gradient-to-r from-stone-900 to-slate-900 text-white p-8 relative overflow-hidden">
+            <div className="bg-gradient-to-r from-stone-900 to-slate-900 text-[var(--color-navy)] p-8 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-stone-700/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
                 <div className="relative z-10 text-center">
                     <h3 className="text-3xl font-black mb-3 flex items-center justify-center">
-                        <Award className="mr-3 text-white w-8 h-8" />
+                        <Award className="mr-3 text-[var(--color-navy)] w-8 h-8" />
                         Scholarship Matcher
                     </h3>
-                    <p className="text-stone-100 text-lg max-w-2xl mx-auto">Find millions in funding available for international students based on your profile.</p>
+                    <p className="text-[var(--color-navy)] text-lg max-w-2xl mx-auto">Find millions in funding available for international students based on your profile.</p>
                 </div>
             </div>
 

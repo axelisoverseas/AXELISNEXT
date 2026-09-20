@@ -37,7 +37,7 @@ function ConciergeRow({ program }) {
   return (
     <Link
       href={`/certifications/${program.slug}`}
-      className="group relative grid grid-cols-1 md:grid-cols-5 gap-0 overflow-hidden rounded-2xl border border-white/12 bg-[#141210] hover:border-[var(--dawn-glow)]/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]"
+      className="group relative grid grid-cols-1 md:grid-cols-5 gap-0 overflow-hidden rounded-2xl border border-[var(--color-rule)] bg-white hover:border-[var(--color-axelis)]/50 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
     >
       <div className="md:col-span-2 relative h-48 md:h-auto min-h-[200px] overflow-hidden">
         <img
@@ -52,23 +52,23 @@ function ConciergeRow({ program }) {
 
       <div className="md:col-span-3 p-6 md:p-8 flex flex-col justify-center">
         {program.flagship && (
-          <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] text-sm font-semibold mb-2">
+          <span className="inline-flex items-center gap-1.5 text-[var(--color-axelis)] text-sm font-semibold mb-2">
             <Sparkles aria-hidden="true" size={13} /> Our flagship programme
           </span>
         )}
-        <h3 className="text-2xl md:text-3xl font-bold text-white mb-2.5">{program.title}</h3>
-        <p className="text-slate-300/85 leading-relaxed mb-5 max-w-xl">{program.summary}</p>
+        <h3 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] mb-2.5">{program.title}</h3>
+        <p className="text-[var(--color-navy)]/85 leading-relaxed mb-5 max-w-xl">{program.summary}</p>
 
         <div className="flex flex-wrap items-end gap-x-8 gap-y-3">
           <div>
-            <div className="text-3xl font-bold text-white">{formatINR(program.price)}</div>
-            <div className="text-xs text-slate-500">{GST_NOTE}</div>
-            {emi && <div className="text-sm text-slate-400">or {formatINR(emi)} a month</div>}
+            <div className="text-3xl font-bold text-[var(--color-navy)]">{formatINR(program.price)}</div>
+            <div className="text-xs text-[var(--color-dim)]">{GST_NOTE}</div>
+            {emi && <div className="text-sm text-[var(--color-dim)]">or {formatINR(emi)} a month</div>}
           </div>
-          <div className="text-sm text-slate-400">
+          <div className="text-sm text-[var(--color-dim)]">
             {program.duration} &middot; {program.cohortSize}
           </div>
-          <span className="inline-flex items-center gap-1.5 text-[var(--dawn-glow)] font-semibold text-sm ml-auto group-hover:gap-2.5 transition-all">
+          <span className="inline-flex items-center gap-1.5 text-[var(--color-axelis)] font-semibold text-sm ml-auto group-hover:gap-2.5 transition-all">
             Details <ArrowRight aria-hidden="true" size={15} />
           </span>
         </div>
@@ -82,7 +82,7 @@ function AdvancedCard({ program }) {
   return (
     <Link
       href={`/certifications/${program.slug}`}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-white/12 bg-[#141210] hover:border-white/30 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-[var(--color-rule)] bg-white hover:border-[var(--color-rule)] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
     >
       <div className="relative h-40 overflow-hidden">
         <img
@@ -95,15 +95,15 @@ function AdvancedCard({ program }) {
         <div className="absolute inset-0 bg-gradient-to-t from-[#141210] via-[#141210]/30 to-transparent" />
       </div>
       <div className="p-6 flex flex-col flex-1">
-        <h3 className="text-lg font-bold text-white mb-2">{program.title}</h3>
-        <p className="text-slate-300/80 text-sm leading-relaxed mb-5 flex-1">{program.summary}</p>
+        <h3 className="text-lg font-bold text-[var(--color-navy)] mb-2">{program.title}</h3>
+        <p className="text-[var(--color-navy)]/80 text-sm leading-relaxed mb-5 flex-1">{program.summary}</p>
         <div className="flex items-end justify-between gap-3">
           <div>
-            <div className="text-xl font-bold text-white">{formatINR(program.price)}</div>
-            <div className="text-[11px] text-slate-500">{GST_NOTE}</div>
-            {emi && <div className="text-xs text-slate-400">or {formatINR(emi)} a month</div>}
+            <div className="text-xl font-bold text-[var(--color-navy)]">{formatINR(program.price)}</div>
+            <div className="text-[11px] text-[var(--color-dim)]">{GST_NOTE}</div>
+            {emi && <div className="text-xs text-[var(--color-dim)]">or {formatINR(emi)} a month</div>}
           </div>
-          <span className="text-sm text-slate-400">{program.duration}</span>
+          <span className="text-sm text-[var(--color-dim)]">{program.duration}</span>
         </div>
       </div>
     </Link>
@@ -112,12 +112,12 @@ function AdvancedCard({ program }) {
 
 function TierHeading({ tier, count }) {
   return (
-    <div className="flex items-baseline justify-between gap-4 mb-5 pb-3 border-b border-white/10">
+    <div className="flex items-baseline justify-between gap-4 mb-5 pb-3 border-b border-[var(--color-rule)]">
       <div>
-        <h3 className="text-xl md:text-2xl font-bold text-white">{tier.name}</h3>
-        <p className="text-slate-400 text-sm mt-1">{tier.tagline}</p>
+        <h3 className="text-xl md:text-2xl font-bold text-[var(--color-navy)]">{tier.name}</h3>
+        <p className="text-[var(--color-dim)] text-sm mt-1">{tier.tagline}</p>
       </div>
-      <span className="text-sm text-slate-500 shrink-0">
+      <span className="text-sm text-[var(--color-dim)] shrink-0">
         {count} {count === 1 ? 'programme' : 'programmes'}
       </span>
     </div>
@@ -131,7 +131,7 @@ export default function CertificationsPage() {
   const tiers = populatedTiers();
 
   return (
-    <div className="min-h-screen text-slate-100">
+    <div className="min-h-screen text-[var(--color-navy)]">
       {/* ---------------------------------------------------------------- HERO */}
       <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -154,7 +154,7 @@ export default function CertificationsPage() {
         >
           <motion.h1
             variants={fadeInUp}
-            className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 max-w-4xl mx-auto"
+            className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] tracking-tight mb-6 max-w-4xl mx-auto"
           >
             Earn a credential on the way to{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">
@@ -162,7 +162,7 @@ export default function CertificationsPage() {
             </span>
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="text-lg md:text-xl text-slate-300/90 max-w-3xl mx-auto leading-relaxed mb-10">
+          <motion.p variants={fadeInUp} className="text-lg md:text-xl text-[var(--color-navy)]/90 max-w-3xl mx-auto leading-relaxed mb-10">
             End-to-end concierge programmes, {formatINR(catalogueStats.priceFloor)} to {formatINR(catalogueStats.priceCeiling)},
             each carrying a written outcome guarantee. One counsellor, start to finish.
           </motion.p>
@@ -177,7 +177,7 @@ export default function CertificationsPage() {
             </a>
             <Link
               href="/bookings"
-              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-colors hover:text-[var(--storm-electric)]"
+              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
             >
               Book a discovery call
             </Link>
@@ -214,14 +214,14 @@ export default function CertificationsPage() {
       {/* ------------------------------------------------------- FINANCING */}
       <section id="financing" className="relative py-16 scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-7 md:p-9 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+          <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-7 md:p-9 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
             <div className="flex items-start gap-4 mb-5">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center text-white shrink-0">
                 <CreditCard aria-hidden="true" size={22} strokeWidth={2.3} />
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-white mb-1">Financing</h2>
-                <p className="text-slate-300/85 text-sm">{financing.strip}</p>
+                <h2 className="text-2xl font-bold text-[var(--color-navy)] mb-1">Financing</h2>
+                <p className="text-[var(--color-navy)]/85 text-sm">{financing.strip}</p>
               </div>
             </div>
 
@@ -231,9 +231,9 @@ export default function CertificationsPage() {
                 { label: 'Tenures', value: '6, 9, 12, 18 or 24 months' },
                 { label: 'Worked example', value: `${formatINR(200000)} = ${formatINR(33333)}/mo × 6, or ${formatINR(8333)}/mo × 24` },
               ].map((row) => (
-                <div key={row.label} className="bg-white/[0.04] border border-white/10 rounded-xl p-4">
-                  <div className="text-xs text-slate-400 mb-1">{row.label}</div>
-                  <div className="text-white font-semibold text-sm">{row.value}</div>
+                <div key={row.label} className="bg-[var(--color-tint)] border border-[var(--color-rule)] rounded-xl p-4">
+                  <div className="text-xs text-[var(--color-dim)] mb-1">{row.label}</div>
+                  <div className="text-[var(--color-navy)] font-semibold text-sm">{row.value}</div>
                 </div>
               ))}
             </div>
@@ -243,14 +243,14 @@ export default function CertificationsPage() {
       </section>
 
       {/* ---------------------------------------------------- ENQUIRY FORM */}
-      <section id="enquire" className="relative py-20 scroll-mt-24 border-t border-white/5">
+      <section id="enquire" className="relative py-20 scroll-mt-24 border-t border-[var(--color-rule)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
             <div className="lg:col-span-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4 text-balance">
+              <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-4 text-balance">
                 Not sure which one fits?
               </h2>
-              <p className="text-slate-300/85 leading-relaxed mb-6">
+              <p className="text-[var(--color-navy)]/85 leading-relaxed mb-6">
                 Tell us where you are in the process. A counsellor will come back with the one or two programmes that
                 actually match, and say so if none of them do.
               </p>
@@ -260,8 +260,8 @@ export default function CertificationsPage() {
                   { Icon: Users, text: 'A counsellor, not a chatbot' },
                   { Icon: ShieldCheck, text: 'No obligation to enrol' },
                 ].map(({ Icon, text }) => (
-                  <li key={text} className="flex items-center gap-3 text-sm text-slate-200">
-                    <Icon size={16} className="text-[var(--storm-electric)] shrink-0" />
+                  <li key={text} className="flex items-center gap-3 text-sm text-[var(--color-navy)]">
+                    <Icon size={16} className="text-[var(--color-axelis)] shrink-0" />
                     {text}
                   </li>
                 ))}

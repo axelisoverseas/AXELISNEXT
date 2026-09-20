@@ -6,7 +6,7 @@ export const ShinyButton = ({ children, className = '', as: Tag = 'button', ...p
   return (
     <Tag
       {...props}
-      className={`relative inline-flex items-center justify-center overflow-hidden rounded-xl px-6 py-3 font-semibold text-white transition-transform hover:-translate-y-0.5 ${className}`}
+      className={`relative inline-flex items-center justify-center overflow-hidden rounded-xl px-6 py-3 font-semibold text-[var(--color-navy)] transition-transform hover:-translate-y-0.5 ${className}`}
     >
       <span
         aria-hidden

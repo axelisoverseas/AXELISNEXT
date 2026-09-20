@@ -36,7 +36,7 @@ const CibilScoreWidget = () => {
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
           <div className="p-3 bg-stone-900 rounded-xl">
-            <CreditCard className="text-white" size={24} />
+            <CreditCard className="text-[var(--color-navy)]" size={24} />
           </div>
           <div>
             <h3 className="text-xl font-bold text-gray-900">Check Your CIBIL Score</h3>
@@ -92,7 +92,7 @@ const CibilScoreWidget = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <button
             onClick={handleCheckScore}
-            className="flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-950 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+            className="flex items-center justify-center gap-2 bg-stone-900 hover:bg-stone-950 text-[var(--color-navy)] px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
           >
             <CreditCard size={18} />
             Check on CIBIL Official

@@ -14,28 +14,28 @@ const SocialMediaButtons = ({
       icon: Facebook,
       label: 'Follow on Facebook',
       color: 'bg-stone-900 hover:bg-stone-950',
-      textColor: 'text-white'
+      textColor: 'text-[var(--color-navy)]'
     },
     instagram: {
       url: 'https://www.instagram.com/axelis_overseas/',
       icon: Instagram,
       label: 'Follow on Instagram',
       color: 'bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:from-stone-900 hover:to-stone-800',
-      textColor: 'text-white'
+      textColor: 'text-[var(--color-navy)]'
     },
     linkedin: {
       url: 'https://www.linkedin.com/company/axelis-overseas/',
       icon: Linkedin,
       label: 'Follow on LinkedIn',
       color: 'bg-stone-950 hover:bg-stone-900',
-      textColor: 'text-white'
+      textColor: 'text-[var(--color-navy)]'
     },
     youtube: {
       url: 'https://www.youtube.com/@axelisoverseas',
       icon: Youtube,
       label: 'Subscribe on YouTube',
       color: 'bg-stone-900 hover:bg-stone-950',
-      textColor: 'text-white'
+      textColor: 'text-[var(--color-navy)]'
     }
   };
 
@@ -121,7 +121,7 @@ export const SocialMediaCTA = ({ className = '' }) => (
     <h3 className="text-2xl font-bold text-slate-900 mb-4">
       Stay Connected with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">Axelis Overseas</span>
     </h3>
-    <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
+    <p className="text-[var(--color-dim)] mb-6 max-w-2xl mx-auto">
       Follow us for the latest updates on study abroad opportunities, student success stories, and expert guidance
     </p>
     <SocialMediaButtons size="large" />
@@ -130,7 +130,7 @@ export const SocialMediaCTA = ({ className = '' }) => (
 
 export const SocialMediaFooter = ({ className = '' }) => (
   <div className={`${className}`}>
-    <h4 className="text-lg font-semibold text-white mb-4">Follow Us</h4>
+    <h4 className="text-lg font-semibold text-[var(--color-navy)] mb-4">Follow Us</h4>
     <SocialMediaButtons 
       variant="minimal" 
       size="medium" 

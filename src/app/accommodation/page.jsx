@@ -20,9 +20,9 @@ const AMBER_PARTNER_URL = 'https://amberstudent.com/partners/axelis-overseas-172
 
 export default function AccommodationPage() {
     return (
-        <div className="min-h-screen bg-storm-to-dawn text-slate-100">
+        <div className="min-h-screen bg-storm-to-dawn text-[var(--color-navy)]">
             {/* Hero Section */}
-            <section className="relative pt-24 pb-20 overflow-hidden border-b border-[var(--storm-electric)]/10">
+            <section className="relative pt-24 pb-20 overflow-hidden border-b border-[var(--color-rule)]/10">
                 <img
                     src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80&auto=format&fit=crop"
                     alt=""
@@ -36,8 +36,8 @@ export default function AccommodationPage() {
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     {/* In partnership with — amber's wordmark, lowercase per their brand rules */}
-                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/8 backdrop-blur border border-white/15 mb-8">
-                        <span className="text-[10px] text-slate-300 font-bold">In partnership with</span>
+                    <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-[var(--color-tint)] backdrop-blur border border-[var(--color-rule)] mb-8">
+                        <span className="text-[10px] text-[var(--color-navy)] font-bold">In partnership with</span>
                         <a
                             href={AMBER_PARTNER_URL}
                             target="_blank"
@@ -53,14 +53,14 @@ export default function AccommodationPage() {
                         </a>
                     </div>
 
-                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight">
+                    <h1 className="text-4xl md:text-6xl font-extrabold mb-6 text-[var(--color-navy)] tracking-tight">
                         <TextEffect as="span" per="word" preset="blur">Find your perfect</TextEffect>{' '}
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
                             student home
                         </span>
                     </h1>
-                    <p className="text-lg md:text-xl mb-10 text-slate-300/85 max-w-3xl mx-auto leading-relaxed">
-                        Live, learn and thrive. Book bills-inclusive student accommodation across <strong className="text-white">29+ countries</strong> through our partnership with <strong className="text-white">amber</strong>, the world&apos;s largest student housing marketplace.
+                    <p className="text-lg md:text-xl mb-10 text-[var(--color-navy)]/85 max-w-3xl mx-auto leading-relaxed">
+                        Live, learn and thrive. Book bills-inclusive student accommodation across <strong className="text-[var(--color-navy)]">29+ countries</strong> through our partnership with <strong className="text-[var(--color-navy)]">amber</strong>, the world&apos;s largest student housing marketplace.
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
@@ -73,7 +73,7 @@ export default function AccommodationPage() {
                         </Link>
                         <Link
                             href="/contact"
-                            className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--storm-electric)]"
+                            className="inline-flex justify-center items-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
                         >
                             Get free housing assistance
                         </Link>
@@ -82,28 +82,28 @@ export default function AccommodationPage() {
             </section>
 
             {/* Stats Quick View */}
-            <section className="py-12 bg-[var(--storm-deep)]/40 border-b border-white/5">
+            <section className="py-12 bg-[var(--storm-deep)]/40 border-b border-[var(--color-rule)]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-x divide-white/10">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-x divide-[var(--color-rule)]">
                         <div className="px-4">
-                            <Home className="mx-auto mb-3 text-[var(--storm-electric)]" size={32} />
-                            <div className="text-3xl font-bold text-white">1M+</div>
-                            <div className="text-sm font-medium text-slate-400">Rooms on amber</div>
+                            <Home className="mx-auto mb-3 text-[var(--color-axelis)]" size={32} />
+                            <div className="text-3xl font-bold text-[var(--color-navy)]">1M+</div>
+                            <div className="text-sm font-medium text-[var(--color-dim)]">Rooms on amber</div>
                         </div>
                         <div className="px-4">
-                            <MapPin className="mx-auto mb-3 text-[var(--storm-electric)]" size={32} />
-                            <div className="text-3xl font-bold text-white">250+</div>
-                            <div className="text-sm font-medium text-slate-400">Student Cities</div>
+                            <MapPin className="mx-auto mb-3 text-[var(--color-axelis)]" size={32} />
+                            <div className="text-3xl font-bold text-[var(--color-navy)]">250+</div>
+                            <div className="text-sm font-medium text-[var(--color-dim)]">Student Cities</div>
                         </div>
                         <div className="px-4">
-                            <Shield className="mx-auto mb-3 text-[var(--storm-electric)]" size={32} />
-                            <div className="text-3xl font-bold text-white">100%</div>
-                            <div className="text-sm font-medium text-slate-400">Verified Properties</div>
+                            <Shield className="mx-auto mb-3 text-[var(--color-axelis)]" size={32} />
+                            <div className="text-3xl font-bold text-[var(--color-navy)]">100%</div>
+                            <div className="text-sm font-medium text-[var(--color-dim)]">Verified Properties</div>
                         </div>
                         <div className="px-4">
-                            <Clock className="mx-auto mb-3 text-[var(--storm-electric)]" size={32} />
-                            <div className="text-3xl font-bold text-white">24/7</div>
-                            <div className="text-sm font-medium text-slate-400">Support Available</div>
+                            <Clock className="mx-auto mb-3 text-[var(--color-axelis)]" size={32} />
+                            <div className="text-3xl font-bold text-[var(--color-navy)]">24/7</div>
+                            <div className="text-sm font-medium text-[var(--color-dim)]">Support Available</div>
                         </div>
                     </div>
                 </div>
@@ -112,18 +112,18 @@ export default function AccommodationPage() {
             {/* amber marketplace CTA — static panel linking to our partner marketplace */}
             <section id="listings" className="py-20 scroll-mt-24">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="relative overflow-hidden rounded-3xl border-2 border-white/10 bg-[#141210] shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
-                        <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-[var(--storm-electric)]/10 blur-[120px]" />
+                    <div className="relative overflow-hidden rounded-3xl border-2 border-[var(--color-rule)] bg-white shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+                        <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-[var(--color-tint)] blur-[120px]" />
                         <div className="pointer-events-none absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-[var(--dawn-glow)]/10 blur-[120px]" />
 
                         <div className="relative flex flex-col items-center px-6 py-16 text-center sm:px-12">
-                            <div className="w-16 h-16 rounded-2xl bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/30 flex items-center justify-center mb-6">
-                                <Home className="text-[var(--storm-electric)]" size={30} />
+                            <div className="w-16 h-16 rounded-2xl bg-[var(--color-tint)] border border-[var(--color-rule)]/30 flex items-center justify-center mb-6">
+                                <Home className="text-[var(--color-axelis)]" size={30} />
                             </div>
-                            <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
+                            <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">
                                 Browse verified student homes on amber
                             </TextEffectInView>
-                            <p className="text-slate-300/85 max-w-xl mb-8">
+                            <p className="text-[var(--color-navy)]/85 max-w-xl mb-8">
                                 Explore bills-inclusive, verified rooms across 250+ student cities on our amber marketplace &mdash; or pick a city below and a counsellor will shortlist three contract-checked, budget-fit options for you, free.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
@@ -137,7 +137,7 @@ export default function AccommodationPage() {
                                 </a>
                                 <Link
                                     href="/contact"
-                                    className="inline-flex items-center justify-center px-8 py-4 glass-storm text-white font-bold rounded-xl hover:text-[var(--storm-electric)] transition-all"
+                                    className="inline-flex items-center justify-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl hover:text-[var(--color-axelis)] transition-all"
                                 >
                                     Get free housing help
                                 </Link>
@@ -148,13 +148,13 @@ export default function AccommodationPage() {
             </section>
 
             {/* Popular Cities photo grid — visual destination teasers */}
-            <section className="py-20 bg-[var(--storm-deep)]/40 border-y border-white/5">
+            <section className="py-20 bg-[var(--storm-deep)]/40 border-y border-[var(--color-rule)]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12 max-w-2xl mx-auto">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">
                             Where our students live
                         </h2>
-                        <p className="text-slate-300/85">
+                        <p className="text-[var(--color-navy)]/85">
                             Tap any city to browse live amber listings for that destination.
                         </p>
                     </div>
@@ -166,7 +166,7 @@ export default function AccommodationPage() {
                                 href={`https://amberstudent.com/search/${c.loc.replace(/\s+/g, '-')}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 hover:border-[var(--storm-electric)]/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)] text-left block"
+                                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-[var(--color-rule)] hover:border-[var(--color-rule)]/40 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white text-left block"
                                 aria-label={`Browse amber listings for ${c.label}, ${c.country} (opens in new tab)`}
                             >
                                 <img
@@ -179,18 +179,18 @@ export default function AccommodationPage() {
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--storm-deep)] via-[var(--storm-deep)]/45 to-transparent" />
 
-                                <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-[var(--storm-deep)]/80 backdrop-blur border border-white/15 text-[10px] font-bold text-[var(--dawn-glow)]">
+                                <div className="absolute top-3 right-3 px-2 py-1 rounded-md bg-[var(--storm-deep)]/80 backdrop-blur border border-[var(--color-rule)] text-[10px] font-bold text-[var(--color-axelis)]">
                                     from {c.from}
                                 </div>
 
                                 <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
                                     <div className="flex items-center gap-2 mb-1">
                                         <span aria-hidden="true" className="text-base">{c.flag}</span>
-                                        <span className="text-[10px] text-slate-300 font-bold">{c.country}</span>
+                                        <span className="text-[10px] text-[var(--color-navy)] font-bold">{c.country}</span>
                                     </div>
-                                    <h3 className="text-white text-lg md:text-xl font-bold leading-tight flex items-center gap-2">
+                                    <h3 className="text-[var(--color-navy)] text-lg md:text-xl font-bold leading-tight flex items-center gap-2">
                                         {c.label}
-                                        <Search size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-[var(--storm-electric)]" />
+                                        <Search size={14} className="opacity-0 group-hover:opacity-100 transition-opacity text-[var(--color-axelis)]" />
                                     </h3>
                                 </div>
                             </a>
@@ -203,17 +203,17 @@ export default function AccommodationPage() {
             <section className="py-24">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
-                        <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">
+                        <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
                             Accommodation options
                         </TextEffectInView>
-                        <p className="text-lg text-slate-300/85 max-w-2xl mx-auto">
+                        <p className="text-lg text-[var(--color-navy)]/85 max-w-2xl mx-auto">
                             Two main routes &mdash; both legitimate, both supported by our team for contract review and arrival logistics.
                         </p>
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         {/* PBSA */}
-                        <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-8 overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+                        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-8 overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
                             <div className="-mx-8 -mt-8 mb-6 h-40 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1200&q=80&auto=format&fit=crop"
@@ -227,20 +227,20 @@ export default function AccommodationPage() {
                             <div className="flex items-center gap-4 mb-6">
                                 <div className="w-16 h-16 bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] rounded-2xl flex items-center justify-center text-white" aria-hidden="true"><Building2 size={30} strokeWidth={2} /></div>
                                 <div>
-                                    <h3 className="text-2xl font-bold text-white">Purpose Built (PBSA)</h3>
-                                    <span className="text-sm font-semibold text-[var(--storm-electric)] bg-[var(--storm-electric)]/10 px-3 py-1 rounded-full border border-[var(--storm-electric)]/30 inline-block mt-1">£150 &ndash; £350 / week</span>
+                                    <h3 className="text-2xl font-bold text-[var(--color-navy)]">Purpose Built (PBSA)</h3>
+                                    <span className="text-sm font-semibold text-[var(--color-axelis)] bg-[var(--color-tint)] px-3 py-1 rounded-full border border-[var(--color-rule)]/30 inline-block mt-1">£150 &ndash; £350 / week</span>
                                 </div>
                             </div>
-                            <p className="text-slate-300/85 mb-6">Modern buildings designed specifically for students, with facilities and an active social life built in.</p>
+                            <p className="text-[var(--color-navy)]/85 mb-6">Modern buildings designed specifically for students, with facilities and an active social life built in.</p>
                             <ul className="space-y-3">
-                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--storm-electric)] shrink-0" /><span className="text-slate-200">All bills included (Wi-Fi, water, electricity)</span></li>
-                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--storm-electric)] shrink-0" /><span className="text-slate-200">On-site gym, cinema and study rooms</span></li>
-                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--storm-electric)] shrink-0" /><span className="text-slate-200">24/7 security and maintenance</span></li>
+                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--color-axelis)] shrink-0" /><span className="text-[var(--color-navy)]">All bills included (Wi-Fi, water, electricity)</span></li>
+                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--color-axelis)] shrink-0" /><span className="text-[var(--color-navy)]">On-site gym, cinema and study rooms</span></li>
+                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--color-axelis)] shrink-0" /><span className="text-[var(--color-navy)]">24/7 security and maintenance</span></li>
                             </ul>
                         </div>
 
                         {/* Private Apartments */}
-                        <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-8 overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+                        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-8 overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
                             <div className="-mx-8 -mt-8 mb-6 h-40 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80&auto=format&fit=crop"
@@ -252,17 +252,17 @@ export default function AccommodationPage() {
                                 />
                             </div>
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--dawn-glow)] to-amber-500 rounded-2xl flex items-center justify-center text-white" aria-hidden="true"><Home size={30} strokeWidth={2} /></div>
+                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--dawn-glow)] to-amber-500 rounded-2xl flex items-center justify-center text-[var(--color-navy)]" aria-hidden="true"><Home size={30} strokeWidth={2} /></div>
                                 <div>
-                                    <h3 className="text-2xl font-bold text-white">Private Apartments</h3>
-                                    <span className="text-sm font-semibold text-[var(--dawn-glow)] bg-[var(--dawn-glow)]/10 px-3 py-1 rounded-full border border-[var(--dawn-glow)]/30 inline-block mt-1">£180 &ndash; £400+ / week</span>
+                                    <h3 className="text-2xl font-bold text-[var(--color-navy)]">Private Apartments</h3>
+                                    <span className="text-sm font-semibold text-[var(--color-axelis)] bg-[var(--dawn-glow)]/10 px-3 py-1 rounded-full border border-[var(--color-axelis)]/30 inline-block mt-1">£180 &ndash; £400+ / week</span>
                                 </div>
                             </div>
-                            <p className="text-slate-300/85 mb-6">Independent living &mdash; full apartments or houses for students who want privacy or a flatmate setup with friends.</p>
+                            <p className="text-[var(--color-navy)]/85 mb-6">Independent living &mdash; full apartments or houses for students who want privacy or a flatmate setup with friends.</p>
                             <ul className="space-y-3">
-                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--dawn-glow)] shrink-0" /><span className="text-slate-200">More privacy and independence</span></li>
-                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--dawn-glow)] shrink-0" /><span className="text-slate-200">Choose your own location and flatmates</span></li>
-                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--dawn-glow)] shrink-0" /><span className="text-slate-200">Flexible lease terms available</span></li>
+                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--color-axelis)] shrink-0" /><span className="text-[var(--color-navy)]">More privacy and independence</span></li>
+                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--color-axelis)] shrink-0" /><span className="text-[var(--color-navy)]">Choose your own location and flatmates</span></li>
+                                <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--color-axelis)] shrink-0" /><span className="text-[var(--color-navy)]">Flexible lease terms available</span></li>
                             </ul>
                         </div>
                     </div>
@@ -270,10 +270,10 @@ export default function AccommodationPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-20 border-t border-white/5">
+            <section className="py-20 border-t border-[var(--color-rule)]">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl md:text-4xl font-bold text-white mb-5">Not sure where to start?</h2>
-                    <p className="text-lg text-slate-300/85 mb-8 max-w-2xl mx-auto">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-5">Not sure where to start?</h2>
+                    <p className="text-lg text-[var(--color-navy)]/85 mb-8 max-w-2xl mx-auto">
                         Send us your offer letter and city &mdash; a counsellor will shortlist three amber options, contract-checked and budget-fit, within 48 hours. Free.
                     </p>
                     <Link

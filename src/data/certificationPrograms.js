@@ -600,18 +600,18 @@ export const allPrograms = [...programs, ...unlistedPrograms];
 // used by the certification pages is spelled out here and looked up by tier.
 const ACCENTS = {
   electric: {
-    text: 'text-[var(--storm-electric)]',
-    badge: 'bg-[var(--storm-electric)]/10 border-[var(--storm-electric)]/30 text-[var(--storm-electric)]',
-    step: 'bg-[var(--storm-electric)]/12 border-[var(--storm-electric)]/30 text-[var(--storm-electric)]',
-    cardBorder: 'border-white/10 hover:border-[var(--storm-electric)]/50',
-    ring: 'focus-visible:ring-[var(--storm-electric)]',
+    text: 'text-[var(--color-axelis)]',
+    badge: 'bg-[var(--color-tint)] border-[var(--color-rule)]/30 text-[var(--color-axelis)]',
+    step: 'bg-[var(--color-tint)] border-[var(--color-rule)]/30 text-[var(--color-axelis)]',
+    cardBorder: 'border-[var(--color-rule)] hover:border-[var(--color-rule)]/50',
+    ring: 'focus-visible:ring-[var(--color-axelis)]',
   },
   glow: {
-    text: 'text-[var(--dawn-glow)]',
-    badge: 'bg-[var(--dawn-glow)]/10 border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)]',
-    step: 'bg-[var(--dawn-glow)]/12 border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)]',
-    cardBorder: 'border-[var(--dawn-glow)]/35 hover:border-[var(--dawn-glow)]/70',
-    ring: 'focus-visible:ring-[var(--dawn-glow)]',
+    text: 'text-[var(--color-axelis)]',
+    badge: 'bg-[var(--dawn-glow)]/10 border-[var(--color-axelis)]/30 text-[var(--color-axelis)]',
+    step: 'bg-[var(--dawn-glow)]/12 border-[var(--color-axelis)]/30 text-[var(--color-axelis)]',
+    cardBorder: 'border-[var(--color-axelis)]/35 hover:border-[var(--color-axelis)]/70',
+    ring: 'focus-visible:ring-[var(--color-axelis)]',
   },
 };
 

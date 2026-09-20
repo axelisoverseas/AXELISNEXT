@@ -121,7 +121,7 @@ const FeaturesCarousel = ({ features = [] }) => {
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-10"
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-[var(--color-tint)] hover:bg-white text-gray-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-10"
         aria-label="Previous feature"
       >
         <ChevronLeft size={20} />
@@ -129,7 +129,7 @@ const FeaturesCarousel = ({ features = [] }) => {
 
       <button
         onClick={goToNext}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white/90 hover:bg-white text-gray-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-10"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-[var(--color-tint)] hover:bg-white text-gray-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-10"
         aria-label="Next feature"
       >
         <ChevronRight size={20} />

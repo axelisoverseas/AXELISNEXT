@@ -26,7 +26,7 @@ function Stars({ rating, size = 14 }) {
                     <Star
                         key={i}
                         size={size}
-                        className={filled ? 'text-[#FBBC05] fill-[#FBBC05]' : 'text-slate-500/60'}
+                        className={filled ? 'text-[#FBBC05] fill-[#FBBC05]' : 'text-[var(--color-dim)]/60'}
                     />
                 );
             })}
@@ -42,7 +42,7 @@ export default function GoogleReviewsSection({ compact = false }) {
     const shown = verifiedReviews.slice(0, compact ? 3 : 6);
 
     return (
-        <section className={`relative ${compact ? 'py-14' : 'py-20'} border-t border-white/5`}>
+        <section className={`relative ${compact ? 'py-14' : 'py-20'} border-t border-[var(--color-rule)]`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section header — Google-branded */}
                 <div className="text-center mb-10 max-w-2xl mx-auto">
@@ -53,17 +53,17 @@ export default function GoogleReviewsSection({ compact = false }) {
                                 <span className="text-3xl font-extrabold leading-none">{googleReviewsMeta.rating.toFixed(1)}</span>
                                 <Stars rating={googleReviewsMeta.rating} size={16} />
                             </div>
-                            <div className="text-[11px] font-bold text-slate-500 mt-0.5">
+                            <div className="text-[11px] font-bold text-[var(--color-dim)] mt-0.5">
                                 {googleReviewsMeta.totalReviews} Google reviews
                             </div>
                         </div>
                     </div>
 
-                    <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">
                         What our clients say <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">on Google</span>
                     </h2>
-                    <p className="text-slate-300/85 text-sm md:text-base flex items-center justify-center gap-2">
-                        <MapPin size={14} className="text-[var(--storm-electric)]" />
+                    <p className="text-[var(--color-navy)]/85 text-sm md:text-base flex items-center justify-center gap-2">
+                        <MapPin size={14} className="text-[var(--color-axelis)]" />
                         Verified reviews from our Bilaspur branch
                     </p>
                 </div>
@@ -73,7 +73,7 @@ export default function GoogleReviewsSection({ compact = false }) {
                     {shown.map((r, i) => (
                         <article
                             key={i}
-                            className="relative bg-[#141210] border-2 border-white/10 hover:border-white/20 rounded-2xl p-5 md:p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] transition-colors flex flex-col"
+                            className="relative bg-white border-2 border-[var(--color-rule)] hover:border-[var(--color-rule)] rounded-2xl p-5 md:p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] transition-colors flex flex-col"
                         >
                             {/* Google G watermark top-right */}
                             <div className="absolute top-4 right-4 opacity-70">
@@ -81,19 +81,19 @@ export default function GoogleReviewsSection({ compact = false }) {
                             </div>
 
                             <div className="flex items-center gap-3 mb-3">
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--storm-electric)]/40 to-[var(--dawn-glow)]/40 flex items-center justify-center text-white text-sm font-bold shrink-0">
+                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[var(--storm-electric)]/40 to-[var(--dawn-glow)]/40 flex items-center justify-center text-[var(--color-navy)] text-sm font-bold shrink-0">
                                     {r.avatarInitials}
                                 </div>
                                 <div className="min-w-0 flex-1">
-                                    <div className="text-white font-bold text-sm truncate">{r.name}</div>
+                                    <div className="text-[var(--color-navy)] font-bold text-sm truncate">{r.name}</div>
                                     <div className="flex items-center gap-1.5 mt-0.5">
                                         <Stars rating={r.rating} size={12} />
-                                        <span className="text-slate-500 text-[10px]">· {r.relativeDate}</span>
+                                        <span className="text-[var(--color-dim)] text-[10px]">· {r.relativeDate}</span>
                                     </div>
                                 </div>
                             </div>
 
-                            <p className="text-slate-300/85 text-sm leading-relaxed flex-1">
+                            <p className="text-[var(--color-navy)]/85 text-sm leading-relaxed flex-1">
                                 {r.text}
                             </p>
                         </article>
@@ -106,7 +106,7 @@ export default function GoogleReviewsSection({ compact = false }) {
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-100 transition-colors shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-100 transition-colors shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                     >
                         <GoogleG size={18} />
                         Read all {googleReviewsMeta.totalReviews} reviews on Google

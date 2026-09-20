@@ -34,13 +34,13 @@ export const TestimonialsColumn = ({ className = '', testimonials, duration = 15
                       className="h-10 w-10 rounded-full object-cover"
                     />
                   ) : (
-                    <div className="h-10 w-10 rounded-full bg-gradient-to-br from-stone-700 to-white flex items-center justify-center text-white font-bold text-sm">
+                    <div className="h-10 w-10 rounded-full bg-gradient-to-br from-stone-700 to-white flex items-center justify-center text-[var(--color-navy)] font-bold text-sm">
                       {t.name?.[0]}
                     </div>
                   )}
                   <div className="flex flex-col">
                     <div className="font-semibold tracking-tight text-sm text-slate-900 leading-5">{t.name}</div>
-                    <div className="leading-5 text-xs text-slate-500 tracking-tight">{t.role}</div>
+                    <div className="leading-5 text-xs text-[var(--color-dim)] tracking-tight">{t.role}</div>
                   </div>
                 </div>
               </div>

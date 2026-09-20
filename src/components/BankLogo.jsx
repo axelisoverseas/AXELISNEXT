@@ -40,7 +40,7 @@ const BankLogo = ({ bankName, className = "w-16 h-16" }) => {
 
     return (
       <div className={`${className} ${bgColor} rounded-lg flex items-center justify-center shadow-lg border ${borderColor}`}>
-        <div className="text-white font-bold text-xs text-center px-1">
+        <div className="text-[var(--color-navy)] font-bold text-xs text-center px-1">
           {bankName.split(' ').map(word => word[0]).join('').slice(0, 4)}
         </div>
       </div>

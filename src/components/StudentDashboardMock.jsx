@@ -72,7 +72,7 @@ const StudentDashboardMock = () => {
                                         >
                                             {/* Line marker */}
                                             <div className={`absolute left-0 -ml-[2.2rem] flex items-center justify-center w-8 h-8 rounded-full border-4 border-white shadow-sm transition-colors ${step.status === 'completed' ? 'bg-green-500 text-white' :
-                                                    step.status === 'current' ? 'bg-stone-700 text-white animate-pulse' :
+                                                    step.status === 'current' ? 'bg-stone-700 text-[var(--color-navy)] animate-pulse' :
                                                         'bg-gray-200 text-gray-400'
                                                 }`}>
                                                 {step.status === 'completed' ? <CheckCircle2 size={14} /> :
@@ -99,7 +99,7 @@ const StudentDashboardMock = () => {
                                                     </div>
 
                                                     {step.status === 'current' && (
-                                                        <button className="px-3 py-1.5 text-xs font-bold bg-stone-900 text-white rounded-lg hover:bg-stone-950 transition-colors shadow">
+                                                        <button className="px-3 py-1.5 text-xs font-bold bg-stone-900 text-[var(--color-navy)] rounded-lg hover:bg-stone-950 transition-colors shadow">
                                                             View Details
                                                         </button>
                                                     )}
@@ -154,7 +154,7 @@ const StudentDashboardMock = () => {
                                     </div>
                                     <h5 className="font-black text-lg mb-2 relative z-10">Counsellor Assigned</h5>
                                     <p className="text-sm font-medium mb-4 relative z-10">Ananya Sharma is reviewing your visa file.</p>
-                                    <button className="relative z-10 w-full py-2 bg-slate-950 text-white rounded-xl font-bold text-sm shadow hover:bg-slate-800 transition-colors">
+                                    <button className="relative z-10 w-full py-2 bg-slate-950 text-[var(--color-navy)] rounded-xl font-bold text-sm shadow hover:bg-[var(--color-tint)] transition-colors">
                                         Message Counsellor
                                     </button>
                                 </div>

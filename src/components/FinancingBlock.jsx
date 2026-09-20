@@ -34,83 +34,83 @@ export default function FinancingBlock({ program }) {
   return (
     <section id="financing" className="relative py-16 scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl md:text-3xl font-bold text-white tracking-tight mb-2">
+        <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight mb-2">
           Programme fee and financing
         </h2>
-        <p className="text-slate-400 text-sm mb-6">
+        <p className="text-[var(--color-dim)] text-sm mb-6">
           The fee for this programme is {formatINR(program.price)} plus {GST_RATE}% GST,
           which comes to {formatINR(withGst(program.price).gross)} payable. GST is itemised
           separately on your receipt.
         </p>
 
-        <div className="bg-[#141210] border-2 border-white/12 rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Total */}
-            <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-white/10">
-              <div className="text-sm font-medium text-slate-400 mb-2">Total programme fee</div>
-              <div className="text-4xl font-bold text-white mb-1">
+            <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-[var(--color-rule)]">
+              <div className="text-sm font-medium text-[var(--color-dim)] mb-2">Total programme fee</div>
+              <div className="text-4xl font-bold text-[var(--color-navy)] mb-1">
                 {formatINR(withGst(program.price).gross)}
               </div>
-              <div className="text-sm text-slate-500">
+              <div className="text-sm text-[var(--color-dim)]">
                 {formatINR(program.price)} + {formatINR(withGst(program.price).gst)} GST
               </div>
             </div>
 
             {/* EMI — equal visual weight to the total */}
             <div className="p-6 md:p-8">
-              <div className="text-sm font-medium text-slate-400 mb-2">Pay in instalments, as low as</div>
+              <div className="text-sm font-medium text-[var(--color-dim)] mb-2">Pay in instalments, as low as</div>
               <div className="flex items-baseline gap-2 mb-1">
-                <span className="text-4xl font-bold text-white">{formatINR(headline)}</span>
-                <span className="text-xl font-medium text-slate-300">/month</span>
+                <span className="text-4xl font-bold text-[var(--color-navy)]">{formatINR(headline)}</span>
+                <span className="text-xl font-medium text-[var(--color-navy)]">/month</span>
               </div>
-              <div className="text-sm text-slate-500">
+              <div className="text-sm text-[var(--color-dim)]">
                 over {headlineTenure} months{BAJAJ_EMI_LIVE ? ' on no-cost EMI' : ', before your bank\u2019s interest'}
               </div>
             </div>
           </div>
 
           {/* Tenure table */}
-          <div className="border-t border-white/10 p-6 md:p-8">
-            <div className="text-sm font-medium text-slate-300 mb-4">
+          <div className="border-t border-[var(--color-rule)] p-6 md:p-8">
+            <div className="text-sm font-medium text-[var(--color-navy)] mb-4">
               {financing.scheduleHeading}
             </div>
             <div className="overflow-x-auto">
               <table className="w-full text-sm min-w-[380px] tabular-nums">
                 <thead>
-                  <tr className="border-b border-white/10">
-                    <th scope="col" className="text-left pb-2.5 text-xs font-medium text-slate-500">Tenure</th>
-                    <th scope="col" className="text-right pb-2.5 text-xs font-medium text-slate-500">Monthly</th>
+                  <tr className="border-b border-[var(--color-rule)]">
+                    <th scope="col" className="text-left pb-2.5 text-xs font-medium text-[var(--color-dim)]">Tenure</th>
+                    <th scope="col" className="text-right pb-2.5 text-xs font-medium text-[var(--color-dim)]">Monthly</th>
                     {BAJAJ_EMI_LIVE && (
-                      <th scope="col" className="text-right pb-2.5 text-xs font-medium text-slate-500">Total payable</th>
+                      <th scope="col" className="text-right pb-2.5 text-xs font-medium text-[var(--color-dim)]">Total payable</th>
                     )}
                   </tr>
                 </thead>
                 <tbody>
                   {schedule.map((row) => (
-                    <tr key={row.months} className="border-b border-white/5 last:border-0">
-                      <td className="py-3 text-slate-200">{row.months} months</td>
-                      <td className="py-3 text-right text-white font-semibold">{formatINR(row.monthly)}</td>
+                    <tr key={row.months} className="border-b border-[var(--color-rule)] last:border-0">
+                      <td className="py-3 text-[var(--color-navy)]">{row.months} months</td>
+                      <td className="py-3 text-right text-[var(--color-navy)] font-semibold">{formatINR(row.monthly)}</td>
                       {BAJAJ_EMI_LIVE && (
-                        <td className="py-3 text-right text-slate-400">{formatINR(program.price)}</td>
+                        <td className="py-3 text-right text-[var(--color-dim)]">{formatINR(program.price)}</td>
                       )}
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <p className="text-xs text-slate-500 mt-3">
+            <p className="text-xs text-[var(--color-dim)] mt-3">
               {financing.scheduleNote}
             </p>
           </div>
 
           {/* Partners */}
-          <div className="border-t border-white/10 p-6 md:p-8">
-            <div className="text-sm font-medium text-slate-300 mb-3">Financing partners</div>
+          <div className="border-t border-[var(--color-rule)] p-6 md:p-8">
+            <div className="text-sm font-medium text-[var(--color-navy)] mb-3">Financing partners</div>
             <div className="flex flex-wrap gap-2.5 mb-4">
               {financing.partners.map((name) => (
                 <span
                   key={name}
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border bg-white/5 border-white/12 text-white text-sm font-semibold"
+                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border bg-[var(--color-tint)] border-[var(--color-rule)] text-[var(--color-navy)] text-sm font-semibold"
                 >
                   {name}
                 </span>
@@ -129,13 +129,13 @@ export default function FinancingBlock({ program }) {
               )}
               <a
                 href="#enquire"
-                className="inline-flex justify-center items-center px-6 py-3 min-h-[44px] rounded-xl bg-white/8 hover:bg-white/12 border border-white/15 text-white font-semibold text-sm transition-colors"
+                className="inline-flex justify-center items-center px-6 py-3 min-h-[44px] rounded-xl bg-[var(--color-tint)] hover:bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] font-semibold text-sm transition-colors"
               >
                 Apply now
               </a>
               <Link
                 href="/bookings"
-                className="inline-flex justify-center items-center px-6 py-3 min-h-[44px] rounded-xl bg-white/8 hover:bg-white/12 border border-white/15 text-white font-semibold text-sm transition-colors"
+                className="inline-flex justify-center items-center px-6 py-3 min-h-[44px] rounded-xl bg-[var(--color-tint)] hover:bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] font-semibold text-sm transition-colors"
               >
                 Check your eligibility
               </Link>
@@ -143,8 +143,8 @@ export default function FinancingBlock({ program }) {
           </div>
 
           {/* Fine print */}
-          <div className="border-t border-white/10 px-6 md:px-8 py-5 bg-white/[0.02]">
-            <p className="text-xs text-slate-500 leading-relaxed">
+          <div className="border-t border-[var(--color-rule)] px-6 md:px-8 py-5 bg-[var(--color-tint)]">
+            <p className="text-xs text-[var(--color-dim)] leading-relaxed">
               <ShieldCheck aria-hidden="true" size={12} className="inline mr-1.5 -mt-0.5" />
               {financing.strip} Monthly amounts shown are the programme fee divided across the tenure;
               your card issuer sets the rate, so the final instalment and total are fixed by your bank.

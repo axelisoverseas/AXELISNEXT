@@ -40,11 +40,11 @@ const CTAButton = ({
       case 'gradient':
         return 'btn btn-electric';
       case 'success':
-        return 'btn bg-gradient-to-r from-emerald-500 to-emerald-600 text-white hover:from-emerald-600 hover:to-emerald-700 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/25';
+        return 'btn bg-gradient-to-r from-emerald-500 to-emerald-600 text-[var(--color-navy)] hover:from-emerald-600 hover:to-emerald-700 shadow-xl hover:shadow-2xl hover:shadow-emerald-500/25';
       case 'warning':
         return 'btn bg-white text-slate-900 border hover:bg-stone-300 border-stone-700 shadow-[0_0_15px_rgba(250,204,21,0.5)]';
       case 'primary':
-        return 'btn bg-stone-900 text-white hover:bg-stone-700 border border-stone-900 shadow-md';
+        return 'btn bg-stone-900 text-[var(--color-navy)] hover:bg-stone-700 border border-stone-900 shadow-md';
       case 'light':
         return 'btn bg-white text-slate-900 border-2 border-white hover:bg-gray-50 hover:border-gray-50 shadow-xl hover:shadow-2xl hover:shadow-white/25';
       case 'electric':

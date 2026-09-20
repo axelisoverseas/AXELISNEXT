@@ -31,13 +31,13 @@ const TestimonialCard = ({ testimonial, className = "", style = {} }) => {
                   }}
                 />
                 <div
-                  className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full hidden items-center justify-center text-white font-bold text-sm"
+                  className="absolute inset-0 bg-gradient-to-br from-primary-600 to-primary-700 rounded-full hidden items-center justify-center text-[var(--color-navy)] font-bold text-sm"
                 >
                   {testimonial.name.charAt(0)}
                 </div>
               </>
             ) : (
-              <div className="w-full h-full bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center text-white font-bold text-sm">
+              <div className="w-full h-full bg-gradient-to-br from-primary-600 to-primary-700 rounded-full flex items-center justify-center text-[var(--color-navy)] font-bold text-sm">
                 {testimonial.name.charAt(0)}
               </div>
             )}

@@ -72,13 +72,13 @@ export default async function CourseGuidePage({ params }) {
                         <span className="text-gray-900 ml-2">{data.course}</span>
                     </nav>
 
-                    <header className="bg-gradient-to-r from-stone-900 to-slate-900 p-10 rounded-3xl text-white mb-10 shadow-xl relative overflow-hidden">
+                    <header className="bg-gradient-to-r from-stone-900 to-slate-900 p-10 rounded-3xl text-[var(--color-navy)] mb-10 shadow-xl relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-stone-700/20 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
-                        <span className="inline-block bg-white/20 px-4 py-1.5 rounded-full text-stone-100 font-semibold text-sm mb-4 backdrop-blur-md">Course Guide</span>
+                        <span className="inline-block bg-[var(--color-tint)] px-4 py-1.5 rounded-full text-[var(--color-navy)] font-semibold text-sm mb-4 backdrop-blur-md">Course Guide</span>
                         <h1 className="text-4xl md:text-5xl font-black mb-4 flex items-center leading-tight">
                             <TextEffect as="span" per="word" preset="blur">{`Study ${data.course} in ${data.country}`}</TextEffect>
                         </h1>
-                        <p className="text-lg text-stone-100 max-w-2xl">
+                        <p className="text-lg text-[var(--color-navy)] max-w-2xl">
                             Explore the best universities, entry requirements, and outstanding career prospects for {data.course} graduates in {data.country}.
                         </p>
                     </header>
@@ -122,7 +122,7 @@ export default async function CourseGuidePage({ params }) {
                                 <div className="w-12 h-12 bg-stone-100 text-stone-800 rounded-full flex items-center justify-center mb-4"><Rocket size={22} strokeWidth={2} /></div>
                                 <h3 className="text-xl font-bold mb-3 text-slate-800">Fast-Track Your Admission</h3>
                                 <p className="text-gray-600 mb-6 text-sm leading-relaxed">Don't miss the upcoming intake. Our counsellors specialize in {data.course} placements in {data.country}.</p>
-                                <Link href="/contact" className="w-full block text-center bg-slate-950 hover:bg-slate-800 text-white font-bold py-3 px-4 rounded-xl transition-all shadow-md">
+                                <Link href="/contact" className="w-full block text-center bg-slate-950 hover:bg-[var(--color-tint)] text-[var(--color-navy)] font-bold py-3 px-4 rounded-xl transition-all shadow-md">
                                     Book Free Consultation
                                 </Link>
                             </div>

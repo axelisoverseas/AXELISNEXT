@@ -12,10 +12,10 @@ import { payRails } from '../data/cashfreeLinks';
 // blames themselves and leaves.
 
 const PRIMARY =
-  'inline-flex w-full items-center justify-center px-4 py-3 rounded-xl font-bold text-sm transition-all bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white shadow-[0_0_30px_-10px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]';
+  'inline-flex w-full items-center justify-center px-4 py-3 rounded-xl font-bold text-sm transition-all bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white shadow-[0_0_30px_-10px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]';
 
 const SECONDARY =
-  'inline-flex w-full items-center justify-center px-4 py-3 rounded-xl font-bold text-sm transition-colors bg-white/8 hover:bg-white/15 text-white border border-white/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]';
+  'inline-flex w-full items-center justify-center px-4 py-3 rounded-xl font-bold text-sm transition-colors bg-[var(--color-tint)] hover:bg-[var(--color-tint)] text-[var(--color-navy)] border border-[var(--color-rule)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]';
 
 export default function PayRail({ razorpayUrl, cashfreeUrl, highlight = false, label = 'Enrol' }) {
   const { cashfree, razorpay, count } = payRails({ razorpayUrl, cashfreeUrl });

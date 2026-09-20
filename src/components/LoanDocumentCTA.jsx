@@ -71,7 +71,7 @@ const LoanDocumentCTA = () => {
         <div className="text-center">
           {/* Icon */}
           <div className="mx-auto w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-4">
-            <FileText className="text-white" size={28} />
+            <FileText className="text-[var(--color-navy)]" size={28} />
           </div>
 
           {/* Title */}
@@ -103,7 +103,7 @@ const LoanDocumentCTA = () => {
           {/* CTA Button */}
           <button
             onClick={openModal}
-            className="w-full bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-white px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            className="w-full bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-[var(--color-navy)] px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center gap-2"
           >
             <FileText size={18} />
             View Document Checklist
@@ -128,7 +128,7 @@ const LoanDocumentCTA = () => {
             onClick={(e) => e.stopPropagation()}
           >
             {/* Modal Header */}
-            <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white p-6 flex items-center justify-between">
+            <div className="bg-gradient-to-r from-orange-500 to-red-500 text-[var(--color-navy)] p-6 flex items-center justify-between">
               <div>
                 <h2 className="text-2xl font-bold">Education Loan Document Checklist</h2>
                 <p className="text-orange-100">Non-Collateral Loan Requirements (India)</p>
@@ -139,7 +139,7 @@ const LoanDocumentCTA = () => {
                   e.stopPropagation();
                   closeModal();
                 }}
-                className="p-2 hover:bg-white/20 rounded-full transition-colors cursor-pointer"
+                className="p-2 hover:bg-[var(--color-tint)] rounded-full transition-colors cursor-pointer"
                 type="button"
                 aria-label="Close modal"
               >
@@ -213,7 +213,7 @@ const LoanDocumentCTA = () => {
               </div>
 
               {/* Footer CTA */}
-              <div className="mt-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-6 text-white text-center">
+              <div className="mt-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl p-6 text-[var(--color-navy)] text-center">
                 <h3 className="text-xl font-bold mb-2">Need Help with Your Loan Application?</h3>
                 <p className="mb-4 text-orange-100">Our loan experts will guide you through the entire process</p>
                 <Link

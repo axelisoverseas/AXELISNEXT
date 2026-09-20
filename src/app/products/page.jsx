@@ -60,7 +60,7 @@ function ProductsContent() {
   }, [searchParams]);
 
   return (
-    <div className="min-h-screen text-slate-100">
+    <div className="min-h-screen text-[var(--color-navy)]">
       {/* HERO */}
       <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
@@ -74,7 +74,7 @@ function ProductsContent() {
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/60 to-[var(--storm-deep)]" />
           <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.7)_0%,transparent_75%)]" />
-          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />
+          <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
 
@@ -84,12 +84,12 @@ function ProductsContent() {
           variants={staggerContainer}
           className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
         >
-          <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight">
+          <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-extrabold mb-6 text-[var(--color-navy)] tracking-tight">
             <TextEffect as="span" per="word" preset="blur">Pick the plan that matches</TextEffect>{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">where you want to study.</span>
           </motion.h1>
 
-          <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-10 text-slate-300/90 max-w-3xl mx-auto leading-relaxed">
+          <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-10 text-[var(--color-navy)]/90 max-w-3xl mx-auto leading-relaxed">
             Global Admissions Charter (GAC) for global private universities. Europe Public Charter (EPC) for tuition-free public Europe. Both come with a refundable deposit and a dedicated counsellor.
           </motion.p>
 
@@ -103,7 +103,7 @@ function ProductsContent() {
             </Link>
             <Link
               href="/bookings"
-              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--storm-electric)]"
+              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
             >
               Free first call
             </Link>
@@ -116,8 +116,8 @@ function ProductsContent() {
               { Icon: Award, label: '₹3 Cr+ scholarships' },
               { Icon: ShieldCheck, label: 'Refundable deposit' },
             ].map(({ Icon, label }) => (
-              <div key={label} className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-slate-200 text-sm font-semibold">
-                <Icon size={16} className="text-[var(--storm-electric)] shrink-0" />
+              <div key={label} className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-[var(--color-navy)] text-sm font-semibold">
+                <Icon size={16} className="text-[var(--color-axelis)] shrink-0" />
                 <span>{label}</span>
               </div>
             ))}
@@ -126,17 +126,17 @@ function ProductsContent() {
       </section>
 
       {/* TRUST BAND — DPIIT / British Council / AIRC */}
-      <section className="relative py-10 border-y border-white/5">
+      <section className="relative py-10 border-y border-[var(--color-rule)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-            <p className="text-xs text-slate-400 font-semibold">
+            <p className="text-xs text-[var(--color-dim)] font-semibold">
               Certified by independent bodies
             </p>
             <Link href="/accreditations" className="flex flex-wrap items-center gap-8 opacity-80 hover:opacity-100 transition-opacity group">
               <img src="/logos/dppit logo.png" alt="DPIIT Startup India" className="h-7 object-contain" />
               <img src="/trust-badges/british-council-logo.webp" alt="British Council" className="h-5 object-contain" />
               <img src="/logos/Airc-logo-full-color-centered-LG.jpg" alt="AIRC" className="h-7 rounded-sm object-contain" />
-              <span className="text-xs text-[var(--storm-electric)] group-hover:underline">View certificates &rarr;</span>
+              <span className="text-xs text-[var(--color-axelis)] group-hover:underline">View certificates &rarr;</span>
             </Link>
           </div>
         </div>
@@ -145,16 +145,16 @@ function ProductsContent() {
       {/* PLANS — two charters: GAC and EPC */}
       <section id="plans" className="relative py-20 scroll-mt-24">
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/8 rounded-full blur-[120px]" />
+          <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/8 rounded-full blur-[120px]" />
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
               Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">One destination &mdash; yours.</span>
             </h2>
-            <p className="text-slate-300/85 text-lg">
+            <p className="text-[var(--color-navy)]/85 text-lg">
               Pick the route that matches where you want to study. Both come with a refundable deposit and a dedicated counsellor. Fees and refund conditions differ, and are set out in full on each card below.
             </p>
           </div>
@@ -162,7 +162,7 @@ function ProductsContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {/* GAC — Global Admissions Charter */}
             <article
-              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--storm-electric)]/30 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] bg-[#141210]"
+              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--color-rule)]/30 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] bg-white"
               aria-labelledby="plan-gac-title"
             >
               {/* Top brand-band — pure CSS, no image */}
@@ -172,23 +172,23 @@ function ProductsContent() {
               />
               <div
                 aria-hidden="true"
-                className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-[var(--storm-electric)]/10 blur-3xl pointer-events-none"
+                className="absolute -top-32 -right-32 w-80 h-80 rounded-full bg-[var(--color-tint)] blur-3xl pointer-events-none"
               />
               <div
                 aria-hidden="true"
-                className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[var(--storm-electric)]/5 blur-3xl pointer-events-none"
+                className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[var(--color-tint)] blur-3xl pointer-events-none"
               />
               <div className="relative">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/30 text-[var(--storm-electric)] text-[10px] font-bold mb-5">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-tint)] border border-[var(--color-rule)]/30 text-[var(--color-axelis)] text-[10px] font-bold mb-5">
                   Most popular
                 </span>
-                <h3 id="plan-gac-title" className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
-                  Global Admissions Charter <span className="text-base font-semibold text-stone-200/70">(GAC)</span>
+                <h3 id="plan-gac-title" className="text-3xl md:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight mb-2">
+                  Global Admissions Charter <span className="text-base font-semibold text-[var(--color-navy)]/70">(GAC)</span>
                 </h3>
-                <p className="text-slate-400 text-xs mb-6">Internal code: ZCF</p>
+                <p className="text-[var(--color-dim)] text-xs mb-6">Internal code: ZCF</p>
 
-                <p className="text-slate-300/90 mb-4 leading-relaxed">
-                  For students applying to <strong className="text-white">paid-tuition universities</strong> in the UK, USA, Canada, Australia, Ireland, New Zealand, and more.
+                <p className="text-[var(--color-navy)]/90 mb-4 leading-relaxed">
+                  For students applying to <strong className="text-[var(--color-navy)]">paid-tuition universities</strong> in the UK, USA, Canada, Australia, Ireland, New Zealand, and more.
                 </p>
 
                 <div className="flex flex-wrap gap-1.5 mb-6" aria-label="Countries covered under Global Admissions Charter">
@@ -210,7 +210,7 @@ function ProductsContent() {
                   ].map((c) => (
                     <span
                       key={c.n}
-                      className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/25 text-white text-[11px] font-semibold"
+                      className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[var(--color-tint)] border border-[var(--color-rule)]/25 text-[var(--color-navy)] text-[11px] font-semibold"
                     >
                       <span aria-hidden="true">{c.f}</span>
                       <span>{c.n}</span>
@@ -218,14 +218,14 @@ function ProductsContent() {
                   ))}
                 </div>
 
-                <div className="bg-white/[0.04] rounded-2xl border border-white/10 p-5 mb-6">
+                <div className="bg-[var(--color-tint)] rounded-2xl border border-[var(--color-rule)] p-5 mb-6">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-slate-500 line-through text-base">₹19,999</span>
+                    <span className="text-[var(--color-dim)] line-through text-base">₹19,999</span>
                     <span className="px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[10px] font-bold">50% OFF</span>
                   </div>
-                  <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">₹9,999</div>
-                  <p className="text-stone-200/85 text-sm font-medium">Onboarding deposit &mdash; <span className="text-emerald-300 font-semibold">100% refundable</span></p>
-                  <p className="text-slate-300/90 text-xs mt-1.5 leading-relaxed">
+                  <div className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-2">₹9,999</div>
+                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Onboarding deposit &mdash; <span className="text-emerald-300 font-semibold">100% refundable</span></p>
+                  <p className="text-[var(--color-navy)]/90 text-xs mt-1.5 leading-relaxed">
                     Refunded in full once your visa is granted, you have arrived, and you have paid your
                     university tuition in full, so a placed student pays Axelis nothing. Also refunded
                     if you receive zero offers. Full conditions in the Global Admissions Charter.
@@ -242,8 +242,8 @@ function ProductsContent() {
                     'Accommodation & pre-departure support',
                   ].map((feat) => (
                     <li key={feat} className="flex items-start gap-2.5">
-                      <CheckCircle size={16} className="text-[var(--storm-electric)] shrink-0 mt-0.5" />
-                      <span className="text-slate-200">{feat}</span>
+                      <CheckCircle size={16} className="text-[var(--color-axelis)] shrink-0 mt-0.5" />
+                      <span className="text-[var(--color-navy)]">{feat}</span>
                     </li>
                   ))}
                 </ul>
@@ -252,10 +252,10 @@ function ProductsContent() {
                   <CheckoutButton
                     product="global-admissions-charter"
                     label="Enrol in Global Admissions Charter (GAC) — ₹9,999"
-                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   />
                 </div>
-                <p className="text-xs text-slate-500 mt-3 text-center flex items-center justify-center gap-1.5">
+                <p className="text-xs text-[var(--color-dim)] mt-3 text-center flex items-center justify-center gap-1.5">
                   <ShieldCheck size={12} /> Secure via Cashfree &middot; refund terms in writing
                 </p>
               </div>
@@ -263,7 +263,7 @@ function ProductsContent() {
 
             {/* EPC — Europe Public Charter */}
             <article
-              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--dawn-glow)]/30 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] bg-[#141210]"
+              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--color-axelis)]/30 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] bg-white"
               aria-labelledby="plan-epc-title"
             >
               {/* Top brand-band — pure CSS, no image */}
@@ -280,16 +280,16 @@ function ProductsContent() {
                 className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[var(--dawn-glow)]/5 blur-3xl pointer-events-none"
               />
               <div className="relative">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-[10px] font-bold mb-5">
+                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--color-axelis)]/30 text-[var(--color-axelis)] text-[10px] font-bold mb-5">
                   Tuition-free Europe
                 </span>
-                <h3 id="plan-epc-title" className="text-3xl md:text-4xl font-extrabold text-white tracking-tight mb-2">
-                  Europe Public Charter <span className="text-base font-semibold text-stone-200/70">(EPC)</span>
+                <h3 id="plan-epc-title" className="text-3xl md:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight mb-2">
+                  Europe Public Charter <span className="text-base font-semibold text-[var(--color-navy)]/70">(EPC)</span>
                 </h3>
-                <p className="text-slate-400 text-xs mb-6">Internal code: ZTF</p>
+                <p className="text-[var(--color-dim)] text-xs mb-6">Internal code: ZTF</p>
 
-                <p className="text-slate-300/90 mb-4 leading-relaxed">
-                  For students who want <strong className="text-white">zero tuition</strong> at public universities in Germany, France, Norway, Sweden, Finland, Italy, Spain, Poland and more.
+                <p className="text-[var(--color-navy)]/90 mb-4 leading-relaxed">
+                  For students who want <strong className="text-[var(--color-navy)]">zero tuition</strong> at public universities in Germany, France, Norway, Sweden, Finland, Italy, Spain, Poland and more.
                 </p>
 
                 <div className="flex flex-wrap gap-1.5 mb-6" aria-label="Countries covered under Europe Public Charter">
@@ -312,7 +312,7 @@ function ProductsContent() {
                   ].map((c) => (
                     <span
                       key={c.n}
-                      className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/25 text-white text-[11px] font-semibold"
+                      className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--color-axelis)]/25 text-[var(--color-navy)] text-[11px] font-semibold"
                     >
                       <span aria-hidden="true">{c.f}</span>
                       <span>{c.n}</span>
@@ -320,15 +320,15 @@ function ProductsContent() {
                   ))}
                 </div>
 
-                <div className="bg-white/[0.04] rounded-2xl border border-white/10 p-5 mb-6">
+                <div className="bg-[var(--color-tint)] rounded-2xl border border-[var(--color-rule)] p-5 mb-6">
                   <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-slate-500 line-through text-base">₹39,998</span>
-                    <span className="px-2 py-0.5 rounded-md bg-[var(--dawn-glow)]/20 border border-[var(--dawn-glow)]/30 text-[var(--dawn-glow)] text-[10px] font-bold">50% OFF</span>
+                    <span className="text-[var(--color-dim)] line-through text-base">₹39,998</span>
+                    <span className="px-2 py-0.5 rounded-md bg-[var(--dawn-glow)]/20 border border-[var(--color-axelis)]/30 text-[var(--color-axelis)] text-[10px] font-bold">50% OFF</span>
                   </div>
-                  <div className="text-4xl md:text-5xl font-extrabold text-white mb-2">₹19,999</div>
-                  <p className="text-stone-200/85 text-sm font-medium">Service fee &mdash; <span className="text-emerald-300 font-semibold">refundable</span> if zero offers received.</p>
-                  <p className="text-slate-300/90 text-xs mt-1.5 leading-relaxed">
-                    Plus a <span className="text-[var(--dawn-glow)] font-semibold">₹1,80,000 Success Fee</span>, payable only
+                  <div className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-2">₹19,999</div>
+                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Service fee &mdash; <span className="text-emerald-300 font-semibold">refundable</span> if zero offers received.</p>
+                  <p className="text-[var(--color-navy)]/90 text-xs mt-1.5 leading-relaxed">
+                    Plus a <span className="text-[var(--color-axelis)] font-semibold">₹1,80,000 Success Fee</span>, payable only
                     if and when you accept an offer from a tuition-free public university. Total ₹1,99,999.
                     No offer, or an offer you decline, means no Success Fee.
                   </p>
@@ -344,8 +344,8 @@ function ProductsContent() {
                     'On-the-ground support until first day of class',
                   ].map((feat) => (
                     <li key={feat} className="flex items-start gap-2.5">
-                      <CheckCircle size={16} className="text-[var(--dawn-glow)] shrink-0 mt-0.5" />
-                      <span className="text-slate-200">{feat}</span>
+                      <CheckCircle size={16} className="text-[var(--color-axelis)] shrink-0 mt-0.5" />
+                      <span className="text-[var(--color-navy)]">{feat}</span>
                     </li>
                   ))}
                 </ul>
@@ -354,10 +354,10 @@ function ProductsContent() {
                   <CheckoutButton
                     product="europe-public-charter"
                     label="Enrol in Europe Public Charter (EPC) — ₹19,999"
-                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-electric)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-electric)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   />
                 </div>
-                <p className="text-xs text-slate-500 mt-3 text-center flex items-center justify-center gap-1.5">
+                <p className="text-xs text-[var(--color-dim)] mt-3 text-center flex items-center justify-center gap-1.5">
                   <ShieldCheck size={12} /> Secure via Cashfree &middot; refund terms in writing
                 </p>
               </div>
@@ -370,24 +370,24 @@ function ProductsContent() {
       <section id="comparison" className="relative py-16 scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
-            <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight mb-3">
+            <h2 className="text-2xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">
               Global Admissions Charter (GAC) vs Europe Public Charter (EPC) <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">at a glance</span>
             </h2>
-            <p className="text-slate-300/85">
+            <p className="text-[var(--color-navy)]/85">
               Same human team, same honest counselling &mdash; built for two different student profiles.
             </p>
           </div>
 
-          <div className="bg-[#141210] border-2 border-white/15 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] overflow-hidden">
+          <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] overflow-hidden">
             <table className="w-full text-sm">
               <thead>
-                <tr className="border-b border-white/15 bg-white/[0.06]">
-                  <th scope="col" className="text-left p-4 md:p-5 text-slate-400 font-semibold text-[10px]">Compare</th>
-                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--storm-electric)] font-bold">Global Admissions Charter <span className="text-slate-400 font-normal text-xs">(GAC · ZCF)</span></th>
-                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--dawn-glow)] font-bold">Europe Public Charter <span className="text-slate-400 font-normal text-xs">(EPC · ZTF)</span></th>
+                <tr className="border-b border-[var(--color-rule)] bg-[var(--color-tint)]">
+                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--color-dim)] font-semibold text-[10px]">Compare</th>
+                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--color-axelis)] font-bold">Global Admissions Charter <span className="text-[var(--color-dim)] font-normal text-xs">(GAC · ZCF)</span></th>
+                  <th scope="col" className="text-left p-4 md:p-5 text-[var(--color-axelis)] font-bold">Europe Public Charter <span className="text-[var(--color-dim)] font-normal text-xs">(EPC · ZTF)</span></th>
                 </tr>
               </thead>
-              <tbody className="text-slate-200">
+              <tbody className="text-[var(--color-navy)]">
                 {[
                   ['Best for', 'Paid global universities', 'Tuition-free public Europe'],
                   ['Countries covered', '29+ incl. UK, USA, Canada, Australia, Ireland, NZ', 'Germany, France, Norway, Sweden, Finland, Italy, Spain, Poland & more'],
@@ -400,8 +400,8 @@ function ProductsContent() {
                   ['Post-study work visa', 'UK 2yr, USA 1–3yr OPT, Canada up to 3yr, AU 2–4yr', 'Germany 18mo job seeker, Norway 1yr, Finland 1yr'],
                   ['Scholarship support', 'Yes, every relevant grant applied for', 'Yes: DAAD, Erasmus+, country-specific'],
                 ].map(([label, gac, epc]) => (
-                  <tr key={label} className="border-b border-white/5 last:border-b-0 hover:bg-white/[0.02] transition-colors">
-                    <th scope="row" className="text-left p-4 md:p-5 text-slate-400 font-medium align-top">{label}</th>
+                  <tr key={label} className="border-b border-[var(--color-rule)] last:border-b-0 hover:bg-[var(--color-tint)] transition-colors">
+                    <th scope="row" className="text-left p-4 md:p-5 text-[var(--color-dim)] font-medium align-top">{label}</th>
                     <td className="p-4 md:p-5 align-top">{gac}</td>
                     <td className="p-4 md:p-5 align-top">{epc}</td>
                   </tr>
@@ -410,8 +410,8 @@ function ProductsContent() {
             </table>
           </div>
 
-          <p className="text-center text-xs text-slate-500 mt-6 max-w-2xl mx-auto">
-            Still unsure which charter fits? The <Link href="/bookings" className="text-[var(--storm-electric)] hover:underline">free first call</Link> ends with a clear recommendation &mdash; sometimes it&apos;s &ldquo;neither, here&apos;s why.&rdquo;
+          <p className="text-center text-xs text-[var(--color-dim)] mt-6 max-w-2xl mx-auto">
+            Still unsure which charter fits? The <Link href="/bookings" className="text-[var(--color-axelis)] hover:underline">free first call</Link> ends with a clear recommendation &mdash; sometimes it&apos;s &ldquo;neither, here&apos;s why.&rdquo;
           </p>
         </div>
       </section>
@@ -420,10 +420,10 @@ function ProductsContent() {
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
               How it works &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">four steps, zero surprises.</span>
             </h2>
-            <p className="text-slate-300/85 text-lg max-w-2xl mx-auto">
+            <p className="text-[var(--color-navy)]/85 text-lg max-w-2xl mx-auto">
               Same process for both plans. Same counsellor through every step.
             </p>
           </div>
@@ -434,10 +434,10 @@ function ProductsContent() {
                 <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white flex items-center justify-center font-extrabold text-sm shadow-[0_0_18px_var(--storm-accent-glow)]">
                   {i + 1}
                 </div>
-                <step.Icon size={28} className="text-[var(--storm-electric)] mb-4" />
-                <h3 className="text-white font-bold text-lg mb-2">{step.title}</h3>
+                <step.Icon size={28} className="text-[var(--color-axelis)] mb-4" />
+                <h3 className="text-[var(--color-navy)] font-bold text-lg mb-2">{step.title}</h3>
                 <p
-                  className="text-slate-300/85 text-sm leading-relaxed"
+                  className="text-[var(--color-navy)]/85 text-sm leading-relaxed"
                   dangerouslySetInnerHTML={{ __html: step.body }}
                 />
               </div>
@@ -450,10 +450,10 @@ function ProductsContent() {
       <section className="relative py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
               The receipts &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">real students, real declarations, real visas.</span>
             </h2>
-            <p className="text-slate-300/85 text-lg max-w-3xl mx-auto leading-relaxed">
+            <p className="text-[var(--color-navy)]/85 text-lg max-w-3xl mx-auto leading-relaxed">
               Every plan flows through a PCI-DSS compliant gateway. Every ZTF student signs a Zero Tuition Fee declaration before we process anything. Every visa we claim is a real stamp in a real passport. Personal info is blacked out below; the rest is exactly what we have on file.
             </p>
           </div>
@@ -461,11 +461,11 @@ function ProductsContent() {
           {/* Razorpay payments */}
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-6">
-              <div className="h-px bg-[var(--storm-electric)]/30 flex-1" />
-              <h3 className="text-[var(--storm-electric)] text-xs font-bold whitespace-nowrap">
+              <div className="h-px bg-[var(--color-tint)] flex-1" />
+              <h3 className="text-[var(--color-axelis)] text-xs font-bold whitespace-nowrap">
                 Razorpay payments
               </h3>
-              <div className="h-px bg-[var(--storm-electric)]/30 flex-1" />
+              <div className="h-px bg-[var(--color-tint)] flex-1" />
             </div>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-6xl mx-auto">
               {[
@@ -483,7 +483,7 @@ function ProductsContent() {
                       loading="lazy"
                     />
                   </div>
-                  <p className={`mt-2 text-center text-[11px] font-bold flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-stone-300'}`}>
+                  <p className={`mt-2 text-center text-[11px] font-bold flex items-center justify-center gap-1.5 ${item.tone === 'emerald' ? 'text-emerald-300' : 'text-[var(--color-navy)]'}`}>
                     <BadgeCheck className="w-3 h-3" />
                     {item.cap}
                   </p>
@@ -496,7 +496,7 @@ function ProductsContent() {
           <div className="mb-14">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
-              <h3 className="text-[var(--dawn-glow)] text-xs font-bold whitespace-nowrap">
+              <h3 className="text-[var(--color-axelis)] text-xs font-bold whitespace-nowrap">
                 Zero Tuition Fee declarations
               </h3>
               <div className="h-px bg-[var(--dawn-glow)]/30 flex-1" />
@@ -517,7 +517,7 @@ function ProductsContent() {
                       loading="lazy"
                     />
                   </div>
-                  <p className="mt-2 text-center text-[11px] font-bold text-[var(--dawn-glow)] flex items-center justify-center gap-1.5">
+                  <p className="mt-2 text-center text-[11px] font-bold text-[var(--color-axelis)] flex items-center justify-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     {item.cap}
                   </p>
@@ -546,7 +546,7 @@ function ProductsContent() {
                   />
                 </div>
                 <div className="pt-3 px-2 text-center">
-                  <p className="text-white font-bold">Raghav Verma &middot; Polish student visa</p>
+                  <p className="text-[var(--color-navy)] font-bold">Raghav Verma &middot; Polish student visa</p>
                   <p className="text-emerald-300 text-xs font-bold mt-1 inline-flex items-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     Issued by the Embassy of Poland, New Delhi
@@ -564,7 +564,7 @@ function ProductsContent() {
                   />
                 </div>
                 <div className="pt-3 px-2 text-center">
-                  <p className="text-white font-bold">Monika Nataraj &middot; ZTF service fee</p>
+                  <p className="text-[var(--color-navy)] font-bold">Monika Nataraj &middot; ZTF service fee</p>
                   <p className="text-emerald-300 text-xs font-bold mt-1 inline-flex items-center gap-1.5">
                     <BadgeCheck className="w-3 h-3" />
                     ₹65,000 via HDFC Bank UPI &middot; 30 Sept 2025
@@ -574,14 +574,14 @@ function ProductsContent() {
             </div>
           </div>
 
-          <p className="mt-10 text-center text-slate-400 text-xs max-w-2xl mx-auto">
+          <p className="mt-10 text-center text-[var(--color-dim)] text-xs max-w-2xl mx-auto">
             Personal contact details, account numbers, and government identifiers are blacked out. Anything you want to verify is available on a call &mdash; with the student&apos;s consent.
           </p>
 
           <div className="mt-8 text-center">
             <Link
               href="/testimonials"
-              className="inline-flex items-center gap-2 text-[var(--storm-electric)] font-bold hover:text-white transition-colors"
+              className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-bold hover:text-[var(--color-navy)] transition-colors"
             >
               See real student stories &rarr;
             </Link>
@@ -593,10 +593,10 @@ function ProductsContent() {
       <section className="relative py-24">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel p-12 md:p-16 text-center">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
               Still on the fence?
             </h2>
-            <p className="text-lg text-slate-300/90 mb-10 max-w-2xl mx-auto">
+            <p className="text-lg text-[var(--color-navy)]/90 mb-10 max-w-2xl mx-auto">
               Book the free first call. We&apos;ll either tell you exactly which plan fits, or save you the money entirely.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -609,7 +609,7 @@ function ProductsContent() {
               </Link>
               <Link
                 href="/faq"
-                className="inline-flex items-center justify-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--storm-electric)]"
+                className="inline-flex items-center justify-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
               >
                 Read the FAQ first
               </Link>
@@ -626,7 +626,7 @@ export default function ProductsPage() {
     <Suspense
       fallback={
         <div className="min-h-screen flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-2 border-[var(--storm-electric)]/30 border-t-[var(--storm-electric)]" />
+          <div className="animate-spin rounded-full h-12 w-12 border-2 border-[var(--color-rule)]/30 border-t-[var(--storm-electric)]" />
         </div>
       }
     >

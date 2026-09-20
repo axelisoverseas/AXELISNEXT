@@ -34,18 +34,18 @@ export default function StatusPanel() {
   }, [orderId]);
 
   const ref = orderId ? (
-    <p className="mt-3 text-sm text-slate-500">
-      Order reference: <span className="font-mono text-slate-300">{orderId}</span>
+    <p className="mt-3 text-sm text-[var(--color-dim)]">
+      Order reference: <span className="font-mono text-[var(--color-navy)]">{orderId}</span>
     </p>
   ) : null;
 
   if (state.kind === 'loading') {
     return (
       <div aria-live="polite">
-        <h1 className="text-3xl font-bold text-white tracking-tight text-balance">
+        <h1 className="text-3xl font-bold text-[var(--color-navy)] tracking-tight text-balance">
           Checking your payment&hellip;
         </h1>
-        <p className="mt-3 text-slate-400">One moment. Do not close this page.</p>
+        <p className="mt-3 text-[var(--color-dim)]">One moment. Do not close this page.</p>
       </div>
     );
   }
@@ -59,25 +59,25 @@ export default function StatusPanel() {
     },
     ACTIVE: {
       Icon: Clock,
-      tone: 'text-[var(--dawn-glow)]',
+      tone: 'text-[var(--color-axelis)]',
       title: 'Payment not completed',
       body: 'We have not received this payment. Nothing has been charged. You can try again, and no amount is taken until a payment succeeds.',
     },
     EXPIRED: {
       Icon: Clock,
-      tone: 'text-[var(--dawn-glow)]',
+      tone: 'text-[var(--color-axelis)]',
       title: 'This payment request expired',
       body: 'Nothing was charged. Start again from the programme page, or call us and we will send a fresh request.',
     },
     error: {
       Icon: AlertCircle,
-      tone: 'text-[var(--dawn-glow)]',
+      tone: 'text-[var(--color-axelis)]',
       title: 'We could not confirm this payment',
       body: 'This does not mean it failed. Do not pay again — call us with the order reference below and we will confirm what happened before anything else is taken.',
     },
     missing: {
       Icon: AlertCircle,
-      tone: 'text-[var(--dawn-glow)]',
+      tone: 'text-[var(--color-axelis)]',
       title: 'No order reference',
       body: 'This page needs an order reference to check a payment. If you have just paid, use the link in your confirmation email.',
     },
@@ -89,14 +89,14 @@ export default function StatusPanel() {
   return (
     <div aria-live="polite">
       <Icon size={34} aria-hidden="true" className={`${s.tone} mb-4`} />
-      <h1 className="text-3xl font-bold text-white tracking-tight text-balance">{s.title}</h1>
-      <p className="mt-3 text-slate-300/90 leading-relaxed">{s.body}</p>
+      <h1 className="text-3xl font-bold text-[var(--color-navy)] tracking-tight text-balance">{s.title}</h1>
+      <p className="mt-3 text-[var(--color-navy)]/90 leading-relaxed">{s.body}</p>
       {ref}
 
       {state.kind !== 'PAID' && (
         <Link
           href="/certifications"
-          className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white/10 hover:bg-white/15 border border-white/15 text-white font-bold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]"
+          className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-tint)] hover:bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] font-bold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
         >
           Back to programmes
         </Link>

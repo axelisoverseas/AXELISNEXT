@@ -47,7 +47,7 @@ const VisualTestimonialCarousel = () => {
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-4">
             Success Stories from Our Students
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
@@ -57,7 +57,7 @@ const VisualTestimonialCarousel = () => {
 
         {/* Main Testimonial */}
         <div className="relative">
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
+          <div className="bg-[var(--color-tint)] backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-[var(--color-rule)] shadow-2xl">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               {/* Student Image */}
               <div className="relative">
@@ -66,7 +66,7 @@ const VisualTestimonialCarousel = () => {
                   <img
                     src={studentImage}
                     alt={currentTestimonial.name}
-                    className="relative w-full h-full object-cover rounded-full border-4 border-white/30 shadow-2xl"
+                    className="relative w-full h-full object-cover rounded-full border-4 border-[var(--color-rule)] shadow-2xl"
                     onError={(e) => {
                       e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(currentTestimonial.name)}&size=300&background=145da0&color=fff&bold=true`;
                     }}
@@ -79,17 +79,17 @@ const VisualTestimonialCarousel = () => {
 
               {/* Testimonial Content */}
               <div className="text-center lg:text-left">
-                <Quote className="text-white mb-4 mx-auto lg:mx-0" size={48} />
+                <Quote className="text-[var(--color-navy)] mb-4 mx-auto lg:mx-0" size={48} />
                 
-                <blockquote className="text-lg md:text-xl text-white mb-6 leading-relaxed">
+                <blockquote className="text-lg md:text-xl text-[var(--color-navy)] mb-6 leading-relaxed">
                   "{currentTestimonial.content}"
                 </blockquote>
 
                 <div className="mb-4">
-                  <h3 className="text-2xl font-bold text-white mb-1">
+                  <h3 className="text-2xl font-bold text-[var(--color-navy)] mb-1">
                     {currentTestimonial.name}
                   </h3>
-                  <p className="text-white font-semibold mb-2">
+                  <p className="text-[var(--color-navy)] font-semibold mb-2">
                     {currentTestimonial.university}
                   </p>
                   <p className="text-gray-300">
@@ -102,14 +102,14 @@ const VisualTestimonialCarousel = () => {
                   {[...Array(5)].map((_, i) => (
                     <Star
                       key={i}
-                      className="text-white fill-current"
+                      className="text-[var(--color-navy)] fill-current"
                       size={20}
                     />
                   ))}
                 </div>
 
                 {/* Achievement Badge */}
-                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-stone-700 to-red-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <div className="inline-flex items-center gap-2 bg-gradient-to-r from-stone-700 to-red-500 text-[var(--color-navy)] px-4 py-2 rounded-full text-sm font-semibold">
                   <Star size={16} />
                   Success Story
                 </div>
@@ -120,7 +120,7 @@ const VisualTestimonialCarousel = () => {
           {/* Navigation Buttons */}
           <button
             onClick={prevTestimonial}
-            className="absolute left-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+            className="absolute left-4 top-1/2 -translate-y-1/2 bg-[var(--color-tint)] backdrop-blur-sm hover:bg-[var(--color-tint)] text-[var(--color-navy)] p-3 rounded-full transition-all duration-300 hover:scale-110"
             aria-label="Previous testimonial"
           >
             <ChevronLeft size={24} />
@@ -128,7 +128,7 @@ const VisualTestimonialCarousel = () => {
 
           <button
             onClick={nextTestimonial}
-            className="absolute right-4 top-1/2 -translate-y-1/2 bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white p-3 rounded-full transition-all duration-300 hover:scale-110"
+            className="absolute right-4 top-1/2 -translate-y-1/2 bg-[var(--color-tint)] backdrop-blur-sm hover:bg-[var(--color-tint)] text-[var(--color-navy)] p-3 rounded-full transition-all duration-300 hover:scale-110"
             aria-label="Next testimonial"
           >
             <ChevronRight size={24} />
@@ -144,7 +144,7 @@ const VisualTestimonialCarousel = () => {
               className={`w-3 h-3 rounded-full transition-all duration-300 ${
                 index === currentIndex
                   ? 'bg-white scale-125'
-                  : 'bg-white/30 hover:bg-white/50'
+                  : 'bg-[var(--color-tint)] hover:bg-[var(--color-tint)]'
               }`}
               aria-label={`Go to testimonial ${index + 1}`}
             />
@@ -163,19 +163,19 @@ const VisualTestimonialCarousel = () => {
                 onClick={() => goToTestimonial(index)}
                 className={`p-4 rounded-xl transition-all duration-300 hover:scale-105 ${
                   index === currentIndex
-                    ? 'bg-white/20 border-2 border-white'
-                    : 'bg-white/10 border border-white/20 hover:bg-white/15'
+                    ? 'bg-[var(--color-tint)] border-2 border-white'
+                    : 'bg-[var(--color-tint)] border border-[var(--color-rule)] hover:bg-[var(--color-tint)]'
                 }`}
               >
                 <img
                   src={image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-white/30"
+                  className="w-12 h-12 rounded-full mx-auto mb-2 border-2 border-[var(--color-rule)]"
                   onError={(e) => {
                     e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(testimonial.name)}&size=100&background=145da0&color=fff&bold=true`;
                   }}
                 />
-                <p className="text-white text-sm font-medium truncate">
+                <p className="text-[var(--color-navy)] text-sm font-medium truncate">
                   {testimonial.name}
                 </p>
                 <p className="text-gray-300 text-xs truncate">

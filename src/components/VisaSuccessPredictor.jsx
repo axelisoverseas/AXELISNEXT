@@ -101,14 +101,14 @@ const VisaSuccessPredictor = () => {
     return (
         <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 overflow-hidden max-w-2xl mx-auto">
             {/* Header */}
-            <div className="bg-gradient-to-r from-slate-900 to-stone-900 text-white p-6 relative overflow-hidden">
+            <div className="bg-gradient-to-r from-slate-900 to-stone-900 text-[var(--color-navy)] p-6 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-stone-700/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
                 <div className="relative z-10">
                     <h3 className="text-2xl font-bold mb-2 flex items-center">
-                        <CheckCircle className="mr-2 text-white" />
+                        <CheckCircle className="mr-2 text-[var(--color-navy)]" />
                         Visa Success Predictor
                     </h3>
-                    <p className="text-stone-100 text-sm">Find out your chances of approval in 60 seconds</p>
+                    <p className="text-[var(--color-navy)] text-sm">Find out your chances of approval in 60 seconds</p>
                 </div>
             </div>
 

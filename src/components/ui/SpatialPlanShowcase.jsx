@@ -67,7 +67,7 @@ const PLAN_CONFIG = {
           gradient: 'from-stone-900 to-stone-900',
           glow: 'bg-stone-700',
           bar: 'bg-stone-700',
-          accent: 'text-stone-300',
+          accent: 'text-[var(--color-navy)]',
         },
         stats: { status: 'Active Dossier', headline: '5,000+ Students Placed' },
         features: [
@@ -88,7 +88,7 @@ const PLAN_CONFIG = {
           gradient: 'from-stone-700 to-stone-900',
           glow: 'bg-white',
           bar: 'bg-white',
-          accent: 'text-stone-300',
+          accent: 'text-[var(--color-navy)]',
         },
         stats: { status: 'Secured', headline: '₹3+ Cr Scholarships' },
         features: [
@@ -142,7 +142,7 @@ const PLAN_CONFIG = {
           gradient: 'from-stone-700 to-stone-900',
           glow: 'bg-white',
           bar: 'bg-white',
-          accent: 'text-stone-300',
+          accent: 'text-[var(--color-navy)]',
         },
         stats: { status: 'Application Track', headline: '100% Tuition-Free Placements' },
         features: [
@@ -163,7 +163,7 @@ const PLAN_CONFIG = {
           gradient: 'from-stone-900 to-stone-900',
           glow: 'bg-stone-700',
           bar: 'bg-stone-700',
-          accent: 'text-stone-300',
+          accent: 'text-[var(--color-navy)]',
         },
         stats: { status: 'Relocation Kit', headline: 'Housing · Visa · Part-time' },
         features: [
@@ -231,14 +231,14 @@ const FacetVisual = ({ data, isLeft }) => (
     <motion.div
       animate={{ rotate: 360 }}
       transition={{ duration: 30, repeat: Infinity, ease: 'linear' }}
-      className="absolute inset-[-10%] rounded-full border border-dashed border-white/10"
+      className="absolute inset-[-10%] rounded-full border border-dashed border-[var(--color-rule)]"
     />
     <motion.div
       animate={{ scale: [1, 1.05, 1] }}
       transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
       className={`absolute inset-0 rounded-full bg-gradient-to-br ${data.colors.gradient} blur-3xl opacity-40`}
     />
-    <div className="relative h-72 w-72 md:h-[400px] md:w-[400px] rounded-full border border-white/10 shadow-2xl flex items-center justify-center overflow-hidden bg-slate-950/60 backdrop-blur-sm">
+    <div className="relative h-72 w-72 md:h-[400px] md:w-[400px] rounded-full border border-[var(--color-rule)] shadow-2xl flex items-center justify-center overflow-hidden bg-slate-950/60 backdrop-blur-sm">
       <AnimatePresence mode="wait">
         <motion.img
           key={data.id}
@@ -265,7 +265,7 @@ const FacetVisual = ({ data, isLeft }) => (
       layout="position"
       className="absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap"
     >
-      <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-slate-300 bg-slate-950/80 px-4 py-2 rounded-full border border-white/10 backdrop-blur">
+      <div className="flex items-center gap-2 text-xs uppercase tracking-widest text-[var(--color-navy)] bg-slate-950/80 px-4 py-2 rounded-full border border-[var(--color-rule)] backdrop-blur">
         <span className={`h-1.5 w-1.5 rounded-full ${data.colors.glow} animate-pulse`} />
         {data.stats.status}
       </div>
@@ -300,27 +300,27 @@ const FacetDetails = ({ data, isLeft, cta, ctaLabel }) => {
       </motion.h3>
       <motion.p
         variants={ANIMATIONS.item}
-        className={`text-slate-400 mb-8 max-w-sm leading-relaxed ${isLeft ? 'mr-auto' : 'ml-auto'}`}
+        className={`text-[var(--color-dim)] mb-8 max-w-sm leading-relaxed ${isLeft ? 'mr-auto' : 'ml-auto'}`}
       >
         {data.description}
       </motion.p>
 
       <motion.div
         variants={ANIMATIONS.item}
-        className="w-full space-y-6 bg-slate-900/50 p-6 rounded-2xl border border-white/5 backdrop-blur-sm"
+        className="w-full space-y-6 bg-[var(--color-tint)]/50 p-6 rounded-2xl border border-[var(--color-rule)] backdrop-blur-sm"
       >
         {data.features.map((feature, idx) => {
           const Icon = feature.icon;
           return (
             <div key={feature.label}>
               <div className={`flex items-center justify-between mb-3 text-sm ${flexDirClass}`}>
-                <div className="flex items-center gap-2 text-slate-200">
+                <div className="flex items-center gap-2 text-[var(--color-navy)]">
                   <Icon size={16} />
                   <span>{feature.label}</span>
                 </div>
-                <span className="font-mono text-xs text-slate-400">{feature.value}%</span>
+                <span className="font-mono text-xs text-[var(--color-dim)]">{feature.value}%</span>
               </div>
-              <div className="relative h-2 w-full bg-slate-800 rounded-full overflow-hidden">
+              <div className="relative h-2 w-full bg-[var(--color-tint)] rounded-full overflow-hidden">
                 <motion.div
                   initial={{ width: 0 }}
                   animate={{ width: `${feature.value}%` }}
@@ -334,7 +334,7 @@ const FacetDetails = ({ data, isLeft, cta, ctaLabel }) => {
         <div className={`pt-2 flex ${isLeft ? 'justify-start' : 'justify-end'}`}>
           <a
             href={cta}
-            className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-slate-200 hover:text-white transition-colors group"
+            className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-[var(--color-navy)] hover:text-[var(--color-navy)] transition-colors group"
           >
             <Sliders size={14} /> {ctaLabel}
             <ChevronRight size={14} className="group-hover:translate-x-1 transition-transform" />
@@ -344,7 +344,7 @@ const FacetDetails = ({ data, isLeft, cta, ctaLabel }) => {
 
       <motion.div
         variants={ANIMATIONS.item}
-        className={`mt-6 flex items-center gap-3 text-slate-400 ${flexDirClass}`}
+        className={`mt-6 flex items-center gap-3 text-[var(--color-dim)] ${flexDirClass}`}
       >
         <CheckCircle2 size={16} className={data.colors.accent} />
         <span className="text-sm font-medium">{data.stats.headline}</span>
@@ -357,7 +357,7 @@ const Switcher = ({ activeId, onToggle, options, layoutId }) => (
   <div className="relative mt-16 flex justify-center">
     <motion.div
       layout
-      className="flex items-center gap-1 p-1.5 rounded-full bg-slate-900/80 backdrop-blur-2xl border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.6)] ring-1 ring-white/5"
+      className="flex items-center gap-1 p-1.5 rounded-full bg-[var(--color-tint)]/80 backdrop-blur-2xl border border-[var(--color-rule)] shadow-[0_20px_60px_rgba(0,0,0,0.6)] ring-1 ring-white/5"
     >
       {options.map((opt) => (
         <motion.button
@@ -376,7 +376,7 @@ const Switcher = ({ activeId, onToggle, options, layoutId }) => (
           )}
           <span
             className={`relative z-10 transition-colors duration-300 ${
-              activeId === opt.id ? 'text-white' : 'text-slate-500 hover:text-slate-300'
+              activeId === opt.id ? 'text-[var(--color-navy)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
             }`}
           >
             {opt.label}
@@ -392,21 +392,21 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
 
   const flagPillClass =
     plan === 'ztf'
-      ? 'bg-stone-700/10 text-stone-100 border-white/20 hover:bg-stone-700/15'
-      : 'bg-stone-700/10 text-stone-100 border-white/20 hover:bg-stone-700/15';
+      ? 'bg-stone-700/10 text-[var(--color-navy)] border-[var(--color-rule)] hover:bg-stone-700/15'
+      : 'bg-stone-700/10 text-[var(--color-navy)] border-[var(--color-rule)] hover:bg-stone-700/15';
 
   const discountPillClass =
     plan === 'ztf'
-      ? 'bg-stone-700/15 text-stone-300 border-white/30'
+      ? 'bg-stone-700/15 text-[var(--color-navy)] border-[var(--color-rule)]'
       : 'bg-rose-500/15 text-rose-200 border-rose-400/30';
 
   const badgePillClass =
     plan === 'ztf'
       ? 'bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white'
-      : 'bg-stone-700/15 text-stone-200 border border-white/30';
+      : 'bg-stone-700/15 text-[var(--color-navy)] border border-[var(--color-rule)]';
 
   const featureDotClass =
-    plan === 'ztf' ? 'bg-white/20 text-stone-300' : 'bg-stone-700/20 text-stone-300';
+    plan === 'ztf' ? 'bg-[var(--color-tint)] text-[var(--color-navy)]' : 'bg-stone-700/20 text-[var(--color-navy)]';
 
   const shortCode = (name) =>
     name === 'United Kingdom' ? 'UK' : name === 'United States' ? 'USA' : name;
@@ -417,7 +417,7 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.7 }}
-      className="relative mt-24 rounded-[2rem] bg-slate-900/60 border border-white/10 backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] overflow-hidden"
+      className="relative mt-24 rounded-[2rem] bg-[var(--color-tint)]/60 border border-[var(--color-rule)] backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] overflow-hidden"
     >
       <div
         aria-hidden
@@ -432,19 +432,19 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
       <div className="grid lg:grid-cols-5 gap-8 p-8 md:p-12">
         {/* Left column: icon, label, price, refund */}
         <div className="lg:col-span-2 flex flex-col items-center lg:items-start text-center lg:text-left">
-          <div className={`w-16 h-16 bg-slate-800/80 border border-white/10 rounded-2xl flex items-center justify-center mb-5 shadow-inner text-${accent}-300`}>
+          <div className={`w-16 h-16 bg-[var(--color-tint)]/80 border border-[var(--color-rule)] rounded-2xl flex items-center justify-center mb-5 shadow-inner text-${accent}-300`}>
             {Icon ? <Icon size={28} strokeWidth={1.75} /> : null}
           </div>
           <p className={`text-xs font-semibold uppercase tracking-[0.25em] text-${accent}-300 mb-2`}>
             {pricing.label}
           </p>
-          <p className="text-sm text-slate-400 mb-8 max-w-sm leading-relaxed">
+          <p className="text-sm text-[var(--color-dim)] mb-8 max-w-sm leading-relaxed">
             {pricing.description}
           </p>
 
           <div className="mb-6">
             <div className="flex items-baseline gap-3 mb-1">
-              <span className="text-slate-500 line-through text-lg font-medium">
+              <span className="text-[var(--color-dim)] line-through text-lg font-medium">
                 {pricing.original}
               </span>
               <span
@@ -453,23 +453,23 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
                 {pricing.discount}
               </span>
             </div>
-            <div className="text-5xl font-extrabold text-white tracking-tight mb-1">
+            <div className="text-5xl font-extrabold text-[var(--color-navy)] tracking-tight mb-1">
               {pricing.final}
             </div>
-            <p className="text-slate-400 font-medium text-xs uppercase tracking-wider">
+            <p className="text-[var(--color-dim)] font-medium text-xs uppercase tracking-wider">
               {pricing.feeLabel}
             </p>
           </div>
 
-          <div className="w-full bg-slate-800/60 backdrop-blur-sm rounded-xl p-4 border border-white/5">
-            <p className="font-bold text-slate-100 mb-1 text-sm">{pricing.refundTitle}</p>
-            <p className="text-xs text-slate-400 leading-relaxed">{pricing.refundBody}</p>
+          <div className="w-full bg-[var(--color-tint)]/60 backdrop-blur-sm rounded-xl p-4 border border-[var(--color-rule)]">
+            <p className="font-bold text-[var(--color-navy)] mb-1 text-sm">{pricing.refundTitle}</p>
+            <p className="text-xs text-[var(--color-dim)] leading-relaxed">{pricing.refundBody}</p>
           </div>
         </div>
 
         {/* Middle column: country flags */}
         <div className="lg:col-span-3 flex flex-col">
-          <h4 className="font-bold text-white mb-4 uppercase tracking-wider text-xs border-b border-white/10 pb-3">
+          <h4 className="font-bold text-[var(--color-navy)] mb-4 uppercase tracking-wider text-xs border-b border-[var(--color-rule)] pb-3">
             {plan === 'ztf'
               ? `Coverage · ${pricing.countries.length} European destinations`
               : `Coverage · ${pricing.countries.length}+ destinations worldwide`}
@@ -487,7 +487,7 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
             ))}
           </div>
 
-          <h4 className="font-bold text-white mb-4 uppercase tracking-wider text-xs border-b border-white/10 pb-3">
+          <h4 className="font-bold text-[var(--color-navy)] mb-4 uppercase tracking-wider text-xs border-b border-[var(--color-rule)] pb-3">
             What&apos;s included
           </h4>
           <ul className="space-y-3 mb-8 flex-grow">
@@ -498,7 +498,7 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
                 >
                   <CheckCircle2 size={14} strokeWidth={2.5} />
                 </span>
-                <span className="text-slate-200 font-medium text-sm">{f}</span>
+                <span className="text-[var(--color-navy)] font-medium text-sm">{f}</span>
               </li>
             ))}
           </ul>
@@ -510,7 +510,7 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
               highlight
               label={pricing.ctaText}
             />
-            <p className="text-xs text-slate-500 font-medium text-center mt-4 flex items-center justify-center gap-2">
+            <p className="text-xs text-[var(--color-dim)] font-medium text-center mt-4 flex items-center justify-center gap-2">
               <Shield size={12} />
               {pricing.secureNote}
             </p>
@@ -536,13 +536,13 @@ export default function SpatialPlanShowcase({ plan = 'zcf' }) {
 
   const eyebrowClass =
     plan === 'ztf'
-      ? 'bg-stone-700/10 text-stone-300 border-stone-700/20'
-      : 'bg-stone-700/10 text-stone-300 border-stone-700/20';
+      ? 'bg-stone-700/10 text-[var(--color-navy)] border-stone-700/20'
+      : 'bg-stone-700/10 text-[var(--color-navy)] border-stone-700/20';
 
   const options = facetKeys.map((k) => ({ id: k, label: config.facets[k].label }));
 
   return (
-    <section className="relative w-full bg-slate-950 text-slate-100 overflow-hidden border-y border-slate-900">
+    <section className="relative w-full bg-slate-950 text-[var(--color-navy)] overflow-hidden border-y border-slate-900">
       <SectionBackdrop isLeft={isLeft} leftColor={leftColor} rightColor={rightColor} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
@@ -552,13 +552,13 @@ export default function SpatialPlanShowcase({ plan = 'zcf' }) {
           >
             {config.eyebrow}
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[var(--color-navy)] mb-4">
             <TextEffectInView as="span" per="word" preset="blur">{config.headline}</TextEffectInView>{' '}
             <span className={`text-transparent bg-clip-text bg-gradient-to-r ${accentGradient}`}>
               {config.accent}
             </span>
           </h2>
-          <p className="text-slate-400 leading-relaxed">{config.subline}</p>
+          <p className="text-[var(--color-dim)] leading-relaxed">{config.subline}</p>
         </div>
 
         <motion.div
