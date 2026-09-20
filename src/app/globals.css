@@ -501,11 +501,18 @@ body {
   top: 100%;
   left: 0;
   right: 0;
+  z-index: 1;
   background: #FFFFFF;
   border-top: 1px solid var(--color-rule);
   border-bottom: 1px solid var(--color-rule);
   box-shadow: var(--e-3);
   animation: mega-in var(--t-slow) var(--ease);
+  /* A short laptop window cannot show a tall panel: without this the last
+     links sit below the fold with no way to reach them, because scrolling the
+     page takes the pointer out of the bar and closes the panel. */
+  max-height: calc(100vh - 7rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 @keyframes mega-in {
   from { opacity: 0; transform: translateY(-4px); }
@@ -554,7 +561,14 @@ body {
   line-height: 1.45;
   margin-top: .1rem;
 }
+/* The desktop bar now appears from 1024px, not 1280px. Stacking the columns
+   into one between 1024 and 1100 made the widest panel 744px tall and pushed
+   its last link off the bottom of the screen, so the three columns are kept
+   and the gutters tightened instead. */
 @media (max-width: 1100px) {
+  .mega-inner { gap: 1.25rem; padding: 1.5rem 1.25rem 1.75rem; }
+}
+@media (max-width: 1023.98px) {
   .mega-inner { grid-template-columns: 1fr; gap: 1.5rem; padding-block: 1.5rem; }
 }
 

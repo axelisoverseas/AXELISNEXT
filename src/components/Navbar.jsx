@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
@@ -116,10 +116,30 @@ const MENU = [
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [openMenu, setOpenMenu] = useState(null);
+  // A menu opened by hover closes again as soon as the pointer leaves the bar.
+  // A menu the visitor clicked is pinned, so the click that follows a hover
+  // keeps the panel up instead of dismissing the thing they just aimed at.
+  const [pinnedMenu, setPinnedMenu] = useState(null);
+  const triggerRefs = useRef({});
+
+  const closeMenu = (restoreFocus = false) => {
+    if (restoreFocus && openMenu && triggerRefs.current[openMenu]) {
+      triggerRefs.current[openMenu].focus();
+    }
+    setOpenMenu(null);
+    setPinnedMenu(null);
+  };
 
   useEffect(() => {
     if (!openMenu) return undefined;
-    const onKey = (e) => { if (e.key === 'Escape') setOpenMenu(null); };
+    const onKey = (e) => {
+      if (e.key !== 'Escape') return;
+      // Hand focus back to the trigger, otherwise Escape drops the keyboard
+      // user on <body> and they have to tab from the top of the page again.
+      if (triggerRefs.current[openMenu]) triggerRefs.current[openMenu].focus();
+      setOpenMenu(null);
+      setPinnedMenu(null);
+    };
     window.addEventListener('keydown', onKey);
     return () => window.removeEventListener('keydown', onKey);
   }, [openMenu]);
@@ -139,15 +159,22 @@ const Navbar = () => {
     return () => document.removeEventListener('keydown', handleEscape);
   }, [isOpen]);
 
-  // Handle body scroll lock when mobile menu is open
+  // Handle body scroll lock when the drawer is open. globals.css sets
+  // `overflow-x: clip` on <html>, which switches off the propagation of the
+  // body's overflow to the viewport, so locking the body alone leaves the page
+  // behind the drawer scrolling. The root element has to be locked as well.
   useEffect(() => {
+    const root = document.documentElement;
     if (isOpen) {
       document.body.style.overflow = 'hidden';
+      root.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
+      root.style.overflow = '';
     }
     return () => {
       document.body.style.overflow = '';
+      root.style.overflow = '';
     };
   }, [isOpen]);
 
@@ -187,25 +214,57 @@ const Navbar = () => {
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0">
               <img
-                src="/1navy svg logoaxelis.svg"
+                src="/brand/axelis-mark-navy.svg"
                 alt="Axelis Overseas"
-                width={64}
-                height={64}
-                className="h-16 w-auto shrink-0 object-contain"
+                width={56}
+                height={56}
+                className="h-14 w-14 shrink-0 object-contain"
               />
             </Link>
 
-            {/* Center navigation: three grouped panels plus two direct links */}
-            <nav className="hidden lg:flex items-center gap-1 min-w-0" onMouseLeave={() => setOpenMenu(null)}>
+            {/* Center navigation: three grouped panels plus two direct links.
+                The nav is stretched to the full height of the bar so its bottom
+                edge meets the top of the panel: a pointer travelling from a
+                trigger down into the panel never leaves the element that closes
+                the menu. Each panel is a DOM child of its trigger's wrapper for
+                the same reason, and so that its links follow the trigger in the
+                tab order. */}
+            <nav
+              className="hidden lg:flex items-center self-stretch gap-1 min-w-0"
+              onMouseLeave={() => closeMenu()}
+              onBlur={(e) => {
+                if (!e.currentTarget.contains(e.relatedTarget)) closeMenu();
+              }}
+            >
               {MENU.map((group) => {
                 const open = openMenu === group.label;
                 return (
-                  <div key={group.label} onMouseEnter={() => setOpenMenu(group.label)}>
+                  <div
+                    key={group.label}
+                    className="flex items-center self-stretch"
+                    onMouseEnter={() => setOpenMenu(group.label)}
+                  >
                     <button
                       type="button"
+                      ref={(el) => { triggerRefs.current[group.label] = el; }}
                       aria-expanded={open}
                       aria-haspopup="true"
-                      onClick={() => setOpenMenu(open ? null : group.label)}
+                      onFocus={() => {
+                        // Tabbing out of one panel and on to the next trigger
+                        // should not leave the first panel hanging open.
+                        if (openMenu && openMenu !== group.label) {
+                          setOpenMenu(null);
+                          setPinnedMenu(null);
+                        }
+                      }}
+                      onClick={() => {
+                        if (open && pinnedMenu === group.label) {
+                          closeMenu();
+                        } else {
+                          setOpenMenu(group.label);
+                          setPinnedMenu(group.label);
+                        }
+                      }}
                       className={`nav-trigger ${open ? 'is-open' : ''}`}
                     >
                       {group.label}
@@ -213,6 +272,30 @@ const Navbar = () => {
                         <path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
                       </svg>
                     </button>
+
+                    {/* Three-column panel. Closing is handled by the nav's
+                        onMouseLeave, by focus leaving the nav, and by Escape. */}
+                    {open ? (
+                      <div className="mega">
+                        <div className="mega-inner">
+                          {group.columns.map((col) => (
+                            <div key={col.heading} className="mega-col">
+                              <p className="mega-heading">{col.heading}</p>
+                              <ul className="mega-list">
+                                {col.items.map((item) => (
+                                  <li key={item.title}>
+                                    <Link href={item.href} className="mega-link" onClick={() => closeMenu()}>
+                                      <span className="mega-title">{item.title}</span>
+                                      <span className="mega-blurb">{item.blurb}</span>
+                                    </Link>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : null}
                   </div>
                 );
               })}
@@ -258,36 +341,6 @@ const Navbar = () => {
           </div>
         </div>
 
-          {/* Three-column panel. Rendered only for the open group; closing is
-              handled by the nav's onMouseLeave and by Escape. */}
-          {MENU.map((group) => (
-            openMenu === group.label ? (
-              <div
-                key={group.label}
-                className="mega"
-                onMouseEnter={() => setOpenMenu(group.label)}
-                onMouseLeave={() => setOpenMenu(null)}
-              >
-                <div className="mega-inner">
-                  {group.columns.map((col) => (
-                    <div key={col.heading} className="mega-col">
-                      <p className="mega-heading">{col.heading}</p>
-                      <ul className="mega-list">
-                        {col.items.map((item) => (
-                          <li key={item.title}>
-                            <Link href={item.href} className="mega-link" onClick={() => setOpenMenu(null)}>
-                              <span className="mega-title">{item.title}</span>
-                              <span className="mega-blurb">{item.blurb}</span>
-                            </Link>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ) : null
-          ))}
       </div>
 
       {/* Slide-out Side Menu - Minimalist */}

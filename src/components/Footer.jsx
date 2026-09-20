@@ -26,11 +26,11 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <Link href="/" className="inline-block mb-6">
               <img
-                src="/1yellow svg logoaxelis.svg"
+                src="/brand/axelis-lockup-white.svg"
                 alt="Axelis Overseas"
-                width={48}
-                height={48}
-                className="h-12 w-auto opacity-95 hover:opacity-100 transition-opacity [filter:brightness(0)_invert(1)] drop-shadow-e-2"
+                width={160}
+                height={56}
+                className="h-14 w-auto opacity-95 hover:opacity-100 transition-opacity"
               />
             </Link>
             <p className="text-sm leading-relaxed mb-8 text-[var(--color-dim-dark)]">
