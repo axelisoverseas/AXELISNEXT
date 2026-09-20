@@ -39,12 +39,36 @@ const DATA_FILE = path.join(ROOT, "src/data/finder-universities.json");
 const CACHE_DIR = path.join(ROOT, "scripts/.cache/wikidata");
 const QID_CACHE = path.join(CACHE_DIR, "qids");
 const HYDRATE_CACHE = path.join(CACHE_DIR, "hydrated");
+const SUB_CACHE = path.join(CACHE_DIR, "subordinate");
 
-const ENDPOINT = "https://query.wikidata.org/sparql";
+/**
+ * Two endpoints over the same Wikidata data.
+ *
+ * QLever is the University of Freiburg's public SPARQL index of the Wikidata
+ * dump. It is used FIRST purely because WDQS cannot do this job: the official
+ * endpoint enforces a 60s server-side cap and a processing-time rate limit, so
+ * enumerating Q38723 for Germany either takes a minute or 504s, and running
+ * four shards in parallel just converts into HTTP 429 with a 120s Retry-After.
+ * QLever answers the same query in 2.5 seconds.
+ *
+ * It is a third-party mirror, so the numbers are cross-checked rather than
+ * trusted: Germany Q38723 returns 1393 on both endpoints, Australia 734 on
+ * both. Any country where the two disagree is reported, not silently accepted.
+ * WDQS remains the fallback whenever QLever errors.
+ */
+const QLEVER_ENDPOINT = "https://qlever.cs.uni-freiburg.de/api/wikidata";
+const WDQS_ENDPOINT = "https://query.wikidata.org/sparql";
 const USER_AGENT = "AxelisOverseas/1.0 (https://overseeducation.com; hello@overseeducation.com) node-fetch";
 
+// QLever has no SERVICE wikibase:label and no implicit prefixes.
+const PREFIXES = `PREFIX wd: <http://www.wikidata.org/entity/>
+PREFIX wdt: <http://www.wikidata.org/prop/direct/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <http://schema.org/>
+`;
+
 // Politeness / resilience knobs.
-const DELAY_MS = 1200;
+const DELAY_MS = 300;
 const MAX_ATTEMPTS = 4;
 const BASE_BACKOFF_MS = 5000;
 const REQUEST_TIMEOUT_MS = 120000;
@@ -69,27 +93,67 @@ const REQUIRE_WEBSITE = true;
  *
  * Q3918 (university) alone was the old query and it under-counts badly: whole
  * national sectors sit under other classes. Germany's Fachhochschulen, the
- * Dutch hogescholen, the French grandes ecoles and the US community-college
- * sector are all outside Q3918.
+ * Dutch hogescholen, the French grandes ecoles, the Polish PWSZ and the
+ * Australian TAFEs are all outside Q3918.
  *
- * Every type here was checked by sampling its EXCLUSIVE set (items matching it
- * but NOT Q3918) before being added - see the census output for the marginal
- * contribution each one makes.
+ * MEASURED, not assumed. Asking Wikidata directly:
  *
- * Q2385804 (educational institution) is deliberately ABSENT. It is the parent
- * class of "school", so walking it pulls in primary schools, Gymnasien,
- * Berufskollegs, driving schools and kindergartens. It is also so large that
- * WDQS times out on a bare COUNT for Germany. It would inflate the number at
- * the cost of making the finder useless, which is the opposite of the job.
+ *   ASK { wd:Q189004  wdt:P279* wd:Q38723 }  -> true
+ *   ASK { wd:Q1371037 wdt:P279* wd:Q38723 }  -> true
+ *   ASK { wd:Q1663017 wdt:P279* wd:Q38723 }  -> true
+ *   ASK { wd:Q3354859 wdt:P279* wd:Q38723 }  -> true
+ *   ASK { wd:Q3918    wdt:P279* wd:Q38723 }  -> true
+ *
+ * Every candidate type is already INSIDE Q38723's subclass closure (921
+ * classes). Listing them separately adds literally nothing - confirmed by the
+ * census, where Q1371037 and Q3354859 have a marginal contribution of 0 in the
+ * USA and Q1663017 contributes 105 items in Germany of which 4 have a website.
+ * They are kept in the list only so the census keeps printing that evidence;
+ * the union is what is actually used.
+ *
+ * Q2385804 (educational institution) is deliberately ABSENT. It sits ABOVE
+ * Q38723 and pulls in the school sector wholesale; WDQS times out on a bare
+ * COUNT of it for Germany. It would inflate the number at the cost of making
+ * the finder useless, which is the opposite of the job.
  */
 const TYPES = [
   { qid: "Q3918", label: "university" },
   { qid: "Q38723", label: "higher education institution" },
   { qid: "Q189004", label: "college" },
-  { qid: "Q1371037", label: "institute of technology" },
-  { qid: "Q3354859", label: "collegiate university" },
-  { qid: "Q1663017", label: "technical university" },
+  // Q1371037 / Q3354859 / Q1663017 were walked in an earlier census run and
+  // removed once the ASK results above proved them redundant. Keeping them
+  // doubled the query count for a measured marginal contribution of zero.
 ];
+
+/**
+ * Drop anything that is a sub-unit of another institution.
+ *
+ * Broadening past Q3918 admits an enormous amount of internal structure:
+ * "UNSW Business School", "Monash University Faculty of Law", "University of
+ * Sydney Faculty of Dentistry", "Adelaide Medical School" are all separate
+ * Wikidata items typed as higher education institutions. A student applies to
+ * the parent, not to these.
+ *
+ * P361 (part of) / P749 (parent organization) pointing at another HEI is a far
+ * cleaner signal than any name pattern. On Australia it removes 110 of 259
+ * broadened candidates while touching only 2 of the 66 Q3918 items.
+ *
+ * BUT IT IS ONLY APPLIED TO THE BROADENED SET, never to an item that is itself
+ * typed Q3918. Checked against France before shipping, and a blanket rule
+ * would have been a catastrophe there: 153 real French universities carry
+ * P749 to a ComUE or federal grouping, so it would have deleted Paris
+ * Dauphine, Toulouse School of Economics, ESCP Business School, Bordeaux
+ * Montaigne, Claude Bernard Lyon 1, Lumiere Lyon 2, Jean Moulin Lyon 3,
+ * Orleans, Le Havre and Polytechnic University of Hauts-de-France - every one
+ * of them a university a student applies to directly. China is the same story
+ * (China University of Geosciences Beijing/Wuhan, NYU Shanghai).
+ *
+ * Restricting the rule to non-Q3918 items keeps all of those and still removes
+ * the faculties and internal schools, because a faculty is essentially never
+ * typed Q3918. Netherlands, the third country checked, flagged exactly one
+ * Q3918 item (Webster University Leiden) - also now kept.
+ */
+const DROP_SUBORDINATE = true;
 
 /**
  * Wikidata country QIDs, keyed by the country names the site's own data uses.
@@ -204,18 +268,19 @@ function serialize(data) {
  * SPARQL
  * ------------------------------------------------------------------ */
 
-async function sparql(query) {
+async function post(endpoint, query) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+  const qlever = endpoint === QLEVER_ENDPOINT;
   try {
-    const res = await fetch(ENDPOINT, {
+    const res = await fetch(endpoint, {
       method: "POST", // long queries overflow GET URL limits
       headers: {
         Accept: "application/sparql-results+json",
-        "Content-Type": "application/x-www-form-urlencoded",
+        "Content-Type": qlever ? "application/sparql-query" : "application/x-www-form-urlencoded",
         "User-Agent": USER_AGENT,
       },
-      body: new URLSearchParams({ query }).toString(),
+      body: qlever ? PREFIXES + query : new URLSearchParams({ query }).toString(),
       signal: controller.signal,
     });
     if (!res.ok) {
@@ -231,10 +296,21 @@ async function sparql(query) {
   }
 }
 
-async function sparqlWithRetry(query, what) {
+// QLever first, WDQS as the fallback. `wdqsQuery` is the same question written
+// the way the official endpoint wants it (label service instead of rdfs:label).
+async function sparql(query, wdqsQuery) {
+  try {
+    return await post(QLEVER_ENDPOINT, query);
+  } catch (err) {
+    if (!wdqsQuery) throw err;
+    return await post(WDQS_ENDPOINT, wdqsQuery);
+  }
+}
+
+async function sparqlWithRetry(query, what, wdqsQuery) {
   for (let attempt = 1; attempt <= MAX_ATTEMPTS; attempt += 1) {
     try {
-      return await sparql(query);
+      return await sparql(query, wdqsQuery);
     } catch (err) {
       const last = attempt === MAX_ATTEMPTS;
       const wait = err.retryAfter || BASE_BACKOFF_MS * 2 ** (attempt - 1);
@@ -275,7 +351,8 @@ async function enumerateCountry(country, countryQid) {
   for (const type of TYPES) {
     const json = await sparqlWithRetry(
       enumerateQuery(type.qid, countryQid),
-      `${country}/${type.qid}`
+      `${country}/${type.qid}`,
+      enumerateQuery(type.qid, countryQid)
     );
     if (!json) {
       perType[type.qid] = null; // failed, distinct from zero
@@ -301,9 +378,46 @@ async function enumerateCountry(country, countryQid) {
   return { found, perType };
 }
 
+/**
+ * Every item in the country that declares itself part of / a child of another
+ * higher education institution. One query per country; the result is a QID
+ * blocklist applied client-side, so it costs a single extra round trip.
+ */
+function subordinateQuery(countryQid) {
+  return `
+SELECT DISTINCT ?item WHERE {
+  ?item wdt:P17 wd:${countryQid} ; wdt:P31/wdt:P279* wd:Q38723 .
+  { ?item wdt:P361 ?parent } UNION { ?item wdt:P749 ?parent }
+  ?parent wdt:P31/wdt:P279* wd:Q38723 .
+}`.trim();
+}
+
+async function fetchSubordinate(country, countryQid) {
+  const json = await sparqlWithRetry(
+    subordinateQuery(countryQid),
+    `${country} subordinate`,
+    subordinateQuery(countryQid)
+  );
+  if (!json) return [];
+  return json.results.bindings.map((b) => b.item.value.split("/").pop());
+}
+
 /* -- Phase 2: hydrate --------------------------------------------- */
 
 function hydrateQuery(qids) {
+  const values = qids.map((q) => `wd:${q}`).join(" ");
+  return `
+SELECT ?item ?itemLabel ?cityLabel ?website (COUNT(?sl) AS ?sitelinks) WHERE {
+  VALUES ?item { ${values} }
+  OPTIONAL { ?item rdfs:label ?itemLabel . FILTER(LANG(?itemLabel) = "en") }
+  OPTIONAL { ?item wdt:P856 ?website }
+  OPTIONAL { ?item wdt:P131 ?city . ?city rdfs:label ?cityLabel . FILTER(LANG(?cityLabel) = "en") }
+  OPTIONAL { ?sl schema:about ?item }
+}
+GROUP BY ?item ?itemLabel ?cityLabel ?website`.trim();
+}
+
+function hydrateQueryWdqs(qids) {
   const values = qids.map((q) => `wd:${q}`).join(" ");
   return `
 SELECT ?item ?itemLabel ?cityLabel ?website ?sitelinks WHERE {
@@ -322,7 +436,8 @@ async function hydrate(country, found) {
     const batch = qids.slice(i, i + HYDRATE_BATCH);
     const json = await sparqlWithRetry(
       hydrateQuery(batch),
-      `${country} hydrate ${i}-${i + batch.length}`
+      `${country} hydrate ${i}-${i + batch.length}`,
+      hydrateQueryWdqs(batch)
     );
     if (json) {
       for (const b of json.results.bindings) {
@@ -420,6 +535,34 @@ const NON_UNIVERSITY = [
   /\bstate university system\b/i,
   // Driving / flight / language schools.
   /\b(driving school|flight school|language school|dance school|riding school)\b/i,
+
+  // --- added after auditing the first broadened merge ---
+  // Learned societies and national academies. They are typed as higher
+  // education institutions in Wikidata and are nothing of the sort: the
+  // Leopoldina, the Academy of Motion Picture Arts and Sciences and the
+  // Academie des sciences de Savoie admit fellows, not students. Written
+  // narrowly so real art/music academies - Academy of Fine Arts Vienna,
+  // Kronberg Academy - are untouched.
+  /\bacademy of sciences\b/i,
+  /\bacademy of sciences and (arts|humanities|letters)\b/i,
+  /\bakademie der wissenschaften\b/i,
+  /\bacad[e\u00e9]mie des sciences\b/i,
+  /\bacademy of (technolog|motion picture)/i,
+  /\blearned society\b/i,
+  // Umbrella systems rather than a campus you apply to ("University of
+  // Arkansas System"). The earlier rule only caught "University System".
+  /\b(universit(y|ies)|college)\b[^,]{0,40}\bsystem\b/i,
+  // A named university's own faculty or school. Keeps genuinely independent
+  // institutions whose name merely reads that way - Stockholm School of
+  // Economics, London Business School - because those carry no university name.
+  /\b(university|universit[e\u00e9]|universit[a\u00e4]t|universidad|universit[a\u00e0])\b[^,]{0,40}\b(school|faculty|college|department|institute|centre|center) (of|for)\b/i,
+  // Faculty in the other destination languages.
+  /\b(facult[e\u00e9]|facultad|facolt[a\u00e0]|fakult[a\u00e4]t|fakultet|wydzia\u0142)\b/i,
+  /\bgraduate school (of|for)\b/i,
+  // Research bodies that slipped past the generic research-centre rule.
+  /\binstitute (of|for)\b[^,]{0,40}\bresearch\b/i,
+  // Uniformed services beyond the first pass.
+  /\b(marine|unteroffizier|officer school|police|politi|polizei)\b/i,
 ];
 
 function looksLikeUniversity(name) {
@@ -444,6 +587,7 @@ async function writeJson(file, value) {
 
 const qidFile = (country) => path.join(QID_CACHE, `${slugFile(country)}.json`);
 const hydFile = (country) => path.join(HYDRATE_CACHE, `${slugFile(country)}.json`);
+const subFile = (country) => path.join(SUB_CACHE, `${slugFile(country)}.json`);
 
 /* ------------------------------------------------------------------ *
  * Main
@@ -456,6 +600,13 @@ async function main() {
   const census = args.includes("--census");
   const auditArg = args.find((a) => a.startsWith("--audit="));
   const auditCountry = auditArg ? auditArg.slice("--audit=".length) : null;
+  // --only lets several processes warm disjoint slices of the cache in
+  // parallel. The caches are per-country files, so the slices never collide,
+  // and a later --cached run merges the lot. WDQS tolerates a handful of
+  // concurrent queries from one client; four is well inside that.
+  const onlyArg = args.find((a) => a.startsWith("--only="));
+  const only = onlyArg ? new Set(onlyArg.slice("--only=".length).split(",").map((c) => c.trim())) : null;
+  const warmOnly = args.includes("--warm");
 
   const data = JSON.parse(await readFile(DATA_FILE, "utf8"));
   const before = { epa: data.epa.length, gac: data.gac.length };
@@ -498,6 +649,7 @@ async function main() {
   const usedIds = new Set(originalIds);
 
   const stats = {};
+  const addedLog = [];
   // Marginal contribution per type, across every country: how many entries
   // were ADDED whose type set does not include Q3918.
   const typeCredit = Object.fromEntries(TYPES.map((t) => [t.qid, 0]));
@@ -508,11 +660,23 @@ async function main() {
   let skippedDuplicates = 0;
   let skippedNonUniversity = 0;
   let skippedNoWebsite = 0;
+  let skippedSubordinate = 0;
   const failedCountries = [];
 
   for (const country of countries) {
+    if (only && !only.has(country)) continue;
     const charter = charterFor(country);
     let rows = await readJson(hydFile(country));
+
+    // Sub-unit blocklist. Cached alongside the hydrated rows so a --cached
+    // re-run filters identically without touching the network.
+    let subordinate = await readJson(subFile(country));
+    if (!subordinate && !cachedOnly) {
+      subordinate = await fetchSubordinate(country, COUNTRY_QIDS[country]);
+      await writeJson(subFile(country), subordinate);
+      await sleep(DELAY_MS);
+    }
+    const subordinateSet = new Set(subordinate ?? []);
 
     if (!rows && !cachedOnly) {
       console.log(`→ ${country} (${COUNTRY_QIDS[country]})`);
@@ -547,6 +711,7 @@ async function main() {
     let dupes = 0;
     let noSite = 0;
     let unlabelled = 0;
+    let subUnit = 0;
     const auditAdded = [];
 
     for (const row of rows) {
@@ -566,6 +731,14 @@ async function main() {
           skippedNoWebsite += 1;
           continue;
         }
+      }
+      // Only the broadened set is subject to the sub-unit rule - see the note
+      // on DROP_SUBORDINATE for the French ComUE case that forced this.
+      if (DROP_SUBORDINATE && isExclusive && subordinateSet.has(row.qid)) {
+        // A faculty, school or residential college of another institution.
+        skippedSubordinate += 1;
+        subUnit += 1;
+        continue;
       }
       if (!looksLikeUniversity(name)) {
         skippedNonUniversity += 1;
@@ -590,6 +763,7 @@ async function main() {
       if (auditCountry && country.toLowerCase().startsWith(auditCountry.toLowerCase())) {
         auditAdded.push(`${name}  [${(row.types ?? []).join(",")}] sl=${row.sitelinks}`);
       }
+      addedLog.push({ country, name, types: row.types ?? [], sitelinks: row.sitelinks });
     }
 
     if (auditAdded.length) {
@@ -599,7 +773,7 @@ async function main() {
     }
 
     skippedDuplicates += dupes;
-    stats[country] = { charter, raw: rows.length, added, duplicates: dupes, noSite, unlabelled };
+    stats[country] = { charter, raw: rows.length, added, duplicates: dupes, noSite, unlabelled, subUnit };
   }
 
   // Keep each array grouped by country then name, the way the file already reads.
@@ -612,13 +786,15 @@ async function main() {
 
   const after = { epa: data.epa.length, gac: data.gac.length };
 
-  console.log("\ncountry              charter     raw  added  dupes  noSite");
+  console.log("\ncountry              charter     raw  added  dupes  noSite  subUnit");
   for (const country of countries) {
-    const s = stats[country] ?? { charter: "?", raw: 0, added: 0, duplicates: 0, noSite: 0 };
+    const s = stats[country] ?? { charter: "?", raw: 0, added: 0, duplicates: 0, noSite: 0, subUnit: 0 };
     console.log(
       `${country.padEnd(20)} ${String(s.charter).padEnd(7)} ${String(s.raw).padStart(7)} ${String(
         s.added
-      ).padStart(6)} ${String(s.duplicates).padStart(6)} ${String(s.noSite).padStart(7)}`
+      ).padStart(6)} ${String(s.duplicates).padStart(6)} ${String(s.noSite).padStart(7)} ${String(
+        s.subUnit ?? 0
+      ).padStart(8)}`
     );
   }
 
@@ -656,6 +832,16 @@ async function main() {
   }
   console.log(`additive check: all ${originalIds.size} pre-existing ids still present.`);
 
+  const dumpArg = args.find((a) => a.startsWith("--dump-added="));
+  if (dumpArg) {
+    await writeFile(dumpArg.slice("--dump-added=".length), JSON.stringify(addedLog, null, 1));
+    console.log(`dumped ${addedLog.length} additions`);
+  }
+
+  if (warmOnly) {
+    console.log("\n--warm: cache populated, nothing written.");
+    return;
+  }
   if (census) {
     console.log("\n--census: ceiling measured, nothing written.");
     return;
