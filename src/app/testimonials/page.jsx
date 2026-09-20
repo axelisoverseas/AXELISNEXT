@@ -205,7 +205,7 @@ export default function TestimonialsPage() {
             ))}
           </div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] mb-6 tracking-tight">
-            Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">globe.</span>
+            Students around the <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">globe.</span>
           </h1>
           <p className="text-xl md:text-2xl text-[var(--color-navy)]/90 max-w-3xl mx-auto leading-relaxed mb-10">
             Real placements across 29+ countries. Named students, signed declarations, verifiable visas.
@@ -242,7 +242,7 @@ export default function TestimonialsPage() {
             <div className="relative">
               <div className="mb-6">
                 <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] mb-2">
-                  Real student <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">experiences</span>
+                  Real student <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">experiences</span>
                 </h2>
                 <p className="text-[var(--color-navy)]/80 text-sm">Hover a card to rotate the globe to that country.</p>
               </div>
@@ -279,7 +279,7 @@ export default function TestimonialsPage() {
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-3 inline-flex items-center gap-3">
               <Play className="w-7 h-7 text-[var(--color-axelis)]" />
-              Watch them <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">tell it on camera.</span>
+              Watch them <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">tell it on camera.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-base md:text-lg max-w-2xl mx-auto">
               Real students, in their own words, after their visa cleared.
@@ -333,7 +333,7 @@ export default function TestimonialsPage() {
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-3 inline-flex items-center gap-3">
               <BadgeCheck className="w-7 h-7 text-emerald-300" />
-              Recent <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">placements with visa in hand.</span>
+              Recent <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">placements with visa in hand.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-base md:text-lg max-w-2xl mx-auto">
               Fall 2025 cohort. Classes started.
@@ -369,7 +369,7 @@ export default function TestimonialsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] mb-4 tracking-tight">
-              The receipts &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">real payments, real declarations, real visas.</span>
+              The receipts &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">real payments, real declarations, real visas.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
               Every plan flows through a PCI-DSS compliant gateway. Every ZTF student signs a Zero Tuition Fee declaration before we process anything. Every visa we claim is a real stamp in a real passport. Personal info is blacked out below; the rest is exactly what we have on file.
@@ -501,7 +501,7 @@ export default function TestimonialsPage() {
       <section className="py-20 relative">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-navy)]">
-            Ready to write <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">yours?</span>
+            Ready to write <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">yours?</span>
           </h2>
           <p className="text-lg text-[var(--color-navy)]/85 mb-8 max-w-2xl mx-auto">
             Talk to a counsellor who has actually done it. Free first call, no commitment.

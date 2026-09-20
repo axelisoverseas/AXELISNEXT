@@ -201,60 +201,58 @@ body {
 .animate-bg-fourth { animation: bg-fourth 24s ease-in-out infinite; }
 .animate-bg-fifth  { animation: bg-fifth  28s ease-in-out infinite; }
 
-/* ===== Storm → Dawn theme utilities ===== */
+/* ===== Section grounds and card surfaces =====
+   These were hard-coded dark surfaces and no class-level sweep could reach
+   them from the JSX, which is why cards still rendered as grey slabs after
+   every utility had been converted. They are now the light equivalents.
+
+   .bg-dawn-glow is the exception and stays dark: it is the closing CTA band,
+   and the reference page sets .cta{background:var(--navy); color:#FFF}. §5.2
+   gives navy 20% of the page, which is what a band like this is for. */
 
 .bg-storm-top {
-  background: linear-gradient(180deg, var(--storm-deep) 0%, var(--storm-abyss) 60%, var(--storm-mid) 100%);
+  background: linear-gradient(180deg, var(--color-tint) 0%, #FFFFFF 100%);
 }
 .bg-storm-to-dawn {
-  background: linear-gradient(180deg,
-    var(--storm-deep) 0%,
-    var(--storm-abyss) 18%,
-    var(--storm-mid) 38%,
-    var(--dawn-horizon) 68%,
-    var(--dawn-mid) 88%,
-    var(--dawn-clear) 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--color-tint) 55%, var(--color-tint-2) 100%);
 }
 .bg-transition-sky {
-  background: linear-gradient(180deg, var(--storm-mid) 0%, var(--dawn-horizon) 100%);
+  background: linear-gradient(180deg, var(--color-tint) 0%, #FFFFFF 100%);
 }
 .bg-dawn-bottom {
-  background: linear-gradient(180deg, var(--dawn-horizon) 0%, var(--dawn-mid) 55%, var(--dawn-clear) 100%);
+  background: linear-gradient(180deg, var(--color-tint-2) 0%, var(--color-tint) 100%);
 }
 .bg-dawn-glow {
-  background: radial-gradient(ellipse at 50% 110%, var(--dawn-glow) 0%, var(--dawn-mid) 45%, var(--storm-mid) 100%);
+  background: var(--color-navy);
 }
 
-/* Glass surfaces for storm/dawn sections */
+/* Cards. The reference page builds these as a white panel with a hairline
+   rule and a soft shadow, not as a translucent pane over a dark ground. */
 .glass-storm {
-  background: rgba(16, 24, 48, 0.55);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.10);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04), 0 10px 40px -20px rgba(0, 0, 0, 0.8);
-  border-radius: 16px;
+  background: #FFFFFF;
+  border: 1px solid var(--color-rule);
+  box-shadow: 0 18px 40px -30px rgba(14, 50, 64, 0.45);
+  border-radius: var(--radius-card, 14px);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .glass-storm:hover {
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(255, 255, 255, 0.20), 0 20px 60px -20px rgba(251, 191, 36, 0.35);
+  border-color: var(--color-dim);
+  box-shadow: 0 22px 50px -28px rgba(14, 50, 64, 0.55);
 }
 
 .glass-dawn {
-  background: rgba(58, 70, 128, 0.38);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(251, 191, 36, 0.18);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05), 0 10px 40px -20px rgba(30, 42, 85, 0.7);
-  border-radius: 16px;
+  background: var(--color-tint);
+  border: 1px solid var(--color-rule);
+  box-shadow: 0 18px 40px -30px rgba(14, 50, 64, 0.40);
+  border-radius: var(--radius-card, 14px);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .glass-dawn:hover {
-  border-color: rgba(251, 191, 36, 0.35);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06), 0 0 0 1px rgba(251, 191, 36, 0.22), 0 20px 60px -20px rgba(251, 191, 36, 0.30);
+  border-color: var(--color-axelis);
+  box-shadow: 0 22px 50px -28px rgba(47, 103, 149, 0.45);
 }
 
-/* Bolt pulse — amber drop-shadow expand/contract */
+/* Bolt pulse */
 @keyframes bolt-pulse {
   0%, 100% { filter: drop-shadow(0 0 4px var(--storm-accent-glow)); }
   50% { filter: drop-shadow(0 0 12px var(--storm-accent-glow)) drop-shadow(0 0 2px var(--storm-accent)); }

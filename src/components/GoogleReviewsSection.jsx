@@ -60,7 +60,7 @@ export default function GoogleReviewsSection({ compact = false }) {
                     </div>
 
                     <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">
-                        What our clients say <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">on Google</span>
+                        What our clients say <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">on Google</span>
                     </h2>
                     <p className="text-[var(--color-navy)]/85 text-sm md:text-base flex items-center justify-center gap-2">
                         <MapPin size={14} className="text-[var(--color-axelis)]" />

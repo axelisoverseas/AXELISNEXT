@@ -25,7 +25,7 @@ export default function HomeCertificationsPreview() {
         <div className="text-center mb-10 max-w-2xl mx-auto">
           <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-3 text-balance">
             End to end.{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">
               Outcome guaranteed.
             </span>
           </h2>

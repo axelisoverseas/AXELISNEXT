@@ -56,7 +56,7 @@ export default function CertificationsPage() {
         </div>
         <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] tracking-tight mb-6">
-            Independently certified by <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">DPIIT, British Council and AIRC</span>
+            Independently certified by <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">DPIIT, British Council and AIRC</span>
           </h1>
           <p className="text-lg md:text-xl text-[var(--color-navy)]/90 leading-relaxed">
             Three independent recognitions, three different reasons to trust the work. Hover any certificate for the full preview.

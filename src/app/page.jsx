@@ -162,7 +162,7 @@ export default function Home() {
         >
           <motion.div variants={fadeInUp} className="text-center mb-16 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[var(--color-navy)] text-balance">
-              Real <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] via-white to-[var(--dawn-glow)]">impact</span>
+              Real <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] via-[var(--color-axelis)] to-[var(--dawn-glow)]">impact</span>
             </h2>
             <p className="text-[var(--color-navy)] mt-4">
               One focus &mdash; placing students at universities they can actually get into and afford. Free first call, no upsell.
@@ -197,19 +197,19 @@ export default function Home() {
                     </div>
                     {/* Inner disc with the icon */}
                     <div className="absolute inset-[1.5px] rounded-full bg-[var(--storm-deep)]/95 backdrop-blur-md flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <Icon size={34} strokeWidth={1.6} className="text-[var(--color-navy)] drop-shadow-[0_0_10px_rgba(255, 255, 255,0.4)]" />
+                      <Icon size={34} strokeWidth={1.6} className="text-white" />
                     </div>
                     {/* Amber lightning-bolt accent (universal — same on every card) */}
                     <div
                       className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center shadow-[0_0_18px_rgba(245,158,11,0.55)] ring-2 ring-[var(--storm-deep)]"
                       style={{ animation: 'bolt-pulse 3.5s ease-in-out infinite' }}
                     >
-                      <Zap size={13} strokeWidth={3} className="text-[var(--color-navy)]" fill="currentColor" />
+                      <Zap size={13} strokeWidth={3} className="text-white" fill="currentColor" />
                     </div>
                   </div>
                   <span className={`text-4xl md:text-5xl font-bold mb-2 tracking-tight ${
                     stat.gradient
-                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] via-white to-[var(--dawn-glow)]'
+                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] via-[var(--color-axelis)] to-[var(--dawn-glow)]'
                       : 'text-[var(--color-navy)]'
                   }`}>
                     {stat.value}
@@ -235,7 +235,7 @@ export default function Home() {
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-3 text-balance">
-              Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">Pick your path.</span>
+              Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">Pick your path.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-base md:text-lg">
               Global Admissions Charter (GAC) for paid global universities. Europe Public Charter (EPC) for tuition-free public Europe. Both refundable.
@@ -317,7 +317,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-3 text-balance">
-              Twenty-nine countries. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">Twenty-nine photos.</span>
+              Twenty-nine countries. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">Twenty-nine photos.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-base md:text-lg">
               Every destination we place students into &mdash; pictured. The first nine carry the bulk of our volume; the remaining twenty run on the same plans.

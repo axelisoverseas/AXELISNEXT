@@ -348,7 +348,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
               />
             </div>
             <div className="flex-1">
-              <h2 className="text-base sm:text-lg font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-white to-stone-300">{getTriggerTitle()}</h2>
+              <h2 className="text-base sm:text-lg font-bold mb-1 text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--color-axelis)]">{getTriggerTitle()}</h2>
               <p className="text-gray-200 text-xs hidden sm:block">{getTriggerSubtitle()}</p>
             </div>
           </div>

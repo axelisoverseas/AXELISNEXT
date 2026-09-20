@@ -177,7 +177,7 @@ const InstagramSuccessStories = () => {
           <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4 inline-flex items-center gap-3 flex-wrap justify-center">
             <Instagram className="w-7 h-7 text-[var(--color-axelis)]" />
             <TextEffectInView as="span" per="word" preset="blur">Real student journeys</TextEffectInView>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">
               on Instagram
             </span>
           </h2>

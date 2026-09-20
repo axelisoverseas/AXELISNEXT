@@ -237,7 +237,7 @@ export default function TestPrepPage() {
           >
             Crack IELTS, TOEFL, PTE, SAT and more
             <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">
               with tutors who&rsquo;ve actually done it.
             </span>
           </motion.h1>
@@ -297,7 +297,7 @@ export default function TestPrepPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
-              Plans &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">pricing</span>
+              Plans &amp; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">pricing</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-lg">
               Pick a track, pick a pack. Every Enrol button opens a secure Cashfree payment page.
@@ -395,7 +395,7 @@ export default function TestPrepPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
-              The premium 1-on-1, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">end to end.</span>
+              The premium 1-on-1, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">end to end.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-lg">
               Built in-house by tutors who teach test prep full-time, not on the side.
@@ -418,7 +418,7 @@ export default function TestPrepPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
-              From diagnostic to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">score day.</span>
+              From diagnostic to <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">score day.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-lg">Four steps. Same trainer through all of them.</p>
           </div>
@@ -442,7 +442,7 @@ export default function TestPrepPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
-              Questions, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">answered.</span>
+              Questions, <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">answered.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-lg">
               Six things students ask before they enrol.

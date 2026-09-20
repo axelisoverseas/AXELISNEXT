@@ -294,7 +294,7 @@ const FacetDetails = ({ data, isLeft, cta, ctaLabel }) => {
       </motion.span>
       <motion.h3
         variants={ANIMATIONS.item}
-        className="text-4xl md:text-5xl font-bold tracking-tight mb-3 text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-500"
+        className="text-4xl md:text-5xl font-bold tracking-tight mb-3 text-transparent bg-clip-text bg-gradient-to-b from-[var(--color-navy)] to-[var(--color-axelis)]"
       >
         {data.title}
       </motion.h3>
