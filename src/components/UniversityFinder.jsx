@@ -62,8 +62,19 @@ function UniversityCard({ u }) {
   );
 }
 
-function CountryGroup({ country, universities }) {
+// How many cards a country shows before asking. Three rows of three on a
+// desktop grid. Without this the page is 82,000px tall: 2,795 cards is a
+// hundred screens of scrolling, which nobody does, so the list is only
+// reachable by searching it anyway.
+const PER_COUNTRY_PREVIEW = 9;
+
+function CountryGroup({ country, universities, expanded: forceExpanded = false }) {
   const flagCode = COUNTRY_FLAG_CODES[country];
+  const [showAll, setShowAll] = useState(false);
+  // A search has already narrowed things, so show every match.
+  const expanded = forceExpanded || showAll;
+  const visible = expanded ? universities : universities.slice(0, PER_COUNTRY_PREVIEW);
+  const hidden = universities.length - visible.length;
   return (
     <div>
       <div className="flex items-center gap-2">
@@ -81,15 +92,24 @@ function CountryGroup({ country, universities }) {
         animate="show"
         className="mt-3 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {universities.map((u) => (
+        {visible.map((u) => (
           <UniversityCard key={u.id} u={u} />
         ))}
       </motion.div>
+      {hidden > 0 && (
+        <button
+          type="button"
+          onClick={() => setShowAll(true)}
+          className="btn btn-secondary btn-sm mt-3"
+        >
+          Show {hidden.toLocaleString("en-IN")} more in {country}
+        </button>
+      )}
     </div>
   );
 }
 
-function CharterSection({ icon: Icon, title, subtitle, groups, total }) {
+function CharterSection({ icon: Icon, title, subtitle, groups, total, expanded = false }) {
   if (groups.length === 0) return null;
   return (
     <div>
@@ -101,7 +121,7 @@ function CharterSection({ icon: Icon, title, subtitle, groups, total }) {
       <p className="mt-1 text-sm text-[var(--color-dim)]">{subtitle}</p>
       <div className="mt-6 space-y-8">
         {groups.map(([country, universities]) => (
-          <CountryGroup key={country} country={country} universities={universities} />
+          <CountryGroup key={country} country={country} universities={universities} expanded={expanded} />
         ))}
       </div>
     </div>
@@ -205,6 +225,7 @@ export default function UniversityFinder() {
             </div>
           )}
           <CharterSection
+            expanded={Boolean(query.trim())}
             icon={Globe2}
             title="Tuition-free & low-fee Europe"
             subtitle="Public universities across Europe, many with little or no tuition for international students."
@@ -212,6 +233,7 @@ export default function UniversityFinder() {
             total={epaCount}
           />
           <CharterSection
+            expanded={Boolean(query.trim())}
             icon={Building2}
             title="Global destinations"
             subtitle="Full-fee universities across the UK, US, Canada, Australia and beyond."

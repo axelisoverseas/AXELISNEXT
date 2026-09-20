@@ -5,7 +5,7 @@ import universities from '@/data/finder-universities.json';
 export const metadata = {
   title: 'University Finder',
   description:
-    'Search 900+ universities across 29 study destinations, from tuition-free public universities in Europe to full-fee options in the UK, US, Canada and Australia.',
+    'Search universities across 29 study destinations, from tuition-free public universities in Europe to full-fee options in the UK, US, Canada and Australia.',
   alternates: { canonical: '/university-finder' },
 };
 

@@ -51,3 +51,6 @@ dev3000.log
 # Brand review bundle — deploys from its own repo, and carries document
 # templates that get filled with bank details before issue. Never commit here.
 /brand-review/
+
+# Wikidata SPARQL responses cached by scripts/fetch-universities.mjs
+/scripts/.cache/
