@@ -381,6 +381,16 @@ export default function UniversityFinder() {
   const [tab, setTab] = useState("universities");
   const showCourses = tab === "courses";
 
+  // Deep link to a tab, so /university-finder?tab=courses lands on courses
+  // rather than on universities with the right tab one click away. The navbar
+  // points here for course search. Read after mount rather than during
+  // render, because the server has no query string and a mismatch would
+  // hydrate wrong.
+  useEffect(() => {
+    const t = new URLSearchParams(window.location.search).get("tab");
+    if (t && TABS.some((x) => x.id === t)) setTab(t);
+  }, []);
+
   const { epaGroups, gacGroups, epaCount, gacCount, totalCount, expandAll } = useMemo(() => {
     const q = query.trim().toLowerCase();
     const matches = (u) => !q || u.university.toLowerCase().includes(q) || u.country.toLowerCase().includes(q);

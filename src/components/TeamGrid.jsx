@@ -63,6 +63,34 @@ export default function TeamGrid({ teamMembers = [] }) {
               </h3>
               <p className="mt-1 text-sm font-semibold text-[var(--color-axelis)]">{m.role}</p>
 
+              {/* Alumni tag: the university mark and the country flag, no text.
+                  The names ride in alt and aria-label, because a logo with no
+                  accessible name is just a decorative square to a screen
+                  reader, and this one is carrying the credential. */}
+              {m.almaMater?.logo && (
+                <span
+                  className="mt-3 inline-flex items-center gap-2 rounded-full border border-[var(--color-rule)] bg-white px-2.5 py-1"
+                  title={`Alumni of ${m.almaMater.name}${m.almaMater.country ? `, ${m.almaMater.country}` : ''}`}
+                >
+                  <Image
+                    src={m.almaMater.logo}
+                    alt={`Alumni of ${m.almaMater.name}`}
+                    width={64}
+                    height={20}
+                    className="h-5 w-auto max-w-[76px] object-contain"
+                  />
+                  {m.almaMater.flag && (
+                    <Image
+                      src={m.almaMater.flag}
+                      alt={m.almaMater.country || ''}
+                      width={18}
+                      height={13}
+                      className="h-3 w-[18px] rounded-[2px] object-cover"
+                    />
+                  )}
+                </span>
+              )}
+
               {m.description && (
                 <p className="mt-3 text-sm text-[var(--color-dim)] leading-relaxed">
                   {m.description}

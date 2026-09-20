@@ -40,7 +40,7 @@ const MENU = [
         items: [
           { href: '/products', title: 'Student plans', blurb: 'Two charters, priced in full before you pay' },
           { href: '/university-finder', title: 'Universities', blurb: '35,000+ programmes across 29 countries' },
-          { href: '/courses', title: 'Courses by country', blurb: 'What a subject costs, destination by destination' },
+          { href: '/university-finder?tab=courses', title: 'Course finder', blurb: 'Search accredited programmes by subject and university' },
         ],
       },
       {

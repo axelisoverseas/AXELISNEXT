@@ -474,9 +474,67 @@ function ProductsContent() {
           </div>
         </div>
       </section>
+
+      {/* The three landing pages, contextualised.
+          Each one argues a different reason to pick Axelis, so rather than
+          hide them behind ad spend alone, the plans page routes to whichever
+          question the reader still has. */}
+      <section className="relative sec border-t border-[var(--color-rule)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <p className="label">Still deciding</p>
+            <h2 className="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-[var(--color-navy)]">
+              Three reasons people choose us, argued in full.
+            </h2>
+            <p className="mt-3 text-[var(--color-dim)] measure">
+              Whichever one you are weighing, there is a page for it.
+            </p>
+          </div>
+
+          <ul className="mt-10 grid list-none grid-cols-1 gap-x-8 gap-y-10 p-0 md:grid-cols-3">
+            {LANDING_LINKS.map((l) => (
+              <li key={l.href}>
+                <span aria-hidden="true" className="block h-0.5 w-8 rounded-full bg-[var(--color-axelis)]" />
+                <Link
+                  href={l.href}
+                  className="mt-4 inline-flex items-start gap-1.5 text-lg font-bold leading-snug text-[var(--color-navy)] hover:text-[var(--color-axelis)]"
+                >
+                  {l.title}
+                </Link>
+                <p className="mt-2 text-sm leading-relaxed text-[var(--color-dim)]">{l.body}</p>
+                <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-axelis)]">
+                  {l.cta}
+                  <ArrowRight size={14} aria-hidden="true" />
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
     </div>
   );
 }
+
+const LANDING_LINKS = [
+  {
+    href: '/lp/tuition-free-europe',
+    title: 'Study in Europe tuition-free',
+    body: 'Public universities across much of Europe charge international students no tuition at all. What that route costs, and what actually decides it.',
+    cta: 'See the Europe route',
+  },
+  {
+    href: '/lp/pay-after-offer',
+    title: 'Pay \u20b910,000 now, the rest after an offer',
+    body: 'Why the order you pay in changes the advice you get, and what happens if no offer arrives.',
+    cta: 'See how the pricing works',
+  },
+  {
+    href: '/lp/published-fees',
+    title: 'Never pay a fee you have not seen',
+    body: 'Every fee published before you pay, one counsellor throughout, and a straight answer about how we are paid.',
+    cta: 'See how we work',
+  },
+];
 
 export default function ProductsPage() {
   return (

@@ -24,8 +24,12 @@ import CheckoutButton from './CheckoutButton';
 
 const INR = (n) => `₹${n.toLocaleString('en-IN')}`;
 
-const CTA =
-  'inline-flex justify-center items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--color-navy)] font-bold text-sm transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]';
+// The pay button was navy text on a "gradient" whose two stops both resolve
+// to #1D4ED8 since the palette was locked, so it was flat blue carrying navy
+// text at 2.14:1. WCAG 1.4.3 wants 4.5:1, and this is the button that takes
+// money. .btn-primary is the site's own primary control, white on the same
+// blue at 6.70:1, and it stays correct if the blue is ever changed again.
+const CTA = 'btn btn-primary text-sm';
 
 const GHOST =
   'inline-flex justify-center items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-xl bg-white hover:bg-[var(--color-tint)] border border-[var(--color-dim)] text-[var(--color-navy)] font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]';
@@ -142,7 +146,7 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
       />
       <p className="mt-2.5 text-xs text-[var(--color-dim)]">
         {INR(item.amount)} + {INR(withGst(item.amount).gst)} GST. Card details are entered on
-        Cashfree's page, never here.
+        Cashfree&rsquo;s page, never here.
       </p>
     </div>
   );
