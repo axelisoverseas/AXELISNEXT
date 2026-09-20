@@ -9,7 +9,7 @@ export const metadata = {
   alternates: { canonical: '/resources' },
 };
 
-const DODGER = '#1C6BB0';
+const DODGER = '#1D4ED8';
 
 const GUIDES = [
   { title: 'Scholarship Guide', description: 'Merit, government and university scholarships across destinations.', file: '/guides/scholarship-guide.pdf' },

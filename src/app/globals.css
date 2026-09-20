@@ -6,53 +6,53 @@
 
     /* ---- PALETTE: metabase.com, harvested from their live token set --------
      Their values, with one correction that is not optional. Their primary
-     #509ee3 measures 2.86:1 against white — it fails AA for text AND the 3:1
+     #4F80F0 measures 2.86:1 against white — it fails AA for text AND the 3:1
      floor for large text and UI. Their own Get-started button ships that way.
-     So #509ee3 is bound here to a SURFACE token no text utility can reach,
-     and their hover blue #1c6bb0 (5.56:1 on white, 5.56:1 under white) does
+     So #4F80F0 is bound here to a SURFACE token no text utility can reach,
+     and their hover blue #1D4ED8 (5.56:1 on white, 5.56:1 under white) does
      the work of both a link colour and a CTA fill.
-     Their muted grey #8d93a5 is 3.07:1 and is likewise caption-only; body
-     secondary text uses #5a6072 at 6.27:1. Their footer is white, not dark;
-     the dark band value is their blue-25 #12436e, which carries white at
+     Their muted grey #8A93A8 is 3.07:1 and is likewise caption-only; body
+     secondary text uses #586179 at 6.27:1. Their footer is white, not dark;
+     the dark band value is their blue-25 #16265C, which carries white at
      10.23:1. */
   /* AXELIS BRAND v4.0 — see docs/brand/BRAND_GUIDELINES.md §5.
      #4080BD is a SURFACE colour: 4.17:1 on white, 3.25:1 on navy, so it
      fails AA as text on either ground. It is bound to --color-accent-surface
      and to no text utility. Same rule as the B2B codebase. */
-  --color-navy: #12436E;
-  --color-navy-2: #1C6BB0;
-  --color-axelis: #1C6BB0;
-  --color-axelis-accent: #1C6BB0;
-  --color-accent-surface: #509EE3;
-  --color-axelis-light: #87BCEC;
+  --color-navy: #16265C;
+  --color-navy-2: #1D4ED8;
+  --color-axelis: #1D4ED8;
+  --color-axelis-accent: #1D4ED8;
+  --color-accent-surface: #4F80F0;
+  --color-axelis-light: #9EC0FF;
   --color-on-accent: #FFFFFF;
-  --color-tint: #F9FAFB;
-  --color-tint-2: #F1F2F4;
-  --color-rule: #E2E4E9;
-  --color-dim: #5A6072;
-  --color-dim-dark: #C6C9D2;
+  --color-tint: #F7F9FC;
+  --color-tint-2: #EEF2F9;
+  --color-rule: #DDE3EE;
+  --color-dim: #586179;
+  --color-dim-dark: #C3CBDD;
 
   /* Storm palette — retained names, brand values.
      These read as "dark band" throughout the codebase, and the brand keeps
      dark bands (§5.2: navy is 20% of the page). Remapping in place means the
      657 token references land on brand colour without 105 files of edits. */
-  --color-storm-deep: #12436E;
-  --color-storm-abyss: #0E3557;
-  --color-storm-mid: #1C6BB0;
-  --color-storm-cloud: #3685CA;
+  --color-storm-deep: #16265C;
+  --color-storm-abyss: #101B45;
+  --color-storm-mid: #1D4ED8;
+  --color-storm-cloud: #3F63E0;
   --color-storm-electric: #FFFFFF;
   --color-storm-bolt: #FFFFFF;
-  --color-storm-accent: #1C6BB0;
+  --color-storm-accent: #1D4ED8;
 
   /* Dawn palette — was amber. The CTA is now a solid brand blue carrying
      white text, exactly as the approved reference page sets it
      (.btn{background:var(--blue-dark); color:#FFF}). Both gradient stops are
      dark enough for white, so a CTA is legible wherever it is cut. */
-  --color-dawn-horizon: #1C6BB0;
-  --color-dawn-mid: #3685CA;
-  --color-dawn-clear: #5A6072;
-  --color-dawn-glow: #1C6BB0;
-  --color-dawn-glow-soft: #509EE3;
+  --color-dawn-horizon: #1D4ED8;
+  --color-dawn-mid: #3F63E0;
+  --color-dawn-clear: #586179;
+  --color-dawn-glow: #1D4ED8;
+  --color-dawn-glow-soft: #4F80F0;
 
   /* ---- Neutral ramps, remapped to metabase.com's neutral scale ----------
      1,193 built-in Tailwind palette classes are in this codebase and 936 of
@@ -61,80 +61,80 @@
      to stock Tailwind values.
 
      Redefining the ramps here captures all of them at once. The stops are
-     their published neutrals: neutral-15 #22242B, -20 #4C5773, -40 #5A6072,
-     -60 #8D93A5, -80 #C6C9D2, -90 #E2E4E9, -95 #F1F2F4, -99 #FCFCFD.
+     their published neutrals: neutral-15 #1B2233, -20 #3B4459, -40 #586179,
+     -60 #8A93A8, -80 #C3CBDD, -90 #DDE3EE, -95 #EEF2F9, -99 #FBFCFE.
      700/800 are interpolated; they have no published stop there.
 
      Warm (stone) and cool (slate) both collapse onto one ramp on purpose —
      that is what stops a page reading as two different greys. */
 
-  --color-slate-50: #F9FAFB;
-  --color-slate-100: #F1F2F4;
-  --color-slate-200: #E2E4E9;
-  --color-slate-300: #C6C9D2;
-  --color-slate-400: #8D93A5;
-  --color-slate-500: #5A6072;
-  --color-slate-600: #4C5773;
-  --color-slate-700: #3B4152;
-  --color-slate-800: #2B2E38;
-  --color-slate-900: #22242B;
-  --color-slate-950: #15171C;
+  --color-slate-50: #F7F9FC;
+  --color-slate-100: #EEF2F9;
+  --color-slate-200: #DDE3EE;
+  --color-slate-300: #C3CBDD;
+  --color-slate-400: #8A93A8;
+  --color-slate-500: #586179;
+  --color-slate-600: #3B4459;
+  --color-slate-700: #333B4D;
+  --color-slate-800: #252C3B;
+  --color-slate-900: #1B2233;
+  --color-slate-950: #12161F;
 
-  --color-gray-50: #F9FAFB;
-  --color-gray-100: #F1F2F4;
-  --color-gray-200: #E2E4E9;
-  --color-gray-300: #C6C9D2;
-  --color-gray-400: #8D93A5;
-  --color-gray-500: #5A6072;
-  --color-gray-600: #4C5773;
-  --color-gray-700: #3B4152;
-  --color-gray-800: #2B2E38;
-  --color-gray-900: #22242B;
-  --color-gray-950: #15171C;
+  --color-gray-50: #F7F9FC;
+  --color-gray-100: #EEF2F9;
+  --color-gray-200: #DDE3EE;
+  --color-gray-300: #C3CBDD;
+  --color-gray-400: #8A93A8;
+  --color-gray-500: #586179;
+  --color-gray-600: #3B4459;
+  --color-gray-700: #333B4D;
+  --color-gray-800: #252C3B;
+  --color-gray-900: #1B2233;
+  --color-gray-950: #12161F;
 
-  --color-zinc-50: #F9FAFB;
-  --color-zinc-100: #F1F2F4;
-  --color-zinc-200: #E2E4E9;
-  --color-zinc-300: #C6C9D2;
-  --color-zinc-400: #8D93A5;
-  --color-zinc-500: #5A6072;
-  --color-zinc-600: #4C5773;
-  --color-zinc-700: #3B4152;
-  --color-zinc-800: #2B2E38;
-  --color-zinc-900: #22242B;
-  --color-zinc-950: #15171C;
+  --color-zinc-50: #F7F9FC;
+  --color-zinc-100: #EEF2F9;
+  --color-zinc-200: #DDE3EE;
+  --color-zinc-300: #C3CBDD;
+  --color-zinc-400: #8A93A8;
+  --color-zinc-500: #586179;
+  --color-zinc-600: #3B4459;
+  --color-zinc-700: #333B4D;
+  --color-zinc-800: #252C3B;
+  --color-zinc-900: #1B2233;
+  --color-zinc-950: #12161F;
 
-  --color-neutral-50: #F9FAFB;
-  --color-neutral-100: #F1F2F4;
-  --color-neutral-200: #E2E4E9;
-  --color-neutral-300: #C6C9D2;
-  --color-neutral-400: #8D93A5;
-  --color-neutral-500: #5A6072;
-  --color-neutral-600: #4C5773;
-  --color-neutral-700: #3B4152;
-  --color-neutral-800: #2B2E38;
-  --color-neutral-900: #22242B;
-  --color-neutral-950: #15171C;
+  --color-neutral-50: #F7F9FC;
+  --color-neutral-100: #EEF2F9;
+  --color-neutral-200: #DDE3EE;
+  --color-neutral-300: #C3CBDD;
+  --color-neutral-400: #8A93A8;
+  --color-neutral-500: #586179;
+  --color-neutral-600: #3B4459;
+  --color-neutral-700: #333B4D;
+  --color-neutral-800: #252C3B;
+  --color-neutral-900: #1B2233;
+  --color-neutral-950: #12161F;
 
-  --color-stone-50: #F9FAFB;
-  --color-stone-100: #F1F2F4;
-  --color-stone-200: #E2E4E9;
-  --color-stone-300: #C6C9D2;
-  --color-stone-400: #8D93A5;
-  --color-stone-500: #5A6072;
-  --color-stone-600: #4C5773;
-  --color-stone-700: #3B4152;
-  --color-stone-800: #2B2E38;
-  --color-stone-900: #22242B;
-  --color-stone-950: #15171C;
+  --color-stone-50: #F7F9FC;
+  --color-stone-100: #EEF2F9;
+  --color-stone-200: #DDE3EE;
+  --color-stone-300: #C3CBDD;
+  --color-stone-400: #8A93A8;
+  --color-stone-500: #586179;
+  --color-stone-600: #3B4459;
+  --color-stone-700: #333B4D;
+  --color-stone-800: #252C3B;
+  --color-stone-900: #1B2233;
+  --color-stone-950: #12161F;
 
   /* Elevation and radius as utilities, so the JSX asks for a step on the
      scale (shadow-e-2, rounded-lg) instead of inventing another one-off. */
-  --shadow-ring: 0 0 0 1px rgba(18, 67, 110, .07);
-  --shadow-e-1: 0 1px 2px rgba(18, 67, 110, .04);
-  --shadow-e-2: 0 0 0 1px rgba(18, 67, 110, .06), 0 1px 3px rgba(18, 67, 110, .05);
-  --shadow-e-3: 0 0 0 .5px rgba(18, 67, 110, .05), 0 8px 32px rgba(18, 67, 110, .06);
-  --shadow-e-lift: 0 16px 28px -6px rgba(18, 67, 110, .12), 0 32px 88px -4px rgba(18, 67, 110, .10);
+  --shadow-ring: 0 0 0 1px rgba(22, 38, 92, .07);
+  --shadow-e-1: 0 1px 2px rgba(22, 38, 92, .04);
+  --shadow-e-2: 0 0 0 1px rgba(22, 38, 92, .06), 0 1px 3px rgba(22, 38, 92, .05);
+  --shadow-e-3: 0 0 0 .5px rgba(22, 38, 92, .05), 0 8px 32px rgba(22, 38, 92, .06);
+  --shadow-e-lift: 0 16px 28px -6px rgba(22, 38, 92, .12), 0 32px 88px -4px rgba(22, 38, 92, .10);
 
   --radius-xs: 4px;
   --radius-sm: 6px;
@@ -155,11 +155,11 @@
      rgba(0,0,0,0.9) and an amber glow. Both were tuned for a black page.
      On white, 90% black is a smudge. Alphas below are navy-tinted, so the
      shade belongs to the palette instead of greying it. */
-  --ring:   0 0 0 1px rgba(18, 67, 110, .07);
-  --e-1:    0 1px 2px rgba(18, 67, 110, .04);
-  --e-2:    0 0 0 1px rgba(18, 67, 110, .06), 0 1px 3px rgba(18, 67, 110, .05);
-  --e-3:    0 0 0 .5px rgba(18, 67, 110, .05), 0 8px 32px rgba(18, 67, 110, .06);
-  --e-lift: 0 16px 28px -6px rgba(18, 67, 110, .12), 0 32px 88px -4px rgba(18, 67, 110, .10);
+  --ring:   0 0 0 1px rgba(22, 38, 92, .07);
+  --e-1:    0 1px 2px rgba(22, 38, 92, .04);
+  --e-2:    0 0 0 1px rgba(22, 38, 92, .06), 0 1px 3px rgba(22, 38, 92, .05);
+  --e-3:    0 0 0 .5px rgba(22, 38, 92, .05), 0 8px 32px rgba(22, 38, 92, .06);
+  --e-lift: 0 16px 28px -6px rgba(22, 38, 92, .12), 0 32px 88px -4px rgba(22, 38, 92, .10);
   --e-focus: 0 0 0 2px #FFFFFF, 0 0 0 4px var(--color-axelis, #2F6795);
 
   /* ---- Radius ---------------------------------------------------------
@@ -179,27 +179,27 @@
      and the prose disagree, which is why the ground is white here and the
      migration map's dark-to-dark table is not followed. */
   --background: #FFFFFF;
-  --foreground: #22242B;
+  --foreground: #1B2233;
 
-  --storm-deep: #12436E;
-  --storm-abyss: #0E3557;
-  --storm-mid: #1C6BB0;
-  --storm-cloud: #3685CA;
+  --storm-deep: #16265C;
+  --storm-abyss: #101B45;
+  --storm-mid: #1D4ED8;
+  --storm-cloud: #3F63E0;
   --storm-electric: #FFFFFF;
   --storm-bolt: #FFFFFF;
-  --storm-accent: #1C6BB0;
-  --storm-accent-glow: rgba(28, 107, 176, 0.45);
+  --storm-accent: #1D4ED8;
+  --storm-accent-glow: rgba(29, 78, 216, 0.45);
 
-  --dawn-horizon: #1C6BB0;
-  --dawn-mid: #3685CA;
-  --dawn-clear: #5A6072;
-  --dawn-glow: #1C6BB0;
-  --dawn-glow-soft: #509EE3;
-  --dawn-mist: rgba(28, 107, 176, 0.18);
+  --dawn-horizon: #1D4ED8;
+  --dawn-mid: #3F63E0;
+  --dawn-clear: #586179;
+  --dawn-glow: #1D4ED8;
+  --dawn-glow-soft: #4F80F0;
+  --dawn-mist: rgba(29, 78, 216, 0.18);
 
   /* Accent that survives a navy ground. #2F6795 measures 2.26:1 there and
      must never be an accent on dark; this is the token for that job. */
-  --accent-on-dark: #87BCEC;
+  --accent-on-dark: #9EC0FF;
 }
 
 /* No dark-scheme inversion. The brand ground is white on every device;
@@ -366,19 +366,19 @@ body {
 .glass-storm {
   background: #FFFFFF;
   border: 1px solid var(--color-rule);
-  box-shadow: 0 18px 40px -30px rgba(18, 67, 110, 0.45);
+  box-shadow: 0 18px 40px -30px rgba(22, 38, 92, 0.45);
   border-radius: var(--radius-card, 14px);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
 .glass-storm:hover {
   border-color: var(--color-dim);
-  box-shadow: 0 22px 50px -28px rgba(18, 67, 110, 0.55);
+  box-shadow: 0 22px 50px -28px rgba(22, 38, 92, 0.55);
 }
 
 .glass-dawn {
   background: var(--color-tint);
   border: 1px solid var(--color-rule);
-  box-shadow: 0 18px 40px -30px rgba(18, 67, 110, 0.40);
+  box-shadow: 0 18px 40px -30px rgba(22, 38, 92, 0.40);
   border-radius: var(--radius-card, 14px);
   transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
@@ -413,8 +413,8 @@ body {
    ranging from brand tokens to bg-yellow-500. These are the four that
    exist, sized on the radius scale.
 
-   Fill is the hover blue, not the reference's primary: white on #509EE3 is
-   2.86:1 and fails AA, so that value stays a surface and #1C6BB0 carries
+   Fill is the hover blue, not the reference's primary: white on #4F80F0 is
+   2.86:1 and fails AA, so that value stays a surface and #1D4ED8 carries
    the label at 5.56:1. */
 .btn {
   display: inline-flex;

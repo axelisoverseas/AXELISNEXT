@@ -8,7 +8,7 @@
  *   INSTAGRAM_ACCESS_TOKEN  a long-lived token for that account
  *
  * Both come from a Meta app linked to the Facebook Page. Neither is optional
- * for live data — and neither is required for the page to work.
+ * for live data: and neither is required for the page to work.
  *
  * The contract this route promises the UI: it ALWAYS returns 200 with
  * `{ ok, source, posts }`. When the token is missing, expired, or Meta is

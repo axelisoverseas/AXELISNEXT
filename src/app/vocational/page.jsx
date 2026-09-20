@@ -103,7 +103,7 @@ export default function VocationalPage() {
                       decoding="async"
                       className="absolute inset-0 w-full h-full object-cover"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#12436E] via-[#12436E]/35 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#16265C] via-[#16265C]/35 to-transparent" />
                   </div>
                 )}
                 <div className="p-7 md:p-8 flex flex-col flex-1">

@@ -10,7 +10,7 @@ import { Linkedin } from 'lucide-react';
  * This replaces a rotating 3D carousel that stacked the cards on top of one
  * another: names and descriptions from one card printed over the next, so at
  * rest most of the team was unreadable. A carousel also hides most of a small
- * team behind an interaction for no gain — there are five people; they fit on
+ * team behind an interaction for no gain, there are five people; they fit on
  * the page.
  *
  * Cards are a uniform height so the row lines up, and the photo, name, role

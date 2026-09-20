@@ -104,7 +104,7 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
       .height(containerRef.current.clientHeight)
       .enablePointerInteraction(true)
       .showAtmosphere(true)
-      .atmosphereColor('#1C6BB0')
+      .atmosphereColor('#1D4ED8')
       .atmosphereAltitude(0.15)
       .htmlElementsData(markerData)
       .htmlElement(d => {
@@ -122,7 +122,7 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
               left: 0;
               width: 100%;
               height: 100%;
-              background: ${d.isSelected ? '#ff6b35' : d.isHovered ? '#ff8c42' : '#1C6BB0'};
+              background: ${d.isSelected ? '#ff6b35' : d.isHovered ? '#ff8c42' : '#1D4ED8'};
               border-radius: 50%;
               box-shadow: 0 0 ${d.isSelected ? '20px' : d.isHovered ? '15px' : '10px'} rgba(79, 70, 229, 0.6);
             "></div>
@@ -288,28 +288,28 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
       />
 
       {/* Floating UI Elements */}
-      <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-stone-700/30 animate-pulse">
+      <div className="absolute top-4 left-4 bg-[var(--color-navy)]/85 backdrop-blur-sm rounded-lg p-3 border border-white/20 animate-pulse">
         <div className="flex items-center text-white text-sm">
           <div className="w-2 h-2 bg-white rounded-full mr-2 animate-ping"></div>
           <span>Live Globe</span>
         </div>
       </div>
 
-      <div className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-stone-700/30">
+      <div className="absolute top-4 right-4 bg-[var(--color-navy)]/85 backdrop-blur-sm rounded-lg p-3 border border-white/20">
         <div className="flex items-center text-white text-sm">
           <Star className="w-4 h-4 mr-2 text-white" />
           <span>Success Stories</span>
         </div>
       </div>
 
-      <div className="absolute bottom-4 left-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-stone-700/30">
+      <div className="absolute bottom-4 left-4 bg-[var(--color-navy)]/85 backdrop-blur-sm rounded-lg p-3 border border-white/20">
         <div className="flex items-center text-white text-sm">
           <div className="w-2 h-2 bg-green-400 rounded-full mr-2"></div>
           <span>{getTestimonialCountries().length} Countries</span>
         </div>
       </div>
 
-      <div className="absolute bottom-4 right-4 bg-white/10 backdrop-blur-sm rounded-lg p-3 border border-stone-700/30">
+      <div className="absolute bottom-4 right-4 bg-[var(--color-navy)]/85 backdrop-blur-sm rounded-lg p-3 border border-white/20">
         <div className="flex items-center text-white text-sm">
           <div className="w-2 h-2 bg-white rounded-full mr-2"></div>
           <span>NASA Earth</span>

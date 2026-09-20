@@ -15,7 +15,7 @@ import {
  *
  * Nothing here is typed in. The programmes and their prices come from the
  * catalogue, the tenures from EMI_TENURES, the eligibility floor from
- * EMI_MIN_TICKET, and the monthly figure is price / tenure — the same
+ * EMI_MIN_TICKET, and the monthly figure is price / tenure, the same
  * arithmetic monthlyEmi() runs at checkout. If a price moves, this chart
  * moves with it instead of quietly disagreeing with the page around it.
  *
