@@ -25,7 +25,7 @@ const GUIDES = [
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-white">
-      <section className="relative overflow-hidden bg-black px-6 pt-32 pb-16 text-[var(--color-navy)]">
+ <section className="relative overflow-hidden bg-black px-6 pt-32 pb-16 text-[var(--color-navy)]">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full blur-3xl" style={{ background: 'rgba(53,144,243,0.18)' }} />
         </div>
@@ -43,7 +43,7 @@ export default function ResourcesPage() {
         </div>
       </section>
 
-      <section className="px-6 py-14 sm:py-20">
+ <section className="px-6 sec-sm ">
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {GUIDES.map((g) => (
             <a

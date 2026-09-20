@@ -15,7 +15,7 @@ const supporting = programs.filter((p) => p !== flagship);
 
 export default function HomeCertificationsPreview() {
   return (
-    <section className="relative py-20 overflow-hidden border-y border-[var(--color-rule)]">
+ <section className="relative sec overflow-hidden border-y border-[var(--color-rule)]">
       <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute top-1/2 left-0 w-[420px] h-[420px] bg-[var(--color-tint)] rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
         <div className="absolute top-1/2 right-0 w-[420px] h-[420px] bg-[var(--dawn-glow)]/8 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2" />

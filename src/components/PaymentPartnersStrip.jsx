@@ -13,7 +13,7 @@ const CARD_NETWORKS = ['Visa', 'Mastercard', 'Amex', 'RuPay'];
 
 export default function PaymentPartnersStrip() {
   return (
-    <section className="relative py-14 border-t border-[var(--color-rule)]" aria-labelledby="payment-partners-heading">
+ <section className="relative sec-sm border-t border-[var(--color-rule)]" aria-labelledby="payment-partners-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2
           id="payment-partners-heading"

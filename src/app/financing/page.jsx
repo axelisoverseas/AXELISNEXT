@@ -81,7 +81,7 @@ const TONE = {
 export default function FinancingPage() {
   return (
     <main className="min-h-screen text-[var(--color-navy)]">
-      <section className="relative pt-28 lg:pt-32 pb-14 overflow-hidden border-b border-[var(--color-rule)]">
+ <section className="relative pt-28 lg:pt-32 pb-14 overflow-hidden border-b border-[var(--color-rule)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-axelis)] mb-4">
             Financing
@@ -97,7 +97,7 @@ export default function FinancingPage() {
         </div>
       </section>
 
-      <section className="relative py-14">
+ <section className="relative sec-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
             {ROUTES.map((r) => {
@@ -140,7 +140,7 @@ export default function FinancingPage() {
       </section>
 
       {/* What we will not say */}
-      <section className="relative py-10 border-y border-[var(--color-rule)]">
+ <section className="relative py-10 border-y border-[var(--color-rule)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-[var(--color-rule)] bg-[var(--color-tint)] p-6 md:p-7">
             <div className="flex items-start gap-3">
@@ -175,7 +175,7 @@ export default function FinancingPage() {
       </section>
 
       {/* Refund routing */}
-      <section className="relative py-12">
+ <section className="relative sec-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-start gap-3 rounded-2xl border border-[var(--color-rule)] bg-white p-6">
             <Info size={17} aria-hidden="true" className="text-[var(--color-axelis)] shrink-0 mt-0.5" />

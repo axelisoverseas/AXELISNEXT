@@ -145,7 +145,7 @@ export default async function ProgramPage({ params }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 
       {/* ---------------------------------------------------------- HERO */}
-      <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-white/15">
+ <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-white/15">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
             src={program.image}
@@ -269,7 +269,7 @@ export default async function ProgramPage({ params }) {
       </section>
 
       {/* ------------------------------------------------ OUTCOMES + SYLLABUS */}
-      <section className="relative py-16">
+ <section className="relative sec-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
             <div className="lg:col-span-2">
@@ -356,7 +356,7 @@ export default async function ProgramPage({ params }) {
 
       {/* ------------------------------------------------------ ENQUIRY FORM */}
       {withdrawn ? (
-        <section className="relative py-20">
+ <section className="relative sec">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-7 md:p-9 text-center">
               <h2 className="text-2xl font-bold text-[var(--color-navy)] tracking-tight mb-3 text-balance">
@@ -385,7 +385,7 @@ export default async function ProgramPage({ params }) {
           </div>
         </section>
       ) : (
-      <section id="enquire" className="relative py-20 scroll-mt-24">
+ <section id="enquire" className="relative sec scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
             <div className="lg:col-span-2">
@@ -418,7 +418,7 @@ export default async function ProgramPage({ params }) {
 
       {/* ---------------------------------------------------------- RELATED */}
       {related.length > 0 && (
-        <section className="relative py-16 border-t border-[var(--color-rule)]">
+ <section className="relative sec-sm border-t border-[var(--color-rule)]">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl font-bold text-[var(--color-navy)] tracking-tight mb-6 text-balance">Related programmes</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

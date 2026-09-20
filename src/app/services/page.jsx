@@ -20,7 +20,7 @@ export default function ServicesPage() {
   return (
     <main className="min-h-screen text-[var(--color-navy)]">
       {/* HERO */}
-      <section className="relative pt-28 lg:pt-32 pb-14 overflow-hidden border-b border-[var(--color-rule)]">
+ <section className="relative pt-28 lg:pt-32 pb-14 overflow-hidden border-b border-[var(--color-rule)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-axelis)] mb-4">
             Student Services
@@ -37,7 +37,7 @@ export default function ServicesPage() {
       </section>
 
       {/* PROMISE */}
-      <section className="relative py-10 border-b border-[var(--color-rule)]">
+ <section className="relative py-10 border-b border-[var(--color-rule)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-3">
             {servicesPromise.map((p) => (
@@ -52,7 +52,7 @@ export default function ServicesPage() {
 
       {/* GROUPS */}
       {serviceGroups.map((g) => (
-        <section key={g.id} id={g.id} className="relative py-14 scroll-mt-24 border-b border-[var(--color-rule)]">
+ <section key={g.id} id={g.id} className="relative sec-sm scroll-mt-24 border-b border-[var(--color-rule)]">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight text-balance mb-2">
               {g.title}
@@ -102,7 +102,7 @@ export default function ServicesPage() {
       <TrustBand />
 
       {/* CTA */}
-      <section className="relative py-16">
+ <section className="relative sec-sm">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border-2 border-[var(--color-rule)] bg-white p-7 md:p-9">
             <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight text-balance mb-3">

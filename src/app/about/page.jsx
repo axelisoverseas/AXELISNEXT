@@ -20,7 +20,7 @@ export default function AboutPage() {
     return (
         <div className="min-h-screen bg-storm-to-dawn">
             {/* Hero Section */}
-            <section className="relative pt-24 pb-16 bg-[var(--color-tint)] overflow-hidden border-b border-[var(--color-rule)]">
+ <section className="relative pt-24 pb-16 bg-[var(--color-tint)] overflow-hidden border-b border-[var(--color-rule)]">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[var(--color-axelis)]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
 
@@ -48,7 +48,7 @@ export default function AboutPage() {
             </section>
 
             {/* Welcome & Stats Section */}
-            <section className="py-24 bg-white">
+ <section className="sec bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
 
@@ -107,7 +107,7 @@ export default function AboutPage() {
             </section>
 
             {/* Scale & Scope */}
-            <section className="py-20 bg-white border-t border-slate-200">
+ <section className="sec bg-white border-t border-slate-200">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-5 text-balance">
                         Scale and scope
@@ -121,7 +121,7 @@ export default function AboutPage() {
             </section>
 
             {/* Mission & Vision Section */}
-            <section className="py-24 bg-slate-50 border-t border-slate-200">
+ <section className="sec bg-slate-50 border-t border-slate-200">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-8 mb-20">
                         {/* Mission Card */}
@@ -181,7 +181,7 @@ export default function AboutPage() {
             </section>
 
             {/* Clean Final CTA */}
-            <section className="py-32 bg-[var(--color-tint)] text-center border-t border-[var(--color-rule)]" data-section="cta">
+ <section className="sec-lg bg-[var(--color-tint)] text-center border-t border-[var(--color-rule)]" data-section="cta">
                 <div className="max-w-3xl mx-auto px-4">
                     <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl font-extrabold text-[var(--color-navy)] mb-6 tracking-tight">Ready to Transform Your Future?</TextEffectInView>
                     <p className="text-lg text-[var(--color-dim)] mb-10 leading-relaxed max-w-2xl mx-auto">
@@ -202,7 +202,7 @@ export default function AboutPage() {
             </section>
 
             {/* Legal / corporate strip */}
-            <section className="py-8 bg-slate-950 border-t border-slate-800">
+ <section className="py-8 bg-slate-950 border-t border-slate-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <p className="text-xs text-[var(--color-dim)] text-center leading-relaxed">
                         Axelis Overseas Education Pvt Ltd &mdash; CIN U85500CT2023PTC014913 &mdash;

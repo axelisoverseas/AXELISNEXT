@@ -52,7 +52,7 @@ export default function Home() {
   return (
     <div className="min-h-screen overflow-hidden">
       {/* HERO — clean, no lightning, no audio. Subtle study-abroad photo backdrop. */}
-      <section className="relative pt-28 lg:pt-36 pb-24 overflow-hidden">
+ <section className="relative pt-28 lg:pt-36 pb-24 overflow-hidden">
         <HeroOrbitalBackdrop />
 
         <motion.div
@@ -148,7 +148,7 @@ export default function Home() {
 
 
       {/* Unified Impact Stats — storm phase */}
-      <section className="py-24 text-[var(--color-navy)] relative overflow-hidden">
+ <section className="sec text-[var(--color-navy)] relative overflow-hidden">
         {/* Electric + amber ambient glows */}
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"></div>
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--storm-accent)]/10 rounded-full blur-[120px] translate-y-1/2 pointer-events-none"></div>
@@ -226,7 +226,7 @@ export default function Home() {
 
 
       {/* Plans preview — GAC + EPC teaser, links to /products */}
-      <section className="relative py-20 overflow-hidden">
+ <section className="relative sec overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-1/2 left-0 w-[420px] h-[420px] bg-[var(--color-tint)] rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute top-1/2 right-0 w-[420px] h-[420px] bg-[var(--dawn-glow)]/8 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2" />
@@ -313,7 +313,7 @@ export default function Home() {
       </section>
 
       {/* Destinations grid — 9 feature countries + 20 compact tiles. All 29 photographed. */}
-      <section className="relative py-20 overflow-hidden">
+ <section className="relative sec overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-balance">
@@ -446,7 +446,7 @@ export default function Home() {
 
 
       {/* Quick FAQ Section — dawn phase */}
-      <section className="py-24 relative overflow-hidden">
+ <section className="sec relative overflow-hidden">
         {/* Dawn ambient */}
         <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
           <div className="absolute top-40 right-20 w-80 h-80 bg-[var(--dawn-glow)] rounded-full blur-3xl translate-x-1/2"></div>
@@ -492,7 +492,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="py-32 bg-dawn-glow relative overflow-hidden">
+ <section className="sec-lg bg-dawn-glow relative overflow-hidden">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}

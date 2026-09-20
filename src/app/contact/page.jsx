@@ -49,7 +49,7 @@ export default function ContactPage() {
     return (
         <div className="min-h-screen bg-storm-to-dawn">
             {/* Hero Section */}
-            <section className="relative pt-32 pb-24 bg-[var(--color-tint)] border-b border-[var(--color-rule)] overflow-hidden">
+ <section className="relative pt-32 pb-24 bg-[var(--color-tint)] border-b border-[var(--color-rule)] overflow-hidden">
                 <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--color-axelis)]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[var(--color-axelis)]/10 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
@@ -83,7 +83,7 @@ export default function ContactPage() {
             </section>
 
             {/* Calendly Booking Section */}
-            <section className="bg-white py-16 border-b border-slate-100">
+ <section className="bg-white sec-sm border-b border-slate-100">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-10">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-100 text-stone-950 text-sm font-semibold mb-4">
@@ -103,7 +103,7 @@ export default function ContactPage() {
             </section>
 
             {/* Main Content */}
-            <section className="py-24">
+ <section className="sec">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid lg:grid-cols-2 gap-16">
 

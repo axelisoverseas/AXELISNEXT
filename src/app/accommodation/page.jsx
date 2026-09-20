@@ -22,7 +22,7 @@ export default function AccommodationPage() {
     return (
         <div className="min-h-screen bg-storm-to-dawn text-[var(--color-navy)]">
             {/* Hero Section */}
-            <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/15/10">
+ <section className="relative pt-24 pb-20 overflow-hidden border-b border-white/15/10">
                 <img
                     src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=1600&q=80&auto=format&fit=crop"
                     alt=""
@@ -82,7 +82,7 @@ export default function AccommodationPage() {
             </section>
 
             {/* Stats Quick View */}
-            <section className="py-12 bg-[var(--storm-deep)]/40 border-b border-[var(--color-rule)]">
+ <section className="sec-sm bg-[var(--storm-deep)]/40 border-b border-[var(--color-rule)]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-x divide-[var(--color-rule)]">
                         <div className="px-4">
@@ -110,7 +110,7 @@ export default function AccommodationPage() {
             </section>
 
             {/* amber marketplace CTA — static panel linking to our partner marketplace */}
-            <section id="listings" className="py-20 scroll-mt-24">
+ <section id="listings" className="sec scroll-mt-24">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative overflow-hidden rounded-3xl border-2 border-[var(--color-rule)] bg-white shadow-e-3">
                         <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-[var(--color-tint)] blur-[120px]" />
@@ -148,7 +148,7 @@ export default function AccommodationPage() {
             </section>
 
             {/* Popular Cities photo grid — visual destination teasers */}
-            <section className="py-20 bg-[var(--storm-deep)]/40 border-y border-white/15">
+ <section className="sec bg-[var(--storm-deep)]/40 border-y border-white/15">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12 max-w-2xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
@@ -200,7 +200,7 @@ export default function AccommodationPage() {
             </section>
 
             {/* Types of Accommodation */}
-            <section className="py-24">
+ <section className="sec">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
@@ -270,7 +270,7 @@ export default function AccommodationPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-20 border-t border-[var(--color-rule)]">
+ <section className="sec border-t border-[var(--color-rule)]">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-5">Not sure where to start?</h2>
                     <p className="text-lg text-[var(--color-navy)]/85 mb-8 max-w-2xl mx-auto">

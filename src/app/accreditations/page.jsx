@@ -39,7 +39,7 @@ export default function CertificationsPage() {
 
   return (
     <div className="min-h-screen text-[var(--color-navy)]">
-      <section className="relative py-24 lg:py-32 overflow-hidden">
+ <section className="relative sec overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
             src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?q=80&w=2400&auto=format&fit=crop"
@@ -64,7 +64,7 @@ export default function CertificationsPage() {
         </div>
       </section>
 
-      <section className="relative pb-24">
+ <section className="relative pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {certifications.map((cert) => (
@@ -127,7 +127,7 @@ export default function CertificationsPage() {
         ))}
       </div>
 
-      <section className="py-20 relative">
+ <section className="sec relative">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-5">
             Want to verify any of these?

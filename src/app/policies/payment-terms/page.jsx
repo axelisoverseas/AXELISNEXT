@@ -30,7 +30,7 @@ export default function PaymentTermsPage() {
   return (
     <main className="min-h-screen text-[var(--color-navy)]">
       {/* HERO */}
-      <section className="relative pt-28 lg:pt-32 pb-12 border-b border-[var(--color-rule)]">
+ <section className="relative pt-28 lg:pt-32 pb-12 border-b border-[var(--color-rule)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <p className="text-sm font-semibold uppercase tracking-wider text-[var(--color-axelis)] mb-4">
             Payment Terms
@@ -60,7 +60,7 @@ export default function PaymentTermsPage() {
       </section>
 
       {/* CONSENT — first, because it is the thing being agreed */}
-      <section className="relative py-12 border-b border-[var(--color-rule)]">
+ <section className="relative sec-sm border-b border-[var(--color-rule)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border-2 border-[var(--color-axelis)]/35 bg-[var(--dawn-glow)]/[0.07] p-6 md:p-8">
             <h2 className="text-2xl font-bold text-[var(--color-navy)] tracking-tight mb-3">{consent.heading}</h2>
@@ -85,7 +85,7 @@ export default function PaymentTermsPage() {
       </section>
 
       {/* UNIVERSAL TERMS */}
-      <section className="relative py-12 border-b border-[var(--color-rule)]">
+ <section className="relative sec-sm border-b border-[var(--color-rule)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight mb-2">
             Terms that apply to everything
@@ -105,7 +105,7 @@ export default function PaymentTermsPage() {
       </section>
 
       {/* PER SERVICE */}
-      <section className="relative py-12 border-b border-[var(--color-rule)]">
+ <section className="relative sec-sm border-b border-[var(--color-rule)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight mb-2">
             Service by service
@@ -188,7 +188,7 @@ export default function PaymentTermsPage() {
       </section>
 
       {/* FULL POLICY + CONTACT */}
-      <section className="relative py-14">
+ <section className="relative sec-sm">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border-2 border-[var(--color-rule)] bg-white border border-[var(--color-rule)] p-7 md:p-8">
             <h2 className="text-2xl font-bold text-[var(--color-navy)] tracking-tight mb-3">

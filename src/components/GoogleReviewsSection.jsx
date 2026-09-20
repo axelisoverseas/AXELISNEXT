@@ -42,7 +42,7 @@ export default function GoogleReviewsSection({ compact = false }) {
     const shown = verifiedReviews.slice(0, compact ? 3 : 6);
 
     return (
-        <section className={`relative ${compact ? 'py-14' : 'py-20'} border-t border-[var(--color-rule)]`}>
+ <section className={`relative ${compact ? 'sec-sm' : 'sec'} border-t border-[var(--color-rule)]`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section header — Google-branded */}
                 <div className="text-center mb-10 max-w-2xl mx-auto">

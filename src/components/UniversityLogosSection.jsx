@@ -15,7 +15,7 @@ const [col1, col2, col3, col4] = splitInto(universityLogos, 4);
 
 export default function UniversityLogosSection() {
   return (
-    <section className="bg-transition-sky py-24 relative overflow-hidden">
+ <section className="bg-transition-sky sec relative overflow-hidden">
       {/* Hero-sized heading, full-bleed centered */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

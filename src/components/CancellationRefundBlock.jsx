@@ -12,7 +12,7 @@ import { refundPolicy, formatINR } from '../data/certificationPrograms';
  */
 export default function CancellationRefundBlock() {
   return (
-    <section id="cancellation-refund" className="relative py-14 scroll-mt-24">
+ <section id="cancellation-refund" className="relative sec-sm scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-6 md:p-8 shadow-e-3">
           <div className="flex items-start gap-4">

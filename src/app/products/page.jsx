@@ -62,7 +62,7 @@ function ProductsContent() {
   return (
     <div className="min-h-screen text-[var(--color-navy)]">
       {/* HERO */}
-      <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
+ <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
             src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=2400&auto=format&fit=crop"
@@ -126,7 +126,7 @@ function ProductsContent() {
       </section>
 
       {/* TRUST BAND — DPIIT / British Council / AIRC */}
-      <section className="relative py-10 border-y border-[var(--color-rule)]">
+ <section className="relative py-10 border-y border-[var(--color-rule)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
             <p className="text-xs text-[var(--color-dim)] font-semibold">
@@ -143,7 +143,7 @@ function ProductsContent() {
       </section>
 
       {/* PLANS — two charters: GAC and EPC */}
-      <section id="plans" className="relative py-20 scroll-mt-24">
+ <section id="plans" className="relative sec scroll-mt-24">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px]" />
           <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--dawn-glow)]/8 rounded-full blur-[120px]" />
@@ -367,7 +367,7 @@ function ProductsContent() {
       </section>
 
       {/* COMPARISON TABLE — GAC vs EPC */}
-      <section id="comparison" className="relative py-16 scroll-mt-24">
+ <section id="comparison" className="relative sec-sm scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
             <h2 className="text-2xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">
@@ -417,7 +417,7 @@ function ProductsContent() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="relative py-20">
+ <section className="relative sec">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
@@ -447,7 +447,7 @@ function ProductsContent() {
       </section>
 
       {/* REAL PROOF GALLERY — payments + declarations + visas (PII redacted) */}
-      <section className="relative py-20">
+ <section className="relative sec">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
@@ -590,7 +590,7 @@ function ProductsContent() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="relative py-24">
+ <section className="relative sec">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="glass-panel p-12 md:p-16 text-center">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">

@@ -125,7 +125,7 @@ export default function UniversityFinder() {
   }, [query, filter]);
 
   return (
-    <section className="bg-white px-6 py-14 sm:py-20">
+ <section className="bg-white px-6 sec-sm ">
       <div className="mx-auto max-w-6xl">
         <div className="relative max-w-sm">
           <label htmlFor="university-search" className="sr-only">Search universities</label>

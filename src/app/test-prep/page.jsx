@@ -212,7 +212,7 @@ export default function TestPrepPage() {
   return (
     <div className="min-h-screen text-[var(--color-navy)]">
       {/* HERO */}
-      <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
+ <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
             src="https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=1600&q=80&auto=format&fit=crop"
@@ -275,7 +275,7 @@ export default function TestPrepPage() {
       </section>
 
       {/* EXAM STRIP */}
-      <section className="relative py-14">
+ <section className="relative sec-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-center text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight mb-10">
             Every test you need, under one roof.
@@ -293,7 +293,7 @@ export default function TestPrepPage() {
       </section>
 
       {/* TRACKS + PRICING */}
-      <section id="tracks" className="relative py-20 scroll-mt-24">
+ <section id="tracks" className="relative sec scroll-mt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
@@ -391,7 +391,7 @@ export default function TestPrepPage() {
       </section>
 
       {/* OFFERINGS */}
-      <section className="relative py-20">
+ <section className="relative sec">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
@@ -414,7 +414,7 @@ export default function TestPrepPage() {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="relative py-20">
+ <section className="relative sec">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
@@ -438,7 +438,7 @@ export default function TestPrepPage() {
       </section>
 
       {/* FAQ */}
-      <section className="relative py-20">
+ <section className="relative sec">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
@@ -470,7 +470,7 @@ export default function TestPrepPage() {
       </section>
 
       {/* FINAL CTA */}
-      <section className="relative py-20">
+ <section className="relative sec">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
             Not sure which exam to take?

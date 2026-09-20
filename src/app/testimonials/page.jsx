@@ -183,7 +183,7 @@ export default function TestimonialsPage() {
 
   return (
     <div className="min-h-screen text-[var(--color-navy)]">
-      <section className="relative py-20 lg:py-28 overflow-hidden">
+ <section className="relative sec overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
             src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?w=2400&q=80&auto=format&fit=crop"
@@ -228,7 +228,7 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      <section className="relative pb-20">
+ <section className="relative pb-20">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
             <div className="lg:sticky lg:top-28">
@@ -274,7 +274,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Video reviews — students who filmed a thank-you on camera */}
-      <section className="relative py-16">
+ <section className="relative sec-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-3 inline-flex items-center gap-3">
@@ -328,7 +328,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Recent placements — visa-received students without a written quote yet */}
-      <section className="relative py-16">
+ <section className="relative sec-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-3 inline-flex items-center gap-3">
@@ -365,7 +365,7 @@ export default function TestimonialsPage() {
       </section>
 
       {/* Proof gallery — payments, declarations, visas, transfers (PII redacted) */}
-      <section className="relative py-20">
+ <section className="relative sec">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] mb-4 tracking-tight">
@@ -498,7 +498,7 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      <section className="py-20 relative">
+ <section className="sec relative">
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-navy)]">
             Ready to write <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">yours?</span>

@@ -133,7 +133,7 @@ export default function CertificationsPage() {
   return (
     <div className="min-h-screen text-[var(--color-navy)]">
       {/* ---------------------------------------------------------------- HERO */}
-      <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
+ <section className="relative pt-28 lg:pt-32 pb-20 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <img
             src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=2400&auto=format&fit=crop"
@@ -186,7 +186,7 @@ export default function CertificationsPage() {
       </section>
 
       {/* ------------------------------------------------------- PROGRAMMES */}
-      <section id="programmes" className="relative py-20 scroll-mt-24">
+ <section id="programmes" className="relative sec scroll-mt-24">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* One block per populated tier. Concierge runs full-width rows;
@@ -212,7 +212,7 @@ export default function CertificationsPage() {
       </section>
 
       {/* ------------------------------------------------------- FINANCING */}
-      <section id="financing" className="relative py-16 scroll-mt-24">
+ <section id="financing" className="relative sec-sm scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-7 md:p-9 shadow-e-3">
             <div className="flex items-start gap-4 mb-5">
@@ -243,7 +243,7 @@ export default function CertificationsPage() {
       </section>
 
       {/* ---------------------------------------------------- ENQUIRY FORM */}
-      <section id="enquire" className="relative py-20 scroll-mt-24 border-t border-[var(--color-rule)]">
+ <section id="enquire" className="relative sec scroll-mt-24 border-t border-[var(--color-rule)]">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-10 items-start">
             <div className="lg:col-span-2">

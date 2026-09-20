@@ -294,6 +294,25 @@ body {
   box-shadow: 0 22px 50px -28px rgba(47, 103, 149, 0.45);
 }
 
+/* ---- Section rhythm ---------------------------------------------------
+   Vertical space was the least systematic thing left: sections ran from
+   48px to 128px with nothing deciding which got what. A reference build
+   (metabase.com, measured) runs 80-140px and reads composed because the
+   figure repeats, not because it is large.
+
+   Three steps, fluid, so the rhythm holds from phone to desktop without a
+   breakpoint for every section. §4 of the brand book governs leading and
+   tracking and says nothing about spacing, so this fills a gap rather than
+   overriding an approved value. */
+.sec    { padding-block: clamp(3.5rem, 7vw, 7rem); }    /*  56 - 112px  default */
+.sec-sm { padding-block: clamp(2.75rem, 5vw, 5rem); }   /*  44 -  80px  tighter */
+.sec-lg { padding-block: clamp(4.5rem, 9vw, 8.75rem); } /*  72 - 140px  openers */
+
+/* The measure a section's content sits in. Six different max-widths were in
+   use; these are the two that earn their place. */
+.hold     { width: 100%; max-width: 1200px; margin-inline: auto; }
+.hold-narrow { width: 100%; max-width: 760px; margin-inline: auto; }
+
 /* Bolt pulse */
 @keyframes bolt-pulse {
   0%, 100% { filter: drop-shadow(0 0 4px var(--storm-accent-glow)); }

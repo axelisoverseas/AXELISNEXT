@@ -59,7 +59,7 @@ export default function ScholarshipFinder() {
   ].filter(Boolean);
 
   return (
-    <section id="finder" className="py-20 bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
+ <section id="finder" className="sec bg-gradient-to-b from-white to-slate-50 border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-10">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-stone-50 border border-stone-100 text-stone-950 text-sm font-semibold mb-4">

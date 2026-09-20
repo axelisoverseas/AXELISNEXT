@@ -32,7 +32,7 @@ export default function FinancingBlock({ program }) {
   const headlineTenure = emiTenure(program);
 
   return (
-    <section id="financing" className="relative py-16 scroll-mt-24">
+ <section id="financing" className="relative sec-sm scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight mb-2">
           Programme fee and financing

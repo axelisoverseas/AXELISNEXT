@@ -19,7 +19,7 @@ export const metadata = {
 
 function Section({ id, children, className = '' }) {
   return (
-    <section id={id} className={`relative py-16 scroll-mt-24 ${className}`}>
+ <section id={id} className={`relative sec-sm scroll-mt-24 ${className}`}>
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">{children}</div>
     </section>
   );
@@ -32,7 +32,7 @@ export default function VocationalPage() {
   return (
     <main className="min-h-screen text-[var(--color-navy)]">
       {/* HERO */}
-      <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-white/15">
+ <section className="relative pt-28 lg:pt-32 pb-16 overflow-hidden border-b border-white/15">
         <div aria-hidden="true" className="absolute inset-0 z-0 pointer-events-none">
           <img
             src="https://images.unsplash.com/photo-1587330979470-3595ac045ab0?q=80&w=2400&auto=format&fit=crop"

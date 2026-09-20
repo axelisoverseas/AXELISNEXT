@@ -19,7 +19,7 @@ const thirdColumn = normalized.slice(8, 12);
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-slate-50 py-24 relative border-t border-slate-200">
+ <section className="bg-slate-50 sec relative border-t border-slate-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

@@ -26,7 +26,7 @@ const ASSURANCES = [
 
 export default function TrustBand() {
   return (
-    <section className="relative py-16 border-t border-[var(--color-rule)]" aria-labelledby="trust-heading">
+ <section className="relative sec-sm border-t border-[var(--color-rule)]" aria-labelledby="trust-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 id="trust-heading" className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] tracking-tight mb-2">
           Why you can check us

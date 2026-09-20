@@ -19,7 +19,7 @@ export default function BookingsPage() {
 
   return (
     <div className="min-h-screen bg-storm-to-dawn">
-      <section className="bg-gradient-to-br from-[var(--storm-deep)] via-[var(--storm-abyss)] to-[var(--dawn-horizon)] text-white pt-28 pb-16">
+ <section className="bg-gradient-to-br from-[var(--storm-deep)] via-[var(--storm-abyss)] to-[var(--dawn-horizon)] text-white pt-28 pb-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-4">
             <TextEffect as="span" per="word" preset="blur">Book a</TextEffect>{' '}
@@ -36,7 +36,7 @@ export default function BookingsPage() {
         </div>
       </section>
 
-      <section className="py-12">
+ <section className="sec-sm">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl shadow-e-3 border border-slate-200 overflow-hidden">
             <div

@@ -39,7 +39,7 @@ const FAQPage = () => {
   return (
     <div className="min-h-screen bg-storm-to-dawn">
       {/* Premium Hero Section */}
-      <section className="relative pt-32 pb-24 bg-[var(--storm-deep)] border-b border-[var(--storm-electric)]/10 overflow-hidden">
+ <section className="relative pt-32 pb-24 bg-[var(--storm-deep)] border-b border-[var(--storm-electric)]/10 overflow-hidden">
         {/* Abstract Background Elements */}
         <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
           <div className="absolute top-20 left-10 w-64 h-64 bg-[var(--color-axelis)] rounded-full blur-3xl"></div>
@@ -99,7 +99,7 @@ const FAQPage = () => {
       </section>
 
       {/* Main Content Area */}
-      <section className="py-24 bg-slate-50">
+ <section className="sec bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-12">
             
