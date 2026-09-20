@@ -6,7 +6,6 @@ import dynamic from 'next/dynamic';
 import { ArrowRight, Star, MapPin, GraduationCap, Play, BadgeCheck } from 'lucide-react';
 import { testimonials as allTestimonials } from '../../data/siteData';
 import InstagramFeed from '../../components/InstagramFeed';
-import WebGLBoundary from '../../components/WebGLBoundary';
 
 // Show only testimonials with a real student photo. Entries that fall back to
 // auto-generated initials avatars (ui-avatars.com) are placeholders, not real
@@ -52,17 +51,6 @@ const GoogleReviewsFloat = dynamic(() => import('../../components/GoogleReviewsF
 const InstagramSuccessStories = dynamic(() => import('../../components/InstagramSuccessStories'), { ssr: false });
 const GoogleReviewsSection = dynamic(() => import('../../components/GoogleReviewsSection'), { ssr: false });
 
-const TestimonialRealisticGlobe = dynamic(
-  () => import('../../components/TestimonialRealisticGlobe'),
-  {
-    ssr: false,
-    loading: () => (
-      <div className="w-full h-[500px] rounded-2xl glass-storm flex items-center justify-center">
-        <div className="animate-spin h-12 w-12 border-2 border-[var(--color-rule)]/40 border-t-[var(--storm-electric)] rounded-full" />
-      </div>
-    ),
-  }
-);
 
 const countryFlags = {
   USA: '🇺🇸', UK: '🇬🇧', Canada: '🇨🇦', Australia: '🇦🇺',
@@ -151,14 +139,6 @@ function TestimonialCard({ testimonial, index, onCountryFocus }) {
 }
 
 export default function TestimonialsPage() {
-  const globeRef = useRef(null);
-
-  const handleCountryFocus = useCallback((country) => {
-    if (!globeRef.current) return;
-    if (country) globeRef.current.focusOnCountry(country);
-    else globeRef.current.clearCountryFocus();
-  }, []);
-
   useEffect(() => {
     const handler = (event) => {
       const { testimonial } = event.detail || {};
@@ -232,40 +212,21 @@ export default function TestimonialsPage() {
 
  <section className="relative pb-20">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-            <div className="lg:sticky lg:top-28">
-              <WebGLBoundary
-                fallback={
-                  <div className="rounded-[var(--radius-xl)] border border-[var(--color-rule)] bg-[var(--color-tint)] p-8 text-center">
-                    <p className="text-sm text-[var(--color-dim)]">
-                      Students placed across 29 destinations. The stories are listed beside this.
-                    </p>
-                  </div>
-                }
-              >
-                <TestimonialRealisticGlobe
-                  ref={globeRef}
-                  testimonials={testimonials}
-                  onCountryFocus={handleCountryFocus}
-                />
-              </WebGLBoundary>
-            </div>
-
+          <div>
             <div className="relative">
               <div className="mb-6">
                 <h2 className="text-2xl md:text-3xl font-bold text-[var(--color-navy)] mb-2">
                   Real student <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">experiences</span>
                 </h2>
-                <p className="text-[var(--color-navy)]/80 text-sm">Hover a card to rotate the globe to that country.</p>
+                <p className="text-[var(--color-navy)]/80 text-sm">Named students, signed declarations, verifiable visas.</p>
               </div>
 
-              <div className="testimonial-scroller space-y-4 max-h-[640px] overflow-y-auto pr-2 scrollbar-thin">
+              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
                 {testimonials.map((t, i) => (
                   <TestimonialCard
                     key={t.id}
                     testimonial={t}
                     index={i}
-                    onCountryFocus={handleCountryFocus}
                   />
                 ))}
               </div>

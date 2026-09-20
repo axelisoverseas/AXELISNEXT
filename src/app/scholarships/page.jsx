@@ -28,9 +28,6 @@ export default function ScholarshipsPage() {
                 <div className="absolute top-0 right-0 w-96 h-96 bg-[var(--color-axelis)]/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-                    <span className="inline-block px-4 py-1 bg-yellow-500/10 text-yellow-400 font-bold text-sm tracking-wide rounded-full mb-6 border border-yellow-500/20">
-                        Financial Support
-                    </span>
                     <h1 className="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">
                         <TextEffect as="span" per="word" preset="blur">Global</TextEffect>{' '}
                         <span className="text-white">
@@ -147,7 +144,7 @@ export default function ScholarshipsPage() {
                         <div className="bg-white p-8 rounded-2xl shadow-e-1 border border-slate-100 overflow-hidden">
                             <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
                                 <img
-                                    src="/photos/photo-1607013251379-e6eecfffe234-1200.jpg"
+                                    src="/photos/photo-1541339907198-e08756dedf3f-1200.jpg"
                                     alt=""
                                     aria-hidden="true"
                                     loading="lazy"

@@ -48,7 +48,6 @@ export const universityLogos = [
   { name: 'Australian National University', country: 'Australia', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/5/5f/Australian_National_University_coat_of_arms.svg/250px-Australian_National_University_coat_of_arms.svg.png' },
   { name: 'UNSW Sydney', country: 'Australia', image: 'https://upload.wikimedia.org/wikipedia/en/6/6e/University_of_New_South_Wales_Crest_Variant_2022.png' },
   { name: 'University of Queensland', country: 'Australia', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/7/76/University_of_Queensland_%28crest%29.svg/330px-University_of_Queensland_%28crest%29.svg.png' },
-  { name: 'Monash University', country: 'Australia', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Arms_of_Monash_University.svg/4096px-Arms_of_Monash_University.svg.png' },
 
   // Germany
   { name: 'Technical University of Munich', country: 'Germany', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/Logo_of_the_Technical_University_of_Munich.svg/500px-Logo_of_the_Technical_University_of_Munich.svg.png' },
@@ -130,7 +129,6 @@ export const universityLogos = [
   // Hong Kong
   { name: 'University of Hong Kong', country: 'Hong Kong', image: 'https://upload.wikimedia.org/wikipedia/en/5/5e/University_of_Hong_Kong_coat_of_arms.png' },
   { name: 'HKUST', country: 'Hong Kong', image: 'https://upload.wikimedia.org/wikipedia/en/thumb/8/85/Hong_Kong_University_of_Science_and_Technology_symbol.svg/330px-Hong_Kong_University_of_Science_and_Technology_symbol.svg.png' },
-  { name: 'Chinese University of Hong Kong', country: 'Hong Kong', image: 'https://upload.wikimedia.org/wikipedia/en/0/09/CUHK_Coat_of_Arms.png' },
 
   // Japan
   { name: 'University of Tokyo', country: 'Japan', image: 'https://upload.wikimedia.org/wikipedia/commons/f/fa/2024_Yasuda_Auditorium_-_Tokyo_University.jpg' },
@@ -156,7 +154,6 @@ export const universityLogos = [
   { name: 'Charles University', country: 'Czech Republic', image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Charles-University-symbol-4.svg/330px-Charles-University-symbol-4.svg.png' },
 
   // Hungary
-  { name: 'Central European University', country: 'Hungary', image: 'https://upload.wikimedia.org/wikipedia/commons/4/45/CEU_Primary-Logo_RGB_DualColor.png' },
   { name: 'Eötvös Loránd University', country: 'Hungary', image: 'https://upload.wikimedia.org/wikipedia/en/a/af/ELTE_logo.png' },
 
   // Lithuania

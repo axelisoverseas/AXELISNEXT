@@ -59,7 +59,7 @@ export default function ServicesPage() {
             </h2>
             <p className="text-[var(--color-navy)]/85 max-w-3xl mb-8">{g.intro}</p>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-start">
               {g.services.map((s) => (
                 <div
                   key={s.name}
