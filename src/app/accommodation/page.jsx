@@ -73,7 +73,7 @@ export default function AccommodationPage() {
                         </Link>
                         <Link
                             href="/contact"
-                            className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
+                            className="inline-flex justify-center items-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
                         >
                             Get free housing assistance
                         </Link>

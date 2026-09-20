@@ -225,7 +225,7 @@ export default async function ProgramPage({ params }) {
                 </Link>
                 <Link
                   href="/bookings"
-                  className="inline-flex justify-center items-center px-7 py-3.5 glass-storm text-white font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
+                  className="inline-flex justify-center items-center px-7 py-3.5 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
                 >
                   Book a discovery call
                 </Link>

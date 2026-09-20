@@ -266,7 +266,7 @@ export default function TestPrepPage() {
             </Link>
             <Link
               href="/bookings"
-              className="inline-flex items-center justify-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
+              className="inline-flex items-center justify-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
             >
               Book a free demo
             </Link>

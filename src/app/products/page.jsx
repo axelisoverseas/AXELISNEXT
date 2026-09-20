@@ -103,7 +103,7 @@ function ProductsContent() {
             </Link>
             <Link
               href="/bookings"
-              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-white font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
+              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-all hover:text-[var(--color-axelis)]"
             >
               Free first call
             </Link>
@@ -116,7 +116,7 @@ function ProductsContent() {
               { Icon: Award, label: '₹3 Cr+ scholarships' },
               { Icon: ShieldCheck, label: 'Refundable deposit' },
             ].map(({ Icon, label }) => (
-              <div key={label} className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-white text-sm font-semibold">
+              <div key={label} className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-[var(--color-navy)] text-sm font-semibold">
                 <Icon size={16} className="text-[var(--color-axelis)] shrink-0" />
                 <span>{label}</span>
               </div>

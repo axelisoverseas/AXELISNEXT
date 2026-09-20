@@ -220,7 +220,7 @@ const Navbar = () => {
           }`}
       >
         <div
-          className="fixed inset-0 bg-[var(--color-tint)]/40 backdrop-blur-sm transition-opacity"
+          className="fixed inset-0 bg-[var(--color-navy)]/40 backdrop-blur-sm transition-opacity"
           onClick={() => setIsOpen(false)}
         />
 

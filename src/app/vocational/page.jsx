@@ -66,7 +66,7 @@ export default function VocationalPage() {
             </Link>
             <Link
               href="#costs"
-              className="inline-flex justify-center items-center gap-2 px-7 py-3.5 glass-storm text-white font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
+              className="inline-flex justify-center items-center gap-2 px-7 py-3.5 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
             >
               What it costs, in full
             </Link>

@@ -28,11 +28,11 @@ export default function AboutPage() {
                     {/* Minimal Logo Integration */}
                     <div className="mb-10 flex justify-center">
                         <Image
-                            src="/1yellow svg logoaxelis.svg"
+                            src="/1navy svg logoaxelis.svg"
                             alt="Axelis Overseas Logo"
                             width={180}
                             height={60}
-                            className="brightness-0 invert opacity-90"
+                            className="opacity-90"
                         />
                     </div>
                     <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] mb-6 tracking-tight text-balance">
