@@ -1,7 +1,12 @@
 # overseeducation.com — palette work, split across two MacBooks
 
-Foundation is committed on branch `brand/d2c-palette` (`6d07b4b`). **Pull it
-before starting.** It sets the ground, the tokens and the focus ring. What is
+> ## Do not merge this branch to `main` until BOTH halves are done.
+>
+> `main` is untouched and production still serves the old site — keep it that
+> way. Half-converted, this branch renders light-on-light text on pages that
+> take money. It is safe as a branch and unsafe as a deploy.
+
+Foundation is on branch `brand/d2c-palette`. **Pull it before starting.** It sets the ground, the tokens and the focus ring. What is
 left is per-file, and it is the larger half.
 
 ## Why a white ground
@@ -38,7 +43,12 @@ then convert. Roughly 2,055 literals across ~105 files.
 
 Already handled globally by the foundation — do not redo:
 `text-[var(--storm-deep)]` (now `text-white` on fills), the white→accent CTA
-gradients, and the focus ring.
+gradients, the focus ring, the `<body>` ground in `layout.js`, and the fixed
+starfield wallpaper (removed — it was a dark-ground device).
+
+Machine A has also already converted the money path: `CheckoutButton`,
+`ServiceCheckout`, `DocumentUpload`, `/policies/payment-terms`,
+`/policies/cancellation-refund`, `/delivery-policy`.
 
 ## Three traps
 
@@ -92,6 +102,21 @@ AdminLogin · data/certificationPrograms.js
 
 `SpecimenCertificate.jsx:23` carries a hardcoded `#17140F`/`#0C0A09` gradient —
 the last literal of the old palette. Machine B owns it.
+
+## Components and their host pages are coupled
+
+The file lists don't overlap, but what renders inside what does. A converted
+component dropped into an unconverted page looks wrong until both land — a
+white stepper on a navy card, for example. That is expected mid-flight and is
+**not** a bug to chase:
+
+| Machine A component | renders inside (Machine B) |
+|---|---|
+| `ServiceCheckout` | `/services` |
+| `CheckoutButton` | `/products`, `/certifications` |
+| `DocumentUpload` | `/services`, `/certifications` |
+
+Judge a page only once both halves have landed.
 
 ## Working agreement
 
