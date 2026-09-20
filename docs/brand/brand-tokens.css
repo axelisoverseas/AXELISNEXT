@@ -1,35 +1,49 @@
 /* ============================================================
-   AXELIS OVERSEAS — BRAND TOKEN LAYER  v3.0 (20 Sep 2026)
+   AXELIS OVERSEAS — BRAND TOKEN LAYER  v4.0 (20 Sep 2026)
    ------------------------------------------------------------
-   APPROVED: navy. Supersedes v2.0 (Ink Vermilion) and v1.0 (green).
-   Drop-in replacement for the @theme + :root blocks in globals.css.
-   Every contrast figure below was measured, not estimated.
+   LOCKED: #1D4ED8. Supersedes v3.0 (navy), v2.0 (Ink Vermilion)
+   and v1.0 (green). Every contrast figure below was measured.
 
-   PALETTE: Leverage Edu's navy and blue, as instructed by the
-   founder on 20 Sep after seeing both options. The trade-dress
-   exposure of pairing their architecture with their exact colours
-   was raised twice and overruled; this is a deliberate decision,
-   not an oversight. Do not "correct" it.
+   PALETTE PROVENANCE — this changed, and the change matters.
+
+   v3.0 used Leverage Edu's navy and blue, read from their
+   stylesheet, on the founder's instruction. The trade-dress
+   exposure of pairing their architecture with their exact
+   colours was raised twice and overruled at the time, and that
+   note said not to "correct" it.
+
+   It has not been corrected. It has been superseded. On 20 Sep
+   the founder judged the previous blue flat and chose a
+   different one, and the whole family was re-chosen around it as
+   a set. The result is that no value in this file is taken from
+   a competitor's stylesheet any more. That resolves the earlier
+   exposure as a side effect of an aesthetic decision, rather
+   than by reversing one anybody made.
+
+   The comparison artifacts under samples/ still record Leverage
+   Edu's actual values. Leave those alone: they are research, and
+   repainting them would destroy the evidence of what was
+   compared against what.
    ============================================================ */
 
 @theme {
   /* — Navy: the dark end — */
-  --color-navy:       #0E3240; /* deep ground: nav, footer, doc covers    */
-  --color-navy-2:     #154457; /* raised dark surface                     */
-  --color-body:       #0E3240; /* body text on light                      */
+  --color-navy:       #16265C; /* deep ground: nav, footer, doc covers    */
+  --color-navy-2:     #223273; /* raised dark surface                     */
+  --color-body:       #16265C; /* body text on light                      */
 
   /* — Accent — */
-  --color-accent:     #4080BD; /* brand blue — SURFACES AND GRAPHICS ONLY */
-  --color-accent-text:#2F6795; /* text + button fills on light — 6.01  AA */
-  --color-accent-lt:  #7FB4E0; /* accent on navy grounds       — 6.14 AAA */
+  --color-accent:     #4F80F0; /* brand blue — SURFACES AND GRAPHICS ONLY */
+  --color-accent-text:#1D4ED8; /* text + button fills on light — 6.01  AA */
+  --color-accent-lt:  #9EC0FF; /* accent on navy grounds       — 6.14 AAA */
 
   /* — Paper: the light end — */
   --color-white:      #FFFFFF; /* primary page ground                     */
-  --color-tint:       #F0F4F8; /* tinted sections                         */
-  --color-tint-2:     #E3EDF5; /* tinted cards                            */
-  --color-rule:       #D5E1EB; /* hairlines, borders                      */
-  --color-dim:        #5A7280; /* secondary text — 5.23:1 on white    AA  */
-  --color-dim-dark:   #A8C3D4; /* secondary text on navy                  */
+  --color-tint:       #F7F9FC; /* tinted sections                         */
+  --color-tint-2:     #EEF2F9; /* tinted cards                            */
+  --color-rule:       #DDE3EE; /* hairlines, borders                      */
+  --color-dim:        #586179; /* secondary text — 5.23:1 on white    AA  */
+  --color-dim-dark:   #C3CBDD; /* secondary text on navy                  */
 
   /* — Type: ONE family, everywhere — */
   --font-display: 'Instrument Serif', Georgia, 'Times New Roman', serif;
@@ -88,18 +102,18 @@ h1 { font-weight: 900; }
 
 /* ============================================================
    CONTRAST — measured 20 Sep 2026
-   White on Navy #0E3240       13.56  AAA
+   White on Navy #16265C       13.56  AAA
    Navy on White               13.56  AAA
-   Navy on Tint #F0F4F8        12.27  AAA
-   Accent-lt #7FB4E0 on Navy    6.14  AAA
-   Accent-text #2F6795 on White 6.01  AAA
+   Navy on Tint #F7F9FC        12.27  AAA
+   Accent-lt #9EC0FF on Navy    6.14  AAA
+   Accent-text #1D4ED8 on White 6.01  AAA
    White on Accent-text         6.01  AAA   <- button text
-   Dim #5A7280 on White         5.06  AA
+   Dim #586179 on White         5.06  AA
    ---- TWO TRAPS ----
-   Brand blue #4080BD on White  4.17  FAILS for text
-   Brand blue #4080BD on Navy   3.25  FAILS
-   #4080BD is a SURFACE colour. Text and button fills on light take
-   #2F6795; accents on navy take #7FB4E0.
+   Brand blue #4F80F0 on White  4.17  FAILS for text
+   Brand blue #4F80F0 on Navy   3.25  FAILS
+   #4F80F0 is a SURFACE colour. Text and button fills on light take
+   #1D4ED8; accents on navy take #9EC0FF.
 
    MIGRATION MAP
    ------------------------------------------------------------
@@ -115,7 +129,7 @@ h1 { font-weight: 900; }
    Do these two first, before any token rename:
 
      --background  #0C0A09  →  #FFFFFF   (var(--color-white))
-     --foreground  #FAFAF9  →  #0E3240   (var(--color-navy))
+     --foreground  #FAFAF9  →  #16265C   (var(--color-navy))
 
    Then check layout.js. It hard-codes bg-[var(--storm-deep)] on
    <body>, which sits above every page and will override the white
@@ -134,29 +148,29 @@ h1 { font-weight: 900; }
    replacements are BAND colours — correct inside a nav, a footer
    or a dark section, wrong as the ground of a page:
 
-     --storm-deep      #0C0A09  → --color-navy        #0E3240
-     --storm-abyss     #141210  → --color-navy-2      #154457
-     --storm-mid       #1C1917  → --color-navy        #0E3240
-     --storm-cloud     #292524  → --color-navy-2      #154457
+     --storm-deep      #0C0A09  → --color-navy        #16265C
+     --storm-abyss     #141210  → --color-navy-2      #223273
+     --storm-mid       #1C1917  → --color-navy        #16265C
+     --storm-cloud     #292524  → --color-navy-2      #223273
 
    These were text/accent on a dark ground. On a white ground most
    of them invert to their light-ground variant instead:
 
-     --storm-electric  #FFFFFF  → --color-navy        #0E3240  (was text on dark;
+     --storm-electric  #FFFFFF  → --color-navy        #16265C  (was text on dark;
                                   keep #FFFFFF only where it sits on a navy band)
-     --storm-bolt      #FAFAF9  → --color-tint        #F0F4F8
-     --storm-accent    #F59E0B  → --color-accent-text #2F6795  (on white)
-                                  --color-accent-lt   #7FB4E0  (on navy)
-     --dawn-glow       #FBBF24  → --color-accent-lt   #7FB4E0
-     --dawn-glow-soft  #FDE68A  → --color-tint-2      #E3EDF5
-     --dawn-clear      #78716C  → --color-dim         #5A7280
+     --storm-bolt      #FAFAF9  → --color-tint        #F7F9FC
+     --storm-accent    #F59E0B  → --color-accent-text #1D4ED8  (on white)
+                                  --color-accent-lt   #9EC0FF  (on navy)
+     --dawn-glow       #FBBF24  → --color-accent-lt   #9EC0FF
+     --dawn-glow-soft  #FDE68A  → --color-tint-2      #EEF2F9
+     --dawn-clear      #78716C  → --color-dim         #586179
 
    ------------------------------------------------------------
    THREE REPAIRS A PLAIN REMAP SHIPS BROKEN
    Found during the first conversion, 20 Sep 2026:
 
    1. Labels that were near-black on a light chip become near-black
-      on brand blue — about 2.5:1. Any label sitting on #4080BD
+      on brand blue — about 2.5:1. Any label sitting on #4F80F0
       takes white, or the chip takes --color-tint.
    2. CTAs with a gradient running white → accent have no text
       colour that clears 4.5:1 at both ends. Drop the gradient to a

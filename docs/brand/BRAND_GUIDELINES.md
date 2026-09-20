@@ -121,15 +121,18 @@ Full token layer: `brand-tokens.css`.
 
 | Token | Hex | Role |
 |---|---|---|
-| **Navy** | `#0E3240` | Deep ground — nav bands, footer, document covers |
-| **Navy 2** | `#154457` | Raised dark surface |
-| **Accent** | `#4080BD` | Accent and buttons on light grounds |
-| **Accent Dark** | `#2F6795` | Hover and pressed |
-| **Accent Light** | `#7FB4E0` | Accent on dark grounds |
+| **Navy** | `#16265C` | Deep ground: nav bands, footer, document covers |
+| **Navy 2** | `#223273` | Raised dark surface |
+| **Accent** | `#1D4ED8` | Text, links and button fills on light grounds |
+| **Accent Light** | `#9EC0FF` | Accent on dark grounds |
+| **Surface blue** | `#4F80F0` | Graphics, fills and rules only. Never text. |
 | **White** | `#FFFFFF` | Primary page ground |
-| **Tint** | `#F0F4F8` | Tinted sections |
-| **Tint 2** | `#E3EDF5` | Tinted cards |
-| **Rule** | `#D5E1EB` | Hairlines |
+| **Ink** | `#1B2233` | Headings |
+| **Dim** | `#586179` | Secondary text on light grounds |
+| **Dim dark** | `#C3CBDD` | Secondary text on navy |
+| **Tint** | `#F7F9FC` | Tinted sections |
+| **Tint 2** | `#EEF2F9` | Tinted cards |
+| **Rule** | `#DDE3EE` | Hairlines. Decorative only, never a control border. |
 | **Dim** | `#5A7280` | Secondary text on light |
 | **Dim dark** | `#A8C3D4` | Secondary text on navy |
 
@@ -147,19 +150,35 @@ accents on navy use `#7FB4E0`.
 
 | Pair | Ratio | Grade |
 |---|---|---|
-| White on Navy | 13.56 | AAA |
-| Navy on White | 13.56 | AAA |
-| Navy on Tint | 12.27 | AAA |
-| Accent light `#7FB4E0` on Navy | 6.14 | AAA |
-| Accent text `#2F6795` on White | 6.01 | AAA |
-| White on `#2F6795` | 6.01 | AAA |
-| Dim on White | 5.06 | AA |
-| **Brand blue `#4080BD` on White** | **4.17** | **FAILS for text** |
-| **Brand blue `#4080BD` on Navy** | **3.25** | **FAILS** |
+| White on Navy | 14.33 | AAA |
+| Navy on White | 14.33 | AAA |
+| Navy on Tint | 13.58 | AAA |
+| Ink `#1B2233` on White | 15.87 | AAA |
+| Accent light `#9EC0FF` on Navy | 7.80 | AAA |
+| Accent `#1D4ED8` on White | 6.70 | AA |
+| White on `#1D4ED8` | 6.70 | AA |
+| Dim `#586179` on White | 6.17 | AA |
+| Dim on Tint | 5.85 | AA |
+| **Surface blue `#4F80F0` on White** | **3.70** | **FAILS for body text** |
+| **Surface blue `#4F80F0` on Navy** | **3.87** | **FAILS for body text** |
 
-**Two traps, not one.** The brand blue fails as text on *both* grounds. Use it
-for surfaces, rules and graphics only. Text and button fills on light take
-`#2F6795`; accents on navy take `#7FB4E0`.
+**The surface blue fails as body text on both grounds.** At 3.70:1 on white
+and 3.87:1 on navy it clears the 3:1 floor for large text and UI components
+and nothing else, so it is bound to a token no text utility can reach. Text
+and button fills on light grounds take `#1D4ED8`; accents on navy take
+`#9EC0FF`.
+
+> ### The palette is locked
+>
+> `#1D4ED8` is the accent. Settled 20 September 2026 and not to be revisited
+> without a reason written down here. It replaced a muted steel blue that read
+> flat, and the whole family moved with it — a saturated accent against the
+> previous teal-ish navy clashed, so the navy, surface and on-dark values were
+> re-chosen as a set and every pairing above was measured before anything
+> shipped, not picked by eye.
+>
+> Both sites run these exact values from one token layer. If this table and a
+> running site ever disagree, the site is wrong.
 
 ### 5.2 The ground, and proportion
 

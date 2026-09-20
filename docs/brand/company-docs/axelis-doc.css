@@ -6,11 +6,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600;700&display=swap');
 
 :root{
-  --navy:#0E3240; --navy-2:#154457;
-  --accent:#4080BD;        /* brand blue — surfaces and graphics           */
-  --accent-text:#2F6795;   /* text and button fills on light — 6.01:1  AA  */
-  --accent-lt:#7FB4E0;     /* accent on navy grounds       — 6.14:1  AAA   */
-  --white:#FFFFFF; --tint:#F0F4F8; --tint-2:#E3EDF5; --rule:#D5E1EB; --dim:#5A7280;
+  --navy:#16265C; --navy-2:#223273;
+  --accent:#4F80F0;        /* brand blue — surfaces and graphics           */
+  --accent-text:#1D4ED8;   /* text and button fills on light — 6.01:1  AA  */
+  --accent-lt:#9EC0FF;     /* accent on navy grounds       — 6.14:1  AAA   */
+  --white:#FFFFFF; --tint:#F7F9FC; --tint-2:#EEF2F9; --rule:#DDE3EE; --dim:#586179;
   --serif:'Instrument Serif',Georgia,'Times New Roman',serif;
   --font:'Instrument Sans',-apple-system,BlinkMacSystemFont,sans-serif;
 }
