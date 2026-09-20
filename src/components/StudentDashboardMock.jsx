@@ -153,7 +153,7 @@ const StudentDashboardMock = () => {
                                     </div>
                                     <h5 className="font-black text-lg mb-2 relative z-10">Counsellor Assigned</h5>
                                     <p className="text-sm font-medium mb-4 relative z-10">Ananya Sharma is reviewing your visa file.</p>
-                                    <button className="relative z-10 w-full py-2 bg-slate-950 text-[var(--color-navy)] rounded-xl font-bold text-sm shadow hover:bg-[var(--color-tint)] transition-colors">
+                                    <button className="relative z-10 w-full py-2 bg-slate-950 text-white rounded-xl font-bold text-sm shadow hover:bg-[var(--color-tint)] transition-colors">
                                         Message Counsellor
                                     </button>
                                 </div>

@@ -575,6 +575,67 @@ function ProductsContent() {
         </div>
       </section>
 
+      {/* THE WIDER OFFERING, as a bento grid.
+          The site sells more than two charters, but /products showed only the
+          charters, so the rest of the catalogue was invisible from the page
+          people land on to buy. Bento is the right structure here: unequal
+          tiles let the two charters dominate while the supporting products
+          stay visible, which is the actual hierarchy. */}
+      <section className="relative sec border-t border-[var(--color-rule)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <p className="label">The full catalogue</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl font-extrabold tracking-tight text-[var(--color-navy)]">
+              A charter gets you in. These get you through.
+            </h2>
+            <p className="mt-4 text-lg text-[var(--color-dim)] measure">
+              Everything below is priced separately and published. Most of it is already
+              included in a charter, and where it is not, you will see the figure before
+              you decide.
+            </p>
+          </div>
+
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+            {CATALOGUE.map((c) => (
+              <Link
+                key={c.href + c.title}
+                href={c.href}
+                className={`group relative flex flex-col justify-between rounded-[var(--radius-xl)] border border-[var(--color-rule)] bg-white p-6 transition-colors hover:border-[var(--color-axelis)] ${c.span || ''}`}
+              >
+                <div>
+                  <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--color-axelis)]">
+                    {c.kicker}
+                  </span>
+                  <h3 className="mt-2.5 text-lg font-bold leading-snug text-[var(--color-navy)]">
+                    {c.title}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-[var(--color-dim)]">{c.body}</p>
+                </div>
+                <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-axelis)]">
+                  {c.cta}
+                  <ArrowRight size={14} aria-hidden="true" className="transition-transform group-hover:translate-x-0.5" />
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          {/* Certifications. The design pass flagged their absence from a
+              purchase page as an anti-pattern for this product type, and they
+              were footer-only until now. */}
+          <div className="mt-10 flex flex-col gap-5 rounded-[var(--radius-xl)] border border-[var(--color-rule)] bg-[var(--color-tint)] p-6 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-sm font-semibold text-[var(--color-navy)]">
+              Independently certified, and you can check each one.
+            </p>
+            <Link href="/accreditations" className="flex flex-wrap items-center gap-7">
+              <img src="/logos/dppit logo.png" width={47} height={32} alt="DPIIT Startup India" className="h-8 w-auto object-contain" />
+              <img src="/trust-badges/british-council-logo.webp" width={84} height={24} alt="British Council" className="h-6 w-auto object-contain" />
+              <img src="/logos/Airc-logo-full-color-centered-LG.jpg" width={56} height={32} alt="AIRC" className="h-8 w-auto rounded-sm object-contain" />
+              <span className="text-xs font-semibold text-[var(--color-axelis)]">View certificates &rarr;</span>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* The three landing pages, contextualised.
           Each one argues a different reason to pick Axelis, so rather than
           hide them behind ad spend alone, the plans page routes to whichever
@@ -653,6 +714,53 @@ const ROUTES = [
     cta: 'See the full charter',
     href: '#plans',
     invert: true,
+  },
+];
+
+const CATALOGUE = [
+  {
+    kicker: 'Certifications',
+    title: 'Concierge programmes',
+    body: 'Structured programmes with a written outcome guarantee, for students who want the whole thing run for them rather than advised on.',
+    cta: 'See the programmes',
+    href: '/certifications',
+    span: 'lg:col-span-2 lg:row-span-1',
+  },
+  {
+    kicker: 'Germany',
+    title: 'Ausbildung and Chancenkarte',
+    body: 'A paid training contract with no tuition, or points-based entry to look for skilled work.',
+    cta: 'See the German routes',
+    href: '/vocational',
+    span: 'lg:row-span-2',
+  },
+  {
+    kicker: 'Money',
+    title: 'Loans and scholarships',
+    body: '25+ lenders from 8.5%, and 2000+ scholarships matched against your profile.',
+    cta: 'See financing',
+    href: '/financing',
+  },
+  {
+    kicker: 'Paperwork',
+    title: 'Apostille, translation, visa filing',
+    body: 'Priced per document, GST shown, and most of it already included in a charter.',
+    cta: 'See student services',
+    href: '/services',
+  },
+  {
+    kicker: 'Before you apply',
+    title: 'Test preparation',
+    body: 'IELTS, TOEFL, PTE, SAT and German, with target scores set by the universities on your shortlist.',
+    cta: 'See test prep',
+    href: '/test-prep',
+  },
+  {
+    kicker: 'After you land',
+    title: 'Accommodation',
+    body: 'Bills-inclusive rooms in 250+ cities, with the lease read before you sign it.',
+    cta: 'See housing',
+    href: '/accommodation',
   },
 ];
 
