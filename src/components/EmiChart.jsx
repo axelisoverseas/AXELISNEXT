@@ -86,8 +86,9 @@ export default function EmiChart() {
               <tr key={r.months}>
                 <th scope="row" className="emi-tenure">{r.months} months</th>
                 <td className="emi-bar-cell">
-                  <span className="emi-bar" style={{ width: `${barWidth(r.monthly)}%` }} aria-hidden="true" />
-                  <span className="emi-value figure">{formatINR(r.monthly)}</span>
+                  <span className="emi-bar" style={{ width: `${barWidth(r.monthly)}%` }}>
+                    <span className="emi-value figure">{formatINR(r.monthly)}</span>
+                  </span>
                 </td>
                 <td className="emi-total figure">{formatINR(price)}</td>
               </tr>

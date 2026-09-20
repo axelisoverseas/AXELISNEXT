@@ -5,14 +5,14 @@ import { siteInfo } from '../data/siteData';
 
 const Footer = () => {
   return (
-    <footer className="relative bg-[var(--storm-deep)] text-slate-300 pt-16 pb-8 overflow-hidden">
+    <footer className="relative bg-[var(--storm-deep)] text-[var(--color-dim-dark)] pt-16 pb-8 overflow-hidden">
       {/* top-edge lightning hairline */}
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--storm-electric)] to-transparent opacity-70" style={{ animation: 'hairline-flash 6s ease-in-out infinite' }} />
       {/* dawn-glow radial at the bottom */}
       <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-64" style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(127, 180, 224, 0.16) 0%, transparent 70%)' }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-[var(--storm-electric)]/10 mb-12 gap-6">
-          <p className="text-sm font-semibold text-slate-500">Certified by independent bodies</p>
+          <p className="text-sm font-semibold text-[var(--color-dim-dark)]">Certified by independent bodies</p>
           <Link href="/accreditations" className="flex flex-wrap justify-center items-center gap-8 opacity-80 hover:opacity-100 transition-opacity duration-300 group">
             <img src="/logos/dppit logo.png" width={47} height={32} alt="DPIIT Startup India" className="h-8 object-contain" />
             <img src="/trust-badges/british-council-logo.webp" width={84} height={24} alt="British Council" className="h-6 object-contain" />
@@ -33,7 +33,7 @@ const Footer = () => {
                 className="h-12 w-auto opacity-95 hover:opacity-100 transition-opacity [filter:brightness(0)_invert(1)] drop-shadow-e-2"
               />
             </Link>
-            <p className="text-sm leading-relaxed mb-8 text-slate-400">
+            <p className="text-sm leading-relaxed mb-8 text-[var(--color-dim-dark)]">
               {siteInfo.description}
             </p>
 
@@ -41,7 +41,7 @@ const Footer = () => {
             <div className="space-y-4 text-sm">
               <div className="flex items-start gap-3">
                 <MapPin aria-hidden="true" size={18} className="text-[var(--storm-electric)] mt-1 shrink-0" />
-                <span className="text-slate-400">{siteInfo.contact.address}</span>
+                <span className="text-[var(--color-dim-dark)]">{siteInfo.contact.address}</span>
               </div>
               <div className="flex items-start gap-3">
                 <Phone aria-hidden="true" size={18} className="text-[var(--storm-electric)] mt-1 shrink-0" />
@@ -82,7 +82,7 @@ const Footer = () => {
                 { name: 'Contact', path: '/contact' },
               ].map((link) => (
                 <li key={link.path}>
-                  <Link href={link.path} className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors flex items-center gap-2 group">
+                  <Link href={link.path} className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors flex items-center gap-2 group">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--storm-mid)] group-hover:bg-[var(--storm-electric)] transition-colors" />
                     {link.name}
                   </Link>
@@ -96,19 +96,19 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-6">Legal</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/privacy-policy" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Privacy Policy</Link>
+                <Link href="/privacy-policy" className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms-conditions" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Terms of Service</Link>
+                <Link href="/terms-conditions" className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Terms of Service</Link>
               </li>
               <li>
-                <Link href="/policies/cancellation-refund" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Cancellation &amp; Refund Policy</Link>
+                <Link href="/policies/cancellation-refund" className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Cancellation &amp; Refund Policy</Link>
               </li>
               <li>
-                <Link href="/delivery-policy" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Delivery Policy</Link>
+                <Link href="/delivery-policy" className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Delivery Policy</Link>
               </li>
               <li>
-                <Link href="/verify" className="text-slate-400 hover:text-[var(--storm-electric)] transition-colors">Verify a Certificate</Link>
+                <Link href="/verify" className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Verify a Certificate</Link>
               </li>
             </ul>
           </div>
@@ -143,8 +143,8 @@ const Footer = () => {
 
         {/* Company statement */}
         <div className="border-t border-[var(--storm-electric)]/10 mt-12 pt-8">
-          <p className="text-sm text-slate-400 leading-relaxed max-w-4xl">
-            <span className="text-slate-200 font-semibold">Axelis Overseas Education Pvt Ltd</span>
+          <p className="text-sm text-[var(--color-dim-dark)] leading-relaxed max-w-4xl">
+            <span className="text-[var(--color-dim-dark)] font-semibold">Axelis Overseas Education Pvt Ltd</span>
             {' '}. Bengaluru &amp; Bilaspur. India&rsquo;s study-abroad consultancy across 29 destination markets.
             Certification programmes with a written outcome guarantee. Zero-Tuition-Fee (ZTF) Charter agency.
           </p>
@@ -152,14 +152,14 @@ const Footer = () => {
 
         {/* Legal / corporate strip */}
         <div className="mt-6 pt-6 border-t border-[var(--storm-electric)]/10">
-          <p className="text-[11px] text-slate-500 leading-relaxed">
+          <p className="text-[11px] text-[var(--color-dim-dark)] leading-relaxed">
             CIN U85500CT2023PTC014913 &middot; MCC 8299 (Educational Services) &middot;
             Registered under the Companies Act 2013 in the Republic of India.
           </p>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[var(--storm-electric)]/10 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+        <div className="border-t border-[var(--storm-electric)]/10 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--color-dim-dark)]">
           <p>&copy; {new Date().getFullYear()} {siteInfo.name}. All rights reserved.</p>
           <p>Bengaluru &middot; Bilaspur</p>
         </div>

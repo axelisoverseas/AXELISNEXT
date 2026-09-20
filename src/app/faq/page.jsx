@@ -72,7 +72,7 @@ const FAQPage = () => {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-slate-400 max-w-3xl mx-auto mb-12 leading-relaxed"
+            className="text-xl text-[var(--color-dim-dark)] max-w-3xl mx-auto mb-12 leading-relaxed"
           >
             Everything you need to know about your study abroad journey. From visa processes and scholarships to living arrangements and loan assistance.
           </motion.p>

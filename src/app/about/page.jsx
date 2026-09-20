@@ -204,7 +204,7 @@ export default function AboutPage() {
             {/* Legal / corporate strip */}
  <section className="py-8 bg-slate-950 border-t border-slate-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <p className="text-xs text-[var(--color-dim)] text-center leading-relaxed">
+                    <p className="text-xs text-[var(--color-dim-dark)] text-center leading-relaxed">
                         Axelis Overseas Education Pvt Ltd. CIN U85500CT2023PTC014913 
                         MCC 8299 (Educational Services). Registered under the Companies Act 2013
                         in the Republic of India.

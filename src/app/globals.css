@@ -579,10 +579,10 @@ body {
               letter-spacing: normal !important; text-transform: none !important;
               color: var(--color-navy) !important; }
 .emi-bar-cell { position: relative; width: 100%; }
-.emi-bar { display: block; height: 30px; border-radius: var(--r-xs, 4px);
-           background: var(--color-axelis); }
-.emi-value { position: absolute; left: .85rem; top: 50%; transform: translateY(-50%);
-             color: #FFFFFF; font-size: .88rem; }
+.emi-bar { display: flex; align-items: center; min-height: 30px; padding: 0 .75rem;
+           border-radius: var(--r-xs, 4px); background: var(--color-axelis);
+           box-sizing: border-box; min-width: max-content; }
+.emi-value { color: #FFFFFF; font-size: .88rem; white-space: nowrap; }
 .emi-total, .emi-total-head { text-align: right; white-space: nowrap; }
 .emi-total { color: var(--color-dim); font-size: .88rem; }
 .emi-note { margin-top: 1rem; font-size: .82rem; line-height: 1.55; color: var(--color-dim);

@@ -225,22 +225,6 @@ export const teamMembers = [
     }
   },
   {
-    id: 5,
-    name: "Shubham Murkunde",
-    role: "Strategic Admission Associate",
-    image: "/assets/exweb/1706721617257shubham.jpeg",
-    linkedin: "https://www.linkedin.com/in/shubham-murkunde-460b3b2b1/",
-    description: "Strategic admission associate helping students shortlist universities and move from application to offer."
-  },
-  {
-    id: 6,
-    name: "Aviral Shukla",
-    role: "Strategic Admission Associate",
-    image: "/team/aviral-shukla.jpg",
-    linkedin: "https://www.linkedin.com/in/aviral-shukla-63814b419",
-    description: "Strategic admission associate supporting shortlisting, applications and student guidance across destinations."
-  },
-  {
     id: 7,
     name: "Sourav Kumar Acharya",
     role: "Operations Associate",

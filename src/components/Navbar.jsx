@@ -170,7 +170,7 @@ const Navbar = () => {
 
           <div className="flex items-center gap-6">
             {/* Social Links */}
-            <div className="flex items-center gap-4 text-slate-400">
+            <div className="flex items-center gap-4 text-[var(--color-dim-dark)]">
               <a href={siteInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--storm-electric)] transition-colors">Facebook</a>
               <a href={siteInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--storm-electric)] transition-colors">Instagram</a>
               <a href={siteInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--storm-electric)] transition-colors">LinkedIn</a>
@@ -451,7 +451,7 @@ const Navbar = () => {
               <BorderBeam size={120} duration={8} colorFrom="#FFFFFF" colorTo="#87BCEC" />
             </Link>
             <div>
-              <p className="text-xs font-semibold text-[var(--storm-accent)] mb-3">Connect With Us</p>
+              <p className="text-xs font-semibold text-[var(--accent-on-dark)] mb-3">Connect With Us</p>
               <div className="flex flex-col gap-3 text-sm">
                 <a href={`tel:${siteInfo.contact.phones[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2"><Phone aria-hidden="true" size={14} /> {siteInfo.contact.phones[0]}</a>
                 <a href={`mailto:${siteInfo.contact.emails[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2"><Mail aria-hidden="true" size={14} /> {siteInfo.contact.emails[0]}</a>

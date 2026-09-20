@@ -7,7 +7,7 @@ import { ArrowRight, Globe, Award, Users, CheckCircle, ChevronDown, Zap, ShieldC
 
 const UniversityLogosSection = dynamic(() => import('../components/UniversityLogosSection'), { ssr: false });
 const GoogleReviewsFloat = dynamic(() => import('../components/GoogleReviewsFloat'), { ssr: false });
-const TeamGlobeCarousel = dynamic(() => import('../components/TeamGlobeCarousel'), { ssr: false });
+import TeamGrid from '../components/TeamGrid';
 const GoogleReviewsSection = dynamic(() => import('../components/GoogleReviewsSection'), { ssr: false });
 import HeroOrbitalBackdrop from '../components/HeroOrbitalBackdrop';
 
@@ -22,7 +22,7 @@ const renderMarkdown = (text) => {
   const parts = text.split(/(\*\*.*?\*\*)/g);
   return parts.map((part, i) => {
     if (part.startsWith('**') && part.endsWith('**')) {
-      return <strong key={i} className="font-extrabold text-[var(--storm-electric)]">{part.slice(2, -2)}</strong>;
+      return <strong key={i} className="font-extrabold text-[var(--color-axelis)]">{part.slice(2, -2)}</strong>;
     }
     return part;
   });
@@ -120,7 +120,7 @@ export default function Home() {
 
           {/* Country chips strip: 29 countries demonstrated inline */}
           <motion.div variants={fadeInUp} className="max-w-4xl mx-auto">
-            <p className="text-[10px] text-[var(--storm-electric)] font-bold mb-3 text-center">
+            <p className="text-[10px] text-[var(--color-axelis)] font-bold mb-3 text-center">
               Twenty-nine countries &middot; one trusted team
             </p>
             <div className="flex flex-wrap gap-2 justify-center mb-4" aria-label="Some of the 29 countries Axelis Overseas serves">
@@ -423,7 +423,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               href="/products#plans"
-              className="inline-flex items-center gap-2 text-white hover:text-white text-sm font-semibold underline-offset-4 hover:underline transition-colors"
+              className="inline-flex items-center gap-2 text-[var(--color-axelis)] hover:text-[var(--color-navy)] text-sm font-semibold underline-offset-4 hover:underline transition-colors"
             >
               See plans &amp; pricing across all 29 countries
               <ArrowRight aria-hidden="true" size={14} />
@@ -439,7 +439,7 @@ export default function Home() {
       <GoogleReviewsSection compact />
 
       {/* Team Section */}
-      <TeamGlobeCarousel teamMembers={teamMembers} />
+      <TeamGrid teamMembers={teamMembers} />
 
 
 
@@ -508,7 +508,7 @@ export default function Home() {
             {/* Content Pane */}
             <div className="md:w-7/12 p-12 md:p-20 relative z-10 text-center md:text-left flex flex-col justify-center items-center md:items-start">
               <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight relative z-10">Ready when you are.</TextEffectInView>
-              <p className="text-xl text-slate-300 mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Tell us where you want to study. We&apos;ll tell you what it actually takes: honest, transparent, no upsell.</p>
+              <p className="text-xl text-white mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Tell us where you want to study. We&apos;ll tell you what it actually takes: honest, transparent, no upsell.</p>
               <Link
                 href="/bookings"
                 className="btn btn-primary relative overflow-hidden text-lg z-10 group"
