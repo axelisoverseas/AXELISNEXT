@@ -1,0 +1,109 @@
+# overseeducation.com — palette work, split across two MacBooks
+
+Foundation is committed on branch `brand/d2c-palette` (`6d07b4b`). **Pull it
+before starting.** It sets the ground, the tokens and the focus ring. What is
+left is per-file, and it is the larger half.
+
+## Why a white ground
+
+The kit contradicts itself. Its migration map sends every dark token to another
+dark token and never mentions `--background`, so following it leaves a
+navy-black site. §5.2 says white and tint 70%, navy 20%, accent 10%.
+
+`BRAND_GUIDELINES.md` line 13 breaks the tie — *"if the two ever disagree, the
+page is right"* — and the approved page, `samples/axelis-final-navy.html`, sets
+`body { background: var(--white) }` with 11 sections white, 6 tint, 6 navy.
+
+**Navy is a band colour, not the ground.** The migration map is the wrong part.
+
+## The one rule
+
+> The same class is correct inside a navy band and wrong on a white card.
+
+So this cannot be sed'd. For each file: find which ground the element sits on,
+then convert. Roughly 2,055 literals across ~105 files.
+
+## Conversion table
+
+| Found | On a **white/tint** ground | Inside a **navy band** |
+|---|---|---|
+| `text-white` | `text-[var(--color-navy)]` | keep |
+| `text-slate-300/400` | `text-[var(--color-dim)]` | `text-[var(--color-dim-dark)]` |
+| `text-slate-200` | `text-[var(--color-navy)]` | `text-white` |
+| `bg-white/[0.05]` etc. | `bg-[var(--color-tint)]` | keep |
+| `border-white/10` | `border-[var(--color-rule)]` | keep |
+| `text-[var(--dawn-glow)]` | `text-[var(--color-axelis)]` | `text-[var(--accent-on-dark)]` |
+| `text-[var(--storm-electric)]` | `text-[var(--color-axelis)]` | keep |
+| `bg-[#0C0A09]` / `stone-950` | `bg-white` or `bg-[var(--color-tint)]` | `bg-[var(--color-navy)]` |
+
+Already handled globally by the foundation — do not redo:
+`text-[var(--storm-deep)]` (now `text-white` on fills), the white→accent CTA
+gradients, and the focus ring.
+
+## Three traps
+
+1. **`#4080BD` is never text.** 4.17:1 on white, 3.25:1 on navy — fails AA on
+   both. It is bound to `--color-accent-surface` and to no text utility. Use
+   `--color-axelis` `#2F6795` for text on light, `--accent-on-dark` `#7FB4E0`
+   on navy.
+2. **`--color-rule` `#D5E1EB` is decorative only.** 1.33:1 on white. Never an
+   input or control border — those need 3:1 under 1.4.11. Use `--color-dim`.
+3. **Don't reintroduce a one-colour focus ring.** No single value clears 3:1 on
+   both grounds. The two-tone ring in `globals.css` is deliberate.
+
+## Split — 1,137 literal hits each
+
+Balanced by weight. `legacy_pages/` (19 files) is **excluded — not rendered**;
+don't spend time there.
+
+### Machine A — this MacBook (47 files)
+Shared chrome and the money path, so it lands first and the rest builds on it.
+
+Navbar · Footer · LeadCaptureModal · DocumentUpload · CheckoutButton ·
+ServiceCheckout · PayRail · CTAButton · layout.js
+/test-prep · /certifications/[slug] · /contact · /faq · /about ·
+/accreditations · /bookings · /resources · /verify · /payment-status ·
+/guide/[slug] · /policies/payment-terms · /policies/cancellation-refund ·
+/delivery-policy
+FinancingBlock · StudyAbroadGuides · HomeCertificationsPreview ·
+CertificationEnquiryForm · GoogleReviewsFloat · GoogleReviewsSection ·
+UniversityFinder · StudentDashboardMock · TrustBand · PlanComparison ·
+TeamGlobeCarousel · TeamCard · VisaSuccessPredictor · ui/LogoColumn ·
+VideoWidget · PrintButton · HeroOrbitalBackdrop · TestimonialsSection ·
+BankLogo · TestimonialCard · WhatsAppTest · ui/ShinyButton ·
+RealisticGlobe · HemisphereGlobe
+
+### Machine B — other MacBook (43 files)
+The marketing surface. Independent of A; no shared files.
+
+/products · / (home) · /accommodation · /vocational · /testimonials ·
+/certifications · /scholarships · /financing · /services · /privacy-policy ·
+/terms-conditions · /university-finder · /courses/[course]-in-[country] ·
+/verify/CertificateLookup · /payment-status/StatusPanel
+ui/SpatialPlanShowcase · InstagramSuccessStories · ScholarshipFinder ·
+EnhancedFAQ · VisualTestimonialCarousel · SpecimenCertificate ·
+CancellationRefundBlock · SocialMediaButtons · TestimonialGlobeCarousel ·
+TestimonialRealisticGlobe · WhatsAppWidget · ScholarshipMatcher ·
+PaymentPartnersStrip · ui/TestimonialsColumn · Professional3DGlobe ·
+LoanDocumentCTA · AnimatedHero · ErrorBoundary · ui/ContainerScroll ·
+CibilScoreWidget · ui/lightning-bolt · UniversityLogosSection ·
+FeaturesCarousel · ui/storm-backdrop · TestimonialCarousel · Layout ·
+AdminLogin · data/certificationPrograms.js
+
+`SpecimenCertificate.jsx:23` carries a hardcoded `#17140F`/`#0C0A09` gradient —
+the last literal of the old palette. Machine B owns it.
+
+## Working agreement
+
+Both machines branch **from `brand/d2c-palette`**, not from `main`:
+
+    git fetch && git checkout brand/d2c-palette && git pull
+    git checkout -b brand/d2c-palette-b     # machine B
+
+The file lists do not overlap, so the only conflict risk is `globals.css` —
+**neither machine edits it.** If a token is missing, say so rather than adding
+one locally; it needs to land once, for both.
+
+Before pushing: `npm run build` (the price-drift assertion runs in it), then
+check one navy band and one white card in the browser for leftover
+white-on-white.
