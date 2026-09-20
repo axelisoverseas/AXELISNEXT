@@ -56,7 +56,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Montserrat', var(--font-montserrat), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -345,3 +345,59 @@ body {
 /* Pages keep transparent so the wallpaper shows through every section. */
 main > *,
 main section { position: relative; }
+/* ---------------------------------------------------------------------------
+   TYPE — BRAND_GUIDELINES.md §4, implemented in full
+   ---------------------------------------------------------------------------
+   Faces and spacing only. The palette flip is a separate piece of work; these
+   settings are ground-agnostic and correct on the current dark ground too.
+
+     H1                Serif 400, 1.06 leading, -1% tracking
+     H2-H4             Serif 400, 1.1 leading
+     Emphasis in head  Serif 400 italic in the accent, never heavier
+     Labels, eyebrows  Sans 600, +14% tracking, uppercase
+     Figures           Sans 700, tabular numerals
+     Meta, captions    Sans 500
+     Body              Sans 400, 1.6 leading, max 62 characters
+
+   Weight 800 on headings is deliberately absent: Instrument Serif ships one
+   weight, so a heavier request is synthesised and looks broken. §4 says
+   emphasis inside a heading is italic.
+--------------------------------------------------------------------------- */
+
+body {
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+h1 {
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+}
+
+h1 em, h2 em, h3 em, h4 em,
+h1 i, h2 i, h3 i, h4 i {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.label, .eyebrow {
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.figure, .tabular {
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+.meta, figcaption, caption { font-weight: 500; }
+
+.measure { max-width: 62ch; }
