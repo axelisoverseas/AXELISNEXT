@@ -196,7 +196,7 @@ const Navbar = () => {
             </Link>
 
             {/* Center navigation: three grouped panels plus two direct links */}
-            <nav className="hidden xl:flex items-center gap-1 min-w-0" onMouseLeave={() => setOpenMenu(null)}>
+            <nav className="hidden lg:flex items-center gap-1 min-w-0" onMouseLeave={() => setOpenMenu(null)}>
               {MENU.map((group) => {
                 const open = openMenu === group.label;
                 return (
@@ -221,7 +221,7 @@ const Navbar = () => {
             </nav>
 
             {/* Desktop Navigation - Menu & CTA */}
-            <div className="hidden xl:flex items-center space-x-3 shrink-0">
+            <div className="hidden lg:flex items-center space-x-3 shrink-0">
               <Link
                 href="/bookings"
                 className="relative overflow-hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-[transform,filter,box-shadow] shadow-e-2 hover:shadow-e-2 transform hover:-translate-y-0.5"
@@ -243,7 +243,7 @@ const Navbar = () => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="xl:hidden flex items-center">
+            <div className="lg:hidden flex items-center">
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}

@@ -1,5 +1,6 @@
 import { Download } from 'lucide-react';
 import StudyAbroadGuides from '../../components/StudyAbroadGuides';
+import GuideLeadCapture from '../../components/GuideLeadCapture';
 
 export const metadata = {
   title: 'Free Study-Abroad Guides & Resources',
@@ -65,6 +66,13 @@ export default function ResourcesPage() {
         </div>
       </section>
       <StudyAbroadGuides />
+
+      {/* Asked for after the guides, not in front of them. */}
+      <section className="sec-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <GuideLeadCapture />
+        </div>
+      </section>
     </div>
   );
 }

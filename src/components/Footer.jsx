@@ -117,16 +117,16 @@ const Footer = () => {
           <div className="lg:col-span-3">
             <h3 className="text-white font-semibold mb-6">Connect With Us</h3>
             <div className="flex gap-4 mb-8">
-              <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-900 hover:text-white transition-colors">
+              <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
                 <Facebook size={18} />
               </a>
-              <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-700 hover:text-white transition-colors">
+              <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
                 <Instagram size={18} />
               </a>
-              <a href={siteInfo.social.linkedin} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-950 hover:text-white transition-colors">
+              <a href={siteInfo.social.linkedin} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
                 <Linkedin size={18} />
               </a>
-              <a href={siteInfo.social.youtube} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-lg bg-[var(--storm-cloud)] flex items-center justify-center hover:bg-stone-900 hover:text-white transition-colors">
+              <a href={siteInfo.social.youtube} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
                 <Youtube size={18} />
               </a>
             </div>

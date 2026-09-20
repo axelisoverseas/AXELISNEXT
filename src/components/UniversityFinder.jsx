@@ -1,5 +1,7 @@
 "use client";
 
+
+import Link from 'next/link';
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -175,13 +177,32 @@ export default function UniversityFinder() {
 
         <div className="mt-10 space-y-14">
           {totalCount === 0 && (
-            <p className="text-sm text-[var(--color-dim)]">
-              No universities match &ldquo;{query}&rdquo;. Try a different spelling, or{" "}
-              <button onClick={() => setQuery("")} className="font-medium underline" style={{ color: CERULEAN }}>
-                clear the search
-              </button>
-              .
-            </p>
+            <div className="rounded-[var(--radius-xl)] border border-[var(--color-rule)] bg-[var(--color-tint)] p-6 sm:p-8">
+              <h3 className="text-lg font-bold text-[var(--color-navy)]">
+                We could not find &ldquo;{query}&rdquo; in this list.
+              </h3>
+              <p className="mt-2 text-sm leading-relaxed text-[var(--color-dim)] measure">
+                This listing is a working subset, not the whole world. We place students at
+                35,000+ universities across 29 destinations, so a university missing here does
+                not mean we cannot get you there. Send us the name and a counsellor will check
+                it against the current intake and confirm.
+              </p>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link href="/contact" className="btn btn-primary">
+                  Ask us to check this university
+                </Link>
+                <Link href="/products" className="btn btn-secondary">
+                  See student plans
+                </Link>
+                <button
+                  type="button"
+                  onClick={() => setQuery("")}
+                  className="btn btn-ghost"
+                >
+                  Clear the search
+                </button>
+              </div>
+            </div>
           )}
           <CharterSection
             icon={Globe2}

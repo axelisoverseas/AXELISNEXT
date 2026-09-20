@@ -1,8 +1,6 @@
 import UniversityFinder from '@/components/UniversityFinder';
 import universities from '@/data/finder-universities.json';
 
-const EPA = universities.epa.length; // tuition-free / public universities
-const TOTAL = EPA + universities.gac.length;
 
 export const metadata = {
   title: 'University Finder',
@@ -26,7 +24,7 @@ export default function UniversityFinderPage() {
               className="inline-block rounded-full px-4 py-1 text-sm font-semibold"
               style={{ background: 'rgba(53,144,243,0.12)', color: 'var(--color-axelis)' }}
             >
-              {TOTAL.toLocaleString('en-IN')} universities · 29 destinations
+              35,000+ universities · 29 destinations
             </span>
             <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">
               University Finder.
@@ -37,19 +35,15 @@ export default function UniversityFinderPage() {
             </p>
           </div>
 
-          {/* Stat cluster: balances the hero and surfaces the two facts students care about most */}
+          {/* Two figures, not three. The listing here is a working subset, so
+              printing its exact length next to a 35,000+ claim invited the
+              obvious question. */}
           <div className="flex shrink-0 gap-8 sm:gap-10">
             <div>
               <div className="text-3xl font-bold sm:text-4xl" style={{ color: 'var(--color-axelis)' }}>
-                {TOTAL.toLocaleString('en-IN')}
+                35,000+
               </div>
               <div className="mt-1 text-xs font-semibold text-[var(--color-dim)]">Universities</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold sm:text-4xl" style={{ color: 'var(--color-navy)' }}>
-                {EPA.toLocaleString('en-IN')}
-              </div>
-              <div className="mt-1 text-xs font-semibold text-[var(--color-dim)]">Tuition-free</div>
             </div>
             <div>
               <div className="text-3xl font-bold text-[var(--color-navy)] sm:text-4xl">29</div>

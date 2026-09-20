@@ -205,7 +205,15 @@
 /* No dark-scheme inversion. The brand ground is white on every device;
    §5.2 gives no dark variant, and the reference page declares none. */
 
+/* The off-canvas drawer is a fixed, 320px panel held off screen with
+   translate-x-full. A transform does not remove it from the scrollable
+   overflow area, so without this the document is 320px wider than the
+   viewport on a phone and the whole page scrolls sideways. `clip` rather
+   than `hidden` so position:sticky still works. */
+html { overflow-x: clip; }
+
 body {
+  overflow-x: clip;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-lato), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
