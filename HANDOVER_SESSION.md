@@ -154,11 +154,34 @@ Match `samples/axelis-final-navy.html` section for section:
 9. Closing CTA on navy
 10. Footer on deep navy
 
-### Task F · Theme inversion
+### Task F · Theme inversion — the part that bites
 
-`globals.css` currently sets `--background: #0C0A09` and the site renders
-near-black. The new brand is **white ground with navy sections**. Nav, footer,
-hero band and the outcome strip take navy; everything else is white or tint.
+`globals.css` sets `--background: #0C0A09` and the site renders near-black.
+The new brand is **white ground with navy bands**: nav, footer, hero band and
+the outcome strip take navy; everything else is white or tint. Target ratio is
+roughly 11 white : 6 tint : 6 navy, per the reference page.
+
+**Do not follow the token migration map literally.** It renames tokens; it does
+not invert the ground. Every `--storm-*` maps to another dark value, so a
+faithful remap yields a navy-black site that satisfies the map and breaks §5.2.
+Set `--background` to `#FFFFFF` and `--foreground` to `#0E3240` first.
+
+Four things the first conversion hit (20 Sep), all confirmed:
+
+1. **`layout.js` hard-codes `bg-[var(--storm-deep)]` on `<body>`.** It sits
+   above every page and overrides the white ground no matter what the tokens
+   say. Remove it, and the fixed starfield behind it — a dark-ground device.
+2. **39 near-black labels** land on brand blue at ~2.5:1. A label on `#4080BD`
+   takes white, or the chip takes `--color-tint`.
+3. **5 CTAs use a white → accent gradient**, where no text colour clears 4.5:1
+   at both ends. Flat `--color-accent-text` fill, white text.
+4. **The focus ring cannot be one colour** — nothing clears 3:1 on both white
+   and navy. Two-tone it: navy on light, accent-light on navy.
+
+**The money path needs checking by hand**, not by remap: `CheckoutButton`,
+`ServiceCheckout`, `DocumentUpload`, and the three policy pages Cashfree links
+out to. `DocumentUpload` was a `bg-black/25` panel with white text — invisible
+on a white page.
 
 ### Task G · Reissue the mark
 

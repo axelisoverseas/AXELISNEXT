@@ -101,17 +101,69 @@ h1 { font-weight: 900; }
    #4080BD is a SURFACE colour. Text and button fills on light take
    #2F6795; accents on navy take #7FB4E0.
 
-   MIGRATION MAP — old token → new token
-   --storm-deep      #0C0A09  → --color-navy        #0E3240
-   --storm-abyss     #141210  → --color-navy-2      #154457
-   --storm-mid       #1C1917  → --color-navy        #0E3240
-   --storm-cloud     #292524  → --color-navy-2      #154457
-   --storm-electric  #FFFFFF  → --color-white       #FFFFFF
-   --storm-bolt      #FAFAF9  → --color-tint        #F0F4F8
-   --storm-accent    #F59E0B  → --color-accent-text #2F6795
-   --dawn-glow       #FBBF24  → --color-accent-lt   #7FB4E0
-   --dawn-glow-soft  #FDE68A  → --color-tint-2      #E3EDF5
-   --dawn-clear      #78716C  → --color-dim         #5A7280
+   MIGRATION MAP
+   ------------------------------------------------------------
+   READ THIS FIRST — THE GROUND INVERTS.
+
+   The old system was a dark site: globals.css set --background to
+   #0C0A09 and every surface token was a shade of near-black. The
+   new system is a WHITE site with navy bands. So this is not a
+   one-to-one colour swap, and treating it as one produces a
+   navy-black site that satisfies every line below and is still
+   wrong.
+
+   Do these two first, before any token rename:
+
+     --background  #0C0A09  →  #FFFFFF   (var(--color-white))
+     --foreground  #FAFAF9  →  #0E3240   (var(--color-navy))
+
+   Then check layout.js. It hard-codes bg-[var(--storm-deep)] on
+   <body>, which sits above every page and will override the white
+   ground no matter what these tokens say. Remove it. The fixed
+   starfield behind it goes too — it is a dark-ground device.
+
+   Proportion is the check, not the map: white and tint ~70% of a
+   page, navy ~20%, blue ~10% (§5.2 of BRAND_GUIDELINES.md). If a
+   converted page is mostly navy, the map was followed literally
+   and the result is wrong.
+
+   ------------------------------------------------------------
+   THE TOKENS THEMSELVES
+
+   These old tokens were PAGE GROUNDS. In the new system their
+   replacements are BAND colours — correct inside a nav, a footer
+   or a dark section, wrong as the ground of a page:
+
+     --storm-deep      #0C0A09  → --color-navy        #0E3240
+     --storm-abyss     #141210  → --color-navy-2      #154457
+     --storm-mid       #1C1917  → --color-navy        #0E3240
+     --storm-cloud     #292524  → --color-navy-2      #154457
+
+   These were text/accent on a dark ground. On a white ground most
+   of them invert to their light-ground variant instead:
+
+     --storm-electric  #FFFFFF  → --color-navy        #0E3240  (was text on dark;
+                                  keep #FFFFFF only where it sits on a navy band)
+     --storm-bolt      #FAFAF9  → --color-tint        #F0F4F8
+     --storm-accent    #F59E0B  → --color-accent-text #2F6795  (on white)
+                                  --color-accent-lt   #7FB4E0  (on navy)
+     --dawn-glow       #FBBF24  → --color-accent-lt   #7FB4E0
+     --dawn-glow-soft  #FDE68A  → --color-tint-2      #E3EDF5
+     --dawn-clear      #78716C  → --color-dim         #5A7280
+
+   ------------------------------------------------------------
+   THREE REPAIRS A PLAIN REMAP SHIPS BROKEN
+   Found during the first conversion, 20 Sep 2026:
+
+   1. Labels that were near-black on a light chip become near-black
+      on brand blue — about 2.5:1. Any label sitting on #4080BD
+      takes white, or the chip takes --color-tint.
+   2. CTAs with a gradient running white → accent have no text
+      colour that clears 4.5:1 at both ends. Drop the gradient to a
+      flat --color-accent-text fill with white text.
+   3. The focus ring cannot be one colour: no single value clears
+      3:1 on both white and navy. Use two — navy-on-light,
+      accent-light-on-navy.
 
    RETIRE ON SIGHT
    #ffde59 (old logo yellow — the logo now takes currentColor)
