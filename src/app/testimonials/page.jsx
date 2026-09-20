@@ -5,6 +5,7 @@ import Link from 'next/link';
 import dynamic from 'next/dynamic';
 import { ArrowRight, Star, MapPin, GraduationCap, Play, BadgeCheck } from 'lucide-react';
 import { testimonials as allTestimonials } from '../../data/siteData';
+import InstagramFeed from '../../components/InstagramFeed';
 
 // Show only testimonials with a real student photo. Entries that fall back to
 // auto-generated initials avatars (ui-avatars.com) are placeholders, not real
@@ -526,6 +527,7 @@ export default function TestimonialsPage() {
 
       {/* Google Reviews: verified 3rd-party proof from Bilaspur branch */}
       <InstagramSuccessStories />
+      <InstagramFeed />
       <GoogleReviewsSection />
 
       {/* Floating Google Reviews badge, bottom-left to avoid WhatsApp widget */}
