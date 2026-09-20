@@ -50,7 +50,7 @@ export default function CertificateLookup() {
           />
           <button
             type="submit"
-            className="inline-flex items-center justify-center gap-2 shrink-0 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] px-6 py-3 font-bold text-[var(--storm-deep)] hover:brightness-110 transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+            className="inline-flex items-center justify-center gap-2 shrink-0 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] px-6 py-3 font-bold text-white hover:brightness-110 transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
           >
             <Search size={17} aria-hidden="true" /> Verify Certificate
           </button>

@@ -85,7 +85,7 @@ export default function Home() {
           >
             <Link
               href="/products"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
               See student plans
               <ArrowRight aria-hidden="true" className="ml-2" size={20} />
@@ -204,7 +204,7 @@ export default function Home() {
                       className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center shadow-[0_0_18px_rgba(245,158,11,0.55)] ring-2 ring-[var(--storm-deep)]"
                       style={{ animation: 'bolt-pulse 3.5s ease-in-out infinite' }}
                     >
-                      <Zap size={13} strokeWidth={3} className="text-[var(--storm-deep)]" fill="currentColor" />
+                      <Zap size={13} strokeWidth={3} className="text-white" fill="currentColor" />
                     </div>
                   </div>
                   <span className={`text-4xl md:text-5xl font-bold mb-2 tracking-tight ${
@@ -513,7 +513,7 @@ export default function Home() {
               <p className="text-xl text-slate-300 mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Tell us where you want to study. We&apos;ll tell you what it actually takes &mdash; honest, transparent, no upsell.</p>
               <Link
                 href="/bookings"
-                className="relative overflow-hidden inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-[var(--storm-accent)] via-[#FFB347] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[transform,filter,box-shadow] shadow-[0_0_40px_-10px_var(--storm-accent-glow)] hover:shadow-[0_0_60px_-15px_var(--storm-accent-glow)] text-lg hover:-translate-y-1 z-10 group"
+                className="relative overflow-hidden inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-[var(--storm-accent)] via-[#FFB347] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[transform,filter,box-shadow] shadow-[0_0_40px_-10px_var(--storm-accent-glow)] hover:shadow-[0_0_60px_-15px_var(--storm-accent-glow)] text-lg hover:-translate-y-1 z-10 group"
               >
                 <span className="relative z-10 inline-flex items-center">
                   Apply Now - Start Journey

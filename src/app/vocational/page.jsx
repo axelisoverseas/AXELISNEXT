@@ -60,7 +60,7 @@ export default function VocationalPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="#programmes"
-              className="inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter]"
+              className="inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter]"
             >
               See both routes <ArrowRight size={18} aria-hidden="true" />
             </Link>
@@ -305,7 +305,7 @@ export default function VocationalPage() {
           </p>
           <Link
             href="/bookings"
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter]"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter]"
           >
             Book a free assessment call <ArrowRight size={18} aria-hidden="true" />
           </Link>

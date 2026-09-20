@@ -86,7 +86,7 @@ function ProductsContent() {
         >
           <motion.h1 variants={fadeInUp} className="text-4xl md:text-6xl font-extrabold mb-6 text-white tracking-tight">
             <TextEffect as="span" per="word" preset="blur">Pick the plan that matches</TextEffect>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">where you want to study.</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">where you want to study.</span>
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-10 text-slate-300/90 max-w-3xl mx-auto leading-relaxed">
@@ -96,7 +96,7 @@ function ProductsContent() {
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               href="#plans"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
               Compare both plans
               <ArrowRight className="ml-2" size={20} />
@@ -152,7 +152,7 @@ function ProductsContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
-              Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">One destination &mdash; yours.</span>
+              Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">One destination &mdash; yours.</span>
             </h2>
             <p className="text-slate-300/85 text-lg">
               Pick the route that matches where you want to study. Both come with a refundable deposit and a dedicated counsellor. Fees and refund conditions differ, and are set out in full on each card below.
@@ -252,7 +252,7 @@ function ProductsContent() {
                   <CheckoutButton
                     product="global-admissions-charter"
                     label="Enrol in Global Admissions Charter (GAC) — ₹9,999"
-                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
                   />
                 </div>
                 <p className="text-xs text-slate-500 mt-3 text-center flex items-center justify-center gap-1.5">
@@ -354,7 +354,7 @@ function ProductsContent() {
                   <CheckoutButton
                     product="europe-public-charter"
                     label="Enrol in Europe Public Charter (EPC) — ₹19,999"
-                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-electric)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-electric)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
                   />
                 </div>
                 <p className="text-xs text-slate-500 mt-3 text-center flex items-center justify-center gap-1.5">
@@ -371,7 +371,7 @@ function ProductsContent() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
             <h2 className="text-2xl md:text-4xl font-bold text-white tracking-tight mb-3">
-              Global Admissions Charter (GAC) vs Europe Public Charter (EPC) <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">at a glance</span>
+              Global Admissions Charter (GAC) vs Europe Public Charter (EPC) <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">at a glance</span>
             </h2>
             <p className="text-slate-300/85">
               Same human team, same honest counselling &mdash; built for two different student profiles.
@@ -421,7 +421,7 @@ function ProductsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
-              How it works &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">four steps, zero surprises.</span>
+              How it works &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">four steps, zero surprises.</span>
             </h2>
             <p className="text-slate-300/85 text-lg max-w-2xl mx-auto">
               Same process for both plans. Same counsellor through every step.
@@ -431,7 +431,7 @@ function ProductsContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {howItWorks.map((step, i) => (
               <div key={step.title} className="glass-storm p-6 relative">
-                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[var(--storm-deep)] flex items-center justify-center font-extrabold text-sm shadow-[0_0_18px_var(--storm-accent-glow)]">
+                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white flex items-center justify-center font-extrabold text-sm shadow-[0_0_18px_var(--storm-accent-glow)]">
                   {i + 1}
                 </div>
                 <step.Icon size={28} className="text-[var(--storm-electric)] mb-4" />
@@ -451,7 +451,7 @@ function ProductsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-4">
-              The receipts &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">real students, real declarations, real visas.</span>
+              The receipts &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">real students, real declarations, real visas.</span>
             </h2>
             <p className="text-slate-300/85 text-lg max-w-3xl mx-auto leading-relaxed">
               Every plan flows through a PCI-DSS compliant gateway. Every ZTF student signs a Zero Tuition Fee declaration before we process anything. Every visa we claim is a real stamp in a real passport. Personal info is blacked out below; the rest is exactly what we have on file.
@@ -602,7 +602,7 @@ function ProductsContent() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/bookings"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
               >
                 Book a free call
                 <ArrowRight className="ml-2" size={20} />

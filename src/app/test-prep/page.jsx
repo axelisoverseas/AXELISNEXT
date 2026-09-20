@@ -89,7 +89,7 @@ const tracks = [
     logoText: 'DELF · DALF',
     logoSub: 'France Éducation International',
     accent: 'from-stone-900 via-white to-rose-500',
-    accentText: 'text-[var(--storm-deep)]',
+    accentText: 'text-white',
     headline: 'A1 and A2 levels — France Éducation International',
     note: 'Built for French university admissions and Schengen visa language thresholds. Same tutor for grammar, oral and the official DELF format.',
     packs: [
@@ -201,7 +201,7 @@ function LogoTile({ logo, alt, code, accent }) {
   }
   return (
     <div className={`w-full aspect-[2/1] rounded-xl flex items-center justify-center bg-gradient-to-br ${accent || 'from-emerald-400 to-green-600'} mb-5 shadow-[0_10px_30px_-12px_rgba(0,0,0,0.5)]`}>
-      <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-[var(--storm-deep)]">
+      <span className="text-3xl md:text-4xl font-extrabold tracking-tight text-white">
         {code}
       </span>
     </div>
@@ -259,7 +259,7 @@ export default function TestPrepPage() {
           >
             <Link
               href="#tracks"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
               See plans &amp; pricing
               <ArrowRight className="ml-2" size={20} />
@@ -349,7 +349,7 @@ export default function TestPrepPage() {
                       }`}
                     >
                       {p.highlight && (
-                        <span className="absolute -top-2 right-4 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[10px] font-bold text-[var(--storm-deep)] shadow-[0_0_18px_var(--storm-accent-glow)]">
+                        <span className="absolute -top-2 right-4 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[10px] font-bold text-white shadow-[0_0_18px_var(--storm-accent-glow)]">
                           Popular
                         </span>
                       )}
@@ -426,7 +426,7 @@ export default function TestPrepPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {howItWorks.map((step, i) => (
               <div key={step.title} className="glass-storm p-6 relative">
-                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[var(--storm-deep)] flex items-center justify-center font-extrabold text-sm shadow-[0_0_18px_var(--storm-accent-glow)]">
+                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white flex items-center justify-center font-extrabold text-sm shadow-[0_0_18px_var(--storm-accent-glow)]">
                   {i + 1}
                 </div>
                 <h3 className="text-white font-bold text-lg mb-2 mt-1">{step.title}</h3>
@@ -487,7 +487,7 @@ export default function TestPrepPage() {
             </Link>
             <a
               href="#tracks"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
               See packs and enrol
               <ArrowRight className="ml-2" size={20} />

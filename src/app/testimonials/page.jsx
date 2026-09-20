@@ -509,7 +509,7 @@ export default function TestimonialsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/bookings"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
               Book a free call
               <ArrowRight className="ml-2" size={20} />

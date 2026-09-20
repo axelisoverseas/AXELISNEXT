@@ -66,7 +66,7 @@ export default function AccommodationPage() {
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                         <Link
                             href="#listings"
-                            className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                            className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
                         >
                             Browse live listings
                             <ArrowRight className="ml-2" size={18} />
@@ -131,7 +131,7 @@ export default function AccommodationPage() {
                                     href={AMBER_PARTNER_URL}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
                                 >
                                     Open amber marketplace <ExternalLink size={16} className="ml-2" />
                                 </a>
@@ -225,7 +225,7 @@ export default function AccommodationPage() {
                                 />
                             </div>
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--storm-electric)] to-stone-700 rounded-2xl flex items-center justify-center text-[var(--storm-deep)]" aria-hidden="true"><Building2 size={30} strokeWidth={2} /></div>
+                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] rounded-2xl flex items-center justify-center text-white" aria-hidden="true"><Building2 size={30} strokeWidth={2} /></div>
                                 <div>
                                     <h3 className="text-2xl font-bold text-white">Purpose Built (PBSA)</h3>
                                     <span className="text-sm font-semibold text-[var(--storm-electric)] bg-[var(--storm-electric)]/10 px-3 py-1 rounded-full border border-[var(--storm-electric)]/30 inline-block mt-1">£150 &ndash; £350 / week</span>
@@ -252,7 +252,7 @@ export default function AccommodationPage() {
                                 />
                             </div>
                             <div className="flex items-center gap-4 mb-6">
-                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--dawn-glow)] to-amber-500 rounded-2xl flex items-center justify-center text-[var(--storm-deep)]" aria-hidden="true"><Home size={30} strokeWidth={2} /></div>
+                                <div className="w-16 h-16 bg-gradient-to-br from-[var(--dawn-glow)] to-amber-500 rounded-2xl flex items-center justify-center text-white" aria-hidden="true"><Home size={30} strokeWidth={2} /></div>
                                 <div>
                                     <h3 className="text-2xl font-bold text-white">Private Apartments</h3>
                                     <span className="text-sm font-semibold text-[var(--dawn-glow)] bg-[var(--dawn-glow)]/10 px-3 py-1 rounded-full border border-[var(--dawn-glow)]/30 inline-block mt-1">£180 &ndash; £400+ / week</span>
@@ -278,7 +278,7 @@ export default function AccommodationPage() {
                     </p>
                     <Link
                         href="/bookings"
-                        className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                        className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
                     >
                         Talk to a housing counsellor
                         <ArrowRight className="ml-2" size={20} />

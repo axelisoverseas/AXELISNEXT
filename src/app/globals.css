@@ -3,55 +3,80 @@
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --color-navy: #0C0A09;
-  --color-axelis: #1C1917;
-  --color-axelis-light: #57534E;
-  --color-axelis-accent: #F59E0B;
 
-  /* Storm palette — top of page, electric drama */
-  --color-storm-deep: #0C0A09;
-  --color-storm-abyss: #141210;
-  --color-storm-mid: #1C1917;
-  --color-storm-cloud: #292524;
+  /* AXELIS BRAND v4.0 — see docs/brand/BRAND_GUIDELINES.md §5.
+     #4080BD is a SURFACE colour: 4.17:1 on white, 3.25:1 on navy, so it
+     fails AA as text on either ground. It is bound to --color-accent-surface
+     and to no text utility. Same rule as the B2B codebase. */
+  --color-navy: #0E3240;
+  --color-navy-2: #154457;
+  --color-axelis: #2F6795;
+  --color-axelis-accent: #2F6795;
+  --color-accent-surface: #4080BD;
+  --color-axelis-light: #7FB4E0;
+  --color-on-accent: #FFFFFF;
+  --color-tint: #F0F4F8;
+  --color-tint-2: #E3EDF5;
+  --color-rule: #D5E1EB;
+  --color-dim: #5A7280;
+  --color-dim-dark: #A8C3D4;
+
+  /* Storm palette — retained names, brand values.
+     These read as "dark band" throughout the codebase, and the brand keeps
+     dark bands (§5.2: navy is 20% of the page). Remapping in place means the
+     657 token references land on brand colour without 105 files of edits. */
+  --color-storm-deep: #0E3240;
+  --color-storm-abyss: #0A2833;
+  --color-storm-mid: #154457;
+  --color-storm-cloud: #1E5266;
   --color-storm-electric: #FFFFFF;
-  --color-storm-bolt: #FAFAF9;
-  --color-storm-accent: #F59E0B;
+  --color-storm-bolt: #FFFFFF;
+  --color-storm-accent: #2F6795;
 
-  /* Dawn palette — near CTA, clearing and warmth */
-  --color-dawn-horizon: #292524;
-  --color-dawn-mid: #44403C;
-  --color-dawn-clear: #78716C;
-  --color-dawn-glow: #FBBF24;
-  --color-dawn-glow-soft: #FDE68A;
+  /* Dawn palette — was amber. The CTA is now a solid brand blue carrying
+     white text, exactly as the approved reference page sets it
+     (.btn{background:var(--blue-dark); color:#FFF}). Both gradient stops are
+     dark enough for white, so a CTA is legible wherever it is cut. */
+  --color-dawn-horizon: #154457;
+  --color-dawn-mid: #1E5266;
+  --color-dawn-clear: #5A7280;
+  --color-dawn-glow: #2F6795;
+  --color-dawn-glow-soft: #4080BD;
 }
 
 :root {
-  --background: #0C0A09;
-  --foreground: #FAFAF9;
+  /* §5.2 ground: white and tint 70%, navy 20%, accent 10%. The approved
+     reference page (docs/brand/samples/axelis-final-navy.html) sets
+     body{background:var(--white)} and fills 11 sections white, 6 tint and 6
+     navy. BRAND_GUIDELINES.md line 13 makes that page authoritative where it
+     and the prose disagree, which is why the ground is white here and the
+     migration map's dark-to-dark table is not followed. */
+  --background: #FFFFFF;
+  --foreground: #0E3240;
 
-  --storm-deep: #0C0A09;
-  --storm-abyss: #141210;
-  --storm-mid: #1C1917;
-  --storm-cloud: #292524;
+  --storm-deep: #0E3240;
+  --storm-abyss: #0A2833;
+  --storm-mid: #154457;
+  --storm-cloud: #1E5266;
   --storm-electric: #FFFFFF;
-  --storm-bolt: #FAFAF9;
-  --storm-accent: #F59E0B;
-  --storm-accent-glow: rgba(245, 158, 11, 0.45);
+  --storm-bolt: #FFFFFF;
+  --storm-accent: #2F6795;
+  --storm-accent-glow: rgba(47, 103, 149, 0.45);
 
-  --dawn-horizon: #292524;
-  --dawn-mid: #44403C;
-  --dawn-clear: #78716C;
-  --dawn-glow: #FBBF24;
-  --dawn-glow-soft: #FDE68A;
-  --dawn-mist: rgba(251, 191, 36, 0.18);
+  --dawn-horizon: #154457;
+  --dawn-mid: #1E5266;
+  --dawn-clear: #5A7280;
+  --dawn-glow: #2F6795;
+  --dawn-glow-soft: #4080BD;
+  --dawn-mist: rgba(47, 103, 149, 0.18);
+
+  /* Accent that survives a navy ground. #2F6795 measures 2.26:1 there and
+     must never be an accent on dark; this is the token for that job. */
+  --accent-on-dark: #7FB4E0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0C0A09;
-    --foreground: #FAFAF9;
-  }
-}
+/* No dark-scheme inversion. The brand ground is white on every device;
+   §5.2 gives no dark variant, and the reference page declares none. */
 
 body {
   background: var(--background);
@@ -244,10 +269,14 @@ body {
   95% { opacity: 0.85; }
 }
 
-/* Focus ring — storm-accent bolt yellow for keyboard users */
+/* Focus ring — two-tone, so it clears WCAG 1.4.11 (3:1) on BOTH grounds.
+   No single colour does: #2F6795 is 6.01:1 on white but 2.26:1 on navy, and
+   #7FB4E0 is the exact reverse. The white band carries the indicator on navy
+   (8.4:1), the blue ring carries it on white (6.01:1). */
 :focus-visible {
-  outline: 2px solid var(--storm-accent);
-  outline-offset: 3px;
+  outline: 2px solid var(--color-axelis, #2F6795);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px #FFFFFF;
   border-radius: 4px;
 }
 

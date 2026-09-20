@@ -124,7 +124,7 @@ export default function FinancingBlock({ program }) {
                 <CheckoutButton
                   product={program.slug}
                   label={`Pay ${formatINR(withGst(program.price).gross)}`}
-                  className="inline-flex justify-center items-center gap-2 px-6 py-3 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold text-sm transition-[filter]"
+                  className="inline-flex justify-center items-center gap-2 px-6 py-3 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold text-sm transition-[filter]"
                 />
               )}
               <a

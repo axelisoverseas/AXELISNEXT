@@ -86,18 +86,17 @@ const Navbar = () => {
       </div>
 
       {/* Main Navigation - storm glass */}
-      <div className="bg-[var(--storm-deep)]/60 backdrop-blur-xl border-b border-[var(--storm-electric)]/10 sticky top-0 z-50 transition-all shadow-[0_10px_40px_-20px_rgba(0,0,0,0.6)]">
+      <div className="bg-white border-b border-[var(--color-rule)] sticky top-0 z-50 transition-all shadow-[0_6px_24px_-20px_rgba(14,50,64,0.5)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <Link href="/" className="flex items-center shrink-0">
-              {/* Note: Using standard img tag for ease of filtering, Next Image can be tricky with invert filters */}
               <img
-                src="/1yellow svg logoaxelis.svg"
+                src="/1navy svg logoaxelis.svg"
                 alt="Axelis Overseas"
                 width={64}
                 height={64}
-                className="h-16 w-auto shrink-0 object-contain [filter:brightness(0)_invert(1)] drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]"
+                className="h-16 w-auto shrink-0 object-contain"
               />
             </Link>
 
@@ -105,7 +104,7 @@ const Navbar = () => {
             <nav className="hidden xl:flex items-center space-x-4 2xl:space-x-6 min-w-0">
               <Link
                 href="/"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
                   }`}
               >
                 <span>Home</span>
@@ -113,7 +112,7 @@ const Navbar = () => {
 
               <Link
                 href="/products"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/products') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/products') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
                   }`}
               >
                 <span>Student Plans</span>
@@ -121,7 +120,7 @@ const Navbar = () => {
 
               <Link
                 href="/university-finder"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/university-finder') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/university-finder') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
                   }`}
               >
                 <span>Universities</span>
@@ -129,7 +128,7 @@ const Navbar = () => {
 
               <Link
                 href="/test-prep"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/test-prep') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/test-prep') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
                   }`}
               >
                 <span>Test Prep</span>
@@ -137,7 +136,7 @@ const Navbar = () => {
 
               <Link
                 href="/testimonials"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/testimonials') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/testimonials') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
                   }`}
               >
                 <span>Testimonials</span>
@@ -145,7 +144,7 @@ const Navbar = () => {
 
               <Link
                 href="/certifications"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/certifications') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/certifications') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
                   }`}
               >
                 <span>Certifications</span>
@@ -153,7 +152,7 @@ const Navbar = () => {
 
               <Link
                 href="/accommodation"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/accommodation') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/accommodation') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
                   }`}
               >
                 <span>Housing</span>
@@ -161,7 +160,7 @@ const Navbar = () => {
 
               <Link
                 href="/faq"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/faq') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/faq') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
                   }`}
               >
                 <span>FAQ</span>
@@ -169,7 +168,7 @@ const Navbar = () => {
 
               <Link
                 href="/contact"
-                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/contact') ? 'text-[var(--storm-electric)]' : 'text-slate-300 hover:text-white'
+                className={`flex items-center space-x-2 text-sm font-semibold whitespace-nowrap transition-colors ${isActive('/contact') ? 'text-[var(--color-axelis)]' : 'text-[var(--color-dim)] hover:text-[var(--color-navy)]'
                   }`}
               >
                 <span>Contact</span>
@@ -191,7 +190,7 @@ const Navbar = () => {
                 aria-label="Open extended navigation menu"
                 aria-expanded={isOpen}
                 aria-controls="mobile-nav-drawer"
-                className="flex items-center space-x-2 px-4 py-2.5 min-h-[44px] rounded-xl glass-storm text-slate-200 hover:text-[var(--storm-electric)] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                className="flex items-center space-x-2 px-4 py-2.5 min-h-[44px] rounded-xl bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] hover:text-[var(--color-axelis)] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
                 <Menu size={20} aria-hidden="true" />
                 <span className="text-sm">More</span>
@@ -206,7 +205,7 @@ const Navbar = () => {
                 aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
                 aria-expanded={isOpen}
                 aria-controls="mobile-nav-drawer"
-                className="min-w-[44px] min-h-[44px] p-2 rounded-lg text-slate-300 hover:bg-white/5 hover:text-[var(--storm-electric)] transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+                className="min-w-[44px] min-h-[44px] p-2 rounded-lg text-[var(--color-navy)] hover:bg-[var(--color-tint)] hover:text-[var(--color-axelis)] transition-colors flex items-center justify-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
                 {isOpen ? <X size={24} aria-hidden="true" /> : <Menu size={24} aria-hidden="true" />}
               </button>

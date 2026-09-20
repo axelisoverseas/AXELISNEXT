@@ -38,7 +38,7 @@ function loadSdk() {
 // Shared styling, so the hosted-form link and the API-backed button are the
 // same control to a visitor. Only the mechanism behind them differs.
 const CTA_CLASS =
-  'inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]';
+  'inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]';
 
 export default function CheckoutButton({ product, label, className = '', quantity = 1 }) {
   const item = cashfreeLinks[product];
@@ -197,7 +197,7 @@ export default function CheckoutButton({ product, label, className = '', quantit
       <button
         type="submit"
         disabled={busy}
-        className="mt-5 inline-flex w-full justify-center items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold transition-[filter] disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]"
+        className="mt-5 inline-flex w-full justify-center items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold transition-[filter] disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]"
       >
         {busy ? (
           <>

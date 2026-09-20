@@ -185,7 +185,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
                 key={opt.value}
                 className={`inline-flex items-center px-4 py-2.5 min-h-[44px] rounded-xl border text-sm font-semibold cursor-pointer transition-colors focus-within:ring-2 focus-within:ring-[var(--storm-electric)] ${
                   active
-                    ? 'bg-[var(--storm-electric)] border-[var(--storm-electric)] text-[var(--storm-deep)]'
+                    ? 'bg-[var(--storm-electric)] border-[var(--storm-electric)] text-white'
                     : 'bg-white/[0.04] border-white/15 text-slate-200 hover:bg-white/10'
                 }`}
               >
@@ -211,7 +211,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="inline-flex w-full items-center justify-center gap-2 px-6 py-4 min-h-[44px] bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+        className="inline-flex w-full items-center justify-center gap-2 px-6 py-4 min-h-[44px] bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
       >
         {status === 'sending'
           ? <><Loader2 size={18} className="animate-spin" /> Sending</>

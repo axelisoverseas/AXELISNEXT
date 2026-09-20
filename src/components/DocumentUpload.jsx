@@ -343,7 +343,7 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
       <button
         type="submit"
         disabled={busy || overLimit}
-        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] px-6 py-3 text-sm font-bold text-[var(--storm-deep)] transition-[filter] hover:brightness-110 disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]"
+        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] px-6 py-3 text-sm font-bold text-white transition-[filter] hover:brightness-110 disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]"
       >
         {busy ? (
           <>

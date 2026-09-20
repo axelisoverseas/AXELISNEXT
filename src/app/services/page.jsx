@@ -115,7 +115,7 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/bookings"
-                className="inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter]"
+                className="inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter]"
               >
                 Book a free call <ArrowRight size={18} aria-hidden="true" />
               </Link>

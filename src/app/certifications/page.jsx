@@ -157,7 +157,7 @@ export default function CertificationsPage() {
             className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-6 max-w-4xl mx-auto"
           >
             Earn a credential on the way to{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">
               your offer letter.
             </span>
           </motion.h1>
@@ -170,7 +170,7 @@ export default function CertificationsPage() {
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#programmes"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
             >
               Browse the programmes
               <ArrowRight aria-hidden="true" className="ml-2" size={20} />
@@ -216,7 +216,7 @@ export default function CertificationsPage() {
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-[#141210] border-2 border-white/10 rounded-2xl p-7 md:p-9 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
             <div className="flex items-start gap-4 mb-5">
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--storm-electric)] to-[var(--dawn-glow)] flex items-center justify-center text-[var(--storm-deep)] shrink-0">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center text-white shrink-0">
                 <CreditCard aria-hidden="true" size={22} strokeWidth={2.3} />
               </div>
               <div>

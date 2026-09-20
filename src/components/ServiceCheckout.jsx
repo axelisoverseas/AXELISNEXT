@@ -25,7 +25,7 @@ import CheckoutButton from './CheckoutButton';
 const INR = (n) => `₹${n.toLocaleString('en-IN')}`;
 
 const CTA =
-  'inline-flex justify-center items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold text-sm transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]';
+  'inline-flex justify-center items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold text-sm transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)]';
 
 const GHOST =
   'inline-flex justify-center items-center gap-2 px-5 py-2.5 min-h-[44px] rounded-xl bg-white/[0.06] hover:bg-white/[0.11] border border-white/15 text-white font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)]';

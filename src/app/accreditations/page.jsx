@@ -12,7 +12,7 @@ const certifications = [
     blurb: 'Officially recognised startup under DPIIT (registration ref. DIPP158553). Government acknowledgement of genuine business activity in education.',
     image: '/trust-badges/dpiit-certificate.png',
     Icon: ShieldCheck,
-    accent: 'from-amber-300 to-orange-500',
+    accent: 'from-[var(--storm-accent)] to-[var(--dawn-glow)]',
   },
   {
     id: 'british-council',
@@ -21,7 +21,7 @@ const certifications = [
     blurb: 'Counsellors completed the British Council UK Agent & Counsellor Training course and qualifying exam — the standard reference for ethical UK student placement.',
     image: '/trust-badges/british-council.png',
     Icon: Globe2,
-    accent: 'from-white to-stone-700',
+    accent: 'from-[var(--storm-accent)] to-[var(--dawn-glow)]',
   },
   {
     id: 'airc',
@@ -30,7 +30,7 @@ const certifications = [
     blurb: 'AIRC certified for U.S. student recruitment — a peer-reviewed standard that holds agencies to ethical and quality benchmarks for placing students in American universities.',
     image: '/trust-badges/airc-certificate.png',
     Icon: Award,
-    accent: 'from-stone-300 to-stone-700',
+    accent: 'from-[var(--storm-accent)] to-[var(--dawn-glow)]',
   },
 ];
 
@@ -76,7 +76,7 @@ export default function CertificationsPage() {
               >
                 <div className={`absolute -inset-1 rounded-3xl bg-gradient-to-br ${cert.accent} opacity-0 group-hover:opacity-30 blur-2xl transition-opacity duration-500`} />
                 <div className="relative glass-storm p-6 h-full flex flex-col items-center text-center">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 border border-white/10 bg-gradient-to-br ${cert.accent} text-[var(--storm-deep)]`}>
+                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-5 border border-white/10 bg-gradient-to-br ${cert.accent} text-white`}>
                     <cert.Icon size={26} strokeWidth={2.4} />
                   </div>
                   <h3 className="text-xl font-bold text-white mb-1">{cert.name}</h3>
@@ -137,7 +137,7 @@ export default function CertificationsPage() {
           </p>
           <Link
             href="/bookings"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
           >
             Talk to a counsellor
             <ArrowRight className="ml-2" size={20} />

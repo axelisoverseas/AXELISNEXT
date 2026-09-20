@@ -218,7 +218,7 @@ export default async function ProgramPage({ params }) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={withdrawn ? '/certifications' : '#enquire'}
-                  className="inline-flex justify-center items-center px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                  className="inline-flex justify-center items-center px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
                 >
                   {withdrawn ? 'See our current programmes' : 'Enquire about this programme'}
                   <ArrowRight aria-hidden="true" className="ml-2" size={18} />
@@ -377,7 +377,7 @@ export default async function ProgramPage({ params }) {
               </p>
               <Link
                 href="/certifications"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-[var(--storm-deep)] font-bold rounded-xl transition-[filter]"
+                className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter]"
               >
                 See our current programmes <ArrowRight aria-hidden="true" size={18} />
               </Link>
