@@ -25,12 +25,12 @@ const GUIDES = [
 export default function ResourcesPage() {
   return (
     <div className="min-h-screen bg-white">
- <section className="relative overflow-hidden bg-black px-6 pt-32 pb-16 text-[var(--color-navy)]">
+ <section className="relative overflow-hidden bg-gradient-to-b from-[var(--color-tint)] to-white px-6 pt-32 pb-16 text-[var(--color-navy)] border-b border-[var(--color-rule)]">
         <div className="pointer-events-none absolute inset-0">
           <div className="absolute -right-24 -top-24 h-80 w-80 rounded-full blur-3xl" style={{ background: 'rgba(53,144,243,0.18)' }} />
         </div>
         <div className="relative mx-auto max-w-6xl">
-          <span className="inline-block rounded-full px-4 py-1 text-sm font-semibold" style={{ background: 'rgba(53,144,243,0.12)', color: '#87BCEC' }}>
+          <span className="inline-block rounded-full px-4 py-1 text-sm font-semibold" style={{ background: 'rgba(53,144,243,0.12)', color: 'var(--color-axelis)' }}>
             Free downloads
           </span>
           <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.05] tracking-tight sm:text-5xl">

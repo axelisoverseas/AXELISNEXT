@@ -5,6 +5,7 @@ import {
   financing, EMI_TENURES, EMI_MIN_TICKET, BAJAJ_EMI_LIVE, formatINR, refundPolicy,
 } from '../../data/certificationPrograms';
 import TrustBand from '../../components/TrustBand';
+import EmiChart from '../../components/EmiChart';
 
 export const metadata = {
   title: 'Financing Your Programme | Card EMI, Merchant EMI and Study Loans',
@@ -140,7 +141,13 @@ export default function FinancingPage() {
       </section>
 
       {/* What we will not say */}
- <section className="relative py-10 border-y border-[var(--color-rule)]">
+ <section className="relative sec-sm">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <EmiChart />
+        </div>
+      </section>
+
+      <section className="relative py-10 border-y border-[var(--color-rule)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border border-[var(--color-rule)] bg-[var(--color-tint)] p-6 md:p-7">
             <div className="flex items-start gap-3">
