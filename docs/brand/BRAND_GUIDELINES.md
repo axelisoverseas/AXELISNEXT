@@ -1,5 +1,12 @@
 # Axelis Overseas — Brand Guidelines
 
+> **Superseded on colour and typeface — 21 September 2026.**
+> The palette and the Instrument Serif/Sans pairing in this document are
+> retired. The live system is Lato on the `#16265C` / `#1D4ED8` palette,
+> and the seal is documents-only. See `docs/brand/BRAND_DECISIONS.md`,
+> which wins wherever the two disagree. Everything else here still stands.
+
+
 **Version 4.0 · APPROVED · 20 September 2026 · Owner: Rishabh Agrawal**
 
 This document governs how Axelis looks and sounds — in documents, in PDFs sent

@@ -60,14 +60,17 @@ Both must point at a navy asset:
 `brand/axelis-lockup-navy.svg` and `brand/axelis-seal-navy.svg` both 404 in
 production. Copy from `docs/brand/assets/` into `public/brand/`.
 
-### 5 · The guarantee seal is not on the site at all
+### 5 · The guarantee seal — WITHDRAWN, see BRAND_DECISIONS.md §2
 
-The string "seal" appears zero times on `overseeducation.com`. The seal is the
-brand's strongest trust device and the product sells on a written guarantee.
+This item previously told you to put the seal on the homepage guarantee block
+and on `/policies/cancellation-refund`. **That was wrong.** The seal is a
+document device: the certificate, the signed guarantee page of a proposal, and
+the engagement agreement signature block. Nowhere on the web.
 
-Place `axelis-seal-navy.svg` on the guarantee block of the homepage, on
-`/policies/cancellation-refund`, and on the certificate specimen. Nowhere else —
-it is not decoration, and using it as such spends what makes it credible.
+On web pages the guarantee is carried typographically with its clause number
+(`§4.2`), not with the seal. Deploy `axelis-seal-navy.svg` and
+`axelis-seal-white.svg` so the documents can reach them; do not place them in
+any page template.
 
 ### 6 · B2B nav is using the wrong file at the wrong size
 
