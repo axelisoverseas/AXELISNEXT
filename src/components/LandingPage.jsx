@@ -30,6 +30,17 @@ export default function LandingPage({ page }) {
       {/* 1. Hero */}
       <section className="sec-lg border-b border-[var(--color-rule)] bg-gradient-to-b from-[var(--color-tint)] to-white">
         <div className="mx-auto max-w-4xl px-4 text-center sm:px-6 lg:px-8">
+          {/* These pages are entry points from ads and shared links, so a
+              visitor can land here having never seen the site. The mark makes
+              the page recognisably Axelis above the fold rather than relying
+              on the header alone. */}
+          <img
+            src="/brand/axelis-mark-navy.svg"
+            alt="Axelis Overseas"
+            width={52}
+            height={52}
+            className="mx-auto mb-6 h-12 w-auto"
+          />
           <p className="label">{label}</p>
           <h1 className="mt-3 text-4xl font-bold leading-[1.08] tracking-tight text-[var(--color-navy)] sm:text-5xl lg:text-6xl">
             {h1}
@@ -117,6 +128,14 @@ export default function LandingPage({ page }) {
       {/* 6. Close */}
       <section className="sec border-t border-[var(--color-rule)] bg-[var(--color-tint)]">
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+          <img
+            src="/brand/axelis-seal.svg"
+            alt=""
+            aria-hidden="true"
+            width={44}
+            height={44}
+            className="mx-auto mb-5 h-11 w-auto opacity-80"
+          />
           <h2 className="text-2xl font-bold tracking-tight text-[var(--color-navy)] sm:text-3xl">
             Find out where you stand, before you spend anything.
           </h2>

@@ -131,45 +131,88 @@ function ProductsContent() {
           marked superior and each carries its own call to action. */}
       <section className="relative sec-sm border-y border-[var(--color-rule)] bg-[var(--color-tint)]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
+          <div className="max-w-3xl">
             <p className="label">Start here</p>
-            <h2 className="mt-3 text-2xl sm:text-3xl font-bold tracking-tight text-[var(--color-navy)]">
-              Which charter is yours?
+            <h2 className="mt-3 text-3xl sm:text-5xl font-extrabold leading-[1.05] tracking-tight text-[var(--color-navy)]">
+              Two routes. One of them is yours.
             </h2>
-            <p className="mt-3 text-[var(--color-dim)] measure">
-              The two are not a cheaper option and a better one. They are two different
-              funding routes, and the one that fits you is decided by where you want to
-              study, not by budget.
+            <p className="mt-4 text-lg leading-relaxed text-[var(--color-dim)] measure">
+              These are not a cheaper option and a better one. They are two different ways
+              of paying for a degree abroad, and which fits you is decided by where you
+              want to study, not by what you can afford.
             </p>
           </div>
 
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            {ROUTES.map((r) => (
-              <div
-                key={r.name}
-                className="rounded-[var(--radius-xl)] border border-[var(--color-rule)] bg-white p-6 sm:p-7 flex flex-col"
-              >
-                <span aria-hidden="true" className="block h-0.5 w-8 rounded-full bg-[var(--color-axelis)]" />
-                <h3 className="mt-4 text-xl font-bold text-[var(--color-navy)]">{r.name}</h3>
-                <p className="mt-2 leading-relaxed text-[var(--color-navy)]">{r.forWho}</p>
+            {ROUTES.map((r) => {
+              // The tuition-free route is inverted, because it IS the different
+              // one. Two identical white cards made the page argue that these
+              // are the same product at two prices, which is the opposite of
+              // what it needs to say.
+              const dark = r.invert;
+              return (
+                <div
+                  key={r.name}
+                  className={`relative overflow-hidden rounded-[var(--radius-xl)] p-7 sm:p-9 flex flex-col ${
+                    dark
+                      ? 'bg-[var(--color-navy)] text-white'
+                      : 'bg-white border border-[var(--color-rule)]'
+                  }`}
+                >
+                  <img
+                    src={dark ? '/brand/axelis-mark-white.svg' : '/brand/axelis-mark-navy.svg'}
+                    alt=""
+                    aria-hidden="true"
+                    width={180}
+                    height={180}
+                    className="pointer-events-none absolute -right-8 -top-8 w-44 opacity-[0.07]"
+                  />
 
-                <dl className="mt-5 space-y-2.5 text-sm">
-                  {r.facts.map((f) => (
-                    <div key={f.k} className="flex gap-3">
-                      <dt className="w-28 shrink-0 text-[var(--color-dim)]">{f.k}</dt>
-                      <dd className="font-semibold text-[var(--color-navy)]">{f.v}</dd>
-                    </div>
-                  ))}
-                </dl>
+                  <div className="relative flex flex-col h-full">
+                    <span className={`text-[11px] font-bold uppercase tracking-[0.14em] ${dark ? 'text-[var(--accent-on-dark)]' : 'text-[var(--color-axelis)]'}`}>
+                      {r.kicker}
+                    </span>
+                    <h3 className={`mt-3 text-2xl sm:text-3xl font-extrabold leading-tight tracking-tight ${dark ? 'text-white' : 'text-[var(--color-navy)]'}`}>
+                      {r.name}
+                    </h3>
+                    <p className={`mt-3 text-[17px] leading-relaxed ${dark ? 'text-white/90' : 'text-[var(--color-navy)]'}`}>
+                      {r.forWho}
+                    </p>
 
-                <p className="mt-5 text-sm leading-relaxed text-[var(--color-dim)]">{r.catch}</p>
+                    <p className={`mt-6 text-3xl sm:text-4xl font-extrabold tracking-tight tabular-nums ${dark ? 'text-white' : 'text-[var(--color-navy)]'}`}>
+                      {r.price}
+                    </p>
+                    <p className={`mt-1 text-sm ${dark ? 'text-white/75' : 'text-[var(--color-dim)]'}`}>
+                      {r.priceNote}
+                    </p>
 
-                <a href={r.href} className="btn btn-secondary mt-6 self-start">
-                  {r.cta}
-                  <ArrowRight size={15} aria-hidden="true" />
-                </a>
-              </div>
-            ))}
+                    <dl className={`mt-6 divide-y text-sm ${dark ? 'divide-white/15' : 'divide-[var(--color-rule)]'}`}>
+                      {r.facts.map((f) => (
+                        <div key={f.k} className="flex gap-4 py-2.5">
+                          <dt className={`w-28 shrink-0 ${dark ? 'text-white/65' : 'text-[var(--color-dim)]'}`}>{f.k}</dt>
+                          <dd className={`font-semibold ${dark ? 'text-white' : 'text-[var(--color-navy)]'}`}>{f.v}</dd>
+                        </div>
+                      ))}
+                    </dl>
+
+                    <p className={`mt-5 text-sm leading-relaxed ${dark ? 'text-white/75' : 'text-[var(--color-dim)]'}`}>
+                      <span className={`font-bold ${dark ? 'text-white' : 'text-[var(--color-navy)]'}`}>The trade-off. </span>
+                      {r.catch}
+                    </p>
+
+                    <a
+                      href={r.href}
+                      className={`mt-auto pt-7 inline-flex items-center gap-2 font-bold ${
+                        dark ? 'text-[var(--accent-on-dark)] hover:text-white' : 'text-[var(--color-axelis)] hover:text-[var(--color-navy)]'
+                      }`}
+                    >
+                      {r.cta}
+                      <ArrowRight size={16} aria-hidden="true" />
+                    </a>
+                  </div>
+                </div>
+              );
+            })}
           </div>
 
           <p className="mt-8 text-sm text-[var(--color-dim)]">
@@ -574,32 +617,42 @@ function ProductsContent() {
 
 const ROUTES = [
   {
+    kicker: 'You pay tuition',
     name: 'Global Admissions Charter',
     forWho:
       'For students set on the UK, USA, Canada, Australia, Ireland or New Zealand, who accept that tuition will be paid and want the application run properly.',
+    price: '\u20b99,999',
+    priceNote: 'Refunded in full once you are placed, so a placed student pays Axelis nothing.',
     facts: [
-      { k: 'You pay', v: '\u20b99,999, refunded once you are placed' },
-      { k: 'Tuition', v: 'University-set, \u20b98 to 35 lakh a year' },
+      { k: 'Tuition', v: '\u20b98 to 35 lakh a year, set by the university' },
+      { k: 'Destinations', v: 'UK, USA, Canada, Australia, Ireland, NZ and 23 more' },
       { k: 'Plan ahead', v: '6 to 9 months, rolling intakes' },
+      { k: 'Afterwards', v: 'UK 2 years, Canada up to 3, USA 1 to 3 on OPT' },
     ],
     catch:
-      'The trade-off is cost. These destinations have the strongest post-study work routes and the highest fees, and the fees are not negotiable.',
-    cta: 'See the Global Admissions Charter',
+      'These destinations have the strongest post-study work routes and the highest fees, and the fees are not negotiable. You are paying for the job market on the other side.',
+    cta: 'See the full charter',
     href: '#plans',
+    invert: false,
   },
   {
+    kicker: 'You pay no tuition',
     name: 'Europe Public Charter',
     forWho:
       'For students who would rather pay no tuition at all, and are open to Germany, France, the Nordics and the rest of public Europe to get it.',
+    price: '\u20b919,999',
+    priceNote: 'Then \u20b91,80,000, payable only if and when you accept an offer. Total \u20b91,99,999.',
     facts: [
-      { k: 'You pay', v: '\u20b919,999, then \u20b91,80,000 only on an offer' },
-      { k: 'Tuition', v: 'Free or near-free at public universities' },
-      { k: 'Plan ahead', v: '9 to 12 months, hard deadlines' },
+      { k: 'Tuition', v: 'Nothing. A \u20ac150 to \u20ac350 semester contribution' },
+      { k: 'Destinations', v: 'Germany, France, the Nordics, Italy, Spain, Poland and more' },
+      { k: 'Plan ahead', v: '9 to 12 months, deadlines do not move' },
+      { k: 'Afterwards', v: 'Germany 18-month job seeker visa, Norway and Finland 1 year' },
     ],
     catch:
-      'The trade-off is time and paperwork. Deadlines are fixed, a blocked account and document attestation come before the application, and some routes want a local language.',
-    cta: 'See the Europe Public Charter',
+      'Time and paperwork. Deadlines are fixed, a blocked account and document attestation come before the application rather than after it, and some routes want a local language. Nobody else is steering you here, because an agency paid on your tuition earns nothing when there is none.',
+    cta: 'See the full charter',
     href: '#plans',
+    invert: true,
   },
 ];
 

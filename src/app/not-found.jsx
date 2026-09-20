@@ -31,6 +31,13 @@ export default function NotFound() {
   return (
     <section className="sec-lg bg-white">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
+        <img
+          src="/brand/axelis-mark-navy.svg"
+          alt="Axelis Overseas"
+          width={48}
+          height={48}
+          className="mx-auto mb-6 h-12 w-auto"
+        />
         <p className="label">404</p>
         <h1 className="mt-3 text-3xl font-bold tracking-tight text-[var(--color-navy)] sm:text-4xl">
           That page is not here.

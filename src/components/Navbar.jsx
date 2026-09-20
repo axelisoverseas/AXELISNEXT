@@ -98,6 +98,14 @@ const MENU = [
         ],
       },
       {
+        heading: 'Why Axelis',
+        items: [
+          { href: '/lp/tuition-free-europe', title: 'Tuition-free Europe', blurb: 'Public universities that charge nothing, and what decides the application' },
+          { href: '/lp/pay-after-offer', title: 'Pay after an offer', blurb: 'Why the order you pay in changes the advice you get' },
+          { href: '/lp/published-fees', title: 'Published fees', blurb: 'Every fee on the page, and how we are actually paid' },
+        ],
+      },
+      {
         heading: 'Proof',
         items: [
           { href: '/testimonials', title: 'Student stories', blurb: 'Named students and verifiable visas' },
