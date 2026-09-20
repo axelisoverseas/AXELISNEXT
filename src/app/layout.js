@@ -1,24 +1,14 @@
-import { Instrument_Sans, Instrument_Serif } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Script from "next/script";
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
-// Self-hosted at build time by next/font: no third-party request, and
-// next/font emits a size-adjusted fallback so there is no layout shift.
-const instrumentSans = Instrument_Sans({
-  variable: "--font-instrument-sans",
+const montserrat = Montserrat({
   subsets: ["latin"],
-  display: "swap",
-});
-
-// Display face. Ships in one weight — see the type note in globals.css.
-const instrumentSerif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  weight: "400",
-  subsets: ["latin"],
-  display: "swap",
+  variable: "--font-montserrat",
+  display: 'swap',
 });
 
 export const metadata = {
@@ -124,7 +114,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${instrumentSans.variable} ${instrumentSerif.variable}`} suppressHydrationWarning>
+    <html lang="en" className={montserrat.variable} suppressHydrationWarning>
       <head>
         <Script
           id="json-ld-organization"
