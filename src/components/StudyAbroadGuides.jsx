@@ -90,7 +90,7 @@ const StudyAbroadGuides = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.08 }}
               viewport={{ once: true }}
-              className="group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 hover:border-stone-300 transition-all duration-500 hover:shadow-[0_20px_50px_-20px_rgba(251, 191, 36,0.2)]"
+              className="group bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 hover:border-stone-300 transition-all duration-500 hover:shadow-e-3"
             >
               <div className="relative aspect-video overflow-hidden bg-[var(--color-tint)]">
                 <img
@@ -112,13 +112,13 @@ const StudyAbroadGuides = () => {
                   className="absolute inset-0 flex items-center justify-center group/btn"
                   aria-label={`Play ${guide.title}`}
                 >
-                  <div className="w-16 h-16 bg-[var(--color-tint)] backdrop-blur-md rounded-full flex items-center justify-center group-hover/btn:bg-[var(--color-axelis)] group-hover/btn:scale-110 transition-all duration-300 shadow-xl border border-[var(--color-rule)]">
+                  <div className="w-16 h-16 bg-[var(--color-tint)] backdrop-blur-md rounded-full flex items-center justify-center group-hover/btn:bg-[var(--color-axelis)] group-hover/btn:scale-110 transition-all duration-300 shadow-e-3 border border-[var(--color-rule)]">
                     <Play className="text-[var(--color-navy)] fill-current ml-1" size={24} />
                   </div>
                 </button>
 
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 bg-[var(--color-tint)] backdrop-blur-sm text-stone-900 text-[10px] font-bold rounded-lg shadow-sm">
+                  <span className="px-3 py-1 bg-[var(--color-tint)] backdrop-blur-sm text-stone-900 text-[10px] font-bold rounded-lg shadow-e-1">
                     {FALLBACK_GUIDE_TAG}
                   </span>
                 </div>
@@ -222,7 +222,7 @@ const StudyAbroadGuides = () => {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-5xl aspect-video bg-black rounded-3xl overflow-hidden shadow-2xl"
+              className="relative w-full max-w-5xl aspect-video bg-black rounded-3xl overflow-hidden shadow-e-3"
               onClick={(e) => e.stopPropagation()}
             >
               <iframe

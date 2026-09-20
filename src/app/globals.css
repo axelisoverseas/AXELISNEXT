@@ -42,9 +42,51 @@
   --color-dawn-clear: #5A7280;
   --color-dawn-glow: #2F6795;
   --color-dawn-glow-soft: #4080BD;
+
+  /* Elevation and radius as utilities, so the JSX asks for a step on the
+     scale (shadow-e-2, rounded-lg) instead of inventing another one-off. */
+  --shadow-ring: 0 0 0 1px rgba(14, 50, 64, .07);
+  --shadow-e-1: 0 1px 2px rgba(14, 50, 64, .04);
+  --shadow-e-2: 0 0 0 1px rgba(14, 50, 64, .06), 0 1px 3px rgba(14, 50, 64, .05);
+  --shadow-e-3: 0 0 0 .5px rgba(14, 50, 64, .05), 0 8px 32px rgba(14, 50, 64, .06);
+  --shadow-e-lift: 0 16px 28px -6px rgba(14, 50, 64, .12), 0 32px 88px -4px rgba(14, 50, 64, .10);
+
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
 }
 
 :root {
+  /* ---- Elevation ------------------------------------------------------
+     Measured off a reference build (metabase.com) for the craft, not the
+     colours: resting shadows there sit at 4-7% alpha, a hairline is drawn
+     as a RING shadow rather than a border so it costs no layout size, and
+     exactly one dramatic lift is reserved for things that float.
+
+     What this replaces: 32 one-off shadows, the heaviest of them
+     rgba(0,0,0,0.9) and an amber glow. Both were tuned for a black page.
+     On white, 90% black is a smudge. Alphas below are navy-tinted, so the
+     shade belongs to the palette instead of greying it. */
+  --ring:   0 0 0 1px rgba(14, 50, 64, .07);
+  --e-1:    0 1px 2px rgba(14, 50, 64, .04);
+  --e-2:    0 0 0 1px rgba(14, 50, 64, .06), 0 1px 3px rgba(14, 50, 64, .05);
+  --e-3:    0 0 0 .5px rgba(14, 50, 64, .05), 0 8px 32px rgba(14, 50, 64, .06);
+  --e-lift: 0 16px 28px -6px rgba(14, 50, 64, .12), 0 32px 88px -4px rgba(14, 50, 64, .10);
+  --e-focus: 0 0 0 2px #FFFFFF, 0 0 0 4px var(--color-axelis, #2F6795);
+
+  /* ---- Radius ---------------------------------------------------------
+     A scale, because the codebase had seven radii and no rule: 435
+     rounded-full, 286 xl, 241 lg, 160 2xl and a tail of one-offs. */
+  --r-xs: 4px;   /* chips, tags            */
+  --r-sm: 6px;   /* inputs, small controls */
+  --r-md: 8px;   /* buttons                */
+  --r-lg: 12px;  /* cards                  */
+  --r-xl: 16px;  /* panels, modals         */
+  --r-2xl: 24px; /* feature blocks         */
+
   /* §5.2 ground: white and tint 70%, navy 20%, accent 10%. The approved
      reference page (docs/brand/samples/axelis-final-navy.html) sets
      body{background:var(--white)} and fills 11 sections white, 6 tint and 6

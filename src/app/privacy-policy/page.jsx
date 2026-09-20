@@ -250,7 +250,7 @@ export default function PrivacyPolicyPage() {
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-14 space-y-8">
         {/* Introduction */}
-        <div className="bg-white rounded-2xl shadow-lg border border-slate-200 p-8">
+        <div className="bg-white rounded-2xl shadow-e-2 border border-slate-200 p-8">
           <h2 className="text-2xl font-bold text-slate-900 mb-4">Introduction</h2>
           <p className="text-slate-700 leading-relaxed mb-4">
             {LEGAL_NAME} (&ldquo;Axelis Overseas&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or
@@ -272,7 +272,7 @@ export default function PrivacyPolicyPage() {
             <section
               key={section.id}
               id={section.id}
-              className="bg-white rounded-2xl shadow-lg border border-slate-200 p-8 scroll-mt-24"
+              className="bg-white rounded-2xl shadow-e-2 border border-slate-200 p-8 scroll-mt-24"
             >
               <div className="flex items-center mb-6">
                 <div className="p-3 bg-stone-50 rounded-xl mr-4 shrink-0">
@@ -306,7 +306,7 @@ export default function PrivacyPolicyPage() {
         })}
 
         {/* Contact */}
-        <section className="bg-[var(--storm-deep)] text-white rounded-2xl shadow-lg p-8">
+        <section className="bg-[var(--storm-deep)] text-white rounded-2xl shadow-e-2 p-8">
           <h2 className="text-2xl font-bold mb-3 text-center">Contact Us</h2>
           <p className="text-slate-300 text-center mb-8 max-w-2xl mx-auto">
             If you have any questions about this Privacy Policy or how we handle your data, please

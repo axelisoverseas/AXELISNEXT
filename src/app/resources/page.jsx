@@ -51,7 +51,7 @@ export default function ResourcesPage() {
               href={g.file}
               target="_blank"
               rel="noopener noreferrer"
-              className="group flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+              className="group flex items-start gap-3 rounded-2xl border border-slate-200 bg-white p-5 shadow-e-1 transition-all hover:-translate-y-0.5 hover:shadow-e-2"
             >
               <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg" style={{ background: 'rgba(53,144,243,0.1)', color: DODGER }}>
                 <Download className="h-4 w-4" />

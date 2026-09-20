@@ -35,17 +35,17 @@ const TeamCard = ({ member, className = "", style = {} }) => {
       className="h-full block"
     >
       <div
-        className={`bg-[var(--color-tint)] backdrop-blur-sm rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 p-6 border border-stone-100 group hover:border-[var(--color-rule)] h-80 flex flex-col ${className}`}
+        className={`bg-[var(--color-tint)] backdrop-blur-sm rounded-2xl shadow-e-3 hover:shadow-e-3 transition-all duration-300 p-6 border border-stone-100 group hover:border-[var(--color-rule)] h-80 flex flex-col ${className}`}
         style={style}
       >
         <div className="text-center flex-1 flex flex-col">
-          <div className="relative w-24 h-24 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300 drop-shadow-md">
+          <div className="relative w-24 h-24 mx-auto mb-4 group-hover:scale-105 transition-transform duration-300 drop-shadow-e-2">
             {/* Try to load actual image first */}
             {member.image && !imageError && (
               <img
                 src={member.image}
                 alt={`${member.name} - ${member.role}`}
-                className={`w-full h-full rounded-full object-cover border-4 border-stone-700 shadow-lg transition-opacity duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'
+                className={`w-full h-full rounded-full object-cover border-4 border-stone-700 shadow-e-2 transition-opacity duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'
                   }`}
                 onLoad={handleImageLoad}
                 onError={handleImageError}
@@ -61,7 +61,7 @@ const TeamCard = ({ member, className = "", style = {} }) => {
 
             {/* Fallback avatar with initials */}
             {(!member.image || imageError) && (
-              <div className="w-full h-full bg-gradient-to-br from-stone-700 to-stone-900 rounded-full flex items-center justify-center text-[var(--color-navy)] text-2xl font-bold shadow-lg">
+              <div className="w-full h-full bg-gradient-to-br from-stone-700 to-stone-900 rounded-full flex items-center justify-center text-[var(--color-navy)] text-2xl font-bold shadow-e-2">
                 {getInitials(member.name)}
               </div>
             )}
@@ -69,7 +69,7 @@ const TeamCard = ({ member, className = "", style = {} }) => {
             {/* Alumni Logo Badge */}
             {member.almaMater && member.almaMater.logo && (
               <div
-                className="absolute -bottom-2 -right-2 w-10 h-10 bg-white rounded-full shadow-md flex items-center justify-center border-2 border-stone-100 p-1 group-hover:scale-110 transition-transform duration-300"
+                className="absolute -bottom-2 -right-2 w-10 h-10 bg-white rounded-full shadow-e-2 flex items-center justify-center border-2 border-stone-100 p-1 group-hover:scale-110 transition-transform duration-300"
                 title={`Alumnus of ${member.almaMater.name}`}
               >
                 <img
@@ -101,7 +101,7 @@ const TeamCard = ({ member, className = "", style = {} }) => {
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-[var(--color-navy)] rounded-full transition-all duration-300 shadow-lg hover:scale-110 hover:shadow-xl transform relative z-10"
+                className="inline-flex items-center justify-center w-10 h-10 bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-[var(--color-navy)] rounded-full transition-all duration-300 shadow-e-2 hover:scale-110 hover:shadow-e-3 transform relative z-10"
                 aria-label={`${member.name} LinkedIn Profile`}
               >
                 <Linkedin size={18} />

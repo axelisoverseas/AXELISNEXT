@@ -4,7 +4,7 @@ import { Quote } from 'lucide-react';
 const TestimonialCard = ({ testimonial, className = "", style = {} }) => {
   return (
     <div
-      className={`bg-white rounded-xl shadow-lg p-6 border border-neutral-200 hover:shadow-xl hover:border-primary-600 transition-all duration-300 hover:transform hover:scale-105 ${className}`}
+      className={`bg-white rounded-xl shadow-e-2 p-6 border border-neutral-200 hover:shadow-e-3 hover:border-primary-600 transition-all duration-300 hover:transform hover:scale-105 ${className}`}
       style={style}
     >
       <div className="flex flex-col h-full">
@@ -17,7 +17,7 @@ const TestimonialCard = ({ testimonial, className = "", style = {} }) => {
 
         <div className="flex items-center space-x-4">
           {/* Profile Image */}
-          <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-primary-200 shadow-lg">
+          <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-primary-200 shadow-e-2">
             {testimonial.image ? (
               <>
                 <img

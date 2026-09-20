@@ -62,13 +62,13 @@ const FeatureCard = ({ feature, className = "", index = 0 }) => {
           cardRef.current = el;
           scrollRef.current = el;
         }}
-        className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 p-6 border border-gray-200 group h-full ${className}`}
+        className={`bg-white rounded-xl shadow-e-2 hover:shadow-e-3 transition-all duration-300 p-6 border border-gray-200 group h-full ${className}`}
         style={{ opacity: 0, transform: 'translateY(40px)' }} // Initial state for animation
       >
         <div className="text-center h-full flex flex-col justify-center">
           <div
             ref={iconRef}
-            className="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110 drop-shadow-sm"
+            className="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110 drop-shadow-e-1"
           >
             {feature.icon}
           </div>

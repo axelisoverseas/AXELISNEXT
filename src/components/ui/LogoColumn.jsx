@@ -30,7 +30,7 @@ export const LogoColumn = ({ className = '', logos, duration = 22 }) => {
             {logos.map((u, i) => (
               <div
                 key={`${loop}-${i}`}
-                className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm shadow-stone-900/5 max-w-xs w-full flex items-center gap-4"
+                className="p-6 rounded-2xl border border-slate-200 bg-white shadow-e-1 shadow-stone-900/5 max-w-xs w-full flex items-center gap-4"
               >
                 <div className="h-14 w-14 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center overflow-hidden shrink-0">
                   <img

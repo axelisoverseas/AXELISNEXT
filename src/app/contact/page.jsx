@@ -66,15 +66,15 @@ export default function ContactPage() {
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-6">
-                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-sm text-white">
+                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-e-1 text-white">
                             <Phone size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">24/7 Support</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-sm text-white">
+                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-e-1 text-white">
                             <Globe size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">29+ Countries</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-sm text-white">
+                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-e-1 text-white">
                             <Award size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">Expert Counsellors</span>
                         </div>
@@ -92,7 +92,7 @@ export default function ContactPage() {
                         <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-3">Schedule your free counselling call</TextEffectInView>
                         <p className="text-[var(--color-dim)] max-w-2xl mx-auto">Pick a time that works for you and we'll walk you through eligibility, scholarships, and next steps.</p>
                     </div>
-                    <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+                    <div className="bg-white rounded-2xl shadow-e-3 border border-slate-200 overflow-hidden">
                         <div
                             className="calendly-inline-widget"
                             data-url={CALENDLY_URL}
@@ -108,7 +108,7 @@ export default function ContactPage() {
                     <div className="grid lg:grid-cols-2 gap-16">
 
                         {/* Form Section */}
-                        <div className="bg-white rounded-3xl shadow-sm border border-slate-200 p-8 md:p-12">
+                        <div className="bg-white rounded-3xl shadow-e-1 border border-slate-200 p-8 md:p-12">
                             <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl font-bold text-slate-900 mb-8 tracking-tight">Send us a Message</TextEffectInView>
 
                             <form onSubmit={handleSubmit} className="space-y-6">
@@ -185,7 +185,7 @@ export default function ContactPage() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full flex items-center justify-center px-6 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] disabled:bg-slate-300 disabled:text-[var(--color-dim)] text-white font-bold rounded-xl transition-all shadow-md mt-4"
+                                    className="w-full flex items-center justify-center px-6 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] disabled:bg-slate-300 disabled:text-[var(--color-dim)] text-white font-bold rounded-xl transition-all shadow-e-2 mt-4"
                                 >
                                     {isSubmitting ? 'Sending...' : (
                                         <><Send className="mr-2" size={18} /> Send Message</>
@@ -196,7 +196,7 @@ export default function ContactPage() {
 
                         {/* Information Section */}
                         <div className="space-y-8">
-                            <div className="bg-[var(--color-tint)] rounded-3xl shadow-sm border border-[var(--color-rule)] p-8 md:p-12 text-[var(--color-navy)]">
+                            <div className="bg-[var(--color-tint)] rounded-3xl shadow-e-1 border border-[var(--color-rule)] p-8 md:p-12 text-[var(--color-navy)]">
                                 <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl font-bold mb-8 tracking-tight">Get in Touch</TextEffectInView>
 
                                 <div className="space-y-8">
@@ -249,7 +249,7 @@ export default function ContactPage() {
                             </div>
 
                             {/* Social Media */}
-                            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200 text-center">
+                            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-e-1 border border-slate-200 text-center">
                                 <h3 className="text-xl font-bold text-slate-900 mb-6 tracking-tight">Connect With Us</h3>
                                 <div className="flex justify-center gap-4">
                                     <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-[var(--color-dim)] rounded-xl hover:bg-stone-50 hover:text-stone-900 transition-colors border border-slate-100">

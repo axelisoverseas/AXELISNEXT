@@ -44,7 +44,7 @@ function UniversityCard({ u }) {
   return (
     <motion.div
       variants={item}
-      className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-3.5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md"
+      className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white p-3.5 shadow-e-1 transition-all hover:-translate-y-0.5 hover:shadow-e-2"
     >
       <div className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-slate-100 bg-slate-50">
         {logo ? (

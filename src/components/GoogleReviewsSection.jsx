@@ -46,7 +46,7 @@ export default function GoogleReviewsSection({ compact = false }) {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Section header — Google-branded */}
                 <div className="text-center mb-10 max-w-2xl mx-auto">
-                    <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-white text-slate-900 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] mb-6">
+                    <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-white text-slate-900 shadow-e-3 mb-6">
                         <GoogleG size={26} />
                         <div className="text-left">
                             <div className="flex items-center gap-2">
@@ -73,7 +73,7 @@ export default function GoogleReviewsSection({ compact = false }) {
                     {shown.map((r, i) => (
                         <article
                             key={i}
-                            className="relative bg-white border-2 border-[var(--color-rule)] hover:border-[var(--color-rule)] rounded-2xl p-5 md:p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] transition-colors flex flex-col"
+                            className="relative bg-white border-2 border-[var(--color-rule)] hover:border-[var(--color-rule)] rounded-2xl p-5 md:p-6 shadow-e-3 transition-colors flex flex-col"
                         >
                             {/* Google G watermark top-right */}
                             <div className="absolute top-4 right-4 opacity-70">
@@ -106,7 +106,7 @@ export default function GoogleReviewsSection({ compact = false }) {
                         href={href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-100 transition-colors shadow-[0_20px_60px_-20px_rgba(0,0,0,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                        className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-slate-900 font-bold text-sm hover:bg-slate-100 transition-colors shadow-e-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                     >
                         <GoogleG size={18} />
                         Read all {googleReviewsMeta.totalReviews} reviews on Google

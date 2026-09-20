@@ -29,13 +29,13 @@ const StudentDashboardMock = () => {
                     </p>
                 </div>
 
-                <div className="bg-white rounded-3xl shadow-xl border border-gray-100 overflow-hidden relative">
+                <div className="bg-white rounded-3xl shadow-e-3 border border-gray-100 overflow-hidden relative">
                     {/* Decorative header */}
                     <div className="bg-gradient-to-r from-slate-900 to-stone-900 h-32 absolute top-0 left-0 right-0 z-0"></div>
 
                     <div className="relative z-10 px-8 pt-12 pb-8">
                         {/* Student Profile Overview */}
-                        <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-2xl p-6 shadow-md border border-gray-50 mb-10 transform -translate-y-4">
+                        <div className="flex flex-col md:flex-row items-center justify-between bg-white rounded-2xl p-6 shadow-e-2 border border-gray-50 mb-10 transform -translate-y-4">
                             <div className="flex items-center gap-6">
                                 <div className="w-20 h-20 rounded-full bg-stone-100 border-4 border-white shadow flex items-center justify-center text-stone-900 font-black text-2xl shrink-0">
                                     AR
@@ -71,7 +71,7 @@ const StudentDashboardMock = () => {
                                             className="relative flex items-center justify-between group"
                                         >
                                             {/* Line marker */}
-                                            <div className={`absolute left-0 -ml-[2.2rem] flex items-center justify-center w-8 h-8 rounded-full border-4 border-white shadow-sm transition-colors ${step.status === 'completed' ? 'bg-green-500 text-white' :
+                                            <div className={`absolute left-0 -ml-[2.2rem] flex items-center justify-center w-8 h-8 rounded-full border-4 border-white shadow-e-1 transition-colors ${step.status === 'completed' ? 'bg-green-500 text-white' :
                                                     step.status === 'current' ? 'bg-[var(--color-tint)] text-[var(--color-navy)] animate-pulse' :
                                                         'bg-gray-200 text-gray-400'
                                                 }`}>
@@ -81,7 +81,7 @@ const StudentDashboardMock = () => {
                                             </div>
 
                                             <div className={`p-4 rounded-xl border transition-all duration-300 w-full ml-4 ${step.status === 'current'
-                                                    ? 'bg-stone-50 border-stone-200 shadow-md ring-1 ring-stone-700/20'
+                                                    ? 'bg-stone-50 border-stone-200 shadow-e-2 ring-1 ring-stone-700/20'
                                                     : 'bg-white border-gray-100 hover:border-gray-300'
                                                 }`}>
                                                 <div className="flex justify-between items-center">
@@ -116,7 +116,7 @@ const StudentDashboardMock = () => {
                                     <FileText className="w-5 h-5 mr-2 text-stone-900" /> Documents
                                 </h4>
                                 <div className="bg-gray-50 rounded-2xl p-5 border border-gray-100 space-y-4">
-                                    <div className="flex items-center justify-between p-3 bg-white rounded-xl border border-gray-200 shadow-sm">
+                                    <div className="flex items-center justify-between p-3 bg-white rounded-xl border border-gray-200 shadow-e-1">
                                         <div className="flex items-center gap-3">
                                             <div className="w-8 h-8 rounded bg-green-100 text-green-600 flex items-center justify-center shrink-0">
                                                 <CheckCircle2 size={16} />
@@ -124,7 +124,7 @@ const StudentDashboardMock = () => {
                                             <div className="text-sm font-semibold text-slate-700 truncate">Passport_Front.pdf</div>
                                         </div>
                                     </div>
-                                    <div className="flex items-center justify-between p-3 bg-white rounded-xl border border-gray-200 shadow-sm">
+                                    <div className="flex items-center justify-between p-3 bg-white rounded-xl border border-gray-200 shadow-e-1">
                                         <div className="flex items-center gap-3">
                                             <div className="w-8 h-8 rounded bg-green-100 text-green-600 flex items-center justify-center shrink-0">
                                                 <CheckCircle2 size={16} />
@@ -132,7 +132,7 @@ const StudentDashboardMock = () => {
                                             <div className="text-sm font-semibold text-slate-700 truncate">IELTS_Scorecard.pdf</div>
                                         </div>
                                     </div>
-                                    <div className="flex items-center justify-between p-3 bg-stone-50 border border-stone-200 rounded-xl shadow-sm ring-1 ring-stone-700/20">
+                                    <div className="flex items-center justify-between p-3 bg-stone-50 border border-stone-200 rounded-xl shadow-e-1 ring-1 ring-stone-700/20">
                                         <div className="flex items-center gap-3 w-full">
                                             <div className="w-8 h-8 rounded bg-stone-100 text-stone-800 flex items-center justify-center shrink-0">
                                                 !
@@ -141,14 +141,14 @@ const StudentDashboardMock = () => {
                                                 <div className="text-sm font-bold text-stone-900">Financial Docs</div>
                                                 <div className="text-xs text-stone-900 font-medium">Action Required</div>
                                             </div>
-                                            <button className="text-xs font-bold bg-white text-stone-900 px-2 py-1 rounded shadow-sm border border-stone-100">
+                                            <button className="text-xs font-bold bg-white text-stone-900 px-2 py-1 rounded shadow-e-1 border border-stone-100">
                                                 Upload
                                             </button>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="mt-6 bg-gradient-to-br from-white to-stone-700 rounded-2xl p-6 text-slate-900 shadow-lg relative overflow-hidden">
+                                <div className="mt-6 bg-gradient-to-br from-white to-stone-700 rounded-2xl p-6 text-slate-900 shadow-e-2 relative overflow-hidden">
                                     <div className="absolute -right-4 -bottom-4 opacity-20">
                                         <Globe size={100} />
                                     </div>

@@ -31,7 +31,7 @@ const CibilScoreWidget = () => {
   };
 
   return (
-    <div className="bg-gradient-to-br from-stone-50 to-stone-100 rounded-2xl p-6 border border-stone-200 shadow-lg">
+    <div className="bg-gradient-to-br from-stone-50 to-stone-100 rounded-2xl p-6 border border-stone-200 shadow-e-2">
       {/* Header */}
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center gap-3">
@@ -57,7 +57,7 @@ const CibilScoreWidget = () => {
         </h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3">
           {scoreRanges.map((score, index) => (
-            <div key={index} className="bg-white rounded-lg p-3 border border-gray-200 hover:shadow-md transition-shadow">
+            <div key={index} className="bg-white rounded-lg p-3 border border-gray-200 hover:shadow-e-2 transition-shadow">
               <div className="flex items-center gap-2 mb-2">
                 <div className={`w-3 h-3 rounded-full ${score.color}`}></div>
                 <span className="font-bold text-sm text-gray-900">{score.range}</span>
@@ -92,7 +92,7 @@ const CibilScoreWidget = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
           <button
             onClick={handleCheckScore}
-            className="flex items-center justify-center gap-2 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+            className="flex items-center justify-center gap-2 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-e-2"
           >
             <CreditCard size={18} />
             Check on CIBIL Official
@@ -101,7 +101,7 @@ const CibilScoreWidget = () => {
           
           <button
             onClick={handleBankBazaarCheck}
-            className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
+            className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:scale-105 shadow-e-2"
           >
             <Shield size={18} />
             Check on BankBazaar

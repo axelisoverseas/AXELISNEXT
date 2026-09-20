@@ -57,7 +57,7 @@ const VisualTestimonialCarousel = () => {
 
         {/* Main Testimonial */}
         <div className="relative">
-          <div className="bg-[var(--color-tint)] backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-[var(--color-rule)] shadow-2xl">
+          <div className="bg-[var(--color-tint)] backdrop-blur-lg rounded-3xl p-8 md:p-12 border border-[var(--color-rule)] shadow-e-3">
             <div className="grid lg:grid-cols-2 gap-8 items-center">
               {/* Student Image */}
               <div className="relative">
@@ -66,7 +66,7 @@ const VisualTestimonialCarousel = () => {
                   <img
                     src={studentImage}
                     alt={currentTestimonial.name}
-                    className="relative w-full h-full object-cover rounded-full border-4 border-[var(--color-rule)] shadow-2xl"
+                    className="relative w-full h-full object-cover rounded-full border-4 border-[var(--color-rule)] shadow-e-3"
                     onError={(e) => {
                       e.target.src = `https://ui-avatars.com/api/?name=${encodeURIComponent(currentTestimonial.name)}&size=300&background=145da0&color=fff&bold=true`;
                     }}

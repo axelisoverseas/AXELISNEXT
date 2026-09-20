@@ -86,7 +86,7 @@ const Navbar = () => {
       </div>
 
       {/* Main Navigation - storm glass */}
-      <div className="bg-white border-b border-[var(--color-rule)] sticky top-0 z-50 transition-all shadow-[0_6px_24px_-20px_rgba(14,50,64,0.5)]">
+      <div className="bg-white border-b border-[var(--color-rule)] sticky top-0 z-50 transition-all shadow-e-2">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
@@ -179,7 +179,7 @@ const Navbar = () => {
             <div className="hidden xl:flex items-center space-x-3 shrink-0">
               <Link
                 href="/bookings"
-                className="relative overflow-hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-[transform,filter,box-shadow] shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                className="relative overflow-hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-[transform,filter,box-shadow] shadow-e-2 hover:shadow-e-2 transform hover:-translate-y-0.5"
               >
                 <span className="relative z-10">Book a Discovery Call</span>
                 <BorderBeam size={80} duration={7} colorFrom="#FFFFFF" colorTo="#FBBF24" />
@@ -225,7 +225,7 @@ const Navbar = () => {
         />
 
         <div
-          className={`fixed right-0 top-0 h-full w-80 bg-[var(--storm-abyss)] shadow-2xl border-l border-[var(--storm-electric)]/10 transform transition-transform duration-300 ease-in-out flex flex-col ${isOpen ? 'translate-x-0' : 'translate-x-full'
+          className={`fixed right-0 top-0 h-full w-80 bg-[var(--storm-abyss)] shadow-e-3 border-l border-[var(--storm-electric)]/10 transform transition-transform duration-300 ease-in-out flex flex-col ${isOpen ? 'translate-x-0' : 'translate-x-full'
             }`}
         >
           {/* Menu Header */}
@@ -369,7 +369,7 @@ const Navbar = () => {
             <Link
               href="/bookings"
               onClick={() => setIsOpen(false)}
-              className="relative overflow-hidden block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-[filter] shadow-[0_0_40px_-10px_var(--storm-accent-glow)]"
+              className="relative overflow-hidden block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-[filter] shadow-e-2"
             >
               <span className="relative z-10">Book a Discovery Call</span>
               <BorderBeam size={120} duration={8} colorFrom="#FFFFFF" colorTo="#FBBF24" />

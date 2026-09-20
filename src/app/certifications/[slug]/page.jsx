@@ -218,7 +218,7 @@ export default async function ProgramPage({ params }) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={withdrawn ? '/certifications' : '#enquire'}
-                  className="inline-flex justify-center items-center px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                  className="inline-flex justify-center items-center px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-2"
                 >
                   {withdrawn ? 'See our current programmes' : 'Enquire about this programme'}
                   <ArrowRight aria-hidden="true" className="ml-2" size={18} />
@@ -234,7 +234,7 @@ export default async function ProgramPage({ params }) {
 
             {/* Right rail — quick facts */}
             <aside className="lg:col-span-1 lg:sticky lg:top-24">
-              <div className="bg-white border-2 border-white/15 rounded-2xl p-6 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+              <div className="bg-white border-2 border-white/15 rounded-2xl p-6 shadow-e-3">
                 <div className="pb-4 mb-2 border-b border-white/15">
                   <div className="text-xs text-[var(--color-dim-dark)] mb-1">
                     {withdrawn ? 'Fee when last offered' : 'Programme fee'}

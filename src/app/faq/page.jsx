@@ -90,7 +90,7 @@ const FAQPage = () => {
             <input 
               type="text" 
               placeholder="Search for questions (e.g. 'Scholarship', 'Visa', 'UK')"
-              className="w-full h-16 pl-16 pr-8 bg-[var(--color-axelis)]/50 backdrop-blur-xl border border-[var(--color-axelis)] rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-stone-700 transition-all font-medium text-lg shadow-2xl"
+              className="w-full h-16 pl-16 pr-8 bg-[var(--color-axelis)]/50 backdrop-blur-xl border border-[var(--color-axelis)] rounded-2xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-stone-700 transition-all font-medium text-lg shadow-e-3"
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
             />
@@ -107,7 +107,7 @@ const FAQPage = () => {
             <aside className="lg:w-1/4">
               <div className="sticky top-8 space-y-8">
                 {/* Category Filter */}
-                <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div className="bg-white p-8 rounded-3xl border border-slate-200 shadow-e-1">
                   <h3 className="text-sm font-bold text-slate-900 mb-6">Explore Categories</h3>
                   <div className="flex flex-wrap lg:flex-col gap-2">
                     {categories.map((cat) => (
@@ -116,7 +116,7 @@ const FAQPage = () => {
                         onClick={() => setActiveCategory(cat)}
                         className={`px-5 py-3 rounded-xl text-sm font-bold text-left transition-all ${
                           activeCategory === cat 
-                            ? 'bg-[var(--color-tint)] text-[var(--color-navy)] shadow-lg' 
+                            ? 'bg-[var(--color-tint)] text-[var(--color-navy)] shadow-e-2' 
                             : 'bg-slate-100 text-[var(--color-dim)] hover:bg-slate-200'
                         }`}
                       >
@@ -133,7 +133,7 @@ const FAQPage = () => {
                     <h4 className="font-bold mb-2">29+ Countries</h4>
                     <p className="text-[var(--color-dim)] text-xs leading-relaxed">Expert guidance across 4 continents and 29+ study destinations.</p>
                   </div>
-                  <div className="bg-[var(--color-tint)] p-6 rounded-3xl text-[var(--color-navy)] shadow-xl">
+                  <div className="bg-[var(--color-tint)] p-6 rounded-3xl text-[var(--color-navy)] shadow-e-3">
                     <ShieldCheck className="text-[var(--color-navy)] mb-4" size={32} />
                     <h4 className="font-bold mb-2">95% Visa Success</h4>
                     <p className="text-[var(--color-navy)] text-xs leading-relaxed">Highly specialized visa assistance with guaranteed results.</p>
@@ -153,7 +153,7 @@ const FAQPage = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.05 }}
-                      className={`bg-white rounded-3xl border border-slate-200 overflow-hidden transition-all duration-300 ${openId === faq.id ? 'shadow-xl border-stone-200' : 'hover:border-slate-300'}`}
+                      className={`bg-white rounded-3xl border border-slate-200 overflow-hidden transition-all duration-300 ${openId === faq.id ? 'shadow-e-3 border-stone-200' : 'hover:border-slate-300'}`}
                     >
                       <button 
                         onClick={() => toggleFaq(faq.id)}
@@ -210,14 +210,14 @@ const FAQPage = () => {
               )}
 
               {/* Bottom CTA Card */}
-              <div className="mt-16 bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] rounded-[3rem] p-12 md:p-16 text-white text-center shadow-2xl relative overflow-hidden group">
+              <div className="mt-16 bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] rounded-[3rem] p-12 md:p-16 text-white text-center shadow-e-3 relative overflow-hidden group">
                 <div className="relative z-10 flex flex-col items-center">
                   <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-5xl font-extrabold mb-6 tracking-tight">Still looking for answers?</TextEffectInView>
                   <p className="text-xl text-stone-50/80 mb-10 max-w-2xl leading-relaxed">Our expert counsellors are available 24/7 to provide personalized guidance for your unique profile.</p>
                   <div className="flex flex-col sm:flex-row gap-4">
                     <Link 
                       href="/contact"
-                      className="px-8 py-4 bg-white text-stone-900 text-lg font-bold rounded-2xl hover:bg-slate-50 transition-all hover:-translate-y-1 shadow-xl"
+                      className="px-8 py-4 bg-white text-stone-900 text-lg font-bold rounded-2xl hover:bg-slate-50 transition-all hover:-translate-y-1 shadow-e-3"
                     >
                       Book Free Consultation
                     </Link>

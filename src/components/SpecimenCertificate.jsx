@@ -20,7 +20,7 @@ export default function SpecimenCertificate({ programmeTitle = 'Global Career La
     <div
       role="img"
       aria-label={`Specimen Axelis certificate for ${programmeTitle}. Marked specimen; not issued to a student.`}
-      className="relative overflow-hidden rounded-2xl border-2 border-[var(--color-axelis)]/30 bg-gradient-to-br from-[#17140F] to-[#0C0A09] p-6 sm:p-10 md:p-14 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]"
+      className="relative overflow-hidden rounded-2xl border-2 border-[var(--color-axelis)]/30 bg-gradient-to-br from-[#17140F] to-[#0C0A09] p-6 sm:p-10 md:p-14 shadow-e-lift"
     >
       {/* Watermark. aria-hidden because the label above already says it. */}
       <div

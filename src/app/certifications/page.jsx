@@ -170,7 +170,7 @@ export default function CertificationsPage() {
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#programmes"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-2"
             >
               Browse the programmes
               <ArrowRight aria-hidden="true" className="ml-2" size={20} />
@@ -214,7 +214,7 @@ export default function CertificationsPage() {
       {/* ------------------------------------------------------- FINANCING */}
       <section id="financing" className="relative py-16 scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-7 md:p-9 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+          <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-7 md:p-9 shadow-e-3">
             <div className="flex items-start gap-4 mb-5">
               <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center text-white shrink-0">
                 <CreditCard aria-hidden="true" size={22} strokeWidth={2.3} />

@@ -87,7 +87,7 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
                 placeholder="Search frequently asked questions... (e.g., 'visa requirements', 'scholarships', 'living costs')"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-12 pr-12 py-4 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-stone-700 bg-white text-slate-900 text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                className="w-full pl-12 pr-12 py-4 border-2 border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-stone-700 bg-white text-slate-900 text-lg shadow-e-2 hover:shadow-e-3 transition-all duration-300"
               />
               {searchTerm && (
                 <button
@@ -120,8 +120,8 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
                       onClick={() => setSelectedCategory(category)}
                       className={`px-4 py-2 rounded-xl text-sm font-medium transition-all duration-300 hover:scale-105 ${
                         selectedCategory === category
-                          ? 'bg-gradient-to-r from-stone-700 to-stone-900 text-[var(--color-navy)] shadow-lg'
-                          : 'bg-white border-2 border-slate-200 text-slate-700 hover:border-stone-300 hover:bg-stone-50 shadow-sm'
+                          ? 'bg-gradient-to-r from-stone-700 to-stone-900 text-[var(--color-navy)] shadow-e-2'
+                          : 'bg-white border-2 border-slate-200 text-slate-700 hover:border-stone-300 hover:bg-stone-50 shadow-e-1'
                       }`}
                     >
                       {category}
@@ -180,7 +180,7 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
             <div
               key={faq.id}
               id={`category-${faq.category.toLowerCase()}`}
-              className="bg-[var(--color-tint)] backdrop-blur-sm rounded-2xl shadow-xl border border-slate-200 overflow-hidden transition-all duration-300 hover:shadow-2xl hover:scale-[1.02] group"
+              className="bg-[var(--color-tint)] backdrop-blur-sm rounded-2xl shadow-e-3 border border-slate-200 overflow-hidden transition-all duration-300 hover:shadow-e-3 hover:scale-[1.02] group"
             >
               <button
                 onClick={() => toggleItem(faq.id)}
@@ -258,13 +258,13 @@ const EnhancedFAQ = ({ faqs, showSearch = true, showCategories = true }) => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a
             href={`tel:${siteInfo.contact.phones[0]}`}
-            className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-semibold rounded-lg transition-colors shadow-e-2 hover:shadow-e-2"
           >
             Call Us: {siteInfo.contact.phones[0]}
           </a>
           <a
             href={`mailto:${siteInfo.contact.emails[0]}`}
-            className="inline-flex items-center justify-center px-6 py-3 border-2 border-[var(--color-axelis)] text-[var(--color-axelis)] hover:bg-[var(--color-navy)] hover:text-white font-semibold rounded-lg transition-colors shadow-md hover:shadow-lg"
+            className="inline-flex items-center justify-center px-6 py-3 border-2 border-[var(--color-axelis)] text-[var(--color-axelis)] hover:bg-[var(--color-navy)] hover:text-white font-semibold rounded-lg transition-colors shadow-e-2 hover:shadow-e-2"
           >
             Email Us
           </a>

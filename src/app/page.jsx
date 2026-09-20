@@ -85,7 +85,7 @@ export default function Home() {
           >
             <Link
               href="/products"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-2"
             >
               See student plans
               <ArrowRight aria-hidden="true" className="ml-2" size={20} />
@@ -201,7 +201,7 @@ export default function Home() {
                     </div>
                     {/* Amber lightning-bolt accent (universal — same on every card) */}
                     <div
-                      className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center shadow-[0_0_18px_rgba(245,158,11,0.55)] ring-2 ring-[var(--storm-deep)]"
+                      className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center shadow-e-2 ring-2 ring-[var(--storm-deep)]"
                       style={{ animation: 'bolt-pulse 3.5s ease-in-out infinite' }}
                     >
                       <Zap size={13} strokeWidth={3} className="text-white" fill="currentColor" />
@@ -245,7 +245,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <Link
               href="/products#plans"
-              className="group bg-white border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              className="group bg-white border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-e-3 p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               aria-label="Global Admissions Charter (GAC), nine thousand nine hundred ninety nine rupees — view details"
             >
               <div className="flex items-baseline justify-between">
@@ -273,7 +273,7 @@ export default function Home() {
 
             <Link
               href="/products#plans"
-              className="group bg-white border-2 border-[var(--color-axelis)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--color-axelis)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              className="group bg-white border-2 border-[var(--color-axelis)]/30 rounded-2xl shadow-e-3 p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--color-axelis)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               aria-label="Europe Public Charter (EPC), nineteen thousand nine hundred ninety nine rupees — view details"
             >
               <div className="flex items-baseline justify-between">
@@ -500,7 +500,7 @@ export default function Home() {
           viewport={{ once: true }}
           className="max-w-6xl mx-auto px-4 relative z-10"
         >
-          <div className="bg-[var(--dawn-horizon)] rounded-[2.5rem] overflow-hidden shadow-[0_30px_80px_-20px_var(--storm-accent-glow)] border border-[var(--dawn-glow)]/20 flex flex-col md:flex-row">
+          <div className="bg-[var(--dawn-horizon)] rounded-[2.5rem] overflow-hidden shadow-e-lift border border-[var(--dawn-glow)]/20 flex flex-col md:flex-row">
             {/* Image Pane */}
             <div className="md:w-5/12 h-64 md:h-auto relative">
               <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop" alt="Graduation Joy" className="absolute inset-0 w-full h-full object-cover" />
@@ -513,7 +513,7 @@ export default function Home() {
               <p className="text-xl text-slate-300 mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Tell us where you want to study. We&apos;ll tell you what it actually takes &mdash; honest, transparent, no upsell.</p>
               <Link
                 href="/bookings"
-                className="relative overflow-hidden inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-[var(--storm-accent)] via-[#FFB347] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[transform,filter,box-shadow] shadow-[0_0_40px_-10px_var(--storm-accent-glow)] hover:shadow-[0_0_60px_-15px_var(--storm-accent-glow)] text-lg hover:-translate-y-1 z-10 group"
+                className="relative overflow-hidden inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-[var(--storm-accent)] via-[#FFB347] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[transform,filter,box-shadow] shadow-e-2 hover:shadow-e-lift text-lg hover:-translate-y-1 z-10 group"
               >
                 <span className="relative z-10 inline-flex items-center">
                   Apply Now - Start Journey

@@ -14,7 +14,7 @@ export default function CancellationRefundBlock() {
   return (
     <section id="cancellation-refund" className="relative py-14 scroll-mt-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-6 md:p-8 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-6 md:p-8 shadow-e-3">
           <div className="flex items-start gap-4">
             <div className="w-11 h-11 rounded-xl bg-[var(--color-tint)] border border-[var(--color-rule)] flex items-center justify-center shrink-0">
               <RotateCcw size={20} className="text-[var(--color-navy)]" />

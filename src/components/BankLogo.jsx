@@ -39,7 +39,7 @@ const BankLogo = ({ bankName, className = "w-16 h-16" }) => {
     const borderColor = isNBFC ? "border-green-500" : "border-stone-700";
 
     return (
-      <div className={`${className} ${bgColor} rounded-lg flex items-center justify-center shadow-lg border ${borderColor}`}>
+      <div className={`${className} ${bgColor} rounded-lg flex items-center justify-center shadow-e-2 border ${borderColor}`}>
         <div className="text-[var(--color-navy)] font-bold text-xs text-center px-1">
           {bankName.split(' ').map(word => word[0]).join('').slice(0, 4)}
         </div>
@@ -48,7 +48,7 @@ const BankLogo = ({ bankName, className = "w-16 h-16" }) => {
   }
 
   return (
-    <div className={`${className} bg-white rounded-lg flex items-center justify-center shadow-lg border border-gray-200 p-2 overflow-hidden`}>
+    <div className={`${className} bg-white rounded-lg flex items-center justify-center shadow-e-2 border border-gray-200 p-2 overflow-hidden`}>
       <img
         src={logoUrl}
         alt={`${bankName} logo`}

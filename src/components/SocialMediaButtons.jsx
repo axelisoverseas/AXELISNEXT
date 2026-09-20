@@ -73,7 +73,7 @@ const SocialMediaButtons = ({
           onClick={() => handleSocialClick(social.url)}
           className={`
             p-3 rounded-full ${social.color} ${social.textColor}
-            transition-all duration-300 transform hover:scale-110 shadow-lg
+            transition-all duration-300 transform hover:scale-110 shadow-e-2
             flex items-center justify-center
           `}
           aria-label={social.label}
@@ -90,7 +90,7 @@ const SocialMediaButtons = ({
         className={`
           ${currentSize.button} ${social.color} ${social.textColor}
           rounded-xl font-semibold transition-all duration-300 transform hover:scale-105
-          flex items-center ${currentSize.gap} shadow-lg hover:shadow-xl
+          flex items-center ${currentSize.gap} shadow-e-2 hover:shadow-e-3
           ${!showLabels ? 'justify-center' : ''}
         `}
         aria-label={social.label}

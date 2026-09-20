@@ -78,7 +78,7 @@ export default function AboutPage() {
                             {/* Minimal Grid Stats Moved Under Text */}
                             <div className="grid grid-cols-2 gap-4 mt-8">
                                 {stats.map((stat, idx) => (
-                                    <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 px-4 py-8 text-center hover:bg-white hover:border-stone-200 transition-colors shadow-sm hover:shadow-md">
+                                    <div key={idx} className="bg-slate-50 p-6 rounded-2xl border border-slate-100 px-4 py-8 text-center hover:bg-white hover:border-stone-200 transition-colors shadow-e-1 hover:shadow-e-2">
                                         <div className="mx-auto mb-3 text-stone-900 flex justify-center">
                                             {stat.icon}
                                         </div>
@@ -90,11 +90,11 @@ export default function AboutPage() {
                         </div>
 
                         {/* Image Content Right Side */}
-                        <div className="relative h-full min-h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+                        <div className="relative h-full min-h-[500px] rounded-3xl overflow-hidden shadow-e-3">
                             <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop" alt="Students walking on campus" className="absolute inset-0 w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
                             {/* Overlay Badge */}
-                            <div className="absolute bottom-6 left-6 right-6 bg-[var(--color-tint)] backdrop-blur-md rounded-2xl p-6 shadow-lg border border-[var(--color-rule)]">
+                            <div className="absolute bottom-6 left-6 right-6 bg-[var(--color-tint)] backdrop-blur-md rounded-2xl p-6 shadow-e-2 border border-[var(--color-rule)]">
                                 <p className="text-slate-800 font-bold text-lg mb-1">Global Education</p>
                                 <p className="text-[var(--color-dim)] text-sm">First counselling call is free. Always.</p>
                             </div>
@@ -125,7 +125,7 @@ export default function AboutPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-2 gap-8 mb-20">
                         {/* Mission Card */}
-                        <div className="bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-slate-200">
+                        <div className="bg-white p-10 md:p-12 rounded-3xl shadow-e-1 border border-slate-200">
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="w-14 h-14 bg-stone-50 text-stone-900 flex items-center justify-center rounded-xl p-3 shrink-0">
                                     <Target size={28} />
@@ -139,7 +139,7 @@ export default function AboutPage() {
                         </div>
 
                         {/* Vision Card */}
-                        <div className="bg-white p-10 md:p-12 rounded-3xl shadow-sm border border-slate-200">
+                        <div className="bg-white p-10 md:p-12 rounded-3xl shadow-e-1 border border-slate-200">
                             <div className="flex items-center gap-4 mb-8">
                                 <div className="w-14 h-14 bg-stone-50 text-stone-900 flex items-center justify-center rounded-xl p-3 shrink-0">
                                     <Eye size={28} />
@@ -154,7 +154,7 @@ export default function AboutPage() {
                     </div>
 
                     {/* Podcast CTA */}
-                    <div className="bg-[var(--color-tint)] rounded-[2.5rem] overflow-hidden shadow-2xl mt-12 flex flex-col md:flex-row relative">
+                    <div className="bg-[var(--color-tint)] rounded-[2.5rem] overflow-hidden shadow-e-3 mt-12 flex flex-col md:flex-row relative">
                         <div className="md:w-1/2 p-12 md:p-16 flex flex-col justify-center relative z-10">
                             <h3 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-6">
                                 Hear The Untold Stories
@@ -166,7 +166,7 @@ export default function AboutPage() {
                                 href="https://www.youtube.com/@axelisoverseas"
                                 target="_blank"
                                 rel="noreferrer"
-                                className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-xl transition-all shadow-lg text-lg group self-start"
+                                className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-xl transition-all shadow-e-2 text-lg group self-start"
                             >
                                 <Play className="mr-3 text-[var(--color-navy)] group-hover:scale-110 transition-transform" size={24} fill="currentColor" />
                                 Watch Our YouTube Podcast
@@ -192,7 +192,7 @@ export default function AboutPage() {
                             href="https://calendly.com/axelisoverseas/counsellingsession"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="relative overflow-hidden inline-flex justify-center items-center px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-lg"
+                            className="relative overflow-hidden inline-flex justify-center items-center px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-e-2"
                         >
                             <span className="relative z-10">Book Your Counselling Call Today</span>
                             <BorderBeam size={140} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />

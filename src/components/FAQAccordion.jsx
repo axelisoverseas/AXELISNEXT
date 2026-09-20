@@ -19,7 +19,7 @@ const FAQAccordion = ({ faqs }) => {
       {faqs.map((faq) => (
         <div
           key={faq.id}
-          className="bg-white rounded-lg shadow-lg border border-neutral-200"
+          className="bg-white rounded-lg shadow-e-2 border border-neutral-200"
         >
           <button
             onClick={() => toggleItem(faq.id)}

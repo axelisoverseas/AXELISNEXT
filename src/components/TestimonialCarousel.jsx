@@ -42,7 +42,7 @@ const TestimonialCarousel = ({ testimonials, autoPlay = true, autoPlayInterval =
   return (
     <div className="relative max-w-4xl mx-auto">
       {/* Main Carousel Container */}
-      <div className="relative overflow-hidden rounded-2xl bg-white shadow-lg border border-secondary-200">
+      <div className="relative overflow-hidden rounded-2xl bg-white shadow-e-2 border border-secondary-200">
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
@@ -53,7 +53,7 @@ const TestimonialCarousel = ({ testimonials, autoPlay = true, autoPlayInterval =
                 <div className="flex flex-col md:flex-row items-center gap-8">
                   {/* Testimonial Image */}
                   <div className="flex-shrink-0">
-                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-neutral-300 shadow-lg">
+                    <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-neutral-300 shadow-e-2">
                       <img
                         src={testimonial.image}
                         alt={`${testimonial.name} - ${testimonial.course} student at ${testimonial.university}`}
@@ -102,14 +102,14 @@ const TestimonialCarousel = ({ testimonials, autoPlay = true, autoPlayInterval =
           <>
             <button
               onClick={goToPrevious}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-neutral-800 p-2 rounded-full shadow-lg hover:bg-neutral-50 hover:shadow-xl transition-all duration-300 hover:scale-110 z-10 border border-neutral-200"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white text-neutral-800 p-2 rounded-full shadow-e-2 hover:bg-neutral-50 hover:shadow-e-3 transition-all duration-300 hover:scale-110 z-10 border border-neutral-200"
               aria-label="Previous testimonial"
             >
               <ChevronLeft size={24} />
             </button>
             <button
               onClick={goToNext}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-neutral-800 p-2 rounded-full shadow-lg hover:bg-neutral-50 hover:shadow-xl transition-all duration-300 hover:scale-110 z-10 border border-neutral-200"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white text-neutral-800 p-2 rounded-full shadow-e-2 hover:bg-neutral-50 hover:shadow-e-3 transition-all duration-300 hover:scale-110 z-10 border border-neutral-200"
               aria-label="Next testimonial"
             >
               <ChevronRight size={24} />
@@ -125,7 +125,7 @@ const TestimonialCarousel = ({ testimonials, autoPlay = true, autoPlayInterval =
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 shadow-sm hover:shadow-md ${
+              className={`w-3 h-3 rounded-full transition-all duration-300 shadow-e-1 hover:shadow-e-2 ${
                 index === currentIndex
                   ? 'bg-primary-600 scale-125'
                   : 'bg-neutral-400 hover:bg-neutral-600'

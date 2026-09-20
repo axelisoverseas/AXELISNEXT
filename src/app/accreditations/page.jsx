@@ -113,7 +113,7 @@ export default function CertificationsPage() {
             className={`relative max-w-3xl w-[90%] transition-all duration-500 ${hovered === cert.id ? 'opacity-100 scale-100' : 'opacity-0 scale-95 pointer-events-none absolute'}`}
           >
             <div className={`absolute -inset-2 rounded-3xl bg-gradient-to-br ${cert.accent} opacity-30 blur-3xl`} />
-            <div className="relative bg-white rounded-2xl overflow-hidden shadow-2xl border border-[var(--color-rule)]">
+            <div className="relative bg-white rounded-2xl overflow-hidden shadow-e-3 border border-[var(--color-rule)]">
               <img
                 src={cert.image}
                 alt={`${cert.name} certificate full preview`}
@@ -137,7 +137,7 @@ export default function CertificationsPage() {
           </p>
           <Link
             href="/bookings"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
           >
             Talk to a counsellor
             <ArrowRight className="ml-2" size={20} />

@@ -78,7 +78,7 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
                 <div
                     role="dialog"
                     aria-label="Google Reviews for Axelis Overseas Bilaspur"
-                    className="mb-3 w-[92vw] max-w-sm bg-white border-2 border-[var(--color-rule)] rounded-2xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] overflow-hidden animate-in fade-in slide-in-from-bottom-2 duration-200 motion-reduce:animate-none"
+                    className="mb-3 w-[92vw] max-w-sm bg-white border-2 border-[var(--color-rule)] rounded-2xl shadow-e-lift overflow-hidden animate-in fade-in slide-in-from-bottom-2 duration-200 motion-reduce:animate-none"
                 >
                     <header className="flex items-start justify-between gap-3 p-4 border-b border-[var(--color-rule)] bg-[var(--color-tint)]">
                         <div className="flex items-center gap-3">
@@ -141,7 +141,7 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
                 onClick={() => setOpen((v) => !v)}
                 aria-expanded={open}
                 aria-label={`Google reviews: ${googleReviewsMeta.rating} out of 5 stars, ${googleReviewsMeta.totalReviews} reviews. Click to expand.`}
-                className="group inline-flex items-center gap-2.5 pl-2 pr-3.5 py-2 min-h-[44px] bg-white text-slate-900 rounded-full shadow-[0_12px_40px_-8px_rgba(0,0,0,0.5)] hover:shadow-[0_16px_50px_-8px_rgba(0,0,0,0.6)] hover:-translate-y-0.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                className="group inline-flex items-center gap-2.5 pl-2 pr-3.5 py-2 min-h-[44px] bg-white text-slate-900 rounded-full shadow-e-3 hover:shadow-e-3 hover:-translate-y-0.5 transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
             >
                 <span className="w-7 h-7 rounded-full bg-white flex items-center justify-center ring-1 ring-slate-200 shrink-0">
                     <GoogleG size={16} />

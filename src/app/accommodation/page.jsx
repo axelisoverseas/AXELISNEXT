@@ -66,7 +66,7 @@ export default function AccommodationPage() {
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                         <Link
                             href="#listings"
-                            className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                            className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
                         >
                             Browse live listings
                             <ArrowRight className="ml-2" size={18} />
@@ -112,7 +112,7 @@ export default function AccommodationPage() {
             {/* amber marketplace CTA — static panel linking to our partner marketplace */}
             <section id="listings" className="py-20 scroll-mt-24">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="relative overflow-hidden rounded-3xl border-2 border-[var(--color-rule)] bg-white shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+                    <div className="relative overflow-hidden rounded-3xl border-2 border-[var(--color-rule)] bg-white shadow-e-3">
                         <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-[var(--color-tint)] blur-[120px]" />
                         <div className="pointer-events-none absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-[var(--dawn-glow)]/10 blur-[120px]" />
 
@@ -131,7 +131,7 @@ export default function AccommodationPage() {
                                     href={AMBER_PARTNER_URL}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                                    className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
                                 >
                                     Open amber marketplace <ExternalLink size={16} className="ml-2" />
                                 </a>
@@ -213,7 +213,7 @@ export default function AccommodationPage() {
 
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
                         {/* PBSA */}
-                        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-8 overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+                        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-8 overflow-hidden shadow-e-3">
                             <div className="-mx-8 -mt-8 mb-6 h-40 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=1200&q=80&auto=format&fit=crop"
@@ -240,7 +240,7 @@ export default function AccommodationPage() {
                         </div>
 
                         {/* Private Apartments */}
-                        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-8 overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+                        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-8 overflow-hidden shadow-e-3">
                             <div className="-mx-8 -mt-8 mb-6 h-40 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1493809842364-78817add7ffb?w=1200&q=80&auto=format&fit=crop"
@@ -278,7 +278,7 @@ export default function AccommodationPage() {
                     </p>
                     <Link
                         href="/bookings"
-                        className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                        className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
                     >
                         Talk to a housing counsellor
                         <ArrowRight className="ml-2" size={20} />

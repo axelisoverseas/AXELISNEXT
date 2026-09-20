@@ -21,7 +21,7 @@ export const TestimonialsColumn = ({ className = '', testimonials, duration = 15
             {testimonials.map((t, i) => (
               <div
                 key={`${loop}-${i}`}
-                className="p-6 rounded-2xl border border-slate-200 bg-white shadow-sm shadow-stone-900/5 max-w-xs w-full"
+                className="p-6 rounded-2xl border border-slate-200 bg-white shadow-e-1 shadow-stone-900/5 max-w-xs w-full"
               >
                 <p className="text-sm text-slate-700 leading-relaxed">&ldquo;{t.text}&rdquo;</p>
                 <div className="flex items-center gap-3 mt-4">

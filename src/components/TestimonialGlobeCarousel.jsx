@@ -331,7 +331,7 @@ const TestimonialGlobeCarousel = ({ testimonials }) => {
               <div className="absolute -inset-8 rounded-full atmospheric-glow opacity-50"></div>
 
               {/* Main Earth Sphere */}
-              <div className="absolute inset-0 rounded-full earth-sphere shadow-2xl">
+              <div className="absolute inset-0 rounded-full earth-sphere shadow-e-3">
                 {/* Realistic Continental Outlines */}
                 <div className="absolute inset-0 rounded-full overflow-hidden opacity-70">
                   {/* North America */}

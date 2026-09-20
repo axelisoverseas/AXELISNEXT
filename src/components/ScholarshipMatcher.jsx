@@ -96,7 +96,7 @@ const ScholarshipMatcher = () => {
     };
 
     return (
-        <div className="bg-white rounded-3xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 overflow-hidden max-w-4xl mx-auto">
+        <div className="bg-white rounded-3xl shadow-e-2 border border-gray-100 overflow-hidden max-w-4xl mx-auto">
             {/* Header */}
             <div className="bg-gradient-to-r from-stone-900 to-slate-900 text-[var(--color-navy)] p-8 relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--color-axelis)]/20 rounded-full blur-2xl -mr-10 -mt-10"></div>
@@ -144,7 +144,7 @@ const ScholarshipMatcher = () => {
                         <button
                             onClick={handleSearch}
                             disabled={isSearching}
-                            className="w-full h-[50px] bg-white hover:bg-[var(--color-navy)] text-[var(--color-axelis)] font-bold rounded-xl shadow-lg transition-all duration-300 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed group"
+                            className="w-full h-[50px] bg-white hover:bg-[var(--color-navy)] text-[var(--color-axelis)] font-bold rounded-xl shadow-e-2 transition-all duration-300 flex items-center justify-center disabled:opacity-70 disabled:cursor-not-allowed group"
                         >
                             {isSearching ? (
                                 <span className="flex items-center">
@@ -198,7 +198,7 @@ const ScholarshipMatcher = () => {
                                             initial={{ opacity: 0, y: 20 }}
                                             animate={{ opacity: 1, y: 0 }}
                                             transition={{ delay: index * 0.1 }}
-                                            className="bg-white border border-gray-200 hover:border-white rounded-2xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 group"
+                                            className="bg-white border border-gray-200 hover:border-white rounded-2xl p-6 shadow-e-1 hover:shadow-e-3 transition-all duration-300 group"
                                         >
                                             <div className="flex justify-between items-start mb-4">
                                                 <h4 className="font-bold text-slate-800 text-lg leading-tight group-hover:text-stone-900 transition-colors pr-4">{scholarship.name}</h4>

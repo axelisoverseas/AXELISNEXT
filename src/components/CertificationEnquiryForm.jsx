@@ -92,7 +92,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
     return (
       <div
         role="status"
-        className="bg-white border-2 border-emerald-500/40 rounded-2xl p-8 text-center shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]"
+        className="bg-white border-2 border-emerald-500/40 rounded-2xl p-8 text-center shadow-e-3"
       >
         <div className="w-14 h-14 rounded-full bg-emerald-500/15 border border-emerald-400/40 flex items-center justify-center mx-auto mb-5">
           <CheckCircle size={28} className="text-emerald-300" />
@@ -109,7 +109,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
   return (
     <form
       onSubmit={onSubmit}
-      className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-6 md:p-7 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]"
+      className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-6 md:p-7 shadow-e-3"
       noValidate
     >
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -211,7 +211,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="inline-flex w-full items-center justify-center gap-2 px-6 py-4 min-h-[44px] bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+        className="inline-flex w-full items-center justify-center gap-2 px-6 py-4 min-h-[44px] bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all shadow-e-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
       >
         {status === 'sending'
           ? <><Loader2 size={18} className="animate-spin" /> Sending</>

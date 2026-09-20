@@ -74,7 +74,7 @@ export default function ScholarshipFinder() {
           </p>
         </div>
 
-        <div className="bg-white rounded-2xl border border-slate-200 shadow-sm p-5 md:p-6">
+        <div className="bg-white rounded-2xl border border-slate-200 shadow-e-1 p-5 md:p-6">
           <div className="grid grid-cols-1 md:grid-cols-5 gap-3">
             <div className="md:col-span-5 lg:col-span-2 relative">
               <Search size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-[var(--color-dim)]" />
@@ -173,7 +173,7 @@ export default function ScholarshipFinder() {
                 href={s.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group bg-white rounded-2xl border border-slate-200 p-5 hover:border-[var(--color-rule)] hover:shadow-lg transition-all flex flex-col"
+                className="group bg-white rounded-2xl border border-slate-200 p-5 hover:border-[var(--color-rule)] hover:shadow-e-2 transition-all flex flex-col"
               >
                 <div className="flex items-start justify-between gap-3 mb-3">
                   <div className="inline-flex items-center gap-2 text-xs font-semibold text-[var(--color-dim)]">
@@ -230,7 +230,7 @@ export default function ScholarshipFinder() {
           </p>
           <a
             href="/bookings"
-            className="relative overflow-hidden inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-stone-700 to-white text-[var(--color-navy)] font-semibold hover:shadow-lg hover:shadow-stone-700/30 transition-all"
+            className="relative overflow-hidden inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-stone-700 to-white text-[var(--color-navy)] font-semibold hover:shadow-e-2 hover:shadow-stone-700/30 transition-all"
           >
             <span className="relative z-10 inline-flex items-center">
               Book a free counselling call <ArrowRight size={16} className="ml-2" />

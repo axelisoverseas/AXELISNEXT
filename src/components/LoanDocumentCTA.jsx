@@ -67,7 +67,7 @@ const LoanDocumentCTA = () => {
   return (
     <>
       {/* CTA Card */}
-      <div className="bg-gradient-to-br from-orange-50 to-stone-100 rounded-2xl p-6 border-2 border-orange-200 shadow-lg hover:shadow-xl transition-all duration-300 sticky top-8">
+      <div className="bg-gradient-to-br from-orange-50 to-stone-100 rounded-2xl p-6 border-2 border-orange-200 shadow-e-2 hover:shadow-e-3 transition-all duration-300 sticky top-8">
         <div className="text-center">
           {/* Icon */}
           <div className="mx-auto w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-4">
@@ -103,7 +103,7 @@ const LoanDocumentCTA = () => {
           {/* CTA Button */}
           <button
             onClick={openModal}
-            className="w-full bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-[var(--color-navy)] px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+            className="w-full bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-[var(--color-navy)] px-6 py-3 rounded-xl font-bold transition-all duration-300 hover:scale-105 shadow-e-2 flex items-center justify-center gap-2"
           >
             <FileText size={18} />
             View Document Checklist

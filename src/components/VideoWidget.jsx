@@ -99,7 +99,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
   if (videos.length === 0) return null;
 
   return (
-    <div className="bg-white dark:bg-[var(--color-axelis)] rounded-xl shadow-lg p-6 border border-gray-100 dark:border-[var(--color-axelis)]">
+    <div className="bg-white dark:bg-[var(--color-axelis)] rounded-xl shadow-e-2 p-6 border border-gray-100 dark:border-[var(--color-axelis)]">
         <div className="flex items-center mb-4">
           <Youtube className="text-stone-900 mr-2" size={20} />
           <h3 className="text-lg font-semibold text-gray-900 dark:text-[var(--color-navy)]">{title}</h3>
@@ -129,7 +129,7 @@ const VideoWidget = ({ category = 'All', title = 'Related Videos', limit = 2 }) 
 
                   {/* Play Button Overlay - TEMPORARILY REMOVED FOR TESTING */}
                   {/* <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center hover:bg-opacity-50 transition-all duration-300 rounded">
-                    <div className="bg-red-600 rounded-full p-1.5 transform hover:scale-110 transition-transform duration-300 shadow-lg">
+                    <div className="bg-red-600 rounded-full p-1.5 transform hover:scale-110 transition-transform duration-300 shadow-e-2">
                       <Play className="text-[var(--color-navy)]" size={10} fill="currentColor" />
                     </div>
                   </div> */}

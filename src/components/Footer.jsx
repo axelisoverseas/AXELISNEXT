@@ -9,7 +9,7 @@ const Footer = () => {
       {/* top-edge lightning hairline */}
       <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[var(--storm-electric)] to-transparent opacity-70" style={{ animation: 'hairline-flash 6s ease-in-out infinite' }} />
       {/* dawn-glow radial at the bottom */}
-      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-64" style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(251, 191, 36,0.18) 0%, transparent 70%)' }} />
+      <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-64" style={{ background: 'radial-gradient(ellipse at 50% 100%, rgba(127, 180, 224, 0.16) 0%, transparent 70%)' }} />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-center justify-between pb-12 border-b border-[var(--storm-electric)]/10 mb-12 gap-6">
           <p className="text-sm font-semibold text-slate-500">Certified by independent bodies</p>
@@ -30,7 +30,7 @@ const Footer = () => {
                 alt="Axelis Overseas"
                 width={48}
                 height={48}
-                className="h-12 w-auto opacity-95 hover:opacity-100 transition-opacity [filter:brightness(0)_invert(1)] drop-shadow-[0_0_20px_rgba(255,255,255,0.25)]"
+                className="h-12 w-auto opacity-95 hover:opacity-100 transition-opacity [filter:brightness(0)_invert(1)] drop-shadow-e-2"
               />
             </Link>
             <p className="text-sm leading-relaxed mb-8 text-slate-400">
@@ -133,7 +133,7 @@ const Footer = () => {
 
             <Link
               href="/contact"
-              className="group flex w-full items-center justify-between px-5 py-3 bg-stone-900 hover:bg-stone-950 text-white rounded-lg transition-colors font-medium text-sm shadow-[0_0_40px_-10px_var(--storm-accent-glow)]"
+              className="group flex w-full items-center justify-between px-5 py-3 bg-stone-900 hover:bg-stone-950 text-white rounded-lg transition-colors font-medium text-sm shadow-e-2"
             >
               Start Your Journey
               <MoveRight size={16} className="group-hover:translate-x-1 transition-transform" />

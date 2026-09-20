@@ -100,7 +100,7 @@ const FeaturesCarousel = ({ features = [] }) => {
                   visibleCards === 2 ? 'w-1/2' : 'w-1/3'
                 }`}
             >
-              <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-200 hover:border-stone-700 group hover:transform hover:scale-105 hover:-translate-y-2 h-full">
+              <div className="bg-white rounded-xl shadow-e-2 hover:shadow-e-3 transition-all duration-300 p-6 border border-gray-200 hover:border-stone-700 group hover:transform hover:scale-105 hover:-translate-y-2 h-full">
                 <div className="text-center">
                   <div className="text-4xl mb-4 transition-transform duration-300 group-hover:scale-110 group-hover:rotate-12">
                     {feature.icon}
@@ -121,7 +121,7 @@ const FeaturesCarousel = ({ features = [] }) => {
       {/* Navigation Arrows */}
       <button
         onClick={goToPrevious}
-        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-[var(--color-tint)] hover:bg-white text-gray-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-10"
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-[var(--color-tint)] hover:bg-white text-gray-800 rounded-full p-3 shadow-e-2 hover:shadow-e-3 transition-all duration-300 hover:scale-110 z-10"
         aria-label="Previous feature"
       >
         <ChevronLeft size={20} />
@@ -129,7 +129,7 @@ const FeaturesCarousel = ({ features = [] }) => {
 
       <button
         onClick={goToNext}
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-[var(--color-tint)] hover:bg-white text-gray-800 rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 z-10"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-[var(--color-tint)] hover:bg-white text-gray-800 rounded-full p-3 shadow-e-2 hover:shadow-e-3 transition-all duration-300 hover:scale-110 z-10"
         aria-label="Next feature"
       >
         <ChevronRight size={20} />

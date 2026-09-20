@@ -34,7 +34,7 @@ const AdminLogin = ({ onLoginSuccess }) => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-stone-50 to-stone-100 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-xl p-8 w-full max-w-md">
+      <div className="bg-white rounded-2xl shadow-e-3 p-8 w-full max-w-md">
         {/* Header */}
         <div className="text-center mb-8">
           <div className="w-16 h-16 bg-stone-100 rounded-full flex items-center justify-center mx-auto mb-4">

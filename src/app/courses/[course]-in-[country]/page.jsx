@@ -72,7 +72,7 @@ export default async function CourseGuidePage({ params }) {
                         <span className="text-gray-900 ml-2">{data.course}</span>
                     </nav>
 
-                    <header className="bg-gradient-to-r from-stone-900 to-slate-900 p-10 rounded-3xl text-[var(--color-navy)] mb-10 shadow-xl relative overflow-hidden">
+                    <header className="bg-gradient-to-r from-stone-900 to-slate-900 p-10 rounded-3xl text-[var(--color-navy)] mb-10 shadow-e-3 relative overflow-hidden">
                         <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-axelis)]/20 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
                         <span className="inline-block bg-[var(--color-tint)] px-4 py-1.5 rounded-full text-[var(--color-navy)] font-semibold text-sm mb-4 backdrop-blur-md">Course Guide</span>
                         <h1 className="text-4xl md:text-5xl font-black mb-4 flex items-center leading-tight">
@@ -85,7 +85,7 @@ export default async function CourseGuidePage({ params }) {
 
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                         <div className="md:col-span-2 space-y-8">
-                            <section className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                            <section className="bg-white p-8 rounded-2xl border border-gray-100 shadow-e-1">
                                 <h2 className="text-2xl font-bold mb-6 text-slate-800">Why Study {data.course}?</h2>
                                 <div className="prose max-w-none text-gray-600 leading-relaxed">
                                     <p className="mb-4">
@@ -97,7 +97,7 @@ export default async function CourseGuidePage({ params }) {
                                 </div>
                             </section>
 
-                            <section className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                            <section className="bg-white p-8 rounded-2xl border border-gray-100 shadow-e-1">
                                 <h2 className="text-2xl font-bold mb-6 text-slate-800">Top Universities Offering {data.course}</h2>
                                 <ul className="space-y-4">
                                     {data.topUniversities.map((uni, i) => (
@@ -118,11 +118,11 @@ export default async function CourseGuidePage({ params }) {
                         </div>
 
                         <div className="space-y-6">
-                            <div className="bg-white border border-white rounded-2xl p-6 shadow-lg shadow-stone-700/10 sticky top-24">
+                            <div className="bg-white border border-white rounded-2xl p-6 shadow-e-2 shadow-stone-700/10 sticky top-24">
                                 <div className="w-12 h-12 bg-stone-100 text-stone-800 rounded-full flex items-center justify-center mb-4"><Rocket size={22} strokeWidth={2} /></div>
                                 <h3 className="text-xl font-bold mb-3 text-slate-800">Fast-Track Your Admission</h3>
                                 <p className="text-gray-600 mb-6 text-sm leading-relaxed">Don't miss the upcoming intake. Our counsellors specialize in {data.course} placements in {data.country}.</p>
-                                <Link href="/contact" className="w-full block text-center bg-slate-950 hover:bg-[var(--color-tint)] text-[var(--color-navy)] font-bold py-3 px-4 rounded-xl transition-all shadow-md">
+                                <Link href="/contact" className="w-full block text-center bg-slate-950 hover:bg-[var(--color-tint)] text-[var(--color-navy)] font-bold py-3 px-4 rounded-xl transition-all shadow-e-2">
                                     Book Free Consultation
                                 </Link>
                             </div>

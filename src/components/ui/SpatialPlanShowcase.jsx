@@ -238,7 +238,7 @@ const FacetVisual = ({ data, isLeft }) => (
       transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
       className={`absolute inset-0 rounded-full bg-gradient-to-br ${data.colors.gradient} blur-3xl opacity-40`}
     />
-    <div className="relative h-72 w-72 md:h-[400px] md:w-[400px] rounded-full border border-[var(--color-rule)] shadow-2xl flex items-center justify-center overflow-hidden bg-slate-950/60 backdrop-blur-sm">
+    <div className="relative h-72 w-72 md:h-[400px] md:w-[400px] rounded-full border border-[var(--color-rule)] shadow-e-3 flex items-center justify-center overflow-hidden bg-slate-950/60 backdrop-blur-sm">
       <AnimatePresence mode="wait">
         <motion.img
           key={data.id}
@@ -357,7 +357,7 @@ const Switcher = ({ activeId, onToggle, options, layoutId }) => (
   <div className="relative mt-16 flex justify-center">
     <motion.div
       layout
-      className="flex items-center gap-1 p-1.5 rounded-full bg-[var(--color-tint)]/80 backdrop-blur-2xl border border-[var(--color-rule)] shadow-[0_20px_60px_rgba(0,0,0,0.6)] ring-1 ring-white/5"
+      className="flex items-center gap-1 p-1.5 rounded-full bg-[var(--color-tint)]/80 backdrop-blur-2xl border border-[var(--color-rule)] shadow-e-3 ring-1 ring-white/5"
     >
       {options.map((opt) => (
         <motion.button
@@ -417,7 +417,7 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.7 }}
-      className="relative mt-24 rounded-[2rem] bg-[var(--color-tint)]/60 border border-[var(--color-rule)] backdrop-blur-xl shadow-[0_30px_80px_-20px_rgba(0,0,0,0.6)] overflow-hidden"
+      className="relative mt-24 rounded-[2rem] bg-[var(--color-tint)]/60 border border-[var(--color-rule)] backdrop-blur-xl shadow-e-3 overflow-hidden"
     >
       <div
         aria-hidden
@@ -425,7 +425,7 @@ const PricingBlock = ({ pricing, plan, badge, icon: Icon }) => {
           plan === 'ztf' ? 'from-stone-700 to-white' : 'from-[var(--storm-accent)] to-[var(--dawn-glow)]'
         }`}
       />
-      <div className={`absolute top-0 right-0 px-5 py-2.5 rounded-bl-2xl font-bold text-sm tracking-wide shadow-lg ${badgePillClass}`}>
+      <div className={`absolute top-0 right-0 px-5 py-2.5 rounded-bl-2xl font-bold text-sm tracking-wide shadow-e-2 ${badgePillClass}`}>
         {badge}
       </div>
 
@@ -528,8 +528,8 @@ export default function SpatialPlanShowcase({ plan = 'zcf' }) {
   const data = config.facets[activeFacet];
   const isLeft = activeFacet === facetKeys[0];
 
-  const leftColor = plan === 'ztf' ? 'rgba(34,211,238,0.18)' : 'rgba(251, 191, 36,0.18)';
-  const rightColor = plan === 'ztf' ? 'rgba(251, 191, 36,0.18)' : 'rgba(34,211,238,0.18)';
+  const leftColor = plan === 'ztf' ? 'rgba(64, 128, 189,0.18)' : 'rgba(127, 180, 224,0.18)';
+  const rightColor = plan === 'ztf' ? 'rgba(127, 180, 224,0.18)' : 'rgba(64, 128, 189,0.18)';
 
   const accentGradient =
     plan === 'ztf' ? 'from-stone-300 to-white' : 'from-white to-stone-300';

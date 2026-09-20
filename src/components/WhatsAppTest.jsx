@@ -45,7 +45,7 @@ const WhatsAppTest = () => {
 
   return (
     <div className="fixed bottom-20 right-4 z-50">
-      <div className="bg-white rounded-lg shadow-2xl p-4 border border-gray-200 min-w-[320px] max-w-[400px]">
+      <div className="bg-white rounded-lg shadow-e-3 p-4 border border-gray-200 min-w-[320px] max-w-[400px]">
         <h4 className="font-bold text-gray-800 mb-3 flex items-center">
           <MessageCircle className="mr-2 text-green-600" size={18} />
           AiSensy WhatsApp API Test ({process.env.NEXT_PUBLIC_WHATSAPP_NOTIFICATION_NUMBER})

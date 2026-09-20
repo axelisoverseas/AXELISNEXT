@@ -134,7 +134,7 @@ const AnimatedHero = ({
             {primaryButton && (
               <button
                 onClick={primaryButton.onClick}
-                className="px-8 py-4 bg-stone-900 hover:bg-stone-950 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                className="px-8 py-4 bg-stone-900 hover:bg-stone-950 text-white font-semibold rounded-lg transition-all duration-300 transform hover:scale-105 shadow-e-2 hover:shadow-e-3"
               >
                 {primaryButton.text}
               </button>

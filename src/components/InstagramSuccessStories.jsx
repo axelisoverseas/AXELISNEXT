@@ -72,8 +72,8 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
       onClick={onOpen}
       className={`group relative shrink-0 w-[78vw] sm:w-[320px] md:w-[360px] aspect-[9/16] rounded-3xl overflow-hidden border transition-all duration-500 snap-center text-left ${
         isActive
-          ? 'border-[var(--color-rule)] shadow-[0_30px_80px_-30px_rgba(34,211,238,0.55)] scale-100'
-          : 'border-slate-200/70 shadow-md scale-[0.94] opacity-80 hover:opacity-100'
+          ? 'border-[var(--color-rule)] shadow-e-lift scale-100'
+          : 'border-slate-200/70 shadow-e-2 scale-[0.94] opacity-80 hover:opacity-100'
       }`}
       aria-label={`Play reel — ${reel.studentName}`}
     >
@@ -276,7 +276,7 @@ const InstagramSuccessStories = () => {
               exit={{ scale: 0.9, y: 20, opacity: 0 }}
               transition={{ type: 'spring', stiffness: 180, damping: 22 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative w-full max-w-md aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-2xl border border-slate-800"
+              className="relative w-full max-w-md aspect-[9/16] bg-black rounded-3xl overflow-hidden shadow-e-3 border border-slate-800"
             >
               <video
                 key={selected.id}

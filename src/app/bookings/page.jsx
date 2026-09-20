@@ -38,7 +38,7 @@ export default function BookingsPage() {
 
       <section className="py-12">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
+          <div className="bg-white rounded-2xl shadow-e-3 border border-slate-200 overflow-hidden">
             <div
               className="calendly-inline-widget"
               data-url={CALENDLY_URL}

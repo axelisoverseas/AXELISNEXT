@@ -131,8 +131,8 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
               style={position}
               onClick={() => !isActive && advanceTo(index)}
             >
-              <div className={`bg-white rounded-2xl shadow-2xl p-4 md:p-6 border-2 transition-all duration-500 ${isActive
-                  ? 'border-white shadow-white/30 shadow-2xl'
+              <div className={`bg-white rounded-2xl shadow-e-3 p-4 md:p-6 border-2 transition-all duration-500 ${isActive
+                  ? 'border-white shadow-white/30 shadow-e-3'
                   : 'border-gray-200 hover:border-white'
                 } ${cardWidth} ${cardHeight} flex flex-col`}>
 
@@ -142,7 +142,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                     <img
                       src={member.image}
                       alt={`${member.name} - ${member.role}`}
-                      className="w-full h-full rounded-full object-cover border-4 border-stone-900 shadow-lg"
+                      className="w-full h-full rounded-full object-cover border-4 border-stone-900 shadow-e-2"
                       onError={(e) => {
                         e.target.style.display = 'none';
                         e.target.nextSibling.style.display = 'flex';
@@ -151,7 +151,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                   ) : null}
 
                   {/* Fallback initials */}
-                  <div className={`w-full h-full bg-gradient-to-br from-stone-900 to-stone-800 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-lg ${member.image ? 'hidden' : 'flex'}`}>
+                  <div className={`w-full h-full bg-gradient-to-br from-stone-900 to-stone-800 rounded-full flex items-center justify-center text-white text-lg font-bold shadow-e-2 ${member.image ? 'hidden' : 'flex'}`}>
                     {getInitials(member.name)}
                   </div>
 
@@ -206,7 +206,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
                         href={member.linkedin}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className={`inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full transition-all duration-300 shadow-lg hover:scale-110 transform ${isActive
+                        className={`inline-flex items-center justify-center w-8 h-8 md:w-10 md:h-10 rounded-full transition-all duration-300 shadow-e-2 hover:scale-110 transform ${isActive
                             ? 'bg-stone-700 hover:bg-stone-800 text-black'
                             : 'bg-stone-900 hover:bg-stone-950 text-white'
                           }`}

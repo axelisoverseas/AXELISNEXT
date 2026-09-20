@@ -43,7 +43,7 @@ export default function FinancingBlock({ program }) {
           separately on your receipt.
         </p>
 
-        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl overflow-hidden shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+        <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl overflow-hidden shadow-e-3">
           <div className="grid grid-cols-1 md:grid-cols-2">
             {/* Total */}
             <div className="p-6 md:p-8 border-b md:border-b-0 md:border-r border-[var(--color-rule)]">

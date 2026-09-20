@@ -124,7 +124,7 @@ export default function CheckoutButton({ product, label, className = '', quantit
   }
 
   return (
-    <form onSubmit={onSubmit} className="rounded-2xl border border-[var(--color-rule)] bg-white p-5 max-w-md shadow-[0_18px_40px_-30px_rgba(14,50,64,0.45)]">
+    <form onSubmit={onSubmit} className="rounded-2xl border border-[var(--color-rule)] bg-white p-5 max-w-md shadow-e-2">
       <p className="text-[var(--color-navy)] font-bold mb-1">{item.label}</p>
       <p className="text-2xl font-extrabold text-[var(--color-navy)] mb-1 tabular-nums">
         {formatINR(withGst(item.amount * quantity).gross)}

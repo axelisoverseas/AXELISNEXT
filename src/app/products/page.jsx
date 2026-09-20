@@ -96,7 +96,7 @@ function ProductsContent() {
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               href="#plans"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
             >
               Compare both plans
               <ArrowRight className="ml-2" size={20} />
@@ -162,7 +162,7 @@ function ProductsContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
             {/* GAC — Global Admissions Charter */}
             <article
-              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--color-rule)]/30 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] bg-white"
+              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--color-rule)]/30 shadow-e-lift bg-white"
               aria-labelledby="plan-gac-title"
             >
               {/* Top brand-band — pure CSS, no image */}
@@ -252,7 +252,7 @@ function ProductsContent() {
                   <CheckoutButton
                     product="global-admissions-charter"
                     label="Enrol in Global Admissions Charter (GAC) — ₹9,999"
-                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   />
                 </div>
                 <p className="text-xs text-[var(--color-dim)] mt-3 text-center flex items-center justify-center gap-1.5">
@@ -263,7 +263,7 @@ function ProductsContent() {
 
             {/* EPC — Europe Public Charter */}
             <article
-              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--color-axelis)]/30 shadow-[0_30px_80px_-20px_rgba(0,0,0,0.9)] bg-white"
+              className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--color-axelis)]/30 shadow-e-lift bg-white"
               aria-labelledby="plan-epc-title"
             >
               {/* Top brand-band — pure CSS, no image */}
@@ -354,7 +354,7 @@ function ProductsContent() {
                   <CheckoutButton
                     product="europe-public-charter"
                     label="Enrol in Europe Public Charter (EPC) — ₹19,999"
-                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-electric)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   />
                 </div>
                 <p className="text-xs text-[var(--color-dim)] mt-3 text-center flex items-center justify-center gap-1.5">
@@ -378,7 +378,7 @@ function ProductsContent() {
             </p>
           </div>
 
-          <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] overflow-hidden">
+          <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl shadow-e-3 overflow-hidden">
             <table className="w-full text-sm">
               <thead>
                 <tr className="border-b border-[var(--color-rule)] bg-[var(--color-tint)]">
@@ -431,7 +431,7 @@ function ProductsContent() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
             {howItWorks.map((step, i) => (
               <div key={step.title} className="glass-storm p-6 relative">
-                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white flex items-center justify-center font-extrabold text-sm shadow-[0_0_18px_var(--storm-accent-glow)]">
+                <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white flex items-center justify-center font-extrabold text-sm shadow-e-1">
                   {i + 1}
                 </div>
                 <step.Icon size={28} className="text-[var(--color-axelis)] mb-4" />
@@ -602,7 +602,7 @@ function ProductsContent() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/bookings"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
               >
                 Book a free call
                 <ArrowRight className="ml-2" size={20} />

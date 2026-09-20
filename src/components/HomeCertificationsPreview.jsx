@@ -103,7 +103,7 @@ export default function HomeCertificationsPreview() {
         <div className="text-center">
           <Link
             href="/certifications"
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-[0_0_50px_-12px_var(--storm-accent-glow)]"
+            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-2"
           >
             See the programmes
             <ArrowRight aria-hidden="true" size={18} />

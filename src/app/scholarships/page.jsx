@@ -43,7 +43,7 @@ export default function ScholarshipsPage() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                        <Link href="#finder" className="relative overflow-hidden px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-lg hover:shadow-stone-700/30 flex items-center">
+                        <Link href="#finder" className="relative overflow-hidden px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-e-2 hover:shadow-stone-700/30 flex items-center">
                             <span className="relative z-10 flex items-center">
                                 Check Your Eligibility <ArrowRight size={18} className="ml-2" />
                             </span>
@@ -60,7 +60,7 @@ export default function ScholarshipsPage() {
             <section className="py-20 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-stone-200 hover:shadow-lg transition-all text-center group">
+                        <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-stone-200 hover:shadow-e-2 transition-all text-center group">
                             <div className="w-16 h-16 bg-stone-100 text-stone-900 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                                 <Award size={32} />
                             </div>
@@ -68,7 +68,7 @@ export default function ScholarshipsPage() {
                             <p className="text-[var(--color-dim)]">Access our exclusive database of merit and need-based scholarships worldwide.</p>
                         </div>
 
-                        <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-stone-200 hover:shadow-lg transition-all text-center group">
+                        <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-stone-200 hover:shadow-e-2 transition-all text-center group">
                             <div className="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                                 <Globe2 size={32} />
                             </div>
@@ -76,7 +76,7 @@ export default function ScholarshipsPage() {
                             <p className="text-[var(--color-dim)]">Funding opportunities spanning Europe, North America, Australia, and Asia.</p>
                         </div>
 
-                        <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-stone-200 hover:shadow-lg transition-all text-center group">
+                        <div className="bg-slate-50 rounded-2xl p-8 border border-slate-100 hover:border-stone-200 hover:shadow-e-2 transition-all text-center group">
                             <div className="w-16 h-16 bg-amber-100 text-amber-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform">
                                 <GraduationCap size={32} />
                             </div>
@@ -96,7 +96,7 @@ export default function ScholarshipsPage() {
                     </div>
 
                     <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                        <div className="bg-white p-8 rounded-2xl shadow-e-1 border border-slate-100 overflow-hidden">
                             <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1614935151651-0bea6508db6b?w=1200&q=80&auto=format&fit=crop"
@@ -120,7 +120,7 @@ export default function ScholarshipsPage() {
                             </ul>
                         </div>
 
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                        <div className="bg-white p-8 rounded-2xl shadow-e-1 border border-slate-100 overflow-hidden">
                             <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1579621970795-87facc2f976d?w=1200&q=80&auto=format&fit=crop"
@@ -144,7 +144,7 @@ export default function ScholarshipsPage() {
                             </ul>
                         </div>
 
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                        <div className="bg-white p-8 rounded-2xl shadow-e-1 border border-slate-100 overflow-hidden">
                             <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1607013251379-e6eecfffe234?w=1200&q=80&auto=format&fit=crop"
@@ -168,7 +168,7 @@ export default function ScholarshipsPage() {
                             </ul>
                         </div>
 
-                        <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 overflow-hidden">
+                        <div className="bg-white p-8 rounded-2xl shadow-e-1 border border-slate-100 overflow-hidden">
                             <div className="-mx-8 -mt-8 mb-6 h-32 overflow-hidden">
                                 <img
                                     src="https://images.unsplash.com/photo-1589998059171-988d887df646?w=1200&q=80&auto=format&fit=crop"
@@ -205,7 +205,7 @@ export default function ScholarshipsPage() {
                     <p className="text-lg text-[var(--color-dim)] mb-8 max-w-2xl mx-auto">
                         Don't let financial constraints stop your study abroad dream. Our Zero Consultation Fee Student Plan covers dedicated scholarship and financial aid assistance.
                     </p>
-                    <Link href="/products" className="inline-flex items-center px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-md">
+                    <Link href="/products" className="inline-flex items-center px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-e-2">
                         Explore Our Student Plans <ArrowRight size={20} className="ml-2" />
                     </Link>
                 </div>

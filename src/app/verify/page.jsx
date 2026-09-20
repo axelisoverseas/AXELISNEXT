@@ -25,7 +25,7 @@ export default function VerifyPage() {
           whether it is ours, which programme it is for, and whether it is still valid.
         </p>
 
-        <section className="rounded-2xl border-2 border-[var(--color-rule)] bg-white p-6 sm:p-8 mb-14 shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)]">
+        <section className="rounded-2xl border-2 border-[var(--color-rule)] bg-white p-6 sm:p-8 mb-14 shadow-e-3">
           <CertificateLookup />
         </section>
 

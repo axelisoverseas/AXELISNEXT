@@ -66,7 +66,7 @@ const PlanComparison = () => {
         </div>
 
         {/* Comparison Table */}
-        <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
+        <div className="bg-white rounded-2xl shadow-e-3 overflow-hidden border border-gray-200">
           {/* Table Header - Space Theme */}
           <div className="grid grid-cols-3 bg-gradient-to-r from-slate-800 via-stone-900 to-slate-900 text-[var(--color-navy)] relative overflow-hidden">
             {/* Cosmic background effects */}
