@@ -148,9 +148,9 @@ export default function Home() {
 
 
       {/* Unified Impact Stats — storm phase */}
-      <section className="py-24 text-white relative overflow-hidden">
+      <section className="py-24 text-[var(--color-navy)] relative overflow-hidden">
         {/* Electric + amber ambient glows */}
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"></div>
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"></div>
         <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--storm-accent)]/10 rounded-full blur-[120px] translate-y-1/2 pointer-events-none"></div>
 
         <motion.div
@@ -161,10 +161,10 @@ export default function Home() {
           className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
         >
           <motion.div variants={fadeInUp} className="text-center mb-16 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-white text-balance">
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-[var(--color-navy)] text-balance">
               Real <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] via-white to-[var(--dawn-glow)]">impact</span>
             </h2>
-            <p className="text-slate-300 mt-4">
+            <p className="text-[var(--color-navy)] mt-4">
               One focus &mdash; placing students at universities they can actually get into and afford. Free first call, no upsell.
             </p>
           </motion.div>
@@ -197,24 +197,24 @@ export default function Home() {
                     </div>
                     {/* Inner disc with the icon */}
                     <div className="absolute inset-[1.5px] rounded-full bg-[var(--storm-deep)]/95 backdrop-blur-md flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                      <Icon size={34} strokeWidth={1.6} className="text-white drop-shadow-[0_0_10px_rgba(255, 255, 255,0.4)]" />
+                      <Icon size={34} strokeWidth={1.6} className="text-[var(--color-navy)] drop-shadow-[0_0_10px_rgba(255, 255, 255,0.4)]" />
                     </div>
                     {/* Amber lightning-bolt accent (universal — same on every card) */}
                     <div
                       className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center shadow-[0_0_18px_rgba(245,158,11,0.55)] ring-2 ring-[var(--storm-deep)]"
                       style={{ animation: 'bolt-pulse 3.5s ease-in-out infinite' }}
                     >
-                      <Zap size={13} strokeWidth={3} className="text-white" fill="currentColor" />
+                      <Zap size={13} strokeWidth={3} className="text-[var(--color-navy)]" fill="currentColor" />
                     </div>
                   </div>
                   <span className={`text-4xl md:text-5xl font-bold mb-2 tracking-tight ${
                     stat.gradient
                       ? 'text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] via-white to-[var(--dawn-glow)]'
-                      : 'text-white'
+                      : 'text-[var(--color-navy)]'
                   }`}>
                     {stat.value}
                   </span>
-                  <span className="text-slate-300 font-medium tracking-wide text-xs md:text-sm">
+                  <span className="text-[var(--color-navy)] font-medium tracking-wide text-xs md:text-sm">
                     {stat.label}
                   </span>
                 </motion.div>
@@ -228,16 +228,16 @@ export default function Home() {
       {/* Plans preview — GAC + EPC teaser, links to /products */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
-          <div className="absolute top-1/2 left-0 w-[420px] h-[420px] bg-[var(--storm-electric)]/8 rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute top-1/2 left-0 w-[420px] h-[420px] bg-[var(--color-tint)] rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
           <div className="absolute top-1/2 right-0 w-[420px] h-[420px] bg-[var(--dawn-glow)]/8 rounded-full blur-[120px] translate-x-1/2 -translate-y-1/2" />
         </div>
 
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-balance">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-3 text-balance">
               Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">Pick your path.</span>
             </h2>
-            <p className="text-slate-300/85 text-base md:text-lg">
+            <p className="text-[var(--color-navy)]/85 text-base md:text-lg">
               Global Admissions Charter (GAC) for paid global universities. Europe Public Charter (EPC) for tuition-free public Europe. Both refundable.
             </p>
           </div>
@@ -245,27 +245,27 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
             <Link
               href="/products#plans"
-              className="group bg-[#141210] border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--storm-electric)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+              className="group bg-white border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               aria-label="Global Admissions Charter (GAC), nine thousand nine hundred ninety nine rupees — view details"
             >
               <div className="flex items-baseline justify-between">
                 <div>
-                  <span className="text-[10px] text-[var(--storm-electric)] font-bold">Most popular</span>
-                  <h3 className="text-2xl font-extrabold text-white mt-1">Global Admissions Charter <span className="text-sm font-semibold text-stone-200/80">(GAC)</span></h3>
+                  <span className="text-[10px] text-[var(--color-axelis)] font-bold">Most popular</span>
+                  <h3 className="text-2xl font-extrabold text-[var(--color-navy)] mt-1">Global Admissions Charter <span className="text-sm font-semibold text-[var(--color-navy)]/80">(GAC)</span></h3>
                 </div>
-                <span className="text-3xl font-extrabold text-white">₹9,999</span>
+                <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹9,999</span>
               </div>
-              <p className="text-slate-200 text-sm">
+              <p className="text-[var(--color-navy)] text-sm">
                 Paid-tuition universities. <span className="text-emerald-300 font-semibold">100% refundable</span> on visa or no-offer.
               </p>
               <div className="flex flex-wrap gap-1.5" aria-label="Countries covered under Global Admissions Charter">
                 {['🇬🇧 UK', '🇺🇸 USA', '🇨🇦 Canada', '🇦🇺 Australia', '🇮🇪 Ireland', '🇳🇿 NZ', '🇸🇬 Singapore', '🇨🇭 Switzerland', '🇦🇪 UAE', '+5'].map((c) => (
-                  <span key={c} className="px-2 py-1 rounded-full bg-[var(--storm-electric)]/10 border border-[var(--storm-electric)]/25 text-white text-[11px] font-semibold">
+                  <span key={c} className="px-2 py-1 rounded-full bg-[var(--color-tint)] border border-[var(--storm-electric)]/25 text-[var(--color-navy)] text-[11px] font-semibold">
                     {c}
                   </span>
                 ))}
               </div>
-              <span className="inline-flex items-center gap-2 text-[var(--storm-electric)] font-semibold text-sm mt-1 group-hover:underline">
+              <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included
                 <ArrowRight aria-hidden="true" size={16} className="group-hover:translate-x-1 transition-transform" />
               </span>
@@ -273,27 +273,27 @@ export default function Home() {
 
             <Link
               href="/products#plans"
-              className="group bg-[#141210] border-2 border-[var(--dawn-glow)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--dawn-glow)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--storm-deep)]"
+              className="group bg-white border-2 border-[var(--color-axelis)]/30 rounded-2xl shadow-[0_20px_60px_-20px_rgba(0,0,0,0.9)] p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--color-axelis)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               aria-label="Europe Public Charter (EPC), nineteen thousand nine hundred ninety nine rupees — view details"
             >
               <div className="flex items-baseline justify-between">
                 <div>
-                  <span className="text-[10px] text-[var(--dawn-glow)] font-bold">Tuition-free Europe</span>
-                  <h3 className="text-2xl font-extrabold text-white mt-1">Europe Public Charter <span className="text-sm font-semibold text-stone-200/80">(EPC)</span></h3>
+                  <span className="text-[10px] text-[var(--color-axelis)] font-bold">Tuition-free Europe</span>
+                  <h3 className="text-2xl font-extrabold text-[var(--color-navy)] mt-1">Europe Public Charter <span className="text-sm font-semibold text-[var(--color-navy)]/80">(EPC)</span></h3>
                 </div>
-                <span className="text-3xl font-extrabold text-white">₹19,999</span>
+                <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹19,999</span>
               </div>
-              <p className="text-slate-200 text-sm">
+              <p className="text-[var(--color-navy)] text-sm">
                 Public tuition-free Europe. <span className="text-emerald-300 font-semibold">Refundable</span> if zero offers.
               </p>
               <div className="flex flex-wrap gap-1.5" aria-label="Countries covered under Europe Public Charter">
                 {['🇩🇪 Germany', '🇫🇷 France', '🇳🇴 Norway', '🇸🇪 Sweden', '🇫🇮 Finland', '🇩🇰 Denmark', '🇳🇱 Netherlands', '🇮🇹 Italy', '🇪🇸 Spain', '+6'].map((c) => (
-                  <span key={c} className="px-2 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--dawn-glow)]/25 text-white text-[11px] font-semibold">
+                  <span key={c} className="px-2 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--color-axelis)]/25 text-[var(--color-navy)] text-[11px] font-semibold">
                     {c}
                   </span>
                 ))}
               </div>
-              <span className="inline-flex items-center gap-2 text-[var(--dawn-glow)] font-semibold text-sm mt-1 group-hover:underline">
+              <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included
                 <ArrowRight aria-hidden="true" size={16} className="group-hover:translate-x-1 transition-transform" />
               </span>
@@ -303,7 +303,7 @@ export default function Home() {
           <div className="text-center mt-8">
             <Link
               href="/products#comparison"
-              className="inline-flex items-center gap-2 text-slate-300 hover:text-white text-sm font-semibold underline-offset-4 hover:underline transition-colors"
+              className="inline-flex items-center gap-2 text-[var(--color-navy)] hover:text-[var(--color-navy)] text-sm font-semibold underline-offset-4 hover:underline transition-colors"
             >
               Compare Global Admissions Charter vs Europe Public Charter side by side
               <ArrowRight aria-hidden="true" size={14} />
@@ -316,10 +316,10 @@ export default function Home() {
       <section className="relative py-20 overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
-            <h2 className="text-3xl md:text-5xl font-bold text-white tracking-tight mb-3 text-balance">
+            <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-3 text-balance">
               Twenty-nine countries. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--dawn-glow)]">Twenty-nine photos.</span>
             </h2>
-            <p className="text-slate-300/85 text-base md:text-lg">
+            <p className="text-[var(--color-navy)]/85 text-base md:text-lg">
               Every destination we place students into &mdash; pictured. The first nine carry the bulk of our volume; the remaining twenty run on the same plans.
             </p>
           </div>
@@ -339,7 +339,7 @@ export default function Home() {
             ].map((d) => (
               <article
                 key={d.name}
-                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 hover:border-[var(--storm-electric)]/40 transition-colors"
+                className="group relative aspect-[4/3] rounded-2xl overflow-hidden border border-[var(--color-rule)] hover:border-[var(--storm-electric)]/40 transition-colors"
               >
                 <img
                   src={d.img}
@@ -352,11 +352,11 @@ export default function Home() {
                 <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 flex items-end justify-between gap-3">
                   <div>
                     <div className="flex items-center gap-2 text-[10px] font-bold mb-1">
-                      <span className={d.plan === 'GAC' ? 'text-[var(--storm-electric)]' : 'text-[var(--dawn-glow)]'}>{d.plan}</span>
-                      <span className="text-slate-400">·</span>
-                      <span className="text-slate-300">Plan</span>
+                      <span className={d.plan === 'GAC' ? 'text-[var(--color-axelis)]' : 'text-[var(--color-axelis)]'}>{d.plan}</span>
+                      <span className="text-[var(--color-dim)]">·</span>
+                      <span className="text-[var(--color-navy)]">Plan</span>
                     </div>
-                    <h3 className="text-white text-base md:text-lg font-bold leading-tight">
+                    <h3 className="text-[var(--color-navy)] text-base md:text-lg font-bold leading-tight">
                       {d.name} <span aria-hidden="true">{d.flag}</span>
                     </h3>
                   </div>
@@ -367,11 +367,11 @@ export default function Home() {
 
           {/* Compact tier — remaining 20 countries */}
           <div className="flex items-center gap-4 mb-5">
-            <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
-            <span className="text-[10px] text-[var(--storm-electric)] font-bold">
+            <span className="h-px flex-1 bg-[var(--color-tint)]" aria-hidden="true" />
+            <span className="text-[10px] text-[var(--color-axelis)] font-bold">
               Plus twenty more on the same plans
             </span>
-            <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
+            <span className="h-px flex-1 bg-[var(--color-tint)]" aria-hidden="true" />
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 md:gap-4">
@@ -399,7 +399,7 @@ export default function Home() {
             ].map((d) => (
               <article
                 key={d.name}
-                className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-white/10 hover:border-[var(--storm-electric)]/40 transition-colors"
+                className="group relative aspect-[4/3] rounded-xl overflow-hidden border border-[var(--color-rule)] hover:border-[var(--storm-electric)]/40 transition-colors"
               >
                 <img
                   src={d.img}
@@ -411,9 +411,9 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--storm-deep)] via-[var(--storm-deep)]/55 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-2.5 md:p-3">
                   <div className="flex items-center gap-1.5 text-[9px] font-bold mb-0.5">
-                    <span className={d.plan === 'GAC' ? 'text-[var(--storm-electric)]' : 'text-[var(--dawn-glow)]'}>{d.plan}</span>
+                    <span className={d.plan === 'GAC' ? 'text-[var(--color-axelis)]' : 'text-[var(--color-axelis)]'}>{d.plan}</span>
                   </div>
-                  <h3 className="text-white text-xs md:text-sm font-bold leading-tight">
+                  <h3 className="text-[var(--color-navy)] text-xs md:text-sm font-bold leading-tight">
                     {d.name} <span aria-hidden="true">{d.flag}</span>
                   </h3>
                 </div>
@@ -424,7 +424,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               href="/products#plans"
-              className="inline-flex items-center gap-2 text-slate-300 hover:text-white text-sm font-semibold underline-offset-4 hover:underline transition-colors"
+              className="inline-flex items-center gap-2 text-[var(--color-navy)] hover:text-[var(--color-navy)] text-sm font-semibold underline-offset-4 hover:underline transition-colors"
             >
               See plans &amp; pricing across all 29 countries
               <ArrowRight aria-hidden="true" size={14} />
@@ -455,8 +455,8 @@ export default function Home() {
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-16">
-            <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-5xl font-bold text-white mb-6">Common Questions</TextEffectInView>
-            <p className="text-slate-300 text-lg">Clear up your doubts instantly. For full details, visit our <Link href="/faq" className="text-[var(--dawn-glow)] hover:underline">FAQ Help Center</Link>.</p>
+            <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] mb-6">Common Questions</TextEffectInView>
+            <p className="text-[var(--color-navy)] text-lg">Clear up your doubts instantly. For full details, visit our <Link href="/faq" className="text-[var(--color-axelis)] hover:underline">FAQ Help Center</Link>.</p>
           </div>
 
           <div className="space-y-4">
@@ -469,12 +469,12 @@ export default function Home() {
                 className="group glass-dawn rounded-2xl overflow-hidden"
               >
                 <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
-                  <span className="text-lg font-bold text-white group-hover:text-[var(--dawn-glow)] transition-colors">{faq.question}</span>
-                  <div className="w-8 h-8 rounded-full bg-[var(--dawn-horizon)] flex items-center justify-center text-[var(--dawn-glow)] group-open:rotate-180 transition-transform duration-300">
+                  <span className="text-lg font-bold text-[var(--color-navy)] group-hover:text-[var(--color-axelis)] transition-colors">{faq.question}</span>
+                  <div className="w-8 h-8 rounded-full bg-[var(--dawn-horizon)] flex items-center justify-center text-[var(--color-axelis)] group-open:rotate-180 transition-transform duration-300">
                     <ChevronDown aria-hidden="true" size={18} />
                   </div>
                 </summary>
-                <div className="px-6 pb-6 text-slate-300 leading-relaxed border-t border-white/5 pt-4">
+                <div className="px-6 pb-6 text-[var(--color-navy)] leading-relaxed border-t border-[var(--color-rule)] pt-4">
                   <div className="whitespace-pre-wrap">{renderMarkdown(faq.answer)}</div>
                 </div>
               </motion.details>
@@ -484,7 +484,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Link
               href="/faq"
-              className="inline-flex items-center text-[var(--dawn-glow)] font-bold hover:text-white transition-colors group"
+              className="inline-flex items-center text-[var(--color-axelis)] font-bold hover:text-[var(--color-navy)] transition-colors group"
             >
               <span>View All 30+ Questions</span>
               <ArrowRight aria-hidden="true" className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />

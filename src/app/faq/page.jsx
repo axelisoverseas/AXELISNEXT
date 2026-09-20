@@ -116,8 +116,8 @@ const FAQPage = () => {
                         onClick={() => setActiveCategory(cat)}
                         className={`px-5 py-3 rounded-xl text-sm font-bold text-left transition-all ${
                           activeCategory === cat 
-                            ? 'bg-stone-900 text-white shadow-lg' 
-                            : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+                            ? 'bg-stone-900 text-[var(--color-navy)] shadow-lg' 
+                            : 'bg-slate-100 text-[var(--color-dim)] hover:bg-slate-200'
                         }`}
                       >
                         {cat}
@@ -128,15 +128,15 @@ const FAQPage = () => {
 
                 {/* Trust Indicators */}
                 <div className="grid grid-cols-1 gap-4">
-                  <div className="bg-slate-900 p-6 rounded-3xl text-white">
-                    <Globe className="text-white mb-4" size={32} />
+                  <div className="bg-slate-900 p-6 rounded-3xl text-[var(--color-navy)]">
+                    <Globe className="text-[var(--color-navy)] mb-4" size={32} />
                     <h4 className="font-bold mb-2">29+ Countries</h4>
-                    <p className="text-slate-400 text-xs leading-relaxed">Expert guidance across 4 continents and 29+ study destinations.</p>
+                    <p className="text-[var(--color-dim)] text-xs leading-relaxed">Expert guidance across 4 continents and 29+ study destinations.</p>
                   </div>
-                  <div className="bg-stone-900 p-6 rounded-3xl text-white shadow-xl">
-                    <ShieldCheck className="text-stone-200 mb-4" size={32} />
+                  <div className="bg-stone-900 p-6 rounded-3xl text-[var(--color-navy)] shadow-xl">
+                    <ShieldCheck className="text-[var(--color-navy)] mb-4" size={32} />
                     <h4 className="font-bold mb-2">95% Visa Success</h4>
-                    <p className="text-stone-100 text-xs leading-relaxed">Highly specialized visa assistance with guaranteed results.</p>
+                    <p className="text-[var(--color-navy)] text-xs leading-relaxed">Highly specialized visa assistance with guaranteed results.</p>
                   </div>
                 </div>
               </div>
@@ -160,12 +160,12 @@ const FAQPage = () => {
                         className="w-full p-8 flex items-center justify-between text-left group"
                       >
                         <div className="flex items-start space-x-4">
-                          <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center transition-colors ${openId === faq.id ? 'bg-stone-900 text-white' : 'bg-slate-100 text-slate-400 group-hover:bg-stone-50 group-hover:text-stone-700'}`}>
+                          <div className={`w-8 h-8 rounded-full flex-shrink-0 flex items-center justify-center transition-colors ${openId === faq.id ? 'bg-stone-900 text-[var(--color-navy)]' : 'bg-slate-100 text-[var(--color-dim)] group-hover:bg-stone-50 group-hover:text-stone-700'}`}>
                             <span className="text-xs font-bold leading-none">{index + 1}</span>
                           </div>
                           <span className={`text-lg font-bold transition-colors ${openId === faq.id ? 'text-stone-900' : 'text-slate-900'}`}>{faq.question}</span>
                         </div>
-                        <div className={`p-2 rounded-full transition-all duration-500 ${openId === faq.id ? 'rotate-180 bg-stone-50 text-stone-900' : 'bg-slate-100 text-slate-400'}`}>
+                        <div className={`p-2 rounded-full transition-all duration-500 ${openId === faq.id ? 'rotate-180 bg-stone-50 text-stone-900' : 'bg-slate-100 text-[var(--color-dim)]'}`}>
                           <ChevronDown size={20} />
                         </div>
                       </button>
@@ -196,10 +196,10 @@ const FAQPage = () => {
               ) : (
                 <div className="text-center py-20 bg-white rounded-[3rem] border border-slate-200 border-dashed">
                   <div className="w-20 h-20 bg-slate-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                    <Search className="text-slate-300" size={32} />
+                    <Search className="text-[var(--color-navy)]" size={32} />
                   </div>
                   <h3 className="text-2xl font-bold text-slate-900 mb-2">No results found</h3>
-                  <p className="text-slate-500 max-w-md mx-auto">Try adjusting your search terms or choosing a different category.</p>
+                  <p className="text-[var(--color-dim)] max-w-md mx-auto">Try adjusting your search terms or choosing a different category.</p>
                   <button 
                     onClick={() => {setSearchTerm(''); setActiveCategory('All');}}
                     className="mt-8 text-stone-900 font-bold hover:underline"
@@ -225,7 +225,7 @@ const FAQPage = () => {
                       href="https://wa.me/919098522711?text=Hey%2C%20I%20have%20questions%20regarding%20studying%20abroad"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-8 py-4 bg-stone-700/20 border border-white/30 backdrop-blur-md text-white text-lg font-bold rounded-2xl hover:bg-stone-700/30 transition-all flex items-center space-x-3"
+                      className="px-8 py-4 bg-stone-700/20 border border-[var(--color-rule)] backdrop-blur-md text-[var(--color-navy)] text-lg font-bold rounded-2xl hover:bg-stone-700/30 transition-all flex items-center space-x-3"
                     >
                       <MessageCircle size={24} />
                       <span>WhatsApp Experts</span>
@@ -234,8 +234,8 @@ const FAQPage = () => {
                 </div>
                 
                 {/* Visual Flair */}
-                <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-1000"></div>
-                <div className="absolute bottom-0 left-0 w-64 h-64 bg-black/10 rounded-full blur-3xl -ml-20 -mb-20"></div>
+                <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--color-tint)] rounded-full blur-3xl -mr-20 -mt-20 group-hover:scale-110 transition-transform duration-1000"></div>
+                <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--color-tint)] rounded-full blur-3xl -ml-20 -mb-20"></div>
               </div>
             </main>
           </div>

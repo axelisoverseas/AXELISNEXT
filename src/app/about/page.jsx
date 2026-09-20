@@ -35,13 +35,13 @@ export default function AboutPage() {
                             className="brightness-0 invert opacity-90"
                         />
                     </div>
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight text-balance">
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] mb-6 tracking-tight text-balance">
                         <TextEffect as="span" per="word" preset="blur">About</TextEffect>{' '}
-                        <span className="text-white">
+                        <span className="text-[var(--color-navy)]">
                             <TextEffect as="span" per="char" preset="blur" delay={0.25}>Axelis Overseas</TextEffect>
                         </span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto leading-relaxed font-light">
+                    <p className="text-xl md:text-2xl text-[var(--color-dim)] max-w-3xl mx-auto leading-relaxed font-light">
                         Your trusted partner in making study abroad dreams come true.
                     </p>
                 </div>
@@ -58,7 +58,7 @@ export default function AboutPage() {
                                 <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-slate-900 mb-6 tracking-tight">
                                     About Axelis Overseas
                                 </TextEffectInView>
-                                <div className="space-y-6 text-slate-600 text-lg leading-relaxed">
+                                <div className="space-y-6 text-[var(--color-dim)] text-lg leading-relaxed">
                                     <p>
                                         We are a study abroad consultancy run by counsellors who studied abroad themselves.
                                         Our day job is matching Indian students with universities they can actually get into and afford.
@@ -83,7 +83,7 @@ export default function AboutPage() {
                                             {stat.icon}
                                         </div>
                                         <div className="text-2xl font-extrabold text-slate-900 mb-1">{stat.value}</div>
-                                        <div className="text-xs font-semibold text-slate-500">{stat.label}</div>
+                                        <div className="text-xs font-semibold text-[var(--color-dim)]">{stat.label}</div>
                                     </div>
                                 ))}
                             </div>
@@ -94,9 +94,9 @@ export default function AboutPage() {
                             <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1000&auto=format&fit=crop" alt="Students walking on campus" className="absolute inset-0 w-full h-full object-cover" />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
                             {/* Overlay Badge */}
-                            <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-md rounded-2xl p-6 shadow-lg border border-white/20">
+                            <div className="absolute bottom-6 left-6 right-6 bg-[var(--color-tint)] backdrop-blur-md rounded-2xl p-6 shadow-lg border border-[var(--color-rule)]">
                                 <p className="text-slate-800 font-bold text-lg mb-1">Global Education</p>
-                                <p className="text-slate-600 text-sm">First counselling call is free. Always.</p>
+                                <p className="text-[var(--color-dim)] text-sm">First counselling call is free. Always.</p>
                             </div>
                         </div>
 
@@ -112,7 +112,7 @@ export default function AboutPage() {
                     <h2 className="text-2xl md:text-3xl font-bold text-slate-900 tracking-tight mb-5 text-balance">
                         Scale and scope
                     </h2>
-                    <p className="text-lg text-slate-600 leading-relaxed">
+                    <p className="text-lg text-[var(--color-dim)] leading-relaxed">
                         Axelis operates from a Bengaluru corporate office (WorkFlo, KR Puram Hobli) with a registered
                         office in Bilaspur, and runs its certification programmes across 29 study-abroad destination
                         markets, with an in-house language and application coaching faculty.
@@ -132,7 +132,7 @@ export default function AboutPage() {
                                 </div>
                                 <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Our Mission</h3>
                             </div>
-                            <p className="text-slate-600 text-lg leading-relaxed">
+                            <p className="text-[var(--color-dim)] text-lg leading-relaxed">
                                 Make a real, debt-free study abroad route the default option for Indian students &mdash;
                                 not a luxury reserved for those who can pay agency markups on top of tuition.
                             </p>
@@ -146,7 +146,7 @@ export default function AboutPage() {
                                 </div>
                                 <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Our Vision</h3>
                             </div>
-                            <p className="text-slate-600 text-lg leading-relaxed">
+                            <p className="text-[var(--color-dim)] text-lg leading-relaxed">
                                 Be the consultancy where the counsellor on the other end has actually lived through what the student is about to do.
                                 If we can&apos;t honestly help, we say so &mdash; and we say so first, not last.
                             </p>
@@ -156,10 +156,10 @@ export default function AboutPage() {
                     {/* Podcast CTA */}
                     <div className="bg-slate-900 rounded-[2.5rem] overflow-hidden shadow-2xl mt-12 flex flex-col md:flex-row relative">
                         <div className="md:w-1/2 p-12 md:p-16 flex flex-col justify-center relative z-10">
-                            <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                            <h3 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-6">
                                 Hear The Untold Stories
                             </h3>
-                            <p className="text-slate-300 mb-10 text-lg">
+                            <p className="text-[var(--color-navy)] mb-10 text-lg">
                                 Discover the real-world experiences, strategies, and successes from students who have navigated the path before you.
                             </p>
                             <a
@@ -168,7 +168,7 @@ export default function AboutPage() {
                                 rel="noreferrer"
                                 className="inline-flex items-center justify-center px-8 py-4 bg-white hover:bg-slate-100 text-slate-900 font-bold rounded-xl transition-all shadow-lg text-lg group self-start"
                             >
-                                <Play className="mr-3 text-white group-hover:scale-110 transition-transform" size={24} fill="currentColor" />
+                                <Play className="mr-3 text-[var(--color-navy)] group-hover:scale-110 transition-transform" size={24} fill="currentColor" />
                                 Watch Our YouTube Podcast
                             </a>
                         </div>
@@ -183,8 +183,8 @@ export default function AboutPage() {
             {/* Clean Final CTA */}
             <section className="py-32 bg-slate-900 text-center border-t border-slate-800" data-section="cta">
                 <div className="max-w-3xl mx-auto px-4">
-                    <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl font-extrabold text-white mb-6 tracking-tight">Ready to Transform Your Future?</TextEffectInView>
-                    <p className="text-lg text-slate-400 mb-10 leading-relaxed max-w-2xl mx-auto">
+                    <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl font-extrabold text-[var(--color-navy)] mb-6 tracking-tight">Ready to Transform Your Future?</TextEffectInView>
+                    <p className="text-lg text-[var(--color-dim)] mb-10 leading-relaxed max-w-2xl mx-auto">
                         Let us help you turn your study abroad dreams into reality with our expert guidance.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -192,7 +192,7 @@ export default function AboutPage() {
                             href="https://calendly.com/axelisoverseas/counsellingsession"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="relative overflow-hidden inline-flex justify-center items-center px-8 py-4 bg-stone-900 hover:bg-stone-950 text-white font-bold rounded-xl transition-all shadow-lg"
+                            className="relative overflow-hidden inline-flex justify-center items-center px-8 py-4 bg-stone-900 hover:bg-stone-950 text-[var(--color-navy)] font-bold rounded-xl transition-all shadow-lg"
                         >
                             <span className="relative z-10">Book Your Counselling Call Today</span>
                             <BorderBeam size={140} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />
@@ -204,7 +204,7 @@ export default function AboutPage() {
             {/* Legal / corporate strip */}
             <section className="py-8 bg-slate-950 border-t border-slate-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <p className="text-xs text-slate-500 text-center leading-relaxed">
+                    <p className="text-xs text-[var(--color-dim)] text-center leading-relaxed">
                         Axelis Overseas Education Pvt Ltd &mdash; CIN U85500CT2023PTC014913 &mdash;
                         MCC 8299 (Educational Services) &mdash; Registered under the Companies Act 2013
                         in the Republic of India.

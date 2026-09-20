@@ -284,7 +284,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
     <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4">
       {/* Blurred transparent background overlay */}
       <div
-        className="absolute inset-0 bg-black/40 backdrop-blur-lg transition-all duration-500 modal-backdrop"
+        className="absolute inset-0 bg-[var(--color-tint)] backdrop-blur-lg transition-all duration-500 modal-backdrop"
         onClick={handleClose}
         style={{
           backdropFilter: 'blur(12px) saturate(180%)',
@@ -310,7 +310,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
         onClick={(e) => e.stopPropagation()}
       >
         {/* Space-themed Header */}
-        <div className="relative bg-gradient-to-r from-slate-900 via-stone-900 to-stone-900 text-white p-3 sm:p-4 rounded-t-2xl sm:rounded-t-3xl overflow-hidden">
+        <div className="relative bg-gradient-to-r from-slate-900 via-stone-900 to-stone-900 text-[var(--color-navy)] p-3 sm:p-4 rounded-t-2xl sm:rounded-t-3xl overflow-hidden">
           {/* Header background effects */}
           <div className="absolute inset-0 bg-gradient-to-r from-slate-900/90 via-stone-900/95 to-stone-900/90"></div>
           <div className="absolute top-0 left-0 w-full h-full opacity-10">
@@ -328,7 +328,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
               e.stopPropagation();
               handleClose();
             }}
-            className="absolute top-3 right-3 p-2 text-white hover:text-stone-300 transition-all duration-300 hover:scale-110 hover:rotate-90 z-50 hover:bg-white/10 rounded-lg cursor-pointer"
+            className="absolute top-3 right-3 p-2 text-[var(--color-navy)] hover:text-[var(--color-navy)] transition-all duration-300 hover:scale-110 hover:rotate-90 z-50 hover:bg-[var(--color-tint)] rounded-lg cursor-pointer"
             type="button"
             aria-label="Close modal"
           >
@@ -384,9 +384,9 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
             <div>
               <div className="flex items-center mb-3 sm:mb-4 pt-3 sm:pt-4">
                 <div className="p-1 sm:p-1.5 bg-gradient-to-r from-white/20 to-stone-700/20 rounded-lg mr-2">
-                  <Globe className="text-white" size={20} />
+                  <Globe className="text-[var(--color-navy)]" size={20} />
                 </div>
-                <h3 className="text-sm sm:text-base font-bold text-white">
+                <h3 className="text-sm sm:text-base font-bold text-[var(--color-navy)]">
                   Which country interests you?
                 </h3>
               </div>
@@ -400,8 +400,8 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     }}
                     className={`p-2 sm:p-3 text-left rounded-lg sm:rounded-xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-sm ${
                       formData.country === country
-                        ? 'border-white bg-gradient-to-r from-white/20 to-stone-700/20 text-stone-300 shadow-lg shadow-white/25'
-                        : 'border-slate-600 bg-slate-700/50 text-gray-300 hover:border-white/50 hover:bg-white/10'
+                        ? 'border-white bg-gradient-to-r from-white/20 to-stone-700/20 text-[var(--color-navy)] shadow-lg shadow-white/25'
+                        : 'border-slate-600 bg-slate-700/50 text-gray-300 hover:border-[var(--color-rule)] hover:bg-[var(--color-tint)]'
                     }`}
                   >
                     <span className="text-xs sm:text-sm font-semibold">
@@ -417,9 +417,9 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
             <div>
               <div className="flex items-center mb-4">
                 <div className="p-1.5 bg-gradient-to-r from-white/20 to-stone-700/20 rounded-lg mr-2">
-                  <GraduationCap className="text-white" size={20} />
+                  <GraduationCap className="text-[var(--color-navy)]" size={20} />
                 </div>
-                <h3 className="text-base font-bold text-white">
+                <h3 className="text-base font-bold text-[var(--color-navy)]">
                   What service do you need?
                 </h3>
               </div>
@@ -433,8 +433,8 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     }}
                     className={`w-full p-3 text-left rounded-xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-sm ${
                       formData.service === service
-                        ? 'border-white bg-gradient-to-r from-white/20 to-stone-700/20 text-stone-300 shadow-lg shadow-white/25'
-                        : 'border-slate-600 bg-slate-700/50 text-gray-300 hover:border-white/50 hover:bg-white/10'
+                        ? 'border-white bg-gradient-to-r from-white/20 to-stone-700/20 text-[var(--color-navy)] shadow-lg shadow-white/25'
+                        : 'border-slate-600 bg-slate-700/50 text-gray-300 hover:border-[var(--color-rule)] hover:bg-[var(--color-tint)]'
                     }`}
                   >
                     <span className="text-sm font-semibold">
@@ -450,9 +450,9 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
             <div>
               <div className="flex items-center mb-6">
                 <div className="p-2 bg-gradient-to-r from-white/20 to-stone-700/20 rounded-lg mr-3">
-                  <Phone className="text-white" size={24} />
+                  <Phone className="text-[var(--color-navy)]" size={24} />
                 </div>
-                <h3 className="text-lg font-bold text-white">
+                <h3 className="text-lg font-bold text-[var(--color-navy)]">
                   Your contact information
                 </h3>
               </div>
@@ -463,13 +463,13 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     placeholder="Full Name"
                     value={formData.fullName}
                     onChange={(e) => handleInputChange('fullName', e.target.value)}
-                    className={`w-full p-3 sm:p-4 border-2 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-slate-700/50 text-white placeholder-gray-400 backdrop-blur-sm transition-all duration-300 text-sm sm:text-base ${
-                      errors.fullName ? 'border-white bg-white/10' : 'border-slate-600 hover:border-white/50'
+                    className={`w-full p-3 sm:p-4 border-2 rounded-lg sm:rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-slate-700/50 text-[var(--color-navy)] placeholder-gray-400 backdrop-blur-sm transition-all duration-300 text-sm sm:text-base ${
+                      errors.fullName ? 'border-white bg-[var(--color-tint)]' : 'border-slate-600 hover:border-[var(--color-rule)]'
                     }`}
                     required
                   />
                   {errors.fullName && (
-                    <p className="text-white text-sm mt-2 font-medium">{errors.fullName}</p>
+                    <p className="text-[var(--color-navy)] text-sm mt-2 font-medium">{errors.fullName}</p>
                   )}
                 </div>
                 <div>
@@ -478,13 +478,13 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     placeholder="Email Address"
                     value={formData.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
-                    className={`w-full p-4 border-2 rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-slate-700/50 text-white placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ${
-                      errors.email ? 'border-white bg-white/10' : 'border-slate-600 hover:border-white/50'
+                    className={`w-full p-4 border-2 rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-slate-700/50 text-[var(--color-navy)] placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ${
+                      errors.email ? 'border-white bg-[var(--color-tint)]' : 'border-slate-600 hover:border-[var(--color-rule)]'
                     }`}
                     required
                   />
                   {errors.email && (
-                    <p className="text-white text-sm mt-2 font-medium">{errors.email}</p>
+                    <p className="text-[var(--color-navy)] text-sm mt-2 font-medium">{errors.email}</p>
                   )}
                 </div>
                 <div>
@@ -493,13 +493,13 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     placeholder="Phone Number"
                     value={formData.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className={`w-full p-4 border-2 rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-slate-700/50 text-white placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ${
-                      errors.phone ? 'border-white bg-white/10' : 'border-slate-600 hover:border-white/50'
+                    className={`w-full p-4 border-2 rounded-xl focus:ring-2 focus:ring-white focus:border-white bg-slate-700/50 text-[var(--color-navy)] placeholder-gray-400 backdrop-blur-sm transition-all duration-300 ${
+                      errors.phone ? 'border-white bg-[var(--color-tint)]' : 'border-slate-600 hover:border-[var(--color-rule)]'
                     }`}
                     required
                   />
                   {errors.phone && (
-                    <p className="text-white text-sm mt-2 font-medium">{errors.phone}</p>
+                    <p className="text-[var(--color-navy)] text-sm mt-2 font-medium">{errors.phone}</p>
                   )}
                 </div>
               </div>
@@ -525,9 +525,9 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
             <div>
               <div className="flex items-center mb-6">
                 <div className="p-2 bg-gradient-to-r from-white/20 to-stone-700/20 rounded-lg mr-3">
-                  <Calendar className="text-white" size={24} />
+                  <Calendar className="text-[var(--color-navy)]" size={24} />
                 </div>
-                <h3 className="text-lg font-bold text-white">
+                <h3 className="text-lg font-bold text-[var(--color-navy)]">
                   When should we call you?
                 </h3>
               </div>
@@ -538,8 +538,8 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     onClick={() => handleInputChange('preferredTime', time)}
                     className={`w-full p-4 text-left rounded-xl border-2 transition-all duration-300 hover:scale-105 hover:shadow-lg backdrop-blur-sm ${
                       formData.preferredTime === time
-                        ? 'border-white bg-gradient-to-r from-white/20 to-stone-700/20 text-stone-300 shadow-lg shadow-white/25'
-                        : 'border-slate-600 bg-slate-700/50 text-gray-300 hover:border-white/50 hover:bg-white/10'
+                        ? 'border-white bg-gradient-to-r from-white/20 to-stone-700/20 text-[var(--color-navy)] shadow-lg shadow-white/25'
+                        : 'border-slate-600 bg-slate-700/50 text-gray-300 hover:border-[var(--color-rule)] hover:bg-[var(--color-tint)]'
                     }`}
                   >
                     <span className="text-sm font-semibold">
@@ -582,7 +582,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                 <div className="p-1.5 bg-gradient-to-r from-green-400/20 to-green-500/20 rounded-lg mr-2">
                   <CheckCircle className="text-green-400" size={20} />
                 </div>
-                <h3 className="text-base font-bold text-white">
+                <h3 className="text-base font-bold text-[var(--color-navy)]">
                   Thank you! How would you like to proceed?
                 </h3>
               </div>
@@ -594,7 +594,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
               <div className="space-y-2 sm:space-y-3">
                 <button
                   onClick={handleWhatsAppChoice}
-                  className="w-full p-3 sm:p-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white rounded-lg sm:rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg shadow-green-500/25 group"
+                  className="w-full p-3 sm:p-4 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-[var(--color-navy)] rounded-lg sm:rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg shadow-green-500/25 group"
                 >
                   <div className="flex items-center justify-center">
                     <MessageCircle className="mr-2 sm:mr-3 group-hover:scale-110 transition-transform" size={18} />
@@ -607,13 +607,13 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
 
                 <button
                   onClick={handleCalendlyChoice}
-                  className="w-full p-3 sm:p-4 bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-white rounded-lg sm:rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg shadow-stone-700/25 group"
+                  className="w-full p-3 sm:p-4 bg-gradient-to-r from-stone-700 to-stone-900 hover:from-stone-900 hover:to-stone-950 text-[var(--color-navy)] rounded-lg sm:rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-xl shadow-lg shadow-stone-700/25 group"
                 >
                   <div className="flex items-center justify-center">
                     <Calendar className="mr-2 sm:mr-3 group-hover:scale-110 transition-transform" size={18} />
                     <div className="text-left">
                       <div className="font-bold text-sm sm:text-base">Schedule Video Call</div>
-                      <div className="text-stone-100 text-xs hidden sm:block">Book a convenient time for detailed consultation</div>
+                      <div className="text-[var(--color-navy)] text-xs hidden sm:block">Book a convenient time for detailed consultation</div>
                     </div>
                   </div>
                 </button>
@@ -625,7 +625,7 @@ const LeadCaptureModal = ({ isOpen, onClose, trigger = 'timed' }) => {
                     resetForm();
                     onClose();
                   }}
-                  className="text-gray-400 hover:text-white transition-colors text-xs"
+                  className="text-gray-400 hover:text-[var(--color-navy)] transition-colors text-xs"
                 >
                   I'll decide later
                 </button>

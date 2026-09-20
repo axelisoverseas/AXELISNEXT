@@ -235,16 +235,16 @@ export default function PrivacyPolicyPage() {
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-stone-900/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none" />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-stone-900/15 border border-stone-700/30 mb-6">
-            <Shield className="w-8 h-8 text-white" />
+            <Shield className="w-8 h-8 text-[var(--color-navy)]" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white mb-5 tracking-tight">
+          <h1 className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-5 tracking-tight">
             Privacy Policy
           </h1>
-          <p className="text-lg text-slate-300 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-[var(--color-navy)] max-w-2xl mx-auto leading-relaxed">
             At Axelis Overseas, we are committed to protecting your privacy and safeguarding the
             personal information you entrust to us.
           </p>
-          <p className="text-sm text-slate-500 mt-6">Last Updated: {LAST_UPDATED}</p>
+          <p className="text-sm text-[var(--color-dim)] mt-6">Last Updated: {LAST_UPDATED}</p>
         </div>
       </section>
 

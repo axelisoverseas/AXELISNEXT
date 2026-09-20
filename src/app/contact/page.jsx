@@ -55,27 +55,27 @@ export default function ContactPage() {
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-stone-700/10 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
+                    <h1 className="text-4xl md:text-6xl font-extrabold text-[var(--color-navy)] mb-6 tracking-tight">
                         <TextEffect as="span" per="word" preset="blur">Contact</TextEffect>{' '}
-                        <span className="text-white">
+                        <span className="text-[var(--color-navy)]">
                             <TextEffect as="span" per="char" preset="blur" delay={0.25}>Our Experts</TextEffect>
                         </span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-slate-400 max-w-3xl mx-auto mb-10 leading-relaxed font-light">
+                    <p className="text-xl md:text-2xl text-[var(--color-dim)] max-w-3xl mx-auto mb-10 leading-relaxed font-light">
                         Tell us where you want to study. We&apos;ll tell you what it actually takes, honestly.
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-6">
-                        <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-slate-700 shadow-sm text-slate-300">
-                            <Phone size={18} className="text-white" />
+                        <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-slate-700 shadow-sm text-[var(--color-navy)]">
+                            <Phone size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">24/7 Support</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-slate-700 shadow-sm text-slate-300">
-                            <Globe size={18} className="text-white" />
+                        <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-slate-700 shadow-sm text-[var(--color-navy)]">
+                            <Globe size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">29+ Countries</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-slate-700 shadow-sm text-slate-300">
-                            <Award size={18} className="text-white" />
+                        <div className="flex items-center gap-3 bg-slate-800/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-slate-700 shadow-sm text-[var(--color-navy)]">
+                            <Award size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">Expert Counsellors</span>
                         </div>
                     </div>
@@ -90,7 +90,7 @@ export default function ContactPage() {
                             <Calendar size={16} /> Book a 1:1 session
                         </div>
                         <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight mb-3">Schedule your free counselling call</TextEffectInView>
-                        <p className="text-slate-600 max-w-2xl mx-auto">Pick a time that works for you and we'll walk you through eligibility, scholarships, and next steps.</p>
+                        <p className="text-[var(--color-dim)] max-w-2xl mx-auto">Pick a time that works for you and we'll walk you through eligibility, scholarships, and next steps.</p>
                     </div>
                     <div className="bg-white rounded-2xl shadow-xl border border-slate-200 overflow-hidden">
                         <div
@@ -120,7 +120,7 @@ export default function ContactPage() {
                                         value={formData.fullName}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-transparent transition-all placeholder:text-slate-400"
+                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-transparent transition-all placeholder:text-[var(--color-dim)]"
                                         placeholder="Enter your full name"
                                     />
                                 </div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-transparent transition-all placeholder:text-slate-400"
+                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-transparent transition-all placeholder:text-[var(--color-dim)]"
                                         placeholder="Enter your email address"
                                     />
                                 </div>
@@ -144,7 +144,7 @@ export default function ContactPage() {
                                         value={formData.mobile}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-transparent transition-all placeholder:text-slate-400"
+                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-transparent transition-all placeholder:text-[var(--color-dim)]"
                                         placeholder="Enter your mobile number"
                                     />
                                 </div>
@@ -156,7 +156,7 @@ export default function ContactPage() {
                                         value={formData.subject}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-transparent transition-all placeholder:text-slate-400"
+                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-transparent transition-all placeholder:text-[var(--color-dim)]"
                                         placeholder="Enter the subject"
                                     />
                                 </div>
@@ -168,7 +168,7 @@ export default function ContactPage() {
                                         onChange={handleChange}
                                         required
                                         rows={4}
-                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-transparent transition-all placeholder:text-slate-400 resize-none"
+                                        className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:ring-2 focus:ring-stone-700 focus:border-transparent transition-all placeholder:text-[var(--color-dim)] resize-none"
                                         placeholder="Enter your message"
                                     />
                                 </div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full flex items-center justify-center px-6 py-4 bg-stone-900 hover:bg-stone-950 disabled:bg-slate-300 disabled:text-slate-500 text-white font-bold rounded-xl transition-all shadow-md mt-4"
+                                    className="w-full flex items-center justify-center px-6 py-4 bg-stone-900 hover:bg-stone-950 disabled:bg-slate-300 disabled:text-[var(--color-dim)] text-[var(--color-navy)] font-bold rounded-xl transition-all shadow-md mt-4"
                                 >
                                     {isSubmitting ? 'Sending...' : (
                                         <><Send className="mr-2" size={18} /> Send Message</>
@@ -196,25 +196,25 @@ export default function ContactPage() {
 
                         {/* Information Section */}
                         <div className="space-y-8">
-                            <div className="bg-slate-900 rounded-3xl shadow-sm border border-slate-800 p-8 md:p-12 text-white">
+                            <div className="bg-slate-900 rounded-3xl shadow-sm border border-slate-800 p-8 md:p-12 text-[var(--color-navy)]">
                                 <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl font-bold mb-8 tracking-tight">Get in Touch</TextEffectInView>
 
                                 <div className="space-y-8">
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><MapPin className="text-white" size={24} /></div>
+                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><MapPin className="text-[var(--color-navy)]" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Office Address</h3>
-                                            <p className="text-slate-400 leading-relaxed">{siteInfo.contact.address}</p>
+                                            <p className="text-[var(--color-dim)] leading-relaxed">{siteInfo.contact.address}</p>
                                         </div>
                                     </div>
 
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><Phone className="text-white" size={24} /></div>
+                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><Phone className="text-[var(--color-navy)]" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Phone Numbers</h3>
                                             <div className="space-y-1">
                                                 {siteInfo.contact.phones.map((phone, index) => (
-                                                    <a key={index} href={`tel:${phone}`} className="block text-slate-400 hover:text-white transition-colors">
+                                                    <a key={index} href={`tel:${phone}`} className="block text-[var(--color-dim)] hover:text-[var(--color-navy)] transition-colors">
                                                         {phone}
                                                     </a>
                                                 ))}
@@ -223,12 +223,12 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><Mail className="text-white" size={24} /></div>
+                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><Mail className="text-[var(--color-navy)]" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Email Addresses</h3>
                                             <div className="space-y-1">
                                                 {siteInfo.contact.emails.map((email, index) => (
-                                                    <a key={index} href={`mailto:${email}`} className="block text-slate-400 hover:text-white transition-colors break-all">
+                                                    <a key={index} href={`mailto:${email}`} className="block text-[var(--color-dim)] hover:text-[var(--color-navy)] transition-colors break-all">
                                                         {email}
                                                     </a>
                                                 ))}
@@ -237,12 +237,12 @@ export default function ContactPage() {
                                     </div>
 
                                     <div className="flex items-start gap-5">
-                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><Clock className="text-white" size={24} /></div>
+                                        <div className="p-3 bg-stone-900/50 rounded-xl shrink-0"><Clock className="text-[var(--color-navy)]" size={24} /></div>
                                         <div>
                                             <h3 className="font-semibold text-lg mb-2">Office Hours</h3>
-                                            <p className="text-slate-400">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                                            <p className="text-slate-400">Saturday: 10:00 AM - 4:00 PM</p>
-                                            <p className="text-slate-400">Sunday: Closed</p>
+                                            <p className="text-[var(--color-dim)]">Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                            <p className="text-[var(--color-dim)]">Saturday: 10:00 AM - 4:00 PM</p>
+                                            <p className="text-[var(--color-dim)]">Sunday: Closed</p>
                                         </div>
                                     </div>
                                 </div>
@@ -252,16 +252,16 @@ export default function ContactPage() {
                             <div className="bg-white p-8 md:p-10 rounded-3xl shadow-sm border border-slate-200 text-center">
                                 <h3 className="text-xl font-bold text-slate-900 mb-6 tracking-tight">Connect With Us</h3>
                                 <div className="flex justify-center gap-4">
-                                    <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-slate-600 rounded-xl hover:bg-stone-50 hover:text-stone-900 transition-colors border border-slate-100">
+                                    <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-[var(--color-dim)] rounded-xl hover:bg-stone-50 hover:text-stone-900 transition-colors border border-slate-100">
                                         <Facebook size={24} />
                                     </a>
-                                    <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-slate-600 rounded-xl hover:bg-stone-50 hover:text-stone-800 transition-colors border border-slate-100">
+                                    <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-[var(--color-dim)] rounded-xl hover:bg-stone-50 hover:text-stone-800 transition-colors border border-slate-100">
                                         <Instagram size={24} />
                                     </a>
-                                    <a href={siteInfo.social.linkedin} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-slate-600 rounded-xl hover:bg-stone-50 hover:text-stone-950 transition-colors border border-slate-100">
+                                    <a href={siteInfo.social.linkedin} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-[var(--color-dim)] rounded-xl hover:bg-stone-50 hover:text-stone-950 transition-colors border border-slate-100">
                                         <Linkedin size={24} />
                                     </a>
-                                    <a href={siteInfo.social.youtube} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-slate-600 rounded-xl hover:bg-stone-50 hover:text-stone-900 transition-colors border border-slate-100">
+                                    <a href={siteInfo.social.youtube} target="_blank" rel="noreferrer" className="w-14 h-14 flex items-center justify-center bg-slate-50 text-[var(--color-dim)] rounded-xl hover:bg-stone-50 hover:text-stone-900 transition-colors border border-slate-100">
                                         <Youtube size={24} />
                                     </a>
                                 </div>

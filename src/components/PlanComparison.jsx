@@ -51,13 +51,13 @@ const PlanComparison = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-4">
             ZCF vs ZTF: Which Student Plan is Right for You?
           </TextEffectInView>
-          <p className="text-xl text-slate-300 max-w-3xl mx-auto mb-2">
+          <p className="text-xl text-[var(--color-navy)] max-w-3xl mx-auto mb-2">
             Compare our student plans to find the perfect fit for your study abroad journey
           </p>
-          <div className="text-sm text-slate-400 font-medium">
+          <div className="text-sm text-[var(--color-dim)] font-medium">
             <span className="inline-flex items-center gap-2">
               <Award className="text-[var(--storm-accent)]" size={16} />
               By Axelis Overseas
@@ -68,7 +68,7 @@ const PlanComparison = () => {
         {/* Comparison Table */}
         <div className="bg-white rounded-2xl shadow-2xl overflow-hidden border border-gray-200">
           {/* Table Header - Space Theme */}
-          <div className="grid grid-cols-3 bg-gradient-to-r from-slate-800 via-stone-900 to-slate-900 text-white relative overflow-hidden">
+          <div className="grid grid-cols-3 bg-gradient-to-r from-slate-800 via-stone-900 to-slate-900 text-[var(--color-navy)] relative overflow-hidden">
             {/* Cosmic background effects */}
             <div className="absolute inset-0 opacity-10">
               <div
@@ -81,19 +81,19 @@ const PlanComparison = () => {
             <div className="relative z-10 p-6 text-center">
               <h3 className="text-lg font-bold">Features</h3>
             </div>
-            <div className="relative z-10 p-6 text-center border-l border-white/20">
+            <div className="relative z-10 p-6 text-center border-l border-[var(--color-rule)]">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                 <h3 className="text-lg font-bold">ZCF Student Plan</h3>
               </div>
-              <p className="text-sm text-stone-200">Most Popular</p>
+              <p className="text-sm text-[var(--color-navy)]">Most Popular</p>
             </div>
-            <div className="p-6 text-center border-l border-white/20">
+            <div className="p-6 text-center border-l border-[var(--color-rule)]">
               <div className="flex items-center justify-center gap-2 mb-2">
                 <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
                 <h3 className="text-lg font-bold">ZTF Student Plan</h3>
               </div>
-              <p className="text-sm text-stone-200">Premium Gold Service</p>
+              <p className="text-sm text-[var(--color-navy)]">Premium Gold Service</p>
             </div>
           </div>
 
