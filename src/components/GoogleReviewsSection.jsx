@@ -35,7 +35,7 @@ function Stars({ rating, size = 14 }) {
 }
 
 export default function GoogleReviewsSection({ compact = false }) {
-    // No verified reviews yet — render nothing rather than a placeholder.
+    // No verified reviews yet, render nothing rather than a placeholder.
     if (!hasVerifiedReviews) return null;
 
     const href = getGoogleMapsHref();
@@ -44,7 +44,7 @@ export default function GoogleReviewsSection({ compact = false }) {
     return (
  <section className={`relative ${compact ? 'sec-sm' : 'sec'} border-t border-[var(--color-rule)]`}>
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Section header — Google-branded */}
+                {/* Section header. Google-branded */}
                 <div className="text-center mb-10 max-w-2xl mx-auto">
                     <div className="inline-flex items-center gap-3 px-5 py-3 rounded-2xl bg-white text-slate-900 shadow-e-3 mb-6">
                         <GoogleG size={26} />

@@ -36,7 +36,7 @@ export default function TrustBand() {
           will show you the references on the call.
         </p>
 
-        {/* Accreditations — logo, what it means, and the reference to verify */}
+        {/* Accreditations: logo, what it means, and the reference to verify */}
         <Link
           href="/accreditations"
           className="group grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10 focus-visible:outline-none"

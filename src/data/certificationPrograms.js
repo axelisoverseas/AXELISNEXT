@@ -1,10 +1,10 @@
 import { assertAmountsMatchCatalogue } from './cashfreeLinks';
 
 // ============================================================================
-// AXELIS CERTIFICATION CATALOGUE — v2
+// AXELIS CERTIFICATION CATALOGUE: v2
 // ============================================================================
 //
-// ⚠️  DRAFT — PENDING SIGN-OFF FROM RISHABH AGRAWAL
+// ⚠️  DRAFT. PENDING SIGN-OFF FROM RISHABH AGRAWAL
 //
 // DEV_HANDOVER_v2_certifications_website.md points to a companion spec,
 // `AXELIS_CERTIFICATION_CATALOGUE_v2.md`, for programme names, fees, syllabi
@@ -14,11 +14,11 @@ import { assertAmountsMatchCatalogue } from './cashfreeLinks';
 //
 //   1. DEV_HANDOVER_v2_certifications_website.md
 //        - 16 programmes, 4 tiers (Foundation / Core / Advanced / Concierge)
-//          — superseded by [RULING 12]; see the catalogue note below. Three
+//: superseded by [RULING 12]; see the catalogue note below. Three
 //          programmes are listed, ₹2,00,000 to ₹3,00,000, Concierge only.
 //        - Ticket range ₹4,000 to ₹3,00,000 (now ₹2,00,000 to ₹3,00,000)
 //        - Average ticket ₹2,00,000, carried by the Concierge tier
-//          — now derived, and it computes to ₹2,50,000.
+//: now derived, and it computes to ₹2,50,000.
 //        - Concierge defined as ₹1.5L+, spotlight band quotes ₹2L to ₹3L
 //        - EMI: fee/12 for Concierge, fee/6 for Core and Advanced
 //
@@ -41,7 +41,7 @@ import { assertAmountsMatchCatalogue } from './cashfreeLinks';
 // ============================================================================
 
 // Bajaj Finserv merchant EMI is NOT live. Nothing about it renders anywhere
-// while this is false — no logo, no chip, no "onboarding" placeholder, and no
+// while this is false: no logo, no chip, no "onboarding" placeholder, and no
 // no-cost-EMI claim, because no-cost EMI IS the Bajaj product. Flip this one
 // constant when the merchant ID lands and the whole treatment comes back.
 export const BAJAJ_EMI_LIVE = false;
@@ -91,7 +91,7 @@ export const TIERS = [
 //
 // The other thirteen are UNLISTED, not deleted. Their pages stay reachable so
 // the links deployed to production on 12 Sep, and any in-flight enquiry that
-// cites one, do not 404 — but they are out of the sitemap and carry
+// cites one, do not 404, but they are out of the sitemap and carry
 // `noindex`. Nothing surfaces them; you have to already hold the URL.
 //
 // To relist one: move its object from `unlistedPrograms` into `programs`.
@@ -113,7 +113,7 @@ export const programs = [
     duration: '12 months',
     format: 'One dedicated counsellor, end to end',
     cohortSize: 'Capped at 12 per intake',
-    certificate: 'Axelis Certified — Global Career Launch',
+    certificate: 'Axelis Certified. Global Career Launch',
     flagship: true,
     summary:
       'Application, language, visa and your first ninety days abroad, run end to end by one counsellor.',
@@ -126,10 +126,10 @@ export const programs = [
       'Ninety days of post-arrival support after you land',
     ],
     syllabus: [
-      { title: 'Months 1 to 2 — strategy', detail: 'Shortlist, budget, funding plan, and language baseline.' },
-      { title: 'Months 3 to 6 — applications', detail: 'SOP, CV, references, and submissions across the shortlist.' },
-      { title: 'Months 6 to 9 — offers and language', detail: 'Offer negotiation, scholarships, and certification.' },
-      { title: 'Months 9 to 12 — visa and landing', detail: 'Visa file, accommodation, departure, first 90 days.' },
+      { title: 'Months 1 to 2: strategy', detail: 'Shortlist, budget, funding plan, and language baseline.' },
+      { title: 'Months 3 to 6: applications', detail: 'SOP, CV, references, and submissions across the shortlist.' },
+      { title: 'Months 6 to 9: offers and language', detail: 'Offer negotiation, scholarships, and certification.' },
+      { title: 'Months 9 to 12: visa and landing', detail: 'Visa file, accommodation, departure, first 90 days.' },
     ],
     guarantee: {
       pct: 25,
@@ -148,7 +148,7 @@ export const programs = [
     duration: '15 months',
     format: 'One dedicated counsellor + research supervisor',
     cohortSize: 'Capped at 8 per intake',
-    certificate: 'Axelis Certified — PhD & Fellowship Concierge',
+    certificate: 'Axelis Certified. PhD & Fellowship Concierge',
     summary:
       'Funded-PhD and fellowship applications run end to end, from proposal through supervisor placement to visa.',
     description:
@@ -160,10 +160,10 @@ export const programs = [
       'Visa file and arrival logistics handled',
     ],
     syllabus: [
-      { title: 'Months 1 to 4 — proposal', detail: 'Literature positioning, method, and feasibility.' },
-      { title: 'Months 4 to 8 — supervisors', detail: 'Outreach, calls, and refining to their group’s work.' },
-      { title: 'Months 8 to 12 — funding', detail: 'Fellowship, studentship and council applications.' },
-      { title: 'Months 12 to 15 — visa and landing', detail: 'Offer, visa file, and arrival.' },
+      { title: 'Months 1 to 4: proposal', detail: 'Literature positioning, method, and feasibility.' },
+      { title: 'Months 4 to 8: supervisors', detail: 'Outreach, calls, and refining to their group’s work.' },
+      { title: 'Months 8 to 12: funding', detail: 'Fellowship, studentship and council applications.' },
+      { title: 'Months 12 to 15: visa and landing', detail: 'Offer, visa file, and arrival.' },
     ],
     guarantee: {
       pct: 40,
@@ -182,7 +182,7 @@ export const programs = [
     duration: '15 months',
     format: 'One dedicated counsellor, 1:1 throughout',
     cohortSize: 'Capped at 8 per intake',
-    certificate: 'Axelis Certified — Executive MBA Concierge',
+    certificate: 'Axelis Certified. Executive MBA Concierge',
     summary:
       'Executive MBA admission run end to end, including financing, relocation and the move itself.',
     description:
@@ -194,10 +194,10 @@ export const programs = [
       'Relocation and family logistics coordinated',
     ],
     syllabus: [
-      { title: 'Months 1 to 3 — positioning', detail: 'Career audit, school selection, and testing strategy.' },
-      { title: 'Months 3 to 8 — applications', detail: 'Essays, recommenders, and round-by-round submission.' },
-      { title: 'Months 8 to 12 — interviews and offers', detail: 'Mock panels, offer comparison, and financing.' },
-      { title: 'Months 12 to 15 — relocation', detail: 'Visa, housing, and family logistics.' },
+      { title: 'Months 1 to 3: positioning', detail: 'Career audit, school selection, and testing strategy.' },
+      { title: 'Months 3 to 8: applications', detail: 'Essays, recommenders, and round-by-round submission.' },
+      { title: 'Months 8 to 12: interviews and offers', detail: 'Mock panels, offer comparison, and financing.' },
+      { title: 'Months 12 to 15: relocation', detail: 'Visa, housing, and family logistics.' },
     ],
     guarantee: {
       pct: 30,
@@ -224,7 +224,7 @@ export const unlistedPrograms = [
     duration: '2 weeks',
     format: 'Self-paced + 2 live clinics',
     cohortSize: 'Up to 40',
-    certificate: 'Axelis Certified — Study Abroad Readiness',
+    certificate: 'Axelis Certified. Study Abroad Readiness',
     summary:
       'Work out which country, degree level and budget actually fit you, before you spend money on applications.',
     description:
@@ -252,7 +252,7 @@ export const unlistedPrograms = [
     duration: '3 weeks',
     format: 'Live cohort + 2 written reviews',
     cohortSize: 'Up to 25',
-    certificate: 'Axelis Certified — Statement of Purpose',
+    certificate: 'Axelis Certified. Statement of Purpose',
     summary:
       'Write a statement of purpose that survives an admissions reader who has already read four hundred of them.',
     description:
@@ -280,7 +280,7 @@ export const unlistedPrograms = [
     duration: '3 weeks',
     format: 'Live cohort + 1:1 strategy call',
     cohortSize: 'Up to 25',
-    certificate: 'Axelis Certified — Application Strategy',
+    certificate: 'Axelis Certified. Application Strategy',
     summary:
       'Build a university list with an honest admit probability against each row, then sequence the applications.',
     description:
@@ -308,7 +308,7 @@ export const unlistedPrograms = [
     duration: '4 weeks',
     format: 'Live cohort + 2 recorded mock interviews',
     cohortSize: 'Up to 20',
-    certificate: 'Axelis Certified — Visa Readiness',
+    certificate: 'Axelis Certified. Visa Readiness',
     summary:
       'Build the visa file and sit two recorded mock interviews before the real one.',
     description:
@@ -338,7 +338,7 @@ export const unlistedPrograms = [
     duration: '12 weeks',
     format: 'Live small-group, 3 sessions per week',
     cohortSize: '4 to 6',
-    certificate: 'Axelis Certified — German A2 (CEFR-aligned)',
+    certificate: 'Axelis Certified. German A2 (CEFR-aligned)',
     summary:
       'Reach CEFR A2 German, the level German student-visa files and most public-university applications ask for.',
     description:
@@ -368,7 +368,7 @@ export const unlistedPrograms = [
     duration: '12 weeks',
     format: 'Live small-group, 3 sessions per week',
     cohortSize: '4 to 6',
-    certificate: 'Axelis Certified — French A2 (CEFR-aligned)',
+    certificate: 'Axelis Certified. French A2 (CEFR-aligned)',
     summary:
       'Reach CEFR A2 French, the level Campus France interviews and most public-university applications ask for.',
     description:
@@ -398,7 +398,7 @@ export const unlistedPrograms = [
     duration: '10 weeks',
     format: 'Live cohort + 4 one-to-one reviews',
     cohortSize: 'Up to 15',
-    certificate: 'Axelis Certified — Undergraduate Applications',
+    certificate: 'Axelis Certified. Undergraduate Applications',
     summary:
       'Take an undergraduate application from shortlist to submitted across UCAS, Common App or direct European portals.',
     description:
@@ -426,7 +426,7 @@ export const unlistedPrograms = [
     duration: '12 weeks',
     format: 'Live cohort + 5 one-to-one reviews',
     cohortSize: 'Up to 15',
-    certificate: 'Axelis Certified — Postgraduate Applications',
+    certificate: 'Axelis Certified. Postgraduate Applications',
     summary:
       'Take a master’s application from shortlist to submitted, including the academic CV and reference strategy.',
     description:
@@ -454,7 +454,7 @@ export const unlistedPrograms = [
     duration: '8 weeks',
     format: 'Live cohort + 3 application reviews',
     cohortSize: 'Up to 20',
-    certificate: 'Axelis Certified — Scholarship Applications',
+    certificate: 'Axelis Certified. Scholarship Applications',
     summary:
       'Find the funding you are actually eligible for and submit applications that clear the first-round cut.',
     description:
@@ -484,7 +484,7 @@ export const unlistedPrograms = [
     duration: '20 weeks',
     format: 'Live small-group, 4 sessions per week',
     cohortSize: '3 to 5',
-    certificate: 'Axelis Certified — German B1 (CEFR-aligned)',
+    certificate: 'Axelis Certified. German B1 (CEFR-aligned)',
     summary:
       'Reach CEFR B1 German, the bar for German-taught degrees, Ausbildung routes and most skilled-visa pathways.',
     description:
@@ -512,7 +512,7 @@ export const unlistedPrograms = [
     duration: '20 weeks',
     format: 'Live small-group, 4 sessions per week',
     cohortSize: '3 to 5',
-    certificate: 'Axelis Certified — French B1 (CEFR-aligned)',
+    certificate: 'Axelis Certified. French B1 (CEFR-aligned)',
     summary:
       'Reach CEFR B1 French, the bar for French-taught degrees and the level Campus France interviews test against.',
     description:
@@ -540,7 +540,7 @@ export const unlistedPrograms = [
     duration: '16 weeks',
     format: '1:1 coaching, weekly',
     cohortSize: '1:1',
-    certificate: 'Axelis Certified — Executive MBA Applications',
+    certificate: 'Axelis Certified. Executive MBA Applications',
     summary:
       'Build an Executive MBA application around your actual career record, for schools that read work history before scores.',
     description:
@@ -568,7 +568,7 @@ export const unlistedPrograms = [
     duration: '16 weeks',
     format: '1:1 supervision, weekly',
     cohortSize: '1:1',
-    certificate: 'Axelis Certified — Research Proposal',
+    certificate: 'Axelis Certified. Research Proposal',
     summary:
       'Write a research proposal and supervisor approach that gets a reply from the people you want to work with.',
     description:
@@ -588,15 +588,15 @@ export const unlistedPrograms = [
 
 ];
 
-/** Everything with a live page — listed or not. Routing and lookup only. */
+/** Everything with a live page, listed or not. Routing and lookup only. */
 export const allPrograms = [...programs, ...unlistedPrograms];
 
 // ---------------------------------------------------------------------------
-// Derived values — computed, never hand-maintained.
+// Derived values: computed, never hand-maintained.
 // ---------------------------------------------------------------------------
 
 // Tailwind scans source statically, so class names must be written out in
-// full — `text-[var(--${accent})]` compiles to nothing. Every accent class
+// full: `text-[var(--${accent})]` compiles to nothing. Every accent class
 // used by the certification pages is spelled out here and looked up by tier.
 const ACCENTS = {
   electric: {
@@ -620,7 +620,7 @@ export function accentFor(tier) {
   return tier === 'concierge' || tier === 'advanced' ? ACCENTS.glow : ACCENTS.electric;
 }
 
-/** The longest tenure offered — the headline "as low as" figure is priced on it. */
+/** The longest tenure offered, the headline "as low as" figure is priced on it. */
 export function emiTenure(program) {
   return isEmiEligible(program) ? EMI_TENURES[EMI_TENURES.length - 1] : null;
 }
@@ -662,17 +662,17 @@ export function emiSchedule(program) {
   }));
 }
 
-/** ₹2,00,000 — Indian digit grouping, no decimals. */
+/** ₹2,00,000. Indian digit grouping, no decimals. */
 export function formatINR(amount) {
   return `₹${amount.toLocaleString('en-IN')}`;
 }
 
-/** Resolves listed AND unlisted slugs — unlisted pages are still served. */
+/** Resolves listed AND unlisted slugs, unlisted pages are still served. */
 export function getProgram(slug) {
   return allPrograms.find((p) => p.slug === slug) || null;
 }
 
-/** True when a slug is served but withheld from listings — drives `noindex`. */
+/** True when a slug is served but withheld from listings, drives `noindex`. */
 export function isUnlisted(slug) {
   return unlistedPrograms.some((p) => p.slug === slug);
 }
@@ -739,7 +739,7 @@ export const financing = {
 };
 
 // ---------------------------------------------------------------------------
-// Cancellation & Refund Policy — the numbers every surface must agree on.
+// Cancellation & Refund Policy, the numbers every surface must agree on.
 // Any change here needs written sign-off (policy handover, "what must not change").
 // ---------------------------------------------------------------------------
 export const refundPolicy = {

@@ -22,7 +22,7 @@ const LEGAL_NAME = 'Axelis Overseas Education Pvt Ltd';
 export const metadata = {
   title: 'Privacy Policy | Axelis Overseas',
   description:
-    'How Axelis Overseas collects, uses, and protects your personal information — data we collect, how it is used and shared, your rights, and how to reach us.',
+    'How Axelis Overseas collects, uses, and protects your personal information: data we collect, how it is used and shared, your rights, and how to reach us.',
   keywords:
     'privacy policy, data protection, personal information, DPDP Act, GDPR, data security, Axelis Overseas',
   alternates: { canonical: '/privacy-policy' },
@@ -362,7 +362,7 @@ export default function PrivacyPolicyPage() {
           <div className="mt-8 pt-6 border-t border-white/10 text-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-6 py-3 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-semibold rounded-lg transition-colors"
+              className="btn btn-primary"
             >
               Get in Touch
             </Link>

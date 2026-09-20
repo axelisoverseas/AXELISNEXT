@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// DOCUMENT REQUIREMENTS — what a candidate must upload, per service
+// DOCUMENT REQUIREMENTS: what a candidate must upload, per service
 // ---------------------------------------------------------------------------
 //
 // Shared by the upload form, the guidance shown next to it, and the Slack

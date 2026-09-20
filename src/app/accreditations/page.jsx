@@ -18,7 +18,7 @@ const certifications = [
     id: 'british-council',
     name: 'British Council',
     issuer: 'UK Agent and Counsellor Training',
-    blurb: 'Counsellors completed the British Council UK Agent & Counsellor Training course and qualifying exam — the standard reference for ethical UK student placement.',
+    blurb: 'Counsellors completed the British Council UK Agent & Counsellor Training course and qualifying exam, the standard reference for ethical UK student placement.',
     image: '/trust-badges/british-council.png',
     Icon: Globe2,
     accent: 'from-[var(--storm-accent)] to-[var(--dawn-glow)]',
@@ -27,7 +27,7 @@ const certifications = [
     id: 'airc',
     name: 'AIRC',
     issuer: 'American International Recruitment Council',
-    blurb: 'AIRC certified for U.S. student recruitment — a peer-reviewed standard that holds agencies to ethical and quality benchmarks for placing students in American universities.',
+    blurb: 'AIRC certified for U.S. student recruitment, a peer-reviewed standard that holds agencies to ethical and quality benchmarks for placing students in American universities.',
     image: '/trust-badges/airc-certificate.png',
     Icon: Award,
     accent: 'from-[var(--storm-accent)] to-[var(--dawn-glow)]',
@@ -133,11 +133,11 @@ export default function CertificationsPage() {
             Want to verify any of these?
           </h2>
           <p className="text-lg text-[var(--color-navy)]/85 mb-8 max-w-2xl mx-auto">
-            Ask a counsellor for the certificate references. We&apos;ll share them on the call &mdash; nothing is hidden.
+            Ask a counsellor for the certificate references. We&apos;ll share them on the call, nothing is hidden.
           </p>
           <Link
             href="/bookings"
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
+            className="btn btn-primary btn-lg"
           >
             Talk to a counsellor
             <ArrowRight className="ml-2" size={20} />

@@ -27,12 +27,12 @@ export default function UniversityLogosSection() {
           30k+ universities.
         </h2>
         <p className="text-[var(--color-navy)] mt-6 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-          A snapshot of the institutions Axelis students have been placed at — from Oxford and
+          A snapshot of the institutions Axelis students have been placed at, from Oxford and
           MIT to ETH Zürich, NUS and beyond.
         </p>
       </motion.div>
 
-      {/* Marquee — full-width. Column count climbs with breakpoint so the row
+      {/* Marquee: full-width. Column count climbs with breakpoint so the row
           never overflows the viewport (which would clip cards on both sides). */}
       <div className="w-full flex justify-center gap-6 px-4 [mask-image:linear-gradient(to_bottom,transparent,black_15%,black_85%,transparent)] max-h-[720px] overflow-hidden">
         <LogoColumn logos={col1} duration={26} />

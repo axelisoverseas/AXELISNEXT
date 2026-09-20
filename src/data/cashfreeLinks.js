@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// CASHFREE PAYMENT LINKS — D2C (overseeducation.com)
+// CASHFREE PAYMENT LINKS. D2C (overseeducation.com)
 // ---------------------------------------------------------------------------
 //
 // Cashfree payment links ARE hosted payment pages. We do not build a checkout
@@ -12,7 +12,7 @@
 // is set the product falls back to the enquiry form, so a half-configured
 // catalogue never shows a dead checkout button.
 //
-// Amounts are duplicated here deliberately — they are what you must key into
+// Amounts are duplicated here deliberately, they are what you must key into
 // the dashboard, and `assertAmountsMatchCatalogue()` below fails loudly if
 // this file and the catalogue ever disagree.
 // ---------------------------------------------------------------------------

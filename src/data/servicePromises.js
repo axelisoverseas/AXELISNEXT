@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// SERVICE PROMISES — what Axelis commits to, per service
+// SERVICE PROMISES: what Axelis commits to, per service
 // ---------------------------------------------------------------------------
 //
 // One source of truth, used in three places:

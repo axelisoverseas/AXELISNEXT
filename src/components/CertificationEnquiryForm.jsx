@@ -143,7 +143,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
       <div className="mb-4">
         <label className={LABEL} htmlFor="cert-program">Target programme</label>
         {presetProgram ? (
-          <div className="flex items-center gap-2 px-4 py-3 min-h-[44px] rounded-xl bg-[var(--color-tint)] border border-[var(--color-rule)]/30 text-[var(--color-navy)] text-sm font-semibold">
+          <div className="btn btn-secondary flex text-[var(--color-navy)] text-sm">
             <CheckCircle size={15} className="text-[var(--color-axelis)] shrink-0" />
             {presetProgram.title}
           </div>
@@ -153,7 +153,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
             {programs.map((p) => (
               <option key={p.slug} value={p.slug}>{p.title}</option>
             ))}
-            <option value="not-sure">Not sure yet — advise me</option>
+            <option value="not-sure">Not sure yet: advise me</option>
           </select>
         )}
       </div>
@@ -211,7 +211,7 @@ export default function CertificationEnquiryForm({ presetProgram = null }) {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="inline-flex w-full items-center justify-center gap-2 px-6 py-4 min-h-[44px] bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 disabled:opacity-60 disabled:cursor-not-allowed text-white font-bold rounded-xl transition-all shadow-e-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+        className="btn btn-primary btn-lg w-full disabled:opacity-60 disabled:cursor-not-allowed focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
       >
         {status === 'sending'
           ? <><Loader2 size={18} className="animate-spin" /> Sending</>

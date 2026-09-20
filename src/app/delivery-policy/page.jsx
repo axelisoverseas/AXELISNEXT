@@ -4,7 +4,7 @@ import { policyMeta } from '../../data/cancellationRefundPolicy';
 
 // Delivery is digital end to end. Every figure on this page is either read
 // from `refundPolicy` / the catalogue, or is a plain statement of how
-// delivery works — nothing here restates a number the Cancellation & Refund
+// delivery works: nothing here restates a number the Cancellation & Refund
 // Policy owns, because a second copy of those numbers is a second source of
 // truth that will drift. Where this page touches refunds it links out.
 export const metadata = {
@@ -51,21 +51,21 @@ export default function DeliveryPolicyPage() {
             <Link href="/certifications" className="text-[var(--color-navy)] underline underline-offset-4">
               overseeducation.com/certifications
             </Link>
-            {' '}&mdash; currently {programs.map((p) => p.title).join(', ')}. Each enrolment includes:
+            {' '}: currently {programs.map((p) => p.title).join(', ')}. Each enrolment includes:
           </p>
           <ul className="list-disc pl-5 space-y-2">
             <li>
-              <span className="text-[var(--color-navy)] font-semibold">Programme access</span> &mdash; live
+              <span className="text-[var(--color-navy)] font-semibold">Programme access</span>: live
               sessions, recordings, written materials and submission review, delivered through
               the channels named on the programme page.
             </li>
             <li>
-              <span className="text-[var(--color-navy)] font-semibold">A named counsellor</span> &mdash;
+              <span className="text-[var(--color-navy)] font-semibold">A named counsellor</span>
               assigned on confirmation and your point of contact for the duration of the
               programme.
             </li>
             <li>
-              <span className="text-[var(--color-navy)] font-semibold">A digital certificate</span> &mdash;
+              <span className="text-[var(--color-navy)] font-semibold">A digital certificate</span>
               issued as a PDF on completion, carrying a unique certificate ID that can be
               checked against our register.
             </li>
@@ -130,7 +130,7 @@ export default function DeliveryPolicyPage() {
             >
               {refundPolicy.supportPhone}
             </a>
-            . We acknowledge delivery complaints on the same clock as refund requests &mdash;
+            . We acknowledge delivery complaints on the same clock as refund requests
             the acknowledgement and resolution timelines are set out in the{' '}
             <Link href={refundPolicy.href} className="text-[var(--color-navy)] underline underline-offset-4">
               Cancellation &amp; Refund Policy

@@ -59,7 +59,7 @@ export default function PaymentTermsPage() {
         </div>
       </section>
 
-      {/* CONSENT — first, because it is the thing being agreed */}
+      {/* CONSENT: first, because it is the thing being agreed */}
  <section className="relative sec-sm border-b border-[var(--color-rule)]">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="rounded-2xl border-2 border-[var(--color-axelis)]/35 bg-[var(--dawn-glow)]/[0.07] p-6 md:p-8">
@@ -201,7 +201,7 @@ export default function PaymentTermsPage() {
             </p>
             <Link
               href={refundPolicy.href}
-              className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-tint)] hover:bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] font-semibold text-sm transition-colors"
+              className="btn btn-secondary text-[var(--color-navy)] text-sm"
             >
               <FileText size={15} aria-hidden="true" />
               Read the Cancellation &amp; Refund Policy

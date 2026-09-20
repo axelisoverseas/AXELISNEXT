@@ -51,7 +51,7 @@ const ordinal = (n) => {
 export default function Home() {
   return (
     <div className="min-h-screen overflow-hidden">
-      {/* HERO — clean, no lightning, no audio. Subtle study-abroad photo backdrop. */}
+      {/* HERO: clean, no lightning, no audio. Subtle study-abroad photo backdrop. */}
  <section className="relative pt-28 lg:pt-36 pb-24 overflow-hidden">
         <HeroOrbitalBackdrop />
 
@@ -85,7 +85,7 @@ export default function Home() {
           >
             <Link
               href="/products"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-2"
+              className="btn btn-primary btn-lg"
             >
               See student plans
               <ArrowRight aria-hidden="true" className="ml-2" size={20} />
@@ -110,15 +110,15 @@ export default function Home() {
             ].map(({ Icon, label }) => (
               <div
                 key={label}
-                className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-slate-200 text-sm font-semibold"
+                className="glass-storm py-3 px-3 flex items-center justify-center gap-2 text-[var(--color-navy)] text-sm font-semibold"
               >
-                <Icon size={16} className="text-[var(--storm-electric)] shrink-0" />
+                <Icon size={16} className="text-[var(--color-axelis)] shrink-0" />
                 <span>{label}</span>
               </div>
             ))}
           </motion.div>
 
-          {/* Country chips strip — 29 countries demonstrated inline */}
+          {/* Country chips strip: 29 countries demonstrated inline */}
           <motion.div variants={fadeInUp} className="max-w-4xl mx-auto">
             <p className="text-[10px] text-[var(--storm-electric)] font-bold mb-3 text-center">
               Twenty-nine countries &middot; one trusted team
@@ -147,7 +147,7 @@ export default function Home() {
       </section>
 
 
-      {/* Unified Impact Stats — storm phase */}
+      {/* Unified Impact Stats: storm phase */}
  <section className="sec text-[var(--color-navy)] relative overflow-hidden">
         {/* Electric + amber ambient glows */}
         <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"></div>
@@ -164,11 +164,11 @@ export default function Home() {
               Real <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] via-[var(--color-axelis)] to-[var(--dawn-glow)]">impact</span>
             </h2>
             <p className="text-[var(--color-navy)] mt-4">
-              One focus &mdash; placing students at universities they can actually get into and afford. Free first call, no upsell.
+              One focus: placing students at universities they can actually get into and afford. Free first call, no upsell.
             </p>
           </motion.div>
 
-          {/* 4-stat grid — storm-glass cards with unified icon treatment.
+          {/* 4-stat grid: storm-glass cards with unified icon treatment.
               Every icon: gradient halo + circular ring + dark inner disc + amber bolt accent. */}
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
@@ -198,7 +198,7 @@ export default function Home() {
                     <div className="absolute inset-[1.5px] rounded-full bg-[var(--storm-deep)]/95 backdrop-blur-md flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
                       <Icon size={34} strokeWidth={1.6} className="text-white" />
                     </div>
-                    {/* Amber lightning-bolt accent (universal — same on every card) */}
+                    {/* Amber lightning-bolt accent (universal, same on every card) */}
                     <div
                       className="absolute -top-1 -right-1 w-7 h-7 rounded-full bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] flex items-center justify-center shadow-e-2 ring-2 ring-[var(--storm-deep)]"
                       style={{ animation: 'bolt-pulse 3.5s ease-in-out infinite' }}
@@ -224,7 +224,7 @@ export default function Home() {
       </section>
 
 
-      {/* Plans preview — GAC + EPC teaser, links to /products */}
+      {/* Plans preview. GAC + EPC teaser, links to /products */}
  <section className="relative sec overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-1/2 left-0 w-[420px] h-[420px] bg-[var(--color-tint)] rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
@@ -245,7 +245,7 @@ export default function Home() {
             <Link
               href="/products#plans"
               className="group bg-white border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-e-3 p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-              aria-label="Global Admissions Charter (GAC), nine thousand nine hundred ninety nine rupees — view details"
+              aria-label="Global Admissions Charter (GAC), nine thousand nine hundred ninety nine rupees, view details"
             >
               <div className="flex items-baseline justify-between">
                 <div>
@@ -273,7 +273,7 @@ export default function Home() {
             <Link
               href="/products#plans"
               className="group bg-white border-2 border-[var(--color-axelis)]/30 rounded-2xl shadow-e-3 p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--color-axelis)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--dawn-glow)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
-              aria-label="Europe Public Charter (EPC), nineteen thousand nine hundred ninety nine rupees — view details"
+              aria-label="Europe Public Charter (EPC), nineteen thousand nine hundred ninety nine rupees, view details"
             >
               <div className="flex items-baseline justify-between">
                 <div>
@@ -311,7 +311,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Destinations grid — 9 feature countries + 20 compact tiles. All 29 photographed. */}
+      {/* Destinations grid: 9 feature countries + 20 compact tiles. All 29 photographed. */}
  <section className="relative sec overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
@@ -319,11 +319,11 @@ export default function Home() {
               Twenty-nine countries. <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--dawn-glow)]">Twenty-nine photos.</span>
             </h2>
             <p className="text-white/85 text-base md:text-lg">
-              Every destination we place students into &mdash; pictured. The first nine carry the bulk of our volume; the remaining twenty run on the same plans.
+              Every destination we place students into, pictured. The first nine carry the bulk of our volume; the remaining twenty run on the same plans.
             </p>
           </div>
 
-          {/* Feature tier — 9 large cards */}
+          {/* Feature tier: 9 large cards */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-5 mb-10">
             {[
               { name: 'United Kingdom', flag: '🇬🇧', plan: 'GAC', img: 'https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1200&q=80&auto=format&fit=crop' },
@@ -364,7 +364,7 @@ export default function Home() {
             ))}
           </div>
 
-          {/* Compact tier — remaining 20 countries */}
+          {/* Compact tier: remaining 20 countries */}
           <div className="flex items-center gap-4 mb-5">
             <span className="h-px flex-1 bg-white/10" aria-hidden="true" />
             <span className="text-[10px] text-[var(--color-axelis)] font-bold">
@@ -432,10 +432,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* University Portfolio — 100+ universities across 29 countries */}
+      {/* University Portfolio: 100+ universities across 29 countries */}
       <UniversityLogosSection />
 
-      {/* Google Reviews — verified 3rd-party proof from Bilaspur branch */}
+      {/* Google Reviews: verified 3rd-party proof from Bilaspur branch */}
       <GoogleReviewsSection compact />
 
       {/* Team Section */}
@@ -444,7 +444,7 @@ export default function Home() {
 
 
 
-      {/* Quick FAQ Section — dawn phase */}
+      {/* Quick FAQ Section: dawn phase */}
  <section className="sec relative overflow-hidden">
         {/* Dawn ambient */}
         <div className="absolute top-0 left-0 w-full h-full opacity-20 pointer-events-none">
@@ -508,10 +508,10 @@ export default function Home() {
             {/* Content Pane */}
             <div className="md:w-7/12 p-12 md:p-20 relative z-10 text-center md:text-left flex flex-col justify-center items-center md:items-start">
               <TextEffectInView as="h2" per="word" preset="blur" className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight relative z-10">Ready when you are.</TextEffectInView>
-              <p className="text-xl text-slate-300 mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Tell us where you want to study. We&apos;ll tell you what it actually takes &mdash; honest, transparent, no upsell.</p>
+              <p className="text-xl text-slate-300 mb-10 max-w-2xl relative z-10 leading-relaxed md:text-left">Tell us where you want to study. We&apos;ll tell you what it actually takes: honest, transparent, no upsell.</p>
               <Link
                 href="/bookings"
-                className="relative overflow-hidden inline-flex justify-center items-center px-10 py-5 bg-gradient-to-r from-[var(--storm-accent)] via-[#FFB347] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[transform,filter,box-shadow] shadow-e-2 hover:shadow-e-lift text-lg hover:-translate-y-1 z-10 group"
+                className="btn btn-primary relative overflow-hidden text-lg z-10 group"
               >
                 <span className="relative z-10 inline-flex items-center">
                   Apply Now - Start Journey
@@ -524,7 +524,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* Floating Google Reviews badge — bottom-left to avoid the WhatsApp widget */}
+      {/* Floating Google Reviews badge, bottom-left to avoid the WhatsApp widget */}
       <GoogleReviewsFloat position="bottom-left" />
     </div>
   );

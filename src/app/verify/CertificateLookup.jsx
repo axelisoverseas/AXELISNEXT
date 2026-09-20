@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 import { CheckCircle, AlertCircle, XCircle, Search } from 'lucide-react';
 import { lookupCertificate, isWellFormedId, SPECIMEN_ID } from '../../data/certificateRegister';
 
-// Lookup runs against the register bundled with the page — no network call, so
+// Lookup runs against the register bundled with the page, no network call, so
 // there is nothing to rate-limit and nothing to leak. The register holds no
 // personal data beyond what a holder already has on their own certificate.
 export default function CertificateLookup() {
@@ -46,11 +46,11 @@ export default function CertificateLookup() {
             autoComplete="off"
             spellCheck={false}
             aria-describedby="cert-id-hint"
-            className="flex-1 min-w-0 rounded-xl border border-[var(--color-rule)] bg-[var(--color-tint)] px-4 py-3 text-[var(--color-navy)] font-mono placeholder:text-[var(--color-dim)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
+            className="btn btn-secondary flex-1 min-w-0 text-[var(--color-navy)] placeholder:text-[var(--color-dim)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
           />
           <button
             type="submit"
-            className="inline-flex items-center justify-center gap-2 shrink-0 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] px-6 py-3 font-bold text-white hover:brightness-110 transition-[filter] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            className="btn btn-primary shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
           >
             <Search size={17} aria-hidden="true" /> Verify Certificate
           </button>
@@ -68,7 +68,7 @@ export default function CertificateLookup() {
         </p>
       </form>
 
-      {/* Results announce themselves — the lookup is async to a screen reader
+      {/* Results announce themselves: the lookup is async to a screen reader
           even though it resolves locally. */}
       <div aria-live="polite" role="status">
         {result?.kind === 'specimen' && (
@@ -87,7 +87,7 @@ export default function CertificateLookup() {
               <Field label="Holder" value={result.cert.holder} />
               <Field label="Programme" value={result.cert.programme} />
               <Field label="Credential" value={result.cert.certificate} />
-              <Field label="Issued" value={result.cert.issued || '—'} />
+              <Field label="Issued" value={result.cert.issued || ', '} />
             </dl>
           </Panel>
         )}
@@ -105,7 +105,7 @@ export default function CertificateLookup() {
           <Panel tone="red" Icon={XCircle} title="No certificate with that ID">
             <p>
               <span className="font-mono text-[var(--color-navy)]">{result.id}</span> is not in our
-              register. Check the ID against the certificate — if it matches, write to us and we
+              register. Check the ID against the certificate, if it matches, write to us and we
               will look into it.
             </p>
           </Panel>

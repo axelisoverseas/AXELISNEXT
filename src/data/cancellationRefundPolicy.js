@@ -1,9 +1,9 @@
 // ============================================================================
-// CANCELLATION & REFUND POLICY — published text
+// CANCELLATION & REFUND POLICY, published text
 // ============================================================================
 //
 // Source: CANCELLATION_REFUND_POLICY_DEV_HANDOVER.md (11 Sep 2026), which is
-// marked "verbatim — this is what goes on the site". Every departure from that
+// marked "verbatim: this is what goes on the site". Every departure from that
 // file below was ruled by Rishabh Agrawal on 11 Sep 2026 and is marked
 // [RULING n] so a reviewer can trace it:
 //
@@ -29,7 +29,7 @@
 //              12 use axelisoverseas@overseeducation.com until it does.
 //
 // The protected numbers (7-business-day window, ₹2,500 fee, guarantee
-// percentages, 48-hour / 5-day / 2-day / 7–10-day SLAs) are untouched and
+// percentages, 48-hour / 5-day / 2-day / 7-10-day SLAs) are untouched and
 // also live in `refundPolicy` in certificationPrograms.js so every surface
 // agrees. Change them in one place, with sign-off.
 // ============================================================================
@@ -55,7 +55,7 @@ export const policySections = [
       { p: 'This policy applies to every certification programme offered by Axelis Overseas Education Pvt Ltd on overseeducation.com:' },
       {
         // Populated tiers only. Mapping all of TIERS emitted three empty
-        // entries — "Foundation-tier programmes ()" — once [RULING 12] landed.
+        // entries: "Foundation-tier programmes ()" once [RULING 12] landed.
         list: populatedTiers().map((t) => `${t.name}-tier programmes (${titlesFor(t.id).join(', ')})`),
       },
       { p: 'Programme fees range from ₹2,00,000 to ₹3,00,000. Each programme carries a dedicated page on overseeducation.com/certifications with its own fee, duration, syllabus, and outcome deliverables.' },
@@ -69,8 +69,8 @@ export const policySections = [
       { p: 'All programmes priced ₹10,000 and above are eligible for EMI on the checkout page. Tenure range: minimum 6 months, maximum 24 months. EMI is provided by our financing partners:' },
       {
         list: [
-          'Razorpay EMI — Credit-card EMI across all major issuers, 6 / 9 / 12 / 18 / 24-month tenures where the card issuer supports it.',
-          'Cashfree EMI — Credit-card EMI and Cardless EMI, 6 / 9 / 12 / 18 / 24-month tenures where the card issuer supports it.',
+          'Razorpay EMI. Credit-card EMI across all major issuers, 6 / 9 / 12 / 18 / 24-month tenures where the card issuer supports it.',
+          'Cashfree EMI. Credit-card EMI and Cardless EMI, 6 / 9 / 12 / 18 / 24-month tenures where the card issuer supports it.',
         ],
       },
       { p: 'Additional financing partners will be listed as they onboard.' },
@@ -121,11 +121,11 @@ export const policySections = [
     number: 6,
     title: 'Cancellation & refund process',
     blocks: [
-      { p: `Step 1 — Request: The student emails ${refundPolicy.supportEmail} from the enrolment email address with the enrolment ID, programme name, reason, and payment reference.` },
-      { p: 'Step 2 — Acknowledgement: Axelis acknowledges the request within 48 business hours with a cancellation ticket ID.' },
-      { p: 'Step 3 — Verification: Axelis verifies enrolment status, consumption, and eligibility against Section 4. Verification is completed within 5 business days of acknowledgement.' },
-      { p: 'Step 4 — Approval and refund calculation: Axelis communicates the refund decision and refund amount to the student in writing, using the refund tiers in Section 7. Decision is communicated within 2 business days of verification completion.' },
-      { p: 'Step 5 — Refund credit:' },
+      { p: `Step 1. Request: The student emails ${refundPolicy.supportEmail} from the enrolment email address with the enrolment ID, programme name, reason, and payment reference.` },
+      { p: 'Step 2. Acknowledgement: Axelis acknowledges the request within 48 business hours with a cancellation ticket ID.' },
+      { p: 'Step 3: Verification: Axelis verifies enrolment status, consumption, and eligibility against Section 4. Verification is completed within 5 business days of acknowledgement.' },
+      { p: 'Step 4. Approval and refund calculation: Axelis communicates the refund decision and refund amount to the student in writing, using the refund tiers in Section 7. Decision is communicated within 2 business days of verification completion.' },
+      { p: 'Step 5. Refund credit:' },
       {
         list: [
           'For direct-payment enrolments (UPI, card, netbanking, wallet): refund is credited to the source of payment within 7 to 10 working days of approval.',
@@ -166,12 +166,12 @@ export const policySections = [
     blocks: [
       { p: 'For enrolments financed through Razorpay EMI or Cashfree EMI, the refund is credited to the financing partner. The financing partner then either closes the loan account (if the refund equals or exceeds the outstanding principal) or reduces the principal (if the refund is partial). Any surplus after loan closure is credited to the student’s registered bank account within 15 working days of the loan closure.' },
       { p: 'Interest already accrued, EMIs already paid to the financing partner, and applicable GST on those EMIs are not refundable. These are set by the financing partner.' },
-      { p: 'Example — 3 EMIs already paid, ₹2,00,000 Concierge programme, 6-month tenure:' },
+      { p: 'Example: 3 EMIs already paid, ₹2,00,000 Concierge programme, 6-month tenure:' },
       {
         ordered: [
           'Student has paid 3 × ₹33,333 = ₹99,999 to the financing partner.',
           'Outstanding principal with the financing partner is approximately ₹1,00,000.',
-          'Student cancels on day 40 (Day 31–45 tier = 25% refund of ₹2,00,000 = ₹50,000).',
+          'Student cancels on day 40 (Day 31-45 tier = 25% refund of ₹2,00,000 = ₹50,000).',
           '₹50,000 is credited by Axelis to the financing partner within 7 to 10 working days.',
           'The financing partner reduces the outstanding principal from ₹1,00,000 to ₹50,000 and revises the remaining EMI schedule accordingly. The student pays reduced EMIs on the balance.',
         ],
@@ -212,7 +212,7 @@ export const policySections = [
       {
         list: [
           'Cancellation is per programme, not per session.',
-          'Cancellation requests are processed on business days (Monday to Friday, 09:00–18:00 IST). Requests received on weekends or public holidays are treated as received on the next business day.',
+          'Cancellation requests are processed on business days (Monday to Friday, 09:00-18:00 IST). Requests received on weekends or public holidays are treated as received on the next business day.',
           'Axelis reserves the right to revise this policy. Any revision applies only to enrolments after the revision date. Enrolments before the revision date are governed by the policy version at the time of enrolment.',
           'All refunds are issued in Indian Rupees (INR) only.',
         ],
@@ -226,8 +226,8 @@ export const policySections = [
     blocks: [
       {
         list: [
-          `First line — cancellation and refund support: ${refundPolicy.supportEmail} · ${refundPolicy.supportPhone}`,
-          'Escalation: axelisoverseas@overseeducation.com — Rishabh Agrawal, Founder',
+          `First line: cancellation and refund support: ${refundPolicy.supportEmail} · ${refundPolicy.supportPhone}`,
+          'Escalation: axelisoverseas@overseeducation.com. Rishabh Agrawal, Founder',
           'Corporate office: WorkFlo Ranka Junction, Property No. 224, 3rd Floor, #80/3, Vijinapur Village, Old Madras Road, KR Puram Hobli, Bengaluru, Karnataka 560016',
           'Registered office: B20, Vrindavan Plaza, Nehru Chowk, Bilaspur, C.G. 495001',
         ],

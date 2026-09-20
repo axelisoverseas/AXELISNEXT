@@ -86,7 +86,7 @@ export default function CancellationRefundPolicyPage() {
           </div>
         </header>
 
-        {/* Section index — hidden in print, where the numbered headings suffice */}
+        {/* Section index: hidden in print, where the numbered headings suffice */}
         <nav aria-label="Policy sections" className="toc mb-10 p-5 rounded-2xl bg-white border border-[var(--color-rule)] border border-[var(--color-rule)]" data-print-hide>
           <p className="text-sm font-semibold text-[var(--color-navy)] mb-3">In this policy</p>
           <ol className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1.5 text-sm">

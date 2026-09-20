@@ -64,7 +64,7 @@ export default function AboutPage() {
                                         Our day job is matching Indian students with universities they can actually get into and afford.
                                     </p>
                                     <p>
-                                        We work across 29+ countries &mdash; UK, USA, Canada, Ireland, Finland, Germany, France, Australia and more.
+                                        We work across 29+ countries: UK, USA, Canada, Ireland, Finland, Germany, France, Australia and more.
                                         Public tuition-free options are flagged where they exist, and full scholarships are searched first
                                         before any out-of-pocket plan is recommended.
                                     </p>
@@ -133,7 +133,7 @@ export default function AboutPage() {
                                 <h3 className="text-3xl font-bold text-slate-900 tracking-tight">Our Mission</h3>
                             </div>
                             <p className="text-[var(--color-dim)] text-lg leading-relaxed">
-                                Make a real, debt-free study abroad route the default option for Indian students &mdash;
+                                Make a real, debt-free study abroad route the default option for Indian students
                                 not a luxury reserved for those who can pay agency markups on top of tuition.
                             </p>
                         </div>
@@ -148,7 +148,7 @@ export default function AboutPage() {
                             </div>
                             <p className="text-[var(--color-dim)] text-lg leading-relaxed">
                                 Be the consultancy where the counsellor on the other end has actually lived through what the student is about to do.
-                                If we can&apos;t honestly help, we say so &mdash; and we say so first, not last.
+                                If we can&apos;t honestly help, we say so, and we say so first, not last.
                             </p>
                         </div>
                     </div>
@@ -192,7 +192,7 @@ export default function AboutPage() {
                             href="https://calendly.com/axelisoverseas/counsellingsession"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="relative overflow-hidden inline-flex justify-center items-center px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-e-2"
+                            className="btn btn-primary btn-lg relative overflow-hidden"
                         >
                             <span className="relative z-10">Book Your Counselling Call Today</span>
                             <BorderBeam size={140} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />
@@ -205,8 +205,8 @@ export default function AboutPage() {
  <section className="py-8 bg-slate-950 border-t border-slate-800">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <p className="text-xs text-[var(--color-dim)] text-center leading-relaxed">
-                        Axelis Overseas Education Pvt Ltd &mdash; CIN U85500CT2023PTC014913 &mdash;
-                        MCC 8299 (Educational Services) &mdash; Registered under the Companies Act 2013
+                        Axelis Overseas Education Pvt Ltd. CIN U85500CT2023PTC014913 
+                        MCC 8299 (Educational Services). Registered under the Companies Act 2013
                         in the Republic of India.
                     </p>
                 </div>

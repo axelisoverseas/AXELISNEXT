@@ -37,7 +37,7 @@ export default function UniversityFinderPage() {
             </p>
           </div>
 
-          {/* Stat cluster — balances the hero and surfaces the two facts students care about most */}
+          {/* Stat cluster: balances the hero and surfaces the two facts students care about most */}
           <div className="flex shrink-0 gap-8 sm:gap-10">
             <div>
               <div className="text-3xl font-bold sm:text-4xl" style={{ color: '#3590f3' }}>

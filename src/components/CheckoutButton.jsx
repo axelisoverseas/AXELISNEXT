@@ -9,7 +9,7 @@ import { formatINR, refundPolicy } from '../data/certificationPrograms';
 //
 // Cashfree requires a customer phone on the order, so we collect the minimum
 // to create one and nothing more. Card details are entered on Cashfree's page,
-// never here — this component never sees them.
+// never here: this component never sees them.
 //
 // The SDK is loaded on demand rather than in the document head: most visitors
 // never press this, and a payment SDK on every page view is a cost they don't
@@ -197,7 +197,7 @@ export default function CheckoutButton({ product, label, className = '', quantit
       <button
         type="submit"
         disabled={busy}
-        className="mt-5 inline-flex w-full justify-center items-center gap-2 px-6 py-3.5 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold transition-[filter] disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
+        className="btn btn-primary btn-lg mt-5 w-full disabled:opacity-70 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
       >
         {busy ? (
           <>

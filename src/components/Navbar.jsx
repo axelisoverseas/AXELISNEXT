@@ -190,7 +190,7 @@ const Navbar = () => {
                 aria-label="Open extended navigation menu"
                 aria-expanded={isOpen}
                 aria-controls="mobile-nav-drawer"
-                className="flex items-center space-x-2 px-4 py-2.5 min-h-[44px] rounded-xl bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] hover:text-[var(--color-axelis)] font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                className="btn btn-secondary flex space-x-2 text-[var(--color-navy)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
               >
                 <Menu size={20} aria-hidden="true" />
                 <span className="text-sm">More</span>

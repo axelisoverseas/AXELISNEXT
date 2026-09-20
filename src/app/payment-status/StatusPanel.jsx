@@ -73,7 +73,7 @@ export default function StatusPanel() {
       Icon: AlertCircle,
       tone: 'text-[var(--color-axelis)]',
       title: 'We could not confirm this payment',
-      body: 'This does not mean it failed. Do not pay again — call us with the order reference below and we will confirm what happened before anything else is taken.',
+      body: 'This does not mean it failed. Do not pay again. Call us with the order reference below and we will confirm what happened before anything else is taken.',
     },
     missing: {
       Icon: AlertCircle,
@@ -96,7 +96,7 @@ export default function StatusPanel() {
       {state.kind !== 'PAID' && (
         <Link
           href="/certifications"
-          className="mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-[var(--color-tint)] hover:bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] font-bold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
+          className="btn btn-secondary mt-6 text-[var(--color-navy)] text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
         >
           Back to programmes
         </Link>

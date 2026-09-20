@@ -90,7 +90,7 @@ const tracks = [
     logoSub: 'France Éducation International',
     accent: 'from-stone-900 via-white to-rose-500',
     accentText: 'text-[var(--color-navy)]',
-    headline: 'A1 and A2 levels — France Éducation International',
+    headline: 'A1 and A2 levels. France Éducation International',
     note: 'Built for French university admissions and Schengen visa language thresholds. Same tutor for grammar, oral and the official DELF format.',
     packs: [
       { code: 'FR-1', label: '1-on-1', sessions: 'Per session', price: '₹900', per: 'per session', highlight: true },
@@ -108,7 +108,7 @@ const tracks = [
     logoSub: 'Goethe-Zertifikat A1 / A2',
     accent: 'from-emerald-600 to-emerald-800',
     accentText: 'text-[var(--color-navy)]',
-    headline: 'A1 and A2 levels — Goethe-Zertifikat format',
+    headline: 'A1 and A2 levels. Goethe-Zertifikat format',
     note: 'Required for German student-visa applicants and Ausbildung tracks. Native-speaker-style fluency drills aligned to the Goethe exam pattern.',
     packs: [
       { code: 'DE-1', label: '1-on-1', sessions: 'Per session', price: '₹900', per: 'per session', highlight: true },
@@ -166,7 +166,7 @@ const howItWorks = [
 
 const faqs = [
   {
-    q: 'Which English test should I take — IELTS, TOEFL, PTE or DET?',
+    q: 'Which English test should I take: IELTS, TOEFL, PTE or DET?',
     a: 'It depends on the country and university you are applying to. UK and most European universities accept all four; the US accepts TOEFL, IELTS and increasingly DET; Canadian and Australian universities accept IELTS, TOEFL and PTE. The free 30-minute Axelis demo includes a diagnostic that picks the test most likely to get you to your target band fastest.',
   },
   {
@@ -259,7 +259,7 @@ export default function TestPrepPage() {
           >
             <Link
               href="#tracks"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
+              className="btn btn-primary btn-lg"
             >
               See plans &amp; pricing
               <ArrowRight className="ml-2" size={20} />
@@ -476,7 +476,7 @@ export default function TestPrepPage() {
             Not sure which exam to take?
           </h2>
           <p className="text-lg text-[var(--color-navy)]/85 max-w-2xl mx-auto mb-8">
-            Book the free demo. We&apos;ll look at your target university, your timeline, and tell you whether IELTS, TOEFL, PTE, SAT or DET is the right play &mdash; before you spend a rupee.
+            Book the free demo. We&apos;ll look at your target university, your timeline, and tell you whether IELTS, TOEFL, PTE, SAT or DET is the right play, before you spend a rupee.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -487,7 +487,7 @@ export default function TestPrepPage() {
             </Link>
             <a
               href="#tracks"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
+              className="btn btn-primary btn-lg"
             >
               See packs and enrol
               <ArrowRight className="ml-2" size={20} />

@@ -83,7 +83,7 @@ export default function ServicesPage() {
                   </div>
                   <p className="text-sm text-[var(--color-navy)]/85 leading-relaxed">{s.body}</p>
                   {s.thirdParty && (
-                    <div className="mt-4 flex items-start gap-2 rounded-lg border border-[var(--color-rule)] bg-[var(--color-tint)] px-3 py-2.5">
+                    <div className="btn btn-secondary mt-4 flex">
                       <Info size={13} aria-hidden="true" className="shrink-0 mt-0.5 text-[var(--color-dim)]" />
                       <p className="text-xs text-[var(--color-dim)] leading-relaxed">{s.thirdParty}</p>
                     </div>
@@ -115,7 +115,7 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 href="/bookings"
-                className="inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter]"
+                className="btn btn-primary btn-lg"
               >
                 Book a free call <ArrowRight size={18} aria-hidden="true" />
               </Link>

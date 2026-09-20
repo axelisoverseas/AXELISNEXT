@@ -1,4 +1,4 @@
-// Minimal classname joiner — shadcn convention (cn) without clsx/tailwind-merge deps.
+// Minimal classname joiner: shadcn convention (cn) without clsx/tailwind-merge deps.
 // Accepts strings, arrays, and objects; falsy values are dropped.
 export function cn(...inputs) {
   const out = [];

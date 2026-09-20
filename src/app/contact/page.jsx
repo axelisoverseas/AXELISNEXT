@@ -66,15 +66,15 @@ export default function ContactPage() {
                     </p>
 
                     <div className="flex flex-wrap justify-center gap-6">
-                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-e-1 text-white">
+                        <div className="btn btn-primary flex backdrop-blur-sm">
                             <Phone size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">24/7 Support</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-e-1 text-white">
+                        <div className="btn btn-primary flex backdrop-blur-sm">
                             <Globe size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">29+ Countries</span>
                         </div>
-                        <div className="flex items-center gap-3 bg-[var(--color-axelis)]/50 backdrop-blur-sm px-5 py-2.5 rounded-full border border-[var(--color-axelis)] shadow-e-1 text-white">
+                        <div className="btn btn-primary flex backdrop-blur-sm">
                             <Award size={18} className="text-[var(--color-navy)]" />
                             <span className="text-sm font-semibold">Expert Counsellors</span>
                         </div>
@@ -185,7 +185,7 @@ export default function ContactPage() {
                                 <button
                                     type="submit"
                                     disabled={isSubmitting}
-                                    className="w-full flex items-center justify-center px-6 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] disabled:bg-slate-300 disabled:text-[var(--color-dim)] text-white font-bold rounded-xl transition-all shadow-e-2 mt-4"
+                                    className="btn btn-primary btn-lg w-full flex disabled:bg-slate-300 disabled:text-[var(--color-dim)] mt-4"
                                 >
                                     {isSubmitting ? 'Sending...' : (
                                         <><Send className="mr-2" size={18} /> Send Message</>

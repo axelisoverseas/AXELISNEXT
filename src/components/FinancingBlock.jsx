@@ -15,7 +15,7 @@ import CheckoutButton from './CheckoutButton';
  * Learning, upGrad): total fee and monthly EMI side by side at equal weight,
  * a partner sentence, named financing partners, then fine print.
  *
- * One deliberate departure — those sites all publish a monthly figure and
+ * One deliberate departure: those sites all publish a monthly figure and
  * then hide the tenure maths behind a lead form (upGrad's "sliders" ship with
  * an empty plan array). We publish the full tenure table, because our numbers
  * are simple division and we can stand behind them.
@@ -56,7 +56,7 @@ export default function FinancingBlock({ program }) {
               </div>
             </div>
 
-            {/* EMI — equal visual weight to the total */}
+            {/* EMI: equal visual weight to the total */}
             <div className="p-6 md:p-8">
               <div className="text-sm font-medium text-[var(--color-dim)] mb-2">Pay in instalments, as low as</div>
               <div className="flex items-baseline gap-2 mb-1">
@@ -110,7 +110,7 @@ export default function FinancingBlock({ program }) {
               {financing.partners.map((name) => (
                 <span
                   key={name}
-                  className="inline-flex items-center gap-2 px-3.5 py-2 rounded-lg border bg-[var(--color-tint)] border-[var(--color-rule)] text-[var(--color-navy)] text-sm font-semibold"
+                  className="btn btn-secondary text-[var(--color-navy)] text-sm"
                 >
                   {name}
                 </span>
@@ -124,18 +124,18 @@ export default function FinancingBlock({ program }) {
                 <CheckoutButton
                   product={program.slug}
                   label={`Pay ${formatINR(withGst(program.price).gross)}`}
-                  className="inline-flex justify-center items-center gap-2 px-6 py-3 min-h-[44px] rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold text-sm transition-[filter]"
+                  className="btn btn-primary text-sm"
                 />
               )}
               <a
                 href="#enquire"
-                className="inline-flex justify-center items-center px-6 py-3 min-h-[44px] rounded-xl bg-[var(--color-tint)] hover:bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] font-semibold text-sm transition-colors"
+                className="btn btn-secondary text-[var(--color-navy)] text-sm"
               >
                 Apply now
               </a>
               <Link
                 href="/bookings"
-                className="inline-flex justify-center items-center px-6 py-3 min-h-[44px] rounded-xl bg-[var(--color-tint)] hover:bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] font-semibold text-sm transition-colors"
+                className="btn btn-secondary text-[var(--color-navy)] text-sm"
               >
                 Check your eligibility
               </Link>

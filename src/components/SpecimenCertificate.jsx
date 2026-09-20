@@ -14,7 +14,7 @@ import { SPECIMEN_ID } from '../data/certificateRegister';
 //   3. Claim to be a degree or a nationally-framed qualification. The footer
 //      text says so explicitly.
 //
-// Design is not signed off by the founder yet — see TODO_FROM_FOUNDER.md.
+// Design is not signed off by the founder yet. See TODO_FROM_FOUNDER.md.
 export default function SpecimenCertificate({ programmeTitle = 'Global Career Launch' }) {
   return (
     <div
@@ -70,7 +70,7 @@ export default function SpecimenCertificate({ programmeTitle = 'Global Career La
           </div>
           <div className="min-w-0">
             <dt className="text-[11px] uppercase tracking-wider text-[var(--color-dim)] mb-1">Date of issue</dt>
-            <dd className="text-sm font-semibold text-[var(--color-navy)]">&mdash;</dd>
+            <dd className="text-sm font-semibold text-[var(--color-navy)]">: </dd>
           </div>
           <div className="min-w-0 col-span-2 sm:col-span-1">
             <dt className="text-[11px] uppercase tracking-wider text-[var(--color-dim)] mb-1">Verify at</dt>

@@ -43,13 +43,13 @@ export default function ScholarshipsPage() {
                     </p>
 
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-                        <Link href="#finder" className="relative overflow-hidden px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-e-2 hover:shadow-stone-700/30 flex items-center">
+                        <Link href="#finder" className="btn btn-primary btn-lg relative overflow-hidden flex">
                             <span className="relative z-10 flex items-center">
                                 Check Your Eligibility <ArrowRight size={18} className="ml-2" />
                             </span>
                             <BorderBeam size={130} duration={9} colorFrom="#22d3ee" colorTo="#ffffff" />
                         </Link>
-                        <Link href="#finder" className="px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all border border-[var(--color-axelis)] flex items-center">
+                        <Link href="#finder" className="btn btn-primary btn-lg flex">
                             Find Applicable Programs
                         </Link>
                     </div>
@@ -205,7 +205,7 @@ export default function ScholarshipsPage() {
                     <p className="text-lg text-[var(--color-dim)] mb-8 max-w-2xl mx-auto">
                         Don't let financial constraints stop your study abroad dream. Our Zero Consultation Fee Student Plan covers dedicated scholarship and financial aid assistance.
                     </p>
-                    <Link href="/products" className="inline-flex items-center px-8 py-4 bg-[var(--color-axelis)] hover:bg-[var(--color-navy)] text-white font-bold rounded-xl transition-all shadow-e-2">
+                    <Link href="/products" className="btn btn-primary btn-lg">
                         Explore Our Student Plans <ArrowRight size={20} className="ml-2" />
                     </Link>
                 </div>

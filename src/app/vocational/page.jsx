@@ -60,7 +60,7 @@ export default function VocationalPage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link
               href="#programmes"
-              className="inline-flex justify-center items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter]"
+              className="btn btn-primary btn-lg"
             >
               See both routes <ArrowRight size={18} aria-hidden="true" />
             </Link>
@@ -217,7 +217,7 @@ export default function VocationalPage() {
               </tbody>
             </table>
           </div>
-          <div className="mt-5 flex items-start gap-2.5 rounded-xl border border-[var(--color-rule)] bg-[var(--color-tint)] px-4 py-3">
+          <div className="btn btn-secondary mt-5 flex">
             <ShieldCheck size={15} aria-hidden="true" className="text-[var(--color-axelis)] shrink-0 mt-0.5" />
             <p className="text-sm text-[var(--color-navy)]/90 leading-relaxed">
               {vocationalFees.d2c.successTrigger} If you never receive a visa, the success fee never
@@ -305,7 +305,7 @@ export default function VocationalPage() {
           </p>
           <Link
             href="/bookings"
-            className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter]"
+            className="btn btn-primary btn-lg"
           >
             Book a free assessment call <ArrowRight size={18} aria-hidden="true" />
           </Link>

@@ -10,7 +10,7 @@ import { cn } from '../../lib/utils';
  * reveal them through AnimatePresence with `hidden`/`visible` variants. Every
  * heading that used it therefore depended on JavaScript finishing before its
  * own words became visible, and when the stagger stalled the heading was not
- * "late" — it was gone. The /faq H1 shipped that way: correct colour, correct
+ * "late": it was gone. The /faq H1 shipped that way: correct colour, correct
  * position, opacity 0.
  *
  * A headline is the one thing on a page that must never wait on a runtime. The
@@ -22,7 +22,7 @@ export function TextEffect({
   as = 'p',
   className,
   segmentWrapperClassName,
-  // Accepted and ignored — kept so the 16 existing call sites keep compiling.
+  // Accepted and ignored: kept so the 16 existing call sites keep compiling.
   per, variants, preset, delay, trigger, onAnimationComplete, // eslint-disable-line no-unused-vars
   ...rest
 }) {

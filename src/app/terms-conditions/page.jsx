@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { refundPolicy, programs, formatINR } from '../../data/certificationPrograms';
 import { policyMeta } from '../../data/cancellationRefundPolicy';
 
-// DRAFT — needs legal review before it is relied on.
+// DRAFT: needs legal review before it is relied on.
 //
 // Deliberately does NOT restate any protected number. The cooling-off window,
 // the administrative fee, the guarantee percentages and the response SLAs all
@@ -12,7 +12,7 @@ import { policyMeta } from '../../data/cancellationRefundPolicy';
 export const metadata = {
   title: 'Terms of Service',
   description:
-    'Terms of Service for Axelis Overseas Education Pvt Ltd — enrolment, fees and EMI, what we undertake, what the student undertakes, outcome guarantees, and limits of liability.',
+    'Terms of Service for Axelis Overseas Education Pvt Ltd: enrolment, fees and EMI, what we undertake, what the student undertakes, outcome guarantees, and limits of liability.',
   alternates: { canonical: 'https://overseeducation.com/terms-conditions' },
   robots: { index: true, follow: true },
 };
@@ -69,8 +69,8 @@ export default function TermsConditionsPage() {
 
         <Section number={2} title="What we sell, and what we do not">
           <p>
-            We sell certification programmes &mdash; currently{' '}
-            {programs.map((p) => p.title).join(', ')} &mdash; priced from {floor} to {ceiling}.
+            We sell certification programmes: currently{' '}
+            {programs.map((p) => p.title).join(', ')}: priced from {floor} to {ceiling}.
             Each programme delivers coaching, review and a verifiable certificate, as set out on
             its own page.
           </p>
@@ -86,7 +86,7 @@ export default function TermsConditionsPage() {
         <Section number={3} title="Enrolment">
           <p>
             An enrolment is formed when we confirm it in writing and payment (or financing) is
-            confirmed &mdash; not when a form is submitted or an enquiry made. We may decline an
+            confirmed: not when a form is submitted or an enquiry made. We may decline an
             enrolment, and will say so and return any amount collected in full where we do.
           </p>
           <p>
@@ -96,7 +96,7 @@ export default function TermsConditionsPage() {
           <p>
             Information you give us at enrolment must be accurate. Programmes are placed against
             your stated academic record and budget, and a material inaccuracy may make a
-            programme unsuitable &mdash; a cost we cannot absorb on your behalf.
+            programme unsuitable: a cost we cannot absorb on your behalf.
           </p>
         </Section>
 
@@ -111,7 +111,7 @@ export default function TermsConditionsPage() {
             EMI is offered through our financing partners, who set their own eligibility rules,
             interest and tenure. Your EMI contract is with that partner, not with Axelis, and its
             terms bind you independently of these. Where an enrolment is EMI-financed, refunds
-            are routed to the financing partner rather than to you &mdash; the mechanics are in
+            are routed to the financing partner rather than to you, the mechanics are in
             the{' '}
             <Link href={refundPolicy.href} className="text-[var(--color-navy)] underline underline-offset-4">
               Cancellation &amp; Refund Policy
@@ -119,8 +119,8 @@ export default function TermsConditionsPage() {
             .
           </p>
           <p>
-            Third-party costs &mdash; exam registrations, embassy and visa fees, university
-            application fees &mdash; are not included in any programme fee unless the programme
+            Third-party costs: exam registrations, embassy and visa fees, university
+            application fees: are not included in any programme fee unless the programme
             page says so.
           </p>
         </Section>
@@ -156,7 +156,7 @@ export default function TermsConditionsPage() {
           <ul className="list-disc pl-5 space-y-2">
             <li>attend scheduled sessions and submit work by the deadlines your counsellor sets;</li>
             <li>
-              provide documents, drafts and decisions when asked &mdash; university and visa
+              provide documents, drafts and decisions when asked, university and visa
               deadlines are external and we cannot extend them;
             </li>
             <li>
@@ -188,8 +188,8 @@ export default function TermsConditionsPage() {
           <p>
             Course materials, recordings, frameworks and templates remain ours and are licensed
             to you personally for the duration of your programme. You may not record, copy,
-            resell, publish or share them, including with other students. Work you write &mdash;
-            your essays, statements and applications &mdash; remains yours.
+            resell, publish or share them, including with other students. Work you write
+            your essays, statements and applications, remains yours.
           </p>
         </Section>
 
@@ -258,7 +258,7 @@ export default function TermsConditionsPage() {
           <p>
             These terms are governed by the laws of India. Subject to any consumer-forum right
             you have to bring a claim where you reside, the courts at Bilaspur, Chhattisgarh
-            &mdash; the seat of our registered office &mdash; have jurisdiction.
+the seat of our registered office have jurisdiction.
           </p>
         </Section>
 

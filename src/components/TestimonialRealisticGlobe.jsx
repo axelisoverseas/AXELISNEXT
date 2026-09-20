@@ -31,7 +31,7 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
   };
 
   // Function to focus on a country (called imperatively via ref).
-  // Do NOT call onCountryFocus here — the parent already triggered this,
+  // Do NOT call onCountryFocus here, the parent already triggered this,
   // calling back would create an infinite loop. The pin click handler
   // dispatches its own event for parent consumption.
   const focusOnCountry = (country) => {

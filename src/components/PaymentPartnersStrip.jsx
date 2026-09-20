@@ -4,7 +4,7 @@ import { financing } from '../data/certificationPrograms';
 
 // Typographic wordmarks rather than logo files: we do not hold redistribution
 // rights to the partner brand assets. Only gateways that are actually live
-// appear here — a partner is listed when the integration is real, not before.
+// appear here: a partner is listed when the integration is real, not before.
 const GATEWAYS = [
   { name: 'Cashfree', note: 'Live' },
 ];
@@ -26,7 +26,7 @@ export default function PaymentPartnersStrip() {
           {GATEWAYS.map((g) => (
             <div
               key={g.name}
-              className="inline-flex items-center gap-2.5 px-5 py-3 rounded-xl bg-[var(--color-tint)] border border-[var(--color-rule)]"
+              className="btn btn-secondary"
             >
               <span className="text-[var(--color-navy)] font-bold tracking-tight">{g.name}</span>
               <span className="text-[9px] font-bold px-1.5 py-0.5 rounded bg-emerald-500/15 border border-emerald-400/30 text-emerald-300">

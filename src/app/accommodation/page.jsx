@@ -15,7 +15,7 @@ const cities = [
     { label: 'New York',   loc: 'new york',    country: 'United States',  flag: '🇺🇸', from: '$2,100/mo',img: 'https://images.unsplash.com/photo-1485871981521-5b1fd3805eee?w=800&q=80&auto=format&fit=crop' },
 ];
 
-// Axelis × amber partner marketplace — outbound housing links go here.
+// Axelis × amber partner marketplace, outbound housing links go here.
 const AMBER_PARTNER_URL = 'https://amberstudent.com/partners/axelis-overseas-1721030776';
 
 export default function AccommodationPage() {
@@ -35,14 +35,14 @@ export default function AccommodationPage() {
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(18,67,110,0.62)_0%,transparent_75%)]" />
 
                 <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    {/* In partnership with — amber's wordmark, lowercase per their brand rules */}
+                    {/* In partnership with: amber's wordmark, lowercase per their brand rules */}
                     <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-white/10 backdrop-blur border border-white/15 mb-8">
                         <span className="text-[10px] text-white font-bold">In partnership with</span>
                         <a
                             href={AMBER_PARTNER_URL}
                             target="_blank"
                             rel="noopener noreferrer"
-                            aria-label="amber student accommodation — Axelis Overseas partner profile (opens in new tab)"
+                            aria-label="amber student accommodation. Axelis Overseas partner profile (opens in new tab)"
                             className="inline-flex items-center"
                         >
                             <img
@@ -66,7 +66,7 @@ export default function AccommodationPage() {
                     <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
                         <Link
                             href="#listings"
-                            className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
+                            className="btn btn-primary btn-lg"
                         >
                             Browse live listings
                             <ArrowRight className="ml-2" size={18} />
@@ -109,7 +109,7 @@ export default function AccommodationPage() {
                 </div>
             </section>
 
-            {/* amber marketplace CTA — static panel linking to our partner marketplace */}
+            {/* amber marketplace CTA: static panel linking to our partner marketplace */}
  <section id="listings" className="sec scroll-mt-24">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="relative overflow-hidden rounded-3xl border-2 border-[var(--color-rule)] bg-white shadow-e-3">
@@ -124,14 +124,14 @@ export default function AccommodationPage() {
                                 Browse verified student homes on amber
                             </TextEffectInView>
                             <p className="text-[var(--color-navy)]/85 max-w-xl mb-8">
-                                Explore bills-inclusive, verified rooms across 250+ student cities on our amber marketplace &mdash; or pick a city below and a counsellor will shortlist three contract-checked, budget-fit options for you, free.
+                                Explore bills-inclusive, verified rooms across 250+ student cities on our amber marketplace, or pick a city below and a counsellor will shortlist three contract-checked, budget-fit options for you, free.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <a
                                     href={AMBER_PARTNER_URL}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
+                                    className="btn btn-primary btn-lg"
                                 >
                                     Open amber marketplace <ExternalLink size={16} className="ml-2" />
                                 </a>
@@ -147,7 +147,7 @@ export default function AccommodationPage() {
                 </div>
             </section>
 
-            {/* Popular Cities photo grid — visual destination teasers */}
+            {/* Popular Cities photo grid, visual destination teasers */}
  <section className="sec bg-[var(--storm-deep)]/40 border-y border-white/15">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12 max-w-2xl mx-auto">
@@ -207,7 +207,7 @@ export default function AccommodationPage() {
                             Accommodation options
                         </TextEffectInView>
                         <p className="text-lg text-[var(--color-navy)]/85 max-w-2xl mx-auto">
-                            Two main routes &mdash; both legitimate, both supported by our team for contract review and arrival logistics.
+                            Two main routes: both legitimate, both supported by our team for contract review and arrival logistics.
                         </p>
                     </div>
 
@@ -228,7 +228,7 @@ export default function AccommodationPage() {
                                 <div className="w-16 h-16 bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] rounded-2xl flex items-center justify-center text-white" aria-hidden="true"><Building2 size={30} strokeWidth={2} /></div>
                                 <div>
                                     <h3 className="text-2xl font-bold text-[var(--color-navy)]">Purpose Built (PBSA)</h3>
-                                    <span className="text-sm font-semibold text-[var(--color-axelis)] bg-[var(--color-tint)] px-3 py-1 rounded-full border border-[var(--color-rule)]/30 inline-block mt-1">£150 &ndash; £350 / week</span>
+                                    <span className="btn btn-secondary text-sm text-[var(--color-axelis)] inline-block mt-1">£150 - £350 / week</span>
                                 </div>
                             </div>
                             <p className="text-[var(--color-navy)]/85 mb-6">Modern buildings designed specifically for students, with facilities and an active social life built in.</p>
@@ -255,10 +255,10 @@ export default function AccommodationPage() {
                                 <div className="w-16 h-16 bg-gradient-to-br from-[var(--dawn-glow)] to-amber-500 rounded-2xl flex items-center justify-center text-[var(--color-navy)]" aria-hidden="true"><Home size={30} strokeWidth={2} /></div>
                                 <div>
                                     <h3 className="text-2xl font-bold text-[var(--color-navy)]">Private Apartments</h3>
-                                    <span className="text-sm font-semibold text-[var(--color-axelis)] bg-[var(--dawn-glow)]/10 px-3 py-1 rounded-full border border-[var(--color-axelis)]/30 inline-block mt-1">£180 &ndash; £400+ / week</span>
+                                    <span className="text-sm font-semibold text-[var(--color-axelis)] bg-[var(--dawn-glow)]/10 px-3 py-1 rounded-full border border-[var(--color-axelis)]/30 inline-block mt-1">£180 - £400+ / week</span>
                                 </div>
                             </div>
-                            <p className="text-[var(--color-navy)]/85 mb-6">Independent living &mdash; full apartments or houses for students who want privacy or a flatmate setup with friends.</p>
+                            <p className="text-[var(--color-navy)]/85 mb-6">Independent living: full apartments or houses for students who want privacy or a flatmate setup with friends.</p>
                             <ul className="space-y-3">
                                 <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--color-axelis)] shrink-0" /><span className="text-[var(--color-navy)]">More privacy and independence</span></li>
                                 <li className="flex items-center gap-3"><CheckCircle size={18} className="text-[var(--color-axelis)] shrink-0" /><span className="text-[var(--color-navy)]">Choose your own location and flatmates</span></li>
@@ -274,11 +274,11 @@ export default function AccommodationPage() {
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-5">Not sure where to start?</h2>
                     <p className="text-lg text-[var(--color-navy)]/85 mb-8 max-w-2xl mx-auto">
-                        Send us your offer letter and city &mdash; a counsellor will shortlist three amber options, contract-checked and budget-fit, within 48 hours. Free.
+                        Send us your offer letter and city: a counsellor will shortlist three amber options, contract-checked and budget-fit, within 48 hours. Free.
                     </p>
                     <Link
                         href="/bookings"
-                        className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
+                        className="btn btn-primary btn-lg"
                     >
                         Talk to a housing counsellor
                         <ArrowRight className="ml-2" size={20} />

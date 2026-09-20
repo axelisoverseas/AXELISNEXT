@@ -192,7 +192,7 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
         </div>
       )}
 
-      {/* How to scan — above the picker, so it is read before files are chosen */}
+      {/* How to scan: above the picker, so it is read before files are chosen */}
       <details className="mb-4 rounded-lg border border-[var(--color-rule)] bg-white">
         <summary className="cursor-pointer px-3 py-2.5 text-xs font-semibold text-[var(--color-navy)] marker:text-[var(--color-dim)]">
           How to scan so nothing gets sent back
@@ -227,7 +227,7 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
         />
         <label
           htmlFor={`files-${serviceKey}`}
-          className="inline-flex cursor-pointer items-center gap-2 rounded-lg bg-white px-4 py-2.5 text-sm font-semibold text-[var(--color-navy)] transition-colors hover:bg-white"
+          className="btn btn-on-dark cursor-pointer text-sm text-[var(--color-navy)]"
         >
           <Upload size={15} aria-hidden="true" />
           Choose files
@@ -343,7 +343,7 @@ export default function DocumentUpload({ serviceKey, amount = null, documentCoun
       <button
         type="submit"
         disabled={busy || overLimit}
-        className="mt-4 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] px-6 py-3 text-sm font-bold text-[var(--color-navy)] transition-[filter] hover:brightness-110 disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
+        className="btn btn-primary mt-4 w-full text-sm text-[var(--color-navy)] disabled:opacity-60 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
       >
         {busy ? (
           <>

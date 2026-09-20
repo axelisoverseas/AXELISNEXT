@@ -17,7 +17,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Smooth continuous auto-rotation — resumes automatically when not paused
+  // Smooth continuous auto-rotation: resumes automatically when not paused
   useEffect(() => {
     if (!isPaused && teamMembers?.length > 0) {
       intervalRef.current = setInterval(() => {
@@ -35,7 +35,7 @@ const TeamGlobeCarousel = ({ teamMembers }) => {
     setCurrentIndex((prev) => (prev + delta + teamMembers.length) % teamMembers.length);
   };
 
-  // Touch swipe handlers — briefly pause auto-rotate on swipe, then resume
+  // Touch swipe handlers: briefly pause auto-rotate on swipe, then resume
   const handleTouchStart = useCallback((e) => {
     touchStartX.current = e.touches[0].clientX;
   }, []);

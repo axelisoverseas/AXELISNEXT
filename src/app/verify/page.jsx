@@ -47,7 +47,7 @@ export default function VerifyPage() {
             <p>
               {registerStats.issuedCount === 0 ? (
                 <>
-                  No certificates have been issued yet &mdash; the first Axelis cohorts are still
+                  No certificates have been issued yet, the first Axelis cohorts are still
                   running. The register is live now so that every certificate is checkable from
                   the day it is issued, rather than the claim outrunning the capability.
                 </>

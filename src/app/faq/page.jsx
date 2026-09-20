@@ -50,7 +50,7 @@ const FAQPage = () => {
           <motion.div
             initial={false}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-[var(--color-axelis)]/10 border border-[var(--color-axelis)]/30 text-white text-sm font-bold mb-8"
+            className="btn btn-primary space-x-2 text-sm mb-8"
           >
             <HelpCircle size={16} />
             <span>KNOWLEDGE HUB</span>
@@ -225,7 +225,7 @@ const FAQPage = () => {
                       href="https://wa.me/919098522711?text=Hey%2C%20I%20have%20questions%20regarding%20studying%20abroad"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="px-8 py-4 bg-[var(--color-axelis)]/20 border border-[var(--color-rule)] backdrop-blur-md text-white text-lg font-bold rounded-2xl hover:bg-[var(--color-navy)]/30 transition-all flex items-center space-x-3"
+                      className="btn btn-primary btn-lg backdrop-blur-md text-lg flex space-x-3"
                     >
                       <MessageCircle size={24} />
                       <span>WhatsApp Experts</span>

@@ -9,7 +9,7 @@ export const metadata = {
 };
 
 // Where Cashfree returns the payer after checkout. The order id in the query
-// string is untrusted — it says which order to ask about, nothing more. The
+// string is untrusted: it says which order to ask about, nothing more. The
 // verdict is read from Cashfree server-side, never from the URL.
 export default function PaymentStatusPage() {
   return (
@@ -23,7 +23,7 @@ export default function PaymentStatusPage() {
 
         <div className="mt-10 pt-8 border-t border-[var(--color-rule)] text-sm text-[var(--color-dim)] leading-relaxed">
           <p>
-            Any question about a payment &mdash; write to{' '}
+            Any question about a payment. Write to{' '}
             <a href={`mailto:${refundPolicy.supportEmail}`} className="text-[var(--color-navy)] underline underline-offset-4">
               {refundPolicy.supportEmail}
             </a>{' '}

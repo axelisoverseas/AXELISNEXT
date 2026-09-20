@@ -95,7 +95,7 @@ const StudyAbroadGuides = () => {
                 <img
                   src={guide.thumbnailHigh || guide.thumbnail}
                   onError={(e) => {
-                    // maxresdefault can 404 — fall back to hqdefault
+                    // maxresdefault can 404: fall back to hqdefault
                     if (guide.thumbnail && e.currentTarget.src !== guide.thumbnail) {
                       e.currentTarget.src = guide.thumbnail;
                     }
@@ -172,7 +172,7 @@ const StudyAbroadGuides = () => {
           <motion.span
             initial={false}
             animate={{ opacity: 1, y: 0 }}
-            className="inline-block px-4 py-1.5 bg-[var(--color-tint)] border border-[var(--color-rule)]/20 text-[var(--color-axelis)] text-sm font-bold rounded-full mb-6"
+            className="btn btn-secondary inline-block text-[var(--color-axelis)] text-sm mb-6"
           >
             STUDY ABROAD GUIDES
           </motion.span>
@@ -188,7 +188,7 @@ const StudyAbroadGuides = () => {
             animate={{ opacity: 1, y: 0 }}
             className="text-xl text-[var(--color-navy)] max-w-3xl mx-auto"
           >
-            Fresh videos straight from our YouTube channel — application process, visa
+            Fresh videos straight from our YouTube channel, application process, visa
             requirements, scholarship playbooks, and country guides.
           </motion.p>
         </div>

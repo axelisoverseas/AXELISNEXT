@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import { Star, X, ExternalLink } from 'lucide-react';
 import { googleReviewsMeta, verifiedReviews, hasVerifiedReviews, getGoogleMapsHref } from '../data/googleReviews';
 
-// Google "G" logomark — inline SVG so it renders without an external asset.
+// Google "G" logomark: inline SVG so it renders without an external asset.
 function GoogleG({ size = 18 }) {
     return (
         <svg viewBox="0 0 48 48" width={size} height={size} aria-hidden="true">
@@ -61,7 +61,7 @@ export default function GoogleReviewsFloat({ position = 'bottom-right' }) {
         };
     }, [open]);
 
-    // No verified reviews yet — render nothing rather than a placeholder rating.
+    // No verified reviews yet, render nothing rather than a placeholder rating.
     if (!hasVerifiedReviews) return null;
 
     const positionClass = position === 'bottom-left'

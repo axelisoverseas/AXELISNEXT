@@ -29,7 +29,7 @@ const howItWorks = [
   {
     Icon: FileText,
     title: 'Sign + pay online',
-    body: 'Refundable deposit to start. Every fee that can ever apply is stated on the plan card before you pay — no hidden agency markup later. Receipt arrives in your inbox the same day.',
+    body: 'Refundable deposit to start. Every fee that can ever apply is stated on the plan card before you pay, no hidden agency markup later. Receipt arrives in your inbox the same day.',
   },
   {
     Icon: GraduationCap,
@@ -50,7 +50,7 @@ function ProductsContent() {
     // LEGACY: these two Razorpay payment pages are still live and still
     // take money. The on-page CTA is Cashfree now, but old links in ads and
     // email still land here, so the redirect stays until Cashfree has taken
-    // a real payment. Remove both branches then — not before.
+    // a real payment. Remove both branches then, not before.
     const redirect = searchParams.get('redirect');
     if (redirect === 'zcf') {
       window.location.href = 'https://pages.razorpay.com/pl_Rk1qpiuEJifDx1/view';
@@ -96,7 +96,7 @@ function ProductsContent() {
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
             <Link
               href="#plans"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
+              className="btn btn-primary btn-lg"
             >
               Compare both plans
               <ArrowRight className="ml-2" size={20} />
@@ -125,7 +125,7 @@ function ProductsContent() {
         </motion.div>
       </section>
 
-      {/* TRUST BAND — DPIIT / British Council / AIRC */}
+      {/* TRUST BAND. DPIIT / British Council / AIRC */}
  <section className="relative py-10 border-y border-[var(--color-rule)]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-6">
@@ -142,7 +142,7 @@ function ProductsContent() {
         </div>
       </section>
 
-      {/* PLANS — two charters: GAC and EPC */}
+      {/* PLANS: two charters: GAC and EPC */}
  <section id="plans" className="relative sec scroll-mt-24">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px]" />
@@ -152,7 +152,7 @@ function ProductsContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
-              Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">One destination &mdash; yours.</span>
+              Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">One destination, yours.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-lg">
               Pick the route that matches where you want to study. Both come with a refundable deposit and a dedicated counsellor. Fees and refund conditions differ, and are set out in full on each card below.
@@ -160,12 +160,12 @@ function ProductsContent() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
-            {/* GAC — Global Admissions Charter */}
+            {/* GAC. Global Admissions Charter */}
             <article
               className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--color-rule)]/30 shadow-e-lift bg-white"
               aria-labelledby="plan-gac-title"
             >
-              {/* Top brand-band — pure CSS, no image */}
+              {/* Top brand-band: pure CSS, no image */}
               <div
                 aria-hidden="true"
                 className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[var(--storm-electric)] to-transparent"
@@ -179,7 +179,7 @@ function ProductsContent() {
                 className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[var(--color-tint)] blur-3xl pointer-events-none"
               />
               <div className="relative">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-tint)] border border-[var(--color-rule)]/30 text-[var(--color-axelis)] text-[10px] font-bold mb-5">
+                <span className="btn btn-secondary text-[var(--color-axelis)] text-[10px] mb-5">
                   Most popular
                 </span>
                 <h3 id="plan-gac-title" className="text-3xl md:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight mb-2">
@@ -210,7 +210,7 @@ function ProductsContent() {
                   ].map((c) => (
                     <span
                       key={c.n}
-                      className="inline-flex items-center gap-1 px-2 py-1 rounded-full bg-[var(--color-tint)] border border-[var(--color-rule)]/25 text-[var(--color-navy)] text-[11px] font-semibold"
+                      className="btn btn-secondary text-[var(--color-navy)] text-[11px]"
                     >
                       <span aria-hidden="true">{c.f}</span>
                       <span>{c.n}</span>
@@ -224,7 +224,7 @@ function ProductsContent() {
                     <span className="px-2 py-0.5 rounded-md bg-rose-500/20 border border-rose-500/30 text-rose-300 text-[10px] font-bold">50% OFF</span>
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-2">₹9,999</div>
-                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Onboarding deposit &mdash; <span className="text-emerald-300 font-semibold">100% refundable</span></p>
+                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Onboarding deposit, <span className="text-emerald-300 font-semibold">100% refundable</span></p>
                   <p className="text-[var(--color-navy)]/90 text-xs mt-1.5 leading-relaxed">
                     Refunded in full once your visa is granted, you have arrived, and you have paid your
                     university tuition in full, so a placed student pays Axelis nothing. Also refunded
@@ -251,8 +251,8 @@ function ProductsContent() {
                 <div className="mt-auto">
                   <CheckoutButton
                     product="global-admissions-charter"
-                    label="Enrol in Global Admissions Charter (GAC) — ₹9,999"
-                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    label="Enrol in Global Admissions Charter (GAC), ₹9,999"
+                    className="btn btn-primary btn-lg mt-auto w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   />
                 </div>
                 <p className="text-xs text-[var(--color-dim)] mt-3 text-center flex items-center justify-center gap-1.5">
@@ -261,12 +261,12 @@ function ProductsContent() {
               </div>
             </article>
 
-            {/* EPC — Europe Public Charter */}
+            {/* EPC. Europe Public Charter */}
             <article
               className="relative p-8 md:p-10 flex flex-col h-full overflow-hidden group rounded-[2rem] border-2 border-[var(--color-axelis)]/30 shadow-e-lift bg-white"
               aria-labelledby="plan-epc-title"
             >
-              {/* Top brand-band — pure CSS, no image */}
+              {/* Top brand-band: pure CSS, no image */}
               <div
                 aria-hidden="true"
                 className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-transparent via-[var(--dawn-glow)] to-transparent"
@@ -326,7 +326,7 @@ function ProductsContent() {
                     <span className="px-2 py-0.5 rounded-md bg-[var(--dawn-glow)]/20 border border-[var(--color-axelis)]/30 text-[var(--color-axelis)] text-[10px] font-bold">50% OFF</span>
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-2">₹19,999</div>
-                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Service fee &mdash; <span className="text-emerald-300 font-semibold">refundable</span> if zero offers received.</p>
+                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Service fee, <span className="text-emerald-300 font-semibold">refundable</span> if zero offers received.</p>
                   <p className="text-[var(--color-navy)]/90 text-xs mt-1.5 leading-relaxed">
                     Plus a <span className="text-[var(--color-axelis)] font-semibold">₹1,80,000 Success Fee</span>, payable only
                     if and when you accept an offer from a tuition-free public university. Total ₹1,99,999.
@@ -353,8 +353,8 @@ function ProductsContent() {
                 <div className="mt-auto">
                   <CheckoutButton
                     product="europe-public-charter"
-                    label="Enrol in Europe Public Charter (EPC) — ₹19,999"
-                    className="mt-auto inline-flex w-full items-center justify-center gap-2 px-6 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                    label="Enrol in Europe Public Charter (EPC), ₹19,999"
+                    className="btn btn-primary btn-lg mt-auto w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
                   />
                 </div>
                 <p className="text-xs text-[var(--color-dim)] mt-3 text-center flex items-center justify-center gap-1.5">
@@ -366,7 +366,7 @@ function ProductsContent() {
         </div>
       </section>
 
-      {/* COMPARISON TABLE — GAC vs EPC */}
+      {/* COMPARISON TABLE. GAC vs EPC */}
  <section id="comparison" className="relative sec-sm scroll-mt-24">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
@@ -374,7 +374,7 @@ function ProductsContent() {
               Global Admissions Charter (GAC) vs Europe Public Charter (EPC) <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">at a glance</span>
             </h2>
             <p className="text-[var(--color-navy)]/85">
-              Same human team, same honest counselling &mdash; built for two different student profiles.
+              Same human team, same honest counselling, built for two different student profiles.
             </p>
           </div>
 
@@ -391,13 +391,13 @@ function ProductsContent() {
                 {[
                   ['Best for', 'Paid global universities', 'Tuition-free public Europe'],
                   ['Countries covered', '29+ incl. UK, USA, Canada, Australia, Ireland, NZ', 'Germany, France, Norway, Sweden, Finland, Italy, Spain, Poland & more'],
-                  ['Tuition cost', 'University-set fees (₹8–35L/year typical)', 'Free or near-free at public universities'],
+                  ['Tuition cost', 'University-set fees (₹8-35L/year typical)', 'Free or near-free at public universities'],
                   ['Cost of living', 'Higher (UK/US/AU metros)', 'Moderate (most European cities)'],
-                  ['Language requirement', 'IELTS / TOEFL / PTE', 'IELTS + local language (DELF / Goethe A1–A2)'],
+                  ['Language requirement', 'IELTS / TOEFL / PTE', 'IELTS + local language (DELF / Goethe A1-A2)'],
                   ['Axelis fee', '₹9,999 onboarding', '₹19,999 service fee + ₹1,80,000 success fee on accepting an offer (₹1,99,999 total)'],
                   ['Refund policy', 'Refunded in full once visa granted, arrived and tuition paid in full, or if zero offers', 'Service fee refunded if zero offers; success fee refunded on visa refusal not attributable to you'],
-                  ['Application timeline', 'Rolling intakes, plan 6–9 months ahead', 'Strict deadlines, plan 9–12 months ahead'],
-                  ['Post-study work visa', 'UK 2yr, USA 1–3yr OPT, Canada up to 3yr, AU 2–4yr', 'Germany 18mo job seeker, Norway 1yr, Finland 1yr'],
+                  ['Application timeline', 'Rolling intakes, plan 6-9 months ahead', 'Strict deadlines, plan 9-12 months ahead'],
+                  ['Post-study work visa', 'UK 2yr, USA 1-3yr OPT, Canada up to 3yr, AU 2-4yr', 'Germany 18mo job seeker, Norway 1yr, Finland 1yr'],
                   ['Scholarship support', 'Yes, every relevant grant applied for', 'Yes: DAAD, Erasmus+, country-specific'],
                 ].map(([label, gac, epc]) => (
                   <tr key={label} className="border-b border-[var(--color-rule)] last:border-b-0 hover:bg-[var(--color-tint)] transition-colors">
@@ -411,7 +411,7 @@ function ProductsContent() {
           </div>
 
           <p className="text-center text-xs text-[var(--color-dim)] mt-6 max-w-2xl mx-auto">
-            Still unsure which charter fits? The <Link href="/bookings" className="text-[var(--color-axelis)] hover:underline">free first call</Link> ends with a clear recommendation &mdash; sometimes it&apos;s &ldquo;neither, here&apos;s why.&rdquo;
+            Still unsure which charter fits? The <Link href="/bookings" className="text-[var(--color-axelis)] hover:underline">free first call</Link> ends with a clear recommendation, sometimes it&apos;s &ldquo;neither, here&apos;s why.&rdquo;
           </p>
         </div>
       </section>
@@ -421,7 +421,7 @@ function ProductsContent() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
-              How it works &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">four steps, zero surprises.</span>
+              How it works: <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">four steps, zero surprises.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-lg max-w-2xl mx-auto">
               Same process for both plans. Same counsellor through every step.
@@ -446,12 +446,12 @@ function ProductsContent() {
         </div>
       </section>
 
-      {/* REAL PROOF GALLERY — payments + declarations + visas (PII redacted) */}
+      {/* REAL PROOF GALLERY: payments + declarations + visas (PII redacted) */}
  <section className="relative sec">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
-              The receipts &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">real students, real declarations, real visas.</span>
+              The receipts: <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)]">real students, real declarations, real visas.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-lg max-w-3xl mx-auto leading-relaxed">
               Every plan flows through a PCI-DSS compliant gateway. Every ZTF student signs a Zero Tuition Fee declaration before we process anything. Every visa we claim is a real stamp in a real passport. Personal info is blacked out below; the rest is exactly what we have on file.
@@ -575,7 +575,7 @@ function ProductsContent() {
           </div>
 
           <p className="mt-10 text-center text-[var(--color-dim)] text-xs max-w-2xl mx-auto">
-            Personal contact details, account numbers, and government identifiers are blacked out. Anything you want to verify is available on a call &mdash; with the student&apos;s consent.
+            Personal contact details, account numbers, and government identifiers are blacked out. Anything you want to verify is available on a call, with the student&apos;s consent.
           </p>
 
           <div className="mt-8 text-center">
@@ -602,7 +602,7 @@ function ProductsContent() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/bookings"
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
+                className="btn btn-primary btn-lg"
               >
                 Book a free call
                 <ArrowRight className="ml-2" size={20} />

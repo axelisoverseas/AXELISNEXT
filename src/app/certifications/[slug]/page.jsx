@@ -28,7 +28,7 @@ export async function generateMetadata({ params }) {
   if (!program) return { title: 'Programme not found' };
 
   const url = `https://overseeducation.com/certifications/${program.slug}`;
-  const title = `${program.title} — ${formatINR(program.price)} | Axelis Certification`;
+  const title = `${program.title}: ${formatINR(program.price)} | Axelis Certification`;
   // Foundation tickets carry no EMI, so the claim is only appended where true.
   const emi = monthlyEmi(program);
   const emiLine = emi ? ` EMI from ${formatINR(emi)} a month.` : '';
@@ -89,7 +89,7 @@ export default async function ProgramPage({ params }) {
   const withdrawn = isUnlisted(program.slug);
   const accent = accentFor(program.tier);
 
-  // Always drawn from the listed catalogue, so no page — listed or unlisted —
+  // Always drawn from the listed catalogue, so no page, listed or unlisted 
   // ever recommends a withdrawn programme.
   const related = programs
     .filter((p) => p.slug !== program.slug && (p.tier === program.tier || p.family === program.family))
@@ -189,7 +189,7 @@ export default async function ProgramPage({ params }) {
           )}
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-10 items-start">
-            {/* Left — headline + description */}
+            {/* Left: headline + description */}
             <div className="lg:col-span-2">
               <p className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-sm text-[var(--color-dim-dark)] mb-5">
                 <span className="text-white font-semibold">{tier?.name}</span>
@@ -218,7 +218,7 @@ export default async function ProgramPage({ params }) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link
                   href={withdrawn ? '/certifications' : '#enquire'}
-                  className="inline-flex justify-center items-center px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-2"
+                  className="btn btn-primary btn-lg"
                 >
                   {withdrawn ? 'See our current programmes' : 'Enquire about this programme'}
                   <ArrowRight aria-hidden="true" className="ml-2" size={18} />
@@ -232,11 +232,11 @@ export default async function ProgramPage({ params }) {
               </div>
             </div>
 
-            {/* Right rail — quick facts */}
+            {/* Right rail: quick facts */}
             <aside className="lg:col-span-1 lg:sticky lg:top-24">
-              <div className="bg-white border-2 border-white/15 rounded-2xl p-6 shadow-e-3">
+              <div className="bg-white border border-[var(--color-rule)] rounded-2xl p-6 shadow-e-3">
                 <div className="pb-4 mb-2 border-b border-white/15">
-                  <div className="text-xs text-[var(--color-dim-dark)] mb-1">
+                  <div className="text-xs text-[var(--color-dim)] mb-1">
                     {withdrawn ? 'Fee when last offered' : 'Programme fee'}
                   </div>
                   <div className="text-4xl font-extrabold text-white">{formatINR(program.price)}</div>
@@ -365,7 +365,7 @@ export default async function ProgramPage({ params }) {
               <p className="text-[var(--color-navy)]/85 leading-relaxed mb-7">
                 {program.title} has been withdrawn from the Axelis catalogue and is not
                 accepting new students. This page is kept so existing links resolve. If you
-                are already enrolled, nothing changes &mdash; your programme runs as agreed
+                are already enrolled, nothing changes, your programme runs as agreed
                 and your counsellor remains your point of contact. Reach us at{' '}
                 <a
                   href={`mailto:${refundPolicy.supportEmail}`}
@@ -377,7 +377,7 @@ export default async function ProgramPage({ params }) {
               </p>
               <Link
                 href="/certifications"
-                className="inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter]"
+                className="btn btn-primary btn-lg"
               >
                 See our current programmes <ArrowRight aria-hidden="true" size={18} />
               </Link>

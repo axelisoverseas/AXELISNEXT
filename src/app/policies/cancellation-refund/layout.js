@@ -2,12 +2,12 @@ import { refundPolicy } from '../../../data/certificationPrograms';
 
 // Meta per MASTER_WEBSITE_HANDOVER_v3 Section D.
 export const metadata = {
-  title: 'Cancellation & Refund Policy — Axelis Overseas',
+  title: 'Cancellation & Refund Policy. Axelis Overseas',
   description:
     'Axelis Overseas cancellation and refund policy for certification programmes. 7-business-day cooling-off, tiered refunds thereafter, EMI-friendly routing, Concierge outcome guarantees.',
   alternates: { canonical: 'https://overseeducation.com/policies/cancellation-refund' },
   openGraph: {
-    title: 'Cancellation & Refund Policy — Axelis Overseas',
+    title: 'Cancellation & Refund Policy. Axelis Overseas',
     description:
       '7-business-day cooling-off, tiered refunds thereafter, EMI-friendly routing, Concierge outcome guarantees.',
     url: 'https://overseeducation.com/policies/cancellation-refund',

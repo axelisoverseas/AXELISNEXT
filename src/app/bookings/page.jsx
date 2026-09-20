@@ -26,7 +26,7 @@ export default function BookingsPage() {
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-[var(--color-axelis)]">Free Counselling Call</span>
           </h1>
           <p className="text-lg text-white max-w-2xl mx-auto">
-            Pick a time that works for you. Our counsellors will walk you through eligibility, scholarships, and next steps — end-to-end.
+            Pick a time that works for you. Our counsellors will walk you through eligibility, scholarships, and next steps, end-to-end.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-6 text-sm text-white">
             <span className="inline-flex items-center gap-2"><Clock size={16} className="text-white" /> 30-minute session</span>

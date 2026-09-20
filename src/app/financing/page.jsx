@@ -128,7 +128,7 @@ export default function FinancingPage() {
                   </ul>
                   <Link
                     href={r.cta.href}
-                    className="mt-auto inline-flex items-center justify-center gap-2 px-5 py-3 min-h-[44px] rounded-xl bg-[var(--color-tint)] hover:bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
+                    className="btn btn-secondary mt-auto text-[var(--color-navy)] text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
                   >
                     {r.cta.label} <ArrowRight size={15} aria-hidden="true" />
                   </Link>

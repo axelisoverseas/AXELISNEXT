@@ -1,5 +1,5 @@
 // ---------------------------------------------------------------------------
-// VOCATIONAL SKILL PROGRAMMES — Ausbildung and Chancenkarte (Germany)
+// VOCATIONAL SKILL PROGRAMMES. Ausbildung and Chancenkarte (Germany)
 // ---------------------------------------------------------------------------
 //
 // Launched WITHOUT the bundled premium language package. That bundle was

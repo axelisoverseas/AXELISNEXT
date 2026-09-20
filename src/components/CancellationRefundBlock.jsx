@@ -31,7 +31,7 @@ export default function CancellationRefundBlock() {
               </ul>
               <Link
                 href={refundPolicy.href}
-                className="inline-flex items-center gap-2 px-5 py-3 min-h-[44px] rounded-xl bg-[var(--color-tint)] hover:bg-[var(--color-tint)] border border-[var(--color-rule)] text-[var(--color-navy)] font-semibold text-sm transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+                className="btn btn-secondary text-[var(--color-navy)] text-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
               >
                 Read the full Cancellation &amp; Refund Policy <ArrowRight aria-hidden="true" size={15} />
               </Link>

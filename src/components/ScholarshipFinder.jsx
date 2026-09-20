@@ -13,8 +13,8 @@ import { TextEffectInView } from './ui/TextEffect';
 
 const PLAN_OPTIONS = [
   { value: 'ALL', label: 'All plans' },
-  { value: 'ZTF', label: 'ZTF — Zero Tuition Fee' },
-  { value: 'ZCF', label: 'ZCF — Zero Consultation Fee' },
+  { value: 'ZTF', label: 'ZTF. Zero Tuition Fee' },
+  { value: 'ZCF', label: 'ZCF. Zero Consultation Fee' },
 ];
 
 export default function ScholarshipFinder() {
@@ -70,7 +70,7 @@ export default function ScholarshipFinder() {
           </TextEffectInView>
           <p className="text-[var(--color-dim)] max-w-2xl mx-auto">
             Filter by destination, study level, plan (ZTF / ZCF) or scholarship type.
-            Every listing here is applicable to Indian students going abroad — public or private universities.
+            Every listing here is applicable to Indian students going abroad, public or private universities.
           </p>
         </div>
 
@@ -226,7 +226,7 @@ export default function ScholarshipFinder() {
         <div className="mt-12 bg-[var(--color-tint)] rounded-3xl p-10 text-center text-[var(--color-navy)]">
           <h3 className="text-2xl font-bold mb-3">Not sure which scholarship fits your profile?</h3>
           <p className="text-[var(--color-navy)] max-w-xl mx-auto mb-6 text-sm">
-            Our counsellors map scholarships against your academic profile, destination, and plan — free under ZCF and ZTF.
+            Our counsellors map scholarships against your academic profile, destination, and plan, free under ZCF and ZTF.
           </p>
           <a
             href="/bookings"

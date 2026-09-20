@@ -29,7 +29,7 @@ const stagger = {
  * Programmes are listed by tier, with the layout itself encoding commitment:
  * Concierge runs as full-width rows with the photograph, Advanced as halves,
  * Foundation and Core as a compact index. Size carries the information, so
- * the old tier-filter chrome is gone — scrolling shows the same structure the
+ * the old tier-filter chrome is gone, scrolling shows the same structure the
  * filter used to describe.
  */
 function ConciergeRow({ program }) {
@@ -170,7 +170,7 @@ export default function CertificationsPage() {
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="#programmes"
-              className="inline-flex justify-center items-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-[filter] shadow-e-2"
+              className="btn btn-primary btn-lg"
             >
               Browse the programmes
               <ArrowRight aria-hidden="true" className="ml-2" size={20} />

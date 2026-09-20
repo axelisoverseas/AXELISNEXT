@@ -208,7 +208,7 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: var(--font-instrument-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--font-lato), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -379,6 +379,88 @@ body {
   box-shadow: 0 22px 50px -28px rgba(47, 103, 149, 0.45);
 }
 
+
+/* ---- Motion -----------------------------------------------------------
+   One duration and one curve for everything that moves. "Smooth" is not
+   longer animation, it is the same easing everywhere and nothing animating
+   that should not. Layout properties are never transitioned. */
+:root {
+  --ease: cubic-bezier(.4, 0, .2, 1);
+  --t-fast: 120ms;
+  --t: 180ms;
+  --t-slow: 260ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---- Buttons ----------------------------------------------------------
+   The codebase had no button system: 7 radii, 8 padding pairs and fills
+   ranging from brand tokens to bg-yellow-500. These are the four that
+   exist, sized on the radius scale.
+
+   Fill is the hover blue, not the reference's primary: white on #509EE3 is
+   2.86:1 and fails AA, so that value stays a surface and #1C6BB0 carries
+   the label at 5.56:1. */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .5rem;
+  padding: .75rem 1.5rem;
+  border-radius: var(--r-md, 8px);
+  font-weight: 700;
+  font-size: .95rem;
+  line-height: 1.25;
+  min-height: 44px;              /* pointer target floor */
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color var(--t) var(--ease),
+              border-color var(--t) var(--ease),
+              color var(--t) var(--ease),
+              box-shadow var(--t) var(--ease);
+}
+.btn:disabled, .btn[aria-disabled="true"] { opacity: .55; cursor: not-allowed; }
+
+.btn-primary {
+  background: var(--color-axelis);
+  border-color: var(--color-axelis);
+  color: #FFFFFF;
+}
+.btn-primary:hover { background: var(--color-navy); border-color: var(--color-navy); }
+
+.btn-secondary {
+  background: #FFFFFF;
+  border-color: var(--color-dim);
+  color: var(--color-navy);
+}
+.btn-secondary:hover { background: var(--color-tint); border-color: var(--color-navy); }
+
+.btn-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--color-axelis);
+}
+.btn-ghost:hover { background: var(--color-tint); }
+
+/* On a navy band the white button is the primary one. */
+.btn-on-dark {
+  background: #FFFFFF;
+  border-color: #FFFFFF;
+  color: var(--color-navy);
+}
+.btn-on-dark:hover { background: var(--color-tint); border-color: var(--color-tint); }
+
+.btn-lg { padding: .95rem 1.9rem; font-size: 1rem; min-height: 52px; }
+.btn-sm { padding: .5rem 1rem; font-size: .85rem; min-height: 36px; }
+
 /* ---- Section rhythm ---------------------------------------------------
    Vertical space was the least systematic thing left: sections ran from
    48px to 128px with nothing deciding which got what. A reference build
@@ -484,20 +566,23 @@ body {
 }
 
 h1, h2, h3, h4 {
-  font-family: var(--font-instrument-serif), Georgia, "Times New Roman", serif;
-  font-weight: 400;
+  font-family: var(--font-lato), "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
   line-height: 1.1;
+  letter-spacing: normal;
 }
 
 h1 {
-  line-height: 1.06;
-  letter-spacing: -0.01em;
+  /* Their H1 is 60px on 60px — leading 1.0 — with -0.04em tracking. */
+  line-height: 1.0;
+  letter-spacing: -0.04em;
 }
 
 h1 em, h2 em, h3 em, h4 em,
 h1 i, h2 i, h3 i, h4 i {
-  font-style: italic;
-  font-weight: 400;
+  font-style: normal;
+  font-weight: 700;
+  color: var(--color-axelis);
 }
 
 .label, .eyebrow {

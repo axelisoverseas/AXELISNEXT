@@ -13,7 +13,7 @@ const testimonials = allTestimonials.filter(
   (t) => t.image && !t.image.includes('ui-avatars.com')
 );
 
-// Video testimonials — students who recorded a review on camera.
+// Video testimonials: students who recorded a review on camera.
 // `youtubeId` for embedded YouTube Shorts, `src` for self-hosted mp4.
 const videoTestimonials = [
   {
@@ -214,15 +214,15 @@ export default function TestimonialsPage() {
           <div className="grid grid-cols-3 gap-4 max-w-2xl mx-auto">
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">5,000+</div>
-              <div className="text-white/85 text-[10px] md:text-xs mt-1">Students placed</div>
+              <div className="text-[var(--color-dim)] text-[10px] md:text-xs mt-1">Students placed</div>
             </div>
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">29+</div>
-              <div className="text-white/85 text-[10px] md:text-xs mt-1">Countries</div>
+              <div className="text-[var(--color-dim)] text-[10px] md:text-xs mt-1">Countries</div>
             </div>
             <div className="glass-storm py-4">
               <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">100%</div>
-              <div className="text-white/85 text-[10px] md:text-xs mt-1">Visa success</div>
+              <div className="text-[var(--color-dim)] text-[10px] md:text-xs mt-1">Visa success</div>
             </div>
           </div>
         </div>
@@ -273,7 +273,7 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Video reviews — students who filmed a thank-you on camera */}
+      {/* Video reviews: students who filmed a thank-you on camera */}
  <section className="relative sec-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -327,7 +327,7 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Recent placements — visa-received students without a written quote yet */}
+      {/* Recent placements: visa-received students without a written quote yet */}
  <section className="relative sec-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
@@ -364,12 +364,12 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Proof gallery — payments, declarations, visas, transfers (PII redacted) */}
+      {/* Proof gallery: payments, declarations, visas, transfers (PII redacted) */}
  <section className="relative sec">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] mb-4 tracking-tight">
-              The receipts &mdash; <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">real payments, real declarations, real visas.</span>
+              The receipts: <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">real payments, real declarations, real visas.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
               Every plan flows through a PCI-DSS compliant gateway. Every ZTF student signs a Zero Tuition Fee declaration before we process anything. Every visa we claim is a real stamp in a real passport. Personal info is blacked out below; the rest is exactly what we have on file.
@@ -444,7 +444,7 @@ export default function TestimonialsPage() {
             </div>
           </div>
 
-          {/* Group 3: Visas + UPI — featured 2-up */}
+          {/* Group 3: Visas + UPI, featured 2-up */}
           <div className="mb-6">
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px bg-emerald-400/30 flex-1" />
@@ -493,7 +493,7 @@ export default function TestimonialsPage() {
           </div>
 
           <p className="mt-8 text-center text-[var(--color-dim)] text-xs max-w-2xl mx-auto">
-            Names are shown only for students whose stories already feature publicly on this site. Personal contact details, account numbers, and government identifiers are blacked out. Anything you want to verify is available on a call &mdash; with the student&apos;s consent.
+            Names are shown only for students whose stories already feature publicly on this site. Personal contact details, account numbers, and government identifiers are blacked out. Anything you want to verify is available on a call, with the student&apos;s consent.
           </p>
         </div>
       </section>
@@ -509,7 +509,7 @@ export default function TestimonialsPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/bookings"
-              className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] hover:brightness-110 text-white font-bold rounded-xl transition-all shadow-e-2"
+              className="btn btn-primary btn-lg"
             >
               Book a free call
               <ArrowRight className="ml-2" size={20} />
@@ -524,11 +524,11 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Google Reviews — verified 3rd-party proof from Bilaspur branch */}
+      {/* Google Reviews: verified 3rd-party proof from Bilaspur branch */}
       <InstagramSuccessStories />
       <GoogleReviewsSection />
 
-      {/* Floating Google Reviews badge — bottom-left to avoid WhatsApp widget */}
+      {/* Floating Google Reviews badge, bottom-left to avoid WhatsApp widget */}
       <GoogleReviewsFloat position="bottom-left" />
     </div>
   );

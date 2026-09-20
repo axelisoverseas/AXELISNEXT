@@ -7,7 +7,7 @@ import AnimatedSection from './AnimatedSection';
 import { StartJourneyCTA } from './CTAButton';
 import { TextEffectInView } from './ui/TextEffect';
 
-// 4 curated reels — one sliding carousel, unified blue/cyan/slate palette.
+// 4 curated reels: one sliding carousel, unified blue/cyan/slate palette.
 const reels = [
   {
     id: 'ardnav',
@@ -17,7 +17,7 @@ const reels = [
     country: 'Germany',
     tag: 'Success Story',
     caption:
-      'From application to offer letter — how Ardnav secured his admit to a top European university with Axelis.',
+      'From application to offer letter, how Ardnav secured his admit to a top European university with Axelis.',
   },
   {
     id: 'rajat',
@@ -27,7 +27,7 @@ const reels = [
     country: 'Ireland',
     tag: 'MSc Mechanical',
     caption:
-      'Rajat\'s MSc Mechanical Engineering journey to Dublin — offer, visa and housing handled end-to-end.',
+      'Rajat\'s MSc Mechanical Engineering journey to Dublin, offer, visa and housing handled end-to-end.',
   },
   {
     id: 'loan',
@@ -37,7 +37,7 @@ const reels = [
     country: 'India → Global',
     tag: 'Finance',
     caption:
-      'Education loans up to ₹1 Cr with no collateral, across 27+ partner banks — structured in 7 days.',
+      'Education loans up to ₹1 Cr with no collateral, across 27+ partner banks, structured in 7 days.',
   },
   {
     id: 'netherlands',
@@ -47,7 +47,7 @@ const reels = [
     country: 'Netherlands',
     tag: 'Destination',
     caption:
-      'Why the Netherlands is our most-recommended 2025 destination — intake calendar, costs, and work rights.',
+      'Why the Netherlands is our most-recommended 2025 destination: intake calendar, costs, and work rights.',
   },
 ];
 
@@ -75,7 +75,7 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
           ? 'border-[var(--color-rule)] shadow-e-lift scale-100'
           : 'border-slate-200/70 shadow-e-2 scale-[0.94] opacity-80 hover:opacity-100'
       }`}
-      aria-label={`Play reel — ${reel.studentName}`}
+      aria-label={`Play reel: ${reel.studentName}`}
     >
       <video
         ref={videoRef}
@@ -94,7 +94,7 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
 
       {/* Top row */}
       <div className="absolute top-3 left-3 right-3 flex items-center justify-between">
-        <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[var(--color-tint)] backdrop-blur text-[10px] font-bold text-stone-950">
+        <span className="btn btn-secondary backdrop-blur text-[10px] text-stone-950">
           <Instagram size={12} /> {reel.tag}
         </span>
         <span className="px-2 py-1 rounded-md bg-[var(--color-tint)]/70 text-[var(--color-navy)] text-[10px] font-semibold backdrop-blur">
@@ -102,7 +102,7 @@ const ReelCard = ({ reel, isActive, onOpen }) => {
         </span>
       </div>
 
-      {/* Play pulse — only when inactive */}
+      {/* Play pulse: only when inactive */}
       {!isActive && (
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="w-16 h-16 rounded-full bg-[var(--color-tint)] backdrop-blur-md border border-[var(--color-rule)] flex items-center justify-center">
@@ -126,7 +126,7 @@ const InstagramSuccessStories = () => {
   const [selected, setSelected] = useState(null);
   const trackRef = useRef(null);
 
-  // Scrolls only the horizontal carousel track — never the page viewport.
+  // Scrolls only the horizontal carousel track, never the page viewport.
   const scrollTrackTo = (idx) => {
     const track = trackRef.current;
     if (!track) return;
@@ -182,13 +182,13 @@ const InstagramSuccessStories = () => {
             </span>
           </h2>
           <p className="text-[var(--color-navy)] max-w-2xl mx-auto text-base md:text-lg">
-            Four short reels — straight from the counselling floor. Tap any card to play.
+            Four short reels: straight from the counselling floor. Tap any card to play.
           </p>
         </div>
 
         {/* Carousel */}
         <div className="relative">
-          {/* Prev / Next buttons — hidden on small screens, visible md+ */}
+          {/* Prev / Next buttons, hidden on small screens, visible md+ */}
           <button
             onClick={prev}
             aria-label="Previous reel"
@@ -242,7 +242,7 @@ const InstagramSuccessStories = () => {
               Ready to be our next success story?
             </h3>
             <p className="text-[var(--color-navy)] max-w-xl mx-auto mb-7 text-sm md:text-base">
-              Book a free counselling call and we'll map your admit, scholarship and visa plan — end to end.
+              Book a free counselling call and we'll map your admit, scholarship and visa plan, end to end.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
               <StartJourneyCTA text="Start Your Journey" variant="light" />

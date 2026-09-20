@@ -5,7 +5,7 @@ import { cashfreeLinks, withGst, MAX_UNITS } from '../../../../data/cashfreeLink
 //
 // Why this and not a payment link: link_creation_api is not approved on the
 // Axelis merchant account (Cashfree returns PaymentLink_link_creation_api_failed),
-// while the PG order API works. It is also the better shape — the amount is
+// while the PG order API works. It is also the better shape, the amount is
 // computed HERE from the catalogue, so the browser cannot choose what it pays.
 //
 // Cashfree's own hosted checkout collects the card details. Nothing sensitive
