@@ -303,3 +303,24 @@ whatever the previous session left; check `git log` before you start.
 
 Three artifact links exist for approval reference (private to the founder):
 direction A vermilion, **B navy — the approved one**, C dark.
+
+---
+
+## 9 · Brand asset remediation — added 20 September 2026
+
+A live audit of both production domains found eleven brand defects, five of
+them customer- or Google-facing. The findings are in
+`docs/brand/AXELIS_BRAND_ARTEFACT.md` §2, the required end state is §3, and
+the actionable brief for the coding agent is `docs/brand/WEB_AGENT_PROMPT.md`.
+
+Headlines:
+
+- Every favicon slot still serves the old planet-and-rocket mark
+- The OG image is the retired gold-on-navy treatment, is 640×640 against a
+  declared 1200×630, and claims "2000+ Scholarships"
+- `overseeducation.com` declares no logo to Google; `axelisoverseas.com`
+  declares a white one, invisible on Google's white card
+- The guarantee seal is deployed nowhere — 404 on both domains, zero mentions
+- `axelisoverseas.com` is still entirely on the old brand
+
+**Do not start this until `brand/d2c-palette` has both halves merged.**
