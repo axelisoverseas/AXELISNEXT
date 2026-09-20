@@ -48,7 +48,7 @@ export default function HomeCertificationsPreview() {
               decoding="async"
               className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-[#141210] via-[#141210]/90 to-[#141210]/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#12436E] via-[#12436E]/90 to-[#12436E]/30" />
             <div className="relative p-7 md:p-8 flex flex-col justify-end">
               <span className="inline-flex items-center gap-1.5 text-[var(--color-axelis)] text-sm font-semibold mb-2">
                 <Sparkles aria-hidden="true" size={13} /> Our flagship programme

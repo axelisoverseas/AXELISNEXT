@@ -107,7 +107,7 @@ export default function HeroOrbitalBackdrop() {
       <div
         aria-hidden="true"
         className="absolute inset-0"
-        style={{ background: 'radial-gradient(ellipse 55% 45% at 50% 55%, rgba(0,0,0,0.65) 0%, transparent 75%)' }}
+        style={{ background: 'radial-gradient(ellipse 55% 45% at 50% 55%, rgba(18,67,110,0.62) 0%, transparent 75%)' }}
       />
 
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[var(--storm-electric)]/10 rounded-full blur-[120px]" />

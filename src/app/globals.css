@@ -54,6 +54,80 @@
   --color-dawn-glow: #1C6BB0;
   --color-dawn-glow-soft: #509EE3;
 
+  /* ---- Neutral ramps, remapped to metabase.com's neutral scale ----------
+     1,193 built-in Tailwind palette classes are in this codebase and 936 of
+     them are stone / slate / gray — body copy, rules and card surfaces. None
+     of that is reachable from a --color-* swap, because those classes resolve
+     to stock Tailwind values.
+
+     Redefining the ramps here captures all of them at once. The stops are
+     their published neutrals: neutral-15 #22242B, -20 #4C5773, -40 #5A6072,
+     -60 #8D93A5, -80 #C6C9D2, -90 #E2E4E9, -95 #F1F2F4, -99 #FCFCFD.
+     700/800 are interpolated; they have no published stop there.
+
+     Warm (stone) and cool (slate) both collapse onto one ramp on purpose —
+     that is what stops a page reading as two different greys. */
+
+  --color-slate-50: #F9FAFB;
+  --color-slate-100: #F1F2F4;
+  --color-slate-200: #E2E4E9;
+  --color-slate-300: #C6C9D2;
+  --color-slate-400: #8D93A5;
+  --color-slate-500: #5A6072;
+  --color-slate-600: #4C5773;
+  --color-slate-700: #3B4152;
+  --color-slate-800: #2B2E38;
+  --color-slate-900: #22242B;
+  --color-slate-950: #15171C;
+
+  --color-gray-50: #F9FAFB;
+  --color-gray-100: #F1F2F4;
+  --color-gray-200: #E2E4E9;
+  --color-gray-300: #C6C9D2;
+  --color-gray-400: #8D93A5;
+  --color-gray-500: #5A6072;
+  --color-gray-600: #4C5773;
+  --color-gray-700: #3B4152;
+  --color-gray-800: #2B2E38;
+  --color-gray-900: #22242B;
+  --color-gray-950: #15171C;
+
+  --color-zinc-50: #F9FAFB;
+  --color-zinc-100: #F1F2F4;
+  --color-zinc-200: #E2E4E9;
+  --color-zinc-300: #C6C9D2;
+  --color-zinc-400: #8D93A5;
+  --color-zinc-500: #5A6072;
+  --color-zinc-600: #4C5773;
+  --color-zinc-700: #3B4152;
+  --color-zinc-800: #2B2E38;
+  --color-zinc-900: #22242B;
+  --color-zinc-950: #15171C;
+
+  --color-neutral-50: #F9FAFB;
+  --color-neutral-100: #F1F2F4;
+  --color-neutral-200: #E2E4E9;
+  --color-neutral-300: #C6C9D2;
+  --color-neutral-400: #8D93A5;
+  --color-neutral-500: #5A6072;
+  --color-neutral-600: #4C5773;
+  --color-neutral-700: #3B4152;
+  --color-neutral-800: #2B2E38;
+  --color-neutral-900: #22242B;
+  --color-neutral-950: #15171C;
+
+  --color-stone-50: #F9FAFB;
+  --color-stone-100: #F1F2F4;
+  --color-stone-200: #E2E4E9;
+  --color-stone-300: #C6C9D2;
+  --color-stone-400: #8D93A5;
+  --color-stone-500: #5A6072;
+  --color-stone-600: #4C5773;
+  --color-stone-700: #3B4152;
+  --color-stone-800: #2B2E38;
+  --color-stone-900: #22242B;
+  --color-stone-950: #15171C;
+
   /* Elevation and radius as utilities, so the JSX asks for a step on the
      scale (shadow-e-2, rounded-lg) instead of inventing another one-off. */
   --shadow-ring: 0 0 0 1px rgba(18, 67, 110, .07);

@@ -47,7 +47,7 @@ function ConciergeRow({ program }) {
           decoding="async"
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#141210] md:to-[#141210]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#12436E] md:to-[#12436E]" />
       </div>
 
       <div className="md:col-span-3 p-6 md:p-8 flex flex-col justify-center">
@@ -92,7 +92,7 @@ function AdvancedCard({ program }) {
           decoding="async"
           className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 motion-reduce:transition-none motion-reduce:group-hover:scale-100"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#141210] via-[#141210]/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#12436E] via-[#12436E]/30 to-transparent" />
       </div>
       <div className="p-6 flex flex-col flex-1">
         <h3 className="text-lg font-bold text-[var(--color-navy)] mb-2">{program.title}</h3>

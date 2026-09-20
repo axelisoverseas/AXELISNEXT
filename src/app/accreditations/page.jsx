@@ -50,7 +50,7 @@ export default function CertificationsPage() {
             className="absolute inset-0 w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[var(--storm-deep)] via-[var(--storm-deep)]/35 to-[var(--storm-deep)]" />
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(0,0,0,0.65)_0%,transparent_75%)]" />
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_55%_45%_at_50%_55%,rgba(18,67,110,0.62)_0%,transparent_75%)]" />
           <div className="absolute top-10 left-1/4 w-96 h-96 bg-white/10 rounded-full blur-[120px]" />
           <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-[var(--dawn-glow)]/10 rounded-full blur-[120px]" />
         </div>
