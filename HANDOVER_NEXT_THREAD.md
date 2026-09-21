@@ -17,6 +17,14 @@ and says when to push, so do not push without being asked.
 | `895f55d` | Student-roster merge across four local sources |
 | `8913f4f` | Moved the lender pitch off `/programmes` onto `/for-lenders` |
 | `daea4bf` | Fixed the dead anchor and duplicated heading that move created |
+| `271550a` | Document kit, and the first version of this handover |
+| `74cc9a7` | Accent moved blue to crimson; visa rate derived as 90% |
+| `d3d7683` | Vectorised wordmark, 16px mark, dimensional set |
+| `1a6ef0f` | Kit rebuilt on the vector lockup and crimson rule |
+| `d878cb6` | Escaped the angle brackets that broke three lockup files |
+
+Run `git log origin/main..HEAD --oneline` for the live list; the count moves as
+this file is itself committed.
 
 Verify with `git log origin/main..HEAD --oneline`. Production check:
 `curl -s https://overseeducation.com/ | grep -o '<title>[^<]*</title>'` still
@@ -139,7 +147,7 @@ the Drive connector.
 
 ## 5 · Brand
 
-Live artifact: **https://claude.ai/artifact/Tpqew1RVfGpb6UmpRsmWYu** (v5.1).
+Live artifact: **https://claude.ai/artifact/Tpqew1RVfGpb6UmpRsmWYu** (v6.0).
 
 `docs/brand/AXELIS_BRAND_ARTEFACT.md` v4.1 is **wrong on two things** and its own
 banner admits it: it specifies Instrument Serif + Instrument Sans, and carries
@@ -156,10 +164,9 @@ Corrections made to v5.0 of the artifact:
 
 ### Defects found in the source artwork
 
-1. **The lockup renders in two colours.** "AXELIS" is navy `#16265C`;
-   "OVERSEAS" renders near-black teal. This is the known raster defect —
-   "OVERSEAS" is an embedded PNG plus an alpha mask, patched with
-   `feColorMatrix`. Visible at any size. **Vectorising it is the fix.**
+1. **The lockup rendered in two colours.** "AXELIS" navy, "OVERSEAS" near-black
+   teal, from the embedded PNG plus alpha mask patched with `feColorMatrix`.
+   **Fixed** by vectorising: `public/brand/axelis-lockup*.svg`.
 2. **The seal read "WRITTEN OUTCOME GUARANTEE"** — retired language, and it would
    sit on certificates for all 16 programmes when only 3 carry a refund.
 3. **The seal's bottom text rendered upside down.** Its `seal-bot` arc ran the
