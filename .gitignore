@@ -54,3 +54,8 @@ dev3000.log
 
 # Wikidata SPARQL responses cached by scripts/fetch-universities.mjs
 /scripts/.cache/
+
+# Playwright artifacts. Also excluded from Tailwind scanning in globals.css:
+# an RSC payload in a saved snapshot generated an unparseable utility class.
+test-results/
+playwright-report/

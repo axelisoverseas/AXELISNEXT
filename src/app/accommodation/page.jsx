@@ -148,13 +148,16 @@ export default function AccommodationPage() {
             </section>
 
             {/* Popular Cities photo grid, visual destination teasers */}
- <section className="sec bg-[var(--storm-deep)]/40 border-y border-white/15">
+ {/* A 40% navy wash over a white page composites to pale grey-blue, so the
+     white heading on it measured 1.05:1. Full-strength navy, declared with
+     .on-dark so the tokens inside resolve for a dark ground. */}
+ <section className="sec on-dark bg-[var(--dark-bg)] border-y border-[var(--dark-rule)]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-12 max-w-2xl mx-auto">
                         <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-3">
                             Where our students live
                         </h2>
-                        <p className="text-white/85">
+                        <p className="text-[var(--dark-dim)]">
                             Tap any city to browse live amber listings for that destination.
                         </p>
                     </div>

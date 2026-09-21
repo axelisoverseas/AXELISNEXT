@@ -1,5 +1,18 @@
 @import "tailwindcss";
 
+/* Tailwind v4 scans the project for class names. Playwright writes HTML
+   snapshots and error contexts into test-results/, and an RSC payload in one
+   of those splits a class across a chunk boundary, so the scanner generated
+   a rule from the fragment:
+
+     .text-\[var\(--"\]\)\<\/script\>... { color: var(--"])</script>... }
+
+   which is not parseable CSS, and every page 500d. Excluding the artifact
+   directories is the fix; they are build output, not source. */
+@source not "../../test-results";
+@source not "../../playwright-report";
+@source not "../../.next";
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

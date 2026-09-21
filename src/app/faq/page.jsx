@@ -63,9 +63,7 @@ const FAQPage = () => {
             className="text-5xl md:text-7xl font-extrabold text-white mb-8 tracking-tight"
           >
             <TextEffect as="span" per="word" preset="blur">Got</TextEffect>{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white">
-              <TextEffect as="span" per="char" preset="blur" delay={0.25}>Questions?</TextEffect>
-            </span>
+            <TextEffect as="span" per="char" preset="blur" delay={0.25}>Questions?</TextEffect>
           </motion.h1>
           
           <motion.p 
