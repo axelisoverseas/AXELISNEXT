@@ -6,7 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:ui": "playwright test",
+    "test:ui:prod": "next build && (next start -p 3457 & sleep 6 && BASE_URL=http://localhost:3457 playwright test; kill %1)",
+    "audit:ui": "node scripts/ui-audit.mjs",
+    "audit:ui:phone": "node scripts/ui-audit.mjs --phone"
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",

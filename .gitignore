@@ -59,3 +59,5 @@ dev3000.log
 # an RSC payload in a saved snapshot generated an unparseable utility class.
 test-results/
 playwright-report/
+
+.DS_Store

@@ -53,10 +53,22 @@ for (const route of ROUTES) {
  * Every route answers. /courses 500d on every URL for months.
  * ---------------------------------------------------------------- */
 test('no route errors, and no console exceptions', async ({ page }) => {
+  // Dev-server noise, none of which exists in a production build:
+  //   __nextjs_original-stack-frames  the dev error-overlay endpoint
+  //   Failed to load chunk            dev HMR, and the ChunkLoadError that
+  //                                   appears whenever a build runs under a
+  //                                   live dev server
+  // Run this against `next build && next start` and the filter is inert.
+  // Plus two headless-WebKit artifacts that do not exist in a real browser:
+  //   "Button failed to load, iconName = airplay-placard"  WebKit's own
+  //     native video-control chrome, failing to load AirPlay and PiP icons.
+  //   "/api/... due to access control checks"  headless WebKit blocking
+  //     same-origin fetches that have been verified to return data.
+  const DEV_NOISE = /favicon|404 \(Not Found\)|__nextjs_original-stack-frames|Failed to load chunk|ChunkLoadError|Button failed to load|due to access control checks/i;
   const problems = [];
-  page.on('pageerror', (e) => problems.push(`pageerror: ${e.message}`));
+  page.on('pageerror', (e) => { if (!DEV_NOISE.test(e.message)) problems.push(`pageerror: ${e.message}`); });
   page.on('console', (m) => {
-    if (m.type() === 'error' && !/favicon|404 \(Not Found\)/i.test(m.text())) {
+    if (m.type() === 'error' && !DEV_NOISE.test(m.text())) {
       problems.push(`console: ${m.text().slice(0, 140)}`);
     }
   });

@@ -165,7 +165,10 @@ export const TAP_TARGET_PROBE = `() => {
     if (r.width === 0 || r.height === 0) continue;
     const cs = getComputedStyle(el);
     if (cs.visibility === 'hidden' || cs.display === 'none') continue;
-    if (el.tagName === 'A' && el.closest('p')) continue;
+    // WCAG 2.5.8 exempts a target that is "in a sentence or block of text".
+    // An inline-displayed link is exactly that; a block or flex one is a
+    // control and is held to 44px.
+    if (el.tagName === 'A' && cs.display === 'inline') continue;
     if (r.height < 44 || r.width < 44) {
       bad.push(el.tagName + ' ' + Math.round(r.width) + 'x' + Math.round(r.height) + ' "' + (el.textContent||'').trim().slice(0,30) + '"');
     }

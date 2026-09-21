@@ -286,9 +286,11 @@ const InstagramSuccessStories = () => {
               <video
                 key={selected.id}
                 src={selected.videoSrc}
+                poster={selected.poster}
                 autoPlay
                 controls
                 playsInline
+                preload="metadata"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <button

@@ -206,7 +206,7 @@ export const teamMembers = [
     id: 3,
     name: "Arul Johnson",
     role: "Strategic Admission Associate",
-    image: "/team/arul_johnson.png",
+    image: "/team/arul_johnson.jpg",
     linkedin: "https://www.linkedin.com/in/arul-j-812680132/",
     description: "Strategic admission associate driving university partnerships and guiding students through admissions."
   },
@@ -214,7 +214,7 @@ export const teamMembers = [
     id: 4,
     name: "Naveen B",
     role: "Alumni Admissions Counsellor",
-    image: "/team/naveen-b.png",
+    image: "/team/naveen-b.jpg",
     linkedin: "https://www.linkedin.com/in/naveenbammidi",
     description: "Alumni admissions counsellor guiding students through university selection and applications, from first call to offer.",
     almaMater: {

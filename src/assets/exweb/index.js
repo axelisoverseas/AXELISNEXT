@@ -22,9 +22,9 @@ const aoStoriesCreative = '/assets/exweb/ao stories creative.png';
 
 // Testimonial student images
 const anshImage = '/assets/exweb/ansh sonchhatra.jpeg';
-const arnabImage = '/assets/exweb/arnab chakravorty.png';
+const arnabImage = '/assets/exweb/arnab chakravorty.jpg';
 const dikshaImage = '/assets/exweb/diksha babbar.jpeg';
-const vasundharaImage = '/assets/exweb/m vasundhara rao.png';
+const vasundharaImage = '/assets/exweb/m vasundhara rao.jpg';
 const neeteshImage = '/assets/exweb/neetesh jain.jpg';
 const palakImage = '/assets/exweb/palak shah.jpg';
 const shivangiImage = '/assets/exweb/shivangi sen.jpg';

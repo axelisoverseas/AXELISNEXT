@@ -50,7 +50,7 @@ export default function ContactPage() {
         <div className="min-h-screen bg-storm-to-dawn">
             {/* Hero Section */}
  <section className="relative pt-32 pb-24 bg-[var(--color-tint)] border-b border-[var(--color-rule)] overflow-hidden">
-                <div className="absolute inset-0 opacity-[0.03] bg-[url('https://grainy-gradients.vercel.app/noise.svg')]"></div>
+                <div className="absolute inset-0 opacity-[0.03] bg-[url('/brand/noise.svg')]"></div>
                 <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-[var(--color-axelis)]/10 rounded-full blur-[100px] translate-x-1/2 -translate-y-1/2 pointer-events-none"></div>
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[var(--color-axelis)]/10 rounded-full blur-[100px] -translate-x-1/2 translate-y-1/2 pointer-events-none"></div>
 
@@ -214,7 +214,7 @@ export default function ContactPage() {
                                             <h3 className="font-semibold text-lg mb-2">Phone Numbers</h3>
                                             <div className="space-y-1">
                                                 {siteInfo.contact.phones.map((phone, index) => (
-                                                    <a key={index} href={`tel:${phone}`} className="block text-[var(--color-dim)] hover:text-[var(--color-navy)] transition-colors">
+                                                    <a key={index} href={`tel:${phone}`} className="inline-flex items-center min-h-[44px] text-[var(--color-dim)] hover:text-[var(--color-navy)] transition-colors">
                                                         {phone}
                                                     </a>
                                                 ))}
@@ -228,7 +228,7 @@ export default function ContactPage() {
                                             <h3 className="font-semibold text-lg mb-2">Email Addresses</h3>
                                             <div className="space-y-1">
                                                 {siteInfo.contact.emails.map((email, index) => (
-                                                    <a key={index} href={`mailto:${email}`} className="block text-[var(--color-dim)] hover:text-[var(--color-navy)] transition-colors break-all">
+                                                    <a key={index} href={`mailto:${email}`} className="inline-flex items-center min-h-[44px] break-all text-[var(--color-dim)] hover:text-[var(--color-navy)] transition-colors">
                                                         {email}
                                                     </a>
                                                 ))}

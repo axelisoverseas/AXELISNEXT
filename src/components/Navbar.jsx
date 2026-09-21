@@ -206,10 +206,10 @@ const Navbar = () => {
           <div className="flex items-center gap-6">
             {/* Social Links */}
             <div className="flex items-center gap-4 text-[var(--color-dim-dark)]">
-              <a href={siteInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--storm-electric)] transition-colors">Facebook</a>
-              <a href={siteInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--storm-electric)] transition-colors">Instagram</a>
-              <a href={siteInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--storm-electric)] transition-colors">LinkedIn</a>
-              <a href={siteInfo.social.youtube} target="_blank" rel="noopener noreferrer" className="hover:text-[var(--storm-electric)] transition-colors">YouTube</a>
+              <a href={siteInfo.social.facebook} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[44px] px-1 hover:text-[var(--storm-electric)] transition-colors">Facebook</a>
+              <a href={siteInfo.social.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[44px] px-1 hover:text-[var(--storm-electric)] transition-colors">Instagram</a>
+              <a href={siteInfo.social.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[44px] px-1 hover:text-[var(--storm-electric)] transition-colors">LinkedIn</a>
+              <a href={siteInfo.social.youtube} target="_blank" rel="noopener noreferrer" className="inline-flex items-center min-h-[44px] px-1 hover:text-[var(--storm-electric)] transition-colors">YouTube</a>
             </div>
           </div>
         </div>
@@ -220,7 +220,7 @@ const Navbar = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
-            <Link href="/" className="flex items-center shrink-0">
+            <Link href="/" aria-label="Axelis Overseas, home" className="flex items-center shrink-0 min-h-[44px] min-w-[44px]">
               <img
                 src="/brand/axelis-mark-navy.svg"
                 alt="Axelis Overseas"
@@ -514,8 +514,8 @@ const Navbar = () => {
             <div>
               <p className="text-xs font-semibold text-[var(--accent-on-dark)] mb-3">Connect With Us</p>
               <div className="flex flex-col gap-3 text-sm">
-                <a href={`tel:${siteInfo.contact.phones[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2"><Phone aria-hidden="true" size={14} /> {siteInfo.contact.phones[0]}</a>
-                <a href={`mailto:${siteInfo.contact.emails[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2"><Mail aria-hidden="true" size={14} /> {siteInfo.contact.emails[0]}</a>
+                <a href={`tel:${siteInfo.contact.phones[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2 min-h-[44px]"><Phone aria-hidden="true" size={14} /> {siteInfo.contact.phones[0]}</a>
+                <a href={`mailto:${siteInfo.contact.emails[0]}`} className="text-slate-300 hover:text-[var(--storm-electric)] flex items-center gap-2 min-h-[44px]"><Mail aria-hidden="true" size={14} /> {siteInfo.contact.emails[0]}</a>
               </div>
             </div>
           </div>

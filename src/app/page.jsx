@@ -223,7 +223,7 @@ export default function Home() {
           <div className="text-center mt-8">
             <Link
               href="/products#comparison"
-              className="inline-flex items-center gap-2 text-[var(--color-navy)] hover:text-[var(--color-navy)] text-sm font-semibold underline-offset-4 hover:underline transition-colors"
+              className="inline-flex items-center gap-2 min-h-[44px] text-[var(--color-navy)] hover:text-[var(--color-navy)] text-sm font-semibold underline-offset-4 hover:underline transition-colors"
             >
               Compare Global Admissions Charter vs Europe Public Charter side by side
               <ArrowRight aria-hidden="true" size={14} />
@@ -344,7 +344,7 @@ export default function Home() {
           <div className="text-center mt-10">
             <Link
               href="/products#plans"
-              className="inline-flex items-center gap-2 text-[var(--color-axelis)] hover:text-[var(--color-navy)] text-sm font-semibold underline-offset-4 hover:underline transition-colors"
+              className="inline-flex items-center gap-2 min-h-[44px] text-[var(--color-axelis)] hover:text-[var(--color-navy)] text-sm font-semibold underline-offset-4 hover:underline transition-colors"
             >
               See plans &amp; pricing across all 29 countries
               <ArrowRight aria-hidden="true" size={14} />
@@ -404,7 +404,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <Link
               href="/faq"
-              className="inline-flex items-center text-[var(--color-axelis)] font-bold hover:text-[var(--color-navy)] transition-colors group"
+              className="inline-flex items-center min-h-[44px] text-[var(--color-axelis)] font-bold hover:text-[var(--color-navy)] transition-colors group"
             >
               <span>View All 30+ Questions</span>
               <ArrowRight aria-hidden="true" className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />

@@ -47,7 +47,7 @@ const Footer = () => {
                 <Phone aria-hidden="true" size={18} className="text-[var(--storm-electric)] mt-1 shrink-0" />
                 <div className="flex flex-col gap-1">
                   {siteInfo.contact.phones.map((phone, i) => (
-                    <a key={i} href={`tel:${phone}`} className="hover:text-[var(--storm-electric)] transition-colors">{phone}</a>
+                    <a key={i} href={`tel:${phone}`} className="inline-flex items-center min-h-[44px] hover:text-[var(--storm-electric)] transition-colors">{phone}</a>
                   ))}
                 </div>
               </div>
@@ -55,7 +55,7 @@ const Footer = () => {
                 <Mail aria-hidden="true" size={18} className="text-[var(--storm-electric)] mt-1 shrink-0" />
                 <div className="flex flex-col gap-1">
                   {siteInfo.contact.emails.map((email, i) => (
-                    <a key={i} href={`mailto:${email}`} className="hover:text-[var(--storm-electric)] transition-colors">{email}</a>
+                    <a key={i} href={`mailto:${email}`} className="inline-flex items-center min-h-[44px] break-all hover:text-[var(--storm-electric)] transition-colors">{email}</a>
                   ))}
                 </div>
               </div>
@@ -82,7 +82,7 @@ const Footer = () => {
                 { name: 'Contact', path: '/contact' },
               ].map((link) => (
                 <li key={link.path}>
-                  <Link href={link.path} className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors flex items-center gap-2 group">
+                  <Link href={link.path} className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors flex items-center gap-2 group min-h-[44px]">
                     <span className="w-1.5 h-1.5 rounded-full bg-[var(--storm-mid)] group-hover:bg-[var(--storm-electric)] transition-colors" />
                     {link.name}
                   </Link>
@@ -96,19 +96,19 @@ const Footer = () => {
             <h3 className="text-white font-semibold mb-6">Legal</h3>
             <ul className="space-y-3 text-sm">
               <li>
-                <Link href="/privacy-policy" className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Privacy Policy</Link>
+                <Link href="/privacy-policy" className="inline-flex items-center min-h-[44px] text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Privacy Policy</Link>
               </li>
               <li>
-                <Link href="/terms-conditions" className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Terms of Service</Link>
+                <Link href="/terms-conditions" className="inline-flex items-center min-h-[44px] text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Terms of Service</Link>
               </li>
               <li>
-                <Link href="/policies/cancellation-refund" className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Cancellation &amp; Refund Policy</Link>
+                <Link href="/policies/cancellation-refund" className="inline-flex items-center min-h-[44px] text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Cancellation &amp; Refund Policy</Link>
               </li>
               <li>
-                <Link href="/delivery-policy" className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Delivery Policy</Link>
+                <Link href="/delivery-policy" className="inline-flex items-center min-h-[44px] text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Delivery Policy</Link>
               </li>
               <li>
-                <Link href="/verify" className="text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Verify a Certificate</Link>
+                <Link href="/verify" className="inline-flex items-center min-h-[44px] text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Verify a Certificate</Link>
               </li>
             </ul>
           </div>
@@ -117,16 +117,16 @@ const Footer = () => {
           <div className="lg:col-span-3">
             <h3 className="text-white font-semibold mb-6">Connect With Us</h3>
             <div className="flex gap-4 mb-8">
-              <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
+              <a href={siteInfo.social.facebook} target="_blank" rel="noreferrer" className="w-11 h-11 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
                 <Facebook size={18} />
               </a>
-              <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
+              <a href={siteInfo.social.instagram} target="_blank" rel="noreferrer" className="w-11 h-11 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
                 <Instagram size={18} />
               </a>
-              <a href={siteInfo.social.linkedin} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
+              <a href={siteInfo.social.linkedin} target="_blank" rel="noreferrer" className="w-11 h-11 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
                 <Linkedin size={18} />
               </a>
-              <a href={siteInfo.social.youtube} target="_blank" rel="noreferrer" className="w-10 h-10 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
+              <a href={siteInfo.social.youtube} target="_blank" rel="noreferrer" className="w-11 h-11 rounded-[var(--radius-md)] bg-[var(--color-axelis)] text-white flex items-center justify-center transition-colors hover:bg-white hover:text-[var(--color-navy)]">
                 <Youtube size={18} />
               </a>
             </div>

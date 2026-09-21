@@ -69,10 +69,21 @@ export default function YouTubeFeed({ limit = 3 }) {
                 >
                   <span className="relative block aspect-video overflow-hidden bg-[var(--color-tint)]">
                     {/* eslint-disable-next-line @next/next/no-img-element */}
+                    {/* maxresdefault does not exist for Shorts or for older
+                        uploads, and YouTube answers 404 rather than
+                        substituting. Without this fallback that renders as a
+                        broken image. hqdefault always exists. */}
                     <img
                       src={v.thumbnailHigh || v.thumbnail}
                       alt=""
                       loading="lazy"
+                      width={480}
+                      height={360}
+                      onError={(e) => {
+                        if (v.thumbnail && e.currentTarget.src !== v.thumbnail) {
+                          e.currentTarget.src = v.thumbnail;
+                        }
+                      }}
                       className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                     />
                     <span className="absolute inset-0 flex items-center justify-center">

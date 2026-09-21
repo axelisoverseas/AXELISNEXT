@@ -538,7 +538,7 @@ function ProductsContent() {
           <div className="mt-7">
             <Link
               href="/testimonials"
-              className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-bold hover:text-[var(--color-navy)] transition-colors"
+              className="inline-flex items-center gap-2 min-h-[44px] text-[var(--color-axelis)] font-bold hover:text-[var(--color-navy)] transition-colors"
             >
               See real student stories &rarr;
             </Link>
@@ -658,7 +658,7 @@ function ProductsContent() {
                 <span aria-hidden="true" className="block h-0.5 w-8 rounded-full bg-[var(--color-axelis)]" />
                 <Link
                   href={l.href}
-                  className="mt-4 inline-flex items-start gap-1.5 text-lg font-bold leading-snug text-[var(--color-navy)] hover:text-[var(--color-axelis)]"
+                  className="mt-4 inline-flex items-start gap-1.5 min-h-[44px] text-lg font-bold leading-snug text-[var(--color-navy)] hover:text-[var(--color-axelis)]"
                 >
                   {l.title}
                 </Link>

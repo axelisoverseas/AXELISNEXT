@@ -68,7 +68,7 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
               onClick={() => setUnits((n) => Math.max(1, n - 1))}
               disabled={units <= 1}
               aria-label={`One fewer ${item.unit}`}
-              className="h-9 w-9 inline-flex items-center justify-center rounded-lg border border-[var(--color-dim)] bg-white text-[var(--color-navy)] transition-colors hover:bg-[var(--color-tint)] disabled:opacity-35 disabled:hover:bg-white"
+              className="h-11 w-11 inline-flex items-center justify-center rounded-lg border border-[var(--color-dim)] bg-white text-[var(--color-navy)] transition-colors hover:bg-[var(--color-tint)] disabled:opacity-35 disabled:hover:bg-white"
             >
               <Minus size={14} aria-hidden="true" />
             </button>
@@ -83,7 +83,7 @@ export default function ServiceCheckout({ payKey, payHref, name }) {
               onClick={() => setUnits((n) => Math.min(MAX_UNITS, n + 1))}
               disabled={units >= MAX_UNITS}
               aria-label={`One more ${item.unit}`}
-              className="h-9 w-9 inline-flex items-center justify-center rounded-lg border border-[var(--color-dim)] bg-white text-[var(--color-navy)] transition-colors hover:bg-[var(--color-tint)] disabled:opacity-35 disabled:hover:bg-white"
+              className="h-11 w-11 inline-flex items-center justify-center rounded-lg border border-[var(--color-dim)] bg-white text-[var(--color-navy)] transition-colors hover:bg-[var(--color-tint)] disabled:opacity-35 disabled:hover:bg-white"
             >
               <Plus size={14} aria-hidden="true" />
             </button>
