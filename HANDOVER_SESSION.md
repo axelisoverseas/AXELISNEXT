@@ -324,3 +324,163 @@ Headlines:
 - `axelisoverseas.com` is still entirely on the old brand
 
 **Do not start this until `brand/d2c-palette` has both halves merged.**
+
+---
+
+## 10 · Brand decisions — 21 September 2026
+
+Answers to the nine-item implementation brief. Full reasoning in
+`docs/brand/BRAND_DECISIONS.md`; the numbers you need at the keyboard are here.
+
+### Read this first — three earlier documents are now wrong
+
+1. **Palette.** `BRAND_GUIDELINES.md` §5 and `AXELIS_BRAND_ARTEFACT.md` §1 carry
+   the retired `#0E3240` family. The live palette is the locked one:
+   `--color-navy #16265C`, `--color-axelis #1D4ED8`, `--accent-on-dark #9EC0FF`,
+   `--color-dim #586179`, `--color-dim-dark #C3CBDD`, `--color-tint #F7F9FC`,
+   `--color-rule #DDE3EE`, `--foreground #1B2233`. `#4F80F0` is surfaces-only.
+2. **Typeface.** Instrument Serif + Instrument Sans is retired. **Lato**,
+   400/700/900 roman and italic, via `next/font/google`, is the system. Delete the
+   Instrument references and the dead *"Display face. Ships in one weight"*
+   comment in `layout.js`.
+3. **Seal placement.** `WEB_AGENT_PROMPT.md` item 5 is **withdrawn** — see below.
+
+### 10.1 Logo sizing — the mark has read small twice
+
+Clear space = **½ the mark's height**, all four sides. Minimums: mark 24 px /
+8 mm, lockup 120 px / 32 mm, seal 96 px / 28 mm.
+
+| Context | Asset | Size |
+|---|---|---|
+| Navbar desktop | Mark | **40 px** |
+| Navbar mobile | Mark | **32 px** |
+| Footer | Lockup | 160 px wide |
+| App icon | Mark, white on navy | 180 / 192 / 512 |
+| OG 1200×630 | Lockup, white | 360 px wide |
+| Document header | Lockup | 34 mm |
+| Certificate | Lockup | 42 mm |
+| Email signature | Mark | 58 px |
+
+40 px is the fix for the nav: at 28–32 px in a 64–72 px bar the mark reads
+apologetic.
+
+### 10.2 The seal is a document device — withdraw it from the web
+
+**Three uses only:** the certificate, the signed guarantee page of a proposal,
+the engagement/enrolment signature block. **Not** the homepage guarantee block,
+**not** `/policies/cancellation-refund` — that instruction was mine and it was
+wrong. On web pages the guarantee is carried typographically with its clause
+number (`§4.2`).
+
+Deploy `axelis-seal-navy.svg` and `axelis-seal-white.svg` so documents can reach
+them; do not place them in any page template. The flat variants are **sanctioned**
+— `currentColor` does not cross the `<img>` boundary, so an external SVG has no
+inherited colour to resolve. Keep `axelis-seal.svg` (currentColor) for inline
+`<svg>` only.
+
+### 10.3 Money shift — tabular-nums is not the fix
+
+Measured in the browser with Lato loaded: `1111111111` and `0000000000` both
+render at **185.60 px**, and `font-variant-numeric: tabular-nums` changes
+neither. **Lato's digits already share one advance width; `tnum` is a no-op on
+this family.**
+
+The shift is layout. Fix it with:
+
+- `text-align: right` on every currency cell
+- a fixed `ch` width on the column, so ₹9,999 and ₹2,00,000 share a box
+- ₹, digits and commas kept in one non-breaking string
+
+Keep the `tabular-nums` token anyway — costs nothing, correct if the family changes.
+
+### 10.4 The dark set — this is what broke the certificate
+
+`--foreground #1B2233` on navy is **1.11:1**. That is the 1.10:1 title failure.
+
+**Forbidden on a navy ground:** `#1B2233` (1.11), `--color-axelis #1D4ED8`
+(2.14), `--color-dim #586179` (2.32). `#4F80F0` (3.87) is large graphics only,
+never text.
+
+**Add as first-class tokens:**
+
+| Token | Hex | On navy |
+|---|---|---|
+| `--dark-bg` | `#16265C` | ground |
+| `--dark-surface` | `#1E3270` | 12.03 with white |
+| `--dark-rule` | `#33437E` | 1.53 hairline |
+| `--dark-fg` | `#FFFFFF` | 14.33 AAA |
+| `--dark-dim` | `#C3CBDD` | 8.80 AAA |
+| `--dark-accent` | `#9EC0FF` | 7.80 AAA |
+
+**Enforce with an `.on-dark` class** that remaps `--foreground → --dark-fg`,
+`--color-dim → --dark-dim`, `--color-axelis → --dark-accent`,
+`--color-rule → --dark-rule`. Then a light component moved onto navy inherits
+correct values instead of silently keeping its own. That is the guard that stops
+this happening a third time.
+
+Buttons on navy: **white fill, navy label.** Never `--color-axelis` as a fill on
+navy — 2.14:1 against its own ground.
+
+### 10.5 Elevation, radius, rhythm — ratified as written
+
+`--shadow-ring` / `e-1` / `e-2` / `e-3` / `e-lift` and `--radius-xs…2xl` in
+`globals.css` stand. Assignment: input/chip `sm` + ring · button `md`, `e-1` on
+hover · card `lg` + `e-2` · panel/modal `xl` + `e-3` · full-bleed media `2xl` ·
+print sheets 0.
+
+Section rhythm, desktop/mobile: major **96/64**, sub **64/40**, band **48/32**,
+grid gap 20.
+
+**Delete `.glass-card`** (~line 228) — black-alpha shadows and a dark-mode
+variant from the retired brand, contradicting the navy-tinted scale above it.
+Nothing above `2xl`.
+
+### 10.6 Document kit — signed off, with two certificate changes
+
+All eight conform. The engagement letter is blocked on **counsel** for clauses
+5–7, which is not a design hold.
+
+Certificate: seal placement is correct on the signature baseline at 34 mm. **The
+blank signatory block holds** — a specimen with a plausible signature is a
+forgeable template.
+
+**Remove the "Design is not signed off by the founder yet" note from
+`SpecimenCertificate.jsx`.** It is internal status on a lender-facing page.
+Replace with a permanent mark:
+
+> **SPECIMEN** — layout and security features only. Not a valid certificate.
+> Issued certificates carry a unique ID verifiable at overseeducation.com/verify.
+
+`--color-dim`, 12 px, uppercase label style, under the sheet. That line stays
+forever; the current note implies removal and nobody will remember.
+
+Design conformance is signed off here. **Issuing a document as company paper is
+the founder's sign-off, not mine** — two approvals, both needed.
+
+### 10.7 Naming, and the split
+
+Product naming convention is ratified; **the names themselves are open** — the
+repo has carried five namings, and a wrong name on a gateway-wired page is a
+mis-sold service. Use one consistently until the founder confirms.
+
+`D2C_PALETTE_SPLIT.md` — **retire it.** Work-allocation device, not a brand rule.
+One brand across both properties; only content forks.
+
+### 10.8 Icons, flags, emoji, photography
+
+Lucide, `currentColor`, 1.5 px stroke, sizes 16/20/24 only. **Flags from
+`public/flags` at 20×15 with a 1 px `--color-rule` hairline — never emoji
+flags**, which do not render on Windows Chrome at all. **Emoji removal is
+ratified** for all product UI, documents and email. Photography: real documents,
+hands, desks, straight-on campus architecture, named students **with written
+consent on file**. No stock, no backpacks-against-skylines, no filters.
+
+### 10.9 Blocked on the founder — do not guess these
+
+1. **The visa claim** — 100% / 95% / "guaranteed results" against one metric,
+   FAQ contradicting the Terms.
+2. **"100% Free Service" beside ₹9,999 and ₹19,999.** Both cannot be true on one
+   site. Fix this first — it is what a lender or a consumer forum notices.
+3. **Charter pricing disagrees across pages.** Matching to `/products` was right
+   under uncertainty (the page that takes money wins a tie), but it is now the
+   source of truth by default rather than by decision.
