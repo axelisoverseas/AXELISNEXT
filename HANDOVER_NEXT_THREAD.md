@@ -1,13 +1,14 @@
 # Handover — start here in the next thread
 
-**Written 21 September 2026.** Everything below is local. **Nothing is pushed.**
+**Written 21 September 2026, updated after the four open items were closed.**
+Everything below is local. **Nothing is pushed.**
 Production still serves the old copy.
 
 ---
 
 ## Read this first
 
-Four commits sit on `main` ahead of `origin/main`. The founder reviews locally
+Ten commits sit on `main` ahead of `origin/main`. The founder reviews locally
 and says when to push, so do not push without being asked.
 
 | Commit | What it did |
@@ -206,22 +207,39 @@ you add a page, add it to `ALL` in `scripts/ui-audit.mjs` or it goes unchecked.
 
 ## 8 · Open, and who owns it
 
+**Closed since this file was written.** All four items that stood open in the
+brand artifact are done:
+
+- **Palette.** Accent moved from blue `#1D4ED8` to crimson `#A51C30`. Navy is
+  unchanged. Contrast on white went 6.70 to **7.48**, gaining AAA. Fourteen
+  hardcoded blues across ten files moved with the tokens, and the B2B repo too.
+- **Visa rate.** The site claimed 95%+ in four places while also claiming 4,500
+  visas against 5,000 placements, which is **90%**. It now reads 90% and the FAQ
+  states the derivation.
+- **"OVERSEAS" vectorised.** Set in Oswald 400, converted to outlines with
+  fontTools. One fill, **71,738 bytes down to ~15,200**, takes `currentColor`.
+  The two-tone defect is gone from the site and the documents.
+- **16px mark.** `public/brand/axelis-mark-16.svg`. Rocket dropped, slipstream
+  thickened. Use the full mark at 24px and above.
+
+Also added: a dimensional (3D) mark in two grounds and a 1200x630 promo card,
+all in `public/brand/`.
+
 **Founder:**
 
-- 5,000+ students, 4,500+ visas, 95%+ visa rate, 35,000+ universities. Separate
-  figures, must stay separate. Logged in `docs/CLAIMS_SUBSTANTIATION.md`.
-- Whether the palette stays locked. AECC owns indigo, StudyAbroad owns teal, IIE
-  owns red. **Axelis blue is the least differentiated colour in the category.**
-- Whether `#ffde59`, logged as the retired logo yellow, is really dead.
+- 5,000+ students, 4,500+ visas, 35,000+ universities are still unsourced.
+  Separate figures, must stay separate.
+- Two per-destination stats still read 95%. Different claim from the Axelis
+  rate, deliberately left alone.
+- Whether `#ffde59`, the retired logo yellow, is really dead.
 - The two student conflicts, Jitesh Jha, and the Sai Vikas university.
 - Slogan split in §3.
 
 **Design / build:**
 
-- Vectorise "OVERSEAS" — fixes defect 1 above and removes the `feColorMatrix`
-  workaround.
-- The 16px simplified mark. Below ~24px the rocket and slipstream merge.
 - Facebook and LinkedIn feeds, photography direction, course data beyond NL.
+- Oswald is now a brand dependency for regenerating the wordmark. The TTF is not
+  committed; refetch it from Google Fonts if the lockup needs rebuilding.
 
 **Blocked:**
 
