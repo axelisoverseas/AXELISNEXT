@@ -81,6 +81,8 @@ export const SKILL_PROGRAMMES = [
     external: 'Students sit the Goethe-Institut or Alliance Française examination independently. Axelis prepares for it and does not issue it.',
     financeable:
       'The clearest case of the five. CEFR is an international framework, the syllabus is fixed, contact hours are countable, and the assessment maps to a third-party examination. This is a language course by any definition a lender uses.',
+    fee: 113000,
+    feeSource: 'A1\u2013A2 (\u20b928,000) plus B1 Intensive (\u20b985,000), both already in the catalogue',
     priority: 1,
   },
   {
@@ -99,6 +101,8 @@ export const SKILL_PROGRAMMES = [
     external: null,
     financeable:
       'Taught as a writing and research skills course with a marked portfolio, not as an application-handling service. The student writes the work; it is assessed against a published rubric.',
+    fee: 42000,
+    feeSource: 'Priced from Postgraduate Application Coaching in the existing catalogue',
     priority: 2,
   },
   {
@@ -117,6 +121,8 @@ export const SKILL_PROGRAMMES = [
     external: null,
     financeable:
       'Fixed duration, evening cohort, assessed deliverables, and a professional-development audience. Structurally the closest of the five to the test-prep and professional-course merchants Bajaj already finances.',
+    fee: 125000,
+    feeSource: 'Priced from Executive MBA Application Coaching in the existing catalogue',
     priority: 3,
   },
   {
@@ -135,6 +141,8 @@ export const SKILL_PROGRAMMES = [
     external: null,
     financeable:
       'Academic research-writing training with a substantial assessed output. The proposal is the student’s own work, produced under supervision.',
+    fee: 110000,
+    feeSource: 'Priced from the PhD & Research Proposal Certificate in the existing catalogue',
     priority: 4,
   },
   {
@@ -153,6 +161,8 @@ export const SKILL_PROGRAMMES = [
     external: null,
     financeable:
       'The longest and highest-value programme, and therefore the one most likely to be examined closely. It is presented as a taught programme with module assessment, and the counselling that accompanies it is stated as a support wrapper rather than as the product.',
+    fee: 200000,
+    feeSource: 'Unchanged from the listed Global Career Launch programme',
     priority: 5,
   },
 ];

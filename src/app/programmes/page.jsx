@@ -32,7 +32,7 @@ export const metadata = {
   description:
     'Structured skill programmes with published curricula, contact hours, assessment and verifiable certificates. Language training to CEFR B1, application craft, research proposals and executive applications.',
   alternates: { canonical: CANONICAL },
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 export default function ProgrammesPage() {
@@ -129,12 +129,13 @@ export default function ProgrammesPage() {
                   </div>
                 </div>
 
-                <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-[var(--color-rule)] pt-5 text-sm md:grid-cols-4">
+                <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-[var(--color-rule)] pt-5 text-sm md:grid-cols-5">
                   {[
                     ['Duration', `${p.weeks} weeks`],
                     ['Contact hours', `${p.contactHours}`],
                     ['Level', p.level],
                     ['Cohort', p.cohortSize],
+                    ['Fee', `\u20b9${p.fee.toLocaleString('en-IN')}`],
                   ].map(([k, v]) => (
                     <div key={k}>
                       <dt className="text-[var(--color-dim)]">{k}</dt>

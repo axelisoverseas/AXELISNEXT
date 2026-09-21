@@ -68,6 +68,7 @@ const MENU = [
         heading: 'Certifications',
         items: [
           { href: '/certifications', title: 'All programmes', blurb: 'Concierge tiers with a written outcome guarantee' },
+          { href: '/programmes', title: 'Skill programmes', blurb: 'Taught, assessed and certified, with contact hours published' },
           { href: '/verify', title: 'Verify a certificate', blurb: 'Check an Axelis certificate ID' },
         ],
       },

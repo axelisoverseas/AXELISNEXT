@@ -20,6 +20,7 @@ export default function sitemap() {
     { url: `${BASE_URL}/faq`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${BASE_URL}/testimonials`, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/certifications`, changeFrequency: 'weekly', priority: 0.95 },
+    { url: `${BASE_URL}/programmes`, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/vocational`, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/services`, changeFrequency: 'weekly', priority: 0.85 },
     { url: `${BASE_URL}/financing`, changeFrequency: 'monthly', priority: 0.8 },

@@ -35,6 +35,7 @@
 // ============================================================================
 
 import { programs, populatedTiers, refundPolicy } from './certificationPrograms';
+import { SKILL_PROGRAMMES } from './skillProgrammes';
 
 const titlesFor = (tierId) => programs.filter((p) => p.tier === tierId).map((p) => p.title);
 
@@ -52,13 +53,18 @@ export const policySections = [
     number: 1,
     title: 'Programme details and scope',
     blocks: [
-      { p: 'This policy applies to every certification programme offered by Axelis Overseas Education Pvt Ltd on overseeducation.com:' },
+      { p: 'This policy applies to every certification and skill programme offered by Axelis Overseas Education Pvt Ltd on overseeducation.com, however that programme is described or presented:' },
       {
         // Populated tiers only. Mapping all of TIERS emitted three empty
         // entries: "Foundation-tier programmes ()" once [RULING 12] landed.
         list: populatedTiers().map((t) => `${t.name}-tier programmes (${titlesFor(t.id).join(', ')})`),
       },
-      { p: 'Programme fees range from ₹2,00,000 to ₹3,00,000. Each programme carries a dedicated page on overseeducation.com/certifications with its own fee, duration, syllabus, and outcome deliverables.' },
+      { p: 'It applies equally to the skill programmes published at overseeducation.com/programmes, which restate the same five programme families by their teaching structure:' },
+      {
+        list: SKILL_PROGRAMMES.map((sp) => `${sp.title} (${sp.family}), ${sp.weeks} weeks, ${sp.contactHours} contact hours`),
+      },
+      { p: 'Where a programme appears under more than one description, this policy covers it under every description. Nothing in how a programme is presented changes the cancellation and refund terms that apply to it.' },
+      { p: 'Programme fees range from ₹42,000 to ₹3,00,000. Each programme carries a dedicated page on overseeducation.com, at /certifications or /programmes, with its own fee, duration, syllabus, and outcome deliverables.' },
     ],
   },
   {
