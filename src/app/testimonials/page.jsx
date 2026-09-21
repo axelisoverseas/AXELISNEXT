@@ -6,6 +6,7 @@ import dynamic from 'next/dynamic';
 import { ArrowRight, Star, MapPin, GraduationCap, Play, BadgeCheck } from 'lucide-react';
 import { testimonials as allTestimonials } from '../../data/siteData';
 import InstagramFeed from '../../components/InstagramFeed';
+import { verifiedReviews, googleReviewsMeta, getGoogleMapsHref } from '../../data/googleReviews';
 
 // Show only testimonials with a real student photo. Entries that fall back to
 // auto-generated initials avatars (ui-avatars.com) are placeholders, not real
@@ -233,6 +234,72 @@ export default function TestimonialsPage() {
 
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Google reviews. Verbatim from the Bilaspur Business Profile.
+          No faces here on purpose: reviewer profile pictures are hosted by
+          Google and belong to the reviewers, not to Axelis, so an initial
+          stands in rather than a hotlinked image that is not ours to serve. */}
+      <section className="relative sec-sm border-t border-[var(--color-rule)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="label">Google reviews</p>
+            <h2 className="mt-3 text-3xl md:text-4xl font-bold text-[var(--color-navy)]">
+              {googleReviewsMeta.rating} out of 5, from {googleReviewsMeta.totalReviews} reviews.
+            </h2>
+            <p className="mt-3 text-[var(--color-dim)] measure mx-auto">
+              Left on our {googleReviewsMeta.businessName} Business Profile by students who chose to
+              post publicly. Quoted exactly as written.
+            </p>
+            <a
+              href={getGoogleMapsHref()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-[var(--color-axelis)] underline underline-offset-4"
+            >
+              Read them on Google
+              <ArrowRight size={15} aria-hidden="true" />
+            </a>
+          </div>
+
+          <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 list-none p-0">
+            {verifiedReviews.map((r) => (
+              <li
+                key={r.name}
+                className="rounded-[var(--radius-lg)] bg-white p-6 ring-1 ring-[var(--color-rule)] shadow-[var(--shadow-e-2)]"
+              >
+                <div className="flex items-center gap-3">
+                  <span
+                    aria-hidden="true"
+                    className="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-[var(--color-tint-2)] text-base font-bold text-[var(--color-navy)]"
+                  >
+                    {r.avatarInitials}
+                  </span>
+                  <div className="min-w-0">
+                    <p className="truncate font-bold text-[var(--color-navy)]">{r.name}</p>
+                    <div className="flex items-center gap-2">
+                      <span className="flex" aria-label={`${r.rating} out of 5`}>
+                        {Array.from({ length: r.rating }).map((_, i) => (
+                          <Star
+                            key={i}
+                            size={13}
+                            className="fill-[var(--color-axelis)] text-[var(--color-axelis)]"
+                            aria-hidden="true"
+                          />
+                        ))}
+                      </span>
+                      <span className="text-xs text-[var(--color-dim)]">{r.relativeDate}</span>
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 text-sm leading-relaxed text-[var(--color-dim)]">
+                  &ldquo;{r.text}
+                  {r.truncated ? '\u2026' : ''}&rdquo;
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
