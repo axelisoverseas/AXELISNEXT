@@ -1,5 +1,33 @@
 # Handover — brand implementation
 
+> ## ⛔ STOP. READ THIS BEFORE SECTION 1.
+>
+> **Sections 1 to 9 describe a spec that was RETIRED on 21 September 2026.**
+> **Section 10 is the live one. Where they disagree, section 10 wins.**
+>
+> Three things in section 1 are now wrong, and section 1 tells you not to
+> correct them. That instruction is void:
+>
+> | Section 1 says | Live answer (§10) |
+> |---|---|
+> | Typefaces: Instrument Serif + Instrument Sans | **Lato, one family, 400/700/900** |
+> | Palette: `#0E3240` ground, `#4080BD` brand blue | **`#16265C` navy, `#1D4ED8` accent, white ground** |
+> | Seal on the homepage and refund page | **Seal is documents-only. Withdrawn from web.** |
+>
+> The canonical reference named in section 1,
+> `docs/brand/samples/axelis-final-navy.html`, is also retired on colour and
+> typeface. Do not build to match it.
+>
+> **The live sources are `docs/brand/BRAND_DECISIONS.md` and
+> `docs/brand/BUILDING_WITH_THE_SYSTEM.md`.** Everything in section 10 is
+> already implemented in `src/app/globals.css`; read that before changing it.
+>
+> Two findings are carried as measured numbers so you can verify rather than
+> trust: the certificate title measured **1.10:1** against navy, and Lato
+> renders `1111111111` and `0000000000` at **185.60px either way**, so
+> `tabular-nums` is a no-op on this family.
+
+
 **For:** the web agent implementing the approved brand on overseeducation.com
 **From:** the brand session, 20 September 2026
 **Repo:** `/Users/rishabhagrawal/Downloads/AXELISNEXT` · Next.js 16.1.6, App Router, JavaScript, Tailwind v4 → Vercel
@@ -31,8 +59,14 @@ from their stylesheet. The founder saw a shifted alternative, compared both,
 and chose theirs. The trade-dress exposure of pairing a direct competitor's
 page architecture with their exact colours was raised twice and overruled.
 It is a decision, not an oversight — do not "fix" it.
+>
+> **RETIRED 21 Sep 2026.** This palette no longer applies and this instruction
+> is void. The live palette is `#16265C` / `#1D4ED8` on a white ground, chosen
+> independently, so no value is taken from a competitor's stylesheet any more.
+> See section 10.4.
 
-**2 · Instrument Serif has exactly one weight.** 400, plus italic. It is a
+**2 · Instrument Serif has exactly one weight.** *(RETIRED 21 Sep 2026. The
+Instrument pairing is out; the live family is Lato 400/700/900. See §10.3.)* 400, plus italic. It is a
 display face and cannot carry body copy, labels or tables. So the system is two
 faces, not one: **Instrument Serif** for display and headings, with *italic* as
 the emphasis device, and **Instrument Sans** (400/500/600/700) for everything
