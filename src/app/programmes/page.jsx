@@ -1,6 +1,65 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Check, Clock, Users, GraduationCap, FileCheck } from 'lucide-react';
+import {
+  ArrowRight, Check, Clock, Users, GraduationCap, FileCheck,
+  Timer, Languages, PenLine, Briefcase, Microscope, Plane,
+} from 'lucide-react';
+
+/* Lucide only, per BRAND_DECISIONS section 9: one icon family, 1.5px stroke,
+   currentColor. Each programme carries its own mark so the six are told apart
+   at a glance rather than by reading the heading. */
+const ICONS = { Timer, Languages, PenLine, Briefcase, Microscope, Plane };
+
+/* Four card treatments built from the locked palette. No new colour is
+   introduced: navy, the accent blue, the two tints and the dark-surface token
+   are all already in the system. Variation comes from weight and ground,
+   which is what actually makes a row of cards scannable. */
+const TREATMENTS = {
+  featured: {
+    card: 'on-dark bg-[var(--color-navy)] ring-1 ring-[var(--dark-rule)] md:col-span-2',
+    kicker: 'text-[var(--dark-accent)]',
+    title: 'text-white',
+    body: 'text-white/90',
+    label: 'text-white/60',
+    value: 'text-white',
+    rule: 'border-white/20',
+    chip: 'bg-white/10 text-white ring-1 ring-white/25',
+    iconWrap: 'bg-white/10 text-[var(--dark-accent)] ring-1 ring-white/20',
+  },
+  solid: {
+    card: 'on-dark bg-[var(--dark-surface)] ring-1 ring-[var(--dark-rule)] md:col-span-2',
+    kicker: 'text-[var(--dark-accent)]',
+    title: 'text-white',
+    body: 'text-white/90',
+    label: 'text-white/60',
+    value: 'text-white',
+    rule: 'border-white/20',
+    chip: 'bg-white/10 text-white ring-1 ring-white/25',
+    iconWrap: 'bg-white/10 text-[var(--dark-accent)] ring-1 ring-white/20',
+  },
+  tinted: {
+    card: 'bg-[var(--color-tint-2)] ring-1 ring-[var(--color-rule)]',
+    kicker: 'text-[var(--color-axelis)]',
+    title: 'text-[var(--color-navy)]',
+    body: 'text-[var(--color-navy)]',
+    label: 'text-[var(--color-dim)]',
+    value: 'text-[var(--color-navy)]',
+    rule: 'border-[var(--color-rule)]',
+    chip: 'bg-white text-[var(--color-navy)] ring-1 ring-[var(--color-rule)]',
+    iconWrap: 'bg-white text-[var(--color-axelis)] ring-1 ring-[var(--color-rule)]',
+  },
+  outline: {
+    card: 'bg-white ring-1 ring-[var(--color-rule)]',
+    kicker: 'text-[var(--color-axelis)]',
+    title: 'text-[var(--color-navy)]',
+    body: 'text-[var(--color-navy)]',
+    label: 'text-[var(--color-dim)]',
+    value: 'text-[var(--color-navy)]',
+    rule: 'border-[var(--color-rule)]',
+    chip: 'bg-[var(--color-tint)] text-[var(--color-navy)] ring-1 ring-[var(--color-rule)]',
+    iconWrap: 'bg-[var(--color-tint)] text-[var(--color-axelis)] ring-1 ring-[var(--color-rule)]',
+  },
+};
 import {
   SKILL_PROGRAMMES,
   EMPANELMENT_CHECKLIST,
@@ -56,13 +115,13 @@ export default function ProgrammesPage() {
             Taught programmes, assessed and certified.
           </h1>
           <p className="measure mx-auto mt-5 text-lg leading-relaxed text-[var(--color-dim)]">
-            Five programmes with a published curriculum, countable contact hours, an
-            assessment against stated criteria, and a certificate with an ID anyone can
+            {SKILL_PROGRAMMES.length} programmes with a published curriculum, countable contact hours,
+            an assessment against stated criteria, and a certificate with an ID anyone can
             check. Fees and refund terms are published before you pay.
           </p>
           <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
             <Link href="#programmes" className="btn btn-primary btn-lg">
-              See the five programmes
+              See all {SKILL_PROGRAMMES.length} programmes
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link href="#empanelment" className="btn btn-secondary btn-lg">
@@ -78,7 +137,7 @@ export default function ProgrammesPage() {
           <div className="max-w-3xl">
             <p className="label">How these are built</p>
             <h2 className="mt-3 text-2xl font-bold tracking-tight text-[var(--color-navy)] sm:text-3xl">
-              A course, not a retainer.
+              Built like a course, because that is what it is.
             </h2>
             <p className="mt-4 leading-relaxed text-[var(--color-dim)] measure">
               Every programme here is defined by four things: how long it runs, what is
@@ -112,70 +171,72 @@ export default function ProgrammesPage() {
           <div className="max-w-3xl">
             <p className="label">The catalogue</p>
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-[var(--color-navy)] sm:text-4xl">
-              Five programmes.
+              {SKILL_PROGRAMMES.length} programmes.
             </h2>
           </div>
 
-          <div className="mt-10 space-y-5">
-            {SKILL_PROGRAMMES.map((p) => (
-              <article
-                key={p.slug}
-                className="rounded-[var(--radius-xl)] border border-[var(--color-rule)] bg-white p-6 sm:p-8"
-              >
-                <div className="flex flex-wrap items-start justify-between gap-4">
-                  <div className="min-w-0">
-                    <span className="text-[11px] font-bold uppercase tracking-[0.14em] text-[var(--color-axelis)]">
-                      {p.family}
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
+            {SKILL_PROGRAMMES.map((p) => {
+              const T = TREATMENTS[p.treatment] ?? TREATMENTS.outline;
+              const Icon = ICONS[p.icon] ?? GraduationCap;
+              const g = gstBreakdown(p.fee);
+              return (
+                <article
+                  key={p.slug}
+                  className={`flex flex-col rounded-[var(--radius-xl)] p-6 sm:p-8 ${T.card}`}
+                >
+                  <div className="flex items-start gap-4">
+                    <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-[var(--radius-lg)] ${T.iconWrap}`}>
+                      <Icon size={22} strokeWidth={1.5} aria-hidden="true" />
                     </span>
-                    <h3 className="mt-2 text-xl font-bold text-[var(--color-navy)] sm:text-2xl">{p.title}</h3>
-                    <p className="mt-2 text-[var(--color-navy)]">{p.strapline}</p>
-                  </div>
-                </div>
-
-                <dl className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 border-t border-[var(--color-rule)] pt-5 text-sm md:grid-cols-5">
-                  {[
-                    ['Duration', `${p.weeks} weeks`],
-                    ['Contact hours', `${p.contactHours}`],
-                    ['Level', p.level],
-                    ['Cohort', p.cohortSize],
-                    ['Fee', `${inr(p.fee)} incl. GST`],
-                  ].map(([k, v]) => (
-                    <div key={k}>
-                      <dt className="text-[var(--color-dim)]">{k}</dt>
-                      <dd className="mt-0.5 font-semibold text-[var(--color-navy)]">{v}</dd>
+                    <div className="min-w-0">
+                      <span className={`text-[11px] font-bold uppercase tracking-[0.14em] ${T.kicker}`}>
+                        {p.family}
+                      </span>
+                      <h3 className={`mt-1.5 text-xl font-bold leading-snug ${T.title}`}>{p.title}</h3>
                     </div>
-                  ))}
-                </dl>
+                  </div>
 
-                {(() => {
-                  const g = gstBreakdown(p.fee);
-                  return (
-                    <p className="mt-4 text-xs leading-relaxed text-[var(--color-dim)]">
-                      {inr(p.fee)} inclusive of GST at 18% (SAC 9992). Taxable value{' '}
-                      {inr(g.base)}, CGST {inr(g.cgst)}, SGST {inr(g.sgst)}.
+                  <p className={`mt-4 leading-relaxed ${T.body}`}>{p.strapline}</p>
+
+                  <div className="mt-5 flex flex-wrap gap-2">
+                    {[`${p.weeks} weeks`, `${p.contactHours} contact hours`, p.cohortSize].map((chip) => (
+                      <span key={chip} className={`rounded-full px-2.5 py-1 text-xs font-semibold ${T.chip}`}>
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
+
+                  <p className={`mt-5 text-3xl font-extrabold tracking-tight tabular-nums ${T.value}`}>
+                    {inr(p.fee)}
+                  </p>
+                  <p className={`mt-1 text-xs leading-relaxed ${T.label}`}>
+                    Inclusive of GST at 18%. Taxable {inr(g.base)}, CGST {inr(g.cgst)}, SGST {inr(g.sgst)}.
+                  </p>
+
+                  <dl className={`mt-5 space-y-3 border-t pt-5 text-sm ${T.rule}`}>
+                    {[
+                      ['Level', p.level],
+                      ['Taught', p.mode],
+                      ['Assessed', p.assessment],
+                      ['You leave with', p.outcome],
+                      ['Credential', p.credential],
+                    ].map(([k, v]) => (
+                      <div key={k}>
+                        <dt className={`text-xs font-bold uppercase tracking-wider ${T.label}`}>{k}</dt>
+                        <dd className={`mt-0.5 leading-relaxed ${T.body}`}>{v}</dd>
+                      </div>
+                    ))}
+                  </dl>
+
+                  {p.external && (
+                    <p className={`mt-4 border-t pt-4 text-xs leading-relaxed ${T.rule} ${T.label}`}>
+                      {p.external}
                     </p>
-                  );
-                })()}
-
-                <div className="mt-5 grid gap-5 border-t border-[var(--color-rule)] pt-5 md:grid-cols-2">
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-wider text-[var(--color-dim)]">How it is taught</p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-navy)]">{p.mode}</p>
-                    <p className="mt-3 text-xs font-bold uppercase tracking-wider text-[var(--color-dim)]">How it is assessed</p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-navy)]">{p.assessment}</p>
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-wider text-[var(--color-dim)]">What you leave with</p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-navy)]">{p.outcome}</p>
-                    <p className="mt-3 text-xs font-bold uppercase tracking-wider text-[var(--color-dim)]">Credential</p>
-                    <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-navy)]">{p.credential}</p>
-                    {p.external && (
-                      <p className="mt-1.5 text-sm leading-relaxed text-[var(--color-dim)]">{p.external}</p>
-                    )}
-                  </div>
-                </div>
-              </article>
-            ))}
+                  )}
+                </article>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -189,8 +250,8 @@ export default function ProgrammesPage() {
               What a credit team needs, in one place.
             </h2>
             <p className="mt-4 leading-relaxed text-[var(--color-dim)] measure">
-              Everything below is either already true or marked as outstanding. Nothing is
-              stated as held that is not held.
+              Everything below is either already true, or marked outstanding. Where a
+              thing is outstanding it says so.
             </p>
           </div>
 

@@ -113,6 +113,8 @@ export const SKILL_PROGRAMMES = [
     feeNote: 'GST-inclusive. Taxable value \u20b921,186.44 plus GST \u20b93,813.56.',
     feeSource:
       'Set at market. Indian dMAT coaching runs \u20b910,000 to \u20b925,000; a comparable live offering is \u20b915,000 for two months of daily one-hour classes, roughly 45 hours, about \u20b9333 an hour. At \u20b925,000 across 72 hours this is \u20b9347 an hour, the same per-hour rate, at the top of the published range because it carries more hours and three invigilated mocks. The \u20b9150 EUR exam fee is paid by the student directly to g.a.s.t. and is not included.',
+    icon: 'Timer',
+    treatment: 'featured',
     priority: 1,
   },
   {
@@ -135,6 +137,8 @@ export const SKILL_PROGRAMMES = [
     fee: 180000,
     feeNote: 'GST-inclusive. Taxable value \u20b91,52,542.37 plus CGST \u20b913,728.82 and SGST \u20b913,728.82.',
     feeSource: 'Set at \u20b91,80,000 inclusive of 18% GST, which is \u20b9375 per contact hour across 480 hours.',
+    icon: 'Languages',
+    treatment: 'solid',
     priority: 2,
   },
   {
@@ -155,6 +159,8 @@ export const SKILL_PROGRAMMES = [
       'Taught as a writing and research skills course with a marked portfolio, not as an application-handling service. The student writes the work; it is assessed against a published rubric.',
     fee: 42000,
     feeSource: 'Priced from Postgraduate Application Coaching in the existing catalogue',
+    icon: 'PenLine',
+    treatment: 'outline',
     priority: 2,
   },
   {
@@ -175,6 +181,8 @@ export const SKILL_PROGRAMMES = [
       'Fixed duration, evening cohort, assessed deliverables, and a professional-development audience. Structurally the closest of the five to the test-prep and professional-course merchants Bajaj already finances.',
     fee: 125000,
     feeSource: 'Priced from Executive MBA Application Coaching in the existing catalogue',
+    icon: 'Briefcase',
+    treatment: 'tinted',
     priority: 3,
   },
   {
@@ -195,6 +203,8 @@ export const SKILL_PROGRAMMES = [
       'Academic research-writing training with a substantial assessed output. The proposal is the student’s own work, produced under supervision.',
     fee: 110000,
     feeSource: 'Priced from the PhD & Research Proposal Certificate in the existing catalogue',
+    icon: 'Microscope',
+    treatment: 'outline',
     priority: 4,
   },
   {
@@ -215,6 +225,8 @@ export const SKILL_PROGRAMMES = [
       'The longest and highest-value programme, and therefore the one most likely to be examined closely. It is presented as a taught programme with module assessment, and the counselling that accompanies it is stated as a support wrapper rather than as the product.',
     fee: 200000,
     feeSource: 'Unchanged from the listed Global Career Launch programme',
+    icon: 'Plane',
+    treatment: 'tinted',
     priority: 5,
   },
 ];
