@@ -319,7 +319,7 @@ const Navbar = () => {
                 className="relative overflow-hidden px-6 py-2.5 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-[transform,filter,box-shadow] shadow-e-2 hover:shadow-e-2 transform hover:-translate-y-0.5"
               >
                 <span className="relative z-10">Book a Discovery Call</span>
-                <BorderBeam size={80} duration={7} colorFrom="#FFFFFF" colorTo="#FF9AA8" />
+                <BorderBeam size={80} duration={7} colorFrom="#FFFFFF" colorTo="#9EC0FF" />
               </Link>
               <button
                 type="button"
@@ -510,7 +510,7 @@ const Navbar = () => {
               className="relative overflow-hidden block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold hover:brightness-110 transition-[filter] shadow-e-2"
             >
               <span className="relative z-10">Book a Discovery Call</span>
-              <BorderBeam size={120} duration={8} colorFrom="#FFFFFF" colorTo="#FF9AA8" />
+              <BorderBeam size={120} duration={8} colorFrom="#FFFFFF" colorTo="#9EC0FF" />
             </Link>
             <div>
               <p className="text-xs font-semibold text-[var(--accent-on-dark)] mb-3">Connect With Us</p>

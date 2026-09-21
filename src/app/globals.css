@@ -21,33 +21,31 @@
      Their values, with one correction that is not optional. Their primary
      Their primary measured 2.86:1 against white and failed AA for text AND
      the 3:1 floor for large text and UI; their own Get-started button ships
-     that way. That structure is kept and the hues are now Axelis crimson:
-     #D4455A is bound to a SURFACE token no text utility can reach, and
-     #A51C30 (7.48:1 on white) does the work of both link colour and CTA fill.
+     that way. That structure is kept: #4F80F0 is bound to a SURFACE token no
+     text utility can reach, and #1D4ED8 (6.70:1 on white) does the work of
+     both link colour and CTA fill.
      Their muted grey #8A93A8 is 3.07:1 and is likewise caption-only; body
      secondary text uses #586179 at 6.27:1. Their footer is white, not dark;
      the dark band value is their blue-25 #16265C, which carries white at
      10.23:1. */
-  /* AXELIS BRAND v6.0 — accent moved from blue to crimson, 21 Sep 2026.
-     Navy #16265C is unchanged: it is the ground, and it was never the
-     undifferentiated part. The ACCENT was. AECC owns indigo, StudyAbroad
-     teal, IIE brick orange, and most of the category owns blue, so blue was
-     the one colour that bought Axelis nothing.
+  /* AXELIS BRAND — accent is blue. A crimson set was built and measured on
+     21 Sep 2026 and the founder chose to stay on blue for now; the study,
+     the nine candidates and the generator are in docs/brand/colour-study/,
+     so the move can be made later without redoing the work.
 
-     Measured, and every bar is cleared:
-       #A51C30 on white  7.48  (the old #1D4ED8 was 6.70 — this gains AAA)
-       #A51C30 on tint   7.09
-       #FFFFFF on #A51C30 7.48  (white label on a crimson button)
-       #FF9AA8 on navy   7.12  (replaces #9EC0FF at 7.80, still AAA)
-       #D4455A on white  4.38  SURFACES ONLY, bound to no text utility
-     Crimson FAILS on navy at 1.92, exactly as the blue did at 2.14, so the
-     dark set still carries its own accent. Never put #A51C30 on navy. */
+     Measured:
+       #1D4ED8 on white  6.70  AA   accent, links, CTA fill
+       #FFFFFF on #1D4ED8 6.70  AA   white label on a blue button
+       #9EC0FF on navy   7.80  AAA  accent on dark
+       #4F80F0 on white  3.70       SURFACES ONLY, bound to no text utility
+     #1D4ED8 FAILS on navy at 2.14, so the dark set carries its own accent.
+     Never put #1D4ED8 on navy. */
   --color-navy: #16265C;
-  --color-navy-2: #A51C30;
-  --color-axelis: #A51C30;
-  --color-axelis-accent: #A51C30;
-  --color-accent-surface: #D4455A;
-  --color-axelis-light: #FF9AA8;
+  --color-navy-2: #1D4ED8;
+  --color-axelis: #1D4ED8;
+  --color-axelis-accent: #1D4ED8;
+  --color-accent-surface: #4F80F0;
+  --color-axelis-light: #9EC0FF;
   --color-on-accent: #FFFFFF;
   --color-tint: #F7F9FC;
   --color-tint-2: #EEF2F9;
@@ -61,21 +59,21 @@
      657 token references land on brand colour without 105 files of edits. */
   --color-storm-deep: #16265C;
   --color-storm-abyss: #101B45;
-  --color-storm-mid: #A51C30;
-  --color-storm-cloud: #C23350;
+  --color-storm-mid: #1D4ED8;
+  --color-storm-cloud: #3F63E0;
   --color-storm-electric: #FFFFFF;
   --color-storm-bolt: #FFFFFF;
-  --color-storm-accent: #A51C30;
+  --color-storm-accent: #1D4ED8;
 
   /* Dawn palette — was amber. The CTA is now a solid brand blue carrying
      white text, exactly as the approved reference page sets it
      (.btn{background:var(--blue-dark); color:#FFF}). Both gradient stops are
      dark enough for white, so a CTA is legible wherever it is cut. */
-  --color-dawn-horizon: #A51C30;
-  --color-dawn-mid: #C23350;
+  --color-dawn-horizon: #1D4ED8;
+  --color-dawn-mid: #3F63E0;
   --color-dawn-clear: #586179;
-  --color-dawn-glow: #A51C30;
-  --color-dawn-glow-soft: #D4455A;
+  --color-dawn-glow: #1D4ED8;
+  --color-dawn-glow-soft: #4F80F0;
 
   /* ---- Neutral ramps, remapped to metabase.com's neutral scale ----------
      1,193 built-in Tailwind palette classes are in this codebase and 936 of
@@ -206,23 +204,23 @@
 
   --storm-deep: #16265C;
   --storm-abyss: #101B45;
-  --storm-mid: #A51C30;
-  --storm-cloud: #C23350;
+  --storm-mid: #1D4ED8;
+  --storm-cloud: #3F63E0;
   --storm-electric: #FFFFFF;
   --storm-bolt: #FFFFFF;
-  --storm-accent: #A51C30;
+  --storm-accent: #1D4ED8;
   --storm-accent-glow: rgba(29, 78, 216, 0.45);
 
-  --dawn-horizon: #A51C30;
-  --dawn-mid: #C23350;
+  --dawn-horizon: #1D4ED8;
+  --dawn-mid: #3F63E0;
   --dawn-clear: #586179;
-  --dawn-glow: #A51C30;
-  --dawn-glow-soft: #D4455A;
+  --dawn-glow: #1D4ED8;
+  --dawn-glow-soft: #4F80F0;
   --dawn-mist: rgba(29, 78, 216, 0.18);
 
   /* Accent that survives a navy ground. #2F6795 measures 2.26:1 there and
      must never be an accent on dark; this is the token for that job. */
-  --accent-on-dark: #FF9AA8;
+  --accent-on-dark: #9EC0FF;
 }
 
 /* No dark-scheme inversion. The brand ground is white on every device;
@@ -422,8 +420,8 @@ body {
    exist, sized on the radius scale.
 
    Fill is the accent, not a surface tint: a surface value cannot carry a
-   label, so #D4455A stays decorative and #A51C30 carries white text at
-   7.48:1. */
+   label, so #4F80F0 stays decorative and #1D4ED8 carries white text at
+   6.70:1. */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -846,7 +844,7 @@ h1 i, h2 i, h3 i, h4 i {
  * a 1.10:1 certificate title and an unreadable footer this month:
  *
  *   --foreground   #1B2233 on navy = 1.11:1   never
- *   --color-axelis #A51C30 on navy = 1.92:1   never
+ *   --color-axelis #1D4ED8 on navy = 2.14:1   never
  *   --color-dim    #586179 on navy = 2.32:1   never
  *
  * Put .on-dark on any element rendering over navy. It remaps those tokens, so
@@ -860,7 +858,7 @@ h1 i, h2 i, h3 i, h4 i {
   --dark-rule: #33437E;      /* hairline on navy                         */
   --dark-fg: #FFFFFF;        /* primary text, 14.33:1 AAA                */
   --dark-dim: #C3CBDD;       /* secondary text, 8.80:1 AAA               */
-  --dark-accent: #FF9AA8;    /* links, accents, focus, 7.12:1 AAA        */
+  --dark-accent: #9EC0FF;    /* links, accents, focus, 7.80:1 AAA        */
   --dark-btn-fill: #FFFFFF;  /* button fill on navy; label is --dark-bg  */
 }
 

@@ -11,8 +11,8 @@ import logoManifest from "@/data/finder-university-logos.json";
 import { COUNTRY_FLAG_CODES } from "@/data/finder-country-codes";
 
 // Midnight Dodger palette (ported from the B2B site).
-const DODGER = "#A51C30";
-const CERULEAN = "#A51C30";
+const DODGER = "#1D4ED8";
+const CERULEAN = "#1D4ED8";
 
 // Counted, not asserted.
 const DESTINATION_COUNT = new Set(

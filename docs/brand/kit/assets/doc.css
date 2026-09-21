@@ -7,7 +7,7 @@ body{margin:0; font-family:'Lato',-apple-system,'Segoe UI',sans-serif;
   font-size:10.5pt; line-height:1.55; color:#1B2233; background:#fff}
 .sheet{max-width:178mm; margin:0 auto}
 .hd{display:flex; align-items:flex-start; justify-content:space-between; gap:14mm;
-  padding-bottom:5mm; border-bottom:2px solid #A51C30}
+  padding-bottom:5mm; border-bottom:2px solid #16265C}
 .hd img{width:34mm; height:auto; display:block}
 .hd .co{text-align:right; font-size:8pt; line-height:1.5; color:#586179}
 .hd .co b{display:block; color:#16265C; font-size:9.5pt; font-weight:900; letter-spacing:-.01em}

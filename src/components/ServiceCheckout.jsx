@@ -25,7 +25,7 @@ import CheckoutButton from './CheckoutButton';
 const INR = (n) => `₹${n.toLocaleString('en-IN')}`;
 
 // The pay button was navy text on a "gradient" whose two stops both resolve
-// to #A51C30 since the palette was locked, so it was flat blue carrying navy
+// to #1D4ED8 since the palette was locked, so it was flat blue carrying navy
 // text at 2.14:1. WCAG 1.4.3 wants 4.5:1, and this is the button that takes
 // money. .btn-primary is the site's own primary control, white on the same
 // blue at 6.70:1, and it stays correct if the blue is ever changed again.
