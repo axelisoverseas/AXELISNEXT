@@ -1,0 +1,12 @@
+{
+  "_note": "Addresses marked verified were observed in real mail traffic. The two marked UNCONFIRMED were not found anywhere and must be confirmed before their signature is used.",
+  "members": [
+    {"name":"Rishabh Agrawal","role":"Founder & Director","email":"axelisoverseas@overseeducation.com","phone":"+91 90985 22711","verified":true},
+    {"name":"Naveen B","role":"Alumni Admissions Counsellor","email":"naveen@overseeducation.com","phone":"","verified":true},
+    {"name":"Arul Johnson","role":"Strategic Admission Associate","email":"arul@overseeducation.com","phone":"","verified":true},
+    {"name":"Desineedi Manasa","role":"Operations Associate","email":"manasa@overseeducation.com","phone":"","verified":true},
+    {"name":"Aviral Shukla","role":"Associate","email":"aviralshukla@overseeducation.com","phone":"","verified":true},
+    {"name":"John Daniel","role":"Co-Founder","email":"","phone":"","verified":false},
+    {"name":"Sourav Kumar Acharya","role":"Operations Associate","email":"","phone":"","verified":false}
+  ]
+}
