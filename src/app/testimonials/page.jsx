@@ -204,7 +204,7 @@ export default function TestimonialsPage() {
               <div className="text-[var(--color-dim)] text-[10px] md:text-xs mt-1">Countries</div>
             </div>
             <div className="glass-storm py-4">
-              <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">100%</div>
+              <div className="text-2xl md:text-3xl font-bold text-[var(--color-axelis)]">90%</div>
               <div className="text-[var(--color-dim)] text-[10px] md:text-xs mt-1">Visa success</div>
             </div>
           </div>
