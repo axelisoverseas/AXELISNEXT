@@ -44,7 +44,7 @@ export default function ScholarshipsPage() {
                             <span className="relative z-10 flex items-center">
                                 Check Your Eligibility <ArrowRight size={18} className="ml-2" />
                             </span>
-                            <BorderBeam size={130} duration={9} colorFrom="#4F80F0" colorTo="#ffffff" />
+                            <BorderBeam size={130} duration={9} colorFrom="#D4455A" colorTo="#ffffff" />
                         </Link>
                         <Link href="#finder" className="btn btn-primary btn-lg flex">
                             Find Applicable Programs

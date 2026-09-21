@@ -235,7 +235,7 @@ export default function ScholarshipFinder() {
             <span className="relative z-10 inline-flex items-center">
               Book a free counselling call <ArrowRight size={16} className="ml-2" />
             </span>
-            <BorderBeam size={120} duration={8} colorFrom="#ffffff" colorTo="#4F80F0" />
+            <BorderBeam size={120} duration={8} colorFrom="#ffffff" colorTo="#D4455A" />
           </a>
         </div>
       </div>

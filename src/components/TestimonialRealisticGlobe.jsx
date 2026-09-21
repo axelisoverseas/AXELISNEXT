@@ -104,7 +104,7 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
       .height(containerRef.current.clientHeight)
       .enablePointerInteraction(true)
       .showAtmosphere(true)
-      .atmosphereColor('#1D4ED8')
+      .atmosphereColor('#A51C30')
       .atmosphereAltitude(0.15)
       .htmlElementsData(markerData)
       .htmlElement(d => {
@@ -122,7 +122,7 @@ const TestimonialRealisticGlobe = React.forwardRef(({ testimonials = [], classNa
               left: 0;
               width: 100%;
               height: 100%;
-              background: ${d.isSelected ? '#ff6b35' : d.isHovered ? '#ff8c42' : '#1D4ED8'};
+              background: ${d.isSelected ? '#ff6b35' : d.isHovered ? '#ff8c42' : '#A51C30'};
               border-radius: 50%;
               box-shadow: 0 0 ${d.isSelected ? '20px' : d.isHovered ? '15px' : '10px'} rgba(79, 70, 229, 0.6);
             "></div>
