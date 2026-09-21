@@ -93,6 +93,29 @@ export const EMPANELMENT_CHECKLIST = [
  */
 export const SKILL_PROGRAMMES = [
   {
+    slug: 'dmat-preparation',
+    family: 'Test preparation',
+    title: 'dMAT preparation \u2014 Digital Master Test for APS',
+    strapline: 'The new aptitude test Indian master\u2019s applicants to Germany now have to sit.',
+    level: 'Graduates in Engineering, Commerce, Accounting, Finance, Economics, Business or Management',
+    weeks: 12,
+    contactHours: 96,
+    mode: 'Live cohort taught by Axelis faculty, plus timed practice papers under exam conditions',
+    cohortSize: 'Capped at 20',
+    assessment: 'Sectional diagnostics at entry, graded practice sets throughout, and three full mock papers sat under timed conditions with individual score reports.',
+    outcome: 'A dMAT score, which forms part of the APS documentation for affected applicants, and which the German university sees alongside the academic record.',
+    credential: 'Axelis Certificate of Completion. The dMAT itself is set and scored by g.a.s.t. and sat at an official centre.',
+    external:
+      'dMAT is administered by g.a.s.t. and sat independently. Axelis prepares candidates for it and neither sets nor scores the examination.',
+    financeable:
+      'The clearest category match Axelis has. Bajaj\u2019s own verified education partners are Aakash and ALLEN, both test-preparation coaching with fixed syllabi and timed mocks. This is the same product shape for a different examination.',
+    fee: 65000,
+    feeNote: 'GST-inclusive.',
+    feeSource: 'New programme. Fee needs founder sign-off before it goes live.',
+    priority: 1,
+    needsSignOff: true,
+  },
+  {
     slug: 'language-a1-b2',
     family: 'Language proficiency',
     title: 'German or French, A1 to B2, with examination preparation',
@@ -112,7 +135,7 @@ export const SKILL_PROGRAMMES = [
     fee: 180000,
     feeNote: 'GST-inclusive. Taxable value \u20b91,52,542.37 plus CGST \u20b913,728.82 and SGST \u20b913,728.82.',
     feeSource: 'Set at \u20b91,80,000 inclusive of 18% GST, which is \u20b9375 per contact hour across 480 hours.',
-    priority: 1,
+    priority: 2,
   },
   {
     slug: 'application-coaching',
@@ -244,6 +267,35 @@ export const CREDENTIAL_ROADMAP = [
     caveat: null,
   },
 ];
+
+/**
+ * dMAT, the facts that decide the commercial case.
+ *
+ * Verified 21 September 2026 against APS India, g.a.s.t. and contemporaneous
+ * reporting. These dates are the product: they say who must sit it, from
+ * when, and who is exempt. Anything here that later moves must be re-checked
+ * against aps-india.de and d-mat.de rather than against this file.
+ */
+export const DMAT_FACTS = {
+  whatItIs:
+    'The Digital Master Test, a new aptitude test that becomes a mandatory part of APS documentation for selected Indian master\u2019s applicants to Germany.',
+  administeredBy: 'g.a.s.t. (Gesellschaft f\u00fcr Akademische Studienvorbereitung und Testentwicklung)',
+  whoMustSit:
+    'Indian master\u2019s applicants whose previous degree falls in Engineering, Commerce, Accounting, Finance, Economics, or Business and Management.',
+  fromWhen: 'Summer semester 2027 intake onwards.',
+  notNeededFor:
+    'Winter semester 2026/27. The first certificates are not issued until 12 October 2026, so that intake is unaffected.',
+  exemption:
+    'Applicants who completed APS online registration, or submitted a complete APS application, before 29 June 2026 are exempt under transitional arrangements.',
+  firstSitting: '26 September 2026. Registration for it closed on 15 September 2026.',
+  firstCertificates: 'Available from 12 October 2026 via the g.a.s.t. test-takers\u2019 portal.',
+  notTestAs:
+    'dMAT is not TestAS and does not replace it. TestAS is a separate, long-standing test used by many German universities and is not tied to APS.',
+  sources: [
+    'https://aps-india.de/',
+    'https://www.d-mat.de/en/dmat-in-india/',
+  ],
+};
 
 /** Every figure a credit team will ask for, in one place. */
 export const LENDER_FACTS = {
