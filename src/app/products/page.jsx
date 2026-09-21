@@ -721,7 +721,7 @@ const CATALOGUE = [
   {
     kicker: 'Certifications',
     title: 'Concierge programmes',
-    body: 'Structured programmes with a written outcome guarantee, for students who want the whole thing run for them rather than advised on.',
+    body: 'Structured programmes with a written refund commitment, for students who want the whole thing run for them rather than advised on.',
     cta: 'See the programmes',
     href: '/certifications',
     span: 'lg:col-span-2 lg:row-span-1',

@@ -227,3 +227,84 @@ onto a landing page, which is how one wrong number reached three surfaces.
 See also `docs/brand/NAMING_DECISION_RECORD.md`: the product *names* are open
 for the same reason, and a wrong name on a gateway-wired page is a mis-sold
 service rather than a design error.
+
+---
+
+## 21 September 2026 — "guaranteed" retired from marketing copy
+
+Founder instruction: *"we don't deliver, you get your money back type tone."*
+
+The site made outcome promises it could not keep and contradicted itself doing it.
+`servicePromises.js` already said *"No one can guarantee a visa, an admission, an employer
+contract or an exam score, and we do not"* — while the FAQ sold a "Visa approval guarantee"
+and a meta description sold "Guaranteed admission to your dream university." The B2B site
+says *"No promised outcomes, no guaranteed visas."* Those cannot all be true.
+
+**Deleted, not softened** — no refund backs either claim:
+
+| Was | Where | Now |
+|---|---|---|
+| "Visa approval guarantee (conditions apply)" | siteData.js FAQ | A written refund on concierge programmes if we miss the outcome |
+| "Guaranteed admission to your dream university" | /products meta | You pay after you hold an offer, not before |
+| "visa assistance with guaranteed results" | /faq | Visa filing, documentation and interview preparation, handled end to end |
+
+**Relabelled** — the commitment is unchanged, only the word:
+
+- "Outcome Guaranteed" → **"We Deliver or We Refund"** (page titles, OG, Twitter)
+- "written outcome guarantee" → **"written refund commitment"** (nav, footer, /about, /products, /certifications)
+- "Success Guarantee" → **"Deliver or refund"**
+- Programme page heading "Outcome guarantee" → **"We deliver, or you get a refund"**
+
+**Scholarship wording.** "guaranteed agent scholarships" → "agent-channel scholarships".
+These awards do exist through the agent channel and are not offered to direct applicants.
+The word "guaranteed" was describing the channel, not promising every student an award.
+The underlying claim is unchanged and not reopened here.
+
+### What was deliberately left alone
+
+The contractual guarantee is the thing that makes the new tone true, so it stays:
+
+- `cancellationRefundPolicy.js` — protected percentages and SLAs, untouched
+- `terms-conditions/page.jsx` §6 — "outcome guarantees" is a defined term
+- The `guarantee: { pct, condition, promise }` objects — an **object key** read by five call
+  sites. Renaming it would have emptied the refund table on `/policies/cancellation-refund`
+  silently, with no error.
+- "Guarantee terms live in the Cancellation & Refund Policy" on each programme page, so the
+  T&C §6 pointer to a published guarantee does not dangle.
+
+Verified by rendering, not grepping: all three concierge refund rows (25%, 40%, 30%) still
+appear on the policy page, and each programme page still shows its promise, percentage and
+policy link.
+
+### Scope and magnitude, corrected in the same pass
+
+Two defects of the same class the change was meant to fix:
+
+**Scope.** Only **3 of 16** programmes carry a `guarantee` object. Every foundation, core and
+advanced programme has none. "We Deliver or We Refund" was sitting in the root `layout.js`
+title template, so it applied to `/certifications/german-a1-a2` and twelve others with no
+refund behind them. The claim is dropped from the root title and scoped everywhere else to
+"concierge tiers" or "concierge programmes". `/certifications` metadata now reads
+"Concierge Tiers Refund-Backed" rather than a blanket promise.
+
+**Magnitude.** The contract pays **25% to 40%**, never in full. "You get your money back"
+read as a full refund. The homepage promise block now states the range:
+
+> Concierge programmes name the outcome in writing. If we miss it, 25% to 40% of the fee
+> comes back to you under the published refund policy.
+
+**Also caught by a wider sweep** (`risk-free|assured|100% success|we ensure|no risk`, both
+repos, since the first pass only grepped "guarantee"):
+
+- `siteData.js` "This risk-free approach has helped 5,000+ students achieve their study
+  abroad dreams without financial stress" → "Structured this way, the risk of paying for
+  nothing sits with us rather than with you." Nothing here is risk-free; the student still
+  pays once an offer lands.
+
+Two matches were left alone deliberately: `financing/page.jsx` "That approval is assured"
+sits inside the *what we never claim* list, and the B2B "No promised outcomes, no guaranteed
+visas" is the honest statement both sites now agree with.
+
+Verified by rendering `/certifications/german-a1-a2` (no refund promise on the page, only the
+scoped footer line) alongside `/certifications/global-career-launch` (promise, 25%, and the
+policy link all present).

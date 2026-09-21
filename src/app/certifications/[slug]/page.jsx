@@ -318,7 +318,7 @@ export default async function ProgramPage({ params }) {
               )}
             </div>
 
-            {/* Certificate + guarantee rail */}
+            {/* Certificate + refund-commitment rail */}
             <aside className="lg:col-span-1 space-y-5">
               <div className="bg-white border-2 border-[var(--color-rule)] rounded-2xl p-6">
                 <BadgeCheck aria-hidden="true" size={26} className={`${accent.text} mb-3`} />
@@ -332,10 +332,10 @@ export default async function ProgramPage({ params }) {
               {program.guarantee && (
                 <div className="bg-white border-2 border-[var(--color-axelis)]/30 rounded-2xl p-6">
                   <ShieldCheck aria-hidden="true" size={26} className="text-[var(--color-axelis)] mb-3" />
-                  <h3 className="text-[var(--color-navy)] font-bold text-base mb-2">Outcome guarantee</h3>
+                  <h3 className="text-[var(--color-navy)] font-bold text-base mb-2">We deliver, or you get a refund</h3>
                   <p className="text-[var(--color-navy)] font-semibold text-sm leading-relaxed mb-2">{program.guarantee.promise}</p>
                   <p className="text-[var(--color-dim)] text-xs leading-relaxed mb-3">
-                    If the guarantee is not met, the {program.guarantee.pct}% refund is issued regardless of how far into
+                    If we do not deliver it, the {program.guarantee.pct}% refund is issued regardless of how far into
                     the programme you are.
                   </p>
                   <Link href="/policies/cancellation-refund#refund-tiers" className="text-sm text-[var(--color-axelis)] font-semibold hover:underline underline-offset-4">

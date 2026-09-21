@@ -1,6 +1,6 @@
 export const metadata = {
     title: 'Student Plans',
-    description: 'Guaranteed admission to your dream university with our Zero Consultation Fee and Zero Tuition Fee Student Plans. Risk-free global education.',
+    description: 'You pay after you hold an offer, not before. Zero Consultation Fee and Zero Tuition Fee Student Plans, so the risk of paying for nothing sits with us.',
 };
 
 export default function ProductsLayout({ children }) {

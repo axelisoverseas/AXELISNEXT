@@ -26,7 +26,7 @@ export const features = [
   {
     id: 2,
     title: "2000+ Scholarships",
-    description: "Access over 2000 scholarship opportunities worldwide. With Axelis Overseas, you can apply for scholarships across 1600+ universities with guaranteed agent scholarships available.",
+    description: "Access over 2000 scholarship opportunities worldwide. With Axelis Overseas, you can apply for scholarships across 1600+ universities, including agent-channel awards not offered to direct applicants.",
     icon: "🎓"
   },
   {
@@ -252,7 +252,7 @@ export const faqData = [
   {
     id: 2,
     question: "Do you charge any fees for our services?",
-    answer: "Two charters, both structured so the large payment follows a result rather than preceding it.\n\nGlobal Admissions Charter, ₹9,999: a refundable onboarding deposit for paid-tuition universities. It is returned in full once your visa is granted, you have arrived and your tuition is paid, so a placed student pays Axelis nothing. It is also refunded if you receive zero offers.\n\nEurope Public Charter, ₹19,999 plus a ₹1,80,000 success fee, ₹1,99,999 in total: the route to tuition-free public universities. The success fee is payable only if and when you accept an offer. Tuition-free study in Europe is what makes it worth paying, and it saves ₹80+ lakhs in tuition fees.\n\nFree either way: the first consultation and profile assessment, university shortlisting, and general guidance on how the process works.\n\nThis risk-free approach has helped 5,000+ students achieve their study abroad dreams without financial stress.\n\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
+    answer: "Two charters, both structured so the large payment follows a result rather than preceding it.\n\nGlobal Admissions Charter, ₹9,999: a refundable onboarding deposit for paid-tuition universities. It is returned in full once your visa is granted, you have arrived and your tuition is paid, so a placed student pays Axelis nothing. It is also refunded if you receive zero offers.\n\nEurope Public Charter, ₹19,999 plus a ₹1,80,000 success fee, ₹1,99,999 in total: the route to tuition-free public universities. The success fee is payable only if and when you accept an offer. Tuition-free study in Europe is what makes it worth paying, and it saves ₹80+ lakhs in tuition fees.\n\nFree either way: the first consultation and profile assessment, university shortlisting, and general guidance on how the process works.\n\nStructured this way, the risk of paying for nothing sits with us rather than with you.\n\n[Zero Tuition Fee Universities - Complete Guide](https://youtu.be/I7EzLc62Y6c)\n\n[Our Student Plan Programs](/products) | [Success Stories](/testimonials)",
     category: "Pricing",
     multimedia: {
       video: "https://youtu.be/I7EzLc62Y6c",
@@ -262,7 +262,7 @@ export const faqData = [
   {
     id: 3,
     question: "How many scholarships can I apply for?",
-    answer: "Over 2000+ scholarship opportunities are searchable through us: merit awards, need-based aid, government schemes, university-specific awards, field-specific funding in STEM, arts and business, and diversity scholarships.\n\nAgent scholarships guaranteed across 1600+ universities. We match against your actual profile, help with the applications, and track the deadlines, which are usually months earlier than the application deadline and are the most common reason students miss out.\n\n85% of our students receive some form of financial aid, typically $8,000 to $25,000 a year. A few get full funding covering tuition and living costs.\n\n[Canada Scholarships Guide](/blog/canada-scholarships) | [UK Scholarship Opportunities](/blog/uk-scholarships) | [All Scholarship Resources](/scholarships)",
+    answer: "Over 2000+ scholarship opportunities are searchable through us: merit awards, need-based aid, government schemes, university-specific awards, field-specific funding in STEM, arts and business, and diversity scholarships.\n\nAgent-channel scholarships at 1600+ universities. We match against your actual profile, help with the applications, and track the deadlines, which are usually months earlier than the application deadline and are the most common reason students miss out.\n\n85% of our students receive some form of financial aid, typically $8,000 to $25,000 a year. A few get full funding covering tuition and living costs.\n\n[Canada Scholarships Guide](/blog/canada-scholarships) | [UK Scholarship Opportunities](/blog/uk-scholarships) | [All Scholarship Resources](/scholarships)",
     category: "Scholarships",
     multimedia: {
       relatedLinks: ["/blog/canada-scholarships", "/blog/uk-scholarships", "/scholarships"]
@@ -310,7 +310,7 @@ export const faqData = [
   {
     id: 10,
     question: "What makes Axelis different from other consultancies?",
-    answer: "Pricing first, because it is the part that differs most. You pay after an offer, not before: the ZCF and ZTF Student Plans both work that way, so the risk of paying for nothing sits with us rather than you.\n\nThe scope is 29+ destination countries, 35,000+ universities, 2000+ scholarship opportunities and 25+ loan provider partnerships, with support running from the first application through to settling in.\n\nWhat that has produced:\n• 5,000+ students placed\n• 4,500+ visas approved\n• ₹3+ Cr in scholarships won\n• ₹30+ Cr in education loans facilitated\n• 95%+ visa approval rate\n• 85% scholarship success rate\n• ₹80+ lakhs saved through tuition-free programs\n\nWe commit to these:\n• Agent scholarships guaranteed across 1600+ universities\n• Visa approval guarantee (conditions apply)\n• Post-arrival support commitment\n• Transparent pricing with no hidden costs\n\nThe counselling is done by people with international education backgrounds and country specialists, supported by an application tracking platform, document management, and an alumni network you can actually talk to. Behind that sit direct university partnerships, accommodation providers and lender relationships.\n\nThe practical difference is that one counsellor stays with you from shortlist to arrival, and every fee is published before you pay it.",
+    answer: "Pricing first, because it is the part that differs most. You pay after an offer, not before: the ZCF and ZTF Student Plans both work that way, so the risk of paying for nothing sits with us rather than you.\n\nThe scope is 29+ destination countries, 35,000+ universities, 2000+ scholarship opportunities and 25+ loan provider partnerships, with support running from the first application through to settling in.\n\nWhat that has produced:\n• 5,000+ students placed\n• 4,500+ visas approved\n• ₹3+ Cr in scholarships won\n• ₹30+ Cr in education loans facilitated\n• 95%+ visa approval rate\n• 85% scholarship success rate\n• ₹80+ lakhs saved through tuition-free programs\n\nWe commit to these:\n• Agent-channel scholarships at 1600+ universities\n• A written refund on concierge programmes if we miss the outcome\n• Post-arrival support commitment\n• Transparent pricing with no hidden costs\n\nThe counselling is done by people with international education backgrounds and country specialists, supported by an application tracking platform, document management, and an alumni network you can actually talk to. Behind that sit direct university partnerships, accommodation providers and lender relationships.\n\nThe practical difference is that one counsellor stays with you from shortlist to arrival, and every fee is published before you pay it.",
     category: "About Us"
   },
   {
@@ -436,7 +436,7 @@ export const faqData = [
   {
     id: 30,
     question: "What scholarships are available for Indian students studying abroad in 2025?",
-    answer: "Government scholarships, the largest awards available: Chevening in the UK, fully funded for a master's including living costs. Fulbright-Nehru in the USA, fully funded for master's and PhD. DAAD in Germany at €934 a month plus travel. Australia Awards, full tuition plus a living allowance. Vanier in Canada at CAD 50,000 a year for a PhD. Erasmus Mundus across Europe at €1,400 a month plus tuition.\n\nUniversity merit awards are smaller but far easier to win: £2,000 to £10,000 off tuition in the UK, $5,000 to $30,000 a year in the USA, CAD 3,000 to 15,000 in Canada, AUD 5,000 to 25,000 in Australia.\n\nThere are also field-specific awards, with the largest amounts in STEM, alongside women in engineering and technology scholarships, sports scholarships mostly in the USA, and arts funding.\n\nThrough our 1600+ university partners we hold guaranteed agent scholarships and discounts that are not offered to direct applicants, averaging ₹3 to 8 lakh.\n\nApply six to twelve months before the intake, because the big government awards close long before university applications do. Apply to several at once, and align your statement of purpose to what each one is actually funding rather than sending the same one everywhere.\n\nOur Bengaluru team has helped students secure ₹3+ crores in total scholarships to date.",
+    answer: "Government scholarships, the largest awards available: Chevening in the UK, fully funded for a master's including living costs. Fulbright-Nehru in the USA, fully funded for master's and PhD. DAAD in Germany at €934 a month plus travel. Australia Awards, full tuition plus a living allowance. Vanier in Canada at CAD 50,000 a year for a PhD. Erasmus Mundus across Europe at €1,400 a month plus tuition.\n\nUniversity merit awards are smaller but far easier to win: £2,000 to £10,000 off tuition in the UK, $5,000 to $30,000 a year in the USA, CAD 3,000 to 15,000 in Canada, AUD 5,000 to 25,000 in Australia.\n\nThere are also field-specific awards, with the largest amounts in STEM, alongside women in engineering and technology scholarships, sports scholarships mostly in the USA, and arts funding.\n\nThrough our 1600+ university partners we hold agent-channel scholarships and discounts that are not offered to direct applicants, averaging ₹3 to 8 lakh.\n\nApply six to twelve months before the intake, because the big government awards close long before university applications do. Apply to several at once, and align your statement of purpose to what each one is actually funding rather than sending the same one everywhere.\n\nOur Bengaluru team has helped students secure ₹3+ crores in total scholarships to date.",
     category: "Scholarships"
   },
   {
@@ -967,8 +967,8 @@ export const productBenefits = [
   },
   {
     id: 2,
-    title: "Success Guarantee",
-    description: "We guarantee university offers or provide full/partial refunds as per policy.",
+    title: "Deliver or refund",
+    description: "Concierge programmes name the outcome in writing. If we miss it, 25% to 40% of the fee comes back to you under the published refund policy.",
     icon: "✅"
   },
   {

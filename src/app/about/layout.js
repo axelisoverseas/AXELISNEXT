@@ -14,7 +14,7 @@ const organizationLd = {
     url: 'https://overseeducation.com',
     logo: 'https://overseeducation.com/1yellow%20svg%20logoaxelis.svg',
     description:
-        "India's study-abroad consultancy across 29 destination markets, with an in-house certification catalogue and a written outcome guarantee on concierge programmes.",
+        "India's study-abroad consultancy across 29 destination markets, with an in-house certification catalogue and a written refund commitment on concierge programmes.",
     foundingDate: '2023-07-18',
     identifier: {
         '@type': 'PropertyValue',

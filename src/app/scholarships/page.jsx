@@ -78,7 +78,7 @@ export default function ScholarshipsPage() {
                                 <GraduationCap size={32} />
                             </div>
                             <h3 className="text-xl font-bold text-slate-900 mb-2">₹3+ Crores Secured</h3>
-                            <p className="text-[var(--color-dim)]">Our students have secured over ₹3 crores in guaranteed scholarships.</p>
+                            <p className="text-[var(--color-dim)]">Our students have secured over ₹3 crores in scholarships.</p>
                         </div>
                     </div>
                 </div>
@@ -160,7 +160,7 @@ export default function ScholarshipsPage() {
                                 </li>
                                 <li className="flex items-start">
                                     <CheckCircle size={20} className="text-purple-500 mr-3 shrink-0 mt-0.5" />
-                                    <span className="text-slate-700">Guaranteed reductions ranging from £2,000 to £10,000 equivalent.</span>
+                                    <span className="text-slate-700">Agent-channel reductions ranging from £2,000 to £10,000 equivalent.</span>
                                 </li>
                             </ul>
                         </div>

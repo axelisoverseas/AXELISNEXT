@@ -3,8 +3,8 @@ import { programs, catalogueStats, formatINR } from '../../data/certificationPro
 const priceRange = `${formatINR(catalogueStats.priceFloor)} to ${formatINR(catalogueStats.priceCeiling)}`;
 
 export const metadata = {
-  title: 'Certification Programmes. Outcome Guaranteed, EMI Available',
-  description: `Axelis end-to-end certification programmes, ${priceRange}, each with a written outcome guarantee. Application coaching, language certification, Executive MBA prep, PhD and fellowship applications, and Global Career Launch. EMI available.`,
+  title: 'Certification Programmes. Concierge Tiers Refund-Backed, EMI Available',
+  description: `Axelis end-to-end certification programmes, ${priceRange}, concierge tiers carrying a written refund commitment. Application coaching, language certification, Executive MBA prep, PhD and fellowship applications, and Global Career Launch. EMI available.`,
   keywords: [
     'study abroad certification', 'application coaching certificate',
     'German CEFR B1 course India', 'French CEFR B1 course India',
@@ -15,8 +15,8 @@ export const metadata = {
   ],
   alternates: { canonical: 'https://overseeducation.com/certifications' },
   openGraph: {
-    title: 'Axelis Certification Programmes. Outcome Guaranteed',
-    description: `Earn a verifiable credential on the way to your offer letter. ${priceRange}, written outcome guarantee, EMI available.`,
+    title: 'Axelis Certification Programmes. Concierge Tiers Refund-Backed',
+    description: `Earn a verifiable credential on the way to your offer letter. ${priceRange}, concierge tiers refund-backed, EMI available.`,
     url: 'https://overseeducation.com/certifications',
     siteName: 'Axelis Overseas Education',
     locale: 'en_IN',
@@ -24,7 +24,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axelis Certification Programmes. Outcome Guaranteed',
+    title: 'Axelis Certification Programmes. Concierge Tiers Refund-Backed',
     description: `Application coaching, languages to CEFR B1, Executive MBA and PhD support. ${priceRange}. EMI available.`,
   },
 };

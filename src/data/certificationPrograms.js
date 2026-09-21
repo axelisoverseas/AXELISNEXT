@@ -74,7 +74,7 @@ export const TIERS = [
   {
     id: 'concierge',
     name: 'Concierge',
-    tagline: 'End-to-end, one counsellor, written outcome guarantee.',
+    tagline: 'End-to-end, one counsellor. We miss it, you get a refund.',
     description:
       'Application, language, visa and first-90-days-abroad support in a single engagement. Capped cohorts. EMI available.',
     accent: 'dawn-glow',
@@ -118,7 +118,7 @@ export const programs = [
     summary:
       'Application, language, visa and your first ninety days abroad, run end to end by one counsellor.',
     description:
-      'Our flagship programme, and the one the rest of the catalogue is built around. Twelve months with a single named counsellor covering university applications, language certification to the level your destination requires, the visa file, accommodation, and the first ninety days after you land. Written outcome guarantee.',
+      'Our flagship programme, and the one the rest of the catalogue is built around. Twelve months with a single named counsellor covering university applications, language certification to the level your destination requires, the visa file, accommodation, and the first ninety days after you land. If we miss it, the refund is written into the contract.',
     outcomes: [
       'Admission to a university on your agreed shortlist',
       'Language certification to your destination’s required level',
@@ -152,7 +152,7 @@ export const programs = [
     summary:
       'Funded-PhD and fellowship applications run end to end, from proposal through supervisor placement to visa.',
     description:
-      'Funded doctoral places turn on a proposal a supervisor wants to take on and a funding application that lands in the same cycle. Fifteen months with both a counsellor and a research supervisor covering proposal development, supervisor placement, fellowship applications, and the visa file. Written outcome guarantee.',
+      'Funded doctoral places turn on a proposal a supervisor wants to take on and a funding application that lands in the same cycle. Fifteen months with both a counsellor and a research supervisor covering proposal development, supervisor placement, fellowship applications, and the visa file. If we miss it, the refund is written into the contract.',
     outcomes: [
       'A research proposal developed with an academic supervisor',
       'Supervisor outreach through to a confirmed placement conversation',
@@ -186,7 +186,7 @@ export const programs = [
     summary:
       'Executive MBA admission run end to end, including financing, relocation and the move itself.',
     description:
-      'Our most senior engagement, for candidates applying to top-tier Executive MBA programmes while working. Fifteen months covering school selection, essays, recommenders, interviews, financing and relocation, with one counsellor across the whole thing. Written outcome guarantee.',
+      'Our most senior engagement, for candidates applying to top-tier Executive MBA programmes while working. Fifteen months covering school selection, essays, recommenders, interviews, financing and relocation, with one counsellor across the whole thing. If we miss it, the refund is written into the contract.',
     outcomes: [
       'Admission to a school on your agreed shortlist',
       'Essays, recommenders and interviews prepared end to end',

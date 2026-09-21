@@ -134,7 +134,7 @@ const FAQPage = () => {
                   <div className="bg-[var(--color-tint)] p-6 rounded-3xl text-[var(--color-navy)] shadow-e-3">
                     <ShieldCheck className="text-[var(--color-navy)] mb-4" size={32} />
                     <h4 className="font-bold mb-2">95% Visa Success</h4>
-                    <p className="text-[var(--color-navy)] text-xs leading-relaxed">Highly specialized visa assistance with guaranteed results.</p>
+                    <p className="text-[var(--color-navy)] text-xs leading-relaxed">Visa filing, documentation and interview preparation, handled end to end.</p>
                   </div>
                 </div>
               </div>

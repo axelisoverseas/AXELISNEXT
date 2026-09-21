@@ -164,7 +164,7 @@ export default function CertificationsPage() {
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed mb-10">
             End-to-end concierge programmes, {formatINR(catalogueStats.priceFloor)} to {formatINR(catalogueStats.priceCeiling)},
-            each carrying a written outcome guarantee. One counsellor, start to finish.
+            each carrying a written refund commitment. One counsellor, start to finish.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center">

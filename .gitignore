@@ -61,3 +61,6 @@ test-results/
 playwright-report/
 
 .DS_Store
+
+# Real student PII from incentive sheets — never commit (no per-student consent)
+docs/students/
