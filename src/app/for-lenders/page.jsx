@@ -61,17 +61,12 @@ export default function ForLendersPage() {
       <section id="empanelment" className="sec scroll-mt-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <p className="label">For lending partners</p>
-            <h2 className="mt-3 text-2xl font-bold tracking-tight text-[var(--color-navy)] sm:text-3xl">
-              What a credit team needs, in one place.
+            <h2 className="text-2xl font-bold tracking-tight text-[var(--color-navy)] sm:text-3xl">
+              Empanelment checklist
             </h2>
-            <p className="mt-4 leading-relaxed text-[var(--color-dim)] measure">
-              Everything below is either already true, or marked outstanding. Where a
-              thing is outstanding it says so.
-            </p>
           </div>
 
-          <div className="mt-10 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-rule)]">
+          <div className="mt-8 overflow-hidden rounded-[var(--radius-xl)] border border-[var(--color-rule)]">
             <table className="w-full text-sm">
               <caption className="sr-only">Lender empanelment checklist</caption>
               <tbody>

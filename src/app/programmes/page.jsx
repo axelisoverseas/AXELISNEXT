@@ -122,7 +122,7 @@ export default function ProgrammesPage() {
               See all {SKILL_PROGRAMMES.length} programmes
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
-            <Link href="#empanelment" className="btn btn-secondary btn-lg">
+            <Link href="/for-lenders" className="btn btn-secondary btn-lg">
               Information for lenders
             </Link>
           </div>
