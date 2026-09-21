@@ -19,7 +19,12 @@ Run:  python3 scripts/build-student-roster.py && python3 scripts/student-roster-
 import csv, json, io, re, difflib, sys, os
 B="/Users/rishabhagrawal/Downloads/Personal_Backup_Cardiff_Uni/Downloads/15 march downloads backup"
 T="/Users/rishabhagrawal/Downloads/axelis-student-testimonials/students.csv"
-ALIAS={'ishaanmaalik':'ishaanmalik','rajatlimayee':'rajatlimaye'}
+# Spelling aliases are real student names, so the map lives beside the roster
+# in the gitignored docs/students/ rather than in tracked source.
+try:
+    ALIAS = json.load(open('docs/students/name-aliases.json'))
+except FileNotFoundError:
+    ALIAS = {}
 def norm(n):
     k=re.sub(r'[^a-z]','',n.lower())
     return ALIAS.get(k,k)

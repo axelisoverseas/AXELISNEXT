@@ -122,21 +122,22 @@ Four sources merged and de-duplicated into `docs/students/NAMES_FOR_CONFIRMATION
 | C | 27 | Converted, outcome not recorded |
 | D | 20 | **Dropped — must never be counted as placed** |
 
-**Founder decisions already applied:** Sai Vikas confirmed and kept (his
-university is still unresolved: Maynooth in SEP'24, DePaul in the master sheet).
-One student was removed at the founder's instruction from every extracted file.
+**Founder decisions already applied:** one student confirmed and kept, though
+their university is still unresolved across two sheets; one student removed at
+the founder's instruction from every extracted file. Both are named in
+`docs/students/NAMES_FOR_CONFIRMATION.md`, which is gitignored.
 
 **Still needs the founder:**
 
-- **Two conflicts.** Ishaan Maalik and Shubham Pingley appear in the incentive
-  sheets (commission paid) *and* are marked dropped in the converted-leads sheet.
-- **Jitesh Jha.** He is live on `/testimonials` as placed at TU Dublin. A bank
-  statement on this laptop records a refund of ₹1,26,070 to him on 01-Aug-2025.
-  A refund has ordinary explanations, so this is not an accusation, but a
-  refunded student used as a placement testimonial needs checking. The detail is
-  deliberately kept out of every file — ask in session.
-- **Esha Chandrakant Kotian.** A real converted student, but no local file
-  records a university, intake or outcome for her.
+- **Two conflicts.** Two students appear in the incentive sheets, meaning
+  commission was paid, *and* are marked dropped in the converted-leads sheet.
+  Those cannot both be right.
+- **One student is live on `/testimonials` as placed, and a finance record on
+  this laptop disagrees with that.** It is not an accusation and there are
+  ordinary explanations, but it needs checking before the name is reused. The
+  detail is deliberately not written into any tracked file. Ask in session.
+- **One converted student has no university, intake or outcome** in any local
+  file.
 
 **Google Drive is largely unread.** About 25 roster-shaped files there are
 `.gsheet` pointers with no local content, including *closing students axelis
@@ -239,7 +240,8 @@ all in `public/brand/`.
 - Two per-destination stats still read 95%. Different claim from the Axelis
   rate, deliberately left alone.
 - Whether `#ffde59`, the retired logo yellow, is really dead.
-- The two student conflicts, Jitesh Jha, and the Sai Vikas university.
+- The two student conflicts, the testimonial-versus-finance discrepancy, and
+  the unresolved university. All named in the gitignored roster.
 - Slogan split in §3.
 
 **Design / build:**
@@ -256,7 +258,7 @@ all in `public/brand/`.
 
 **Uncommitted right now:** `HANDOVER_SESSION.md` (modified before this session),
 `scripts/student-roster-report.py` (the permission classifier blocked the amend;
-the edits add the Esha and Drive notes), and `docs/brand/kit/` plus two preview
+the edits add the unresolved-student and Drive notes), and `docs/brand/kit/` plus two preview
 PNGs, untracked.
 
 ---
