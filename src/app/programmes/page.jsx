@@ -6,7 +6,10 @@ import {
   EMPANELMENT_CHECKLIST,
   CREDENTIAL_ROADMAP,
   LENDER_FACTS,
+  gstBreakdown,
 } from '@/data/skillProgrammes';
+
+const inr = (n) => `\u20b9${n.toLocaleString('en-IN')}`;
 
 /**
  * The skill-programme catalogue, structured for lender empanelment.
@@ -135,7 +138,7 @@ export default function ProgrammesPage() {
                     ['Contact hours', `${p.contactHours}`],
                     ['Level', p.level],
                     ['Cohort', p.cohortSize],
-                    ['Fee', `\u20b9${p.fee.toLocaleString('en-IN')}`],
+                    ['Fee', `${inr(p.fee)} incl. GST`],
                   ].map(([k, v]) => (
                     <div key={k}>
                       <dt className="text-[var(--color-dim)]">{k}</dt>
@@ -143,6 +146,16 @@ export default function ProgrammesPage() {
                     </div>
                   ))}
                 </dl>
+
+                {(() => {
+                  const g = gstBreakdown(p.fee);
+                  return (
+                    <p className="mt-4 text-xs leading-relaxed text-[var(--color-dim)]">
+                      {inr(p.fee)} inclusive of GST at 18% (SAC 9992). Taxable value{' '}
+                      {inr(g.base)}, CGST {inr(g.cgst)}, SGST {inr(g.sgst)}.
+                    </p>
+                  );
+                })()}
 
                 <div className="mt-5 grid gap-5 border-t border-[var(--color-rule)] pt-5 md:grid-cols-2">
                   <div>

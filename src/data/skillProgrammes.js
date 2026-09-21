@@ -37,6 +37,31 @@
  * until a step is actually complete it is listed as a plan, not a claim.
  */
 
+
+/**
+ * GST, computed rather than typed.
+ *
+ * Training and coaching is SAC 9992 at 18%, which is the rate already used on
+ * /services. Published fees here are GST-INCLUSIVE, so the taxable value is
+ * back-computed. Doing it in code means an invoice and a page can never
+ * disagree, which is the first thing a lender or an auditor checks.
+ */
+export const GST_RATE = 0.18;
+
+export function gstBreakdown(inclusiveTotal) {
+  const round2 = (n) => Math.round(n * 100) / 100;
+  const base = round2(inclusiveTotal / (1 + GST_RATE));
+  const gst = round2(inclusiveTotal - base);
+  return {
+    total: inclusiveTotal,
+    base,
+    gst,
+    cgst: round2(gst / 2),
+    sgst: round2(gst / 2),
+    rate: GST_RATE,
+  };
+}
+
 /** Flip when Bajaj merchant EMI is genuinely live. Mirrors BAJAJ_EMI_LIVE. */
 export const LENDER_EMI_LIVE = false;
 
@@ -56,6 +81,8 @@ export const EMPANELMENT_CHECKLIST = [
   { item: 'Verifiable credential', value: 'Unique certificate ID, checkable at overseeducation.com/verify', ready: true },
   { item: 'Payment gateway already live', value: 'Cashfree, PCI-DSS, card EMI on 6 to 24 months', ready: true },
   { item: 'Third-party credential alignment', value: 'In progress. See the roadmap below.', ready: false },
+  { item: 'Teaching faculty', value: 'Programmes are delivered by Axelis language and admissions faculty, not by self-paced material. Language faculty cover CEFR A1 to B2 and examination preparation.', ready: true },
+  { item: 'Attendance and completion records', value: 'Required before any subvented lender arrangement, because clawback is tied to non-completion. To be confirmed.', ready: false },
 ];
 
 /**
@@ -66,23 +93,25 @@ export const EMPANELMENT_CHECKLIST = [
  */
 export const SKILL_PROGRAMMES = [
   {
-    slug: 'language-b1',
+    slug: 'language-a1-b2',
     family: 'Language proficiency',
-    title: 'German and French to CEFR B1',
-    strapline: 'Exam-ready language training benchmarked to an international standard.',
-    level: 'A1 to B1, CEFR',
-    weeks: 24,
-    contactHours: 120,
-    mode: 'Live online cohort, twice weekly, plus graded homework',
+    title: 'German or French, A1 to B2, with examination preparation',
+    strapline: 'The full CEFR ladder, taught live, ending in exam-ready B2.',
+    level: 'A1 to B2, CEFR. No prior language required.',
+    weeks: 48,
+    contactHours: 480,
+    mode: 'Live cohort taught by Axelis language faculty, four sessions a week, plus graded homework and speaking practice',
     cohortSize: 'Capped at 15',
-    assessment: 'Continuous graded assignments, a mock at each CEFR level, and a final assessment mapped to Goethe-Zertifikat B1 or DELF B1 task types.',
-    outcome: 'A CEFR B1 level of German or French, which is the level most German and French public universities require for a taught degree.',
-    credential: 'Axelis Certificate of Completion, with the CEFR level assessed against stated criteria',
-    external: 'Students sit the Goethe-Institut or Alliance Française examination independently. Axelis prepares for it and does not issue it.',
+    assessment: 'Graded assignments throughout, a written and spoken assessment at the end of each CEFR level, and full mock papers under timed conditions in the final block.',
+    outcome: 'A CEFR B2 level, which is above the B1 most German and French public universities require for a taught degree, and which opens German-taught programmes rather than only English-taught ones.',
+    credential: 'Axelis Certificate of Completion, stating the CEFR level reached and assessed against published criteria',
+    external:
+      'Students sit the Goethe-Institut, TestDaF or DELF/DALF examination independently. Axelis prepares for those examinations and does not issue them.',
     financeable:
-      'The clearest case of the five. CEFR is an international framework, the syllabus is fixed, contact hours are countable, and the assessment maps to a third-party examination. This is a language course by any definition a lender uses.',
-    fee: 113000,
-    feeSource: 'A1\u2013A2 (\u20b928,000) plus B1 Intensive (\u20b985,000), both already in the catalogue',
+      'The strongest of the five by some distance. CEFR is an international framework, 480 contact hours are countable and verifiable against a timetable, the faculty is named, and the assessment maps to third-party examinations. No reasonable reading calls this a consultancy fee.',
+    fee: 180000,
+    feeNote: 'GST-inclusive. Taxable value \u20b91,52,542.37 plus CGST \u20b913,728.82 and SGST \u20b913,728.82.',
+    feeSource: 'Set at \u20b91,80,000 inclusive of 18% GST, which is \u20b9375 per contact hour across 480 hours.',
     priority: 1,
   },
   {
