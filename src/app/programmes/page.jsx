@@ -257,9 +257,15 @@ export default function ProgrammesPage() {
                     <p className="mt-2 text-sm leading-relaxed text-[var(--color-navy)]">
                       <span className="font-semibold">Why it matters. </span>{s.why}
                     </p>
-                    <p className="mt-3 text-xs font-bold uppercase tracking-wider text-[var(--color-axelis)]">
-                      Status: {s.status}
+                    <p className="mt-3 text-sm leading-relaxed text-[var(--color-dim)]">
+                      <span className="text-xs font-bold uppercase tracking-wider text-[var(--color-axelis)]">Status. </span>
+                      {s.status}
                     </p>
+                    {s.caveat && (
+                      <p className="mt-2 rounded-[var(--radius-md)] border border-[var(--color-rule)] bg-[var(--color-tint)] p-3 text-sm leading-relaxed text-[var(--color-navy)]">
+                        <span className="font-bold">Read this carefully. </span>{s.caveat}
+                      </p>
+                    )}
                   </div>
                 </div>
               </li>

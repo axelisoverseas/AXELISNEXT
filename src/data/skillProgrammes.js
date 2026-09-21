@@ -7,8 +7,13 @@
  * approved list. That is a category judgement, not a rejection of Axelis: a
  * lender finances a COURSE, which has a syllabus, contact hours, an
  * assessment and a credential, and it declines a SERVICE RETAINER, which has
- * deliverables and a counsellor. AccioJob and AlmaBetter are financed because
- * what they sell is unambiguously the former.
+ * deliverables and a counsellor.
+ *
+ * Bajaj's own verified education partners are Aakash, ALLEN and Infinity
+ * Learn: test-prep coaching with fixed syllabi. That is the shape to match.
+ * The widely repeated claim that AccioJob and AlmaBetter are Bajaj-financed
+ * could NOT be substantiated from any Bajaj source and must not be asserted
+ * in a pitch.
  *
  * The five families below are the ones Axelis already named to Bajaj in the
  * 9 Sep 2026 outreach, verbatim:
@@ -111,7 +116,7 @@ export const SKILL_PROGRAMMES = [
     credential: 'Axelis Certificate of Completion, awarded on assessment',
     external: null,
     financeable:
-      'Fixed duration, evening cohort, assessed deliverables, and a professional-development audience. Structurally the closest of the five to what AccioJob and AlmaBetter already finance.',
+      'Fixed duration, evening cohort, assessed deliverables, and a professional-development audience. Structurally the closest of the five to the test-prep and professional-course merchants Bajaj already finances.',
     priority: 3,
   },
   {
@@ -160,34 +165,44 @@ export const SKILL_PROGRAMMES = [
  * from an NSQF-aligned credential" is a far stronger answer than silence, and
  * it is one a credit team can diligence.
  */
+/**
+ * The route to a credential that is not self-issued.
+ *
+ * Ordered by what actually moves a lender, verified against primary sources on
+ * 21 Sep 2026. Nothing here is claimed as held.
+ */
 export const CREDENTIAL_ROADMAP = [
   {
+    step: 'MEP/Q4401, Career and Education Counsellor \u2014 NSQF Level 5',
+    what: 'A national qualification already approved by the NSQC on 28 July 2022, owned by the Management & Entrepreneurship and Professional Skills Council. NQR code 2022/ETR/MEPSC/06152 v1.0, 18 credits. Its official description covers linking candidates to education opportunities "in India and abroad", and it maps to NCO-2015/2423.0100, which names "Admission Counsellor" and "Education Consultant" in the national framework.',
+    why: 'It is the only exact-fit national qualification for what Axelis actually does, it already exists so nothing has to be written, and a credit officer can verify it independently at nqr.gov.in. Delivery is 290 hours classroom or 250 blended.',
+    status: 'To be scoped. Requires NSDC training-partner registration, then centre accreditation, then roughly \u20b96,000 per job-role affiliation. Centre accreditation involves a physical inspection, which is the real constraint for a company without a classroom. Whether blended mode is permitted decides whether this takes weeks or months, and MEPSC can answer that in one call.',
+    verified: false,
+    caveat: 'It certifies the counsellor, not the student. It creates a new financeable programme sold to graduates who want to become counsellors. It does not reclassify a fee paid by a student going abroad.',
+  },
+  {
     step: 'ISO 21001:2018, Educational Organisations Management System',
-    what: 'A management-system standard specific to education providers. It certifies how the organisation runs its teaching, assessment and learner support, not the content of any one course.',
-    why: 'Fastest credible third-party mark for a training provider, and it speaks directly to the questions a credit team asks about delivery and refunds.',
-    status: 'Not started',
+    what: 'A management-system standard for education providers. It certifies how the organisation runs teaching, assessment and learner support. It confers no academic or vocational recognition on any course.',
+    why: 'Supporting evidence for delivery and refund governance, obtainable in parallel with everything else.',
+    status: 'Not started. Take three written quotes and use only a certification body listed on the NABCB directory, carrying the NABCB or IAF mark. ISO 21001 accreditation has only existed since 2022 and the market has mills in it; a certificate advertised at a few thousand rupees is worth nothing.',
     verified: false,
+    caveat: null,
   },
   {
-    step: 'NSDC partnership and NSQF-aligned certification',
-    what: 'Affiliation with the National Skill Development Corporation, delivering against a Qualification Pack and National Occupational Standards, with co-branded certification.',
-    why: 'The credential most Indian lenders recognise without explanation, and the one that moves a course from self-issued to nationally framed.',
-    status: 'To be scoped. Requires identifying a QP that genuinely fits these programmes rather than forcing a mapping.',
-    verified: false,
-  },
-  {
-    step: 'Sector Skill Council alignment',
-    what: 'Affiliation with the relevant council for education and professional services, mapping each programme to a published occupational standard.',
-    why: 'Provides the QP that NSDC certification is delivered against.',
-    status: 'To be scoped',
-    verified: false,
-  },
-  {
-    step: 'Goethe-Institut or Alliance Française examination-preparation alignment',
+    step: 'Goethe-Institut or Alliance Fran\u00e7aise preparation alignment',
     what: 'Formal recognition as a preparation provider for the B1 examinations the language programme already targets.',
     why: 'The language programme is the strongest candidate for external alignment because it already maps to a published international framework.',
     status: 'To be scoped',
     verified: false,
+    caveat: null,
+  },
+  {
+    step: 'NASSCOM FutureSkills Prime',
+    what: 'The MeitY and NASSCOM co-branding route that AlmaBetter uses.',
+    why: 'Listed here to close it off rather than leave it as an open question.',
+    status: 'Not applicable. FutureSkills Prime is a digital and deep-tech initiative covering AI, cloud, cyber and data, and NASSCOM eligibility keys off revenue from IT services. This is why AlmaBetter\u2019s route cannot simply be copied.',
+    verified: false,
+    caveat: null,
   },
 ];
 
