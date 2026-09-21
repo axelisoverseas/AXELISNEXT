@@ -98,8 +98,8 @@ export const SKILL_PROGRAMMES = [
     title: 'dMAT preparation \u2014 Digital Master Test for APS',
     strapline: 'The new aptitude test Indian master\u2019s applicants to Germany now have to sit.',
     level: 'Graduates in Engineering, Commerce, Accounting, Finance, Economics, Business or Management',
-    weeks: 12,
-    contactHours: 96,
+    weeks: 8,
+    contactHours: 72,
     mode: 'Live cohort taught by Axelis faculty, plus timed practice papers under exam conditions',
     cohortSize: 'Capped at 20',
     assessment: 'Sectional diagnostics at entry, graded practice sets throughout, and three full mock papers sat under timed conditions with individual score reports.',
@@ -109,11 +109,11 @@ export const SKILL_PROGRAMMES = [
       'dMAT is administered by g.a.s.t. and sat independently. Axelis prepares candidates for it and neither sets nor scores the examination.',
     financeable:
       'The clearest category match Axelis has. Bajaj\u2019s own verified education partners are Aakash and ALLEN, both test-preparation coaching with fixed syllabi and timed mocks. This is the same product shape for a different examination.',
-    fee: 65000,
-    feeNote: 'GST-inclusive.',
-    feeSource: 'New programme. Fee needs founder sign-off before it goes live.',
+    fee: 25000,
+    feeNote: 'GST-inclusive. Taxable value \u20b921,186.44 plus GST \u20b93,813.56.',
+    feeSource:
+      'Set at market. Indian dMAT coaching runs \u20b910,000 to \u20b925,000; a comparable live offering is \u20b915,000 for two months of daily one-hour classes, roughly 45 hours, about \u20b9333 an hour. At \u20b925,000 across 72 hours this is \u20b9347 an hour, the same per-hour rate, at the top of the published range because it carries more hours and three invigilated mocks. The \u20b9150 EUR exam fee is paid by the student directly to g.a.s.t. and is not included.',
     priority: 1,
-    needsSignOff: true,
   },
   {
     slug: 'language-a1-b2',
@@ -295,6 +295,13 @@ export const DMAT_FACTS = {
     'https://aps-india.de/',
     'https://www.d-mat.de/en/dmat-in-india/',
   ],
+  /** What the student pays elsewhere, so the fee can be sanity-checked. */
+  studentOtherCosts: {
+    examFee: 'EUR 150, about \u20b916,350, paid directly to g.a.s.t. Flat worldwide.',
+    apsCharges: '\u20b918,000',
+    booksAndMocks: '\u20b93,000 to \u20b98,000',
+    marketCoaching: '\u20b910,000 to \u20b925,000, verified 21 September 2026',
+  },
 };
 
 /** Every figure a credit team will ask for, in one place. */
