@@ -1,0 +1,11 @@
+/* A4 portrait. 210 x 297. */
+@page { size: A4 portrait; margin: 16mm 16mm 22mm; }
+.sheet{ max-width:178mm }
+.cert{ width:178mm; height:255mm }
+.cert .row{ flex-wrap:wrap; gap:10mm }
+@media screen{
+  body{ background:#EEF1F6; padding:10mm 0 }
+  .sheet{ background:#fff; width:210mm; max-width:210mm; min-height:297mm;
+          padding:16mm 16mm 22mm; box-shadow:0 2px 14px rgba(22,38,92,.14); position:relative }
+  .ft{ position:absolute; left:16mm; right:16mm; bottom:10mm }
+}

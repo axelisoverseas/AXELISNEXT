@@ -15,8 +15,6 @@
    Print colour is forced, because Chrome drops backgrounds in print by default
    and the tinted table head and callout carry meaning.  */
 
-@page { size: A4; margin: 16mm 16mm 22mm; }
-
 *{ box-sizing:border-box }
 html{ -webkit-print-color-adjust:exact; print-color-adjust:exact }
 body{
@@ -82,9 +80,6 @@ tr.tot td{ font-weight:900; color:#16265C; border-top:1.4pt solid #16265C; borde
 /* A letterhead needs room to actually type a letter into. */
 .body-space{ min-height:120mm }
 
-@media screen{
-  body{ background:#EEF1F6; padding:10mm 0 }
-  .sheet{ background:#fff; width:210mm; max-width:210mm; min-height:297mm;
-          padding:16mm 16mm 22mm; box-shadow:0 2px 14px rgba(22,38,92,.14); position:relative }
-  .ft{ position:absolute; left:16mm; right:16mm; bottom:10mm }
-}
+/* Page size, sheet dimensions and any column behaviour live in
+   assets/orient-portrait.css or assets/orient-landscape.css, which the build
+   injects. Everything above is orientation-independent. */

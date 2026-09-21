@@ -1,0 +1,20 @@
+/* A4 landscape. 297 x 210.
+   Body text is set in two columns. A single measure across 265mm runs to about
+   110 characters, well past the 68 the type scale allows, so columns are a
+   correctness requirement here and not a style choice. Tables, headers, the
+   signature block and the footer stay full width. */
+@page { size: A4 landscape; margin: 14mm 16mm 20mm; }
+.sheet{ max-width:265mm }
+.prose{ column-count:2; column-gap:12mm; column-fill:balance }
+.prose h2, .prose h3{ break-after:avoid }
+.prose p, .prose ul{ break-inside:avoid }
+.full{ column-span:all }
+.lead{ max-width:none }
+.body-space{ min-height:58mm }
+.cert{ width:265mm; height:174mm }
+@media screen{
+  body{ background:#EEF1F6; padding:10mm 0 }
+  .sheet{ background:#fff; width:297mm; max-width:297mm; min-height:210mm;
+          padding:14mm 16mm 20mm; box-shadow:0 2px 14px rgba(22,38,92,.14); position:relative }
+  .ft{ position:absolute; left:16mm; right:16mm; bottom:9mm }
+}
