@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Axelis — site audit</title>
+<style>
+  @page { size: A4; margin: 16mm 14mm; }
+  :root{
+    --navy:#16265C; --blue:#1D4ED8; --dim:#586179;
+    --rule:#DDE3EE; --tint:#F7F9FC; --fg:#1B2233;
+    --ok:#15803D; --warn:#B45309; --stop:#B91C1C;
+  }
+  *{box-sizing:border-box}
+  body{font:10.5pt/1.5 -apple-system,"Segoe UI",Roboto,sans-serif;color:var(--fg);margin:0}
+  h1{font-size:23pt;color:var(--navy);margin:0 0 2mm;letter-spacing:-.02em;font-weight:800}
+  h2{font-size:12pt;color:var(--navy);margin:9mm 0 2.5mm;padding-bottom:1.5mm;
+     border-bottom:1.5px solid var(--navy);letter-spacing:-.01em;page-break-after:avoid}
+  h3{font-size:10pt;color:var(--navy);margin:5mm 0 1.5mm;page-break-after:avoid}
+  .sub{color:var(--dim);font-size:9.5pt;margin:0 0 1mm}
+  .meta{color:var(--dim);font-size:8.5pt;border-top:1px solid var(--rule);padding-top:2mm;margin-top:2mm}
+  table{width:100%;border-collapse:collapse;margin:2mm 0 3mm;font-size:9pt}
+  th{text-align:left;color:var(--dim);font-weight:700;font-size:7.5pt;text-transform:uppercase;
+     letter-spacing:.08em;border-bottom:1px solid var(--rule);padding:1.5mm 2mm 1.5mm 0}
+  td{padding:1.8mm 2mm 1.8mm 0;border-bottom:1px solid var(--rule);vertical-align:top}
+  tr{page-break-inside:avoid}
+  .ok{color:var(--ok);font-weight:700}
+  .warn{color:var(--warn);font-weight:700}
+  .stop{color:var(--stop);font-weight:700}
+  .num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+  .cards{display:flex;gap:3mm;margin:3mm 0 1mm}
+  .card{flex:1;border:1px solid var(--rule);border-radius:3mm;padding:3mm;background:var(--tint)}
+  .card .big{font-size:17pt;font-weight:800;color:var(--navy);line-height:1.1;font-variant-numeric:tabular-nums}
+  .card .lbl{font-size:7.5pt;color:var(--dim);text-transform:uppercase;letter-spacing:.07em;margin-top:1mm}
+  ul{margin:1mm 0 3mm;padding-left:4.5mm}
+  li{margin:.9mm 0}
+  .note{border-left:2.5px solid var(--blue);padding:2mm 0 2mm 3mm;margin:3mm 0;
+        background:var(--tint);font-size:9pt;page-break-inside:avoid}
+  .note b{color:var(--navy)}
+  .brk{page-break-before:always}
+  code{font:8.5pt ui-monospace,Menlo,monospace;background:var(--tint);padding:.3mm 1mm;border-radius:1mm}
+</style>
+</head>
+<body>
+
+<h1>Site audit</h1>
+<p class="sub">overseeducation.com &middot; measured 21 September 2026</p>
+<p class="meta">Axelis Overseas Education Pvt Ltd &middot; CIN U85500CT2023PTC014913. Every number below is measured, not estimated. Where something was not verified it says so.</p>
+
+<div class="cards">
+  <div class="card"><div class="big">0</div><div class="lbl">Contrast failures</div></div>
+  <div class="card"><div class="big">0</div><div class="lbl">Sideways scroll</div></div>
+  <div class="card"><div class="big">202</div><div class="lbl">Tests passing</div></div>
+  <div class="card"><div class="big">83<span style="font-size:11pt">MB</span></div><div class="lbl">Public, was 719MB</div></div>
+</div>
+
+<h2>1 &middot; What is done</h2>
+
+<table>
+<tr><th style="width:31%">Area</th><th>Outcome</th></tr>
+<tr><td><b>Accessibility</b></td><td>0 confirmed contrast failures across 22 routes at 1440px and 375px. Dark-surface tokens plus an <code>.on-dark</code> guard so a component moved onto navy cannot silently keep light values.</td></tr>
+<tr><td><b>Testing</b></td><td>Playwright across phone, tablet and desktop. 202 passing. Checks contrast against computed styles, route health, sideways scroll, visible h1, literal markdown, and 44px tap targets.</td></tr>
+<tr><td><b>Performance</b></td><td><code>public/</code> cut from 719MB to 83MB. 314MB duplicate reels directory removed, 215MB unreferenced video, videos re-encoded with faststart. Home page 47KB gzipped.</td></tr>
+<tr><td><b>Content</b></td><td>All 31 FAQ answers rewritten out of the bold-colon-bullet pattern, 30% shorter. Emoji removed from headings and product chips. Em dashes stripped from body copy.</td></tr>
+<tr><td><b>Products</b></td><td><code>/programmes</code> published: six taught programmes with duration, contact hours, syllabus, assessment, credential and GST-inclusive fee. Refund policy widened to cover them.</td></tr>
+<tr><td><b>University finder</b></td><td>2,795 to 10,236 institutions across 29 destinations, counted from the file at build time so the headline cannot drift. Course search added under CC-BY.</td></tr>
+<tr><td><b>Brand</b></td><td>Nine implementation decisions applied. Logo sizing, dark set, elevation, seal rules, naming. Documented in <code>BRAND_DECISIONS.md</code> and <code>BUILDING_WITH_THE_SYSTEM.md</code>.</td></tr>
+<tr><td><b>Lenders</b></td><td>Bajaj reply sent in-thread. Eduvanz opened. Escalation route and certification playbook documented.</td></tr>
+</table>
+
+<h2>2 &middot; Defects found and fixed</h2>
+
+<table>
+<tr><th style="width:44%">Defect</th><th class="num" style="width:13%">Measured</th><th>Effect</th></tr>
+<tr><td>Specimen certificate title, navy on navy</td><td class="num stop">1.10:1</td><td>Invisible on a page shown to lenders. Watermark did not render either.</td></tr>
+<tr><td>Pay button on <code>/services</code></td><td class="num stop">2.14:1</td><td>Navy on flat blue, on the button that takes money.</td></tr>
+<tr><td>Guide CTA, hover state only</td><td class="num stop">2.14:1</td><td>Passed at rest, failed on hover, which is why nobody saw it.</td></tr>
+<tr><td>Tailwind scanning test artefacts</td><td class="num stop">500</td><td>Generated an unparseable class from an RSC payload. Every route returned 500.</td></tr>
+<tr><td><code>/courses</code> in the navbar</td><td class="num stop">404</td><td>Linked from the nav, never existed. Its child route 500d on every URL and served invented universities and a fabricated salary.</td></tr>
+<tr><td>No <code>not-found.jsx</code></td><td class="num warn">&mdash;</td><td>Every missing URL fell through to an unstyled black screen.</td></tr>
+<tr><td>External noise texture on 2 pages</td><td class="num stop">404</td><td>Third-party asset from a stranger's demo deployment, requested on every load.</td></tr>
+<tr><td>Tap targets below 44px</td><td class="num warn">18</td><td>Navbar strip, drawer, footer lists, icon buttons, quantity steppers.</td></tr>
+<tr><td>Charter pricing disagreed across 3 pages</td><td class="num stop">&#8377;25,000</td><td>Advertised figure was below what checkout charges.</td></tr>
+</table>
+
+<div class="note">
+<b>Why these needed a browser.</b> None was visible by reading the source. Contrast, hover states, overflow and the Tailwind scan bug only exist once a page is rendered and computed styles are available. That is the argument for keeping the Playwright suite in CI.
+</div>
+
+<h2 class="brk">3 &middot; Testimonials, the gap you flagged</h2>
+
+<p class="sub">You are right. This was not completed, and here is exactly where it stands.</p>
+
+<table>
+<tr><th style="width:31%">Item</th><th>Position</th></tr>
+<tr><td><b>Students on the page</b></td><td><span class="warn">8 named</span>: Anjali Sangwan, Raghav Verma, Jitesh Jha, Swapnil Arya, Samridhi Singh, Ashmita Bhatt, Monika Nataraj, Sai Krishna Penugonda.</td></tr>
+<tr><td><b>Why no more were added</b></td><td>Google Drive holds live case files, not marketing material: visa refusal letters, bank statements, private WhatsApp exports, a leads list. Publishing student names, photographs and outcomes from those without per-student consent is not something to do quietly.</td></tr>
+<tr><td><b>AgentCis</b></td><td>No connector exists. The tenant is <code>axelisoverseas.agentcisapp.com</code> and it loads a login form. The 17 Sep ops audit names <span class="warn">3 completed cases</span> this cycle: Keertan, Arnav, Divyanshi.</td></tr>
+<tr><td><b>HubSpot</b></td><td>2,521 B2C deals, 5 Closed Won. No Student or Application object exists, so placements were never tracked there.</td></tr>
+<tr><td><b>What unblocks it</b></td><td>A consent-gated <code>students.json</code>: first name, destination, university, course, year, photograph, for students who said yes. Three names today, more as consent arrives.</td></tr>
+</table>
+
+<div class="note">
+<b>The honest position.</b> Those students gave you documents so you could file their visas. Consent to that is not consent to appear on a marketing site. One signed line per student turns this from a risk into an asset, and it is a short task.
+</div>
+
+<h2>4 &middot; Open, needing your decision</h2>
+
+<table>
+<tr><th style="width:38%">Item</th><th style="width:16%">Status</th><th>Detail</th></tr>
+<tr><td><b>&ldquo;5,000+ students placed&rdquo;</b></td><td class="stop">Live, unevidenced</td><td>6 instances. AgentCis shows 3 completed this cycle, HubSpot 5 Closed Won.</td></tr>
+<tr><td><b>&ldquo;95% visa approval rate&rdquo;</b></td><td class="stop">Live, unevidenced</td><td>6 instances. Three completed cases is too small a base to express as a percentage.</td></tr>
+<tr><td><b>&ldquo;35,000+ universities&rdquo;</b></td><td class="stop">Live, disproven</td><td>Homepage and navbar. Exceeds WHED's ~21,000 accredited HEIs worldwide. The finder says 10,236.</td></tr>
+<tr><td><b>&ldquo;Guaranteed results&rdquo;</b></td><td class="stop">In the page title</td><td>Promises an outcome a foreign government decides.</td></tr>
+<tr><td><b>Charter pricing</b></td><td class="warn">Aligned, unconfirmed</td><td>Everything now matches <code>/products</code> because it is wired to the gateway. Which figure is contractually right is unconfirmed.</td></tr>
+<tr><td><b>Product names</b></td><td class="warn">Open</td><td>The repo has carried five namings. A wrong name on a gateway-wired page is a mis-sold service.</td></tr>
+<tr><td><b>Sample certificate</b></td><td class="warn">Does not exist</td><td>The <code>/verify</code> specimen is a layout. No issued artefact exists. Lenders ask for this.</td></tr>
+<tr><td><b>Per-hour price spread</b></td><td class="warn">7.5&times;</td><td>&#8377;347/hr to &#8377;2,604/hr across the six programmes. Defensible if cohort size explains it, but a credit officer will ask.</td></tr>
+</table>
+
+<h2>5 &middot; Still pending on the site</h2>
+
+<ul>
+<li><b>Facebook and LinkedIn feeds.</b> YouTube and Instagram are wired. These two are not.</li>
+<li><b>Fresh photography.</b> One image was replaced. There is no photography direction and stock is unreviewed.</li>
+<li><b>The 16px favicon.</b> Below roughly 24px the rocket and slipstream merge. No simplified mark has been drawn. Do not invent one in code.</li>
+<li><b>Course data beyond the Netherlands.</b> 3,084 Dutch programmes under CC-BY. No other country publishes an openly licensed register.</li>
+<li><b>Attendance and completion records.</b> Needed before any subvented lender arrangement, because clawback is tied to non-completion.</li>
+<li><b>Engagement letter.</b> Design signed off, blocked on counsel for clauses 5 to 7.</li>
+</ul>
+
+<h2>6 &middot; Known limits of this audit</h2>
+
+<ul>
+<li><b>306 contrast cases are unverifiable from the DOM</b>, not failures. Hero backdrops are absolutely positioned siblings and gradient-clipped text has no resolvable colour. Those need eyes, not a script.</li>
+<li><b>3 test failures under parallel load</b> against a dev server. All pass in isolation. Run <code>npm run test:ui:prod</code> against a production build for a clean signal.</li>
+<li><b>Deployment weight only.</b> Git history still carries the removed blobs; the pack is unchanged without a history rewrite.</li>
+<li><b>Legacy pages excluded.</b> <code>src/legacy_pages/</code> has no imports and was not audited.</li>
+</ul>
+
+<p class="meta">Generated from the live site at 1440px and 375px, plus 202 automated checks across three viewports. Detail in <code>docs/CLAIMS_SUBSTANTIATION.md</code>, <code>docs/brand/BRAND_DECISIONS.md</code> and <code>docs/lenders/</code>.</p>
+
+</body>
+</html>
