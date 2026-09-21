@@ -27,7 +27,7 @@ export const metadata = {
   },
   title: {
     template: '%s | Axelis Overseas Education',
-    default: 'Axelis Overseas. Certification-first Study Abroad | EMI Available',
+    default: 'Axelis Overseas. Every Fee Published Before You Pay',
   },
   description: "India's study-abroad consultancy across 29 destination markets. One counsellor from shortlist to arrival, every fee published before you pay. Bengaluru + Bilaspur.",
   keywords: [
@@ -50,7 +50,7 @@ export const metadata = {
     canonical: 'https://overseeducation.com',
   },
   openGraph: {
-    title: 'Axelis Overseas. Certification-first Study Abroad',
+    title: 'Axelis Overseas. Every Fee Published Before You Pay',
     description: 'End-to-end certification programmes. Concierge tiers carry a written refund commitment. Application coaching, languages to CEFR B1, executive MBA and PhD support. EMI available.',
     url: 'https://overseeducation.com',
     siteName: 'Axelis Overseas Education',
@@ -67,7 +67,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Axelis Overseas. Certification-first Study Abroad',
+    title: 'Axelis Overseas. Every Fee Published Before You Pay',
     description: 'Certification programmes. Concierge tiers carry a written refund commitment. EMI available. Bengaluru + Bilaspur.',
     images: ['/og-image.jpg'],
   },

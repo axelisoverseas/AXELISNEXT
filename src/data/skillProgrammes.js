@@ -95,7 +95,7 @@ export const SKILL_PROGRAMMES = [
   {
     slug: 'dmat-preparation',
     family: 'Test preparation',
-    title: 'dMAT preparation \u2014 Digital Master Test for APS',
+    title: 'dMAT preparation, the Digital Master Test for APS',
     strapline: 'The new aptitude test Indian master\u2019s applicants to Germany now have to sit.',
     level: 'Graduates in Engineering, Commerce, Accounting, Finance, Economics, Business or Management',
     weeks: 8,
@@ -247,7 +247,7 @@ export const SKILL_PROGRAMMES = [
  */
 export const CREDENTIAL_ROADMAP = [
   {
-    step: 'MEP/Q4401, Career and Education Counsellor \u2014 NSQF Level 5',
+    step: 'MEP/Q4401, Career and Education Counsellor at NSQF Level 5',
     what: 'A national qualification already approved by the NSQC on 28 July 2022, owned by the Management & Entrepreneurship and Professional Skills Council. NQR code 2022/ETR/MEPSC/06152 v1.0, 18 credits. Its official description covers linking candidates to education opportunities "in India and abroad", and it maps to NCO-2015/2423.0100, which names "Admission Counsellor" and "Education Consultant" in the national framework.',
     why: 'It is the only exact-fit national qualification for what Axelis actually does, it already exists so nothing has to be written, and a credit officer can verify it independently at nqr.gov.in. Delivery is 290 hours classroom or 250 blended.',
     status: 'To be scoped. Requires NSDC training-partner registration, then centre accreditation, then roughly \u20b96,000 per job-role affiliation. Centre accreditation involves a physical inspection, which is the real constraint for a company without a classroom. Whether blended mode is permitted decides whether this takes weeks or months, and MEPSC can answer that in one call.',

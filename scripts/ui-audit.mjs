@@ -22,6 +22,9 @@ const ALL = [
   '/certifications', '/bookings', '/contact', '/resources', '/test-prep',
   '/accommodation', '/vocational', '/accreditations', '/start',
   '/lp/tuition-free-europe', '/lp/pay-after-offer', '/lp/published-fees',
+  '/programmes', '/for-lenders', '/policies/cancellation-refund',
+  '/certifications/global-career-launch', '/certifications/german-a1-a2',
+  '/terms-conditions',
 ];
 
 const targets = routes.length ? routes : ALL;
