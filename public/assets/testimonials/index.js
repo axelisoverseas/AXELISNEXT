@@ -24,6 +24,8 @@ export const testimonialImages = {
   'Siddhant Babar': siddhantImage,
   'Diksha Babbar': dikshaImage,
   'Ansh Sonchhatra': anshImage,
+  'Monika Nataraj': monikaImage,
+  'Raghav Verma': raghavImage,
 };
 
 // Fallback function for any missing images

@@ -3,8 +3,9 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
-import { ArrowRight, Star, MapPin, GraduationCap, Play, BadgeCheck } from 'lucide-react';
+import { ArrowRight, Star, MapPin, GraduationCap, Play, BadgeCheck, Linkedin } from 'lucide-react';
 import { testimonials as allTestimonials } from '../../data/siteData';
+import { getTestimonialImage } from '../../assets/testimonials/index.js';
 import InstagramFeed from '../../components/InstagramFeed';
 import { verifiedReviews, googleReviewsMeta, getGoogleMapsHref } from '../../data/googleReviews';
 
@@ -39,13 +40,20 @@ const videoTestimonials = [
 
 // Students with confirmed visa + placement, but no full written quote yet.
 // Shown as a clean "Recent Placements" grid below the main carousel.
+/* Visa-received students. They join the story grid below; those without a
+   written quote render the visa badge in place of one rather than a fabricated
+   sentence. `linkedin` is intentionally empty: three searches returned 20+
+   namesakes each and none could be confirmed as our student, and linking the
+   wrong person from a testimonial is worse than linking nobody. Paste a URL
+   here only once it has been checked against the actual person. */
 const recentPlacements = [
-  { name: 'Jitesh Jha', university: 'Technological University Dublin', course: 'MSc Technology and Innovation Management', country: 'Ireland', plan: 'ZCF', flag: '🇮🇪' },
-  { name: 'Swapnil Arya', university: 'University of Glasgow', course: 'MSc Mechanical Engineering and Management', country: 'UK', plan: 'ZCF', flag: '🇬🇧' },
-  { name: 'Samridhi Singh', university: 'University of Liverpool', course: 'MSc Sustainable Business', country: 'UK', plan: 'ZCF', flag: '🇬🇧' },
-  { name: 'Ashmita Bhatt', university: "Queen's University Belfast", course: 'MBA', country: 'UK', plan: 'ZCF', flag: '🇬🇧' },
-  { name: 'Monika Nataraj', university: 'Humboldt University of Berlin', course: 'LLM in International Dispute Resolution', country: 'Germany', plan: 'ZTF', flag: '🇩🇪' },
-  { name: 'Sai Krishna Penugonda', university: 'Karlsruhe Institute of Technology', course: 'MSc Productions and Operations Management', country: 'Germany', plan: 'ZTF', flag: '🇩🇪' },
+  { name: 'Jitesh Jha', university: 'Technological University Dublin', course: 'MSc Technology and Innovation Management', country: 'Ireland', plan: 'ZCF', flag: '\u{1F1EE}\u{1F1EA}', linkedin: '' },
+  { name: 'Swapnil Arya', university: 'University of Glasgow', course: 'MSc Mechanical Engineering and Management', country: 'UK', plan: 'ZCF', flag: '\u{1F1EC}\u{1F1E7}', linkedin: '' },
+  { name: 'Samridhi Singh', university: 'University of Liverpool', course: 'MSc Sustainable Business', country: 'UK', plan: 'ZCF', flag: '\u{1F1EC}\u{1F1E7}', linkedin: '' },
+  { name: 'Ashmita Bhatt', university: "Queen's University Belfast", course: 'MBA', country: 'UK', plan: 'ZCF', flag: '\u{1F1EC}\u{1F1E7}', linkedin: '' },
+  { name: 'Monika Nataraj', university: 'Humboldt University of Berlin', course: 'LLM in International Dispute Resolution', country: 'Germany', plan: 'ZTF', flag: '\u{1F1E9}\u{1F1EA}', linkedin: '' },
+  { name: 'Sai Krishna Penugonda', university: 'Karlsruhe Institute of Technology', course: 'MSc Productions and Operations Management', country: 'Germany', plan: 'ZTF', flag: '\u{1F1E9}\u{1F1EA}', linkedin: '' },
+  { name: 'Raghav Verma', university: 'Warsaw University of Technology', course: 'BSc Computer Science', country: 'Poland', plan: 'ZTF', flag: '\u{1F1F5}\u{1F1F1}', linkedin: '' },
 ];
 
 const GoogleReviewsFloat = dynamic(() => import('../../components/GoogleReviewsFloat'), { ssr: false });
@@ -117,21 +125,46 @@ function TestimonialCard({ testimonial, index, onCountryFocus }) {
               </div>
             </div>
 
-            <div className="flex space-x-1">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star key={i} className="w-4 h-4 text-[var(--color-axelis)] fill-current" />
-              ))}
+            {testimonial.content && (
+              <div className="flex space-x-1">
+                {Array.from({ length: 5 }).map((_, i) => (
+                  <Star key={i} className="w-4 h-4 text-[var(--color-axelis)] fill-current" />
+                ))}
+              </div>
+            )}
+          </div>
+
+          {testimonial.content ? (
+            <div className={`text-[var(--color-navy)]/85 text-sm leading-relaxed transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-16 overflow-hidden'}`}>
+              <span className="text-[var(--color-axelis)]/80 font-medium">&ldquo;</span>
+              {testimonial.content}
+              <span className="text-[var(--color-axelis)]/80 font-medium">&rdquo;</span>
             </div>
-          </div>
+          ) : (
+            /* Placed, but has not written a quote yet. The visa fact stands in;
+               inventing a sentence for a named student is not an option. */
+            <div className="inline-flex items-center gap-1.5 text-emerald-600 text-xs font-semibold">
+              <BadgeCheck className="w-3.5 h-3.5" aria-hidden="true" />
+              Visa received &middot; {testimonial.country}
+            </div>
+          )}
 
-          <div className={`text-[var(--color-navy)]/85 text-sm leading-relaxed transition-all duration-300 ${isExpanded ? 'max-h-96' : 'max-h-16 overflow-hidden'}`}>
-            <span className="text-[var(--color-axelis)]/80 font-medium">&ldquo;</span>
-            {testimonial.content}
-            <span className="text-[var(--color-axelis)]/80 font-medium">&rdquo;</span>
-          </div>
-
-          {!isExpanded && testimonial.content.length > 100 && (
+          {!isExpanded && testimonial.content && testimonial.content.length > 100 && (
             <div className="text-[var(--color-navy)]/70 text-xs mt-2">Hover to read more</div>
+          )}
+
+          {testimonial.linkedin && (
+            <a
+              href={testimonial.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+              aria-label={`${testimonial.name} on LinkedIn`}
+              className="mt-3 inline-flex items-center gap-1.5 text-xs font-semibold text-[var(--color-axelis)] hover:underline underline-offset-4"
+            >
+              <Linkedin className="w-3.5 h-3.5" aria-hidden="true" />
+              LinkedIn
+            </a>
           )}
         </div>
       </div>
@@ -163,6 +196,19 @@ export default function TestimonialsPage() {
   }, []);
 
   const uniqueCountries = [...new Set(testimonials.map((t) => t.country))].length;
+
+  /* One grid. Students with a written quote first, then visa-received students
+     who have not sent one yet. Both carry a photo where one exists; the shared
+     card falls back to an initials avatar where it does not. */
+  const storyGrid = [
+    ...testimonials,
+    ...recentPlacements.map((p, i) => ({
+      ...p,
+      id: `placement-${i}`,
+      content: null,
+      image: getTestimonialImage(p.name),
+    })),
+  ];
 
   return (
     <div className="min-h-screen text-[var(--color-navy)]">
@@ -223,7 +269,7 @@ export default function TestimonialsPage() {
               </div>
 
               <div className="testimonial-scroller grid gap-4 sm:grid-cols-2 xl:grid-cols-3 max-h-[70vh] overflow-y-auto pr-2 scroll-smooth overscroll-contain">
-                {testimonials.map((t, i) => (
+                {storyGrid.map((t, i) => (
                   <TestimonialCard
                     key={t.id}
                     testimonial={t}
@@ -357,42 +403,9 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
-      {/* Recent placements: visa-received students without a written quote yet */}
- <section className="relative sec-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] mb-3 inline-flex items-center gap-3">
-              <BadgeCheck className="w-7 h-7 text-emerald-300" />
-              Recent <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">placements with visa in hand.</span>
-            </h2>
-            <p className="text-[var(--color-navy)]/85 text-base md:text-lg max-w-2xl mx-auto">
-              Fall 2025 cohort. Classes started.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
-            {recentPlacements.map((p) => (
-              <div key={p.name} className="glass-storm p-5 flex items-start gap-4">
-                <div className="text-3xl mt-0.5" aria-hidden>{p.flag}</div>
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center justify-between gap-2 mb-1">
-                    <h3 className="text-[var(--color-navy)] font-bold text-base truncate">{p.name}</h3>
-                    <span className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-[var(--color-tint)] border border-[var(--color-rule)]/30 text-[var(--color-axelis)] whitespace-nowrap">
-                      {p.plan}
-                    </span>
-                  </div>
-                  <p className="text-[var(--color-navy)]/85 text-sm mb-1 leading-snug">{p.course}</p>
-                  <p className="text-[var(--color-navy)]/70 text-xs mb-2 leading-snug">{p.university}</p>
-                  <div className="inline-flex items-center gap-1.5 text-emerald-300 text-xs font-semibold">
-                    <BadgeCheck className="w-3.5 h-3.5" />
-                    Visa received &middot; {p.country}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* The Recent placements section that used to sit here is gone: those seven
+          students are now in the story grid above, and rendering them in both
+          places showed the same person twice on one page. */}
 
       {/* Proof gallery: payments, declarations, visas, transfers (PII redacted) */}
  <section className="relative sec">

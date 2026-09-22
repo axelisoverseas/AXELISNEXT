@@ -8,6 +8,8 @@ const siddhantImage = '/assets/testimonials/Siddhant babartestimonial.jpeg';
 const dikshaImage = '/assets/testimonials/Diksha Babbartestimonial.jpeg';
 const anshImage = '/assets/testimonials/Ansh Sonchhatratestimonial.jpeg';
 const anjaliImage = '/assets/testimonials/Anjali Sangwantestimonial.jpg';
+const monikaImage = '/assets/testimonials/Monika Natarajtestimonial.png';
+const raghavImage = '/assets/testimonials/Raghav Vermatestimonial.jpg';
 
 // Placeholder function to generate avatar URLs as fallback
 const generateAvatarUrl = (name) => {
@@ -26,6 +28,8 @@ export const testimonialImages = {
   'Diksha Babbar': dikshaImage,
   'Ansh Sonchhatra': anshImage,
   'Anjali Sangwan': anjaliImage,
+  'Monika Nataraj': monikaImage,
+  'Raghav Verma': raghavImage,
 };
 
 // Fallback function for any missing images
