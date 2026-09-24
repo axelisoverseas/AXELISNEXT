@@ -518,3 +518,58 @@ consent on file**. No stock, no backpacks-against-skylines, no filters.
 3. **Charter pricing disagrees across pages.** Matching to `/products` was right
    under uncertainty (the page that takes money wins a tie), but it is now the
    source of truth by default rather than by decision.
+
+---
+
+## 12 · Two logo assets missed by the return to blue — fixed 25 September 2026
+
+`75093b7` reverted the accent from crimson to blue. Two assets were not caught
+by it, and one had been wrong since before the crimson pass. Both are corrected
+in this commit; **neither is live until this is deployed.**
+
+### 12.1 The nav mark was on the retired navy
+
+`public/brand/axelis-mark-navy.svg` — the file the live navbar loads — was
+filled `#0B2B3A`, the navy from the v2 palette, not the locked `#16265C`.
+Confirmed by fetching the production file on 25 September. At 40 px it reads as
+a teal-black next to a navy nav bar; it was the wrong asset, not a rendering
+difference.
+
+Swapped `#0B2B3A → #16265C`, colour only. Five tracked files carried it:
+
+- `public/brand/axelis-mark-navy.svg` — **the live one**
+- `docs/brand/assets/axelis-mark-navy.svg`, `axelis-seal-navy.svg`
+- `docs/brand/company-docs/assets/axelis-mark-navy.svg`, `axelis-seal-navy.svg`
+- `docs/brand/samples/assets/axelis-mark-navy.svg`, `axelis-seal-navy.svg`
+
+No tracked SVG carries `#0B2B3A` after this. Also added
+`docs/brand/assets/axelis-seal-white.svg`, which `BRAND_DECISIONS.md` §2
+specifies and which did not exist.
+
+### 12.2 The dimensional mark for navy grounds was still crimson
+
+`public/brand/axelis-mark-3d-on-navy.svg` and its copy in
+`docs/brand/kit/assets/` kept the crimson set after the revert. Rebuilt in blue,
+role for role, using existing tokens wherever one fits:
+
+| Role | Crimson | Blue | On navy |
+|---|---|---|---|
+| Body gradient end, ×7 | `#B3253C` | `#4F80F0` surface blue | 3.87 |
+| Mid stop | `#FF7D90` | `#9EC0FF` accent on dark | 7.80 |
+| Highlight stop | `#FFB4BE` | `#CFE0FF` | 10.75 |
+
+`#4F80F0` is sanctioned for exactly this — a graphic, never text. White
+highlights and the `#04060F` drop shadow are unchanged.
+
+`scripts/build-3d-mark.py` could not regenerate this: it reads from a cloud-job
+path and never had an on-navy set. If it is ever extended, the three stops
+above are the blue on-navy values to add.
+
+### 12.3 Still open from the same audit
+
+**The homepage hero breaks the photography rule.** It is an Unsplash stock image
+(`/photos/photo-1451187580459-43490279c0fa-1600.jpg`, earth at night) under a
+gradient scrim, with a CSS starfield layered over it. §10.8 says "No stock".
+§3 task 1 already calls for the fixed starfield to be removed as a dark-ground
+device; it is still there. **This is a design decision, not a file swap — it needs the
+founder before anyone changes it.**
