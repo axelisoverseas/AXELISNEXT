@@ -2,15 +2,15 @@ import { refundPolicy } from '../../../data/certificationPrograms';
 
 // Meta per MASTER_WEBSITE_HANDOVER_v3 Section D.
 export const metadata = {
-  title: 'Cancellation & Refund Policy. Axelis Overseas',
+  title: 'Cancellation & Refund Policy',
   description:
     'Axelis Overseas cancellation and refund policy for certification programmes. 7-business-day cooling-off, tiered refunds thereafter, EMI-friendly routing, Concierge outcome guarantees.',
-  alternates: { canonical: 'https://overseeducation.com/policies/cancellation-refund' },
+  alternates: { canonical: 'https://www.overseeducation.com/policies/cancellation-refund' },
   openGraph: {
     title: 'Cancellation & Refund Policy. Axelis Overseas',
     description:
       '7-business-day cooling-off, tiered refunds thereafter, EMI-friendly routing, Concierge outcome guarantees.',
-    url: 'https://overseeducation.com/policies/cancellation-refund',
+    url: 'https://www.overseeducation.com/policies/cancellation-refund',
     siteName: 'Axelis Overseas Education',
     locale: 'en_IN',
     type: 'website',
@@ -23,7 +23,7 @@ const returnPolicyLd = {
   '@context': 'https://schema.org',
   '@type': 'MerchantReturnPolicy',
   name: 'Axelis Overseas Cancellation & Refund Policy',
-  url: 'https://overseeducation.com/policies/cancellation-refund',
+  url: 'https://www.overseeducation.com/policies/cancellation-refund',
   applicableCountry: 'IN',
   returnPolicyCategory: 'https://schema.org/MerchantReturnFiniteReturnWindow',
   merchantReturnDays: refundPolicy.coolingOffBusinessDays,
@@ -41,8 +41,8 @@ const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://overseeducation.com' },
-    { '@type': 'ListItem', position: 2, name: 'Cancellation & Refund Policy', item: 'https://overseeducation.com/policies/cancellation-refund' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.overseeducation.com' },
+    { '@type': 'ListItem', position: 2, name: 'Cancellation & Refund Policy', item: 'https://www.overseeducation.com/policies/cancellation-refund' },
   ],
 };
 

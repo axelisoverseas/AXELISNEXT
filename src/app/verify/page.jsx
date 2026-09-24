@@ -9,7 +9,7 @@ export const metadata = {
   title: 'Verify a Certificate',
   description:
     'Check any Axelis certificate against our register by its certificate ID, and see a specimen of what an Axelis certificate looks like.',
-  alternates: { canonical: 'https://overseeducation.com/verify' },
+  alternates: { canonical: 'https://www.overseeducation.com/verify' },
   robots: { index: true, follow: true },
 };
 

@@ -43,7 +43,10 @@ const howItWorks = [
   },
 ];
 
-function ProductsContent() {
+// Isolated in its own Suspense boundary: useSearchParams in the page body made
+// Next skip server rendering for the whole page, so crawlers saw a spinner
+// and 50 words instead of the plans and prices.
+function LegacyPaymentRedirect() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -59,6 +62,10 @@ function ProductsContent() {
     }
   }, [searchParams]);
 
+  return null;
+}
+
+function ProductsContent() {
   return (
     <div className="min-h-screen text-[var(--color-navy)]">
       {/* HERO */}
@@ -787,14 +794,11 @@ const LANDING_LINKS = [
 
 export default function ProductsPage() {
   return (
-    <Suspense
-      fallback={
-        <div className="min-h-screen flex items-center justify-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-2 border-[var(--color-rule)]/30 border-t-[var(--storm-electric)]" />
-        </div>
-      }
-    >
+    <>
+      <Suspense fallback={null}>
+        <LegacyPaymentRedirect />
+      </Suspense>
       <ProductsContent />
-    </Suspense>
+    </>
   );
 }

@@ -23,7 +23,7 @@ import { siteInfo } from '../../data/siteData';
 const CANONICAL = 'https://www.overseeducation.com/start';
 
 export const metadata = {
-  title: 'Study Abroad From India, Priced Upfront | Axelis Overseas',
+  title: 'Study Abroad From India, Priced Upfront',
   description:
     'Every fee published before you pay, one counsellor from shortlist to arrival, and a refundable deposit on both student plans. Book a free first call.',
   alternates: { canonical: CANONICAL },

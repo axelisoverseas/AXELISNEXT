@@ -16,7 +16,7 @@ import { ArrowRight } from 'lucide-react';
  */
 
 export const metadata = {
-  title: 'Page not found | Axelis Overseas',
+  title: 'Page not found',
   robots: { index: false, follow: true },
 };
 

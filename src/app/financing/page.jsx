@@ -8,10 +8,10 @@ import TrustBand from '../../components/TrustBand';
 import EmiChart from '../../components/EmiChart';
 
 export const metadata = {
-  title: 'Financing Your Programme | Card EMI, Merchant EMI and Study Loans',
+  title: 'Card EMI, Merchant EMI and Study Loans',
   description:
     'Three ways to fund an Axelis programme: card EMI through Cashfree, merchant EMI where a lender is onboarded, and study loans through specialist NBFCs for offshore tuition.',
-  alternates: { canonical: 'https://overseeducation.com/financing' },
+  alternates: { canonical: 'https://www.overseeducation.com/financing' },
   robots: { index: true, follow: true },
 };
 

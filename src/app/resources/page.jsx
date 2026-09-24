@@ -1,6 +1,8 @@
 import { Download } from 'lucide-react';
 import StudyAbroadGuides from '../../components/StudyAbroadGuides';
 import GuideLeadCapture from '../../components/GuideLeadCapture';
+import Link from 'next/link';
+import { GUIDES as COUNTRY_GUIDES, GUIDE_SLUGS } from '../../data/countryGuides';
 
 export const metadata = {
   title: 'Free Study-Abroad Guides & Resources',
@@ -63,6 +65,26 @@ export default function ResourcesPage() {
               </span>
             </a>
           ))}
+        </div>
+      </section>
+
+      {/* The only in-site links to the country guides; without them the
+          guides were reachable from the sitemap alone. */}
+      <section className="px-6 pb-12">
+        <div className="mx-auto max-w-6xl">
+          <h2 className="text-2xl font-bold text-[var(--color-navy)] mb-4">Country guides</h2>
+          <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+            {GUIDE_SLUGS.map((slug) => (
+              <li key={slug}>
+                <Link
+                  href={`/guide/${slug}`}
+                  className="block rounded-xl border border-[var(--color-rule)] bg-white px-4 py-3 text-sm font-semibold text-[var(--color-navy)] hover:border-[var(--color-axelis)]"
+                >
+                  Study in {COUNTRY_GUIDES[slug].short}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
       <StudyAbroadGuides />

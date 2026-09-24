@@ -1,79 +1,32 @@
-# Standard crawlers
+# overseeducation.com
+#
+# One group for everyone. A crawler named in its own group ignores the "*"
+# group entirely, so the old per-bot "Allow: /" groups quietly let GPTBot,
+# ClaudeBot and the rest into /api/. Search and AI-answer crawlers are welcome
+# on every public page; the list below is explicit so the intent is on record.
+#
+# /portal and /payment-status are not blocked here on purpose: they carry a
+# noindex tag, and a crawler blocked by robots.txt never gets to read it.
+
 User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /api/
-Disallow: /portal/
-
-# Google AI (Gemini)
+User-agent: Googlebot
 User-agent: Google-Extended
-Allow: /
-
-# OpenAI (ChatGPT)
+User-agent: Bingbot
 User-agent: GPTBot
-Allow: /
-
+User-agent: OAI-SearchBot
 User-agent: ChatGPT-User
-Allow: /
-
-# Anthropic (Claude)
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-# Common Crawl (training data for many AI models)
-User-agent: CCBot
-Allow: /
-
-# Meta AI
-User-agent: meta-externalagent
-Allow: /
-
-User-agent: FacebookBot
-Allow: /
-
-# Apple (Siri / Apple Intelligence)
-User-agent: Applebot-Extended
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-# Perplexity AI
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
 User-agent: PerplexityBot
-Allow: /
-
-# Cohere AI
-User-agent: cohere-ai
-Allow: /
-
-# ByteDance (DeepSeek uses similar crawlers)
-User-agent: Bytespider
-Allow: /
-
-# Microsoft (Bing / Copilot)
-User-agent: bingbot
-Allow: /
-
-# Yandex
+User-agent: Perplexity-User
+User-agent: Applebot
+User-agent: Applebot-Extended
+User-agent: meta-externalagent
+User-agent: CCBot
 User-agent: YandexBot
 Allow: /
+Disallow: /api/
+Disallow: /admin/
 
-# Sitemaps
-Sitemap: https://overseeducation.com/sitemap.xml
-
-# AI-readable content
-# LLMs.txt: https://overseeducation.com/llms.txt
-# AI Plugin: https://overseeducation.com/.well-known/ai-plugin.json
-
-# Business Information
-# Name: Axelis Overseas Education
-# Type: Study Abroad Consultancy
-# Location: Bengaluru, Karnataka, India
-# Contact: axelisoverseas@overseeducation.com
-# Phone: +91 9098522711
-# Services: University Applications, Visa Assistance, Scholarships, Education Loans
-# Countries: UK, USA, Ireland, Germany, France, Finland
-# Partners: 70+ Universities worldwide
+Sitemap: https://www.overseeducation.com/sitemap.xml

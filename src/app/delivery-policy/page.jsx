@@ -11,7 +11,7 @@ export const metadata = {
   title: 'Delivery Policy',
   description:
     'How Axelis Overseas delivers its certification programmes: online access from enrolment, a named counsellor, and a verifiable digital certificate on completion. No physical shipment.',
-  alternates: { canonical: 'https://overseeducation.com/delivery-policy' },
+  alternates: { canonical: 'https://www.overseeducation.com/delivery-policy' },
   robots: { index: true, follow: true },
 };
 

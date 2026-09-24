@@ -9,10 +9,10 @@ import DocumentUpload from '../../components/DocumentUpload';
 import { GST_NOTE } from '../../data/cashfreeLinks';
 
 export const metadata = {
-  title: 'Student Services | Apostille, Translation, Visa Filing & Language Training',
+  title: 'Apostille, Translation & Visa Filing Services',
   description:
     'Axelis student services sold on their own: MEA apostille, sworn translation, APS and ZAB support, visa filing, blocked account setup, and German, French, IELTS and PTE training. Every price stated in full.',
-  alternates: { canonical: 'https://overseeducation.com/services' },
+  alternates: { canonical: 'https://www.overseeducation.com/services' },
   robots: { index: true, follow: true },
 };
 

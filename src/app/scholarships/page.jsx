@@ -6,7 +6,8 @@ import { BorderBeam } from '@/components/ui/BorderBeam';
 import { TextEffect, TextEffectInView } from '@/components/ui/TextEffect';
 
 export const metadata = {
-    title: 'Scholarships & Financial Aid | Axelis Overseas',
+    title: 'Scholarships & Financial Aid',
+    alternates: { canonical: '/scholarships' },
     description: 'Access over 2000+ scholarship opportunities worldwide. Secure funding for your international education with Axelis Overseas.',
 };
 

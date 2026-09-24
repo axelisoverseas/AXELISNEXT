@@ -27,7 +27,7 @@ export async function generateMetadata({ params }) {
   const program = getProgram(slug);
   if (!program) return { title: 'Programme not found' };
 
-  const url = `https://overseeducation.com/certifications/${program.slug}`;
+  const url = `https://www.overseeducation.com/certifications/${program.slug}`;
   const title = `${program.title}: ${formatINR(program.price)} | Axelis Certification`;
   // Foundation tickets carry no EMI, so the claim is only appended where true.
   const emi = monthlyEmi(program);
@@ -100,11 +100,11 @@ export default async function ProgramPage({ params }) {
     '@type': 'Course',
     name: program.title,
     description: program.description,
-    url: `https://overseeducation.com/certifications/${program.slug}`,
+    url: `https://www.overseeducation.com/certifications/${program.slug}`,
     provider: {
       '@type': 'EducationalOrganization',
       name: 'Axelis Overseas Education Pvt Ltd',
-      url: 'https://overseeducation.com',
+      url: 'https://www.overseeducation.com',
     },
     educationalCredentialAwarded: program.certificate,
     inLanguage: 'en',
@@ -114,7 +114,7 @@ export default async function ProgramPage({ params }) {
       priceCurrency: 'INR',
       category: 'Paid',
       availability: 'https://schema.org/InStock',
-      url: `https://overseeducation.com/certifications/${program.slug}`,
+      url: `https://www.overseeducation.com/certifications/${program.slug}`,
     },
     hasCourseInstance: {
       '@type': 'CourseInstance',
@@ -133,9 +133,9 @@ export default async function ProgramPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://overseeducation.com' },
-      { '@type': 'ListItem', position: 2, name: 'Certifications', item: 'https://overseeducation.com/certifications' },
-      { '@type': 'ListItem', position: 3, name: program.title, item: `https://overseeducation.com/certifications/${program.slug}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.overseeducation.com' },
+      { '@type': 'ListItem', position: 2, name: 'Certifications', item: 'https://www.overseeducation.com/certifications' },
+      { '@type': 'ListItem', position: 3, name: program.title, item: `https://www.overseeducation.com/certifications/${program.slug}` },
     ],
   };
 

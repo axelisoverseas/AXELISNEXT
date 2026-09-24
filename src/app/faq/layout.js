@@ -5,12 +5,12 @@ export const metadata = {
   title: 'FAQ. Study Abroad Questions Answered',
   description:
     'Answers to the most common questions about studying abroad with Axelis Overseas: countries served, fees, scholarships, visa process, student plans, and more.',
-  alternates: { canonical: 'https://overseeducation.com/faq' },
+  alternates: { canonical: 'https://www.overseeducation.com/faq' },
   openGraph: {
     title: 'FAQ | Axelis Overseas',
     description:
       'Frequently asked questions about studying abroad: countries, fees, scholarships, visas, and Axelis student plans.',
-    url: 'https://overseeducation.com/faq',
+    url: 'https://www.overseeducation.com/faq',
     type: 'website',
   },
 };

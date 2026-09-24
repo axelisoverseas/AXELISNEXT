@@ -19,10 +19,10 @@ import { refundPolicy } from '../../../data/certificationPrograms';
 // policy is linked for the detail rather than summarised away.
 
 export const metadata = {
-  title: 'Payment Terms | Axelis Overseas Education',
+  title: 'Payment Terms',
   description:
     'What every Axelis fee covers, what it does not, GST treatment, cancellation and refund terms, and the agreement you accept when you pay.',
-  alternates: { canonical: 'https://overseeducation.com/policies/payment-terms' },
+  alternates: { canonical: 'https://www.overseeducation.com/policies/payment-terms' },
   robots: { index: true, follow: true },
 };
 

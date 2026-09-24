@@ -10,10 +10,10 @@ import { formatINR, refundPolicy } from '../../data/certificationPrograms';
 import TrustBand from '../../components/TrustBand';
 
 export const metadata = {
-  title: 'Vocational Skill Programmes | Ausbildung & Chancenkarte Germany',
+  title: 'Ausbildung & Chancenkarte Germany Programmes',
   description:
     'Ausbildung and Chancenkarte for Germany, with every cost published before you pay. Axelis fee, language training, exams, APS, visa and blocked account set out in full.',
-  alternates: { canonical: 'https://overseeducation.com/vocational' },
+  alternates: { canonical: 'https://www.overseeducation.com/vocational' },
   robots: { index: true, follow: true },
 };
 

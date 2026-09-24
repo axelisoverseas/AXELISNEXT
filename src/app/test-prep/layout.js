@@ -1,13 +1,14 @@
-const PAGE_URL = 'https://overseeducation.com/test-prep';
+import { ORG_ID, SITE_URL } from '@/lib/seo';
+const PAGE_URL = 'https://www.overseeducation.com/test-prep';
 // Structured-data Offer url. Points at the pack list, because there are 19
 // packs each with its own Cashfree form, and no single link represents them.
 const OFFER_URL = 'https://www.overseeducation.com/test-prep#tracks';
-const OG_IMAGE = 'https://overseeducation.com/og-image.jpg';
+const OG_IMAGE = 'https://www.overseeducation.com/og-image.jpg';
 
 export const metadata = {
-  title: 'IELTS, TOEFL, PTE, SAT, DET Coaching. Premium 1-on-1 Test Prep',
+  title: 'IELTS, TOEFL, PTE, SAT & DET 1-on-1 Coaching',
   description:
-    'Premium 1-on-1 IELTS, TOEFL, PTE Academic, SAT and Duolingo English Test coaching with in-house tutors who have 8+ years of teaching experience. Score-targeted plans from ₹460/session, full-length mocks, flexible scheduling, and secure online enrolment. Bengaluru, India, live online worldwide.',
+    '1-on-1 IELTS, TOEFL, PTE, SAT and Duolingo English Test coaching from tutors with 8+ years of experience. Score-targeted plans from ₹460/session, full mocks, live online.',
   keywords: [
     'IELTS coaching',
     'IELTS classes',
@@ -86,31 +87,13 @@ export const metadata = {
   },
 };
 
+// The full node is in the root layout's graph; the @id makes this the same
+// entity, and name + url stay because Course results read them off provider.
 const provider = {
   '@type': 'EducationalOrganization',
-  '@id': 'https://overseeducation.com/#org',
+  '@id': ORG_ID,
   name: 'Axelis Overseas Education',
-  alternateName: 'Axelis Overseas',
-  url: 'https://overseeducation.com',
-  logo: 'https://overseeducation.com/logo.png',
-  email: 'axelisoverseas@overseeducation.com',
-  telephone: '+91 9098522711',
-  address: {
-    '@type': 'PostalAddress',
-    streetAddress: 'WorkFlo Ranka Junction, Property No. 224, 3rd Floor, #80/3, Vijinapur Village, Old Madras Road, KR Puram Hobli',
-    addressLocality: 'Bengaluru',
-    addressRegion: 'Karnataka',
-    postalCode: '560016',
-    addressCountry: 'IN',
-  },
-  areaServed: {
-    '@type': 'Country',
-    name: 'India',
-  },
-  sameAs: [
-    'https://www.instagram.com/axelisoverseas/',
-    'https://www.youtube.com/@axelisoverseas',
-  ],
+  url: SITE_URL,
 };
 
 const buildCourse = ({ name, alt, abstract, price, priceUnit = 'per student per pack' }) => ({
@@ -238,7 +221,7 @@ const breadcrumbs = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://overseeducation.com/' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.overseeducation.com/' },
     { '@type': 'ListItem', position: 2, name: 'Test Prep', item: PAGE_URL },
   ],
 };

@@ -11,7 +11,7 @@ const lato = Lato({
   subsets: ["latin"],
   display: "swap",
 });
-import Script from "next/script";
+import { SITE_URL, siteGraph } from "@/lib/seo";
 import Navbar from '@/components/Navbar';
 import FollowRail from '@/components/FollowRail';
 import Footer from '@/components/Footer';
@@ -21,12 +21,12 @@ import "./globals.css";
 // Self-hosted at build time by next/font: no third-party request, and
 // next/font emits a size-adjusted fallback so there is no layout shift.
 export const metadata = {
-  metadataBase: new URL('https://overseeducation.com'),
+  metadataBase: new URL(SITE_URL),
   icons: {
     icon: '/favicon.png',
   },
   title: {
-    template: '%s | Axelis Overseas Education',
+    template: '%s | Axelis Overseas',
     default: 'Axelis Overseas. Every Fee Published Before You Pay',
   },
   description: "India's study-abroad consultancy across 29 destination markets. One counsellor from shortlist to arrival, every fee published before you pay. Bengaluru + Bilaspur.",
@@ -46,13 +46,9 @@ export const metadata = {
   authors: [{ name: 'Axelis Overseas Education' }],
   creator: 'Axelis Overseas Education',
   publisher: 'Axelis Overseas Education',
-  alternates: {
-    canonical: 'https://overseeducation.com',
-  },
   openGraph: {
     title: 'Axelis Overseas. Every Fee Published Before You Pay',
     description: 'End-to-end certification programmes. Concierge tiers carry a written refund commitment. Application coaching, languages to CEFR B1, executive MBA and PhD support. EMI available.',
-    url: 'https://overseeducation.com',
     siteName: 'Axelis Overseas Education',
     locale: 'en_IN',
     type: 'website',
@@ -92,43 +88,15 @@ export const metadata = {
   category: 'education',
 };
 
-// JSON-LD structured data for the organization
-const jsonLd = {
-  '@context': 'https://schema.org',
-  '@type': 'EducationalOrganization',
-  name: 'Axelis Overseas Education',
-  alternateName: 'Axelis Overseas',
-  url: 'https://overseeducation.com',
-  logo: 'https://overseeducation.com/logo.png',
-  description: 'India\'s trusted study abroad consultancy helping students pursue higher education across 29 countries, including the UK, USA, Canada, Australia and Europe.',
-  email: 'axelisoverseas@overseeducation.com',
-  telephone: '+91 9098522711',
-  address: {
-    '@type': 'PostalAddress',
-    addressLocality: 'Bengaluru',
-    addressRegion: 'Karnataka',
-    addressCountry: 'IN',
-  },
-  sameAs: [
-    'https://www.instagram.com/axelisoverseas/',
-    'https://www.youtube.com/@axelisoverseas',
-  ],
-  areaServed: {
-    '@type': 'Country',
-    name: 'India',
-  },
-  serviceType: ['Study Abroad Consulting', 'University Admissions', 'Visa Assistance', 'Scholarship Guidance', 'Education Loans'],
-  knowsAbout: ['Study in UK', 'Study in USA', 'Study in Ireland', 'Study in Germany', 'Study in France', 'Study in Finland'],
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={lato.variable} suppressHydrationWarning>
       <head>
-        <Script
-          id="json-ld-organization"
+        {/* A plain script, not next/script: that injects after hydration, and
+            answer-engine crawlers do not run JavaScript. */}
+        <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
         />
       </head>
       <body className="font-sans antialiased text-[var(--foreground)] bg-[var(--background)] flex flex-col min-h-screen site-body">

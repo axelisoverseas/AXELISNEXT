@@ -1,78 +1,72 @@
-# Axelis Overseas Education — Study Abroad Consultancy
+# Axelis Overseas
 
-> Axelis Overseas (overseeducation.com) is a study abroad consultancy based in Bengaluru, India. We help Indian students pursue higher education at top universities across UK, USA, Ireland, Germany, France, Finland, and more.
+> Axelis Overseas Education Pvt Ltd (overseeducation.com) is an Indian study-abroad consultancy covering 29 destination markets, from tuition-free public universities in Europe to the UK, USA, Canada and Australia. One counsellor handles each student from shortlist to arrival, and every Axelis fee is published on the site before the student pays.
 
-## About Us
+Corporate office in Bengaluru, Karnataka; registered office in Bilaspur, Chhattisgarh. CIN U85500CT2023PTC014913, incorporated 18 July 2023. DPIIT-recognised under Startup India, with British Council and AIRC counsellor training.
 
-Axelis Overseas Education is a premium study abroad consulting firm that guides students through the entire journey of studying overseas — from university selection and applications to visa processing, scholarships, accommodation, and pre-departure support.
+Contact: axelisoverseas@overseeducation.com, +91 90985 22711. The first counselling call is free.
 
-- **Founded**: Bengaluru, Karnataka, India
-- **Website**: https://overseeducation.com
-- **Contact**: axelisoverseas@overseeducation.com | info@overseeducation.com
-- **Phone**: +91 9098522711
+How Axelis is paid: the figure on each plan page is the whole Axelis fee. Government, apostille, exam and visa charges are paid to those bodies directly, and Axelis takes no margin on them. Axelis does not promise admission; its refund commitments are defined in the published cancellation and refund policy.
 
-## Services
+## Student plans
 
-- **University Selection**: Personalized matching with 70+ partner universities across 6 countries
-- **Application Management**: End-to-end application support for UG, PG, and PhD programs
-- **Visa Assistance**: Complete visa application guidance and documentation support
-- **Scholarship Guidance**: Help identifying and applying for merit and need-based scholarships
-- **Education Loans**: Partnerships with major banks for competitive loan rates
-- **Accommodation**: Housing support through verified accommodation partners
-- **Career Counseling**: Course and career guidance based on student profiles
-- **Test Preparation**: Premium 1-on-1 live online coaching for IELTS, TOEFL iBT, PTE Academic, and the Duolingo English Test (DET). All in-house tutors have at least 8 years of full-time English test prep teaching experience. Score-targeted plans, full-length mocks, line-by-line writing and speaking reviews, flexible scheduling. Continued coaching at no extra fee if the agreed target band is not reached. Enrolment landing page: https://overseeducation.com/test-prep — payment via Razorpay (https://rzp.io/rzp/c5K4pKY). Free 30-minute diagnostic demo available.
+- [Student Plans](https://www.overseeducation.com/products): the two main plans, with prices.
+- Global Admissions Charter (GAC): for full-fee destinations such as the UK, USA, Canada and Australia. ₹9,999 onboarding fee.
+- Europe Public Charter (EPC): for tuition-free or low-fee public universities in Europe. ₹19,999 service fee, plus a ₹1,80,000 success fee payable only if the student accepts an offer from a tuition-free public university (₹1,99,999 in total).
+- Both plans refund the deposit if the visa or the offer does not come. Visa filing is included in both.
+- [Start here](https://www.overseeducation.com/start): which route fits, and a free call-back.
 
-## Partner Countries
+## Certification programmes
 
-- 🇬🇧 United Kingdom (23 partner universities)
-- 🇺🇸 United States of America (30+ partner universities)
-- 🇮🇪 Ireland (10 partner universities)
-- 🇩🇪 Germany (2 partner universities + public university programs)
-- 🇫🇷 France (1 partner university)
-- 🇫🇮 Finland (1 partner university)
+- [Certification programmes](https://www.overseeducation.com/certifications): concierge programmes with a written refund commitment. EMI is available.
+- [Global Career Launch](https://www.overseeducation.com/certifications/global-career-launch): ₹2,00,000, a 12-month end-to-end programme covering strategy, applications, offers, language, visa and landing.
+- [PhD & Fellowship Concierge](https://www.overseeducation.com/certifications/phd-fellowship-concierge): ₹2,50,000, covering proposal, supervisor outreach, funding and visa.
+- [Executive MBA Concierge](https://www.overseeducation.com/certifications/executive-mba-concierge): ₹3,00,000, covering school selection, essays, recommenders, interviews, financing and relocation.
 
-## Key Partner Universities
+## Skill programmes and Germany routes
 
-### UK
-Warwick University, University of Bath, University of Liverpool, University of Strathclyde, University of Surrey, University of East Anglia, Aston University, Coventry University, Edinburgh Napier University, University of Leicester, and more.
+- [Skill programmes](https://www.overseeducation.com/programmes): taught, assessed programmes with a published curriculum and a verifiable certificate. Examples: dMAT preparation for APS (₹25,000), German or French from A1 to B2 (₹1,80,000), and University Application Craft (₹42,000). Prices include 18% GST.
+- [Ausbildung and Chancenkarte](https://www.overseeducation.com/vocational): paid vocational training in Germany, or the points-based Opportunity Card. The main fee is settled only once the visa is granted.
+- [Test preparation](https://www.overseeducation.com/test-prep): 1-on-1 IELTS, TOEFL, PTE, SAT and Duolingo English Test coaching, from ₹460 a session.
+- [Student services](https://www.overseeducation.com/services): services that can be bought on their own, such as MEA apostille (₹1,500 per document plus GST), translation, visa filing and language training.
 
-### USA
-Arizona State University (#1 Innovation), Northeastern University, New York University (SPS & Steinhardt), Case Western Reserve University, Stevens Institute of Technology, Stony Brook University, Fordham University, Rochester Institute of Technology, Worcester Polytechnic Institute, Lehigh University, and more.
+## Money
 
-### Ireland
-Trinity College Dublin (Top 100 World), University College Dublin, Dublin City University, University of Limerick, University of Galway, Maynooth University, National College of Ireland, Griffith College, and more.
+- [Financing](https://www.overseeducation.com/financing): card EMI, merchant EMI and study loans.
+- [Scholarships](https://www.overseeducation.com/scholarships)
+- [Payment terms](https://www.overseeducation.com/policies/payment-terms)
+- [Cancellation and refund policy](https://www.overseeducation.com/policies/cancellation-refund)
 
-### Germany
-University of Europe for Applied Sciences, Berlin School of Business and Innovation, plus extensive public university programs via Uni-Assist.
+## Country guides
 
-## Popular Study Fields
+Costs, student visa rules, language requirements, work rights and intakes for each country:
 
-- Computer Science & AI
-- Engineering (Mechanical, Electrical, Civil)
-- Business Administration & MBA
-- Management & Marketing
-- Data Science & Analytics
-- Health Sciences & Pharmacy
-- Design & Creative Industries
+- [Study in the UK](https://www.overseeducation.com/guide/study-in-uk)
+- [Study in the USA](https://www.overseeducation.com/guide/study-in-usa)
+- [Study in Canada](https://www.overseeducation.com/guide/study-in-canada)
+- [Study in Australia](https://www.overseeducation.com/guide/study-in-australia)
+- [Study in Ireland](https://www.overseeducation.com/guide/study-in-ireland)
+- [Study in Germany](https://www.overseeducation.com/guide/study-in-germany)
+- [Study in France](https://www.overseeducation.com/guide/study-in-france)
+- [Study in Finland](https://www.overseeducation.com/guide/study-in-finland)
+- [Study in Italy](https://www.overseeducation.com/guide/study-in-italy)
+- [Study in Austria](https://www.overseeducation.com/guide/study-in-austria)
+- [Study in the Netherlands](https://www.overseeducation.com/guide/study-in-netherlands)
 
-## Application Process
+## Company
 
-1. **Free Consultation**: Book a free counseling session via our website or WhatsApp
-2. **Profile Assessment**: We evaluate your academic profile and preferences
-3. **University Shortlisting**: Get matched with the best-fit universities
-4. **Application Filing**: We handle all documentation and submissions
-5. **Offer Acceptance**: Review and accept your admission offers
-6. **Visa Processing**: Complete visa documentation and interview prep
-7. **Pre-Departure**: Accommodation, travel, and orientation support
+- [About](https://www.overseeducation.com/about)
+- [Accreditations](https://www.overseeducation.com/accreditations)
+- [Student stories and reviews](https://www.overseeducation.com/testimonials)
+- [Verify a certificate](https://www.overseeducation.com/verify)
+- [FAQ](https://www.overseeducation.com/faq)
+- [Contact](https://www.overseeducation.com/contact)
 
-## Important Links
+## Optional
 
-- Home: https://overseeducation.com
-- About: https://overseeducation.com/about
-- Universities: https://overseeducation.com/universities
-- Contact: https://overseeducation.com/contact
-- Study in UK: https://overseeducation.com/guide/study-in-uk
-- Study in USA: https://overseeducation.com/guide/study-in-usa
-- Study in Ireland: https://overseeducation.com/guide/study-in-ireland
-- Scholarships: https://overseeducation.com/scholarships
-- Products & Student Plans: https://overseeducation.com/products
+- [University finder](https://www.overseeducation.com/university-finder)
+- [Free downloadable guides](https://www.overseeducation.com/resources)
+- [Accommodation](https://www.overseeducation.com/accommodation)
+- [For lending partners](https://www.overseeducation.com/for-lenders)
+- [Terms of service](https://www.overseeducation.com/terms-conditions)
+- [Privacy policy](https://www.overseeducation.com/privacy-policy)

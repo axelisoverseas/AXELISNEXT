@@ -3,7 +3,7 @@ import { programs, catalogueStats, formatINR } from '../../data/certificationPro
 const priceRange = `${formatINR(catalogueStats.priceFloor)} to ${formatINR(catalogueStats.priceCeiling)}`;
 
 export const metadata = {
-  title: 'Certification Programmes. Concierge Tiers Refund-Backed, EMI Available',
+  title: 'Certification Programmes, Refund-Backed, EMI',
   description: `Axelis end-to-end certification programmes, ${priceRange}, concierge tiers carrying a written refund commitment. Application coaching, language certification, Executive MBA prep, PhD and fellowship applications, and Global Career Launch. EMI available.`,
   keywords: [
     'study abroad certification', 'application coaching certificate',
@@ -13,11 +13,11 @@ export const metadata = {
     'student visa interview coaching', 'study abroad course EMI',
     'Axelis certifications', 'overseas education certification programmes',
   ],
-  alternates: { canonical: 'https://overseeducation.com/certifications' },
+  alternates: { canonical: 'https://www.overseeducation.com/certifications' },
   openGraph: {
     title: 'Axelis Certification Programmes. Concierge Tiers Refund-Backed',
     description: `Earn a verifiable credential on the way to your offer letter. ${priceRange}, concierge tiers refund-backed, EMI available.`,
-    url: 'https://overseeducation.com/certifications',
+    url: 'https://www.overseeducation.com/certifications',
     siteName: 'Axelis Overseas Education',
     locale: 'en_IN',
     type: 'website',
@@ -39,7 +39,7 @@ const itemListLd = {
     '@type': 'ListItem',
     position: i + 1,
     name: p.title,
-    url: `https://overseeducation.com/certifications/${p.slug}`,
+    url: `https://www.overseeducation.com/certifications/${p.slug}`,
   })),
 };
 
@@ -47,8 +47,8 @@ const breadcrumbLd = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://overseeducation.com' },
-    { '@type': 'ListItem', position: 2, name: 'Certifications', item: 'https://overseeducation.com/certifications' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.overseeducation.com' },
+    { '@type': 'ListItem', position: 2, name: 'Certifications', item: 'https://www.overseeducation.com/certifications' },
   ],
 };
 

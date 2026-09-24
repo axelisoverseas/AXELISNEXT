@@ -20,7 +20,7 @@ const LAST_UPDATED = 'July 21, 2026';
 const LEGAL_NAME = 'Axelis Overseas Education Pvt Ltd';
 
 export const metadata = {
-  title: 'Privacy Policy | Axelis Overseas',
+  title: 'Privacy Policy',
   description:
     'How Axelis Overseas collects, uses, and protects your personal information: data we collect, how it is used and shared, your rights, and how to reach us.',
   keywords:

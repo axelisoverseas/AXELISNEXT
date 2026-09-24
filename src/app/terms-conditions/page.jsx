@@ -13,7 +13,7 @@ export const metadata = {
   title: 'Terms of Service',
   description:
     'Terms of Service for Axelis Overseas Education Pvt Ltd: enrolment, fees and EMI, what we undertake, what the student undertakes, outcome guarantees, and limits of liability.',
-  alternates: { canonical: 'https://overseeducation.com/terms-conditions' },
+  alternates: { canonical: 'https://www.overseeducation.com/terms-conditions' },
   robots: { index: true, follow: true },
 };
 

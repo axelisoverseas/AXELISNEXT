@@ -1,55 +1,52 @@
 import { programs } from '../data/certificationPrograms';
+import { GUIDE_SLUGS } from '../data/countryGuides';
+import { LANDING_SLUGS } from '../data/landingPages';
+import { SITE_URL } from '@/lib/seo';
 
-const BASE_URL = 'https://overseeducation.com';
+// Every URL here must be indexable and self-canonical: no /portal (a demo
+// dashboard, noindex) and no /payment-status. There is no lastModified: it
+// was stamped with the build time on every deploy, which teaches search
+// engines to ignore it.
+const CORE = [
+  ['/', 'daily', 1.0],
+  ['/certifications', 'weekly', 0.95],
+  ['/products', 'weekly', 0.9],
+  ['/university-finder', 'weekly', 0.9],
+  ['/scholarships', 'weekly', 0.9],
+  ['/programmes', 'weekly', 0.9],
+  ['/vocational', 'weekly', 0.9],
+  ['/start', 'weekly', 0.9],
+  ['/resources', 'weekly', 0.85],
+  ['/test-prep', 'weekly', 0.85],
+  ['/services', 'weekly', 0.85],
+  ['/about', 'monthly', 0.8],
+  ['/contact', 'monthly', 0.8],
+  ['/bookings', 'monthly', 0.8],
+  ['/accommodation', 'weekly', 0.8],
+  ['/financing', 'monthly', 0.8],
+  ['/testimonials', 'weekly', 0.7],
+  ['/faq', 'monthly', 0.6],
+  ['/accreditations', 'monthly', 0.6],
+  ['/verify', 'monthly', 0.6],
+  ['/for-lenders', 'monthly', 0.5],
+  ['/policies/cancellation-refund', 'monthly', 0.5],
+  ['/policies/payment-terms', 'monthly', 0.5],
+  ['/terms-conditions', 'monthly', 0.5],
+  ['/delivery-policy', 'monthly', 0.5],
+  ['/privacy-policy', 'monthly', 0.5],
+];
+
+const entry = (path, changeFrequency, priority) => ({
+  url: `${SITE_URL}${path}`,
+  changeFrequency,
+  priority,
+});
 
 export default function sitemap() {
-  const now = new Date().toISOString().split('T')[0];
-
-  const corePages = [
-    { url: `${BASE_URL}/`, changeFrequency: 'daily', priority: 1.0 },
-    { url: `${BASE_URL}/about`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/contact`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/bookings`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/products`, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/university-finder`, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/resources`, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${BASE_URL}/test-prep`, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${BASE_URL}/accommodation`, changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${BASE_URL}/scholarships`, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/portal`, changeFrequency: 'weekly', priority: 0.6 },
-    { url: `${BASE_URL}/faq`, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE_URL}/testimonials`, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${BASE_URL}/certifications`, changeFrequency: 'weekly', priority: 0.95 },
-    { url: `${BASE_URL}/programmes`, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/vocational`, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/services`, changeFrequency: 'weekly', priority: 0.85 },
-    { url: `${BASE_URL}/financing`, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/accreditations`, changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${BASE_URL}/policies/cancellation-refund`, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/policies/payment-terms`, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/terms-conditions`, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/delivery-policy`, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/privacy-policy`, changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${BASE_URL}/verify`, changeFrequency: 'monthly', priority: 0.6 },
-  ].map((page) => ({ ...page, lastModified: now }));
-
-  const countryGuides = [
-    'study-in-uk', 'study-in-usa', 'study-in-canada', 'study-in-australia',
-    'study-in-ireland', 'study-in-germany', 'study-in-france', 'study-in-finland',
-    'study-in-italy', 'study-in-austria', 'study-in-netherlands',
-  ].map((slug) => ({
-    url: `${BASE_URL}/guide/${slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly',
-    priority: 0.8,
-  }));
-
-  const certificationPages = programs.map((program) => ({
-    url: `${BASE_URL}/certifications/${program.slug}`,
-    lastModified: now,
-    changeFrequency: 'weekly',
-    priority: 0.85,
-  }));
-
-  return [...corePages, ...certificationPages, ...countryGuides];
+  return [
+    ...CORE.map(([path, freq, priority]) => entry(path, freq, priority)),
+    ...programs.map((p) => entry(`/certifications/${p.slug}`, 'weekly', 0.85)),
+    ...GUIDE_SLUGS.map((slug) => entry(`/guide/${slug}`, 'monthly', 0.8)),
+    ...LANDING_SLUGS.map((slug) => entry(`/lp/${slug}`, 'monthly', 0.7)),
+  ];
 }
