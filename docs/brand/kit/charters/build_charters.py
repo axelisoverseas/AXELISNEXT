@@ -104,6 +104,7 @@ EPC = HEAD + '''
 <ul>
   <li>Profile evaluation: the right subject and country for your budget.</li>
   <li>Shortlisting of tuition-free public universities, and a status tracker that becomes your locked preference list.</li>
+  <li><b>Global Admissions Charter included free.</b> You may add private and paid-tuition universities to the same preference list, with no onboarding deposit and no additional fee.</li>
   <li>A dedicated email ID used only for your applications. Until the success fee is paid, every university message is shared with you as a screenshot or forwarded email.</li>
   <li>Europass CV, Statement of Purpose and Letters of Recommendation.</li>
   <li>Visa SOP and visa filing, scholarship applications, education loans through 25+ lending partners, housing assistance, and part-time job guidance after you land.</li>
@@ -114,7 +115,7 @@ EPC = HEAD + '''
   <thead><tr><th>Fee</th><th class="n">Amount</th><th class="n">GST 18%</th><th class="n">Total</th><th>When</th></tr></thead>
   <tbody>
     <tr><td>Service fee</td><td class="n">&#8377;19,999</td><td class="n">&#8377;3,600</td><td class="n">&#8377;23,599</td><td>Now, to start</td></tr>
-    <tr><td>Success fee</td><td class="n">&#8377;1,80,000</td><td class="n">&#8377;32,400</td><td class="n">&#8377;2,12,400</td><td>Only when you accept an offer from a tuition-free public university</td></tr>
+    <tr><td>Success fee</td><td class="n">&#8377;1,80,000</td><td class="n">&#8377;32,400</td><td class="n">&#8377;2,12,400</td><td>Only when you accept an offer from a tuition-free public university. Never on a private university offer.</td></tr>
     <tr class="tot"><td colspan="3">The most you ever pay</td><td class="n">&#8377;2,35,999</td><td></td></tr>
   </tbody>
 </table>
@@ -129,7 +130,7 @@ EPC = HEAD + '''
 <h2>4. When it does not</h2>
 <div class="box no">
 <ul style="margin:0">
-  <li>You receive an offer from any university on your preference list, public or private.</li>
+  <li>You receive an offer from any university on your preference list, public or private. A private university offer carries no success fee.</li>
   <li>You leave the process yourself after the first shortlist has been shared.</li>
   <li>You decline an offer from a university that was not your preference. The service fee is not refunded, but no success fee is charged.</li>
 </ul>

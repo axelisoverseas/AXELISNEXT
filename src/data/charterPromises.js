@@ -12,6 +12,10 @@
  *     intakes rather than one intake, because public universities run several.
  *   - EPC success fee comes back if the visa is refused for a reason not
  *     attributable to the student. The old "₹90,000" figure is gone.
+ *   - EPC includes GAC free: an EPC student can add private universities to
+ *     the same preference list at no extra fee and no ₹9,999 deposit. A
+ *     private offer counts as an offer (no service-fee refund) but carries no
+ *     success fee, which applies only to tuition-free public universities.
  *   - 18% GST is added on top of every fee and itemised on the receipt.
  *   - Checkout is Cashfree. Razorpay and PayU are no longer used.
  */
@@ -68,7 +72,7 @@ export const PLANS = [
     name: 'Europe Public Charter',
     short: 'EPC',
     formerly: 'Zero Tuition Fee',
-    for: 'Tuition-free public universities in Europe: Germany, Norway, Finland and more.',
+    for: 'Tuition-free public universities in Europe: Germany, Norway, Finland and more. Private universities included free, under the Global Admissions Charter.',
     headline: '₹19,999',
     headlineNote: 'Now. ₹1,80,000 only if you accept an offer.',
     pay: [
@@ -79,6 +83,7 @@ export const PLANS = [
     scope: [
       'Profile evaluation: the right subject and the right country for your budget',
       'Shortlisting of tuition-free public universities',
+      'The Global Admissions Charter included free: private universities can go on the same preference list, with no ₹9,999 deposit',
       'A live status tracker with applications, statuses and deadlines',
       'A dedicated email ID for your applications, used only for them',
       'Europass CV, Statement of Purpose and Letters of Recommendation',
@@ -99,7 +104,7 @@ export const PLANS = [
       },
     ],
     refundNo: [
-      'You receive an offer from any university on your tracker, public or private',
+      'You receive an offer from any university on your preference list, public or private. A private offer carries no success fee.',
       'You leave the process yourself after the first shortlist has been shared',
       'You decline an offer from a university that was not your preference. The ₹19,999 is not refunded, but you owe no success fee either.',
     ],

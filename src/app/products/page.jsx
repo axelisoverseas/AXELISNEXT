@@ -428,6 +428,7 @@ function ProductsContent() {
                 <ul className="space-y-3 mb-8 text-sm">
                   {[
                     'Targeted shortlist of tuition-free public universities',
+                    'Private universities too, with the Global Admissions Charter included free',
                     'Language certification advisory (DELF, Goethe, IELTS)',
                     'Direct application submission to chosen universities',
                     'Visa file build + financial documentation',
