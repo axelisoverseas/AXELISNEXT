@@ -98,7 +98,7 @@ export default function ChartersPage() {
       <section className="sec">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <SectionHead label="Payment terms" title="What you pay, and exactly when.">
-            Nothing is added later. Every amount below is on the checkout form before you pay.
+            Nothing is added later. 18% GST is added on top of every fee and shown on your receipt. Every amount below is on the checkout form before you pay.
           </SectionHead>
 
           <div className="grid gap-6 lg:grid-cols-2">
@@ -123,6 +123,7 @@ export default function ChartersPage() {
                           </td>
                           <td className="p-3 text-right font-bold text-[var(--color-navy)] tabular-nums whitespace-nowrap">
                             {row.amount}
+                            {row.gst && <span className="block text-xs font-medium text-[var(--color-dim)]">{row.gst}</span>}
                           </td>
                           <td className="p-3 text-[var(--color-dim)]">{row.when}</td>
                         </tr>
@@ -164,6 +165,7 @@ export default function ChartersPage() {
                       <div>
                         <p className="font-semibold text-[var(--color-navy)]">{r.title}</p>
                         <p className="text-sm text-[var(--color-dim)] leading-relaxed mt-0.5">{r.body}</p>
+                        {r.note && <p className="text-xs text-[var(--color-dim)] mt-1.5 italic">{r.note}</p>}
                       </div>
                     </li>
                   ))}
@@ -250,10 +252,10 @@ export default function ChartersPage() {
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <a href={CHARTER_DOCS.gac} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-lg">
-              <FileText size={17} aria-hidden="true" /> Full GAC charter
+              <FileText size={17} aria-hidden="true" /> GAC charter (PDF)
             </a>
             <a href={CHARTER_DOCS.epc} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-lg">
-              <FileText size={17} aria-hidden="true" /> Full EPC charter
+              <FileText size={17} aria-hidden="true" /> EPC charter (PDF)
             </a>
           </div>
           <p className="mt-6 text-sm text-[var(--color-dim)]">

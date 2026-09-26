@@ -1,34 +1,26 @@
 /**
  * Every promise in the two student charters, in one place.
  *
- * SOURCE: the two charter declarations students accept at checkout, read
- * 26 September 2026 from the documents linked on the Razorpay enrolment pages
- * pl_Rk1qpiuEJifDx1 (Zero Consultation Fee, now the Global Admissions Charter)
- * and pl_Rk1J9M0s2qvgUz (Zero Tuition Fee, now the Europe Public Charter).
+ * NEW CONDITIONS ONLY. The Razorpay-era charters (Zero Consultation Fee, Zero
+ * Tuition Fee) are retired. Where they differed from the current checkout, the
+ * current checkout wins, per the founder on 26 September 2026:
  *
- * The site renamed both plans and moved checkout from Razorpay to Cashfree.
- * The promises carried over; the names and the payment rail did not.
- *
- * TWO POINTS WHERE THE SOURCE DOCUMENTS DISAGREE. Both are resolved here in
- * favour of what the live Cashfree checkout discloses, because a page that sits
- * next to a pay button must say what the pay button says. Both need the
- * founder's confirmation, and the charters need reissuing to match:
- *
- *   1. GAC deposit refund. The Razorpay-era charter refunds the ₹9,999 "within
- *      20 working days of the Student receiving their visa". The live checkout
- *      says it is refunded once the visa is granted, the student has arrived,
- *      and university tuition is paid in full ("Section 4A"). The stricter,
- *      newer condition is used.
- *   2. EPC visa-rejection refund. The charter says the "full Success Fee
- *      (₹90,000 or applicable paid amount)" is refunded. The Success Fee is
- *      ₹1,80,000 everywhere else, including two lines earlier in the same
- *      charter. The ₹90,000 figure is not reproduced; "the Success Fee you
- *      have paid" is what "applicable paid amount" means.
+ *   - GAC deposit comes back once the visa is granted, the student has arrived
+ *     and tuition is paid in full, or if no offer arrives.
+ *   - EPC service fee: NO staging. Refunded if no university on the student's
+ *     preference list (status tracker and portal) makes an offer, judged across
+ *     intakes rather than one intake, because public universities run several.
+ *   - EPC success fee comes back if the visa is refused for a reason not
+ *     attributable to the student. The old "₹90,000" figure is gone.
+ *   - 18% GST is added on top of every fee and itemised on the receipt.
+ *   - Checkout is Cashfree. Razorpay and PayU are no longer used.
  */
 
 export const CHARTER_DOCS = {
-  gac: 'https://drive.google.com/file/d/1A-uIsE-7CwydZq2xG8YBysz1MkXBYOUa/view',
-  epc: 'https://drive.google.com/file/d/1AInWwkVqgksPKWQCumFtKLtdrq3VEctv/view',
+  // Version 2.0, reissued 26 September 2026. The Razorpay-era PDFs on Drive
+  // are retired and no longer linked from anywhere on the site.
+  gac: '/charters/global-admissions-charter-v2.0.pdf',
+  epc: '/charters/europe-public-charter-v2.0.pdf',
 };
 
 export const PLANS = [
@@ -41,7 +33,7 @@ export const PLANS = [
     headline: '₹9,999',
     headlineNote: 'Refundable deposit. No consultation fee.',
     pay: [
-      { what: 'Onboarding deposit', amount: '₹9,999', when: 'Now, to start', note: 'Refundable. See below.' },
+      { what: 'Onboarding deposit', amount: '₹9,999', gst: '+ ₹1,800 GST', when: 'Now, to start', note: 'Refundable. See below.' },
       { what: 'Consultation fee', amount: '₹0', when: 'Never', note: 'Axelis charges nothing for the consultancy itself.' },
     ],
     total: 'Nothing, if you are placed',
@@ -80,10 +72,10 @@ export const PLANS = [
     headline: '₹19,999',
     headlineNote: 'Now. ₹1,80,000 only if you accept an offer.',
     pay: [
-      { what: 'Service fee', amount: '₹19,999', when: 'Now, to start', note: 'Refunded if no offer comes.' },
-      { what: 'Success fee', amount: '₹1,80,000', when: 'Only when you accept an offer from a tuition-free public university', note: 'Covers final enrolment and visa processing.' },
+      { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,600 GST', when: 'Now, to start', note: 'Refunded if no offer comes.' },
+      { what: 'Success fee', amount: '₹1,80,000', gst: '+ ₹32,400 GST', when: 'Only when you accept an offer from a tuition-free public university', note: 'Covers final enrolment and visa processing.' },
     ],
-    total: '₹1,99,999, and only if you accept an offer',
+    total: '₹1,99,999 + GST (₹2,35,999), and only if you accept an offer',
     scope: [
       'Profile evaluation: the right subject and the right country for your budget',
       'Shortlisting of tuition-free public universities',
@@ -97,12 +89,13 @@ export const PLANS = [
     ],
     refundYes: [
       {
-        title: 'No university makes you an offer',
-        body: 'The ₹19,999 service fee comes back if no university on your status tracker makes you an offer.',
+        title: 'No university on your preference list makes you an offer',
+        body: 'The ₹19,999 service fee comes back in full if no university on your preference list, the one in your status tracker and your portal, makes you an offer.',
+        note: 'Judged across every intake on your list, not one intake at a time, because public universities run more than one.',
       },
       {
-        title: 'Your visa is refused',
-        body: 'The success fee you have paid comes back in full, if you choose not to reapply.',
+        title: 'Your visa is refused, and it is not down to you',
+        body: 'The success fee you have paid comes back in full if your visa is refused for a reason not attributable to you.',
       },
     ],
     refundNo: [
