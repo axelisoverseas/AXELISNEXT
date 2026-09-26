@@ -68,3 +68,6 @@ docs/students/
 # Word/Office lock files, created while a doc is open
 .~*
 **/.~*
+
+# Campaign recipient lists: real phones and emails, never commit
+docs/campaigns/*.private.*
