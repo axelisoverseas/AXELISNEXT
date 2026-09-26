@@ -59,8 +59,8 @@ the whole campaign, per the AdviseAI rule.
 >
 > We now take payments through Cashfree. Your plan, services and refund terms stay the same. One change: 18% GST now applies and shows on your receipt.
 >
-> GAC ₹9,999 + GST, refundable: [GAC_CASHFREE_LINK]
-> EPC ₹19,999 + GST: [EPC_CASHFREE_LINK]
+> GAC ₹9,999 + GST, refundable: https://payments.cashfree.com/forms/axelis-global-admissions-charter
+> EPC ₹19,999 + GST: https://payments.cashfree.com/forms/axelis-europe-public-charter
 >
 > Questions? Book a free call: calendly.com/axelisoverseas/counsellingsession
 
@@ -68,7 +68,7 @@ the whole campaign, per the AdviseAI rule.
 
 > Hi [first name], Rishabh here. Quick heads-up: we've moved payments to Cashfree. Your plan and refund terms don't change. The only difference is 18% GST, now on the receipt.
 >
-> When you're ready: GAC [GAC_CASHFREE_LINK] · EPC [EPC_CASHFREE_LINK]
+> When you're ready: GAC https://payments.cashfree.com/forms/axelis-global-admissions-charter · EPC https://payments.cashfree.com/forms/axelis-europe-public-charter
 >
 > Or book a call with me: calendly.com/axelisoverseas/counsellingsession
 
@@ -84,8 +84,8 @@ the whole campaign, per the AdviseAI rule.
 >
 > What changes: 18% GST now applies, as the law requires for our services. It is shown on your receipt, never added later.
 >
-> **Global Admissions Charter:** ₹9,999 + GST (₹11,799), refundable. [GAC_CASHFREE_LINK]
-> **Europe Public Charter:** ₹19,999 + GST (₹23,599) now. The ₹1,80,000 success fee + GST applies only if you accept an offer. [EPC_CASHFREE_LINK]
+> **Global Admissions Charter:** ₹9,999 + GST (₹11,799), refundable. https://payments.cashfree.com/forms/axelis-global-admissions-charter
+> **Europe Public Charter:** ₹19,999 + GST (₹23,599) now. The ₹1,80,000 success fee + GST applies only if you accept an offer. https://payments.cashfree.com/forms/axelis-europe-public-charter
 >
 > Every term, in full: overseeducation.com/products
 >
@@ -137,9 +137,10 @@ run it in draft mode so every reply is visible before it goes.
 
 ## 4. Blockers, in order
 
-1. **No Cashfree links for GAC or EPC.** Both are `url: null` in
-   `src/data/cashfreeLinks.js`. Every message above has placeholders. Do not
-   send until both forms exist, carry 18% GST, and are tested.
+1. **Cashfree links: done 26 Sep 2026.** Both forms are live with 18% GST,
+   a mandatory charter checkbox and an invoice, and are in the messages above.
+   Cashfree charges ₹11,798.82 and ₹23,598.82 (GST on the exact fee); the
+   messages round to ₹11,799 and ₹23,599. Do one real ₹-test before wave 1.
 2. **The website still shows ₹9,999 and ₹19,999 without "+ GST"** on the
    plan cards. A lead who reads this message and then opens /products sees a
    different number. Update the site first.
