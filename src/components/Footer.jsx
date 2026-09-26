@@ -102,6 +102,9 @@ const Footer = () => {
                 <Link href="/terms-conditions" className="inline-flex items-center min-h-[44px] text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Terms of Service</Link>
               </li>
               <li>
+                <Link href="/charters" className="inline-flex items-center min-h-[44px] text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Our Promises, in Writing</Link>
+              </li>
+              <li>
                 <Link href="/policies/cancellation-refund" className="inline-flex items-center min-h-[44px] text-[var(--color-dim-dark)] hover:text-[var(--storm-electric)] transition-colors">Cancellation &amp; Refund Policy</Link>
               </li>
               <li>

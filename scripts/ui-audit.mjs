@@ -24,7 +24,7 @@ const ALL = [
   '/lp/tuition-free-europe', '/lp/pay-after-offer', '/lp/published-fees',
   '/programmes', '/for-lenders', '/policies/cancellation-refund',
   '/certifications/global-career-launch', '/certifications/german-a1-a2',
-  '/terms-conditions',
+  '/terms-conditions', '/charters',
 ];
 
 const targets = routes.length ? routes : ALL;

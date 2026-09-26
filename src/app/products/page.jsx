@@ -246,6 +246,12 @@ function ProductsContent() {
             <p className="text-[var(--color-navy)]/85 text-lg">
               Pick the route that matches where you want to study. Both come with a refundable deposit and a dedicated counsellor. Fees and refund conditions differ, and are set out in full on each card below.
             </p>
+            <p className="mt-3">
+              <Link href="/charters" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-axelis)] underline underline-offset-4">
+                Every promise on one page: what you pay, when you get it back, when you do not
+                <ArrowRight size={15} aria-hidden="true" />
+              </Link>
+            </p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 max-w-6xl mx-auto">
