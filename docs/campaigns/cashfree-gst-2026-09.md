@@ -47,10 +47,13 @@ Prices are **net**: checkout adds 18% GST on top (`withGst()`,
 GAC ₹9,999 + ₹1,800 = **₹11,799**. EPC ₹19,999 + ₹3,600 = **₹23,599**, and the
 ₹1,80,000 success fee + ₹32,400 = **₹2,12,400**.
 
-Terms link is `/products`, because `/charters` is not live yet (404 on
-production until commit `88d237b` is pushed). Swap it once pushed.
+Terms link is `/charters`, live since 26 Sep 2026.
 
-### A. AdviseAI WhatsApp template (52 words)
+EPC now includes GAC free (26 Sep 2026): private universities can go on the
+same preference list with no deposit and no extra fee, and a private offer
+carries no success fee. Each message carries one line on it.
+
+### A. AdviseAI WhatsApp template (58 words)
 
 Needs a new Meta-approved template. `{{1}}` = `there`, one static value for
 the whole campaign, per the AdviseAI rule.
@@ -60,13 +63,13 @@ the whole campaign, per the AdviseAI rule.
 > We now take payments through Cashfree. Your plan, services and refund terms stay the same. One change: 18% GST now applies and shows on your receipt.
 >
 > GAC ₹9,999 + GST, refundable: https://payments.cashfree.com/forms/axelis-global-admissions-charter
-> EPC ₹19,999 + GST: https://payments.cashfree.com/forms/axelis-europe-public-charter
+> EPC ₹19,999 + GST, now with private universities included free: https://payments.cashfree.com/forms/axelis-europe-public-charter
 >
 > Questions? Book a free call: calendly.com/axelisoverseas/counsellingsession
 
-### B. Personal WhatsApp from Rishabh (46 words)
+### B. Personal WhatsApp from Rishabh (61 words)
 
-> Hi [first name], Rishabh here. Quick heads-up: we've moved payments to Cashfree. Your plan and refund terms don't change. The only difference is 18% GST, now on the receipt.
+> Hi [first name], Rishabh here. Quick heads-up: we've moved payments to Cashfree. Your plan and refund terms don't change. The only difference is 18% GST, now on the receipt. And if you're on EPC, you can now add private universities too, free.
 >
 > When you're ready: GAC https://payments.cashfree.com/forms/axelis-global-admissions-charter · EPC https://payments.cashfree.com/forms/axelis-europe-public-charter
 >
@@ -85,16 +88,16 @@ the whole campaign, per the AdviseAI rule.
 > What changes: 18% GST now applies, as the law requires for our services. It is shown on your receipt, never added later.
 >
 > **Global Admissions Charter:** ₹9,999 + GST (₹11,799), refundable. https://payments.cashfree.com/forms/axelis-global-admissions-charter
-> **Europe Public Charter:** ₹19,999 + GST (₹23,599) now. The ₹1,80,000 success fee + GST applies only if you accept an offer. https://payments.cashfree.com/forms/axelis-europe-public-charter
+> **Europe Public Charter:** ₹19,999 + GST (₹23,599) now. The ₹1,80,000 success fee + GST applies only if you accept an offer from a tuition-free public university. New: private universities can go on the same list at no extra cost, and a private offer carries no success fee. https://payments.cashfree.com/forms/axelis-europe-public-charter
 >
-> Every term, in full: overseeducation.com/products
+> Every term, in full: overseeducation.com/charters
 >
 > Want to talk it through first? Book a free call:
 > calendly.com/axelisoverseas/counsellingsession
 >
 > [signature: docs/brand/signatures/rishabh-agrawal.html]
 
-(Body 108 words.)
+(Body 129 words.)
 
 ### How these were tuned
 
@@ -156,7 +159,7 @@ run it in draft mode so every reply is visible before it goes.
    Expect it to be classed Marketing, which means the 131049 cap applies.
 6. **Email volume.** 281 emails from one Gmail account in a day is near the
    sending limit. Send wave 2 in batches, or through HubSpot.
-7. **/charters** must be pushed before it is linked (commit `88d237b`).
+7. **/charters** is live (pushed 26 Sep 2026).
 
 ---
 
