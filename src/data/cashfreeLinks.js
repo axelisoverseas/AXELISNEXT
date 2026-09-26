@@ -26,12 +26,12 @@ export const cashfreeLinks = {
   // Consumer Protection Act 2019. It must be on the surface that takes money,
   // not only in the charter they receive afterwards.
   'global-admissions-charter': {
-    amount: 9999, url: null, label: 'Global Admissions Charter (GAC)',
-    disclosure: 'This ₹9,999 is refunded in full once your visa is granted, you have arrived, and you have paid your university tuition in full. See Section 4A of the Global Admissions Charter. GAC carries no other Axelis fee.',
+    amount: 9999, url: 'https://payments.cashfree.com/forms/axelis-global-admissions-charter', label: 'Global Admissions Charter (GAC)',
+    disclosure: 'This ₹9,999 is refunded in full once your visa is granted, you have arrived, and you have paid your university tuition in full, or if no university on your preference list makes you an offer. See Section 3 of the Global Admissions Charter v2.0. GAC carries no other Axelis fee.',
   },
   'europe-public-charter': {
-    amount: 19999, url: null, label: 'Europe Public Charter (EPC)',
-    disclosure: 'EPC is a two-part fee. This ₹19,999 Service Fee is payable now. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a tuition-free public university. Total ₹1,99,999. No offer, or an offer you decline, means no Success Fee.',
+    amount: 19999, url: 'https://payments.cashfree.com/forms/axelis-europe-public-charter', label: 'Europe Public Charter (EPC)',
+    disclosure: 'EPC is a two-part fee. This ₹19,999 Service Fee is payable now, and refunded in full if no university on your preference list makes you an offer. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a tuition-free public university. Total ₹1,99,999 plus GST. No offer, or an offer you decline, means no Success Fee.',
   },
 
   // --- Certification programmes (/certifications) -------------------------

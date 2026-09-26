@@ -123,6 +123,40 @@ export default function CheckoutButton({ product, label, className = '', quantit
     );
   }
 
+  // A disclosure product that also has a hosted form: show the disclosure here,
+  // then hand over to Cashfree, which collects name, phone and email itself.
+  if (item.url) {
+    return (
+      <div className="rounded-2xl border border-[var(--color-rule)] bg-white p-5 max-w-md shadow-e-2">
+        <p className="text-[var(--color-navy)] font-bold mb-1">{item.label}</p>
+        <p className="text-2xl font-extrabold text-[var(--color-navy)] mb-1 tabular-nums">
+          {formatINR(withGst(item.amount * quantity).gross)}
+        </p>
+        <p className="text-xs text-[var(--color-dim)] mb-3">
+          {formatINR(item.amount * quantity)} + {formatINR(withGst(item.amount * quantity).gst)} GST at {GST_RATE}%
+        </p>
+        <div className="mb-4 rounded-lg border border-[var(--color-axelis)]/35 bg-[var(--color-tint)] px-3.5 py-3">
+          <p className="text-xs leading-relaxed text-[var(--color-navy)]">{item.disclosure}</p>
+        </div>
+        <a
+          href={item.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-primary btn-lg w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)]"
+        >
+          I have read this. Continue to payment <ArrowRight size={17} aria-hidden="true" />
+        </a>
+        <p className="mt-3 text-xs text-[var(--color-dim)] leading-relaxed">
+          Payment is processed by Cashfree. Full terms:{' '}
+          <a href="/charters" target="_blank" rel="noopener noreferrer" className="text-[var(--color-axelis)] underline underline-offset-2">
+            Our Promises, in Writing
+          </a>
+          .
+        </p>
+      </div>
+    );
+  }
+
   return (
     <form onSubmit={onSubmit} className="rounded-2xl border border-[var(--color-rule)] bg-white p-5 max-w-md shadow-e-2">
       <p className="text-[var(--color-navy)] font-bold mb-1">{item.label}</p>
