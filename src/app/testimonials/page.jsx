@@ -7,6 +7,9 @@ import { ArrowRight, Star, MapPin, GraduationCap, Play, BadgeCheck, Linkedin } f
 import { testimonials as allTestimonials } from '../../data/siteData';
 import { getTestimonialImage } from '../../assets/testimonials/index.js';
 import InstagramFeed from '../../components/InstagramFeed';
+import StoryDeck from '../../components/scroll/StoryDeck';
+import { useSmoothScroll } from '../../components/scroll/useScrollKit';
+import { STUDENT_STORIES } from '../../data/studentStories';
 import { verifiedReviews, googleReviewsMeta, getGoogleMapsHref } from '../../data/googleReviews';
 
 // Show only testimonials with a real student photo. Entries that fall back to
@@ -173,6 +176,8 @@ function TestimonialCard({ testimonial, index, onCountryFocus }) {
 }
 
 export default function TestimonialsPage() {
+  useSmoothScroll();
+
   useEffect(() => {
     const handler = (event) => {
       const { testimonial } = event.detail || {};
@@ -257,7 +262,10 @@ export default function TestimonialsPage() {
         </div>
       </section>
 
- <section className="relative pb-20">
+      {/* Nine students, dealt one card at a time. The full grid follows. */}
+      <StoryDeck id="stories-deck" eyebrow="Placed students" stories={STUDENT_STORIES} moreHref="#all-stories" moreLabel="Read every story below" perCard={55} />
+
+ <section id="all-stories" className="relative pb-20 scroll-mt-24">
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div>
             <div className="relative">

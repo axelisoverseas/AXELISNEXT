@@ -15,7 +15,7 @@ for (const [name, vp, motion] of [['desktop', { width: 1440, height: 900 }, 'no-
   const errors = [];
   p.on('pageerror', (e) => errors.push(String(e)));
   p.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
-  await p.goto(URL, { waitUntil: 'networkidle' });
+  await p.goto(URL, { waitUntil: 'load', timeout: 60000 });
   await p.waitForTimeout(2200);
   const H = await p.evaluate(() => document.documentElement.scrollHeight);
   const shots = [0, 0.04, 0.08, 0.13, 0.18, 0.24, 0.3, 0.36, 0.42, 0.5, 0.56, 0.62, 0.7, 0.78, 0.86, 0.95];
@@ -34,7 +34,7 @@ for (const [name, vp, motion] of [['desktop', { width: 1440, height: 900 }, 'no-
   }
   // mid-page reload must land correct
   await p.evaluate((y) => window.scrollTo(0, y), Math.round(0.55 * H));
-  await p.reload({ waitUntil: 'networkidle' });
+  await p.reload({ waitUntil: 'load', timeout: 60000 });
   await p.waitForTimeout(1800);
   await p.screenshot({ path: `${OUT}/${name}-reload55.jpg`, quality: 60, type: 'jpeg' });
   const h1 = await p.evaluate(() => document.querySelector('h1')?.getAttribute('aria-label'));

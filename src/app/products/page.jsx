@@ -2,6 +2,7 @@
 import React, { Suspense, useEffect } from 'react';
 import Link from 'next/link';
 import CheckoutButton from '../../components/CheckoutButton';
+import PhotoWipe from '../../components/scroll/PhotoWipe';
 import { useSearchParams } from 'next/navigation';
 import { motion } from 'framer-motion';
 import {
@@ -273,6 +274,9 @@ function ProductsContent() {
                 aria-hidden="true"
                 className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[var(--color-tint)] blur-3xl pointer-events-none"
               />
+              {/* Wipes open as the card scrolls in; London for the paid-tuition route. */}
+              <PhotoWipe src="/photos/photo-1513635269975-59663e0ac1ad-1200.jpg" alt="London" from="left"
+                className="relative -mx-8 -mt-8 md:-mx-10 md:-mt-10 mb-8 h-44 md:h-56" />
               <div className="relative">
                 <span className="btn btn-secondary text-[var(--color-axelis)] text-[10px] mb-5">
                   Most popular
@@ -372,6 +376,9 @@ function ProductsContent() {
                 aria-hidden="true"
                 className="absolute -bottom-40 -left-40 w-96 h-96 rounded-full bg-[var(--dawn-glow)]/5 blur-3xl pointer-events-none"
               />
+              {/* Germany for the tuition-free public route. */}
+              <PhotoWipe src="/photos/photo-1527866959252-deab85ef7d1b-1200.jpg" alt="Germany" from="right"
+                className="relative -mx-8 -mt-8 md:-mx-10 md:-mt-10 mb-8 h-44 md:h-56" />
               <div className="relative">
                 <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--color-axelis)]/30 text-[var(--color-axelis)] text-[10px] font-bold mb-5">
                   Tuition-free Europe
