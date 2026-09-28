@@ -49,11 +49,16 @@ GAC ₹9,999 + ₹1,800 = **₹11,799**. EPC ₹19,999 + ₹3,600 = **₹23,599*
 
 Terms link is `/charters`, live since 26 Sep 2026.
 
+Landing page is `/receipts` (28 Sep 2026): the scroll story with the numbers,
+nine real students, both charters and the booking button. UTM-tagged per channel
+so bookings from it can be compared with the homepage. It is not indexed by
+Google, which is fine for campaign traffic. **Push it before wave 1.**
+
 EPC now includes GAC free (26 Sep 2026): private universities can go on the
 same preference list with no deposit and no extra fee, and a private offer
 carries no success fee. Each message carries one line on it.
 
-### A. AdviseAI WhatsApp template (58 words)
+### A. AdviseAI WhatsApp template (64 words)
 
 Needs a new Meta-approved template. `{{1}}` = `there`, one static value for
 the whole campaign, per the AdviseAI rule.
@@ -64,6 +69,8 @@ the whole campaign, per the AdviseAI rule.
 >
 > GAC ₹9,999 + GST, refundable: https://payments.cashfree.com/forms/axelis-global-admissions-charter
 > EPC ₹19,999 + GST, now with private universities included free: https://payments.cashfree.com/forms/axelis-europe-public-charter
+>
+> How it works, in two minutes: overseeducation.com/receipts?utm_source=whatsapp&utm_medium=adviseai&utm_campaign=cashfree-gst-2026-09
 >
 > Questions? Book a free call: calendly.com/axelisoverseas/counsellingsession
 
@@ -90,6 +97,8 @@ the whole campaign, per the AdviseAI rule.
 > **Global Admissions Charter:** ₹9,999 + GST (₹11,799), refundable. https://payments.cashfree.com/forms/axelis-global-admissions-charter
 > **Europe Public Charter:** ₹19,999 + GST (₹23,599) now. The ₹1,80,000 success fee + GST applies only if you accept an offer from a tuition-free public university. New: private universities can go on the same list at no extra cost, and a private offer carries no success fee. https://payments.cashfree.com/forms/axelis-europe-public-charter
 >
+> How we work, in two minutes: overseeducation.com/receipts?utm_source=email&utm_medium=gmail&utm_campaign=cashfree-gst-2026-09
+>
 > Every term, in full: overseeducation.com/charters
 >
 > Want to talk it through first? Book a free call:
@@ -97,7 +106,7 @@ the whole campaign, per the AdviseAI rule.
 >
 > [signature: docs/brand/signatures/rishabh-agrawal.html]
 
-(Body 129 words.)
+(Body 135 words.)
 
 ### How these were tuned
 
