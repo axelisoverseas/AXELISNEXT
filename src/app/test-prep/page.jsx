@@ -187,7 +187,7 @@ const faqs = [
   },
   {
     q: 'Where is Axelis Overseas based and do you teach students outside India?',
-    a: 'Axelis Overseas Education Private Limited is incorporated in Bengaluru, Karnataka, India. All test prep sessions are delivered live online, which means students based anywhere in India and abroad can attend at a time that suits their timezone.',
+    a: 'Axelis Overseas Education Private Limited is registered in Bilaspur, Chhattisgarh, with its corporate office in Bengaluru. All test prep sessions are delivered live online, which means students based anywhere in India and abroad can attend at a time that suits their timezone.',
   },
 ];
 

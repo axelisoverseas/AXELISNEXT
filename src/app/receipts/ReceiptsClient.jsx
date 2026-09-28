@@ -214,7 +214,7 @@ export default function ReceiptsClient({ total, destinations, rail, stories }) {
             </div>
           ))}
           <div className={`${s.wrap} ${s.heroText}`} data-herotext>
-            <p className={s.eyebrow}>Bengaluru + Bilaspur · {destinations} destinations</p>
+            <p className={s.eyebrow}>For students across India · {destinations} destinations</p>
             <h1 className={s.h1} aria-label={LINE}>
               <span className={typed.length < LINE.length ? s.caret : ''} aria-hidden="true">{typed}</span>
             </h1>

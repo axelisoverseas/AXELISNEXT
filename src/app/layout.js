@@ -29,7 +29,7 @@ export const metadata = {
     template: '%s | Axelis Overseas',
     default: 'Axelis Overseas. Every Fee Published Before You Pay',
   },
-  description: "India's study-abroad consultancy across 29 destination markets. One counsellor from shortlist to arrival, every fee published before you pay. Bengaluru + Bilaspur.",
+  description: "India's study-abroad consultancy across 29 destination markets. One counsellor from shortlist to arrival, every fee published before you pay. For students across India.",
   keywords: [
     "study abroad", "overseas education", "study abroad consultancy India",
     "study in UK", "study in USA", "study in Ireland", "study in Germany",
@@ -64,7 +64,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Axelis Overseas. Every Fee Published Before You Pay',
-    description: 'Certification programmes. Concierge tiers carry a written refund commitment. EMI available. Bengaluru + Bilaspur.',
+    description: 'Certification programmes. Concierge tiers carry a written refund commitment. EMI available. For students across India.',
     images: ['/og-image.jpg'],
   },
   robots: {
