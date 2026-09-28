@@ -1,5 +1,4 @@
 import universities from '@/data/finder-universities.json';
-import { testimonials } from '@/data/siteData';
 import ReceiptsClient from './ReceiptsClient';
 
 /**
@@ -15,8 +14,9 @@ import ReceiptsClient from './ReceiptsClient';
  * refused visa). Those are corrected below.
  *
  * Imagery is only what the site already publishes: student photos and quotes
- * from /testimonials (siteData), Anjali Sangwan's video testimonial, and the
- * city photos the homepage uses per country. Nothing generated.
+ * from /testimonials (src/data/studentStories.js), Anjali Sangwan's video
+ * testimonial, and the city photos the homepage uses per country. The scroll
+ * moves are shared components in src/components/scroll.
  *
  * Not indexed while it is under review. Flip `robots` when it is approved.
  */
@@ -43,20 +43,10 @@ const RAIL = [
   ['Netherlands', 'NL', 'EPC', epa.get('Netherlands'), '/photos/photo-1512470876302-972faa2aa9a4-1200.jpg'],
   ['Ireland', 'IE', 'GAC', gac.get('Ireland'), '/photos/photo-1590089415225-401ed6f9db8e-1200.jpg'],
   ['Finland', 'FI', 'EPC', epa.get('Finland'), '/photos/photo-1531366936337-7c912a4589a7-1200.jpg'],
-].map(([name, code, route, n, img]) => ({ name, code, route, n: n || null, img }));
-
-// Published student stories, first sentence of each real quote, unedited.
-const firstSentence = (t) => (t.match(/^.*?[.!?](\s|$)/)?.[0] || t).trim();
-const STORIES = testimonials
-  .filter((t) => t.image && t.image.startsWith('/assets/'))
-  .map((t) => ({
-    name: t.name,
-    university: t.university,
-    country: t.country,
-    quote: firstSentence(t.content || t.review || ''),
-    // 600x750 web copies of the same photos (public/receipts/stories); the originals run to 6 MB.
-    img: `/receipts/stories/${t.name.toLowerCase().replace(/\s+/g, '-')}.jpg`,
-  }));
+].map(([name, code, route, n, img]) => ({
+  name, code, route, img,
+  note: n ? `${n.toLocaleString('en-IN')} institutions in the finder` : 'Shortlisted with your counsellor',
+}));
 
 export const metadata = {
   title: 'Every Fee Published Before You Pay',
@@ -67,5 +57,5 @@ export const metadata = {
 };
 
 export default function ReceiptsPage() {
-  return <ReceiptsClient total={TOTAL} destinations={DESTINATIONS} rail={RAIL} stories={STORIES} />;
+  return <ReceiptsClient total={TOTAL} destinations={DESTINATIONS} rail={RAIL} />;
 }
