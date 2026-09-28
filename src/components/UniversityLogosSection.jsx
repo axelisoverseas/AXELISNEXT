@@ -24,7 +24,7 @@ export default function UniversityLogosSection() {
         className="px-4 sm:px-6 lg:px-8 text-center mb-16 relative z-10"
       >
         <h2 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-[1.05] text-[var(--color-navy)]">
-          30k+ universities.
+          Where our students study.
         </h2>
         <p className="text-[var(--color-navy)] mt-6 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
           A snapshot of the institutions Axelis students have been placed at, from Oxford and

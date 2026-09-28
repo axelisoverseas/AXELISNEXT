@@ -25,7 +25,7 @@
 .heroText { z-index: 2; }
 .heroText .eyebrow { color: inherit; opacity: .8; }
 .heroText .lede { color: inherit; opacity: .8; }
-.h1 { font-size: clamp(2.6rem, 6.2vw, 5.8rem); max-width: 11ch; margin-top: 1.4rem; min-height: 2.05em; }
+.h1 { font-size: clamp(2.4rem, 5vw, 4.6rem); max-width: 13ch; margin-top: 1.4rem; min-height: 2.05em; }
 .caret { border-right: 3px solid var(--color-axelis); }
 .meta { display: flex; gap: .8rem 2.5rem; flex-wrap: wrap; margin-top: 2rem; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; font-weight: 700; opacity: .75; }
 .actions { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 2rem; }
@@ -43,7 +43,7 @@
 .f2 { top: 5%; left: 49%; transform: rotate(-8deg); width: clamp(100px, 9vw, 150px); }
 .f3 { bottom: 3%; right: 3%; transform: rotate(9deg); width: clamp(100px, 10vw, 160px); }
 @media (min-width: 821px) and (prefers-reduced-motion: no-preference) {
-  .heroText > * { max-width: min(44vw, 620px); }
+  .heroText > * { max-width: min(38vw, 560px); }
 }
 
 /* ---------- CountUpProof ---------- */

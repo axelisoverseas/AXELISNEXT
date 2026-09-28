@@ -9,7 +9,11 @@ const UniversityLogosSection = dynamic(() => import('../components/UniversityLog
 const GoogleReviewsFloat = dynamic(() => import('../components/GoogleReviewsFloat'), { ssr: false });
 import TeamGrid from '../components/TeamGrid';
 const GoogleReviewsSection = dynamic(() => import('../components/GoogleReviewsSection'), { ssr: false });
-import HeroOrbitalBackdrop from '../components/HeroOrbitalBackdrop';
+import PhotoHero from '../components/scroll/PhotoHero';
+import CountUpProof from '../components/scroll/CountUpProof';
+import StoryDeck from '../components/scroll/StoryDeck';
+import { useSmoothScroll } from '../components/scroll/useScrollKit';
+import { STUDENT_STORIES, IMPACT_STATS, HERO_PHOTO, HERO_FLOATS } from '../data/studentStories';
 
 import { BorderBeam } from '../components/ui/BorderBeam';
 import { RevealText } from '../components/ui/RevealText';
@@ -48,115 +52,29 @@ const ordinal = (n) => {
 };
 
 
-export default function Home() {
+export default function Home({ universities, destinations }) {
+  useSmoothScroll();
+
   return (
-    <div className="min-h-screen overflow-hidden">
-      {/* HERO: clean, no lightning, no audio. Subtle study-abroad photo backdrop. */}
- <section className="relative pt-28 lg:pt-36 pb-24 overflow-hidden">
-        <HeroOrbitalBackdrop />
-
-        <motion.div
-          initial={false}
-          animate="visible"
-          variants={staggerContainer}
-          className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
-        >
-          <motion.h1
-            variants={fadeInUp}
-            className="text-4xl md:text-7xl font-extrabold text-white tracking-tight mb-6 max-w-5xl mx-auto"
-          >
-            Study abroad, without{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--storm-electric)] to-[var(--accent-on-dark)]">
-              guessing at the cost.
-            </span>
-          </motion.h1>
-
-          <motion.p
-            variants={fadeInUp}
-            className="text-lg md:text-xl text-slate-300/90 max-w-2xl mx-auto leading-relaxed mb-10"
-          >
-            India&rsquo;s study-abroad consultancy across 29 destination markets. One counsellor from shortlist to
-            arrival, every fee published before you pay, and a refundable deposit on both student plans.
-          </motion.p>
-
-          <motion.div
-            variants={fadeInUp}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <Link
-              href="/products"
-              className="btn btn-primary btn-lg"
-            >
-              See student plans
-              <ArrowRight aria-hidden="true" className="ml-2" size={20} />
-            </Link>
-            <Link
-              href="/bookings"
-              className="inline-flex justify-center items-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl transition-colors hover:text-[var(--color-axelis)]"
-            >
-              Book a Discovery Call
-            </Link>
-          </motion.div>
-
-          {/* The numbers and the twenty-nine destinations both have their own
-              sections below; the hero no longer restates them. */}
-        </motion.div>
-      </section>
-
-
-      {/* Unified Impact Stats: storm phase */}
- <section className="sec text-[var(--color-navy)] relative overflow-hidden">
-        {/* Electric + amber ambient glows */}
-        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--color-tint)] rounded-full blur-[120px] -translate-y-1/2 pointer-events-none"></div>
-        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-[var(--storm-accent)]/10 rounded-full blur-[120px] translate-y-1/2 pointer-events-none"></div>
-
-        <motion.div
-          initial={false}
-          animate="visible"
-          variants={staggerContainer}
-          className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
-        >
-          <motion.div variants={fadeInUp} className="mb-12 md:mb-16 max-w-2xl">
-            <p className="label">By the numbers</p>
-            <h2 className="mt-3 text-3xl md:text-5xl font-bold tracking-tight text-[var(--color-navy)] text-balance">
-              Real impact
-            </h2>
-            <p className="mt-4 text-[var(--color-dim)] leading-relaxed">
-              One focus: placing students at universities they can actually get into and afford.
-              Free first call, no upsell.
-            </p>
-          </motion.div>
-
-          {/* Stats, Metabase/Red Hat register: no cards, no icon discs, no
-              hover lift. A short rule in the locked blue, the figure, the
-              label. The ornament was carrying no information and six haloed
-              discs with pulsing bolts read as a template, not a firm. */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10 md:gap-y-12">
-            {[
-              { value: '5,000+', label: 'Students placed' },
-              { value: '4,500+', label: 'Visas approved' },
-              { value: '90%', label: 'Visa success rate' },
-              { value: '29+', label: 'Countries' },
-              { value: '35,000+', label: 'Universities' },
-              { value: '\u20b93+ Cr', label: 'Scholarships won' },
-              { value: '\u20b930+ Cr', label: 'Loans facilitated' },
-            ].map((stat) => (
-              <motion.div key={stat.label} variants={fadeInUp}>
-                <span
-                  aria-hidden="true"
-                  className="block h-0.5 w-8 rounded-full bg-[var(--color-axelis)]"
-                />
-                <p className="mt-4 text-3xl md:text-4xl font-bold tracking-tight text-[var(--color-navy)] tabular-nums">
-                  {stat.value}
-                </p>
-                <p className="mt-1.5 text-sm leading-snug text-[var(--color-dim)]">
-                  {stat.label}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-      </section>
+    <div className="min-h-screen overflow-x-clip">
+      {/* HERO: a photo window that opens to full bleed as you scroll.
+          Same headline and promise as before; see src/components/scroll. */}
+      <PhotoHero
+        id="home-hero"
+        eyebrow={`For students across India · ${destinations} destinations`}
+        title="Study abroad, without guessing at the cost."
+        lede="India’s study-abroad consultancy across 29 destination markets. One counsellor from shortlist to arrival, every fee published before you pay, and a refundable deposit on both student plans."
+        meta={['4.9 on Google · 75 reviews', `${universities.toLocaleString('en-IN')} universities in our finder`]}
+        photo={HERO_PHOTO}
+        floats={HERO_FLOATS}
+        length={200}
+      >
+        <Link href="/products" className="btn btn-primary btn-lg">
+          See student plans
+          <ArrowRight aria-hidden="true" className="ml-2" size={20} />
+        </Link>
+        <Link href="/bookings" className="btn btn-secondary btn-lg">Book a Discovery Call</Link>
+      </PhotoHero>
 
 
       {/* Plans preview. GAC + EPC teaser, links to /products */}
@@ -231,6 +149,22 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Impact: each figure counts in turn while its photo wipes open.
+          The university count is the finder's own, not a round number. */}
+      <CountUpProof
+        id="home-impact"
+        eyebrow="By the numbers"
+        title="Real impact, counted."
+        stats={IMPACT_STATS}
+        extra={[
+          { value: `${destinations}`, label: 'destinations' },
+          { value: universities.toLocaleString('en-IN'), label: 'universities in our finder' },
+          { value: '\u20b93+ Cr', label: 'scholarships won' },
+        ]}
+        length={340}
+      />
+
 
       {/* Destinations grid: 9 feature countries + 20 compact tiles. All 29 photographed. */}
  <section className="relative sec overflow-hidden">
@@ -352,6 +286,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Students: nine real placements, dealt one card at a time. */}
+      <StoryDeck id="home-stories" eyebrow="The students" stories={STUDENT_STORIES} perCard={55} />
 
       {/* University Portfolio: 100+ universities across 29 countries */}
       <UniversityLogosSection />

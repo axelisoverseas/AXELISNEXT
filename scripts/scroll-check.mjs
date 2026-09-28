@@ -1,8 +1,11 @@
-// Playwright check for /receipts: scroll path, reduced motion, mid-page reload.
-// Usage: node scripts/receipts-check.mjs [outDir]
+// Playwright check for the scroll-story pages (/receipts, /, /testimonials,
+// /products): desktop, phone and reduced motion, the scroll path in frames,
+// horizontal overflow, console errors, and a reload at 55%.
+// Usage: node scripts/scroll-check.mjs [path=/receipts] [outDir]
 import { chromium } from '@playwright/test';
-const OUT = process.argv[2] || 'tmp/receipts-check';
-const URL = 'http://localhost:3000/receipts';
+const PATH = process.argv[2] || '/receipts';
+const OUT = process.argv[3] || `tmp/scroll-check${PATH.replace(/\//g, '-') || '-home'}`;
+const URL = `http://localhost:3000${PATH}`;
 import fs from 'node:fs'; fs.mkdirSync(OUT, { recursive: true });
 const report = [];
 const b = await chromium.launch();
@@ -21,9 +24,9 @@ for (const [name, vp, motion] of [['desktop', { width: 1440, height: 900 }, 'no-
     await p.evaluate((y) => { window.lenis ? window.lenis.scrollTo(y, { immediate: true }) : window.scrollTo(0, y); }, Math.round(f * (H - vp.height)));
     await p.waitForTimeout(900);
     const st = await p.evaluate(() => ({
-      rail: document.querySelector('[aria-hidden="true"] b')?.textContent,
-      stat0: document.querySelector('[data-n]')?.textContent,
-      trackX: getComputedStyle(document.querySelector('[data-track]')).transform,
+      rail: document.querySelector('[aria-hidden="true"] b')?.textContent || null,
+      stat0: document.querySelector('[data-n]')?.textContent || null,
+      trackX: document.querySelector('[data-track]') ? getComputedStyle(document.querySelector('[data-track]')).transform : null,
       overflowX: document.documentElement.scrollWidth > window.innerWidth + 1,
     }));
     frames.push({ f, ...st });
