@@ -15,7 +15,7 @@ for (const [name, vp, motion] of [['desktop', { width: 1440, height: 900 }, 'no-
   await p.goto(URL, { waitUntil: 'networkidle' });
   await p.waitForTimeout(2200);
   const H = await p.evaluate(() => document.documentElement.scrollHeight);
-  const shots = [0, 0.12, 0.22, 0.36, 0.48, 0.6, 0.72, 0.9];
+  const shots = [0, 0.04, 0.08, 0.13, 0.18, 0.24, 0.3, 0.36, 0.42, 0.5, 0.56, 0.62, 0.7, 0.78, 0.86, 0.95];
   const frames = [];
   for (const f of shots) {
     await p.evaluate((y) => { window.lenis ? window.lenis.scrollTo(y, { immediate: true }) : window.scrollTo(0, y); }, Math.round(f * (H - vp.height)));
