@@ -16,6 +16,10 @@
  *     the same preference list at no extra fee and no ₹9,999 deposit. A
  *     private offer counts as an offer (no service-fee refund) but carries no
  *     success fee, which applies only to tuition-free public universities.
+ *   - ILC v1.2 (29 Sep 2026), per the founder: a visa refusal not down to
+ *     the student returns HALF the success fee paid (US student-visa refusals
+ *     are common); deferring an accepted offer to a later intake means no
+ *     refund of the success fee at all, visa refusal included.
  *   - ILC v1.1 (29 Sep 2026): the success fee now applies to the whole ILC
  *     list (Ivy League, Ivy Plus, Public Ivies, Little Ivies with graduate
  *     programmes; 49 universities, src/data/ilcUniversities.json), per the
@@ -49,7 +53,7 @@ export const CHARTER_DOCS = {
   // are retired and no longer linked from anywhere on the site.
   gac: '/charters/global-admissions-charter-v2.0.pdf',
   epc: '/charters/europe-public-charter-v2.0.pdf',
-  ilc: '/charters/ivy-league-charter-v1.1.pdf',
+  ilc: '/charters/ivy-league-charter-v1.2.pdf',
 };
 
 /* The eight Ivy League universities, by their usual names. Used only to say
@@ -182,13 +186,15 @@ export const PLANS = [
       },
       {
         title: 'Your visa is refused, and it is not down to you',
-        body: 'The success fee you have paid comes back in full if your F-1 visa is refused for a reason not attributable to you.',
+        body: 'Half the success fee you have paid, ₹90,000 plus the GST on it, comes back if your F-1 visa is refused for a reason not attributable to you.',
+        note: 'Half, not all, because US student-visa refusals are common and the admission work is complete by then. None of it comes back if you have deferred the offer to a later intake.',
       },
     ],
     refundNo: [
       'You receive an offer from any university on your preference list, on the ILC list or not',
       'You leave the process yourself after the first shortlist has been shared',
       'You decline an offer from a university on your list. The ₹19,999 is not refunded; you owe a success fee only if you accept an offer from the ILC list.',
+      'You defer an accepted offer to a later intake. The success fee stays due and none of it is refunded, even if a later visa is refused.',
     ],
     timeline: 'Within 14 days of approval, to the payment method you used.',
     notIncluded: 'Test fees (GRE, GMAT, TOEFL, IELTS, Duolingo), university application fees, the SEVIS fee and the visa fee are paid by you directly. Test preparation is sold separately.',

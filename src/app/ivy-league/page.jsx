@@ -39,6 +39,8 @@ const FAQ = [
     a: "Master's and MBA programmes. Undergraduate applications to US universities run on a different system and are not part of this charter." },
   { q: 'What is not included?',
     a: 'Test fees (GRE, GMAT, TOEFL, IELTS, Duolingo), each university’s application fee, the SEVIS fee and the visa fee. You pay those directly. Test preparation is available separately on our Test Prep page.' },
+  { q: 'What if my US visa is refused?',
+    a: 'If it is refused for a reason not down to you, half the success fee you paid comes back: ₹90,000 plus the GST on it. Half, because US student-visa refusals are common and the admission work is done by then. If you defer an accepted offer to a later intake, the success fee stays due and none of it is refunded.' },
   { q: 'When should I start?',
     a: 'Most graduate programmes at these universities admit once a year, for the autumn intake, and their deadlines commonly fall between December and February. Starting nine to twelve months ahead leaves time for tests, essays and recommendations.' },
   { q: 'Are you connected to the Ivy League?',
@@ -239,7 +241,7 @@ export default function IvyLeaguePage() {
               <p>Read the disclosure, then pay the service fee on Cashfree. Your counsellor calls you within one working day.</p>
               <CheckoutButton product="ivy-league-charter" label="Enrol for ₹23,599 (incl. GST)" className={`${s.pillBtn} ${s.full}`} />
               <a href={CHARTER_DOCS.ilc} target="_blank" rel="noopener noreferrer" className={s.pillGhost} style={{ justifyContent: 'center' }}>
-                <FileText size={16} aria-hidden="true" /> Read the charter v1.1 (PDF)
+                <FileText size={16} aria-hidden="true" /> Read the charter v1.2 (PDF)
               </a>
             </div>
           </div>

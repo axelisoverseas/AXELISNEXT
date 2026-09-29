@@ -142,7 +142,7 @@ EPC = HEAD + '''
 ILC = HEAD + '''
 <p class="eyebrow" style="margin-top:7mm">Student charter</p>
 <h1 style="margin-top:1mm">Ivy League Charter</h1>
-<p class="ver">Version {ver} &middot; Effective {eff} &middot; Replaces version 1.0</p>
+<p class="ver">Version {ver} &middot; Effective {eff} &middot; Replaces versions 1.0 and 1.1</p>
 <p class="lead" style="margin-top:4mm">For Master's and MBA applications to the universities on the ILC list (Annex A: the Ivy League, the Ivy Plus, the Public Ivies and the Little Ivies that take graduate students), with other US universities on the same list. This is the agreement between Axelis Overseas Education Pvt Ltd ("Axelis") and you, the student.</p>
 
 <h2>1. What we do for you</h2>
@@ -167,13 +167,15 @@ ILC = HEAD + '''
 <h2 style="break-before:page;padding-top:4mm">3. When your money comes back</h2>
 <div class="box yes"><b>No offer from your preference list.</b> The &#8377;19,999 service fee is refunded in full if no university on your preference list, on the ILC list or not, makes you an offer.
 <p class="fine">Your preference list must contain at least five universities, at least two of them from the ILC list.</p></div>
-<div class="box yes"><b>Visa refused, and not down to you.</b> The success fee you have paid is refunded in full if your F-1 visa is refused for a reason not attributable to you.</div>
+<div class="box yes"><b>Visa refused, and not down to you.</b> Half of the success fee you have paid (&#8377;90,000, with the GST on that half) is refunded if your F-1 visa is refused for a reason not attributable to you.
+<p class="fine">Half, because US student-visa refusals are common and the admission work is complete by then. Nothing is refunded if you have deferred the offer to a later intake.</p></div>
 <p class="small">Approved refunds are paid to the original payment method within 14 days.</p>
 
 <h2>4. When it does not</h2>
 <div class="box no">
 <ul style="margin:0">
   <li>You receive an offer from any university on your preference list, on the ILC list or not.</li>
+  <li>You defer an accepted offer to a later intake. The success fee stays due and none of it is refunded, even if a later visa is refused.</li>
   <li>You leave the process yourself after the first shortlist has been shared.</li>
   <li>You decline an offer from a university on your list. The service fee is not refunded; a success fee is due only if you accept an offer from the ILC list.</li>
 </ul>
@@ -205,7 +207,7 @@ def _annex():
 ILC = ILC.replace(FOOT, _annex() + FOOT)
 
 os.makedirs(PUB, exist_ok=True)
-for short, tpl, stem, ver, eff in [('GAC', GAC, 'global-admissions-charter', VERSION, EFFECTIVE), ('EPC', EPC, 'europe-public-charter', VERSION, EFFECTIVE), ('ILC', ILC, 'ivy-league-charter', '1.1', '29 September 2026')]:
+for short, tpl, stem, ver, eff in [('GAC', GAC, 'global-admissions-charter', VERSION, EFFECTIVE), ('EPC', EPC, 'europe-public-charter', VERSION, EFFECTIVE), ('ILC', ILC, 'ivy-league-charter', '1.2', '29 September 2026')]:
     html = tpl.format(title=f'{short} Charter v{ver}', kit=KIT, short=short, ver=ver, eff=eff)
     hp = os.path.join(HERE, stem + '.html')
     open(hp, 'w', encoding='utf-8').write(html)
