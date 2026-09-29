@@ -81,7 +81,6 @@ export default function IvyLeaguePage() {
       <section className={s.hero}>
         <div className={s.heroBg} aria-hidden="true"><img src="/photos/photo-1485871981521-5b1fd3805eee-1200.jpg" alt="" width="1600" height="1067" /></div>
         <div className={`${s.wrap} ${s.center}`}>
-          <span className={s.pillLabel}>New · Ivy League Charter</span>
           <h1 className={s.h1}>Apply to the Ivy League. <span className={s.accent}>Pay the big fee only if you get in.</span></h1>
           <p className={s.sub}>
             {ILC.headline} + GST to start, refunded if no university on your list makes you an offer.
@@ -128,7 +127,7 @@ export default function IvyLeaguePage() {
                   {g.members.map((u) => (
                     <li key={u.name} className={s.card}>
                       <Wordmark name={u.name} height={34} maxWidth={180} />
-                      <span>{u.name}{u.limited && <span className={s.pgTag}>few Master&rsquo;s</span>}</span>
+                      <span>{u.name}</span>
                     </li>
                   ))}
                 </ul>
@@ -165,7 +164,7 @@ export default function IvyLeaguePage() {
                 <b>{state}</b>
                 <ul>
                   {list.map((u) => (
-                    <li key={u.name}>{u.name}{u.pgOnly && <span className={s.pgTag}>PG</span>}</li>
+                    <li key={u.name}>{u.name}</li>
                   ))}
                 </ul>
               </div>

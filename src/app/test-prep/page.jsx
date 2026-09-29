@@ -348,11 +348,6 @@ export default function TestPrepPage() {
                           : 'bg-[var(--color-tint)] border-[var(--color-rule)] hover:border-[var(--color-rule)]'
                       }`}
                     >
-                      {p.highlight && (
-                        <span className="absolute -top-2 right-4 px-2.5 py-0.5 rounded-full bg-gradient-to-r from-[var(--storm-accent)] to-[var(--dawn-glow)] text-[10px] font-bold text-white shadow-e-1">
-                          Popular
-                        </span>
-                      )}
                       <p className="text-[10px] text-[var(--color-dim)] font-bold mb-2">{p.code}</p>
                       <h4 className="text-lg font-bold text-[var(--color-navy)] mb-1">{p.label}</h4>
                       <p className="text-[var(--color-navy)]/75 text-xs mb-5">{p.sessions}</p>

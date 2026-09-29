@@ -24,7 +24,7 @@ export default function CountUpProof({ id, eyebrow, title, stats, extra = [], le
         tl.to(o, { v: st.to, ease: 'none', duration: 1, onUpdate: () => { n.textContent = fmt(st, o.v); } }, i)
           .fromTo(row.querySelector('i'), { scaleX: 0 }, { scaleX: 1, ease: 'none', duration: 1 }, i)
           .fromTo(row, { opacity: 0.25 }, { opacity: 1, duration: 0.3 }, i)
-          .fromTo(all('[data-statimg]')[i], { clipPath: i ? 'inset(100% 0% 0% 0%)' : 'inset(0% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', duration: 1 }, i)
+          .fromTo(all('[data-statimg]')[i], { clipPath: i ? 'inset(0% 0% 100% 0%)' : 'inset(0% 0% 0% 0%)' }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none', duration: 1 }, i)
           .fromTo(all('[data-statimg] img')[i], { scale: 1.25 }, { scale: 1, ease: 'none', duration: 1 }, i);
       });
     });

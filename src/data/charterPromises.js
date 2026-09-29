@@ -157,7 +157,6 @@ export const PLANS = [
     name: 'Ivy League Charter',
     short: 'ILC',
     formerly: null,
-    isNew: true,
     for: "Master's and MBA applications to the Ivy League, the Ivy Plus, the Public Ivies and the Little Ivies: 49 universities, with other US universities on the same list.",
     headline: '₹19,999',
     headlineNote: "Now. ₹1,80,000 only if you accept an offer from the ILC list.",

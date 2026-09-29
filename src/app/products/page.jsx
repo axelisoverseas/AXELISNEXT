@@ -278,9 +278,6 @@ function ProductsContent() {
               <PhotoWipe src="/photos/photo-1513635269975-59663e0ac1ad-1200.jpg" alt="London" from="left"
                 className="relative -mx-8 -mt-8 md:-mx-10 md:-mt-10 mb-8 h-44 md:h-56" />
               <div className="relative">
-                <span className="btn btn-secondary text-[var(--color-axelis)] text-[10px] mb-5">
-                  Most popular
-                </span>
                 <h3 id="plan-gac-title" className="text-3xl md:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight mb-2">
                   Global Admissions Charter <span className="text-base font-semibold text-[var(--color-navy)]/70">(GAC)</span>
                 </h3>
@@ -380,9 +377,6 @@ function ProductsContent() {
               <PhotoWipe src="/photos/photo-1527866959252-deab85ef7d1b-1200.jpg" alt="Germany" from="right"
                 className="relative -mx-8 -mt-8 md:-mx-10 md:-mt-10 mb-8 h-44 md:h-56" />
               <div className="relative">
-                <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[var(--dawn-glow)]/10 border border-[var(--color-axelis)]/30 text-[var(--color-axelis)] text-[10px] font-bold mb-5">
-                  Tuition-free Europe
-                </span>
                 <h3 id="plan-epc-title" className="text-3xl md:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight mb-2">
                   Europe Public Charter <span className="text-base font-semibold text-[var(--color-navy)]/70">(EPC)</span>
                 </h3>
@@ -470,9 +464,6 @@ function ProductsContent() {
             aria-labelledby="plan-ilc-title"
           >
             <div className="p-8 md:p-10 flex flex-col">
-              <span className="inline-flex self-start items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-axelis)]/10 border border-[var(--color-axelis)]/30 text-[var(--color-axelis)] text-[10px] font-bold mb-5">
-                New · Ivy League
-              </span>
               <h3 id="plan-ilc-title" className="text-3xl md:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight mb-2">
                 Ivy League Charter <span className="text-base font-semibold text-[var(--color-navy)]/70">(ILC)</span>
               </h3>

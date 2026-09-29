@@ -23,6 +23,8 @@
 .window img { width: 100%; height: 100%; object-fit: cover; }
 .shade { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(22, 38, 92, .55), rgba(22, 38, 92, .82)); opacity: 0; }
 .heroText { z-index: 2; }
+.credit { position: absolute; right: calc(5% + 16px); bottom: calc(10% + 12px); z-index: 1; font-size: 10px; letter-spacing: .02em; color: rgba(255,255,255,.85); text-shadow: 0 1px 2px rgba(0,0,0,.6); text-decoration: none; }
+.credit:hover { text-decoration: underline; }
 .heroText .eyebrow { color: inherit; opacity: .8; }
 .heroText .lede { color: inherit; opacity: .8; }
 .h1 { font-size: clamp(2.4rem, 5vw, 4.6rem); max-width: 13ch; margin-top: 1.4rem; min-height: 2.05em; }

@@ -185,7 +185,6 @@
 .stateCol b { display: block; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--color-axelis); margin-bottom: .5rem; }
 .stateCol ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
 .stateCol li { font-size: 14.5px; line-height: 1.4; }
-.pgTag { margin-left: .4rem; padding: 0 .35rem; border-radius: 4px; background: #eef1f7; color: var(--muted); font-size: 10.5px; font-weight: 800; vertical-align: 1px; }
 
 .groupBlock { margin-bottom: clamp(24px, 3.4vw, 40px); }
 .groupHead { display: flex; align-items: baseline; gap: .6rem; margin-bottom: .9rem; padding-bottom: .5rem; border-bottom: 1px solid rgba(22, 38, 92, .1); }

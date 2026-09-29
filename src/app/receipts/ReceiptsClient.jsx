@@ -20,7 +20,7 @@ const CHARTERS = [
     body: 'Paid-tuition universities: the UK, USA, Canada, Ireland, Australia and more. The deposit comes back once you are placed, or if no university on your list makes you an offer.' },
   { k: 'epc', tag: 'EPC', name: 'Europe Public Charter', price: '₹19,999', small: '+ GST now', img: '/photos/photo-1527866959252-deab85ef7d1b-1200.jpg', alt: 'Germany', from: 'right',
     body: 'Tuition-free public universities in Germany, France, Italy, the Netherlands and more. Refunded if no university on your list makes an offer. Private universities included free.' },
-  { k: 'ilc', tag: 'ILC · New', name: 'Ivy League Charter', price: '₹19,999', small: '+ GST now', img: '/photos/photo-1485871981521-5b1fd3805eee-1200.jpg', alt: 'New York', from: 'left', href: '/ivy-league',
+  { k: 'ilc', tag: 'ILC', name: 'Ivy League Charter', price: '₹19,999', small: '+ GST now', img: '/photos/photo-1485871981521-5b1fd3805eee-1200.jpg', alt: 'New York', from: 'left', href: '/ivy-league',
     body: "Master's and MBA applications to the Ivy League, Ivy Plus, Public Ivies and Little Ivies. Refunded if no university on your list makes an offer. ₹1,80,000 only if you accept an offer from one of those 49." },
 ];
 

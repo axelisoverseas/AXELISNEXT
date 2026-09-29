@@ -103,8 +103,7 @@ export default function Home({ universities, destinations }) {
             >
               <div className="flex items-baseline justify-between">
                 <div>
-                  <span className="text-[10px] text-[var(--color-axelis)] font-bold">Most popular</span>
-                  <h3 className="text-2xl font-extrabold text-[var(--color-navy)] mt-1">Global Admissions Charter <span className="text-sm font-semibold text-[var(--color-navy)]/80">(GAC)</span></h3>
+                  <h3 className="text-2xl font-extrabold text-[var(--color-navy)]">Global Admissions Charter <span className="text-sm font-semibold text-[var(--color-navy)]/80">(GAC)</span></h3>
                 </div>
                 <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹9,999</span>
               </div>
@@ -124,8 +123,7 @@ export default function Home({ universities, destinations }) {
             >
               <div className="flex items-baseline justify-between">
                 <div>
-                  <span className="text-[10px] text-[var(--color-axelis)] font-bold">Tuition-free Europe</span>
-                  <h3 className="text-2xl font-extrabold text-[var(--color-navy)] mt-1">Europe Public Charter <span className="text-sm font-semibold text-[var(--color-navy)]/80">(EPC)</span></h3>
+                  <h3 className="text-2xl font-extrabold text-[var(--color-navy)]">Europe Public Charter <span className="text-sm font-semibold text-[var(--color-navy)]/80">(EPC)</span></h3>
                 </div>
                 <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹19,999</span>
               </div>
@@ -145,8 +143,7 @@ export default function Home({ universities, destinations }) {
             >
               <div className="flex items-baseline justify-between">
                 <div>
-                  <span className="text-[10px] text-[var(--color-axelis)] font-bold">New · Ivy League</span>
-                  <h3 className="text-2xl font-extrabold text-[var(--color-navy)] mt-1">Ivy League Charter <span className="text-sm font-semibold text-[var(--color-navy)]/80">(ILC)</span></h3>
+                  <h3 className="text-2xl font-extrabold text-[var(--color-navy)]">Ivy League Charter <span className="text-sm font-semibold text-[var(--color-navy)]/80">(ILC)</span></h3>
                 </div>
                 <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹19,999</span>
               </div>

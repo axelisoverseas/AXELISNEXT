@@ -48,8 +48,6 @@ function PlanTag({ plan }) {
       </h3>
       {plan.formerly ? (
         <span className="text-xs text-[var(--color-dim)] whitespace-nowrap">formerly {plan.formerly}</span>
-      ) : plan.isNew ? (
-        <span className="text-xs font-bold text-[var(--color-axelis)] whitespace-nowrap">New</span>
       ) : null}
     </div>
   );

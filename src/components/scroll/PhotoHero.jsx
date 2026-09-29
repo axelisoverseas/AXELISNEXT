@@ -47,6 +47,9 @@ export default function PhotoHero({ id, eyebrow, title, lede, meta = [], photo, 
         <div className={s.window} data-window>
           <img src={photo.src} alt={photo.alt} width={photo.width || 1600} height={photo.height || 1067} fetchPriority="high" style={photo.position ? { objectPosition: photo.position } : undefined} />
           <div className={s.shade} data-shade />
+          {photo.credit && (
+            <a className={s.credit} href={photo.creditHref} target="_blank" rel="noopener noreferrer">{photo.credit}</a>
+          )}
         </div>
         {floats.slice(0, 4).map((f, i) => (
           <div key={f.alt} className={`${s.float} ${s[`f${i}`]}`} data-float>
