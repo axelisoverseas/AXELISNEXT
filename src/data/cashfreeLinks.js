@@ -34,6 +34,11 @@ export const cashfreeLinks = {
     disclosure: 'EPC is a two-part fee. This ₹19,999 Service Fee is payable now, and refunded in full if no university on your preference list makes you an offer. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a tuition-free public university. Total ₹1,99,999 plus GST. No offer, or an offer you decline, means no Success Fee.',
   },
 
+  'ivy-league-charter': {
+    amount: 19999, url: null, label: 'Ivy League Charter (ILC)',
+    disclosure: 'ILC is a two-part fee. This ₹19,999 Service Fee is payable now, and refunded in full if no university on your preference list makes you an offer. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from one of the eight Ivy League universities; other US universities on your list carry no success fee. Total ₹1,99,999 plus GST. No admission, scholarship or visa is guaranteed.',
+  },
+
   // --- Certification programmes (/certifications) -------------------------
   'global-career-launch': { url: 'https://payments.cashfree.com/forms/axelis-global-career-launch-fee', amount: 200000, label: 'Global Career Launch' },
   'phd-fellowship-concierge': { url: 'https://payments.cashfree.com/forms/axelis-phd-fellowship-fee', amount: 250000, label: 'PhD & Fellowship Concierge' },

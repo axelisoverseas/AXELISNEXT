@@ -20,6 +20,8 @@ const CHARTERS = [
     body: 'Paid-tuition universities: the UK, USA, Canada, Ireland, Australia and more. The deposit comes back once you are placed, or if no university on your list makes you an offer.' },
   { k: 'epc', tag: 'EPC', name: 'Europe Public Charter', price: '₹19,999', small: '+ GST now', img: '/photos/photo-1527866959252-deab85ef7d1b-1200.jpg', alt: 'Germany', from: 'right',
     body: 'Tuition-free public universities in Germany, France, Italy, the Netherlands and more. Refunded if no university on your list makes an offer. Private universities included free.' },
+  { k: 'ilc', tag: 'ILC · New', name: 'Ivy League Charter', price: '₹19,999', small: '+ GST now', img: '/photos/photo-1485871981521-5b1fd3805eee-1200.jpg', alt: 'New York', from: 'left', href: '/ivy-league',
+    body: "Master's and MBA applications to the eight Ivy League universities. Refunded if no university on your list makes an offer. ₹1,80,000 only if you accept an Ivy League offer." },
 ];
 
 export default function ReceiptsClient({ total, destinations, rail }) {
@@ -83,8 +85,8 @@ export default function ReceiptsClient({ total, destinations, rail }) {
 
       <section id="r-charters" className={s.charters}>
         <div className={s.wrap}>
-          <p className={s.eyebrow} style={{ color: '#8fb0ff' }}>Receipt 5 · Two charters</p>
-          <h2 className={s.h2}>Two charters. Pick your path.</h2>
+          <p className={s.eyebrow} style={{ color: '#8fb0ff' }}>Receipt 5 · Three charters</p>
+          <h2 className={s.h2}>Three charters. Pick your path.</h2>
           <div className={s.cards}>
             {CHARTERS.map((c) => (
               <div key={c.k} className={s.card}>
@@ -94,7 +96,7 @@ export default function ReceiptsClient({ total, destinations, rail }) {
                   <h3 className={s.h3}>{c.name}</h3>
                   <p className={s.price}>{c.price} <small>{c.small}</small></p>
                   <p>{c.body}</p>
-                  <Link href={`/charters#${c.k}`} className={s.cardLink}>Read every {c.tag} term</Link>
+                  <Link href={c.href || `/charters#${c.k}`} className={s.cardLink}>Read every {c.tag.split(' ')[0]} term</Link>
                 </div>
               </div>
             ))}
@@ -114,7 +116,7 @@ export default function ReceiptsClient({ total, destinations, rail }) {
             <Link href="/bookings" className="btn btn-primary btn-lg">
               Book a free counselling call <ArrowRight size={18} aria-hidden="true" />
             </Link>
-            <Link href="/charters" className="btn btn-secondary btn-lg">Read both charters</Link>
+            <Link href="/charters" className="btn btn-secondary btn-lg">Read all three charters</Link>
           </div>
         </div>
       </section>

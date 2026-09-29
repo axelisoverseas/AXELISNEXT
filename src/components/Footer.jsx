@@ -73,6 +73,7 @@ const Footer = () => {
                 { name: 'Test Prep', path: '/test-prep' },
                 { name: 'Testimonials', path: '/testimonials' },
                 { name: 'Real Counselling Sessions', path: '/sessions' },
+                { name: 'Ivy League Charter', path: '/ivy-league' },
                 { name: 'Certifications', path: '/certifications' },
                 { name: 'Vocational (Germany)', path: '/vocational' },
                 { name: 'Student Services', path: '/services' },

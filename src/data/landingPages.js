@@ -82,7 +82,7 @@ export const LANDING_PAGES = {
     faqs: [
       { q: 'What does the upfront fee cover?', a: 'Profile assessment, university shortlisting and the application work that follows. The Global Admissions Charter is ₹9,999 and the Europe Public Charter is ₹19,999. Both are published on the Student Plans page.' },
       { q: 'What is the success fee, and when is it due?', a: 'On the Europe Public Charter it is ₹1,80,000, taking the total to ₹1,99,999, and it is payable only if and when you accept an offer from a tuition-free public university. The Global Admissions Charter carries no success fee: its ₹9,999 deposit is returned in full once you are placed.' },
-      { q: 'What if no offer comes at all?', a: 'The success fee is never charged, and both charters refund the upfront fee if you receive zero offers. You are out some time, not a six-figure fee.' },
+      { q: 'What if no offer comes at all?', a: 'The success fee is never charged, and every charter refunds the upfront fee if you receive zero offers. You are out some time, not a six-figure fee.' },
       { q: 'Are there other costs?', a: 'Yes, and none of them are ours. University application fees, apostille and attestation, English and entrance tests, the visa fee and any health surcharge are paid directly to those bodies. We take no commission on any of them and we list them before you commit.' },
     ],
   },

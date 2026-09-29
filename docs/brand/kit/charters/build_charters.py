@@ -137,12 +137,55 @@ EPC = HEAD + '''
 </div>
 ''' + COMMON_LEGAL.format(n=5, n2=6, n3=7, name='Europe Public Charter', former='Zero Tuition Fee') + FOOT
 
+
+ILC = HEAD + '''
+<p class="eyebrow" style="margin-top:7mm">Student charter</p>
+<h1 style="margin-top:1mm">Ivy League Charter</h1>
+<p class="ver">Version {ver} &middot; Effective {eff} &middot; New charter</p>
+<p class="lead" style="margin-top:4mm">For Master's and MBA applications to the eight Ivy League universities, with top US universities on the same list. This is the agreement between Axelis Overseas Education Pvt Ltd ("Axelis") and you, the student.</p>
+
+<h2>1. What we do for you</h2>
+<ul>
+  <li>Profile evaluation, and a shortlist of programmes at the eight Ivy League universities (Brown, Columbia, Cornell, Dartmouth, Harvard, the University of Pennsylvania, Princeton and Yale), balanced with top US universities. The list becomes your locked preference list on the status tracker.</li>
+  <li>Essay and SOP strategy with feedback on every draft, a US-format r&eacute;sum&eacute;, guidance on letters of recommendation, and mock interviews for programmes that interview.</li>
+  <li>Application submission; scholarship, fellowship and assistantship applications where offered; education loans through 25+ lending partners.</li>
+  <li>I-20, SEVIS and F-1 visa filing with a mock visa interview, housing assistance and pre-departure support.</li>
+</ul>
+
+<h2>2. What you pay</h2>
+<table>
+  <thead><tr><th>Fee</th><th class="n">Amount</th><th class="n">GST 18%</th><th class="n">Total</th><th>When</th></tr></thead>
+  <tbody>
+    <tr><td>Service fee</td><td class="n">&#8377;19,999</td><td class="n">&#8377;3,600</td><td class="n">&#8377;23,599</td><td>Now, to start</td></tr>
+    <tr><td>Success fee</td><td class="n">&#8377;1,80,000</td><td class="n">&#8377;32,400</td><td class="n">&#8377;2,12,400</td><td>Only when you accept an offer from an Ivy League university. Never on an offer from any other university.</td></tr>
+    <tr class="tot"><td colspan="3">The most you ever pay</td><td class="n">&#8377;2,35,999</td><td></td></tr>
+  </tbody>
+</table>
+<p class="small">GST is added on top of each fee and itemised on your Cashfree receipt. Not included, and paid by you directly: test fees (GRE, GMAT, TOEFL, IELTS, Duolingo), university application fees, the SEVIS fee and the visa fee.</p>
+
+<h2 style="break-before:page;padding-top:4mm">3. When your money comes back</h2>
+<div class="box yes"><b>No offer from your preference list.</b> The &#8377;19,999 service fee is refunded in full if no university on your preference list, Ivy League or not, makes you an offer.
+<p class="fine">Your preference list must contain at least five universities, at least two of them Ivy League.</p></div>
+<div class="box yes"><b>Visa refused, and not down to you.</b> The success fee you have paid is refunded in full if your F-1 visa is refused for a reason not attributable to you.</div>
+<p class="small">Approved refunds are paid to the original payment method within 14 days.</p>
+
+<h2>4. When it does not</h2>
+<div class="box no">
+<ul style="margin:0">
+  <li>You receive an offer from any university on your preference list, Ivy League or not.</li>
+  <li>You leave the process yourself after the first shortlist has been shared.</li>
+  <li>You decline an offer from a university on your list. The service fee is not refunded; a success fee is due only if you accept an Ivy League offer.</li>
+</ul>
+</div>
+<p class="small" style="margin-top:3mm">No admission, scholarship, fellowship or visa is guaranteed. Axelis is not affiliated with, endorsed by or acting for the Ivy League or any of its universities; their names describe where we apply on your behalf.</p>
+''' + COMMON_LEGAL.format(n=5, n2=6, n3=7, name='Ivy League Charter', former='(none)').replace('<h2>6. Law and disputes</h2>', '<h2 style="break-before:page;padding-top:4mm">6. Law and disputes</h2>').replace('<p class="small" style="margin-top:6mm">This version replaces the (none) Charter Declaration in full. Payments are collected through Cashfree. Razorpay and PayU are no longer used.</p>', '<p class="small" style="margin-top:6mm">Payments are collected through Cashfree.</p>') + FOOT
+
 os.makedirs(PUB, exist_ok=True)
-for short, tpl, stem in [('GAC', GAC, 'global-admissions-charter'), ('EPC', EPC, 'europe-public-charter')]:
-    html = tpl.format(title=f'{short} Charter v{VERSION}', kit=KIT, short=short, ver=VERSION, eff=EFFECTIVE)
+for short, tpl, stem, ver, eff in [('GAC', GAC, 'global-admissions-charter', VERSION, EFFECTIVE), ('EPC', EPC, 'europe-public-charter', VERSION, EFFECTIVE), ('ILC', ILC, 'ivy-league-charter', '1.0', '29 September 2026')]:
+    html = tpl.format(title=f'{short} Charter v{ver}', kit=KIT, short=short, ver=ver, eff=eff)
     hp = os.path.join(HERE, stem + '.html')
     open(hp, 'w', encoding='utf-8').write(html)
-    pdf = os.path.join(PUB, f'{stem}-v{VERSION}.pdf')
+    pdf = os.path.join(PUB, f'{stem}-v{ver}.pdf')
     subprocess.run([CHROME, '--headless', '--disable-gpu', '--no-sandbox', '--no-pdf-header-footer',
                     f'--print-to-pdf={pdf}', 'file://' + hp], capture_output=True)
     print(f'  {stem}: {os.path.getsize(pdf)} bytes')

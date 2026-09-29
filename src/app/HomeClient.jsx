@@ -77,7 +77,7 @@ export default function Home({ universities, destinations }) {
       </PhotoHero>
 
 
-      {/* Plans preview. GAC + EPC teaser, links to /products */}
+      {/* Plans preview. GAC, EPC and ILC teasers, links to /products and /ivy-league */}
  <section className="relative sec overflow-hidden">
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute top-1/2 left-0 w-[420px] h-[420px] bg-[var(--color-tint)] rounded-full blur-[120px] -translate-x-1/2 -translate-y-1/2" />
@@ -87,14 +87,14 @@ export default function Home({ universities, destinations }) {
         <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10 max-w-2xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-3 text-balance">
-              Two charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">Pick your path.</span>
+              Three charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">Pick your path.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-base md:text-lg">
-              Global Admissions Charter (GAC) for paid global universities. Europe Public Charter (EPC) for tuition-free public Europe. Both refundable.
+              Global Admissions Charter (GAC) for paid global universities. Europe Public Charter (EPC) for tuition-free public Europe. Ivy League Charter (ILC) for the eight Ivy League universities. Every first payment refundable.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             <Link
               href="/products#plans"
               className="group bg-white border-2 border-[var(--storm-electric)]/30 rounded-2xl shadow-e-3 p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--storm-electric)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
@@ -108,7 +108,7 @@ export default function Home({ universities, destinations }) {
                 <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹9,999</span>
               </div>
               <p className="text-[var(--color-navy)] text-sm">
-                Paid-tuition universities. <span className="text-emerald-300 font-semibold">100% refundable</span> on visa or no-offer.
+                Paid-tuition universities. <span className="text-emerald-700 font-semibold">Refunded in full</span> once you are placed, or if no offer comes.
               </p>
               <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included
@@ -129,7 +129,28 @@ export default function Home({ universities, destinations }) {
                 <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹19,999</span>
               </div>
               <p className="text-[var(--color-navy)] text-sm">
-                Public tuition-free Europe. <span className="text-emerald-300 font-semibold">Refundable</span> if zero offers.
+                Public tuition-free Europe. <span className="text-emerald-700 font-semibold">Refundable</span> if zero offers.
+              </p>
+              <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
+                See what&apos;s included
+                <ArrowRight aria-hidden="true" size={16} className="group-hover:translate-x-1 transition-transform" />
+              </span>
+            </Link>
+
+            <Link
+              href="/ivy-league"
+              className="group bg-white border-2 border-[var(--color-axelis)]/30 rounded-2xl shadow-e-3 p-6 md:p-7 flex flex-col gap-3 hover:-translate-y-1 hover:border-[var(--color-axelis)]/60 transition-[transform,color,background-color,border-color] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+              aria-label="Ivy League Charter (ILC), nineteen thousand nine hundred ninety nine rupees, view details"
+            >
+              <div className="flex items-baseline justify-between">
+                <div>
+                  <span className="text-[10px] text-[var(--color-axelis)] font-bold">New · Ivy League</span>
+                  <h3 className="text-2xl font-extrabold text-[var(--color-navy)] mt-1">Ivy League Charter <span className="text-sm font-semibold text-[var(--color-navy)]/80">(ILC)</span></h3>
+                </div>
+                <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹19,999</span>
+              </div>
+              <p className="text-[var(--color-navy)] text-sm">
+                Brown to Yale. <span className="text-emerald-700 font-semibold">Refundable</span> if zero offers; the big fee only if you accept an Ivy offer.
               </p>
               <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included

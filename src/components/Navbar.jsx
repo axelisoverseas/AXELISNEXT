@@ -38,7 +38,8 @@ const MENU = [
       {
         heading: 'Plan your route',
         items: [
-          { href: '/products', title: 'Student plans', blurb: 'Two charters, priced in full before you pay' },
+          { href: '/products', title: 'Student plans', blurb: 'Three charters, priced in full before you pay' },
+          { href: '/ivy-league', title: 'Ivy League Charter', blurb: 'New: Brown to Yale, the big fee only if you get in' },
           { href: '/university-finder', title: 'Universities', blurb: '10,000+ universities across 29 countries' },
           { href: '/university-finder?tab=courses', title: 'Course finder', blurb: 'Search accredited programmes by subject and university' },
         ],

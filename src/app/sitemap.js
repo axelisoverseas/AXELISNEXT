@@ -12,6 +12,7 @@ const CORE = [
   ['/', 'daily', 1.0],
   ['/certifications', 'weekly', 0.95],
   ['/products', 'weekly', 0.9],
+  ['/ivy-league', 'weekly', 0.9],
   ['/university-finder', 'weekly', 0.9],
   ['/scholarships', 'weekly', 0.9],
   ['/programmes', 'weekly', 0.9],

@@ -141,7 +141,7 @@ export default function LandingPage({ page }) {
               <ArrowRight size={18} aria-hidden="true" />
             </Link>
             <Link href="/products" className="btn btn-secondary btn-lg">
-              See both student plans
+              See the student plans
             </Link>
           </div>
         </div>

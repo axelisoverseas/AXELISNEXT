@@ -128,7 +128,7 @@ function ProductsContent() {
         </motion.div>
       </section>
 
-      {/* PLANS: two charters: GAC and EPC */}
+      {/* PLANS: three charters: GAC, EPC and ILC */}
       {/* WHICH ONE IS YOURS
           The page previously opened straight onto two long cards and a ten-row
           table, leaving the reader to work out which charter applied to them.
@@ -142,16 +142,16 @@ function ProductsContent() {
           <div className="max-w-3xl">
             <p className="label">Start here</p>
             <h2 className="mt-3 text-3xl sm:text-5xl font-extrabold leading-[1.05] tracking-tight text-[var(--color-navy)]">
-              Two routes. One of them is yours.
+              Three routes. One of them is yours.
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-[var(--color-dim)] measure">
-              These are not a cheaper option and a better one. They are two different ways
+              These are not a cheaper option and a better one. They are three different ways
               of paying for a degree abroad, and which fits you is decided by where you
               want to study, not by what you can afford.
             </p>
           </div>
 
-          <div className="mt-10 grid gap-6 md:grid-cols-2">
+          <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {ROUTES.map((r) => {
               // The tuition-free route is inverted, because it IS the different
               // one. Two identical white cards made the page argue that these
@@ -242,10 +242,10 @@ function ProductsContent() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14 max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
-              Two charters. One destination, yours.
+              Three charters. One destination, yours.
             </h2>
             <p className="text-[var(--color-navy)]/85 text-lg">
-              Pick the route that matches where you want to study. Both come with a refundable deposit and a dedicated counsellor. Fees and refund conditions differ, and are set out in full on each card below.
+              Pick the route that matches where you want to study. Each comes with a refundable first payment and a dedicated counsellor. Fees and refund conditions differ, and are set out in full on each card below.
             </p>
             <p className="mt-3">
               <Link href="/charters" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-axelis)] underline underline-offset-4">
@@ -462,6 +462,43 @@ function ProductsContent() {
               </div>
             </article>
           </div>
+
+          {/* ILC. Ivy League Charter: EPC's model, for the eight Ivy League universities. */}
+          <article
+            id="plan-ilc"
+            className="relative mt-6 max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_.9fr] overflow-hidden rounded-[2rem] border-2 border-[var(--color-axelis)]/30 shadow-e-lift bg-white scroll-mt-24"
+            aria-labelledby="plan-ilc-title"
+          >
+            <div className="p-8 md:p-10 flex flex-col">
+              <span className="inline-flex self-start items-center gap-2 px-3 py-1 rounded-full bg-[var(--color-axelis)]/10 border border-[var(--color-axelis)]/30 text-[var(--color-axelis)] text-[10px] font-bold mb-5">
+                New · Ivy League
+              </span>
+              <h3 id="plan-ilc-title" className="text-3xl md:text-4xl font-extrabold text-[var(--color-navy)] tracking-tight mb-2">
+                Ivy League Charter <span className="text-base font-semibold text-[var(--color-navy)]/70">(ILC)</span>
+              </h3>
+              <p className="text-[var(--color-navy)] leading-relaxed">
+                For Master&rsquo;s and MBA applicants aiming at Brown, Columbia, Cornell, Dartmouth, Harvard, Penn, Princeton or Yale, with top US universities on the same list.
+              </p>
+              <div className="mt-6 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-tint)] p-5">
+                <p className="text-4xl font-extrabold text-[var(--color-navy)] tabular-nums">&#8377;19,999 <span className="text-base font-semibold text-[var(--color-dim)]">+ GST now</span></p>
+                <p className="mt-2 text-sm text-[var(--color-navy)]/85">
+                  Refunded in full if no university on your preference list makes you an offer. Then a <b>&#8377;1,80,000</b> success fee + GST, payable only if and when you accept an Ivy League offer. Other US offers carry no success fee. Total &#8377;1,99,999 + GST.
+                </p>
+              </div>
+              <div className="mt-6 flex flex-col sm:flex-row gap-3">
+                <CheckoutButton
+                  product="ivy-league-charter"
+                  label="Enrol in Ivy League Charter (ILC), ₹19,999"
+                  className="btn btn-primary btn-lg w-full sm:w-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+                />
+                <Link href="/ivy-league" className="btn btn-secondary btn-lg">See the full charter</Link>
+              </div>
+              <p className="text-xs text-[var(--color-dim)] mt-3 flex items-center gap-1.5">
+                <ShieldCheck size={12} /> Secure via Cashfree &middot; no admission is guaranteed &middot; not affiliated with the Ivy League
+              </p>
+            </div>
+            <PhotoWipe src="/photos/photo-1485871981521-5b1fd3805eee-1200.jpg" alt="New York" from="right" className="relative min-h-[220px] lg:min-h-full" />
+          </article>
         </div>
       </section>
 
@@ -735,6 +772,25 @@ const ROUTES = [
     cta: 'See the full charter',
     href: '#plans',
     invert: true,
+  },
+  {
+    kicker: 'You aim for the Ivy League',
+    name: 'Ivy League Charter',
+    forWho:
+      "For Master's and MBA applicants aiming at Brown, Columbia, Cornell, Dartmouth, Harvard, Penn, Princeton or Yale, with top US universities on the same list.",
+    price: '\u20b919,999',
+    priceNote: 'Then \u20b91,80,000, payable only if and when you accept an Ivy League offer. Other US offers carry no success fee.',
+    facts: [
+      { k: 'Tuition', v: 'Set by the university; aid and fellowships where offered' },
+      { k: 'Destinations', v: 'The eight Ivy League universities, plus top US universities' },
+      { k: 'Plan ahead', v: '9 to 12 months; most deadlines fall December to February' },
+      { k: 'Afterwards', v: 'USA 1 to 3 years on OPT' },
+    ],
+    catch:
+      'The competition. Admission rates at these universities are low and nobody can promise a place. The charter makes sure the large fee is only ever paid for an Ivy League offer you accept.',
+    cta: 'See the Ivy League Charter',
+    href: '/ivy-league',
+    invert: false,
   },
 ];
 

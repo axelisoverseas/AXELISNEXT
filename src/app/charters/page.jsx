@@ -23,7 +23,7 @@ const CANONICAL = 'https://www.overseeducation.com/charters';
 export const metadata = {
   title: 'Our Promises, in Writing',
   description:
-    'Every promise in the Global Admissions Charter and the Europe Public Charter: what we do, what you pay and when, exactly when you get your money back, and when you do not.',
+    'Every promise in the Global Admissions Charter, the Europe Public Charter and the Ivy League Charter: what we do, what you pay and when, exactly when you get your money back, and when you do not.',
   alternates: { canonical: CANONICAL },
   robots: { index: true, follow: true },
 };
@@ -46,7 +46,11 @@ function PlanTag({ plan }) {
       <h3 className="text-lg font-bold text-[var(--color-navy)]">
         {plan.name} <span className="text-[var(--color-dim)] font-semibold">({plan.short})</span>
       </h3>
-      <span className="text-xs text-[var(--color-dim)] whitespace-nowrap">formerly {plan.formerly}</span>
+      {plan.formerly ? (
+        <span className="text-xs text-[var(--color-dim)] whitespace-nowrap">formerly {plan.formerly}</span>
+      ) : plan.isNew ? (
+        <span className="text-xs font-bold text-[var(--color-axelis)] whitespace-nowrap">New</span>
+      ) : null}
     </div>
   );
 }
@@ -56,18 +60,18 @@ export default function ChartersPage() {
     <div className="bg-white">
       {/* ---------- Hero ---------- */}
       <section className="sec-lg border-b border-[var(--color-rule)] bg-gradient-to-b from-[var(--color-tint)] to-white">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <p className="label">Student plans</p>
           <h1 className="mt-3 text-3xl font-bold tracking-tight text-[var(--color-navy)] sm:text-4xl text-balance">
             Every promise, in writing, before you pay.
           </h1>
           <p className="mt-5 leading-relaxed text-[var(--color-dim)] measure">
-            Two plans. For each one: what we do for you, what you pay and when, exactly when
+            Three plans. For each one: what we do for you, what you pay and when, exactly when
             your money comes back, and when it does not. This is the same agreement you accept
             at checkout, written so you can read it in five minutes.
           </p>
 
-          <div className="mt-10 grid gap-5 md:grid-cols-2">
+          <div className="mt-10 grid gap-5 md:grid-cols-3">
             {PLANS.map((p) => (
               <div
                 key={p.key}
@@ -96,12 +100,12 @@ export default function ChartersPage() {
 
       {/* ---------- What you pay ---------- */}
       <section className="sec">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHead label="Payment terms" title="What you pay, and exactly when.">
             Nothing is added later. 18% GST is added on top of every fee and shown on your receipt. Every amount below is on the checkout form before you pay.
           </SectionHead>
 
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
             {PLANS.map((p) => (
               <div key={p.key} id={p.key} className="scroll-mt-28">
                 <PlanTag plan={p} />
@@ -145,12 +149,12 @@ export default function ChartersPage() {
 
       {/* ---------- Money back ---------- */}
       <section className="sec border-t border-[var(--color-rule)] bg-[var(--color-tint)]">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHead label="Refunds" title="When your money comes back, and when it does not.">
             Both lists matter equally. Read the second one as carefully as the first.
           </SectionHead>
 
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
             {PLANS.map((p) => (
               <div key={p.key} className="rounded-[var(--radius-lg)] bg-white p-6 ring-1 ring-[var(--color-rule)]">
                 <PlanTag plan={p} />
@@ -195,9 +199,9 @@ export default function ChartersPage() {
 
       {/* ---------- Scope ---------- */}
       <section className="sec border-t border-[var(--color-rule)]">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHead label="What we do" title="What your plan includes." />
-          <div className="grid gap-6 lg:grid-cols-2">
+          <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
             {PLANS.map((p) => (
               <div key={p.key}>
                 <PlanTag plan={p} />
@@ -217,8 +221,8 @@ export default function ChartersPage() {
 
       {/* ---------- Your part ---------- */}
       <section className="sec border-t border-[var(--color-rule)] bg-[var(--color-tint)]">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
-          <SectionHead label="Your part" title="What we ask of you, on both plans." />
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <SectionHead label="Your part" title="What we ask of you, on every plan." />
           <div className="grid gap-5 md:grid-cols-3">
             {YOUR_PART.map((y) => (
               <div key={y.title} className="rounded-[var(--radius-lg)] bg-white p-6 ring-1 ring-[var(--color-rule)]">
@@ -232,7 +236,7 @@ export default function ChartersPage() {
 
       {/* ---------- Legal ---------- */}
       <section className="sec border-t border-[var(--color-rule)]">
-        <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHead label="The legal part" title="How the agreement works." />
           <dl className="grid gap-x-10 gap-y-6 md:grid-cols-2">
             {LEGAL.map((l) => (
@@ -256,6 +260,9 @@ export default function ChartersPage() {
             </a>
             <a href={CHARTER_DOCS.epc} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-lg">
               <FileText size={17} aria-hidden="true" /> EPC charter (PDF)
+            </a>
+            <a href={CHARTER_DOCS.ilc} target="_blank" rel="noopener noreferrer" className="btn btn-secondary btn-lg">
+              <FileText size={17} aria-hidden="true" /> ILC charter (PDF)
             </a>
           </div>
           <p className="mt-6 text-sm text-[var(--color-dim)]">

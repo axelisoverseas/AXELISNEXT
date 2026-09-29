@@ -25,7 +25,7 @@ const CANONICAL = 'https://www.overseeducation.com/start';
 export const metadata = {
   title: 'Study Abroad From India, Priced Upfront',
   description:
-    'Every fee published before you pay, one counsellor from shortlist to arrival, and a refundable deposit on both student plans. Book a free first call.',
+    'Every fee published before you pay, one counsellor from shortlist to arrival, and a refundable first payment on every student plan. Book a free first call.',
   alternates: { canonical: CANONICAL },
   robots: { index: true, follow: true },
   openGraph: {
@@ -52,7 +52,7 @@ const FAQS = [
   { q: 'Can I study in Europe without paying tuition?',
     a: 'In much of public Europe, yes. Germany, Norway and several others charge little or no tuition to international students. The Europe Public Charter is built around those routes.' },
   { q: 'Do you help with the student visa?',
-    a: 'Yes. Visa filing is part of both student plans, and your counsellor stays on the file until you have arrived.' },
+    a: 'Yes. Visa filing is part of every student plan, and your counsellor stays on the file until you have arrived.' },
 ];
 
 export default function StartPage() {

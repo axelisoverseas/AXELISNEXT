@@ -194,7 +194,7 @@ export default async function SessionPage({ params }) {
                 <p>{ep.plan.body}</p>
                 <div className={s.links}>
                   <Link href="/bookings" className={s.pillBtn}>Book a free call <ArrowRight size={17} aria-hidden="true" /></Link>
-                  <Link href={`/charters#${ep.plan.key}`} className={s.pillGhost}>Every term, in writing</Link>
+                  <Link href={ep.plan.key === 'ilc' ? '/ivy-league' : `/charters#${ep.plan.key}`} className={s.pillGhost}>Every term, in writing</Link>
                 </div>
               </div>
               <div className={s.planImg}><img src={ep.plan.img} alt={ep.plan.alt} width="1200" height="800" loading="lazy" /></div>

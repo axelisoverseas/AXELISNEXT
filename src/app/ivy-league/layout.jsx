@@ -1,5 +1,5 @@
 import { serif } from '@/lib/serifFont';
 
-export default function SessionsLayout({ children }) {
+export default function IvyLeagueLayout({ children }) {
   return <div className={serif.variable}>{children}</div>;
 }

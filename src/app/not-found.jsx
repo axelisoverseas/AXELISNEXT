@@ -21,7 +21,7 @@ export const metadata = {
 };
 
 const WAYS_OUT = [
-  { href: '/products', title: 'Student plans', body: 'Both charters, priced in full.' },
+  { href: '/products', title: 'Student plans', body: 'Three charters, priced in full.' },
   { href: '/university-finder', title: 'University finder', body: 'Search institutions across 29 destinations.' },
   { href: '/university-finder?tab=courses', title: 'Course finder', body: 'Search accredited programmes by subject.' },
   { href: '/bookings', title: 'Book a free call', body: 'A straight answer on where you stand.' },

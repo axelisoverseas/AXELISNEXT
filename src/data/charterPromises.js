@@ -1,5 +1,5 @@
 /**
- * Every promise in the two student charters, in one place.
+ * Every promise in the three student charters, in one place.
  *
  * NEW CONDITIONS ONLY. The Razorpay-era charters (Zero Consultation Fee, Zero
  * Tuition Fee) are retired. Where they differed from the current checkout, the
@@ -16,6 +16,12 @@
  *     the same preference list at no extra fee and no ₹9,999 deposit. A
  *     private offer counts as an offer (no service-fee refund) but carries no
  *     success fee, which applies only to tuition-free public universities.
+ *   - ILC (Ivy League Charter, launched 29 Sep 2026) runs on the EPC model
+ *     and amounts, per the founder: ₹19,999 + GST now, refunded if no
+ *     university on the preference list makes an offer; ₹1,80,000 + GST only
+ *     when the student accepts an offer from one of the eight Ivy League
+ *     universities. Other US universities on the list carry no success fee.
+ *     The list needs at least five universities, at least two of them Ivy.
  *   - 18% GST is added on top of every fee and itemised on the receipt.
  *   - Checkout is Cashfree. Razorpay and PayU are no longer used.
  */
@@ -25,7 +31,21 @@ export const CHARTER_DOCS = {
   // are retired and no longer linked from anywhere on the site.
   gac: '/charters/global-admissions-charter-v2.0.pdf',
   epc: '/charters/europe-public-charter-v2.0.pdf',
+  ilc: '/charters/ivy-league-charter-v1.0.pdf',
 };
+
+/* The eight Ivy League universities, by their usual names. Used only to say
+   where we apply; Axelis is not affiliated with the Ivy League or any of them. */
+export const IVY_LEAGUE = [
+  { name: 'Brown University', city: 'Providence, RI' },
+  { name: 'Columbia University', city: 'New York, NY' },
+  { name: 'Cornell University', city: 'Ithaca, NY' },
+  { name: 'Dartmouth College', city: 'Hanover, NH' },
+  { name: 'Harvard University', city: 'Cambridge, MA' },
+  { name: 'University of Pennsylvania', city: 'Philadelphia, PA' },
+  { name: 'Princeton University', city: 'Princeton, NJ' },
+  { name: 'Yale University', city: 'New Haven, CT' },
+];
 
 export const PLANS = [
   {
@@ -110,9 +130,54 @@ export const PLANS = [
     ],
     timeline: 'Within 14 days of approval, to the payment method you used.',
   },
+  {
+    key: 'ilc',
+    name: 'Ivy League Charter',
+    short: 'ILC',
+    formerly: null,
+    isNew: true,
+    for: "Master's and MBA applications to the eight Ivy League universities, with top US universities on the same list.",
+    headline: '₹19,999',
+    headlineNote: "Now. ₹1,80,000 only if you accept an Ivy League offer.",
+    pay: [
+      { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,600 GST', when: 'Now, to start', note: 'Refunded if no offer comes.' },
+      { what: 'Success fee', amount: '₹1,80,000', gst: '+ ₹32,400 GST', when: 'Only when you accept an offer from an Ivy League university', note: 'Other US universities on your list: no success fee.' },
+    ],
+    total: '₹1,99,999 + GST (₹2,35,999), and only if you accept an Ivy League offer',
+    scope: [
+      'Profile evaluation against what Ivy League and top US programmes actually weigh',
+      'A shortlist of programmes at the eight Ivy League universities, balanced with top US universities',
+      'Essay and SOP strategy, with feedback on every draft, and a US-format résumé',
+      'Letters of recommendation: who to ask and what they should cover',
+      'Mock interviews for programmes that interview',
+      'Application submission and a live status tracker with every deadline',
+      'Scholarship, fellowship and assistantship applications where the programme offers them',
+      'Education loans through 25+ lending partners',
+      'I-20, SEVIS and F-1 visa filing, with a mock visa interview',
+      'Housing assistance and pre-departure support',
+    ],
+    refundYes: [
+      {
+        title: 'No university on your preference list makes you an offer',
+        body: 'The ₹19,999 service fee comes back in full if no university on your preference list, Ivy League or not, makes you an offer.',
+        note: 'Your list needs at least five universities, at least two of them Ivy League, so that it is a real application strategy and not a lottery ticket.',
+      },
+      {
+        title: 'Your visa is refused, and it is not down to you',
+        body: 'The success fee you have paid comes back in full if your F-1 visa is refused for a reason not attributable to you.',
+      },
+    ],
+    refundNo: [
+      'You receive an offer from any university on your preference list, Ivy League or not',
+      'You leave the process yourself after the first shortlist has been shared',
+      'You decline an offer from a university on your list. The ₹19,999 is not refunded; you owe a success fee only if you accept an Ivy League offer.',
+    ],
+    timeline: 'Within 14 days of approval, to the payment method you used.',
+    notIncluded: 'Test fees (GRE, GMAT, TOEFL, IELTS, Duolingo), university application fees, the SEVIS fee and the visa fee are paid by you directly. Test preparation is sold separately.',
+  },
 ];
 
-/* What both charters ask of the student. */
+/* What every charter asks of the student. */
 export const YOUR_PART = [
   {
     title: 'Mark your preferences',

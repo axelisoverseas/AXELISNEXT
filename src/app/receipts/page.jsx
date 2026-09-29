@@ -51,7 +51,7 @@ const RAIL = [
 export const metadata = {
   title: 'Every Fee Published Before You Pay',
   description:
-    'How Axelis Overseas works, in receipts: the numbers we publish, the students we placed, the two charters, the destinations, and one counsellor from shortlist to arrival.',
+    'How Axelis Overseas works, in receipts: the numbers we publish, the students we placed, the three charters, the destinations, and one counsellor from shortlist to arrival.',
   alternates: { canonical: '/receipts' },
   robots: { index: false, follow: true },
 };

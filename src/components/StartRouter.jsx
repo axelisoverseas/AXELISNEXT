@@ -25,6 +25,13 @@ const ROUTES = [
     cta: 'See the Global Admissions Charter',
   },
   {
+    id: 'ivy',
+    label: "A Master's or MBA at an Ivy League university",
+    blurb: 'Brown, Columbia, Cornell, Dartmouth, Harvard, Penn, Princeton, Yale.',
+    href: '/ivy-league',
+    cta: 'See the Ivy League Charter',
+  },
+  {
     id: 'free',
     label: 'Tuition-free or low-fee public universities in Europe',
     blurb: 'Germany, France, Norway and the rest of the public system.',
