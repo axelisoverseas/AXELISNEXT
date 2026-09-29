@@ -179,3 +179,10 @@
 .faq details[open] summary::after { content: '–'; }
 .faq details p { padding-bottom: 1.1rem; color: var(--muted); line-height: 1.6; font-size: 15px; }
 @media (max-width: 960px) { .ivyGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .priceGrid, .refundGrid { grid-template-columns: minmax(0, 1fr); } .enrol { position: static; } }
+
+.stateGrid { columns: 4 220px; column-gap: clamp(16px, 2.4vw, 28px); }
+.stateCol { break-inside: avoid; margin-bottom: 1.4rem; padding: 1rem 1.1rem; border-radius: 16px; background: #fff; border: 1px solid rgba(22, 38, 92, .07); }
+.stateCol b { display: block; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; color: var(--color-axelis); margin-bottom: .5rem; }
+.stateCol ul { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; }
+.stateCol li { font-size: 14.5px; line-height: 1.4; }
+.pgTag { margin-left: .4rem; padding: 0 .35rem; border-radius: 4px; background: #eef1f7; color: var(--muted); font-size: 10.5px; font-weight: 800; vertical-align: 1px; }

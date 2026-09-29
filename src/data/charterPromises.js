@@ -26,6 +26,15 @@
  *   - Checkout is Cashfree. Razorpay and PayU are no longer used.
  */
 
+import ILC_US from './ilcUsUniversities.json';
+
+/* The US universities on our GAC commission sheet that take Master's or MBA
+   applicants: the rest of an ILC preference list, alongside the Ivy League.
+   From the GAC commission sheet (USA tab, 29 Sep 2026), minus two rows the
+   sheet does not resolve and eight it lists for undergraduates only. The
+   sheet says its USA tab is partial, so this list grows as it does. */
+export const ILC_US_UNIVERSITIES = ILC_US;
+
 export const CHARTER_DOCS = {
   // Version 2.0, reissued 26 September 2026. The Razorpay-era PDFs on Drive
   // are retired and no longer linked from anywhere on the site.
@@ -146,7 +155,7 @@ export const PLANS = [
     total: '₹1,99,999 + GST (₹2,35,999), and only if you accept an Ivy League offer',
     scope: [
       'Profile evaluation against what Ivy League and top US programmes actually weigh',
-      'A shortlist of programmes at the eight Ivy League universities, balanced with top US universities',
+      `A shortlist of programmes at the eight Ivy League universities, balanced with ${ILC_US.length} more US universities we work with`,
       'Essay and SOP strategy, with feedback on every draft, and a US-format résumé',
       'Letters of recommendation: who to ask and what they should cover',
       'Mock interviews for programmes that interview',

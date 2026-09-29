@@ -4,7 +4,7 @@ import { ArrowRight, Check, X, FileText, GraduationCap } from 'lucide-react';
 import s from '../sessions/sessions.module.css';
 import VideoFacade from '@/components/sessions/VideoFacade';
 import CheckoutButton from '@/components/CheckoutButton';
-import { PLANS, CHARTER_DOCS, IVY_LEAGUE } from '@/data/charterPromises';
+import { PLANS, CHARTER_DOCS, IVY_LEAGUE, ILC_US_UNIVERSITIES } from '@/data/charterPromises';
 import { getSession, formatDuration } from '@/data/sessions';
 
 /**
@@ -17,6 +17,15 @@ import { getSession, formatDuration } from '@/data/sessions';
 const ILC = PLANS.find((p) => p.key === 'ilc');
 const SESSION = getSession('us-ivy-league-universities');
 const URL = 'https://www.overseeducation.com/ivy-league';
+
+const STATES = { AL: 'Alabama', AZ: 'Arizona', CA: 'California', CO: 'Colorado', DC: 'Washington, DC', FL: 'Florida', IL: 'Illinois', KY: 'Kentucky', MA: 'Massachusetts', MD: 'Maryland', MO: 'Missouri', NH: 'New Hampshire', NJ: 'New Jersey', NV: 'Nevada', NY: 'New York', OH: 'Ohio', OK: 'Oklahoma', OR: 'Oregon', PA: 'Pennsylvania', SC: 'South Carolina', TN: 'Tennessee', TX: 'Texas', WA: 'Washington', WV: 'West Virginia', WY: 'Wyoming' };
+const BY_STATE = Object.entries(
+  ILC_US_UNIVERSITIES.reduce((m, u) => {
+    const k = u.state ? STATES[u.state] || u.state : 'Several campuses';
+    (m[k] = m[k] || []).push(u);
+    return m;
+  }, {}),
+).sort(([a], [b]) => a.localeCompare(b));
 
 const FAQ = [
   { q: 'Does this guarantee an Ivy League admission?',
@@ -71,7 +80,7 @@ export default function IvyLeaguePage() {
           <p className={s.sub}>
             {ILC.headline} + GST to start, refunded if no university on your list makes you an offer.
             ₹1,80,000 + GST only when you accept an offer from Brown, Columbia, Cornell, Dartmouth,
-            Harvard, Penn, Princeton or Yale. Every other US university on your list is included free.
+            Harvard, Penn, Princeton or Yale. Every other US university on your list, from Northeastern to Johns Hopkins, is included free.
           </p>
           <div className={s.ctaRow}>
             <Link href="/bookings" className={s.pillBtn}>Book a free profile call <ArrowRight size={17} aria-hidden="true" /></Link>
@@ -99,6 +108,36 @@ export default function IvyLeaguePage() {
           </div>
           <p className={s.sub} style={{ textAlign: 'center', fontSize: 13 }}>
             Axelis is not affiliated with, endorsed by or acting for the Ivy League or any of these universities.
+          </p>
+        </div>
+      </section>
+
+      {/* ---------- The rest of the list ---------- */}
+      <section className={s.sec} style={{ paddingTop: 0 }}>
+        <div className={s.wrap}>
+          <div className={s.secHead}>
+            <span className={s.pillLabel}>And the rest of your list</span>
+            <h2 className={s.h2}>{ILC_US_UNIVERSITIES.length} more US universities, <span className={s.accent}>no success fee on any of them.</span></h2>
+            <p className={s.sub}>
+              A strong Ivy application sits on a balanced list. These are the US universities we apply to for Master&rsquo;s
+              and MBA students; an offer from any of them counts for your refund, and accepting one costs nothing more.
+            </p>
+          </div>
+          <div className={s.stateGrid}>
+            {BY_STATE.map(([state, list]) => (
+              <div key={state} className={s.stateCol}>
+                <b>{state}</b>
+                <ul>
+                  {list.map((u) => (
+                    <li key={u.name}>{u.name}{u.pgOnly && <span className={s.pgTag}>PG</span>}</li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+          <p className={s.sub} style={{ textAlign: 'center', fontSize: 13 }}>
+            Programmes and intakes vary by university and are confirmed at shortlisting. PG = graduate programmes only.
+            Want a US university that is not here? Ask on your first call.
           </p>
         </div>
       </section>

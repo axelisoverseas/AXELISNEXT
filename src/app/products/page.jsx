@@ -477,7 +477,7 @@ function ProductsContent() {
                 Ivy League Charter <span className="text-base font-semibold text-[var(--color-navy)]/70">(ILC)</span>
               </h3>
               <p className="text-[var(--color-navy)] leading-relaxed">
-                For Master&rsquo;s and MBA applicants aiming at Brown, Columbia, Cornell, Dartmouth, Harvard, Penn, Princeton or Yale, with top US universities on the same list.
+                For Master&rsquo;s and MBA applicants aiming at Brown, Columbia, Cornell, Dartmouth, Harvard, Penn, Princeton or Yale, with 54 more US universities on the same list.
               </p>
               <div className="mt-6 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-tint)] p-5">
                 <p className="text-4xl font-extrabold text-[var(--color-navy)] tabular-nums">&#8377;19,999 <span className="text-base font-semibold text-[var(--color-dim)]">+ GST now</span></p>
@@ -782,7 +782,7 @@ const ROUTES = [
     priceNote: 'Then \u20b91,80,000, payable only if and when you accept an Ivy League offer. Other US offers carry no success fee.',
     facts: [
       { k: 'Tuition', v: 'Set by the university; aid and fellowships where offered' },
-      { k: 'Destinations', v: 'The eight Ivy League universities, plus top US universities' },
+      { k: 'Destinations', v: 'The eight Ivy League universities, plus 54 more US universities' },
       { k: 'Plan ahead', v: '9 to 12 months; most deadlines fall December to February' },
       { k: 'Afterwards', v: 'USA 1 to 3 years on OPT' },
     ],

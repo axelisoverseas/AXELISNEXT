@@ -1,0 +1,326 @@
+[
+ {
+  "name": "Adelphi University",
+  "state": "NY",
+  "city": "Garden City",
+  "pgOnly": false
+ },
+ {
+  "name": "American University",
+  "state": "DC",
+  "city": "Washington",
+  "pgOnly": false
+ },
+ {
+  "name": "Arizona State University",
+  "state": "AZ",
+  "city": "Tempe",
+  "pgOnly": false
+ },
+ {
+  "name": "Auburn University",
+  "state": "AL",
+  "city": "Auburn",
+  "pgOnly": false
+ },
+ {
+  "name": "Charleston Southern University",
+  "state": "SC",
+  "city": "North Charleston",
+  "pgOnly": false
+ },
+ {
+  "name": "Cleveland State University",
+  "state": "OH",
+  "city": "Cleveland",
+  "pgOnly": false
+ },
+ {
+  "name": "Colorado State University",
+  "state": "CO",
+  "city": "Fort Collins",
+  "pgOnly": false
+ },
+ {
+  "name": "Concordia University Chicago",
+  "state": "IL",
+  "city": "River Forest",
+  "pgOnly": false
+ },
+ {
+  "name": "Drew University",
+  "state": "NJ",
+  "city": "Madison",
+  "pgOnly": false
+ },
+ {
+  "name": "Drexel University",
+  "state": "PA",
+  "city": "Philadelphia",
+  "pgOnly": false
+ },
+ {
+  "name": "Duquesne University",
+  "state": "PA",
+  "city": "Pittsburgh",
+  "pgOnly": false
+ },
+ {
+  "name": "Gonzaga University",
+  "state": "WA",
+  "city": "Spokane",
+  "pgOnly": false
+ },
+ {
+  "name": "Hofstra University",
+  "state": "NY",
+  "city": "Hempstead",
+  "pgOnly": false
+ },
+ {
+  "name": "Hult International Business School",
+  "state": null,
+  "city": "Boston and San Francisco",
+  "pgOnly": false
+ },
+ {
+  "name": "Illinois Institute of Technology",
+  "state": "IL",
+  "city": "Chicago",
+  "pgOnly": false
+ },
+ {
+  "name": "Illinois State University",
+  "state": "IL",
+  "city": "Normal",
+  "pgOnly": false
+ },
+ {
+  "name": "Johns Hopkins University",
+  "state": "MD",
+  "city": "Baltimore",
+  "pgOnly": true
+ },
+ {
+  "name": "Lehigh University",
+  "state": "PA",
+  "city": "Bethlehem",
+  "pgOnly": true
+ },
+ {
+  "name": "LIM College",
+  "state": "NY",
+  "city": "New York",
+  "pgOnly": false
+ },
+ {
+  "name": "Marshall University",
+  "state": "WV",
+  "city": "Huntington",
+  "pgOnly": false
+ },
+ {
+  "name": "Mercy University",
+  "state": "NY",
+  "city": "Dobbs Ferry",
+  "pgOnly": false
+ },
+ {
+  "name": "Miami University",
+  "state": "OH",
+  "city": "Oxford",
+  "pgOnly": false
+ },
+ {
+  "name": "Montclair State University",
+  "state": "NJ",
+  "city": "Montclair",
+  "pgOnly": false
+ },
+ {
+  "name": "Murray State University",
+  "state": "KY",
+  "city": "Murray",
+  "pgOnly": false
+ },
+ {
+  "name": "New England College",
+  "state": "NH",
+  "city": "Henniker",
+  "pgOnly": false
+ },
+ {
+  "name": "Northeastern University",
+  "state": "MA",
+  "city": "Boston",
+  "pgOnly": false
+ },
+ {
+  "name": "Northwest Missouri State University",
+  "state": "MO",
+  "city": "Maryville",
+  "pgOnly": false
+ },
+ {
+  "name": "Oregon State University",
+  "state": "OR",
+  "city": "Corvallis",
+  "pgOnly": false
+ },
+ {
+  "name": "Schiller University",
+  "state": "FL",
+  "city": "Tampa",
+  "pgOnly": false
+ },
+ {
+  "name": "Seattle University",
+  "state": "WA",
+  "city": "Seattle",
+  "pgOnly": false
+ },
+ {
+  "name": "Southern Methodist University",
+  "state": "TX",
+  "city": "Dallas",
+  "pgOnly": true
+ },
+ {
+  "name": "Suffolk University",
+  "state": "MA",
+  "city": "Boston",
+  "pgOnly": false
+ },
+ {
+  "name": "Tennessee Technological University",
+  "state": "TN",
+  "city": "Cookeville",
+  "pgOnly": false
+ },
+ {
+  "name": "Texas State University",
+  "state": "TX",
+  "city": "San Marcos",
+  "pgOnly": false
+ },
+ {
+  "name": "Thomas Jefferson University",
+  "state": "PA",
+  "city": "Philadelphia",
+  "pgOnly": false
+ },
+ {
+  "name": "The University of Alabama",
+  "state": "AL",
+  "city": "Tuscaloosa",
+  "pgOnly": false
+ },
+ {
+  "name": "University of Cincinnati",
+  "state": "OH",
+  "city": "Cincinnati",
+  "pgOnly": false
+ },
+ {
+  "name": "University of Dayton",
+  "state": "OH",
+  "city": "Dayton",
+  "pgOnly": false
+ },
+ {
+  "name": "University of Maryland, Baltimore County",
+  "state": "MD",
+  "city": "Baltimore",
+  "pgOnly": false
+ },
+ {
+  "name": "University of Massachusetts Amherst",
+  "state": "MA",
+  "city": "Amherst",
+  "pgOnly": false
+ },
+ {
+  "name": "University of Massachusetts Boston",
+  "state": "MA",
+  "city": "Boston",
+  "pgOnly": false
+ },
+ {
+  "name": "University of Miami",
+  "state": "FL",
+  "city": "Coral Gables",
+  "pgOnly": true
+ },
+ {
+  "name": "University of Nevada, Reno",
+  "state": "NV",
+  "city": "Reno",
+  "pgOnly": false
+ },
+ {
+  "name": "University of Oregon",
+  "state": "OR",
+  "city": "Eugene",
+  "pgOnly": false
+ },
+ {
+  "name": "University of South Carolina",
+  "state": "SC",
+  "city": "Columbia",
+  "pgOnly": false
+ },
+ {
+  "name": "University of Tennessee, Knoxville",
+  "state": "TN",
+  "city": "Knoxville",
+  "pgOnly": false
+ },
+ {
+  "name": "The University of Texas at San Antonio",
+  "state": "TX",
+  "city": "San Antonio",
+  "pgOnly": false
+ },
+ {
+  "name": "University of the Pacific",
+  "state": "CA",
+  "city": "Stockton",
+  "pgOnly": false
+ },
+ {
+  "name": "The University of Tulsa",
+  "state": "OK",
+  "city": "Tulsa",
+  "pgOnly": false
+ },
+ {
+  "name": "University of Washington",
+  "state": "WA",
+  "city": "Seattle",
+  "pgOnly": false
+ },
+ {
+  "name": "University of Wyoming",
+  "state": "WY",
+  "city": "Laramie",
+  "pgOnly": false
+ },
+ {
+  "name": "Washington State University",
+  "state": "WA",
+  "city": "Pullman",
+  "pgOnly": false
+ },
+ {
+  "name": "Webster University",
+  "state": "MO",
+  "city": "St. Louis",
+  "pgOnly": false
+ },
+ {
+  "name": "Yeshiva University",
+  "state": "NY",
+  "city": "New York",
+  "pgOnly": false
+ }
+]
