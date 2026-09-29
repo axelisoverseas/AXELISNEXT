@@ -184,12 +184,6 @@ export default function IvyLeaguePage() {
               <p className={s.sub}>{SESSION.hook}</p>
             </div>
             <VideoFacade yt={SESSION.yt} title={SESSION.title} poster={SESSION.poster} duration={formatDuration(SESSION.seconds)} />
-            {SESSION.corrections?.length > 0 && (
-              <aside className={s.corrections} aria-label="Corrections to this recording">
-                <b>Corrections to this recording</b>
-                <ul>{SESSION.corrections.map((c) => <li key={c}>{c}</li>)}</ul>
-              </aside>
-            )}
             <div className={s.ctaRow}>
               <Link href={`/sessions/${SESSION.slug}`} className={s.pillGhost}>Chapters, quotes and numbers from this session</Link>
             </div>

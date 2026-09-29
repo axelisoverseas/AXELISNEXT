@@ -62,9 +62,10 @@ export default function CountUpProof({ id, eyebrow, title, stats, extra = [], le
           </div>
           <div className={s.statStack} aria-hidden="true">
             {stats.map((st) => (
-              <div key={st.label} className={s.statImg} data-statimg>
-                <img src={st.img} alt="" width="1200" height="900" loading="lazy" />
-              </div>
+              <figure key={st.label} className={s.statImg} style={{ margin: 0 }} data-statimg>
+                <img src={st.img} alt="" width="900" height="1125" loading="lazy" />
+                {st.caption && <figcaption>{st.caption}</figcaption>}
+              </figure>
             ))}
           </div>
         </div>

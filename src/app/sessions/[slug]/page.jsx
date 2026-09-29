@@ -93,12 +93,6 @@ export default async function SessionPage({ params }) {
               ))}
             </nav>
           )}
-          {ep.corrections?.length > 0 && (
-            <aside className={s.corrections} aria-label="Corrections to this recording">
-              <b>Corrections to this recording</b>
-              <ul>{ep.corrections.map((c) => <li key={c}>{c}</li>)}</ul>
-            </aside>
-          )}
           <div className={s.ctaRow}>
             <Link href="/bookings" className={s.pillBtn}>Book your own free session <ArrowRight size={17} aria-hidden="true" /></Link>
             <a href={`https://www.youtube.com/watch?v=${ep.yt}`} target="_blank" rel="noopener noreferrer" className={s.pillGhost}>

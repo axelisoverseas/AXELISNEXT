@@ -11,7 +11,7 @@ import StoryDeck from '@/components/scroll/StoryDeck';
 import PhotoRail from '@/components/scroll/PhotoRail';
 import VideoPhone from '@/components/scroll/VideoPhone';
 import PhotoWipe from '@/components/scroll/PhotoWipe';
-import { STUDENT_STORIES, IMPACT_STATS, HERO_PHOTO, HERO_FLOATS, ANJALI_VIDEO } from '@/data/studentStories';
+import { STUDENT_STORIES, IMPACT_STATS, HERO_PHOTO, HERO_FLOATS, HERO_FACES, ANJALI_VIDEO } from '@/data/studentStories';
 
 const SECTIONS = ['hero', 'proof', 'promise', 'stories', 'charters', 'countries', 'video', 'close'];
 
@@ -62,6 +62,7 @@ export default function ReceiptsClient({ total, destinations, rail }) {
         meta={['4.9 on Google · 75 reviews', `${total.toLocaleString('en-IN')} universities in our finder`, 'CIN U85500CT2023PTC014913']}
         photo={HERO_PHOTO}
         floats={HERO_FLOATS}
+        faces={HERO_FACES}
       />
 
       <CountUpProof id="r-proof" eyebrow="Receipt 2 · The numbers" title="The numbers we publish, and will keep publishing." stats={IMPACT_STATS} />

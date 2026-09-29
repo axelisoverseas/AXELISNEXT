@@ -13,7 +13,7 @@ import PhotoHero from '../components/scroll/PhotoHero';
 import CountUpProof from '../components/scroll/CountUpProof';
 import StoryDeck from '../components/scroll/StoryDeck';
 import { useSmoothScroll } from '../components/scroll/useScrollKit';
-import { STUDENT_STORIES, IMPACT_STATS, HERO_PHOTO, HERO_FLOATS } from '../data/studentStories';
+import { STUDENT_STORIES, IMPACT_STATS, HERO_PHOTO, HERO_FLOATS, HERO_FACES } from '../data/studentStories';
 
 import { BorderBeam } from '../components/ui/BorderBeam';
 import { RevealText } from '../components/ui/RevealText';
@@ -67,6 +67,7 @@ export default function Home({ universities, destinations }) {
         meta={['4.9 on Google · 75 reviews', `${universities.toLocaleString('en-IN')} universities in our finder`]}
         photo={HERO_PHOTO}
         floats={HERO_FLOATS}
+        faces={HERO_FACES}
         length={200}
       >
         <Link href="/products" className="btn btn-primary btn-lg">

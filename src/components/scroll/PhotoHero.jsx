@@ -9,7 +9,7 @@ import { useScrollKit, pinned, DESKTOP, prefersReducedMotion } from './useScroll
  * scroll, while up to four photos fly apart and the headline turns white.
  * The headline types itself once; without motion it is simply there.
  */
-export default function PhotoHero({ id, eyebrow, title, lede, meta = [], photo, floats = [], length = 220, children }) {
+export default function PhotoHero({ id, eyebrow, title, lede, meta = [], photo, floats = [], faces = [], length = 220, children }) {
   const ref = useRef(null);
   const [typed, setTyped] = useState(title);
 
@@ -45,7 +45,7 @@ export default function PhotoHero({ id, eyebrow, title, lede, meta = [], photo, 
       <div className={s.stick}>
         <div className={s.grid} data-grid />
         <div className={s.window} data-window>
-          <img src={photo.src} alt={photo.alt} width="1600" height="1067" fetchPriority="high" />
+          <img src={photo.src} alt={photo.alt} width={photo.width || 1600} height={photo.height || 1067} fetchPriority="high" style={photo.position ? { objectPosition: photo.position } : undefined} />
           <div className={s.shade} data-shade />
         </div>
         {floats.slice(0, 4).map((f, i) => (
@@ -61,6 +61,16 @@ export default function PhotoHero({ id, eyebrow, title, lede, meta = [], photo, 
           </h1>
           {lede && <p className={s.lede}>{lede}</p>}
           {children && <div className={s.actions}>{children}</div>}
+          {faces.length > 0 && (
+            <div className={s.faceStrip}>
+              <span className={s.faceRow} aria-hidden="true">
+                {faces.map((f) => <img key={f.name} src={f.img} alt="" width="44" height="44" />)}
+              </span>
+              <span className={s.faceText}>
+                <b>{faces.map((f) => f.name.split(' ')[0]).join(', ')}</b> and 5,000+ more, placed by Axelis
+              </span>
+            </div>
+          )}
           {meta.length > 0 && <div className={s.meta}>{meta.map((m) => <span key={m}>{m}</span>)}</div>}
         </div>
         <p className={s.cue} aria-hidden="true">Scroll</p>
