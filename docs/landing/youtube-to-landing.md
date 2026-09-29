@@ -1,16 +1,24 @@
 # YouTube → landing page, one video at a time
 
-Drafts only, 29 Sep 2026. **Nothing here is posted.** Each episode gets one landing page at
-overseeducation.com/sessions/<slug> with the video, its chapters, the numbers and quotes (each
-playable at its timestamp), the plan it runs on, and a booking button. Each page hands on to the
-next episode, so a visitor watches one session at a time.
+Drafts only, updated 29 Sep 2026. **Nothing here is posted.** Each episode has a landing page at
+overseeducation.com/sessions/<slug>: the video, its chapters, the numbers and quotes (each playable
+at its timestamp), the plan it runs on, and a booking button. Each page hands on to the next episode.
 
-For each video, three edits in YouTube Studio (on your go-ahead):
-1. **First line of the description** (above the fold on mobile).
-2. **Pinned comment**, posted from the channel.
-3. **End screen:** the next episode in the chain, so YouTube and the site run the same order.
+For each video, three edits in YouTube Studio (on your go-ahead): description line 1, a pinned
+comment, and an end screen pointing at the next episode in the same order as the site.
 
 UTM: `utm_source=youtube&utm_medium=description|pinned&utm_campaign=sessions`.
+
+## How Top US Universities Are Actually Cracked
+`4h-x4BjpzpY` · https://www.overseeducation.com/sessions/us-ivy-league-universities
+
+**Description, line 1:** Aiming for Columbia or NYU from a design career? What top US universities actually weigh. Every number from this session, with timestamps: https://www.overseeducation.com/sessions/us-ivy-league-universities?utm_source=youtube&utm_medium=description&utm_campaign=sessions
+
+**Pinned comment:** Want the same session for your profile? It's free, and it's the one Khushi had: https://www.overseeducation.com/sessions/us-ivy-league-universities?utm_source=youtube&utm_medium=pinned&utm_campaign=sessions
+
+**Also pin or add to the description (corrections):** Columbia, NYU, Yale, Harvard and UC Berkeley are called public universities at about 2:52 and 13:43. Columbia, NYU, Yale and Harvard are private; UC Berkeley is public. The fees mentioned in this 2026 recording (a ₹1 lakh success fee, a visa-refusal refund) are from our earlier terms. The current Global Admissions Charter is below. Scholarships are never guaranteed. Where the session says "the guarantee" at 7:46, read it as "the usual outcome".
+
+**End screen → next:** Under 50% in School, 7.9 in His Bachelor's: Can He Still Study Abroad? (`_9MeeaPj4hw`)
 
 ## Under 50% in School, 7.9 in His Bachelor's: Can He Still Study Abroad?
 `_9MeeaPj4hw` · https://www.overseeducation.com/sessions/low-school-marks-strong-bachelors
@@ -91,8 +99,7 @@ UTM: `utm_source=youtube&utm_medium=description|pinned&utm_campaign=sessions`.
 
 **Pinned comment:** Want the same session for your profile? It's free, and it's the one Prasad had: https://www.overseeducation.com/sessions/germany-on-a-budget-61-percent?utm_source=youtube&utm_medium=pinned&utm_campaign=sessions
 
-**End screen → next:** Under 50% in School, 7.9 in His Bachelor's: Can He Still Study Abroad? (`_9MeeaPj4hw`)
+**End screen → next:** How Top US Universities Are Actually Cracked (`4h-x4BjpzpY`)
 
 ## Held back (no page, no promotion until re-cut)
-- **How Top US Universities Are Actually Cracked** (`4h-x4BjpzpY`): calls Columbia, NYU, Yale and Harvard public universities, quotes a ₹1 lakh success fee and a "guarantee", names competitors.
 - **'Winter 2027 Is Impossible'** (`2B3eHU-0UwM`): names two other students, says the student was depressed; he is a school-leaver and needs a parent's consent.

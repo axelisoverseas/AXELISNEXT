@@ -54,7 +54,6 @@ export default async function SessionPage({ params }) {
   const ep = getSession(slug);
   if (!ep) notFound();
   const next = nextSession(slug);
-  const faces = SESSIONS.filter((e) => e.slug !== slug && e.face).slice(0, 4);
 
   const videoLd = {
     '@context': 'https://schema.org',
@@ -83,12 +82,7 @@ export default async function SessionPage({ params }) {
       <section className={s.hero}>
         <div className={s.heroBg} aria-hidden="true"><img src={ep.backdrop} alt="" width="1600" height="1067" /></div>
         <div className={`${s.wrap} ${s.center}`}>
-          <span className={s.proofPill}>
-            <span className={s.faces}>
-              {faces.map((f) => <img key={f.slug} src={f.face} alt="" width="26" height="26" />)}
-            </span>
-            Real counselling session · published with consent
-          </span>
+          <span className={s.pillLabel}>Real counselling session</span>
           <h1 className={s.h1}><Headline lead={ep.h1.lead} accent={ep.h1.accent} /></h1>
           <p className={s.sub}>{ep.hook}</p>
           <VideoFacade yt={ep.yt} title={ep.title} poster={ep.poster} duration={formatDuration(ep.seconds)} />
@@ -98,6 +92,12 @@ export default async function SessionPage({ params }) {
                 <SeekButton key={c.t} at={c.t} className={s.chip}><b>{c.t}</b>{c.label}</SeekButton>
               ))}
             </nav>
+          )}
+          {ep.corrections?.length > 0 && (
+            <aside className={s.corrections} aria-label="Corrections to this recording">
+              <b>Corrections to this recording</b>
+              <ul>{ep.corrections.map((c) => <li key={c}>{c}</li>)}</ul>
+            </aside>
           )}
           <div className={s.ctaRow}>
             <Link href="/bookings" className={s.pillBtn}>Book your own free session <ArrowRight size={17} aria-hidden="true" /></Link>

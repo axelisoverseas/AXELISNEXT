@@ -448,7 +448,7 @@
   "uploadDate": "2026-09-19"
  },
  {
-  "slug": "cracking-top-us-universities",
+  "slug": "us-ivy-league-universities",
   "yt": "4h-x4BjpzpY",
   "seconds": 894,
   "title": "How Top US Universities Are Actually Cracked",
@@ -552,16 +552,20 @@
   ],
   "emotion": "explaining",
   "h1": {
-   "lead": "How top US universities",
-   "accent": "are actually cracked."
+   "lead": "Top US universities,",
+   "accent": "and how they are actually cracked."
   },
   "profileHead": {
-   "lead": "A designer",
-   "accent": "aiming for the Ivy League."
+   "lead": "A product designer,",
+   "accent": "aiming for Columbia."
   },
   "student_on_camera": true,
   "uploadDate": "2026-09-18",
-  "hold": "The live cut calls Columbia, NYU, Yale and Harvard public universities, quotes a ₹1 lakh success fee and a \"guarantee\", and names competitors. Re-cut before promoting."
+  "corrections": [
+   "Columbia, NYU, Yale, Harvard and UC Berkeley are called public universities at about 2:52 and 13:43. Columbia, NYU, Yale and Harvard are private; UC Berkeley is public.",
+   "The fees mentioned in this 2026 recording (a ₹1 lakh success fee, a visa-refusal refund) are from our earlier terms. The current Global Admissions Charter is below.",
+   "Scholarships are never guaranteed. Where the session says \"the guarantee\" at 7:46, read it as \"the usual outcome\"."
+  ]
  },
  {
   "slug": "second-masters-public-europe",
@@ -935,12 +939,12 @@
   "quotes": [
    {
     "text": "If you are going to Germany, there is no sense in going to private.",
-    "who": "Rishabh",
+    "who": "Counsellor",
     "ts": "1:48"
    },
    {
     "text": "if I tell you that you will get a 100% tuition fee or waiver or everything, that is a little unreal.",
-    "who": "Rishabh",
+    "who": "Counsellor",
     "ts": "12:22"
    },
    {

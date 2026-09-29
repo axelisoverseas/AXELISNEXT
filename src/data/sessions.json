@@ -1,5 +1,125 @@
 [
  {
+  "slug": "us-ivy-league-universities",
+  "yt": "4h-x4BjpzpY",
+  "seconds": 894,
+  "title": "How Top US Universities Are Actually Cracked",
+  "student": "Khushi",
+  "consent_key": "Khushi_Singh",
+  "level": "Master's",
+  "destination": "USA",
+  "flag": "us",
+  "route": "GAC",
+  "hook": "Aiming for Columbia or NYU from a design career? What top US universities actually weigh.",
+  "profile": [
+   "Product designer with 2 to 2.5 years of industry experience",
+   "Bachelor of Design in user experience",
+   "A year's career break, freelancing on and off; applying to the US only"
+  ],
+  "numbers": [
+   {
+    "value": "₹50–60L",
+    "label": "US tuition",
+    "ts": "6:59"
+   },
+   {
+    "value": "₹15L",
+    "label": "cost of living per year",
+    "ts": "7:03"
+   },
+   {
+    "value": "20–40%",
+    "label": "scholarship to aim for",
+    "ts": "7:15"
+   }
+  ],
+  "quotes": [
+   {
+    "text": "I'm looking only specifically for courses which are going to streamline my career into more of a leadership kind of a role",
+    "who": "Khushi",
+    "ts": "0:52"
+   },
+   {
+    "text": "instead of targeting one or two universities, let's target five or six universities. And five or six universities should be highly tailored to your profile.",
+    "who": "Counsellor",
+    "ts": "12:14"
+   },
+   {
+    "text": "plus it's JAN 27 intake that we're targeting, hence less competition as compared to Fall 27.",
+    "who": "Counsellor",
+    "ts": "12:39"
+   }
+  ],
+  "takeaways": [
+   "Apply to five or six universities tailored to your profile, not two.",
+   "Your SOP must show why this course fits your past experience.",
+   "University scholarships and trust scholarships are different games; apply to both."
+  ],
+  "chapters": [
+   {
+    "t": "0:00",
+    "label": "Cold open"
+   },
+   {
+    "t": "0:17",
+    "label": "Designer, Aiming Higher"
+   },
+   {
+    "t": "1:20",
+    "label": "NYU, Northeastern, Columbia"
+   },
+   {
+    "t": "2:29",
+    "label": "Two Charters, One Case"
+   },
+   {
+    "t": "6:52",
+    "label": "₹50–60L and the Scholarship Game"
+   },
+   {
+    "t": "9:01",
+    "label": "Three Rounds and a Portal"
+   },
+   {
+    "t": "9:44",
+    "label": "How Top Universities Are Cracked"
+   },
+   {
+    "t": "10:39",
+    "label": "What Happens Next"
+   },
+   {
+    "t": "12:32",
+    "label": "Jan '27, Not Fall"
+   },
+   {
+    "t": "12:48",
+    "label": "When You Pay, When You Don't"
+   }
+  ],
+  "thumb_text": [
+   "The *SOP* hack",
+   "*₹50–60L* tuition",
+   "*Jan '27*, not Fall"
+  ],
+  "emotion": "explaining",
+  "h1": {
+   "lead": "Top US universities,",
+   "accent": "and how they are actually cracked."
+  },
+  "profileHead": {
+   "lead": "A product designer,",
+   "accent": "aiming for Columbia."
+  },
+  "student_on_camera": true,
+  "uploadDate": "2026-09-18",
+  "corrections": [
+   "Columbia, NYU, Yale, Harvard and UC Berkeley are called public universities at about 2:52 and 13:43. Columbia, NYU, Yale and Harvard are private; UC Berkeley is public.",
+   "The fees mentioned in this 2026 recording (a ₹1 lakh success fee, a visa-refusal refund) are from our earlier terms. The current Global Admissions Charter is below.",
+   "Scholarships are never guaranteed. Where the session says \"the guarantee\" at 7:46, read it as \"the usual outcome\"."
+  ]
+ },
+ {
   "slug": "low-school-marks-strong-bachelors",
   "yt": "_9MeeaPj4hw",
   "seconds": 508,
@@ -697,12 +817,12 @@
   "quotes": [
    {
     "text": "If you are going to Germany, there is no sense in going to private.",
-    "who": "Rishabh",
+    "who": "Counsellor",
     "ts": "1:48"
    },
    {
     "text": "if I tell you that you will get a 100% tuition fee or waiver or everything, that is a little unreal.",
-    "who": "Rishabh",
+    "who": "Counsellor",
     "ts": "12:22"
    },
    {

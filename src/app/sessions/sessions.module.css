@@ -51,6 +51,10 @@
 .chip b { color: var(--color-axelis); font-variant-numeric: tabular-nums; font-weight: 800; }
 .chip:hover { border-color: var(--color-axelis); }
 
+.corrections { max-width: 860px; margin: 1.4rem auto 0; padding: 1rem 1.2rem; border-radius: 16px; border: 1px solid rgba(180, 83, 9, .28); background: #fff8eb; text-align: left; font-size: 14px; line-height: 1.55; color: #6b3a07; }
+.corrections b { display: block; margin-bottom: .35rem; color: #7c2d12; }
+.corrections ul { margin: 0; padding-left: 1.1rem; display: grid; gap: .3rem; }
+
 /* Student card + numbers */
 .profileGrid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(20px, 3vw, 32px); align-items: stretch; }
 .card { background: #fff; border-radius: 22px; border: 1px solid rgba(22, 38, 92, .07); box-shadow: 0 20px 50px -35px rgba(22, 38, 92, .45); }

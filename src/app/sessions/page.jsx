@@ -19,10 +19,7 @@ export default function SessionsIndex() {
       <section className={s.hero}>
         <div className={s.heroBg} aria-hidden="true"><img src={hero.backdrop} alt="" width="1600" height="1067" /></div>
         <div className={`${s.wrap} ${s.center}`}>
-          <span className={s.proofPill}>
-            <span className={s.faces}>{SESSIONS.filter((f) => f.face).slice(0, 5).map((f) => <img key={f.slug} src={f.face} alt="" width="26" height="26" />)}</span>
-            {SESSIONS.length} sessions · real students · published with consent
-          </span>
+          <span className={s.pillLabel}>{SESSIONS.length} real counselling sessions</span>
           <h1 className={s.h1}>Sit in on a real <span className={s.accent}>counselling session.</span></h1>
           <p className={s.sub}>
             No scripts and no actors. Students from across India with their real marks, gaps and budgets, and
