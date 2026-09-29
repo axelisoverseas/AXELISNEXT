@@ -2,16 +2,10 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Wordmark from '../Wordmark';
 
-const initials = (name = '') =>
-  name
-    .split(' ')
-    .filter((w) => /[A-Za-z]/.test(w[0] || ''))
-    .map((w) => w[0])
-    .join('')
-    .slice(0, 3)
-    .toUpperCase();
-
+// Official wordmarks in one colour, not coats of arms: crests are illegible at
+// this size and are what several universities bar from third-party promotion.
 export const LogoColumn = ({ className = '', logos, duration = 22 }) => {
   return (
     <div className={className}>
@@ -30,32 +24,11 @@ export const LogoColumn = ({ className = '', logos, duration = 22 }) => {
             {logos.map((u, i) => (
               <div
                 key={`${loop}-${i}`}
-                className="p-6 rounded-2xl border border-slate-200 bg-white shadow-e-1 shadow-stone-900/5 max-w-xs w-full flex items-center gap-4"
+                className="px-6 py-5 rounded-2xl border border-slate-200 bg-white shadow-e-1 shadow-stone-900/5 max-w-xs w-full flex flex-col items-center justify-center gap-2 min-h-[104px]"
               >
-                <div className="h-14 w-14 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center overflow-hidden shrink-0">
-                  <img
-                    src={u.image}
-                    alt={u.name}
-                    className="max-h-10 max-w-10 object-contain logo-img"
-                    onError={(e) => {
-                      // Hide broken logo, show initials fallback sibling.
-                      e.currentTarget.style.display = 'none';
-                      const fb = e.currentTarget.nextElementSibling;
-                      if (fb) fb.style.display = 'flex';
-                    }}
-                  />
-                  <div
-                    className="h-10 w-10 rounded-lg bg-gradient-to-br from-[var(--storm-accent)] to-[var(--dawn-glow)] text-white font-bold text-xs items-center justify-center"
-                    style={{ display: 'none' }}
-                  >
-                    {initials(u.name)}
-                  </div>
-                </div>
-                <div className="flex flex-col min-w-0">
-                  <div className="font-semibold tracking-tight text-sm text-slate-900 leading-5 truncate">
-                    {u.name}
-                  </div>
-                  <div className="leading-5 text-xs text-[var(--color-dim)] tracking-tight">{u.country}</div>
+                <Wordmark name={u.name} height={40} maxWidth={230} />
+                <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[var(--color-dim)]">
+                  {u.kind === 'symbol' ? `${u.name} · ${u.country}` : u.country}
                 </div>
               </div>
             ))}

@@ -193,3 +193,8 @@
 .groupHead span { font-size: 12px; font-weight: 800; color: var(--color-axelis); background: rgba(29, 78, 216, .08); border-radius: 999px; padding: .1rem .55rem; }
 .chipList { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: .5rem; }
 .chipList li { padding: .5rem .85rem; border-radius: 999px; background: #fff; border: 1px solid rgba(22, 38, 92, .1); font-size: 14px; font-weight: 600; }
+
+.logoBox { height: 56px; display: flex; align-items: center; margin-bottom: .6rem; }
+.logoGrid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: clamp(10px, 1.4vw, 14px); }
+.logoGrid li { padding: 1.1rem .9rem .9rem; display: flex; flex-direction: column; align-items: center; justify-content: space-between; gap: .7rem; min-height: 112px; text-align: center; }
+.logoGrid li > span { font-size: 12.5px; color: var(--muted); line-height: 1.35; }

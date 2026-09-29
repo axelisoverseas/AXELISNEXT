@@ -4,6 +4,12 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { LogoColumn } from './ui/LogoColumn';
 import { universityLogos } from '../data/universityLogos';
+import WORDMARKS from '../data/wordmarks.json';
+
+// Only universities with an official wordmark on file; no crest fallbacks.
+const withWordmarks = universityLogos
+  .filter((u) => WORDMARKS[u.name])
+  .map((u) => ({ ...u, kind: WORDMARKS[u.name].kind }));
 
 // Split evenly into four columns so the marquee density feels consistent.
 const splitInto = (arr, n) => {
@@ -11,7 +17,7 @@ const splitInto = (arr, n) => {
   return Array.from({ length: n }, (_, i) => arr.slice(i * size, i * size + size));
 };
 
-const [col1, col2, col3, col4] = splitInto(universityLogos, 4);
+const [col1, col2, col3, col4] = splitInto(withWordmarks, 4);
 
 export default function UniversityLogosSection() {
   return (

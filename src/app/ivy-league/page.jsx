@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, Check, X, FileText, GraduationCap } from 'lucide-react';
+import { ArrowRight, Check, X, FileText } from 'lucide-react';
 import s from '../sessions/sessions.module.css';
 import VideoFacade from '@/components/sessions/VideoFacade';
 import CheckoutButton from '@/components/CheckoutButton';
+import Wordmark from '@/components/Wordmark';
 import { PLANS, CHARTER_DOCS, ILC_US_UNIVERSITIES, ILC_LIST, ILC_LIST_COUNT } from '@/data/charterPromises';
 import { getSession, formatDuration } from '@/data/sessions';
 
@@ -116,16 +117,19 @@ export default function IvyLeaguePage() {
                 <div className={s.ivyGrid}>
                   {g.members.map((u) => (
                     <div key={u.name} className={`${s.card} ${s.ivy}`}>
-                      <GraduationCap size={20} aria-hidden="true" />
+                      <div className={s.logoBox}><Wordmark name={u.name} height={44} maxWidth={210} /></div>
                       <b>{u.name}</b>
                       <span>{u.city}, {u.state}</span>
                     </div>
                   ))}
                 </div>
               ) : (
-                <ul className={s.chipList}>
+                <ul className={s.logoGrid}>
                   {g.members.map((u) => (
-                    <li key={u.name}>{u.name}{u.limited && <span className={s.pgTag}>few Master&rsquo;s</span>}</li>
+                    <li key={u.name} className={s.card}>
+                      <Wordmark name={u.name} height={34} maxWidth={180} />
+                      <span>{u.name}{u.limited && <span className={s.pgTag}>few Master&rsquo;s</span>}</span>
+                    </li>
                   ))}
                 </ul>
               )}

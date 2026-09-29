@@ -1,0 +1,776 @@
+{
+ "Brown University": {
+  "file": "/logos/wordmarks/brown-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Brown_University_logo.svg",
+  "kind": "wordmark",
+  "ar": 5.501
+ },
+ "Columbia University": {
+  "file": "/logos/wordmarks/columbia-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Columbia_University_1754.svg",
+  "kind": "wordmark",
+  "ar": 6.54
+ },
+ "Cornell University": {
+  "file": "/logos/wordmarks/cornell-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Cornell_University_logo.svg",
+  "kind": "wordmark",
+  "ar": 7.473
+ },
+ "Dartmouth College": {
+  "file": "/logos/wordmarks/dartmouth-college.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Dartmouth_College_logo.svg",
+  "kind": "wordmark",
+  "ar": 9.44
+ },
+ "Harvard University": {
+  "file": "/logos/wordmarks/harvard-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Harvard_University_logo.svg",
+  "kind": "lockup",
+  "ar": 3.636
+ },
+ "University of Pennsylvania": {
+  "file": "/logos/wordmarks/university-of-pennsylvania.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Pennsylvania_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 2.132
+ },
+ "Princeton University": {
+  "file": "/logos/wordmarks/princeton-university.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Princeton_logo.svg",
+  "kind": "lockup",
+  "ar": 3.488
+ },
+ "Yale University": {
+  "file": "/logos/wordmarks/yale-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Yale_University_logo.svg",
+  "kind": "wordmark",
+  "ar": 2.314
+ },
+ "The University of Chicago": {
+  "file": "/logos/wordmarks/the-university-of-chicago.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Chicago_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 3.985
+ },
+ "Duke University": {
+  "file": "/logos/wordmarks/duke-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Duke_University_logo.svg",
+  "kind": "wordmark",
+  "ar": 2.289
+ },
+ "Massachusetts Institute of Technology": {
+  "file": "/logos/wordmarks/massachusetts-institute-of-technology.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:MIT_2023_red_logo.svg",
+  "kind": "wordmark",
+  "ar": 1.776
+ },
+ "Stanford University": {
+  "file": "/logos/wordmarks/stanford-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Stanford_wordmark_(2012).svg",
+  "kind": "wordmark",
+  "ar": 4.772
+ },
+ "The Pennsylvania State University": {
+  "file": "/logos/wordmarks/the-pennsylvania-state-university.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Pennsylvania_State_University_logo.svg",
+  "kind": "lockup",
+  "ar": 3.011
+ },
+ "Rutgers, The State University of New Jersey – New Brunswick": {
+  "file": "/logos/wordmarks/rutgers-the-state-university-of-new-jersey-new-brunswick.png",
+  "source": "https://en.wikipedia.org/wiki/File:Rutgers_New_Brunswick.png",
+  "kind": "lockup",
+  "ar": 3.372
+ },
+ "Binghamton University, State University of New York": {
+  "file": "/logos/wordmarks/binghamton-university-state-university-of-new-york.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Binghamton_University_logo.svg",
+  "kind": "wordmark",
+  "ar": 3.05
+ },
+ "University of Connecticut": {
+  "file": "/logos/wordmarks/university-of-connecticut.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Connecticut_logo.svg",
+  "kind": "wordmark",
+  "ar": 3.262
+ },
+ "William & Mary (The College of William & Mary in Virginia)": {
+  "file": "/logos/wordmarks/william-and-mary-the-college-of-william-and-mary-in-virginia.png",
+  "source": "https://en.wikipedia.org/wiki/File:Logo_of_the_College_of_William_%26_Mary.png",
+  "kind": "lockup",
+  "ar": 2.202
+ },
+ "University of Delaware": {
+  "file": "/logos/wordmarks/university-of-delaware.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Delaware_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 2.366
+ },
+ "University of Maryland, College Park": {
+  "file": "/logos/wordmarks/university-of-maryland-college-park.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Maryland_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 5.024
+ },
+ "University of Virginia": {
+  "file": "/logos/wordmarks/university-of-virginia.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Virginia_logo.svg",
+  "kind": "wordmark",
+  "ar": 3.103
+ },
+ "The University of Arizona": {
+  "file": "/logos/wordmarks/the-university-of-arizona.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Arizona_logo.svg",
+  "kind": "lockup",
+  "ar": 4.121
+ },
+ "University of California, Berkeley": {
+  "file": "/logos/wordmarks/university-of-california-berkeley.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_California,_Berkeley_Logo_2024.svg",
+  "kind": "wordmark",
+  "ar": 3.668
+ },
+ "University of California, Davis": {
+  "file": "/logos/wordmarks/university-of-california-davis.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:UC_Davis_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 5.834
+ },
+ "University of California, Irvine": {
+  "file": "/logos/wordmarks/university-of-california-irvine.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_California,_Irvine_logo.svg",
+  "kind": "wordmark",
+  "ar": 2.335
+ },
+ "University of California, Los Angeles": {
+  "file": "/logos/wordmarks/university-of-california-los-angeles.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_California,_Los_Angeles_logo.svg",
+  "kind": "wordmark",
+  "ar": 3.054
+ },
+ "University of California, San Diego": {
+  "file": "/logos/wordmarks/university-of-california-san-diego.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_California,_San_Diego_logo.svg",
+  "kind": "wordmark",
+  "ar": 5.12
+ },
+ "University of California, Santa Barbara": {
+  "file": "/logos/wordmarks/university-of-california-santa-barbara.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_California,_Santa_Barbara_logo.svg",
+  "kind": "wordmark",
+  "ar": 12.704
+ },
+ "University of Colorado Boulder": {
+  "file": "/logos/wordmarks/university-of-colorado-boulder.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:UC_Boulder_logo.svg",
+  "kind": "lockup",
+  "ar": 6.637
+ },
+ "University of Washington (Seattle)": {
+  "file": "/logos/wordmarks/university-of-washington-seattle.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Washington_signature.svg",
+  "kind": "lockup",
+  "ar": 4.639
+ },
+ "Indiana University Bloomington": {
+  "file": "/logos/wordmarks/indiana-university-bloomington.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Indiana_University_logotype.svg",
+  "kind": "lockup",
+  "ar": 6.65
+ },
+ "Miami University (Oxford campus)": {
+  "file": "/logos/wordmarks/miami-university-oxford-campus.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Miami_University_logo_2021.svg",
+  "kind": "lockup",
+  "ar": 4.232
+ },
+ "Michigan State University": {
+  "file": "/logos/wordmarks/michigan-state-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Michigan_State_University_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 4.286
+ },
+ "The Ohio State University (Columbus campus)": {
+  "file": "/logos/wordmarks/the-ohio-state-university-columbus-campus.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Ohio_State_University_horizontal_logo.svg",
+  "kind": "lockup",
+  "ar": 6.672
+ },
+ "University of Illinois Urbana-Champaign": {
+  "file": "/logos/wordmarks/university-of-illinois-urbana-champaign.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Illinois_at_Urbana-Champaign_Wordmark.svg",
+  "kind": "lockup",
+  "ar": 3.761
+ },
+ "The University of Iowa": {
+  "file": "/logos/wordmarks/the-university-of-iowa.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Iowa_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 1.778
+ },
+ "University of Michigan (Ann Arbor)": {
+  "file": "/logos/wordmarks/university-of-michigan-ann-arbor.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Michigan_logo.svg",
+  "kind": "lockup",
+  "ar": 5.028
+ },
+ "University of Minnesota Twin Cities": {
+  "file": "/logos/wordmarks/university-of-minnesota-twin-cities.png",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Minnesota_wordmark.png",
+  "kind": "lockup",
+  "ar": 3.898
+ },
+ "University of Wisconsin–Madison": {
+  "file": "/logos/wordmarks/university-of-wisconsinmadison.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Wisconsin-Madison_logo.svg",
+  "kind": "lockup",
+  "ar": 2.939
+ },
+ "University of Florida": {
+  "file": "/logos/wordmarks/university-of-florida.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Florida_logo.svg",
+  "kind": "wordmark",
+  "ar": 5.269
+ },
+ "University of Georgia": {
+  "file": "/logos/wordmarks/university-of-georgia.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Georgia_logo.svg",
+  "kind": "wordmark",
+  "ar": 3.057
+ },
+ "The University of North Carolina at Chapel Hill": {
+  "file": "/logos/wordmarks/the-university-of-north-carolina-at-chapel-hill.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_North_Carolina_at_Chapel_Hill_logo,_2025.svg",
+  "kind": "lockup",
+  "ar": 3.219
+ },
+ "The University of Texas at Austin": {
+  "file": "/logos/wordmarks/the-university-of-texas-at-austin.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Texas_at_Austin_logo.svg",
+  "kind": "lockup",
+  "ar": 3.514
+ },
+ "Bucknell University": {
+  "file": "/logos/wordmarks/bucknell-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Bucknell_University_logo.svg",
+  "kind": "wordmark",
+  "ar": 2.224
+ },
+ "Colgate University": {
+  "file": "/logos/wordmarks/colgate-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Colgate_University_Wordmark_2018.svg",
+  "kind": "wordmark",
+  "ar": 17.133
+ },
+ "Middlebury College": {
+  "file": "/logos/wordmarks/middlebury-college.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Middlebury_College_logo.svg",
+  "kind": "lockup",
+  "ar": 2.625
+ },
+ "Trinity College": {
+  "file": "/logos/wordmarks/trinity-college.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Trinity_College_Connecticut.svg",
+  "kind": "lockup",
+  "ar": 7.059
+ },
+ "Tufts University": {
+  "file": "/logos/wordmarks/tufts-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Tufts_University_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 2.309
+ },
+ "Wesleyan University": {
+  "file": "/logos/wordmarks/wesleyan-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Wesleyan_University_logo.svg",
+  "kind": "wordmark",
+  "ar": 4.791
+ },
+ "Williams College": {
+  "file": "/logos/wordmarks/williams-college.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Williams_College_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 6.108
+ },
+ "University of Oxford": {
+  "file": "/logos/wordmarks/university-of-oxford.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Oxford.svg",
+  "kind": "lockup",
+  "ar": 3.4
+ },
+ "University of Cambridge": {
+  "file": "/logos/wordmarks/university-of-cambridge.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Cambridge_logo.svg",
+  "kind": "lockup",
+  "ar": 4.72
+ },
+ "Imperial College London": {
+  "file": "/logos/wordmarks/imperial-college-london.png",
+  "source": "https://commons.wikimedia.org/wiki/File:Imperial_College_London_new_logo.png",
+  "kind": "wordmark",
+  "ar": 9.143
+ },
+ "University College London": {
+  "file": "/logos/wordmarks/university-college-london.svg",
+  "source": "https://en.wikipedia.org/wiki/File:UCL_Logo,_plain_background.svg",
+  "kind": "lockup",
+  "ar": 3.565
+ },
+ "London School of Economics": {
+  "file": "/logos/wordmarks/london-school-of-economics.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:London_school_of_economics_logo_with_name.svg",
+  "kind": "lockup",
+  "ar": 2.925
+ },
+ "University of Edinburgh": {
+  "file": "/logos/wordmarks/university-of-edinburgh.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Edinburgh_Corporate_Logo_Colour.svg",
+  "kind": "lockup",
+  "ar": 4.182
+ },
+ "University of Bristol": {
+  "file": "/logos/wordmarks/university-of-bristol.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Bristol_logo.svg",
+  "kind": "lockup",
+  "ar": 3.433
+ },
+ "University of Warwick": {
+  "file": "/logos/wordmarks/university-of-warwick.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Warwick_logo.svg",
+  "kind": "lockup",
+  "ar": 1.508
+ },
+ "University of Strathclyde": {
+  "file": "/logos/wordmarks/university-of-strathclyde.png",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Strathclyde_logo.png",
+  "kind": "lockup",
+  "ar": 3.182
+ },
+ "King's College London": {
+  "file": "/logos/wordmarks/king-s-college-london.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Kcl-logo.svg",
+  "kind": "wordmark",
+  "ar": 1.501
+ },
+ "UC Berkeley": {
+  "file": "/logos/wordmarks/university-of-california-berkeley.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_California,_Berkeley_Logo_2024.svg",
+  "kind": "wordmark",
+  "ar": 3.668
+ },
+ "New York University": {
+  "file": "/logos/wordmarks/new-york-university.svg",
+  "source": "https://en.wikipedia.org/wiki/File:NYU_logo.svg",
+  "kind": "lockup",
+  "ar": 5.738
+ },
+ "University of Southern California": {
+  "file": "/logos/wordmarks/university-of-southern-california.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Southern_California_Logo.svg",
+  "kind": "lockup",
+  "ar": 4.638
+ },
+ "Northwestern University": {
+  "file": "/logos/wordmarks/northwestern-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Northwestern_University_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 7.447
+ },
+ "University of Toronto": {
+  "file": "/logos/wordmarks/university-of-toronto.svg",
+  "source": "https://en.wikipedia.org/wiki/File:UofT_logo.svg",
+  "kind": "lockup",
+  "ar": 2.789
+ },
+ "McGill University": {
+  "file": "/logos/wordmarks/mcgill-university.png",
+  "source": "https://commons.wikimedia.org/wiki/File:Mcgill_univ_ca_logo.png",
+  "kind": "lockup",
+  "ar": 4.159
+ },
+ "University of British Columbia": {
+  "file": "/logos/wordmarks/university-of-british-columbia.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:British_columbia_ca_univ_logo.svg",
+  "kind": "lockup",
+  "ar": 4.506
+ },
+ "University of Waterloo": {
+  "file": "/logos/wordmarks/university-of-waterloo.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Waterloo_logo.svg",
+  "kind": "lockup",
+  "ar": 4.184
+ },
+ "University of Alberta": {
+  "file": "/logos/wordmarks/university-of-alberta.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Alberta_Logo_(2021).svg",
+  "kind": "lockup",
+  "ar": 3.664
+ },
+ "McMaster University": {
+  "file": "/logos/wordmarks/mcmaster-university.svg",
+  "source": "https://en.wikipedia.org/wiki/File:McMaster_University_logo.svg",
+  "kind": "lockup",
+  "ar": 1.805
+ },
+ "Queen's University": {
+  "file": "/logos/wordmarks/queen-s-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:QueensU_Wordmark.svg",
+  "kind": "wordmark",
+  "ar": 3.455
+ },
+ "University of Ottawa": {
+  "file": "/logos/wordmarks/university-of-ottawa.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Ottawa_Logo.svg",
+  "kind": "lockup",
+  "ar": 1.181
+ },
+ "University of Sydney": {
+  "file": "/logos/wordmarks/university-of-sydney.svg",
+  "source": "https://en.wikipedia.org/wiki/File:The_University_of_Sydney_Logo.svg",
+  "kind": "lockup",
+  "ar": 2.892
+ },
+ "Australian National University": {
+  "file": "/logos/wordmarks/australian-national-university.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Australian_National_University_(emblem).svg",
+  "kind": "lockup",
+  "ar": 2.923
+ },
+ "UNSW Sydney": {
+  "file": "/logos/wordmarks/unsw-sydney.png",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_New_South_Wales_Logo.png",
+  "kind": "lockup",
+  "ar": 2.357
+ },
+ "University of Queensland": {
+  "file": "/logos/wordmarks/university-of-queensland.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Logo_of_the_University_of_Queensland.svg",
+  "kind": "lockup",
+  "ar": 3.81
+ },
+ "Technical University of Munich": {
+  "file": "/logos/wordmarks/technical-university-of-munich.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:TU_Muenchen_Logo.svg",
+  "kind": "wordmark",
+  "ar": 3.083
+ },
+ "LMU Munich": {
+  "file": "/logos/wordmarks/lmu-munich.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:LMU-Logo.svg",
+  "kind": "wordmark",
+  "ar": 2.188
+ },
+ "RWTH Aachen": {
+  "file": "/logos/wordmarks/rwth-aachen.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:RWTH_Logo_3.svg",
+  "kind": "wordmark",
+  "ar": 3.687
+ },
+ "Freie Universität Berlin": {
+  "file": "/logos/wordmarks/freie-universitat-berlin.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Freie_Universit%C3%A4t_Berlin_Logo_05.2024.svg",
+  "kind": "lockup",
+  "ar": 2.977
+ },
+ "Sorbonne Université": {
+  "file": "/logos/wordmarks/sorbonne-universite.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Sorbonne_University_Logo.svg",
+  "kind": "lockup",
+  "ar": 2.466
+ },
+ "Sciences Po": {
+  "file": "/logos/wordmarks/sciences-po.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Logo_Sciences_Po.svg",
+  "kind": "wordmark",
+  "ar": 6.378
+ },
+ "PSL University": {
+  "file": "/logos/wordmarks/psl-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:LOGO-PSL-juin-2026.svg",
+  "kind": "lockup",
+  "ar": 2.459
+ },
+ "Université Paris-Saclay": {
+  "file": "/logos/wordmarks/universite-paris-saclay.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Logo_Universit%C3%A9_Paris-Saclay_(ComUE).svg",
+  "kind": "wordmark",
+  "ar": 2.955
+ },
+ "École Polytechnique": {
+  "file": "/logos/wordmarks/ecole-polytechnique.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:%C3%89cole_polytechnique_signature.svg",
+  "kind": "wordmark",
+  "ar": 3.076
+ },
+ "Trinity College Dublin": {
+  "file": "/logos/wordmarks/trinity-college-dublin.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Trinity_College_Dublin_logo.svg",
+  "kind": "lockup",
+  "ar": 3.782
+ },
+ "University of Galway": {
+  "file": "/logos/wordmarks/university-of-galway.png",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Galway_logo_2022.png",
+  "kind": "lockup",
+  "ar": 2.073
+ },
+ "Dublin City University": {
+  "file": "/logos/wordmarks/dublin-city-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Dublin_City_University_Logo.svg",
+  "kind": "lockup",
+  "ar": 1.471
+ },
+ "University of Amsterdam": {
+  "file": "/logos/wordmarks/university-of-amsterdam.png",
+  "source": "https://commons.wikimedia.org/wiki/File:Uva%C2%AEmerken_ENG.png",
+  "kind": "lockup",
+  "ar": 8.187
+ },
+ "Utrecht University": {
+  "file": "/logos/wordmarks/utrecht-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Utrecht-univesrsity-logo.svg",
+  "kind": "lockup",
+  "ar": 3.681
+ },
+ "TU Delft": {
+  "file": "/logos/wordmarks/tu-delft.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Delft_University_of_Technology_logo.svg",
+  "kind": "wordmark",
+  "ar": 2.524
+ },
+ "Leiden University": {
+  "file": "/logos/wordmarks/leiden-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:UniversiteitLeidenLogo.svg",
+  "kind": "lockup",
+  "ar": 2.262
+ },
+ "Erasmus University Rotterdam": {
+  "file": "/logos/wordmarks/erasmus-university-rotterdam.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Logo_Erasmus_Universiteit_Rotterdam.svg",
+  "kind": "wordmark",
+  "ar": 3.386
+ },
+ "University of Helsinki": {
+  "file": "/logos/wordmarks/university-of-helsinki.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Helsinki.svg",
+  "kind": "symbol",
+  "ar": 0.936
+ },
+ "Aalto University": {
+  "file": "/logos/wordmarks/aalto-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Aalto_University_logo.svg",
+  "kind": "lockup",
+  "ar": 1.2
+ },
+ "Tampere University": {
+  "file": "/logos/wordmarks/tampere-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Tampere_University_logo.svg",
+  "kind": "lockup",
+  "ar": 3.141
+ },
+ "University of Bologna": {
+  "file": "/logos/wordmarks/university-of-bologna.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_bologna_wordmark_svg.svg",
+  "kind": "wordmark",
+  "ar": 6.939
+ },
+ "Politecnico di Milano": {
+  "file": "/logos/wordmarks/politecnico-di-milano.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Polytechnic_University_of_Milan_logo.svg",
+  "kind": "lockup",
+  "ar": 3.117
+ },
+ "Bocconi University": {
+  "file": "/logos/wordmarks/bocconi-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Bocconi_University_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 4.695
+ },
+ "Sapienza University of Rome": {
+  "file": "/logos/wordmarks/sapienza-university-of-rome.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Uniroma1.svg",
+  "kind": "lockup",
+  "ar": 3.333
+ },
+ "University of Vienna": {
+  "file": "/logos/wordmarks/university-of-vienna.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Vienna_wordmark.svg",
+  "kind": "lockup",
+  "ar": 3.491
+ },
+ "TU Wien": {
+  "file": "/logos/wordmarks/tu-wien.png",
+  "source": "https://commons.wikimedia.org/wiki/File:TU-Logo-Austria_CMYK.png",
+  "kind": "lockup",
+  "ar": 2.278
+ },
+ "Chalmers University of Technology": {
+  "file": "/logos/wordmarks/chalmers-university-of-technology.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Chalmers_wordmark.svg",
+  "kind": "wordmark",
+  "ar": 5.025
+ },
+ "University of Oslo": {
+  "file": "/logos/wordmarks/university-of-oslo.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Oslo_logo.svg",
+  "kind": "lockup",
+  "ar": 3.253
+ },
+ "NTNU": {
+  "file": "/logos/wordmarks/ntnu.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Norwegian_University_of_Science_and_Technology_logo.svg",
+  "kind": "lockup",
+  "ar": 5.15
+ },
+ "University of Copenhagen": {
+  "file": "/logos/wordmarks/university-of-copenhagen.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Copenhagen_Wordmark.svg",
+  "kind": "wordmark",
+  "ar": 29.666
+ },
+ "Aarhus University": {
+  "file": "/logos/wordmarks/aarhus-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Aarhus_University_logo.svg",
+  "kind": "lockup",
+  "ar": 2.267
+ },
+ "Technical University of Denmark": {
+  "file": "/logos/wordmarks/technical-university-of-denmark.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Technical_University_of_Denmark_logo.svg",
+  "kind": "lockup",
+  "ar": 4.148
+ },
+ "University of Barcelona": {
+  "file": "/logos/wordmarks/university-of-barcelona.png",
+  "source": "https://commons.wikimedia.org/wiki/File:Logo_Universitat_de_Barcelona.png",
+  "kind": "lockup",
+  "ar": 3.325
+ },
+ "IE University": {
+  "file": "/logos/wordmarks/ie-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:IE_University_logo.svg",
+  "kind": "wordmark",
+  "ar": 0.947
+ },
+ "Autonomous University of Madrid": {
+  "file": "/logos/wordmarks/autonomous-university-of-madrid.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:UAM_Wordmark_2018.svg",
+  "kind": "wordmark",
+  "ar": 5.822
+ },
+ "ETH Zürich": {
+  "file": "/logos/wordmarks/eth-zurich.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:ETH_Z%C3%BCrich_Logo_black.svg",
+  "kind": "wordmark",
+  "ar": 6.0
+ },
+ "EPFL": {
+  "file": "/logos/wordmarks/epfl.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Logo_EPFL_2019.svg",
+  "kind": "wordmark",
+  "ar": 3.442
+ },
+ "University of Auckland": {
+  "file": "/logos/wordmarks/university-of-auckland.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Auckland_logo.svg",
+  "kind": "lockup",
+  "ar": 2.542
+ },
+ "University of Otago": {
+  "file": "/logos/wordmarks/university-of-otago.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Otago_logo_2024.svg",
+  "kind": "lockup",
+  "ar": 3.035
+ },
+ "National University of Singapore": {
+  "file": "/logos/wordmarks/national-university-of-singapore.svg",
+  "source": "https://en.wikipedia.org/wiki/File:NationalUniversityofSingapore.svg",
+  "kind": "lockup",
+  "ar": 2.182
+ },
+ "Nanyang Technological University": {
+  "file": "/logos/wordmarks/nanyang-technological-university.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Nanyang_Technological_University.svg",
+  "kind": "lockup",
+  "ar": 2.787
+ },
+ "University of Hong Kong": {
+  "file": "/logos/wordmarks/university-of-hong-kong.svg",
+  "source": "https://en.wikipedia.org/wiki/File:University_of_Hong_Kong_Logo.svg",
+  "kind": "lockup",
+  "ar": 5.1
+ },
+ "HKUST": {
+  "file": "/logos/wordmarks/hkust.png",
+  "source": "https://en.wikipedia.org/wiki/File:Hong_Kong_UST.png",
+  "kind": "lockup",
+  "ar": 3.135
+ },
+ "University of Tokyo": {
+  "file": "/logos/wordmarks/university-of-tokyo.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Tokyo_logo_(2024).svg",
+  "kind": "lockup",
+  "ar": 4.163
+ },
+ "Kyoto University": {
+  "file": "/logos/wordmarks/kyoto-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Kyoto_University_logo,_5.svg",
+  "kind": "lockup",
+  "ar": 3.867
+ },
+ "Taylor's University": {
+  "file": "/logos/wordmarks/taylor-s-university.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Logo_of_Taylor%27s_University.svg",
+  "kind": "lockup",
+  "ar": 2.462
+ },
+ "NYU Abu Dhabi": {
+  "file": "/logos/wordmarks/nyu-abu-dhabi.svg",
+  "source": "https://en.wikipedia.org/wiki/File:NYU_Abu_Dhabi_logo.svg",
+  "kind": "lockup",
+  "ar": 3.894
+ },
+ "Heriot-Watt University Dubai": {
+  "file": "/logos/wordmarks/heriot-watt-university-dubai.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Heriot-Watt_University_logo.svg",
+  "kind": "wordmark",
+  "ar": 2.0
+ },
+ "Ghent University": {
+  "file": "/logos/wordmarks/ghent-university.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Ghent_University_logo.svg",
+  "kind": "lockup",
+  "ar": 1.15
+ },
+ "Jagiellonian University": {
+  "file": "/logos/wordmarks/jagiellonian-university.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Jagiellonian_University.svg",
+  "kind": "lockup",
+  "ar": 2.335
+ },
+ "Charles University": {
+  "file": "/logos/wordmarks/charles-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:Univerzita_Karlova_horizontal_logo_2023.svg",
+  "kind": "wordmark",
+  "ar": 11.677
+ },
+ "Eötvös Loránd University": {
+  "file": "/logos/wordmarks/eotvos-lorand-university.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:ELTE_logo_new.svg",
+  "kind": "lockup",
+  "ar": 4.737
+ },
+ "Vilnius University": {
+  "file": "/logos/wordmarks/vilnius-university.svg",
+  "source": "https://en.wikipedia.org/wiki/File:Logo_vilnius_university.svg",
+  "kind": "lockup",
+  "ar": 1.926
+ },
+ "University of Cyprus": {
+  "file": "/logos/wordmarks/university-of-cyprus.svg",
+  "source": "https://commons.wikimedia.org/wiki/File:University_of_Cyprus.svg",
+  "kind": "symbol",
+  "ar": 1.0
+ }
+}
