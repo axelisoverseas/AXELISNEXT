@@ -16,6 +16,10 @@
  *     the same preference list at no extra fee and no ₹9,999 deposit. A
  *     private offer counts as an offer (no service-fee refund) but carries no
  *     success fee, which applies only to tuition-free public universities.
+ *   - ILC v1.1 (29 Sep 2026): the success fee now applies to the whole ILC
+ *     list (Ivy League, Ivy Plus, Public Ivies, Little Ivies with graduate
+ *     programmes; 49 universities, src/data/ilcUniversities.json), per the
+ *     founder. The list rule is two from the ILC list, not two Ivies.
  *   - ILC (Ivy League Charter, launched 29 Sep 2026) runs on the EPC model
  *     and amounts, per the founder: ₹19,999 + GST now, refunded if no
  *     university on the preference list makes an offer; ₹1,80,000 + GST only
@@ -27,6 +31,11 @@
  */
 
 import ILC_US from './ilcUsUniversities.json';
+import ILC_GROUPS from './ilcUniversities.json';
+
+/* The ILC list: where the success fee applies. Annex A of the ILC charter. */
+export const ILC_LIST = ILC_GROUPS;
+export const ILC_LIST_COUNT = ILC_GROUPS.reduce((n, g) => n + g.members.length, 0);
 
 /* The US universities on our GAC commission sheet that take Master's or MBA
    applicants: the rest of an ILC preference list, alongside the Ivy League.
@@ -40,7 +49,7 @@ export const CHARTER_DOCS = {
   // are retired and no longer linked from anywhere on the site.
   gac: '/charters/global-admissions-charter-v2.0.pdf',
   epc: '/charters/europe-public-charter-v2.0.pdf',
-  ilc: '/charters/ivy-league-charter-v1.0.pdf',
+  ilc: '/charters/ivy-league-charter-v1.1.pdf',
 };
 
 /* The eight Ivy League universities, by their usual names. Used only to say
@@ -145,17 +154,17 @@ export const PLANS = [
     short: 'ILC',
     formerly: null,
     isNew: true,
-    for: "Master's and MBA applications to the eight Ivy League universities, with top US universities on the same list.",
+    for: "Master's and MBA applications to the Ivy League, the Ivy Plus, the Public Ivies and the Little Ivies: 49 universities, with other US universities on the same list.",
     headline: '₹19,999',
-    headlineNote: "Now. ₹1,80,000 only if you accept an Ivy League offer.",
+    headlineNote: "Now. ₹1,80,000 only if you accept an offer from the ILC list.",
     pay: [
       { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,600 GST', when: 'Now, to start', note: 'Refunded if no offer comes.' },
-      { what: 'Success fee', amount: '₹1,80,000', gst: '+ ₹32,400 GST', when: 'Only when you accept an offer from an Ivy League university', note: 'Other US universities on your list: no success fee.' },
+      { what: 'Success fee', amount: '₹1,80,000', gst: '+ ₹32,400 GST', when: 'Only when you accept an offer from a university on the ILC list: the Ivy League, Ivy Plus, Public Ivies or Little Ivies', note: 'Other US universities on your list: no success fee.' },
     ],
-    total: '₹1,99,999 + GST (₹2,35,999), and only if you accept an Ivy League offer',
+    total: '₹1,99,999 + GST (₹2,35,999), and only if you accept an offer from the ILC list',
     scope: [
-      'Profile evaluation against what Ivy League and top US programmes actually weigh',
-      `A shortlist of programmes at the eight Ivy League universities, balanced with ${ILC_US.length} more US universities we work with`,
+      'Profile evaluation against what the Ivy League and other top US programmes actually weigh',
+      `A shortlist of programmes across the 49 universities on the ILC list, balanced with ${ILC_US.length} more US universities we work with`,
       'Essay and SOP strategy, with feedback on every draft, and a US-format résumé',
       'Letters of recommendation: who to ask and what they should cover',
       'Mock interviews for programmes that interview',
@@ -168,8 +177,8 @@ export const PLANS = [
     refundYes: [
       {
         title: 'No university on your preference list makes you an offer',
-        body: 'The ₹19,999 service fee comes back in full if no university on your preference list, Ivy League or not, makes you an offer.',
-        note: 'Your list needs at least five universities, at least two of them Ivy League, so that it is a real application strategy and not a lottery ticket.',
+        body: 'The ₹19,999 service fee comes back in full if no university on your preference list, on the ILC list or not, makes you an offer.',
+        note: 'Your list needs at least five universities, at least two of them from the ILC list, so that it is a real application strategy and not a lottery ticket.',
       },
       {
         title: 'Your visa is refused, and it is not down to you',
@@ -177,9 +186,9 @@ export const PLANS = [
       },
     ],
     refundNo: [
-      'You receive an offer from any university on your preference list, Ivy League or not',
+      'You receive an offer from any university on your preference list, on the ILC list or not',
       'You leave the process yourself after the first shortlist has been shared',
-      'You decline an offer from a university on your list. The ₹19,999 is not refunded; you owe a success fee only if you accept an Ivy League offer.',
+      'You decline an offer from a university on your list. The ₹19,999 is not refunded; you owe a success fee only if you accept an offer from the ILC list.',
     ],
     timeline: 'Within 14 days of approval, to the payment method you used.',
     notIncluded: 'Test fees (GRE, GMAT, TOEFL, IELTS, Duolingo), university application fees, the SEVIS fee and the visa fee are paid by you directly. Test preparation is sold separately.',

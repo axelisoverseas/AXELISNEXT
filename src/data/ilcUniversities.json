@@ -1,0 +1,299 @@
+[
+ {
+  "key": "ivy",
+  "label": "Ivy League",
+  "definition": "The eight members of the Ivy League.",
+  "source": "The Ivy League",
+  "members": [
+   {
+    "name": "Brown University",
+    "city": "Providence",
+    "state": "RI"
+   },
+   {
+    "name": "Columbia University",
+    "city": "New York",
+    "state": "NY"
+   },
+   {
+    "name": "Cornell University",
+    "city": "Ithaca",
+    "state": "NY"
+   },
+   {
+    "name": "Dartmouth College",
+    "city": "Hanover",
+    "state": "NH"
+   },
+   {
+    "name": "Harvard University",
+    "city": "Cambridge",
+    "state": "MA"
+   },
+   {
+    "name": "University of Pennsylvania",
+    "city": "Philadelphia",
+    "state": "PA"
+   },
+   {
+    "name": "Princeton University",
+    "city": "Princeton",
+    "state": "NJ"
+   },
+   {
+    "name": "Yale University",
+    "city": "New Haven",
+    "state": "CT"
+   }
+  ]
+ },
+ {
+  "key": "plus",
+  "label": "Ivy Plus",
+  "definition": "Ivy-Plus = the eight Ivy League colleges plus the University of Chicago, Duke University, MIT and Stanford University (12 colleges), as defined by Chetty, Deming & Friedman (Opportunity Insights). Listed here: the four non-Ivy members only.",
+  "source": "Chetty, R., Deming, D.J., Friedman, J.N. 'Diversifying Society's Leaders? The Determinants and Causal Effects of Admission to Highly Selective Private Colleges', NBER Working Paper 31492 (2023; revised Aug 2025). https://opportunityinsights.org/wp-content/uploads/2023/07/CollegeAdmissions_Paper.pdf ; https://www.nber.org/papers/w31492",
+  "members": [
+   {
+    "name": "The University of Chicago",
+    "city": "Chicago",
+    "state": "IL"
+   },
+   {
+    "name": "Duke University",
+    "city": "Durham",
+    "state": "NC"
+   },
+   {
+    "name": "Massachusetts Institute of Technology",
+    "city": "Cambridge",
+    "state": "MA"
+   },
+   {
+    "name": "Stanford University",
+    "city": "Stanford",
+    "state": "CA"
+   }
+  ]
+ },
+ {
+  "key": "public",
+  "label": "Public Ivies",
+  "definition": "The 30 universities profiled in Howard R. Greene & Matthew W. Greene, The Public Ivies: America's Flagship Public Universities (New York: Cliff Street Books/HarperCollins, 2001; ISBN 0-06-093459-X). Main campus only (see _meta.campusScope).",
+  "source": "Greene & Greene (2001), ISBN 0-06-093459-X. List as transcribed at https://en.wikipedia.org/wiki/Public_Ivy (section 'Greenes' Guides list (2001)') and corroborated at https://www.bestcolleges.com/blog/public-ivy-schools-and-little-ivies/ . The book itself was not inspected; the two secondary sources may not be independent.",
+  "members": [
+   {
+    "name": "The Pennsylvania State University",
+    "city": "University Park",
+    "state": "PA"
+   },
+   {
+    "name": "Rutgers, The State University of New Jersey – New Brunswick",
+    "city": "New Brunswick",
+    "state": "NJ"
+   },
+   {
+    "name": "Binghamton University, State University of New York",
+    "city": "Vestal",
+    "state": "NY"
+   },
+   {
+    "name": "University of Connecticut",
+    "city": "Storrs",
+    "state": "CT"
+   },
+   {
+    "name": "William & Mary (The College of William & Mary in Virginia)",
+    "city": "Williamsburg",
+    "state": "VA"
+   },
+   {
+    "name": "University of Delaware",
+    "city": "Newark",
+    "state": "DE"
+   },
+   {
+    "name": "University of Maryland, College Park",
+    "city": "College Park",
+    "state": "MD"
+   },
+   {
+    "name": "University of Virginia",
+    "city": "Charlottesville",
+    "state": "VA"
+   },
+   {
+    "name": "The University of Arizona",
+    "city": "Tucson",
+    "state": "AZ"
+   },
+   {
+    "name": "University of California, Berkeley",
+    "city": "Berkeley",
+    "state": "CA"
+   },
+   {
+    "name": "University of California, Davis",
+    "city": "Davis",
+    "state": "CA"
+   },
+   {
+    "name": "University of California, Irvine",
+    "city": "Irvine",
+    "state": "CA"
+   },
+   {
+    "name": "University of California, Los Angeles",
+    "city": "Los Angeles",
+    "state": "CA"
+   },
+   {
+    "name": "University of California, San Diego",
+    "city": "La Jolla",
+    "state": "CA"
+   },
+   {
+    "name": "University of California, Santa Barbara",
+    "city": "Santa Barbara",
+    "state": "CA"
+   },
+   {
+    "name": "University of Colorado Boulder",
+    "city": "Boulder",
+    "state": "CO"
+   },
+   {
+    "name": "University of Washington (Seattle)",
+    "city": "Seattle",
+    "state": "WA"
+   },
+   {
+    "name": "Indiana University Bloomington",
+    "city": "Bloomington",
+    "state": "IN"
+   },
+   {
+    "name": "Miami University (Oxford campus)",
+    "city": "Oxford",
+    "state": "OH"
+   },
+   {
+    "name": "Michigan State University",
+    "city": "East Lansing",
+    "state": "MI"
+   },
+   {
+    "name": "The Ohio State University (Columbus campus)",
+    "city": "Columbus",
+    "state": "OH"
+   },
+   {
+    "name": "University of Illinois Urbana-Champaign",
+    "city": "Urbana-Champaign",
+    "state": "IL"
+   },
+   {
+    "name": "The University of Iowa",
+    "city": "Iowa City",
+    "state": "IA"
+   },
+   {
+    "name": "University of Michigan (Ann Arbor)",
+    "city": "Ann Arbor",
+    "state": "MI"
+   },
+   {
+    "name": "University of Minnesota Twin Cities",
+    "city": "Minneapolis",
+    "state": "MN"
+   },
+   {
+    "name": "University of Wisconsin–Madison",
+    "city": "Madison",
+    "state": "WI"
+   },
+   {
+    "name": "University of Florida",
+    "city": "Gainesville",
+    "state": "FL"
+   },
+   {
+    "name": "University of Georgia",
+    "city": "Athens",
+    "state": "GA"
+   },
+   {
+    "name": "The University of North Carolina at Chapel Hill",
+    "city": "Chapel Hill",
+    "state": "NC"
+   },
+   {
+    "name": "The University of Texas at Austin",
+    "city": "Austin",
+    "state": "TX"
+   }
+  ]
+ },
+ {
+  "key": "little",
+  "label": "Little Ivies",
+  "definition": "The 18 colleges shown as 'Little Ivies' in the Bloomberg Businessweek chart 'Prestige Can't Buy Performance' accompanying McDonald & Smith, 'Little Good News for the Little Ivies', Bloomberg Businessweek, 22 Dec 2016.",
+  "source": "https://www.bloomberg.com/news/articles/2016-12-22/little-good-news-for-the-little-ivies (archived: https://web.archive.org/web/20170201234955/https://www.bloomberg.com/news/articles/2016-12-22/little-good-news-for-the-little-ivies ; chart image: https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iVbPvJL9p4qs/v0/-1x-1.png). Article text: 'a group of 18 liberal arts schools sometimes dubbed \"Little Ivies\"'. This is the list used by https://en.wikipedia.org/wiki/Little_Ivies .",
+  "members": [
+   {
+    "name": "Bucknell University",
+    "city": "Lewisburg",
+    "state": "PA",
+    "limited": true
+   },
+   {
+    "name": "Colgate University",
+    "city": "Hamilton",
+    "state": "NY",
+    "limited": true
+   },
+   {
+    "name": "Middlebury College",
+    "city": "Middlebury",
+    "state": "VT",
+    "limited": true
+   },
+   {
+    "name": "Trinity College",
+    "city": "Hartford",
+    "state": "CT",
+    "limited": true
+   },
+   {
+    "name": "Tufts University",
+    "city": "Medford",
+    "state": "MA",
+    "limited": false
+   },
+   {
+    "name": "Wesleyan University",
+    "city": "Middletown",
+    "state": "CT",
+    "limited": true
+   },
+   {
+    "name": "Williams College",
+    "city": "Williamstown",
+    "state": "MA",
+    "limited": true
+   }
+  ],
+  "undergradOnly": [
+   "Amherst College",
+   "Bates College",
+   "Bowdoin College",
+   "Colby College",
+   "Connecticut College",
+   "Hamilton College",
+   "Haverford College",
+   "Lafayette College",
+   "Swarthmore College",
+   "Union College",
+   "Vassar College"
+  ]
+ }
+]

@@ -463,7 +463,7 @@ function ProductsContent() {
             </article>
           </div>
 
-          {/* ILC. Ivy League Charter: EPC's model, for the eight Ivy League universities. */}
+          {/* ILC. Ivy League Charter: EPC's model, for the 49 universities on the ILC list. */}
           <article
             id="plan-ilc"
             className="relative mt-6 max-w-6xl mx-auto grid lg:grid-cols-[1.1fr_.9fr] overflow-hidden rounded-[2rem] border-2 border-[var(--color-axelis)]/30 shadow-e-lift bg-white scroll-mt-24"
@@ -477,12 +477,12 @@ function ProductsContent() {
                 Ivy League Charter <span className="text-base font-semibold text-[var(--color-navy)]/70">(ILC)</span>
               </h3>
               <p className="text-[var(--color-navy)] leading-relaxed">
-                For Master&rsquo;s and MBA applicants aiming at Brown, Columbia, Cornell, Dartmouth, Harvard, Penn, Princeton or Yale, with 54 more US universities on the same list.
+                For Master&rsquo;s and MBA applicants aiming at the Ivy League, the Ivy Plus, the Public Ivies or the Little Ivies: 49 universities, with 52 more US universities on the same list.
               </p>
               <div className="mt-6 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-tint)] p-5">
                 <p className="text-4xl font-extrabold text-[var(--color-navy)] tabular-nums">&#8377;19,999 <span className="text-base font-semibold text-[var(--color-dim)]">+ GST now</span></p>
                 <p className="mt-2 text-sm text-[var(--color-navy)]/85">
-                  Refunded in full if no university on your preference list makes you an offer. Then a <b>&#8377;1,80,000</b> success fee + GST, payable only if and when you accept an Ivy League offer. Other US offers carry no success fee. Total &#8377;1,99,999 + GST.
+                  Refunded in full if no university on your preference list makes you an offer. Then a <b>&#8377;1,80,000</b> success fee + GST, payable only if and when you accept an offer from one of the 49 on the ILC list. Other US offers carry no success fee. Total &#8377;1,99,999 + GST.
                 </p>
               </div>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -494,7 +494,7 @@ function ProductsContent() {
                 <Link href="/ivy-league" className="btn btn-secondary btn-lg">See the full charter</Link>
               </div>
               <p className="text-xs text-[var(--color-dim)] mt-3 flex items-center gap-1.5">
-                <ShieldCheck size={12} /> Secure via Cashfree &middot; no admission is guaranteed &middot; not affiliated with the Ivy League
+                <ShieldCheck size={12} /> Secure via Cashfree &middot; no admission is guaranteed &middot; not affiliated with any university listed
               </p>
             </div>
             <PhotoWipe src="/photos/photo-1485871981521-5b1fd3805eee-1200.jpg" alt="New York" from="right" className="relative min-h-[220px] lg:min-h-full" />
@@ -777,17 +777,17 @@ const ROUTES = [
     kicker: 'You aim for the Ivy League',
     name: 'Ivy League Charter',
     forWho:
-      "For Master's and MBA applicants aiming at Brown, Columbia, Cornell, Dartmouth, Harvard, Penn, Princeton or Yale, with top US universities on the same list.",
+      "For Master's and MBA applicants aiming at the Ivy League, the Ivy Plus (Chicago, Duke, MIT, Stanford), the Public Ivies or the Little Ivies, with other US universities on the same list.",
     price: '\u20b919,999',
-    priceNote: 'Then \u20b91,80,000, payable only if and when you accept an Ivy League offer. Other US offers carry no success fee.',
+    priceNote: 'Then \u20b91,80,000, payable only if and when you accept an offer from one of the 49 universities on the ILC list. Other US offers carry no success fee.',
     facts: [
       { k: 'Tuition', v: 'Set by the university; aid and fellowships where offered' },
-      { k: 'Destinations', v: 'The eight Ivy League universities, plus 54 more US universities' },
+      { k: 'Destinations', v: 'Ivy League, Ivy Plus, Public and Little Ivies (49), plus 52 more US universities' },
       { k: 'Plan ahead', v: '9 to 12 months; most deadlines fall December to February' },
       { k: 'Afterwards', v: 'USA 1 to 3 years on OPT' },
     ],
     catch:
-      'The competition. Admission rates at these universities are low and nobody can promise a place. The charter makes sure the large fee is only ever paid for an Ivy League offer you accept.',
+      'The competition. Admission rates at these universities are low and nobody can promise a place. The charter makes sure the large fee is only ever paid for an offer you accept from one of the 49.',
     cta: 'See the Ivy League Charter',
     href: '/ivy-league',
     invert: false,

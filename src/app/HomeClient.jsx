@@ -90,7 +90,7 @@ export default function Home({ universities, destinations }) {
               Three charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">Pick your path.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-base md:text-lg">
-              Global Admissions Charter (GAC) for paid global universities. Europe Public Charter (EPC) for tuition-free public Europe. Ivy League Charter (ILC) for the eight Ivy League universities. Every first payment refundable.
+              Global Admissions Charter (GAC) for paid global universities. Europe Public Charter (EPC) for tuition-free public Europe. Ivy League Charter (ILC) for the Ivy League, Ivy Plus, Public and Little Ivies. Every first payment refundable.
             </p>
           </div>
 
@@ -150,7 +150,7 @@ export default function Home({ universities, destinations }) {
                 <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹19,999</span>
               </div>
               <p className="text-[var(--color-navy)] text-sm">
-                Brown to Yale. <span className="text-emerald-700 font-semibold">Refundable</span> if zero offers; the big fee only if you accept an Ivy offer.
+                Ivy League, Ivy Plus, Public and Little Ivies. <span className="text-emerald-700 font-semibold">Refundable</span> if zero offers; the big fee only on one of those 49.
               </p>
               <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included

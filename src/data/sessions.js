@@ -31,7 +31,7 @@ const PLANS = {
   ILC: {
     key: 'ilc', tag: 'The plan for this route', name: 'Ivy League Charter',
     price: '₹19,999', small: '+ GST now',
-    body: "For Master's and MBA applications to the eight Ivy League universities. Refunded if no university on your preference list makes you an offer; ₹1,80,000 + GST only if you accept an Ivy League offer. Other US universities on your list carry no success fee.",
+    body: "For Master's and MBA applications to the Ivy League, Ivy Plus, Public Ivies and Little Ivies. Refunded if no university on your preference list makes you an offer; ₹1,80,000 + GST only if you accept an offer from one of those 49. Other US universities on your list carry no success fee.",
     img: '/photos/photo-1485871981521-5b1fd3805eee-1200.jpg', alt: 'New York',
   },
   GAC: {

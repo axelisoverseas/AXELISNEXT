@@ -4,12 +4,13 @@ import { ArrowRight, Check, X, FileText, GraduationCap } from 'lucide-react';
 import s from '../sessions/sessions.module.css';
 import VideoFacade from '@/components/sessions/VideoFacade';
 import CheckoutButton from '@/components/CheckoutButton';
-import { PLANS, CHARTER_DOCS, IVY_LEAGUE, ILC_US_UNIVERSITIES } from '@/data/charterPromises';
+import { PLANS, CHARTER_DOCS, ILC_US_UNIVERSITIES, ILC_LIST, ILC_LIST_COUNT } from '@/data/charterPromises';
 import { getSession, formatDuration } from '@/data/sessions';
 
 /**
  * The Ivy League Charter (ILC), launched 29 Sep 2026: EPC's pricing model and
- * amounts, for Master's and MBA applications to the eight Ivy League
+ * amounts, for Master's and MBA applications to the ILC list (Ivy League,
+ * Ivy Plus, Public Ivies, Little Ivies; v1.1) and the eight Ivy League
  * universities. Terms live in src/data/charterPromises.js (the same source as
  * /charters) and in the ILC charter PDF; this page only presents them.
  */
@@ -29,9 +30,11 @@ const BY_STATE = Object.entries(
 
 const FAQ = [
   { q: 'Does this guarantee an Ivy League admission?',
-    a: 'No. Nobody can, and anyone who says otherwise is selling you something. What the charter does guarantee is the money: if no university on your preference list makes you an offer, the ₹19,999 comes back, and the ₹1,80,000 is only ever due if you accept an Ivy League offer.' },
+    a: 'No. Nobody can, and anyone who says otherwise is selling you something. What the charter does guarantee is the money: if no university on your preference list makes you an offer, the ₹19,999 comes back, and the ₹1,80,000 is only ever due if you accept an offer from a university on the ILC list.' },
   { q: 'Why does my list need other US universities on it?',
-    a: 'Because a list of only the eight is a lottery ticket, not a strategy. The charter asks for at least five universities, at least two of them Ivy League. The others are top US universities that fit your profile, applied to with the same care, and an offer from any of them carries no success fee.' },
+    a: 'Because a list of only the most selective universities is a lottery ticket, not a strategy. The charter asks for at least five universities, at least two of them from the ILC list. The others are US universities that fit your profile, applied to with the same care, and an offer from any of them carries no success fee.' },
+  { q: 'Which universities carry the success fee?',
+    a: 'The 49 on the ILC list: the eight Ivy League universities; the Ivy Plus (Chicago, Duke, MIT, Stanford); the 30 Public Ivies named by Greene and Greene; and the seven Little Ivies that take graduate students. Main campuses only. The full list is Annex A of the charter.' },
   { q: "Is it for Master's, MBA or Bachelor's?",
     a: "Master's and MBA programmes. Undergraduate applications to US universities run on a different system and are not part of this charter." },
   { q: 'What is not included?',
@@ -39,18 +42,18 @@ const FAQ = [
   { q: 'When should I start?',
     a: 'Most graduate programmes at these universities admit once a year, for the autumn intake, and their deadlines commonly fall between December and February. Starting nine to twelve months ahead leaves time for tests, essays and recommendations.' },
   { q: 'Are you connected to the Ivy League?',
-    a: 'No. Axelis is not affiliated with, endorsed by or acting for the Ivy League or any of its universities. Their names describe where we help you apply.' },
+    a: 'No. Axelis is not affiliated with, endorsed by or acting for the Ivy League or any university named on this page. Their names describe where we help you apply.' },
 ];
 
 export const metadata = {
   title: 'Ivy League Charter: Apply to the Ivy League, Pay Only If You Get In',
   description:
-    "Master's and MBA applications to Brown, Columbia, Cornell, Dartmouth, Harvard, Penn, Princeton and Yale. ₹19,999 + GST to start, refunded if no offer comes; ₹1,80,000 + GST only when you accept an Ivy League offer.",
+    "Master's and MBA applications to the Ivy League, Ivy Plus, Public Ivies and Little Ivies. ₹19,999 + GST to start, refunded if no offer comes; ₹1,80,000 + GST only when you accept an offer from one of the 49 universities on the ILC list.",
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Ivy League Charter | Axelis Overseas',
-    description: '₹19,999 + GST to start, refunded if no offer comes. ₹1,80,000 + GST only when you accept an Ivy League offer.',
+    description: '₹19,999 + GST to start, refunded if no offer comes. ₹1,80,000 + GST only when you accept an offer from the Ivy League, Ivy Plus, a Public Ivy or a Little Ivy.',
     url: URL,
     images: [{ url: SESSION?.poster || '/photos/photo-1485871981521-5b1fd3805eee-1200.jpg', width: 1280, height: 720 }],
   },
@@ -79,8 +82,8 @@ export default function IvyLeaguePage() {
           <h1 className={s.h1}>Apply to the Ivy League. <span className={s.accent}>Pay the big fee only if you get in.</span></h1>
           <p className={s.sub}>
             {ILC.headline} + GST to start, refunded if no university on your list makes you an offer.
-            ₹1,80,000 + GST only when you accept an offer from Brown, Columbia, Cornell, Dartmouth,
-            Harvard, Penn, Princeton or Yale. Every other US university on your list, from Northeastern to Johns Hopkins, is included free.
+            ₹1,80,000 + GST only when you accept an offer from the Ivy League, the Ivy Plus, a Public Ivy or a
+            Little Ivy. Every other US university on your list, from Northeastern to Johns Hopkins, is included free.
           </p>
           <div className={s.ctaRow}>
             <Link href="/bookings" className={s.pillBtn}>Book a free profile call <ArrowRight size={17} aria-hidden="true" /></Link>
@@ -90,24 +93,51 @@ export default function IvyLeaguePage() {
         </div>
       </section>
 
-      {/* ---------- The eight ---------- */}
+      {/* ---------- The ILC list: where the success fee applies ---------- */}
       <section className={s.sec} style={{ paddingTop: 0 }}>
         <div className={s.wrap}>
           <div className={s.secHead}>
-            <span className={s.pillLabel}>Where</span>
-            <h2 className={s.h2}>Eight universities. <span className={s.accent}>One strategy for all of them.</span></h2>
+            <span className={s.pillLabel}>The ILC list</span>
+            <h2 className={s.h2}>{ILC_LIST_COUNT} universities. <span className={s.accent}>One strategy for all of them.</span></h2>
+            <p className={s.sub}>
+              The Ivy League, the Ivy Plus, the Public Ivies and the Little Ivies that take graduate students. The success fee
+              applies only when you accept an offer from one of these. Main campuses only, as named.
+            </p>
           </div>
-          <div className={s.ivyGrid}>
-            {IVY_LEAGUE.map((u) => (
-              <div key={u.name} className={`${s.card} ${s.ivy}`}>
-                <GraduationCap size={20} aria-hidden="true" />
-                <b>{u.name}</b>
-                <span>{u.city}</span>
+          {ILC_LIST.map((g) => (
+            <div key={g.key} className={s.groupBlock}>
+              <div className={s.groupHead}>
+                <b>{g.label}</b>
+                <span>{g.members.length}</span>
               </div>
-            ))}
-          </div>
+              {g.key === 'ivy' || g.key === 'plus' ? (
+                <div className={s.ivyGrid}>
+                  {g.members.map((u) => (
+                    <div key={u.name} className={`${s.card} ${s.ivy}`}>
+                      <GraduationCap size={20} aria-hidden="true" />
+                      <b>{u.name}</b>
+                      <span>{u.city}, {u.state}</span>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <ul className={s.chipList}>
+                  {g.members.map((u) => (
+                    <li key={u.name}>{u.name}{u.limited && <span className={s.pgTag}>few Master&rsquo;s</span>}</li>
+                  ))}
+                </ul>
+              )}
+              {g.undergradOnly?.length > 0 && (
+                <p className={s.fine}>
+                  Not covered, because they take undergraduates only: {g.undergradOnly.join(', ')}.
+                </p>
+              )}
+            </div>
+          ))}
           <p className={s.sub} style={{ textAlign: 'center', fontSize: 13 }}>
-            Axelis is not affiliated with, endorsed by or acting for the Ivy League or any of these universities.
+            Ivy Plus as defined by Chetty, Deming and Friedman (NBER, 2023); Public Ivies as named by Greene and Greene (2001);
+            Little Ivies as listed by Bloomberg Businessweek (2016). Axelis is not affiliated with, endorsed by or acting for
+            the Ivy League or any university named here.
           </p>
         </div>
       </section>
@@ -200,7 +230,7 @@ export default function IvyLeaguePage() {
               ))}
               <div className={`${s.priceRow} ${s.priceTotal}`}>
                 <b>The most you ever pay</b>
-                <div className={s.priceAmt}>₹2,35,999<small>incl. GST, only if you accept an Ivy League offer</small></div>
+                <div className={s.priceAmt}>₹2,35,999<small>incl. GST, only if you accept an offer from the ILC list</small></div>
               </div>
               <p className={s.fine}>{ILC.notIncluded}</p>
             </div>
@@ -209,7 +239,7 @@ export default function IvyLeaguePage() {
               <p>Read the disclosure, then pay the service fee on Cashfree. Your counsellor calls you within one working day.</p>
               <CheckoutButton product="ivy-league-charter" label="Enrol for ₹23,599 (incl. GST)" className={`${s.pillBtn} ${s.full}`} />
               <a href={CHARTER_DOCS.ilc} target="_blank" rel="noopener noreferrer" className={s.pillGhost} style={{ justifyContent: 'center' }}>
-                <FileText size={16} aria-hidden="true" /> Read the charter (PDF)
+                <FileText size={16} aria-hidden="true" /> Read the charter v1.1 (PDF)
               </a>
             </div>
           </div>

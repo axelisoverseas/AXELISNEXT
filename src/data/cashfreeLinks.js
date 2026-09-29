@@ -36,7 +36,7 @@ export const cashfreeLinks = {
 
   'ivy-league-charter': {
     amount: 19999, url: 'https://payments.cashfree.com/forms/axelis-ivy-league-charter', label: 'Ivy League Charter (ILC)',
-    disclosure: 'ILC is a two-part fee. This ₹19,999 Service Fee is payable now, and refunded in full if no university on your preference list makes you an offer. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from one of the eight Ivy League universities; other US universities on your list carry no success fee. Total ₹1,99,999 plus GST. No admission, scholarship or visa is guaranteed.',
+    disclosure: 'ILC is a two-part fee. This ₹19,999 Service Fee is payable now, and refunded in full if no university on your preference list makes you an offer. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a university on the ILC list (the Ivy League, Ivy Plus, Public Ivies and Little Ivies, 49 universities, Annex A of the charter v1.1); other US universities on your list carry no success fee. Total ₹1,99,999 plus GST. No admission, scholarship or visa is guaranteed.',
   },
 
   // --- Certification programmes (/certifications) -------------------------

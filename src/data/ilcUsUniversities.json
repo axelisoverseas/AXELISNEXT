@@ -126,12 +126,6 @@
   "pgOnly": false
  },
  {
-  "name": "Miami University",
-  "state": "OH",
-  "city": "Oxford",
-  "pgOnly": false
- },
- {
   "name": "Montclair State University",
   "state": "NJ",
   "city": "Montclair",
@@ -291,12 +285,6 @@
   "name": "The University of Tulsa",
   "state": "OK",
   "city": "Tulsa",
-  "pgOnly": false
- },
- {
-  "name": "University of Washington",
-  "state": "WA",
-  "city": "Seattle",
   "pgOnly": false
  },
  {
