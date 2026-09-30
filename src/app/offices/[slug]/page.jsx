@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { OFFICES, OFFICE_SLUGS, officeBySlug, formatAddress } from '@/data/offices';
 import { SITE_URL } from '@/lib/seo';
-import { reviewsSummaryLine, capturedOnLabel } from '@/data/googleReviews';
+import { reviewsSummaryLine, capturedOnLabel, googleReviewsMeta } from '@/data/googleReviews';
 
 // One page per physical office, so each Google Business Profile has a specific
 // URL to point its website field at. Everything rendered here comes from
@@ -120,7 +120,7 @@ export default async function OfficePage({ params }) {
             <p className="text-slate-700">
               {o.reviewState === 'established'
                 ? `${reviewsSummaryLine}, as of ${capturedOnLabel}.`
-                : `This office is newer and is still building its own Google reviews. Our rating of ${reviewsSummaryLine.split(' · ')[0]} is from the Bilaspur office, as of ${capturedOnLabel}.`}
+                : `This office has no Google reviews yet. The ${googleReviewsMeta.rating} rating is from the Bilaspur office, as of ${capturedOnLabel}.`}
             </p>
             {o.mapsUrl && (
               <p className="mt-2">
