@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle, Home, MapPin, Shield, Clock, ExternalLink, Search, Building2 } from 'lucide-react';
+import { ArrowRight, CheckCircle, Home, MapPin, Shield, Clock, Search, Building2 } from 'lucide-react';
 import { TextEffect, TextEffectInView } from '../../components/ui/TextEffect';
 import AmberWidget from '../../components/AmberWidget';
 
@@ -110,47 +110,9 @@ export default function AccommodationPage() {
                 </div>
             </section>
 
-            {/* amber marketplace CTA: static panel linking to our partner marketplace */}
- <section id="listings" className="sec scroll-mt-24">
-                <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="relative overflow-hidden rounded-3xl border-2 border-[var(--color-rule)] bg-white shadow-e-3">
-                        <div className="pointer-events-none absolute -top-24 -right-16 w-72 h-72 rounded-full bg-[var(--color-tint)] blur-[120px]" />
-                        <div className="pointer-events-none absolute -bottom-24 -left-16 w-72 h-72 rounded-full bg-[var(--dawn-glow)]/10 blur-[120px]" />
-
-                        <div className="relative flex flex-col items-center px-6 py-16 text-center sm:px-12">
-                            <div className="w-16 h-16 rounded-2xl bg-[var(--color-tint)] border border-[var(--color-rule)]/30 flex items-center justify-center mb-6">
-                                <Home className="text-[var(--color-axelis)]" size={30} />
-                            </div>
-                            <TextEffectInView as="h2" per="word" preset="blur" className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">
-                                Browse verified student homes on amber
-                            </TextEffectInView>
-                            <p className="text-[var(--color-navy)]/85 max-w-xl mb-8">
-                                Explore bills-inclusive, verified rooms across 250+ student cities on our amber marketplace, or pick a city below and a counsellor will shortlist three contract-checked, budget-fit options for you, free.
-                            </p>
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <a
-                                    href={AMBER_PARTNER_URL}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="btn btn-primary btn-lg"
-                                >
-                                    Open amber marketplace <ExternalLink size={16} className="ml-2" />
-                                </a>
-                                <Link
-                                    href="/contact"
-                                    className="inline-flex items-center justify-center px-8 py-4 glass-storm text-[var(--color-navy)] font-bold rounded-xl hover:text-[var(--color-axelis)] transition-all"
-                                >
-                                    Get free housing help
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             {/* Live amber listings, searchable, attributed to our partner id */}
-            <section id="live-rooms" className="sec pt-0 scroll-mt-24">
-                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section id="listings" className="sec scroll-mt-24">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-8">
                         <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">Live rooms, right now</h2>
                         <p className="text-[var(--color-navy)]/85 max-w-xl mx-auto">
