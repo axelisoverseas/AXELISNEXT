@@ -25,16 +25,19 @@ export const OFFICES = [
     slug: 'bengaluru',
     name: 'Axelis Overseas, Bengaluru',
     role: 'Corporate office',
-    streetAddress: 'WorkFlo Ranka Junction, 3rd Floor, Old Madras Road, KR Puram Hobli',
+    // Verbatim from the Google Business Profile, 1 Oct 2026. This is the
+    // string Google reconciles against, so every directory listing and every
+    // other copy on the site should be aligned to THIS one, not the reverse.
+    streetAddress: 'No. 224, 3rd Floor, WorkFlo Ranka Junction Property, 80/3, KR Puram Bridge, Krishna Reddy Industrial Estate, Dooravani Nagar',
     addressLocality: 'Bengaluru',
     addressRegion: 'Karnataka',
     postalCode: '560016',
     addressCountry: 'IN',
 
-    // Unknown. Do NOT copy 12.9716/77.5946 from src/app/test-prep/layout.js --
-    // that is the Bengaluru city centroid, roughly 13km from KR Puram, and it
-    // is wrong there too. Read the real pair off the Business Profile.
-    geo: null,
+    // Read off the live Google Business Profile on 1 Oct 2026, not estimated.
+    // (Still do NOT copy 12.9716/77.5946 from src/app/test-prep/layout.js --
+    // that is the city centroid, ~13km from KR Puram, and wrong there too.)
+    geo: { latitude: 12.9978554, longitude: 77.6698677 },
 
     // Published on /contact and in the FAQ copy, and only ever alongside this
     // office -- so it belongs to Bengaluru, not to both.
@@ -43,10 +46,9 @@ export const OFFICES = [
       { days: ['Saturday'], opens: '10:00', closes: '16:00' },
     ],
 
-    // NEEDS A HUMAN: the Business Profile URL for this office. Linking it via
-    // sameAs is what ties this page to that profile as one entity. There is no
-    // Places credential on this machine, so it cannot be looked up here.
-    mapsUrl: null,
+    // The live Business Profile, read from the dashboard on 1 Oct 2026.
+    mapsUrl:
+      'https://www.google.com/maps/place/Axelis+Overseas+Education+Pvt+Ltd/@12.9978554,77.6698677,17z',
 
     // The four real owned photographs already shipping on the homepage.
     // Verified against `ls public/office/`. These go into siteGraph as `image`,
