@@ -27,7 +27,7 @@ FONT = "Lato, 'Helvetica Neue', Helvetica, Arial, sans-serif"
 
 CIN = 'CIN U85500CT2023PTC014913'
 GST = 'GSTIN 22AAZCA0637P1Z5'
-OFFICES = 'Bengaluru &amp; Bilaspur, India'
+OFFICES = 'Students across India &middot; offices in Bengaluru &amp; Bilaspur'
 
 
 def slug(name):
@@ -69,12 +69,21 @@ def signature(m):
         <span style="color:%(rule)s;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
         <span style="color:%(dim)s;">%(offices)s</span>
       </div>
+      <div style="font-size:12px;line-height:18px;color:%(navy)s;padding-top:8px;">
+        Every fee published before you pay.
+        <a href="%(site)s/charters" style="color:%(blue)s;text-decoration:none;font-weight:bold;">Global Admissions &middot; Europe Public &middot; Ivy League Charters</a>
+      </div>
+      <div style="font-size:12px;line-height:18px;">
+        <a href="%(site)s/bookings" style="color:%(blue)s;text-decoration:none;font-weight:bold;">Book a free counselling call &rarr;</a>
+        <span style="color:%(rule)s;">&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+        <span style="color:%(dim)s;">4.9 on Google &middot; 75 reviews</span>
+      </div>
       <div style="font-size:10px;line-height:15px;color:%(dim)s;padding-top:8px;border-top:1px solid %(rule)s;margin-top:8px;">
         %(cin)s &nbsp;&middot;&nbsp; %(gst)s
       </div>
     </td>
   </tr>
-</table>""" % dict(font=FONT, mark=MARK, navy=NAVY, dim=DIM, rule=RULE, site=SITE,
+</table>""" % dict(font=FONT, mark=MARK, navy=NAVY, blue=BLUE, dim=DIM, rule=RULE, site=SITE,
                    name=m['name'], role=m['role'], email=email_cell, phone=phone,
                    offices=OFFICES, cin=CIN, gst=GST)
 
