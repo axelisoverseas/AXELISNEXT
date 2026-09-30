@@ -4,6 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, CheckCircle, Home, MapPin, Shield, Clock, ExternalLink, Search, Building2 } from 'lucide-react';
 import { TextEffect, TextEffectInView } from '../../components/ui/TextEffect';
+import AmberWidget from '../../components/AmberWidget';
 
 // Top student cities, each linking to amber's live city search.
 const cities = [
@@ -144,6 +145,19 @@ export default function AccommodationPage() {
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
+
+            {/* Live amber listings, searchable, attributed to our partner id */}
+            <section id="live-rooms" className="sec pt-0 scroll-mt-24">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="text-center mb-8">
+                        <h2 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-3">Live rooms, right now</h2>
+                        <p className="text-[var(--color-navy)]/85 max-w-xl mx-auto">
+                            Search any city or university. Prices and availability come straight from amber.
+                        </p>
+                    </div>
+                    <AmberWidget location="london" numListings={6} />
                 </div>
             </section>
 
