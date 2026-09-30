@@ -1,22 +1,14 @@
 "use client";
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { HelpCircle, ChevronDown, Search, MessageCircle, Phone, Globe, Award, ShieldCheck } from 'lucide-react';
 import Link from 'next/link';
+import { renderMarkdown } from '@/lib/markdown';
 
 import { faqData } from '../../data/siteData';
 import { TextEffect, TextEffectInView } from '../../components/ui/TextEffect';
 
-const renderMarkdown = (text) => {
-  if (!text) return null;
-  const parts = text.split(/(\*\*.*?\*\*)/g);
-  return parts.map((part, i) => {
-    if (part.startsWith('**') && part.endsWith('**')) {
-      return <strong key={i} className="font-extrabold text-stone-900">{part.slice(2, -2)}</strong>;
-    }
-    return part;
-  });
-};
+const STRONG = 'font-extrabold text-stone-900';
 
 const FAQPage = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -168,26 +160,30 @@ const FAQPage = () => {
                         </div>
                       </button>
 
-                      <AnimatePresence>
-                        {openId === faq.id && (
-                          <motion.div 
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            className="bg-white border-t border-slate-100"
+                      {/* Always mounted, collapsed with height/opacity. This used to be gated on
+                          `openId === faq.id`, so a closed answer existed nowhere in the served
+                          HTML: /faq shipped all 30 questions and zero answers to every crawler
+                          and answer engine. Keep it mounted. */}
+                      <motion.div
+                            initial={false}
+                            animate={{
+                              height: openId === faq.id ? 'auto' : 0,
+                              opacity: openId === faq.id ? 1 : 0,
+                            }}
+                            transition={{ duration: 0.3, ease: 'easeInOut' }}
+                            aria-hidden={openId !== faq.id}
+                            className="bg-white border-t border-slate-100 overflow-hidden"
                           >
                             <div className="p-10 space-y-6">
                               <p className="text-lg text-slate-700 leading-relaxed font-normal whitespace-pre-wrap">
-                                {renderMarkdown(faq.answer)}
+                                {renderMarkdown(faq.answer, { strongClassName: STRONG })}
                               </p>
                               <div className="inline-flex items-center space-x-4 p-4 bg-slate-50 rounded-2xl">
                                 <Award className="text-stone-900" size={20} />
                                 <span className="text-sm font-bold text-slate-900 tracking-tight">Verified Expert Advice</span>
                               </div>
                             </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                      </motion.div>
                     </motion.div>
                   ))}
                 </div>

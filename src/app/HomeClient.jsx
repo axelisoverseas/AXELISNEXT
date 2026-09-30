@@ -20,17 +20,9 @@ import { RevealText } from '../components/ui/RevealText';
 import { TextEffect, TextEffectInView } from '../components/ui/TextEffect';
 
 import { teamMembers, faqData } from '../data/siteData';
+import { renderMarkdown } from '@/lib/markdown';
 
-const renderMarkdown = (text) => {
-  if (!text) return null;
-  const parts = text.split(/(\*\*.*?\*\*)/g);
-  return parts.map((part, i) => {
-    if (part.startsWith('**') && part.endsWith('**')) {
-      return <strong key={i} className="font-extrabold text-[var(--color-axelis)]">{part.slice(2, -2)}</strong>;
-    }
-    return part;
-  });
-};
+const STRONG = 'font-extrabold text-[var(--color-axelis)]';
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -351,7 +343,7 @@ export default function Home({ universities, destinations }) {
                   </div>
                 </summary>
                 <div className="px-6 pb-6 text-[var(--color-navy)] leading-relaxed border-t border-[var(--color-rule)] pt-4">
-                  <div className="whitespace-pre-wrap">{renderMarkdown(faq.answer)}</div>
+                  <div className="whitespace-pre-wrap">{renderMarkdown(faq.answer, { strongClassName: STRONG })}</div>
                 </div>
               </motion.details>
             ))}
