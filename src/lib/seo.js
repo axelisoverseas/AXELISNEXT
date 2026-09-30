@@ -1,3 +1,5 @@
+import { OFFICES } from '@/data/offices';
+
 // One host, one organisation. Production serves www and redirects the apex to
 // it, so every canonical, sitemap entry and schema URL uses www. Pointing
 // search engines at the apex meant every signal landed on a redirect.
@@ -57,6 +59,10 @@ export const organization = {
     availableLanguage: ['en', 'hi'],
   },
   areaServed: { '@type': 'Country', name: 'India' },
+  subOrganization: [
+    { '@id': `${SITE_URL}/offices/bengaluru#local` },
+    { '@id': `${SITE_URL}/offices/bilaspur#local` },
+  ],
   knowsAbout: [
     'Study abroad admissions',
     'Student visas',
@@ -74,10 +80,63 @@ export const organization = {
   ],
 };
 
+// ---------------------------------------------------------------------------
+// The two branches, as LocalBusiness.
+// ---------------------------------------------------------------------------
+// EducationalOrganization is NOT a LocalBusiness subtype -- it descends from
+// Organization only, while LocalBusiness descends from both Organization and
+// Place. So `geo` and `openingHoursSpecification` cannot be bolted onto the
+// organization node above; the premises need their own nodes. Multi-typing each
+// one keeps it recognisable as an education provider as well as a place.
+//
+// parentOrganization, not branchOf: schema.org supersedes branchOf.
+//
+// DELIBERATELY NO aggregateRating OR review ON THESE NODES, EVER. Google's
+// self-serving reviews rule makes a page ineligible for review star treatment
+// when the business marks up reviews about itself -- and because siteGraph is
+// injected site-wide from src/app/layout.js, adding one here would apply that
+// to every page on the site, not to one. The legitimate route to visible stars
+// is the Business Profile surfacing in Maps and the local pack, which is what
+// sameAs below supports. Real stars are never on-page markup.
+export const offices = OFFICES.map((o) => ({
+  '@type': ['LocalBusiness', 'EducationalOrganization'],
+  '@id': `${SITE_URL}/offices/${o.slug}#local`,
+  name: o.name,
+  url: `${SITE_URL}/offices/${o.slug}`,
+  parentOrganization: { '@id': ORG_ID },
+  telephone: '+91-9098522711',
+  email: 'axelisoverseas@overseeducation.com',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: o.streetAddress,
+    addressLocality: o.addressLocality,
+    addressRegion: o.addressRegion,
+    postalCode: o.postalCode,
+    addressCountry: o.addressCountry,
+  },
+  areaServed: { '@type': 'Country', name: 'India' },
+  ...(o.geo
+    ? { geo: { '@type': 'GeoCoordinates', latitude: o.geo.latitude, longitude: o.geo.longitude } }
+    : {}),
+  ...(o.openingHours
+    ? {
+        openingHoursSpecification: o.openingHours.map((h) => ({
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: h.days,
+          opens: h.opens,
+          closes: h.closes,
+        })),
+      }
+    : {}),
+  ...(o.mapsUrl ? { sameAs: [o.mapsUrl] } : {}),
+  ...(o.photos.length ? { image: o.photos.map((src) => `${SITE_URL}${src}`) } : {}),
+}));
+
 export const siteGraph = {
   '@context': 'https://schema.org',
   '@graph': [
     organization,
+    ...offices,
     {
       '@type': 'WebSite',
       '@id': `${SITE_URL}/#website`,

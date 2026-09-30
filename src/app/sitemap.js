@@ -2,6 +2,7 @@ import { programs } from '../data/certificationPrograms';
 import { GUIDE_SLUGS } from '../data/countryGuides';
 import { LANDING_SLUGS } from '../data/landingPages';
 import { SESSION_SLUGS } from '../data/sessions';
+import { OFFICE_SLUGS } from '../data/offices';
 import { SITE_URL } from '@/lib/seo';
 
 // Every URL here must be indexable and self-canonical: no /portal (a demo
@@ -69,5 +70,9 @@ export default function sitemap() {
     ...GUIDE_SLUGS.map((slug) => entry(`/guide/${slug}`, 'monthly', 0.8)),
     ...LANDING_SLUGS.map((slug) => entry(`/lp/${slug}`, 'monthly', 0.7)),
     ...SESSION_SLUGS.map((slug) => entry(`/sessions/${slug}`, 'monthly', 0.75)),
+    // Location pages: one per Business Profile, so each profile's website field
+    // has a specific URL to point at.
+    entry('/offices', 'monthly', 0.7, '2026-09-30'),
+    ...OFFICE_SLUGS.map((slug) => entry(`/offices/${slug}`, 'monthly', 0.7, '2026-09-30')),
   ];
 }
