@@ -2,7 +2,9 @@
 // GOOGLE REVIEWS. Axelis Overseas, Bilaspur (Nehru Chowk branch)
 // ============================================================================
 //
-// Captured 22 September 2026 from the live Google Business Profile. This
+// Re-verified 1 October 2026 against the live Business Profile dashboard:
+// still 4.9 from 75 reviews, and the Bengaluru profile still shows no rating
+// at all. Originally captured 22 September 2026. This
 // replaces the placeholder that shipped here, which the original TODO asked to
 // fill from the live profile.
 //
@@ -29,11 +31,40 @@ export const googleReviewsMeta = {
   address: '1st Floor, Vrindavan Plaza, B-20, Nehru Chowk, Bilaspur, Chhattisgarh 495001',
   rating: 4.9,
   totalReviews: 75,
-  capturedOn: '2026-09-22',
+  capturedOn: '2026-10-01',
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Axelis+Overseas+Bilaspur',
   placeUrl:
     'https://www.google.com/maps/place/Axelis+Overseas+Education+Pvt+Ltd/@22.0868588,82.1429961,17z',
 };
+
+// ---------------------------------------------------------------------------
+// ONE derived summary line for every surface that quotes the rating.
+// ---------------------------------------------------------------------------
+// The hero on / and /receipts each hardcoded '4.9 on Google - 75 reviews', so
+// three places could drift apart, and both heroes implied the rating was
+// company-wide. It is not: all 75 reviews are Bilaspur's and the Bengaluru
+// profile has none. The office is named here so the qualification travels with
+// the number instead of living only in a client-only widget.
+//
+// Month formatting is done by hand, not toLocaleDateString, because this string
+// renders on both the server and the client and ICU differences would produce a
+// hydration mismatch.
+const MONTHS = [
+  'January', 'February', 'March', 'April', 'May', 'June',
+  'July', 'August', 'September', 'October', 'November', 'December',
+];
+
+const [capturedYear, capturedMonth] = googleReviewsMeta.capturedOn.split('-');
+
+export const capturedOnLabel = `${MONTHS[Number(capturedMonth) - 1]} ${capturedYear}`;
+
+export const reviewsSummaryLine =
+  `${googleReviewsMeta.rating} on Google \u00b7 ${googleReviewsMeta.totalReviews} reviews \u00b7 Bilaspur office`;
+
+// Refresh procedure: open BOTH Business Profiles, copy rating / totalReviews and
+// any new verbatim text, set capturedOn to today, rebuild. If this date is more
+// than STALE_AFTER_DAYS old the snapshot should not be trusted on the site.
+export const STALE_AFTER_DAYS = 120;
 
 // Each review: name, rating (1-5), relativeDate, text, avatarInitials, verified.
 export const reviews = [

@@ -12,6 +12,7 @@ import PhotoRail from '@/components/scroll/PhotoRail';
 import VideoPhone from '@/components/scroll/VideoPhone';
 import PhotoWipe from '@/components/scroll/PhotoWipe';
 import { STUDENT_STORIES, IMPACT_STATS, HERO_PHOTO, HERO_FLOATS, HERO_FACES, ANJALI_VIDEO } from '@/data/studentStories';
+import { reviewsSummaryLine } from '@/data/googleReviews';
 
 const SECTIONS = ['hero', 'proof', 'promise', 'stories', 'charters', 'countries', 'video', 'close'];
 
@@ -59,7 +60,7 @@ export default function ReceiptsClient({ total, destinations, rail }) {
         eyebrow={`For students across India · ${destinations} destinations`}
         title="Study abroad, without guessing at the cost."
         lede="One counsellor from shortlist to arrival, and every fee published before you pay."
-        meta={['4.9 on Google · 75 reviews', `${total.toLocaleString('en-IN')} universities in our finder`, 'CIN U85500CT2023PTC014913']}
+        meta={[reviewsSummaryLine, `${total.toLocaleString('en-IN')} universities in our finder`, 'CIN U85500CT2023PTC014913']}
         photo={HERO_PHOTO}
         floats={HERO_FLOATS}
         faces={HERO_FACES}

@@ -1,4 +1,3 @@
-import Script from 'next/script';
 import { faqData } from '@/data/siteData';
 
 export const metadata = {
@@ -39,8 +38,10 @@ const faqJsonLd = {
 export default function FaqLayout({ children }) {
   return (
     <>
-      <Script
-        id="json-ld-faq"
+      {/* plain script tag, never next/script: answer engines read the served HTML,
+          not hydrated JavaScript. next/script deferred this graph into the RSC
+          payload, so no crawler ever saw it. Matches src/app/layout.js. */}
+      <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
