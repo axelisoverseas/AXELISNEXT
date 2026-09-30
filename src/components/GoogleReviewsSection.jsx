@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Star, ExternalLink, MapPin } from 'lucide-react';
-import { googleReviewsMeta, verifiedReviews, hasVerifiedReviews, getGoogleMapsHref } from '../data/googleReviews';
+import { googleReviewsMeta, verifiedReviews, hasVerifiedReviews, getGoogleMapsHref, capturedOnLabel } from '../data/googleReviews';
 
 function GoogleG({ size = 22 }) {
     return (
@@ -64,7 +64,7 @@ export default function GoogleReviewsSection({ compact = false }) {
                     </h2>
                     <p className="text-[var(--color-navy)]/85 text-sm md:text-base flex items-center justify-center gap-2">
                         <MapPin size={14} className="text-[var(--color-axelis)]" />
-                        Verified reviews from our Bilaspur branch
+                        Verified reviews from our Bilaspur branch · as of {capturedOnLabel}
                     </p>
                 </div>
 

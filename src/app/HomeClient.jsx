@@ -21,6 +21,7 @@ import { TextEffect, TextEffectInView } from '../components/ui/TextEffect';
 
 import { teamMembers, faqData } from '../data/siteData';
 import { renderMarkdown } from '@/lib/markdown';
+import { reviewsSummaryLine } from '@/data/googleReviews';
 
 const STRONG = 'font-extrabold text-[var(--color-axelis)]';
 
@@ -56,7 +57,7 @@ export default function Home({ universities, destinations }) {
         eyebrow={`For students across India · ${destinations} destinations`}
         title="Study abroad, without guessing at the cost."
         lede="India’s study-abroad consultancy across 29 destination markets. One counsellor from shortlist to arrival, every fee published before you pay, and a refundable deposit on both student plans."
-        meta={['4.9 on Google · 75 reviews', `${universities.toLocaleString('en-IN')} universities in our finder`]}
+        meta={[reviewsSummaryLine, `${universities.toLocaleString('en-IN')} universities in our finder`]}
         photo={HERO_PHOTO}
         floats={HERO_FLOATS}
         faces={HERO_FACES}
