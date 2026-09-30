@@ -1,5 +1,5 @@
 {
-  "_note": "Matches the team page on overseeducation.com (src/data/siteData.js teamMembers). Addresses marked verified were observed in real mail traffic. John Daniel and Sourav Kumar Acharya have no address anywhere in the mailbox, files or WhatsApp; confirm before their signature is used.",
+  "_note": "Matches the team page on overseeducation.com (src/data/siteData.js teamMembers). Addresses confirmed from mail traffic, or by the founder (John Daniel: visa@, Sourav Kumar Acharya: info@, 30 Sep 2026).",
   "members": [
     {
       "name": "Rishabh Agrawal",
@@ -11,9 +11,9 @@
     {
       "name": "John Daniel",
       "role": "Co-Founder",
-      "email": "",
+      "email": "visa@overseeducation.com",
       "phone": "",
-      "verified": false
+      "verified": true
     },
     {
       "name": "Arul Johnson",
@@ -32,9 +32,9 @@
     {
       "name": "Sourav Kumar Acharya",
       "role": "Operations Associate",
-      "email": "",
+      "email": "info@overseeducation.com",
       "phone": "",
-      "verified": false
+      "verified": true
     },
     {
       "name": "Desineedi Manasa",

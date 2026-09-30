@@ -7,12 +7,12 @@ import { TextEffect, TextEffectInView } from '../../components/ui/TextEffect';
 
 // Top student cities, each linking to amber's live city search.
 const cities = [
-    { label: 'London',     loc: 'london',      country: 'United Kingdom', flag: '🇬🇧', from: '£280/wk',  img: '/photos/photo-1513635269975-59663e0ac1ad-800.jpg' },
-    { label: 'Manchester', loc: 'manchester',  country: 'United Kingdom', flag: '🇬🇧', from: '£165/wk',  img: '/photos/photo-1543832923-44667a44c804-800.jpg' },
-    { label: 'Birmingham', loc: 'birmingham',  country: 'United Kingdom', flag: '🇬🇧', from: '£145/wk',  img: '/photos/photo-1532581140115-3e355d1ed1de-800.jpg' },
-    { label: 'Dublin',     loc: 'dublin',      country: 'Ireland',        flag: '🇮🇪', from: '€220/wk',  img: '/photos/photo-1549918864-48ac978761a4-800.jpg' },
-    { label: 'Sydney',     loc: 'sydney',      country: 'Australia',      flag: '🇦🇺', from: 'A$320/wk', img: '/photos/photo-1506973035872-a4ec16b8e8d9-800.jpg' },
-    { label: 'New York',   loc: 'new york',    country: 'United States',  flag: '🇺🇸', from: '$2,100/mo',img: '/photos/photo-1485871981521-5b1fd3805eee-800.jpg' },
+    { label: 'London',     loc: 'london',      country: 'United Kingdom', flag: 'gb', from: '£280/wk',  img: '/photos/photo-1513635269975-59663e0ac1ad-800.jpg' },
+    { label: 'Manchester', loc: 'manchester',  country: 'United Kingdom', flag: 'gb', from: '£165/wk',  img: '/photos/cities/manchester-town-hall-800.jpg', credit: 'Manchester Town Hall: Samuel Vincent, CC BY-SA 4.0' },
+    { label: 'Birmingham', loc: 'birmingham',  country: 'United Kingdom', flag: 'gb', from: '£145/wk',  img: '/photos/cities/birmingham-selfridges-800.jpg', credit: 'Selfridges, Birmingham: "...some guy" on Flickr, CC BY 2.0' },
+    { label: 'Dublin',     loc: 'dublin',      country: 'Ireland',        flag: 'ie', from: '€220/wk',  img: '/photos/photo-1549918864-48ac978761a4-800.jpg' },
+    { label: 'Sydney',     loc: 'sydney',      country: 'Australia',      flag: 'au', from: 'A$320/wk', img: '/photos/photo-1506973035872-a4ec16b8e8d9-800.jpg' },
+    { label: 'New York',   loc: 'new york',    country: 'United States',  flag: 'us', from: '$2,100/mo',img: '/photos/photo-1485871981521-5b1fd3805eee-800.jpg' },
 ];
 
 // Axelis × amber partner marketplace, outbound housing links go here.
@@ -188,7 +188,7 @@ export default function AccommodationPage() {
 
                                 <div className="absolute inset-x-0 bottom-0 p-4 md:p-5">
                                     <div className="flex items-center gap-2 mb-1">
-                                        <span aria-hidden="true" className="text-base">{c.flag}</span>
+                                        <img src={`/flags/${c.flag}.svg`} alt="" aria-hidden="true" width="18" height="12" className="w-[18px] h-3 rounded-[2px] object-cover" />
                                         <span className="text-[10px] text-white font-bold">{c.country}</span>
                                     </div>
                                     <h3 className="text-white text-lg md:text-xl font-bold leading-tight flex items-center gap-2">
@@ -199,6 +199,9 @@ export default function AccommodationPage() {
                             </a>
                         ))}
                     </div>
+                    <p className="mt-4 text-[11px] text-[var(--dark-dim)]">
+                        Photos via Wikimedia Commons: {cities.filter((c) => c.credit).map((c) => c.credit).join('; ')}.
+                    </p>
                 </div>
             </section>
 
