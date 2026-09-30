@@ -2,7 +2,9 @@
 // GOOGLE REVIEWS. Axelis Overseas, Bilaspur (Nehru Chowk branch)
 // ============================================================================
 //
-// Captured 22 September 2026 from the live Google Business Profile. This
+// Re-verified 1 October 2026 against the live Business Profile dashboard:
+// still 4.9 from 75 reviews, and the Bengaluru profile still shows no rating
+// at all. Originally captured 22 September 2026. This
 // replaces the placeholder that shipped here, which the original TODO asked to
 // fill from the live profile.
 //
@@ -29,7 +31,7 @@ export const googleReviewsMeta = {
   address: '1st Floor, Vrindavan Plaza, B-20, Nehru Chowk, Bilaspur, Chhattisgarh 495001',
   rating: 4.9,
   totalReviews: 75,
-  capturedOn: '2026-09-22',
+  capturedOn: '2026-10-01',
   mapsUrl: 'https://www.google.com/maps/search/?api=1&query=Axelis+Overseas+Bilaspur',
   placeUrl:
     'https://www.google.com/maps/place/Axelis+Overseas+Education+Pvt+Ltd/@22.0868588,82.1429961,17z',
