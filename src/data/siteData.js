@@ -1,3 +1,5 @@
+import { googleReviewsMeta } from './googleReviews';
+
 // Site data for Axelis Overseas Education
 export const siteInfo = {
   name: "Axelis Overseas",
@@ -388,7 +390,7 @@ export const faqData = [
   {
     id: 22,
     question: "Which is the best study abroad consultancy in Bangalore?",
-    answer: "Axelis Overseas counsels Bangalore students from WorkFlo Ranka Junction, KR Puram. Our Google rating is 4.9 out of 5 from 75 reviews of the Bilaspur office; the Bengaluru office is newer and is still building its own review history.\n\nWhy students pick us here: you pay only after results, we cover 29+ countries with direct university partnerships, 2000+ scholarships are accessible through the network, we have a 90% Visa Approval Rate, and support runs from application through to post-arrival.\n\nWe do not charge a consultation fee, which most Bangalore consultants do. You get a named counsellor rather than a call centre, an in-house employability analysis, alumni you can contact in 29+ countries, and pricing published before you pay.\n\nThe office is at WorkFlo Ranka Junction, 3rd Floor, Old Madras Road, KR Puram, Bengaluru 560016. Call +91 9098522711 or email axelisoverseas@overseeducation.com.\n\nThe first consultation is free, at the office or online.",
+    answer: `Axelis Overseas counsels Bangalore students from WorkFlo Ranka Junction, KR Puram. Our Google rating is ${googleReviewsMeta.rating} out of 5 from ${googleReviewsMeta.totalReviews} reviews of the Bilaspur office; the Bengaluru office is newer and is still building its own review history.\n\nWhy students pick us here: you pay only after results, we cover 29+ countries with direct university partnerships, 2000+ scholarships are accessible through the network, we have a 90% Visa Approval Rate, and support runs from application through to post-arrival.\n\nWe do not charge a consultation fee, which most Bangalore consultants do. You get a named counsellor rather than a call centre, an in-house employability analysis, alumni you can contact in 29+ countries, and pricing published before you pay.\n\nThe office is at WorkFlo Ranka Junction, 3rd Floor, Old Madras Road, KR Puram, Bengaluru 560016. Call +91 9098522711 or email axelisoverseas@overseeducation.com.\n\nThe first consultation is free, at the office or online.`,
     category: "Bangalore"
   },
   {

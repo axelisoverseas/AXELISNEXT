@@ -172,6 +172,7 @@ const FAQPage = () => {
                             }}
                             transition={{ duration: 0.3, ease: 'easeInOut' }}
                             aria-hidden={openId !== faq.id}
+                            inert={openId !== faq.id}
                             className="bg-white border-t border-slate-100 overflow-hidden"
                           >
                             <div className="p-10 space-y-6">

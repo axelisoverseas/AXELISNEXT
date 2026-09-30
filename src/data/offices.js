@@ -49,11 +49,14 @@ export const OFFICES = [
     mapsUrl: null,
 
     // The four real owned photographs already shipping on the homepage.
+    // Verified against `ls public/office/`. These go into siteGraph as `image`,
+    // which is injected site-wide, so a wrong filename would publish a 404 URL
+    // as structured data on every page.
     photos: [
-      '/office/reception.jpg',
-      '/office/meeting-room.jpg',
-      '/office/boardroom.jpg',
-      '/office/lounge.jpg',
+      '/office/office-reception.jpg',
+      '/office/office-meeting.jpg',
+      '/office/office-lounge.jpg',
+      '/office/office-growth.jpg',
     ],
 
     // Honest state of this profile as of Sep 2026. See src/data/googleReviews.js.
