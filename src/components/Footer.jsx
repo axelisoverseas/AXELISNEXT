@@ -166,7 +166,15 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-[var(--storm-electric)]/10 mt-6 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-[var(--color-dim-dark)]">
           <p>&copy; {new Date().getFullYear()} {siteInfo.name}. All rights reserved.</p>
-          <p>Bengaluru &middot; Bilaspur</p>
+          {/* Both offices in full. The bar previously read "Bengaluru - Bilaspur",
+              which names the cities but gives neither address, so the registered
+              office appeared nowhere on the site with its postcode. */}
+          <p className="md:text-right leading-relaxed">
+            Corporate: No. 224, 3rd Floor, WorkFlo Ranka Junction Property, 80/3, KR Puram Bridge,
+            Krishna Reddy Industrial Estate, Dooravani Nagar, Bengaluru, Karnataka 560016
+            <br />
+            Registered: 1st Floor, Vrindavan Plaza, B-20, Nehru Chowk, Bilaspur, Chhattisgarh 495001
+          </p>
         </div>
       </div>
     </footer>

@@ -3,10 +3,11 @@ import { notFound } from 'next/navigation';
 import { CITY_PAGES, CITY_SLUGS, cityBySlug, questionsFor, hasOffice } from '@/data/cityPages';
 import { SITE_URL, ORG_ID } from '@/lib/seo';
 import { TOTAL_CITIES, smallTownProof } from '@/data/studentOrigins';
+import { PRODUCTS, COMPARISON, PROOF, BOOK_URL } from '@/data/cityPageContent';
+import { SESSIONS } from '@/data/sessions';
 
-// One page per city that has enough measured search demand to warrant it.
-// Deliberately NOT one page per city in India: see the rules in
-// src/data/cityPages.js.
+// One page per city with enough measured search demand to warrant one.
+// Deliberately NOT one page per city in India: see src/data/cityPages.js.
 export const dynamicParams = false;
 
 export function generateStaticParams() {
@@ -18,10 +19,10 @@ export async function generateMetadata({ params }) {
   const c = cityBySlug(city);
   if (!c) return {};
   return {
-    title: `Study abroad consultant for ${c.city} students: published fees, online counselling`,
+    title: `Study abroad consultant for ${c.city} students: every fee published`,
     description:
-      `Axelis counsels ${c.city} students online, with every fee published before you pay. ` +
-      `Offices in Bengaluru and Bilaspur; counselling for ${c.city} is over Google Meet.`,
+      `Axelis counsels ${c.city} students online. Plans from ₹9,999, every fee published ` +
+      `before you pay, and recorded counselling sessions you can watch before you book.`,
     alternates: { canonical: `/study-abroad/${c.slug}` },
     openGraph: {
       title: `Study abroad from ${c.city} with Axelis Overseas`,
@@ -40,37 +41,35 @@ export default async function CityPage({ params }) {
   const url = `${SITE_URL}/study-abroad/${c.slug}`;
   const local = hasOffice(c.city);
   const questions = questionsFor(c);
+  // SESSIONS is already consent-gated upstream; these are published episodes.
+  const stories = (SESSIONS || []).slice(0, 3);
 
   const faqs = [
     {
       q: `How does counselling work if I am in ${c.city}?`,
       a: local
-        ? `Yes. See the ${c.city} office page for the address and opening hours.`
+        ? `You can come to the ${c.city} office, or do it over Google Meet like most students.`
         : `Over Google Meet, end to end: shortlisting, applications, document checks and visa ` +
           `filing. Axelis has offices in Bengaluru and Bilaspur, and students from ` +
           `${TOTAL_CITIES} cities across India have been counselled online without visiting ` +
-          `either. You get one named counsellor rather than a call centre.`,
+          `either. You get one named counsellor, not a call centre.`,
     },
     {
       q: `What does Axelis charge a student from ${c.city}?`,
-      a: `The same as anywhere else, and it is published before you pay. The Global Admissions ` +
-         `Charter is ₹9,999 onboarding for the UK, USA, Canada and Australia. The Europe ` +
-         `Public Charter is ₹19,999 plus a ₹1,80,000 success fee, payable only once an ` +
-         `offer is accepted. Test prep starts at ₹460 a session and MEA apostille is ` +
-         `₹1,500 a document plus GST.`,
+      a: `The same as anywhere else. The Global Admissions Charter is ₹9,999 onboarding for ` +
+         `the UK, USA, Canada and Australia. The Europe Public Charter is ₹19,999 plus a ` +
+         `₹1,80,000 success fee payable only once an offer is accepted. Test prep starts at ` +
+         `₹460 a session, MEA apostille is ₹1,500 a document plus GST.`,
     },
     {
-      q: `Can counselling really be done online?`,
-      a: `It is how Axelis works by default. Shortlisting, applications, document checks and ` +
-         `visa filing are all done over Google Meet and email, with one counsellor from ` +
-         `shortlist to arrival. Students in ${c.city} get the same counsellor and the same ` +
-         `process as students who walk into an office.`,
+      q: `Can I see what a counselling session is actually like?`,
+      a: `Yes. Whole sessions are published, with the student's consent, including the numbers ` +
+         `worked through on the call. They are on the sessions page, not edited into clips.`,
     },
     {
       q: `Does Axelis promise admission?`,
-      a: `No. Axelis does not promise admission anywhere. What is committed in writing is the ` +
-         `fee, and a refundable deposit on both student plans if the offer or visa does not ` +
-         `come through.`,
+      a: `No. What is committed in writing is the fee, and a refundable deposit on both student ` +
+         `plans if the offer or visa does not come through.`,
     },
   ];
 
@@ -80,7 +79,7 @@ export default async function CityPage({ params }) {
     name: `Study abroad counselling for ${c.city} students`,
     serviceType: 'Overseas education consultancy',
     provider: { '@id': ORG_ID },
-    // areaServed, NOT a LocalBusiness: there is no Axelis premises here.
+    // areaServed, NOT LocalBusiness: there is no Axelis premises in this city.
     areaServed: { '@type': 'City', name: c.city, containedInPlace: { '@type': 'State', name: c.state } },
     availableChannel: {
       '@type': 'ServiceChannel',
@@ -94,8 +93,7 @@ export default async function CityPage({ params }) {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
     mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
+      '@type': 'Question', name: f.q,
       acceptedAnswer: { '@type': 'Answer', text: f.a },
     })),
   };
@@ -117,7 +115,7 @@ export default async function CityPage({ params }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
 
       <div className="bg-white pt-28 pb-16">
-        <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
           <nav aria-label="Breadcrumb" className="text-sm mb-8 text-[var(--color-dim)]">
             <Link href="/" className="hover:text-[var(--color-navy)]">Home</Link>
             <span className="mx-2">/</span>
@@ -126,82 +124,140 @@ export default async function CityPage({ params }) {
             <span className="text-[var(--color-navy)]">{c.city}</span>
           </nav>
 
-          <h1 className="text-3xl md:text-4xl font-bold text-[var(--color-navy)] tracking-tight mb-4">
+          <h1 className="text-3xl md:text-5xl font-bold text-[var(--color-navy)] tracking-tight mb-5">
             Study abroad from {c.city}
           </h1>
 
-          {/* Reach stated as a fact, not as an apology for an absent office.
-              Every city named in smallTownProof is a real Axelis student origin
-              from Agentcis -- see src/data/studentOrigins.js. */}
-          <p className="text-lg text-slate-700 leading-relaxed mb-4">
+          {/* Reach as a fact. Every city in smallTownProof is a real student
+              origin from Agentcis -- see src/data/studentOrigins.js. */}
+          <p className="text-lg md:text-xl text-slate-700 leading-relaxed mb-4">
             {local ? (
               <>Axelis has an office in {c.city}. <Link href={`/offices/${c.slug}`} className="underline underline-offset-2">Address and hours</Link>.</>
             ) : (
               <>
-                Axelis counsels {c.city} students online, over Google Meet, with one counsellor
-                from shortlist to arrival. Students from <strong>{TOTAL_CITIES} Indian cities</strong> have
-                gone abroad through exactly this process, and most of them never walked into an
-                office.
+                Axelis counsels {c.city} students online, with one counsellor from shortlist to
+                arrival. Students from <strong>{TOTAL_CITIES} Indian cities</strong> have gone abroad
+                through this process, and most never walked into an office.
               </>
             )}
           </p>
 
           {!local && (
-            <p className="text-slate-700 leading-relaxed mb-6">
-              Not only the metros, either. Students from{' '}
-              <strong>{smallTownProof(c.city).join(', ')}</strong> have been counselled this way.
-              A student in {c.city} gets the same counsellor, the same process and the same
-              published fee as a student who walks into our Bengaluru or Bilaspur office. Distance
-              changes nothing about the price.
+            <p className="text-slate-700 leading-relaxed mb-8">
+              Not only the metros. Students from <strong>{smallTownProof(c.city).join(', ')}</strong>{' '}
+              were counselled the same way. A student in {c.city} gets the same counsellor, the same
+              process and the same published fee as one who walks into Bengaluru or Bilaspur.
+              Distance changes nothing about the price.
             </p>
           )}
 
-          <h2 className="text-xl font-bold text-[var(--color-navy)] mt-10 mb-3">What it costs</h2>
-          <p className="text-slate-700 leading-relaxed mb-4">
-            Every Axelis fee is published before you pay, and it does not change because you are
-            in {c.city}:
+          <div className="flex flex-wrap gap-3 mb-4">
+            <a href={BOOK_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a free call</a>
+            <a href="#plans" className="btn btn-secondary">See every price</a>
+          </div>
+
+          {/* ---------------- Products, all of them, real payment links ---------------- */}
+          <h2 id="plans" className="text-2xl font-bold text-[var(--color-navy)] mt-14 mb-2">
+            Everything Axelis sells, and what it costs
+          </h2>
+          <p className="text-slate-700 mb-6">
+            Published before you pay. Government, exam and visa charges go straight to those bodies,
+            never to Axelis.
           </p>
-          <table className="w-full text-sm border-collapse mb-4">
+          <div className="grid gap-4 sm:grid-cols-2 mb-3">
+            {PRODUCTS.map((p) => (
+              <div key={p.name} className="border border-slate-200 rounded-2xl p-5 flex flex-col">
+                <p className="text-xs font-bold uppercase tracking-wide text-[var(--color-axelis)]">{p.tag}</p>
+                <h3 className="text-lg font-bold text-slate-900 mt-1">{p.name}</h3>
+                <p className="mt-2">
+                  <span className="text-3xl font-extrabold text-[var(--color-navy)]">{p.price}</span>{' '}
+                  <span className="text-sm text-[var(--color-dim)]">{p.priceNote}</span>
+                </p>
+                <ul className="list-disc ml-5 text-sm text-slate-700 mt-3 space-y-1 flex-grow">
+                  {p.points.map((x) => <li key={x}>{x}</li>)}
+                </ul>
+                <div className="mt-4 flex gap-2 flex-wrap">
+                  <a href={BOOK_URL} target="_blank" rel="noopener noreferrer" className="btn btn-secondary text-sm">Book a free call</a>
+                  {p.pay && (
+                    <a href={p.pay} target="_blank" rel="noopener noreferrer" className="btn btn-primary text-sm">Pay {p.price}</a>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-[var(--color-dim)] mb-12">Axelis does not promise admission.</p>
+
+          {/* ---------------- Recorded sessions ---------------- */}
+          {stories.length > 0 && (
+            <>
+              <h2 className="text-2xl font-bold text-[var(--color-navy)] mt-14 mb-2">
+                Watch a real counselling session before you book
+              </h2>
+              <p className="text-slate-700 mb-6">
+                Whole sessions, published with the student&rsquo;s consent, including the numbers
+                worked through on the call. Not clips, and not testimonials.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-3 mb-12">
+                {stories.map((s) => (
+                  <Link
+                    key={s.slug}
+                    href={`/sessions/${s.slug}`}
+                    className="border border-slate-200 rounded-2xl overflow-hidden hover:border-[var(--color-axelis)] transition-colors"
+                  >
+                    <img
+                      src={`/sessions/${s.slug}/poster.jpg`}
+                      alt={`Recorded Axelis counselling session: ${s.title}`}
+                      className="w-full h-36 object-cover bg-slate-100"
+                      loading="lazy"
+                    />
+                    <div className="p-4">
+                      <p className="text-xs font-bold uppercase tracking-wide text-[var(--color-axelis)]">{s.destination}</p>
+                      <p className="font-bold text-slate-900 text-sm mt-1 leading-snug">{s.title}</p>
+                      {s.numbers?.[0] && (
+                        <p className="text-sm mt-2">
+                          <span className="font-extrabold text-[var(--color-navy)]">{s.numbers[0].value}</span>{' '}
+                          <span className="text-[var(--color-dim)]">{s.numbers[0].label}</span>
+                        </p>
+                      )}
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </>
+          )}
+
+          {/* ---------------- Comparison: checkable claims, nobody named ---------------- */}
+          <h2 className="text-2xl font-bold text-[var(--color-navy)] mt-14 mb-2">
+            Seven questions worth asking any consultant in {c.city}
+          </h2>
+          <p className="text-slate-700 mb-5">
+            Our answers are below. Take the same list to anyone else you are considering.
+          </p>
+          <table className="w-full text-sm border-collapse mb-12">
             <tbody>
-              <tr className="border-b border-slate-200">
-                <td className="py-2 pr-4">Global Admissions Charter (UK, USA, Canada, Australia)</td>
-                <td className="py-2 font-bold whitespace-nowrap">₹9,999 onboarding</td>
-              </tr>
-              <tr className="border-b border-slate-200">
-                <td className="py-2 pr-4">Europe Public Charter (tuition-free public universities)</td>
-                <td className="py-2 font-bold whitespace-nowrap">₹19,999 + ₹1,80,000 on offer</td>
-              </tr>
-              <tr className="border-b border-slate-200">
-                <td className="py-2 pr-4">Test prep (IELTS, TOEFL, PTE, Duolingo)</td>
-                <td className="py-2 font-bold whitespace-nowrap">from ₹460 a session</td>
-              </tr>
-              <tr className="border-b border-slate-200">
-                <td className="py-2 pr-4">MEA apostille</td>
-                <td className="py-2 font-bold whitespace-nowrap">₹1,500 a document + GST</td>
-              </tr>
+              {COMPARISON.map((r) => (
+                <tr key={r.claim} className="border-b border-slate-200">
+                  <td className="py-3 pr-4 text-slate-700 align-top">{r.claim}</td>
+                  <td className="py-3 font-bold text-slate-900 align-top">{r.us}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
-          <p className="text-sm text-[var(--color-dim)] mb-8">
-            Government, exam and visa charges are paid directly to those bodies, never to Axelis.
-            Axelis does not promise admission.
-          </p>
 
           {questions.length > 0 && (
             <>
-              <h2 className="text-xl font-bold text-[var(--color-navy)] mt-10 mb-3">
+              <h2 className="text-2xl font-bold text-[var(--color-navy)] mt-14 mb-2">
                 What {c.city} students are searching
               </h2>
-              <p className="text-slate-700 leading-relaxed mb-3">
-                These are real queries measured for {c.city}, not guesses:
-              </p>
-              <ul className="list-disc ml-6 text-slate-700 mb-8">
+              <p className="text-slate-700 mb-3">Measured queries for {c.city}, not guesses:</p>
+              <ul className="list-disc ml-6 text-slate-700 mb-12">
                 {questions.map((q) => <li key={q}>{q}</li>)}
               </ul>
             </>
           )}
 
-          <h2 className="text-xl font-bold text-[var(--color-navy)] mt-10 mb-3">Common questions</h2>
-          <dl className="mb-10">
+          <h2 className="text-2xl font-bold text-[var(--color-navy)] mt-14 mb-3">Common questions</h2>
+          <dl className="mb-12">
             {faqs.map((f) => (
               <div key={f.q} className="mb-5">
                 <dt className="font-bold text-slate-900 mb-1">{f.q}</dt>
@@ -210,16 +266,30 @@ export default async function CityPage({ params }) {
             ))}
           </dl>
 
-          <div className="flex flex-wrap gap-3">
-            <Link href="/bookings" className="btn btn-primary">Book a discovery call</Link>
-            <Link href="/products" className="btn btn-secondary">See student plans</Link>
+          {/* ---------------- Proof, at the foot ---------------- */}
+          <h2 className="text-2xl font-bold text-[var(--color-navy)] mt-14 mb-2">
+            Receipts, signed agreements, a granted visa
+          </h2>
+          <p className="text-slate-700 mb-5">
+            Also on our <Link href="/testimonials" className="underline underline-offset-2">testimonials page</Link>.
+          </p>
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-12">
+            {PROOF.map((p) => (
+              <img
+                key={p.src}
+                src={p.src}
+                alt={p.alt}
+                className="w-full h-32 object-cover rounded-xl border border-slate-200 bg-slate-50"
+                loading="lazy"
+              />
+            ))}
           </div>
 
-          <p className="mt-10 text-sm text-[var(--color-dim)]">
-            <Link href="/study-abroad" className="underline underline-offset-2">
-              All {CITY_PAGES.length} cities we publish for
-            </Link>
-          </p>
+          <div className="border-t border-slate-200 pt-8 flex flex-wrap gap-3">
+            <a href={BOOK_URL} target="_blank" rel="noopener noreferrer" className="btn btn-primary">Book a free call</a>
+            <Link href="/products" className="btn btn-secondary">All student plans</Link>
+            <Link href="/study-abroad" className="btn btn-secondary">Other cities</Link>
+          </div>
         </div>
       </div>
     </>
