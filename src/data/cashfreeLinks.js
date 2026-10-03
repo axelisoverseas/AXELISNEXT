@@ -55,7 +55,7 @@ export const cashfreeLinks = {
     amount: 1500, url: null, perUnit: true, unit: 'document', label: 'MEA apostille',
   },
   'sworn-translation': {
-    amount: 2500, url: null, perUnit: true, unit: 'document', label: 'Sworn translation',
+    amount: 2500, url: null, perUnit: true, unit: 'document', label: 'Certified translation',
   },
 
   // --- Visa filing ---------------------------------------------------------

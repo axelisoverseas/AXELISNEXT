@@ -51,7 +51,7 @@ export const documentRequirements = {
       'Post the physical originals only after we confirm the scans. MEA apostilles the original document, not a copy, but we check first so nothing travels needlessly.',
   },
   'sworn-translation': {
-    service: 'Sworn translation',
+    service: 'Certified translation',
     intro:
       'Upload the documents to be translated. The translator works from these scans, so legibility decides the quality of the output.',
     required: [
@@ -87,7 +87,7 @@ export const documentRequirements = {
     required: [
       'Degree certificate',
       'Complete transcript of records',
-      'Sworn translations of both, if they are not already in German or English',
+      'Certified translations of both, if they are not already in German or English',
       'Passport identity page',
     ],
     conditional: ['Professional licence or registration, where your trade requires one'],

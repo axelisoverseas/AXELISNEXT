@@ -112,7 +112,7 @@ export const servicePromises = [
   },
   {
     slug: 'sworn-translation',
-    name: 'Sworn translation',
+    name: 'Certified translation',
     fee: '₹2,500 per document, plus GST',
     summary:
       'Certified translation from English into any language, \u20B92,500 per document plus GST. '

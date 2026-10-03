@@ -69,7 +69,7 @@ export const thirdPartyCosts = [
     required: true,
   },
   {
-    item: 'Sworn translation',
+    item: 'Certified translation',
     amount: '₹2,500 per document',
     payableTo: 'Axelis, via a sworn translator',
     note: 'German authorities require translations by a sworn translator. Same document count as above.',
