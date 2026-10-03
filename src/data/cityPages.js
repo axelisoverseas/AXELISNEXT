@@ -34,9 +34,15 @@ export const OFFICES_REAL = ['Bengaluru', 'Bilaspur'];
 
 export const CITIES = demand;
 
-export const CITY_PAGES = demand.filter((c) => c.phrases >= PAGE_THRESHOLD);
+// A city earns a page on demand OR because we have an office there. Bilaspur
+// measured only 2 phrases and was silently dropped, which 404'd the page for
+// the registered office and the one city with all 75 of our reviews. Search
+// demand is not the only reason a page has to exist.
+const earnsPage = (c) => c.phrases >= PAGE_THRESHOLD || OFFICES_REAL.includes(c.city);
 
-export const ROLLUP_CITIES = demand.filter((c) => c.phrases < PAGE_THRESHOLD);
+export const CITY_PAGES = demand.filter(earnsPage);
+
+export const ROLLUP_CITIES = demand.filter((c) => !earnsPage(c));
 
 export const CITY_SLUGS = CITY_PAGES.map((c) => c.slug);
 

@@ -4,6 +4,7 @@ import { LANDING_SLUGS } from '../data/landingPages';
 import { SESSION_SLUGS } from '../data/sessions';
 import { OFFICE_SLUGS } from '../data/offices';
 import { CITY_SLUGS } from '../data/cityPages';
+import { ARTICLE_SLUGS } from '../data/answers';
 import { SITE_URL } from '@/lib/seo';
 
 // Every URL here must be indexable and self-canonical: no /portal (a demo
@@ -79,5 +80,8 @@ export default function sitemap() {
     // threshold in src/data/cityPages.js get one.
     entry('/study-abroad', 'weekly', 0.8, '2026-10-03'),
     ...CITY_SLUGS.map((slug) => entry(`/study-abroad/${slug}`, 'monthly', 0.7, '2026-10-03')),
+    // Answer pages: measured demand meeting a published Axelis number.
+    entry('/answers', 'weekly', 0.85, '2026-10-03'),
+    ...ARTICLE_SLUGS.map((slug) => entry(`/answers/${slug}`, 'monthly', 0.8, '2026-10-03')),
   ];
 }
