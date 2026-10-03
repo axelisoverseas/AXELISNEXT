@@ -3,6 +3,7 @@ import { GUIDE_SLUGS } from '../data/countryGuides';
 import { LANDING_SLUGS } from '../data/landingPages';
 import { SESSION_SLUGS } from '../data/sessions';
 import { OFFICE_SLUGS } from '../data/offices';
+import { CITY_SLUGS } from '../data/cityPages';
 import { SITE_URL } from '@/lib/seo';
 
 // Every URL here must be indexable and self-canonical: no /portal (a demo
@@ -74,5 +75,9 @@ export default function sitemap() {
     // has a specific URL to point at.
     entry('/offices', 'monthly', 0.7, '2026-09-30'),
     ...OFFICE_SLUGS.map((slug) => entry(`/offices/${slug}`, 'monthly', 0.7, '2026-09-30')),
+    // City pages, generated from measured search demand. Only cities above the
+    // threshold in src/data/cityPages.js get one.
+    entry('/study-abroad', 'weekly', 0.8, '2026-10-03'),
+    ...CITY_SLUGS.map((slug) => entry(`/study-abroad/${slug}`, 'monthly', 0.7, '2026-10-03')),
   ];
 }
