@@ -5,6 +5,12 @@ import { SITE_URL, ORG_ID } from '@/lib/seo';
 import { TOTAL_CITIES, smallTownProof } from '@/data/studentOrigins';
 import { PRODUCTS, COMPARISON, PROOF, BOOK_URL } from '@/data/cityPageContent';
 import { SESSIONS } from '@/data/sessions';
+import { STUDENT_STORIES, ANJALI_VIDEO } from '@/data/studentStories';
+// The same scroll components the homepage uses, so a city page moves the way
+// the rest of the site moves rather than inventing a second motion language.
+import StoryDeck from '@/components/scroll/StoryDeck';
+import VideoPhone from '@/components/scroll/VideoPhone';
+import SmoothScrollRoot from '@/components/scroll/SmoothScrollRoot';
 
 // One page per city with enough measured search demand to warrant one.
 // Deliberately NOT one page per city in India: see src/data/cityPages.js.
@@ -110,6 +116,7 @@ export default async function CityPage({ params }) {
 
   return (
     <>
+      <SmoothScrollRoot />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }} />
@@ -225,6 +232,31 @@ export default async function CityPage({ params }) {
               </div>
             </>
           )}
+
+        </div>
+      </div>
+
+      {/* ---- Student photos and a real video, on the site's own scroll kit ---- */}
+      {/* Four stories, not ten. StoryDeck pins and reserves perCard x stories of
+          scroll runway, so the homepage's ten-card deck would add ~5,000px of
+          scrolling to a page that already carries products, sessions, a
+          comparison and proof. Four keeps the effect without the slog; the full
+          set is one click away on /testimonials. */}
+      <StoryDeck
+        id={`city-${c.slug}-stories`}
+        eyebrow={`Students who did this from ${c.state}, and everywhere else`}
+        stories={STUDENT_STORIES.slice(0, 4)}
+        perCard={45}
+      />
+
+      <VideoPhone
+        id={`city-${c.slug}-video`}
+        video={ANJALI_VIDEO}
+        eyebrow="Filmed after she landed"
+      />
+
+      <div className="bg-white pb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6">
 
           {/* ---------------- Comparison: checkable claims, nobody named ---------------- */}
           <h2 className="text-2xl font-bold text-[var(--color-navy)] mt-14 mb-2">
