@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { CITY_PAGES, CITY_SLUGS, cityBySlug, questionsFor, hasOffice } from '@/data/cityPages';
 import { SITE_URL, ORG_ID } from '@/lib/seo';
+import { TOTAL_CITIES, smallTownProof } from '@/data/studentOrigins';
 
 // One page per city that has enough measured search demand to warrant it.
 // Deliberately NOT one page per city in India: see the rules in
@@ -42,12 +43,13 @@ export default async function CityPage({ params }) {
 
   const faqs = [
     {
-      q: `Does Axelis have an office in ${c.city}?`,
+      q: `How does counselling work if I am in ${c.city}?`,
       a: local
         ? `Yes. See the ${c.city} office page for the address and opening hours.`
-        : `No. Axelis has two offices, in Bengaluru and Bilaspur. Counselling for ${c.city} ` +
-          `students runs online over Google Meet, which is how most of our students are ` +
-          `counselled regardless of where they live.`,
+        : `Over Google Meet, end to end: shortlisting, applications, document checks and visa ` +
+          `filing. Axelis has offices in Bengaluru and Bilaspur, and students from ` +
+          `${TOTAL_CITIES} cities across India have been counselled online without visiting ` +
+          `either. You get one named counsellor rather than a call centre.`,
     },
     {
       q: `What does Axelis charge a student from ${c.city}?`,
@@ -128,20 +130,31 @@ export default async function CityPage({ params }) {
             Study abroad from {c.city}
           </h1>
 
-          {/* The honest line, stated before anything else. */}
-          <p className="text-lg text-slate-700 leading-relaxed mb-6">
+          {/* Reach stated as a fact, not as an apology for an absent office.
+              Every city named in smallTownProof is a real Axelis student origin
+              from Agentcis -- see src/data/studentOrigins.js. */}
+          <p className="text-lg text-slate-700 leading-relaxed mb-4">
             {local ? (
               <>Axelis has an office in {c.city}. <Link href={`/offices/${c.slug}`} className="underline underline-offset-2">Address and hours</Link>.</>
             ) : (
               <>
-                <strong>Axelis does not have an office in {c.city}.</strong> Our two offices are in
-                Bengaluru and Bilaspur, and counselling for {c.city} students runs online over
-                Google Meet. That is not a workaround: it is how most Axelis students are
-                counselled, and it is why we can publish one fee for everyone rather than pricing
-                by postcode.
+                Axelis counsels {c.city} students online, over Google Meet, with one counsellor
+                from shortlist to arrival. Students from <strong>{TOTAL_CITIES} Indian cities</strong> have
+                gone abroad through exactly this process, and most of them never walked into an
+                office.
               </>
             )}
           </p>
+
+          {!local && (
+            <p className="text-slate-700 leading-relaxed mb-6">
+              Not only the metros, either. Students from{' '}
+              <strong>{smallTownProof(c.city).join(', ')}</strong> have been counselled this way.
+              A student in {c.city} gets the same counsellor, the same process and the same
+              published fee as a student who walks into our Bengaluru or Bilaspur office. Distance
+              changes nothing about the price.
+            </p>
+          )}
 
           <h2 className="text-xl font-bold text-[var(--color-navy)] mt-10 mb-3">What it costs</h2>
           <p className="text-slate-700 leading-relaxed mb-4">
