@@ -157,8 +157,9 @@ export default function CostIndexPage() {
               Net is what is left after the part-time earnings a student could expect at the hours
               their visa allows. It is the smaller, friendlier number, and it is the one to treat
               with suspicion: it assumes you find that work, hold it for the whole course, and are
-              well enough to do it alongside your degree. The column to budget against is
-              &ldquo;course, living &amp; stay&rdquo;. Lenders assess against that one too.
+              well enough to do it alongside your degree. The source sheet is explicit that these
+              earnings do not guarantee part-time work and vary case by case. The column to budget
+              against is &ldquo;course, living &amp; stay&rdquo;.
             </p>
           </div>
 
@@ -175,10 +176,11 @@ export default function CostIndexPage() {
           <section className="mt-14 max-w-3xl">
             <h2 className="text-2xl font-bold text-[var(--color-navy)] mb-3">Where these numbers come from</h2>
             <p className="text-[var(--foreground)] leading-relaxed mb-3">
-              Published tuition, the living-cost figure each country requires you to prove for the
-              student visa, and accommodation at the level our own students actually take. Public
-              and private institutions are priced as separate rows wherever they differ, because an
-              average of the two describes nobody&rsquo;s situation.
+              Tuition plus living cost, multiplied by the length of the course. Public and private
+              institutions are priced as separate rows wherever they differ, because an average of
+              the two describes nobody&rsquo;s situation. The figures are approximate by design:
+              they are there to tell you which destinations are in the same bracket, not to quote
+              your file.
             </p>
             <p className="text-[var(--foreground)] leading-relaxed mb-3">
               Government, exam and visa charges are set by those bodies, not by us, and Axelis takes
@@ -187,10 +189,12 @@ export default function CostIndexPage() {
               before you pay anything.
             </p>
             <p className="text-[var(--foreground)] leading-relaxed">
-              Rupee conversions use the rates recorded when the sheet was priced: 1 EUR =
-              Rs {COST_META.fx_snapshot.EUR}, 1 USD = Rs {COST_META.fx_snapshot.USD}, 1 GBP =
-              Rs {COST_META.fx_snapshot.GBP}, 1 AUD = Rs {COST_META.fx_snapshot.AUD}, 1 CAD =
-              Rs {COST_META.fx_snapshot.CAD}.
+              Rupee figures were converted on the day the sheet was priced. Five of the rates used
+              are on the record: 1 EUR = Rs {COST_META.fx_snapshot.EUR}, 1 USD =
+              Rs {COST_META.fx_snapshot.USD}, 1 GBP = Rs {COST_META.fx_snapshot.GBP}, 1 AUD =
+              Rs {COST_META.fx_snapshot.AUD}, 1 CAD = Rs {COST_META.fx_snapshot.CAD}. Destinations
+              priced in other currencies used that day&rsquo;s rate for their own currency, which
+              was not kept, so those rows cannot be re-based on a newer rate without repricing them.
             </p>
           </section>
 
