@@ -296,7 +296,7 @@ const PrivacyPolicy = () => {
                   <MapPin className="w-6 h-6 text-blue-200" />
                 </div>
                 <h3 className="font-semibold mb-2">Address</h3>
-                <p className="text-blue-100">WorkFlo Ranka Junction, PROPERTY NO. 224, 3RD FLOOR, #80/3, VIJINAPUR VILLAGE OLD MADRAS ROAD KR PURAM HOBLI, BENGALURU (KN) BANGALORE, KAR 560016</p>
+                <p className="text-blue-100">No. 224, 3rd Floor, WorkFlo Ranka Junction Property, 80/3, KR Puram Bridge, Krishna Reddy Industrial Estate, Dooravani Nagar, Bengaluru, Karnataka 560016</p>
               </div>
             </div>
           </AnimatedSection>

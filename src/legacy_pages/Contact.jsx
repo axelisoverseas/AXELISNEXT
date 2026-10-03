@@ -32,7 +32,7 @@ const Contact = () => {
     "email": "axelisoverseas@overseeducation.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "WorkFlo Ranka Junction, PROPERTY NO. 224, 3RD FLOOR, #80/3, VIJINAPUR VILLAGE OLD MADRAS ROAD KR PURAM HOBLI",
+      "streetAddress": "No. 224, 3rd Floor, WorkFlo Ranka Junction Property, 80/3, KR Puram Bridge, Krishna Reddy Industrial Estate, Dooravani Nagar",
       "addressLocality": "Bengaluru",
       "addressRegion": "Karnataka",
       "postalCode": "560016",
