@@ -115,7 +115,8 @@ export const servicePromises = [
     name: 'Sworn translation',
     fee: '₹2,500 per document, plus GST',
     summary:
-      'Certified translation by a sworn translator, in the form German and most European authorities require.',
+      'Certified translation from English into any language, \u20B92,500 per document plus GST. '
+      + 'Where German or other European authorities require a court-sworn translator, that is who does it.',
     included: [
       'Translation by a translator sworn before a court, not a general translator',
       'The translator’s certification, stamp and signature on every page',
@@ -176,7 +177,7 @@ export const servicePromises = [
       'The ZAB assessment fee, which is paid to ZAB directly',
       'Any bridging qualification ZAB may say you need',
     ],
-    youProvide: ['Degree certificates, transcripts and their sworn translations'],
+    youProvide: ['Degree certificates, transcripts and their certified translations'],
     turnaround:
       'Submitted within 5 working days of receiving your complete set. ZAB decision times vary and are outside our control.',
     refund: 'No Axelis fee is charged, so there is nothing to refund.',
