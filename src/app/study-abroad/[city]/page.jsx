@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { CITY_PAGES, CITY_SLUGS, cityBySlug, questionsFor, hasOffice } from '@/data/cityPages';
 import { SITE_URL, ORG_ID } from '@/lib/seo';
 import { TOTAL_CITIES, smallTownProof } from '@/data/studentOrigins';
+import studentsByCity from '@/data/studentsByCity.json';
 import { PRODUCTS, COMPARISON, PROOF, BOOK_URL } from '@/data/cityPageContent';
 import { SESSIONS } from '@/data/sessions';
 import { STUDENT_STORIES, ANJALI_VIDEO } from '@/data/studentStories';
@@ -49,6 +50,10 @@ export default async function CityPage({ params }) {
   const questions = questionsFor(c);
   // SESSIONS is already consent-gated upstream; these are published episodes.
   const stories = (SESSIONS || []).slice(0, 3);
+  // The one fact that is true of THIS city and no other: how many Axelis
+  // students actually came from here. Read from Agentcis, not estimated. 40 of
+  // the 79 cities have one; the rest fall back to the reach line.
+  const ownStudents = studentsByCity[c.city] || 0;
 
   const faqs = [
     {
@@ -148,6 +153,25 @@ export default async function CityPage({ params }) {
               </>
             )}
           </p>
+
+          {ownStudents === 0 && (
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              Of the <strong>242 Indian cities</strong> we measured for study-abroad search demand,{' '}
+              <strong>{c.city} ranks {c.rank}</strong> on how much people there are actually
+              searching. We measured it before writing this page.
+            </p>
+          )}
+
+          {ownStudents > 0 && (
+            <p className="text-lg text-slate-700 leading-relaxed mb-4">
+              <strong>
+                {ownStudents === 1
+                  ? `One student from ${c.city} has already gone abroad with Axelis.`
+                  : `${ownStudents} students from ${c.city} have already gone abroad with Axelis.`}
+              </strong>{' '}
+              Counted from our own records, not an estimate.
+            </p>
+          )}
 
           {!local && (
             <p className="text-slate-700 leading-relaxed mb-8">
