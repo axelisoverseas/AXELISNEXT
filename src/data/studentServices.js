@@ -27,7 +27,7 @@ export const serviceGroups = [
         thirdParty: null,
       },
       {
-        name: 'Sworn translation',
+        name: 'Certified translation',
         docKey: 'sworn-translation',
         payKey: 'sworn-translation',
         price: '₹2,500',
