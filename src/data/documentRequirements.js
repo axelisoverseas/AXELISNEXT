@@ -92,7 +92,7 @@ export const documentRequirements = {
     ],
     conditional: ['Professional licence or registration, where your trade requires one'],
     note:
-      'If the sworn translations are not ready, upload the originals now and send the translations when they arrive. We will hold the file rather than submit it incomplete.',
+      'If the certified translations are not ready, upload the originals now and send the translations when they arrive. We will hold the file rather than submit it incomplete.',
   },
   'visa-filing-tourist-uk': {
     service: 'Tourist visa filing, UK',

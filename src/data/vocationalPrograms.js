@@ -193,7 +193,7 @@ export const vocationalPrograms = [
       'Honest read on whether you clear the threshold, and what would move you over it',
       'Qualification recognition check, including ZAB where it applies',
       'APS application support',
-      'Document set, apostille and sworn translation coordination',
+      'Document set, apostille and certified translation coordination',
       'Full visa file build and VFS appointment',
       'Two mock visa interviews',
       'Blocked account and insurance guidance',
