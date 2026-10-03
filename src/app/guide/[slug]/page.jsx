@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import countryDetails from '../../../data/country-details.json';
 import { GUIDES, GUIDE_SLUGS } from '../../../data/countryGuides';
 import { SITE_URL, ORG_ID } from '@/lib/seo';
+import { rowsForCountry, lakh, COST_META, COST_AS_OF, COST_AS_OF_LABEL } from '@/lib/costIndex';
 
 // Each guide is built from src/data/country-details.json (last edited July
 // 2026). The previous template rendered placeholder numbers ("154+ partner
@@ -64,12 +65,69 @@ const Chips = ({ items }) => (
   </ul>
 );
 
+/**
+ * The priced rows for this country, straight from the cost sheet.
+ *
+ * Gross, part-time earnings and net are all shown. Net alone is the figure
+ * that misleads: Germany's undergraduate net of Rs 7.4 lakh is Rs 41.8 lakh of
+ * real cost with Rs 34.3 lakh of assumed term-time earnings taken off it, and
+ * a student who cannot work those hours pays the gross.
+ */
+const CostRows = ({ rows }) => (
+  <div className="space-y-6">
+    {rows.map(({ country, ug, pg }) => (
+      <div key={country} className="rounded-2xl border border-[var(--color-rule)] overflow-hidden">
+        <p className="px-4 py-2.5 bg-[var(--color-tint)] font-bold text-[var(--color-navy)]">{country}</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <caption className="sr-only">
+              Indicative cost of studying in {country} from India, in Indian rupees
+            </caption>
+            <thead>
+              <tr className="text-left text-[var(--color-dim)]">
+                <th scope="col" className="px-4 py-2 font-semibold">Level</th>
+                <th scope="col" className="px-4 py-2 font-semibold">Duration</th>
+                <th scope="col" className="px-4 py-2 font-semibold">Course, living &amp; stay</th>
+                <th scope="col" className="px-4 py-2 font-semibold">Less part-time earnings</th>
+                <th scope="col" className="px-4 py-2 font-semibold">Net</th>
+                <th scope="col" className="px-4 py-2 font-semibold">Post-study stay</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[["Bachelor's", ug], ["Master's", pg]].map(([level, r]) =>
+                r ? (
+                  <tr key={level} className="border-t border-[var(--color-rule)] align-top">
+                    <th scope="row" className="px-4 py-2.5 text-left font-bold text-[var(--color-navy)]">{level}</th>
+                    <td className="px-4 py-2.5 whitespace-nowrap">{r.duration}</td>
+                    <td className="px-4 py-2.5 whitespace-nowrap font-semibold">{lakh(r.cost_l)}</td>
+                    <td className="px-4 py-2.5 whitespace-nowrap text-[var(--color-dim)]">
+                      &minus; {lakh(r.earnings_l)}
+                      <span className="block text-xs">at {r.hours}/week</span>
+                    </td>
+                    <td className="px-4 py-2.5 whitespace-nowrap font-bold text-[var(--color-navy)]">{lakh(r.net_l)}</td>
+                    <td className="px-4 py-2.5">{r.opt}</td>
+                  </tr>
+                ) : null
+              )}
+            </tbody>
+          </table>
+        </div>
+        <p className="px-4 py-2.5 text-sm text-[var(--color-dim)] border-t border-[var(--color-rule)]">
+          Entry bar {ug?.requirements || pg?.requirements}. Visa processing takes{' '}
+          {ug?.processing || pg?.processing} once the file is complete.
+        </p>
+      </div>
+    ))}
+  </div>
+);
+
 export default async function CountryGuidePage({ params }) {
   const { slug } = await params;
   const g = load(slug);
   if (!g) notFound();
   const { data, name, short } = g;
   const url = `${SITE_URL}/guide/${slug}`;
+  const costRows = rowsForCountry(g.key);
 
   const articleLd = {
     '@context': 'https://schema.org',
@@ -80,6 +138,7 @@ export default async function CountryGuidePage({ params }) {
     mainEntityOfPage: url,
     image: `${SITE_URL}/og-image.jpg`,
     inLanguage: 'en-IN',
+    dateModified: COST_AS_OF,
     about: { '@type': 'Country', name: short },
     author: { '@id': ORG_ID },
     publisher: { '@id': ORG_ID },
@@ -117,7 +176,23 @@ export default async function CountryGuidePage({ params }) {
           </header>
 
           <Section q={`What does it cost to study in ${name}?`}>
-            <Prose>{data.costNotes}</Prose>
+            {costRows.length > 0 && (
+              <>
+                <CostRows rows={costRows} />
+                <p className="mt-4 text-sm text-[var(--color-dim)]">
+                  Priced {COST_AS_OF_LABEL} from the Axelis cost comparison, which prices{' '}
+                  {COST_META.ugRows} study options side by side. Rupee figures move with the
+                  exchange rate as well as with fees.{' '}
+                  <Link href="/cost-index" className="text-[var(--color-axelis)] hover:underline">
+                    Compare {short} against every other destination
+                  </Link>
+                  .
+                </p>
+              </>
+            )}
+            <div className="mt-5">
+              <Prose>{data.costNotes}</Prose>
+            </div>
           </Section>
 
           <Section q={`How does the student visa for ${name} work?`}>

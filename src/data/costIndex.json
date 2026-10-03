@@ -1,0 +1,977 @@
+{
+ "meta": {
+  "source": "axelis cost comparison sheet (white-label PG/UG samples)",
+  "as_of": "2026-07-20",
+  "fx_snapshot": {
+   "EUR": 110.05,
+   "USD": 96.48,
+   "GBP": 129.35,
+   "AUD": 67.31,
+   "CAD": 68.66
+  },
+  "note": "cost_l / earnings_l / net_l are INR lakhs. net_l = cost_l - earnings_l. Only the five FX rates printed on the source sheet are recorded; rows in other currencies cannot be FX-rescaled until their snapshot rate is captured.",
+  "ugRows": 36,
+  "pgRows": 36
+ },
+ "ug": [
+  {
+   "country": "Germany (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 41.8,
+   "earnings_l": 34.3,
+   "net_l": 7.4,
+   "processing": "9–12 Months",
+   "hours": "20 Hrs",
+   "opt": "18-month job seeker",
+   "currency": "EUR"
+  },
+  {
+   "country": "Germany (Private)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0–6.5 · Academics 50%+",
+   "cost_l": 70.7,
+   "earnings_l": 34.3,
+   "net_l": 36.3,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "18-month job seeker",
+   "currency": "EUR"
+  },
+  {
+   "country": "France (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 46.1,
+   "earnings_l": 31.7,
+   "net_l": 14.4,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "2-year (APS)",
+   "currency": "EUR"
+  },
+  {
+   "country": "Italy (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 43.7,
+   "earnings_l": 23.8,
+   "net_l": 20.0,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "12-month search",
+   "currency": "EUR"
+  },
+  {
+   "country": "Poland (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 50%+",
+   "cost_l": 33.7,
+   "earnings_l": 13.2,
+   "net_l": 20.5,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "9-month search",
+   "currency": "PLN"
+  },
+  {
+   "country": "Netherlands (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 89.5,
+   "earnings_l": 29.6,
+   "net_l": 59.9,
+   "processing": "2–4 Months",
+   "hours": "16 Hrs",
+   "opt": "1-year zoekjaar",
+   "currency": "EUR"
+  },
+  {
+   "country": "Netherlands (Private)",
+   "duration": "4 Years",
+   "requirements": "IELTS 6.0–6.5 · Academics 50%+",
+   "cost_l": 108.3,
+   "earnings_l": 39.4,
+   "net_l": 68.8,
+   "processing": "2–4 Months",
+   "hours": "16 Hrs",
+   "opt": "1-year zoekjaar",
+   "currency": "EUR"
+  },
+  {
+   "country": "Hungary (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 43.6,
+   "earnings_l": 15.8,
+   "net_l": 27.7,
+   "processing": "2–4 Months",
+   "hours": "24 Hrs",
+   "opt": "9-month search",
+   "currency": "HUF"
+  },
+  {
+   "country": "Austria (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 50.3,
+   "earnings_l": 31.7,
+   "net_l": 18.7,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "12-month search",
+   "currency": "EUR"
+  },
+  {
+   "country": "Finland (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 64.7,
+   "earnings_l": 31.7,
+   "net_l": 33.0,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "2-year residence",
+   "currency": "EUR"
+  },
+  {
+   "country": "Sweden (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0–6.5 · Academics 60%+",
+   "cost_l": 66.6,
+   "earnings_l": 31.1,
+   "net_l": 35.6,
+   "processing": "6–9 Months",
+   "hours": "20 Hrs",
+   "opt": "1-year search",
+   "currency": "SEK"
+  },
+  {
+   "country": "Norway (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 86.5,
+   "earnings_l": 43.1,
+   "net_l": 43.4,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "1-year residence",
+   "currency": "NOK"
+  },
+  {
+   "country": "Lithuania (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 37.0,
+   "earnings_l": 13.2,
+   "net_l": 23.8,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "Residence permit",
+   "currency": "EUR"
+  },
+  {
+   "country": "Switzerland (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.5 · Academics 60%+",
+   "cost_l": 95.6,
+   "earnings_l": 53.6,
+   "net_l": 42.0,
+   "processing": "2–3 Months",
+   "hours": "15 Hrs",
+   "opt": "6-month search",
+   "currency": "CHF"
+  },
+  {
+   "country": "Denmark (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.5 · Academics 60%+",
+   "cost_l": 69.7,
+   "earnings_l": 46.1,
+   "net_l": 23.7,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "3-year establishment",
+   "currency": "DKK"
+  },
+  {
+   "country": "Belgium (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 48.0,
+   "earnings_l": 34.3,
+   "net_l": 13.7,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "1-year search",
+   "currency": "EUR"
+  },
+  {
+   "country": "Portugal (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 50.2,
+   "earnings_l": 13.2,
+   "net_l": 37.0,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "Job-seeker residence",
+   "currency": "EUR"
+  },
+  {
+   "country": "Czech Republic (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 48.7,
+   "earnings_l": 18.5,
+   "net_l": 30.2,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "9-month search",
+   "currency": "CZK"
+  },
+  {
+   "country": "Malta (Public)",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0–6.5 · Academics 55%+",
+   "cost_l": 58.9,
+   "earnings_l": 18.5,
+   "net_l": 40.4,
+   "processing": "1–2 Months",
+   "hours": "20 Hrs",
+   "opt": "Work-permit route",
+   "currency": "EUR"
+  },
+  {
+   "country": "Spain (Public)",
+   "duration": "4 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 71.8,
+   "earnings_l": 42.3,
+   "net_l": 29.5,
+   "processing": "2–4 Months",
+   "hours": "30 Hrs",
+   "opt": "12–24 month search",
+   "currency": "EUR"
+  },
+  {
+   "country": "Spain (Private)",
+   "duration": "4 Years",
+   "requirements": "IELTS 6.0–6.5 · Academics 50%+",
+   "cost_l": 92.4,
+   "earnings_l": 42.3,
+   "net_l": 50.2,
+   "processing": "2–4 Months",
+   "hours": "30 Hrs",
+   "opt": "12–24 month search",
+   "currency": "EUR"
+  },
+  {
+   "country": "United Kingdom",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0–6.5 · Academics 50%+",
+   "cost_l": 124.8,
+   "earnings_l": 35.5,
+   "net_l": 89.3,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "2-year Graduate Route",
+   "currency": "GBP"
+  },
+  {
+   "country": "Ireland",
+   "duration": "4 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 119.7,
+   "earnings_l": 44.7,
+   "net_l": 75.0,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "1–2 year stay-back",
+   "currency": "EUR"
+  },
+  {
+   "country": "Canada",
+   "duration": "4 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 106.6,
+   "earnings_l": 35.2,
+   "net_l": 71.4,
+   "processing": "8–12 Weeks",
+   "hours": "20 Hrs",
+   "opt": "up to 3-year PGWP",
+   "currency": "CAD"
+  },
+  {
+   "country": "Australia",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0–6.5 · Academics 55%+",
+   "cost_l": 104.2,
+   "earnings_l": 46.5,
+   "net_l": 57.7,
+   "processing": "4–6 Months",
+   "hours": "24 Hrs",
+   "opt": "2–4 year post-study",
+   "currency": "AUD"
+  },
+  {
+   "country": "USA",
+   "duration": "4 Years",
+   "requirements": "TOEFL 80 / IELTS 6.5 · Academics 55%+",
+   "cost_l": 204.5,
+   "earnings_l": 37.0,
+   "net_l": 167.5,
+   "processing": "9–12 Months",
+   "hours": "20 Hrs",
+   "opt": "up to 3-year OPT/STEM",
+   "currency": "USD"
+  },
+  {
+   "country": "UAE",
+   "duration": "4 Years",
+   "requirements": "IELTS 5.5–6.5 · Academics 50%+",
+   "cost_l": 119.8,
+   "earnings_l": 18.9,
+   "net_l": 100.9,
+   "processing": "4–8 Weeks",
+   "hours": "15 Hrs",
+   "opt": "12-month grace + Green/Golden",
+   "currency": "AED"
+  },
+  {
+   "country": "New Zealand",
+   "duration": "3 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 84.5,
+   "earnings_l": 31.1,
+   "net_l": 53.4,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "up to 3-year post-study",
+   "currency": "NZD"
+  },
+  {
+   "country": "Singapore",
+   "duration": "4 Years",
+   "requirements": "IELTS 6.0–6.5 · Academics 60%+",
+   "cost_l": 131.2,
+   "earnings_l": 19.1,
+   "net_l": 112.1,
+   "processing": "3 Months",
+   "hours": "16 Hrs",
+   "opt": "1-year LTVP",
+   "currency": "SGD"
+  },
+  {
+   "country": "Switzerland (Private)",
+   "duration": "3 Years",
+   "requirements": "IELTS 5.5–6.5 · Academics 50%+",
+   "cost_l": 193.0,
+   "earnings_l": 53.6,
+   "net_l": 139.4,
+   "processing": "2–3 Months",
+   "hours": "15 Hrs",
+   "opt": "6-month search",
+   "currency": "CHF"
+  },
+  {
+   "country": "China",
+   "duration": "4 Years",
+   "requirements": "IELTS 6.0 · Academics 55%+",
+   "cost_l": 40.4,
+   "earnings_l": 10.2,
+   "net_l": 30.1,
+   "processing": "1–2 Months",
+   "hours": "15 Hrs",
+   "opt": "Master's+ work permit",
+   "currency": "CNY"
+  },
+  {
+   "country": "Japan",
+   "duration": "4 Years",
+   "requirements": "IELTS 6.0 / JLPT · Academics 55%+",
+   "cost_l": 55.4,
+   "earnings_l": 29.2,
+   "net_l": 26.2,
+   "processing": "2–4 Months",
+   "hours": "28 Hrs",
+   "opt": "1-year job-hunting",
+   "currency": "JPY"
+  },
+  {
+   "country": "Malaysia",
+   "duration": "3 Years",
+   "requirements": "IELTS 5.5–6.5 · Academics 50%+",
+   "cost_l": 50.8,
+   "earnings_l": 2.8,
+   "net_l": 47.9,
+   "processing": "4–8 Weeks",
+   "hours": "10 Hrs",
+   "opt": "12-month Graduate Pass",
+   "currency": "MYR"
+  },
+  {
+   "country": "South Korea",
+   "duration": "4 Years",
+   "requirements": "IELTS 5.5–6.5 / TOPIK · Academics 55%+",
+   "cost_l": 53.0,
+   "earnings_l": 20.8,
+   "net_l": 32.2,
+   "processing": "2–3 Months",
+   "hours": "20 Hrs",
+   "opt": "D-10 (up to 1 yr)",
+   "currency": "KRW"
+  },
+  {
+   "country": "Cyprus",
+   "duration": "4 Years",
+   "requirements": "IELTS 6.0 · Academics 50%+",
+   "cost_l": 85.2,
+   "earnings_l": 21.1,
+   "net_l": 64.0,
+   "processing": "1–2 Months",
+   "hours": "20 Hrs",
+   "opt": "Work-permit route",
+   "currency": "EUR"
+  },
+  {
+   "country": "Taiwan",
+   "duration": "4 Years",
+   "requirements": "IELTS/TOEFL / TOCFL · Academics 55%+",
+   "cost_l": 48.2,
+   "earnings_l": 18.1,
+   "net_l": 30.0,
+   "processing": "2–3 Months",
+   "hours": "20 Hrs",
+   "opt": "1-year points-based",
+   "currency": "TWD"
+  }
+ ],
+ "pg": [
+  {
+   "country": "Germany (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 27.9,
+   "earnings_l": 22.9,
+   "net_l": 5.0,
+   "processing": "9–12 Months",
+   "hours": "20 Hrs",
+   "opt": "18-month job seeker",
+   "currency": "EUR"
+  },
+  {
+   "country": "Germany (Private)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 50%+",
+   "cost_l": 59.2,
+   "earnings_l": 22.9,
+   "net_l": 36.3,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "18-month job seeker",
+   "currency": "EUR"
+  },
+  {
+   "country": "France (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 30.8,
+   "earnings_l": 21.1,
+   "net_l": 9.7,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "2-year (APS)",
+   "currency": "EUR"
+  },
+  {
+   "country": "Italy (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 29.2,
+   "earnings_l": 15.8,
+   "net_l": 13.3,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "12-month search",
+   "currency": "EUR"
+  },
+  {
+   "country": "Poland (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 50%+",
+   "cost_l": 22.5,
+   "earnings_l": 8.8,
+   "net_l": 13.6,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "9-month search",
+   "currency": "PLN"
+  },
+  {
+   "country": "Netherlands (Public)",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 34.2,
+   "earnings_l": 9.9,
+   "net_l": 24.4,
+   "processing": "2–4 Months",
+   "hours": "16 Hrs",
+   "opt": "1-year zoekjaar",
+   "currency": "EUR"
+  },
+  {
+   "country": "Netherlands (Private)",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.5 · Academics 50%+",
+   "cost_l": 31.5,
+   "earnings_l": 9.9,
+   "net_l": 21.6,
+   "processing": "2–4 Months",
+   "hours": "16 Hrs",
+   "opt": "1-year zoekjaar",
+   "currency": "EUR"
+  },
+  {
+   "country": "Hungary (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 29.1,
+   "earnings_l": 10.6,
+   "net_l": 18.5,
+   "processing": "2–4 Months",
+   "hours": "24 Hrs",
+   "opt": "9-month search",
+   "currency": "HUF"
+  },
+  {
+   "country": "Austria (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 33.6,
+   "earnings_l": 21.1,
+   "net_l": 12.4,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "12-month search",
+   "currency": "EUR"
+  },
+  {
+   "country": "Finland (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 51.9,
+   "earnings_l": 21.1,
+   "net_l": 30.8,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "2-year residence",
+   "currency": "EUR"
+  },
+  {
+   "country": "Sweden (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 60%+",
+   "cost_l": 47.4,
+   "earnings_l": 20.7,
+   "net_l": 26.7,
+   "processing": "6–9 Months",
+   "hours": "20 Hrs",
+   "opt": "1-year search",
+   "currency": "SEK"
+  },
+  {
+   "country": "Norway (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 57.7,
+   "earnings_l": 28.7,
+   "net_l": 28.9,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "1-year residence",
+   "currency": "NOK"
+  },
+  {
+   "country": "Lithuania (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 24.7,
+   "earnings_l": 8.8,
+   "net_l": 15.8,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "Residence permit",
+   "currency": "EUR"
+  },
+  {
+   "country": "Switzerland (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 60%+",
+   "cost_l": 63.8,
+   "earnings_l": 35.7,
+   "net_l": 28.0,
+   "processing": "2–3 Months",
+   "hours": "15 Hrs",
+   "opt": "6-month search",
+   "currency": "CHF"
+  },
+  {
+   "country": "Denmark (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 60%+",
+   "cost_l": 53.9,
+   "earnings_l": 30.7,
+   "net_l": 23.2,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "3-year establishment",
+   "currency": "DKK"
+  },
+  {
+   "country": "Belgium (Public)",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 16.5,
+   "earnings_l": 11.4,
+   "net_l": 5.0,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "1-year search",
+   "currency": "EUR"
+  },
+  {
+   "country": "Portugal (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 34.6,
+   "earnings_l": 8.8,
+   "net_l": 25.8,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "Job-seeker residence",
+   "currency": "EUR"
+  },
+  {
+   "country": "Czech Republic (Public)",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 39.1,
+   "earnings_l": 12.3,
+   "net_l": 26.8,
+   "processing": "2–4 Months",
+   "hours": "20 Hrs",
+   "opt": "9-month search",
+   "currency": "CZK"
+  },
+  {
+   "country": "Malta (Public)",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 20.9,
+   "earnings_l": 6.2,
+   "net_l": 14.7,
+   "processing": "1–2 Months",
+   "hours": "20 Hrs",
+   "opt": "Work-permit route",
+   "currency": "EUR"
+  },
+  {
+   "country": "Spain (Public)",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 20.7,
+   "earnings_l": 10.6,
+   "net_l": 10.1,
+   "processing": "2–4 Months",
+   "hours": "30 Hrs",
+   "opt": "12–24 month search",
+   "currency": "EUR"
+  },
+  {
+   "country": "Spain (Private)",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.5 · Academics 50%+",
+   "cost_l": 30.8,
+   "earnings_l": 10.6,
+   "net_l": 20.2,
+   "processing": "2–4 Months",
+   "hours": "30 Hrs",
+   "opt": "12–24 month search",
+   "currency": "EUR"
+  },
+  {
+   "country": "United Kingdom",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.5 · Academics 50%+",
+   "cost_l": 41.6,
+   "earnings_l": 11.8,
+   "net_l": 29.8,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "2-year Graduate Route",
+   "currency": "GBP"
+  },
+  {
+   "country": "Ireland",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 34.3,
+   "earnings_l": 11.2,
+   "net_l": 23.2,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "1–2 year stay-back",
+   "currency": "EUR"
+  },
+  {
+   "country": "Canada",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 56.0,
+   "earnings_l": 17.6,
+   "net_l": 38.4,
+   "processing": "8–12 Weeks",
+   "hours": "20 Hrs",
+   "opt": "up to 3-year PGWP",
+   "currency": "CAD"
+  },
+  {
+   "country": "Australia",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 73.5,
+   "earnings_l": 31.0,
+   "net_l": 42.5,
+   "processing": "4–6 Months",
+   "hours": "24 Hrs",
+   "opt": "2–4 year post-study",
+   "currency": "AUD"
+  },
+  {
+   "country": "USA",
+   "duration": "2 Years",
+   "requirements": "TOEFL 90 / IELTS 6.5 · Academics 55%+",
+   "cost_l": 111.9,
+   "earnings_l": 18.5,
+   "net_l": 93.4,
+   "processing": "9–12 Months",
+   "hours": "20 Hrs",
+   "opt": "up to 3-year OPT/STEM",
+   "currency": "USD"
+  },
+  {
+   "country": "UAE",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.0–6.5 · Academics 50%+",
+   "cost_l": 66.2,
+   "earnings_l": 9.5,
+   "net_l": 56.8,
+   "processing": "4–8 Weeks",
+   "hours": "15 Hrs",
+   "opt": "12-month grace + Green/Golden",
+   "currency": "AED"
+  },
+  {
+   "country": "New Zealand",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.5 · Academics 55%+",
+   "cost_l": 30.4,
+   "earnings_l": 10.4,
+   "net_l": 20.1,
+   "processing": "3–6 Months",
+   "hours": "20 Hrs",
+   "opt": "up to 3-year post-study",
+   "currency": "NZD"
+  },
+  {
+   "country": "Singapore",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.5 · Academics 60%+",
+   "cost_l": 41.7,
+   "earnings_l": 4.8,
+   "net_l": 37.0,
+   "processing": "3 Months",
+   "hours": "16 Hrs",
+   "opt": "1-year LTVP",
+   "currency": "SGD"
+  },
+  {
+   "country": "Switzerland (Private)",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.0 · Academics 50%+",
+   "cost_l": 66.7,
+   "earnings_l": 17.9,
+   "net_l": 48.9,
+   "processing": "2–3 Months",
+   "hours": "15 Hrs",
+   "opt": "6-month search",
+   "currency": "CHF"
+  },
+  {
+   "country": "China",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.0+ · Academics 55%+",
+   "cost_l": 24.0,
+   "earnings_l": 5.1,
+   "net_l": 18.9,
+   "processing": "1–2 Months",
+   "hours": "15 Hrs",
+   "opt": "Master's+ work permit",
+   "currency": "CNY"
+  },
+  {
+   "country": "Japan",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.0 / JLPT · Academics 55%+",
+   "cost_l": 27.7,
+   "earnings_l": 14.6,
+   "net_l": 13.1,
+   "processing": "2–4 Months",
+   "hours": "28 Hrs",
+   "opt": "1-year job-hunting",
+   "currency": "JPY"
+  },
+  {
+   "country": "Malaysia",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.0–6.5 · Academics 50%+",
+   "cost_l": 18.8,
+   "earnings_l": 0.9,
+   "net_l": 17.9,
+   "processing": "4–8 Weeks",
+   "hours": "10 Hrs",
+   "opt": "12-month Graduate Pass",
+   "currency": "MYR"
+  },
+  {
+   "country": "South Korea",
+   "duration": "2 Years",
+   "requirements": "IELTS 6.0 / TOPIK · Academics 55%+",
+   "cost_l": 29.7,
+   "earnings_l": 10.4,
+   "net_l": 19.3,
+   "processing": "2–3 Months",
+   "hours": "20 Hrs",
+   "opt": "D-10 (up to 1 yr)",
+   "currency": "KRW"
+  },
+  {
+   "country": "Cyprus",
+   "duration": "1 Year",
+   "requirements": "IELTS 6.0–6.5 · Academics 50%+",
+   "cost_l": 18.3,
+   "earnings_l": 5.3,
+   "net_l": 13.0,
+   "processing": "1–2 Months",
+   "hours": "20 Hrs",
+   "opt": "Work-permit route",
+   "currency": "EUR"
+  },
+  {
+   "country": "Taiwan",
+   "duration": "2 Years",
+   "requirements": "IELTS/TOEFL / TOCFL · Academics 55%+",
+   "cost_l": 26.8,
+   "earnings_l": 9.1,
+   "net_l": 17.7,
+   "processing": "2–3 Months",
+   "hours": "20 Hrs",
+   "opt": "1-year points-based",
+   "currency": "TWD"
+  }
+ ],
+ "byCountryKey": {
+  "australia": [
+   "Australia"
+  ],
+  "austria": [
+   "Austria (Public)"
+  ],
+  "belgium": [
+   "Belgium (Public)"
+  ],
+  "canada": [
+   "Canada"
+  ],
+  "cyprus": [
+   "Cyprus"
+  ],
+  "czech-republic": [
+   "Czech Republic (Public)"
+  ],
+  "denmark": [
+   "Denmark (Public)"
+  ],
+  "finland": [
+   "Finland (Public)"
+  ],
+  "france": [
+   "France (Public)"
+  ],
+  "germany": [
+   "Germany (Private)",
+   "Germany (Public)"
+  ],
+  "hungary": [
+   "Hungary (Public)"
+  ],
+  "ireland": [
+   "Ireland"
+  ],
+  "italy": [
+   "Italy (Public)"
+  ],
+  "japan": [
+   "Japan"
+  ],
+  "malaysia": [
+   "Malaysia"
+  ],
+  "malta": [
+   "Malta (Public)"
+  ],
+  "netherlands": [
+   "Netherlands (Private)",
+   "Netherlands (Public)"
+  ],
+  "new-zealand": [
+   "New Zealand"
+  ],
+  "norway": [
+   "Norway (Public)"
+  ],
+  "poland": [
+   "Poland (Public)"
+  ],
+  "portugal": [
+   "Portugal (Public)"
+  ],
+  "singapore": [
+   "Singapore"
+  ],
+  "south-korea": [
+   "South Korea"
+  ],
+  "spain": [
+   "Spain (Private)",
+   "Spain (Public)"
+  ],
+  "sweden": [
+   "Sweden (Public)"
+  ],
+  "switzerland": [
+   "Switzerland (Private)",
+   "Switzerland (Public)"
+  ],
+  "uae": [
+   "UAE"
+  ],
+  "united-states": [
+   "USA"
+  ],
+  "united-kingdom": [
+   "United Kingdom"
+  ]
+ }
+}

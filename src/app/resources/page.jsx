@@ -73,6 +73,13 @@ export default function ResourcesPage() {
       <section className="px-6 pb-12">
         <div className="mx-auto max-w-6xl">
           <h2 className="text-2xl font-bold text-[var(--color-navy)] mb-4">Country guides</h2>
+          <p className="mb-4 text-[var(--foreground)]">
+            Comparing the money first?{' '}
+            <Link href="/cost-index" className="font-semibold text-[var(--color-axelis)] hover:underline">
+              The Cost Index prices every destination side by side
+            </Link>
+            .
+          </p>
           <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {GUIDE_SLUGS.map((slug) => (
               <li key={slug}>

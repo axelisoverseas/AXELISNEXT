@@ -25,6 +25,10 @@ const ROUTES = [
   '/certifications', '/bookings', '/contact', '/resources', '/test-prep',
   '/accommodation', '/vocational', '/accreditations', '/start',
   '/lp/tuition-free-europe', '/lp/pay-after-offer', '/lp/published-fees',
+  // The cost index and one country guide: both are wide data tables, which is
+  // exactly the shape that overflows a phone and that renders figures at too
+  // little contrast against a tinted header row.
+  '/cost-index', '/guide/study-in-germany',
 ];
 
 /* ---------------------------------------------------------------- *
