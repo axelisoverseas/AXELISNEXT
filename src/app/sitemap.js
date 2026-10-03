@@ -5,6 +5,7 @@ import { SESSION_SLUGS } from '../data/sessions';
 import { OFFICE_SLUGS } from '../data/offices';
 import { CITY_SLUGS } from '../data/cityPages';
 import { ARTICLE_SLUGS } from '../data/answers';
+import { HINDI_SLUGS } from '../data/hindiAnswers';
 import { SITE_URL } from '@/lib/seo';
 
 // Every URL here must be indexable and self-canonical: no /portal (a demo
@@ -83,5 +84,8 @@ export default function sitemap() {
     // Answer pages: measured demand meeting a published Axelis number.
     entry('/answers', 'weekly', 0.85, '2026-10-03'),
     ...ARTICLE_SLUGS.map((slug) => entry(`/answers/${slug}`, 'monthly', 0.8, '2026-10-03')),
+    // Hindi. Nothing on the site was in Hindi before, and the measurement says
+    // it is the biggest unworked opening.
+    ...HINDI_SLUGS.map((slug) => entry(`/hi/${slug}`, 'monthly', 0.8, '2026-10-03')),
   ];
 }
