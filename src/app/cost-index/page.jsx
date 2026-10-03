@@ -31,7 +31,10 @@ const DEK =
 export const metadata = {
   title: TITLE,
   description: DEK,
-  alternates: { canonical: '/cost-index' },
+  alternates: {
+    canonical: '/cost-index',
+    languages: { 'en-IN': '/cost-index', 'hi-IN': '/hi/cost-index' },
+  },
   openGraph: {
     title: TITLE,
     description: DEK,
@@ -147,7 +150,10 @@ export default function CostIndexPage() {
             <p className="text-xl text-[var(--color-dim)] leading-relaxed mb-5">{DEK}</p>
             <p className="text-sm text-[var(--color-dim)]">
               Priced {COST_AS_OF_LABEL}. Figures are indicative, move with the exchange rate as
-              well as with fees, and are not a quotation.
+              well as with fees, and are not a quotation.{' '}
+              <Link href="/hi/cost-index" className="text-[var(--color-axelis)] hover:underline" lang="hi">
+                इसे हिंदी में पढ़ें
+              </Link>
             </p>
           </header>
 

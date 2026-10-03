@@ -90,5 +90,7 @@ export default function sitemap() {
     // Hindi. Nothing on the site was in Hindi before, and the measurement says
     // it is the biggest unworked opening.
     ...HINDI_SLUGS.map((slug) => entry(`/hi/${slug}`, 'monthly', 0.8, '2026-10-03')),
+    // The cost index in Hindi: same dataset, same pricing date as /cost-index.
+    entry('/hi/cost-index', 'monthly', 0.85, '2026-07-20'),
   ];
 }
