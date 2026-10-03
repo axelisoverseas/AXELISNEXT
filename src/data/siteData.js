@@ -8,7 +8,7 @@ export const siteInfo = {
   contact: {
     phones: ["+91 9098522711"],
     emails: ["axelisoverseas@overseeducation.com", "info@overseeducation.com"],
-    address: "WorkFlo Ranka Junction, PROPERTY NO. 224, 3RD FLOOR, #80/3, VIJINAPUR VILLAGE OLD MADRAS ROAD KR PURAM HOBLI, BENGALURU (KN) BANGALORE, KAR 560016"
+    address: "No. 224, 3rd Floor, WorkFlo Ranka Junction Property, 80/3, KR Puram Bridge, Krishna Reddy Industrial Estate, Dooravani Nagar, Bengaluru, Karnataka 560016"
   },
   social: {
     facebook: "https://www.facebook.com/profile.php?id=61552129672233",
@@ -324,7 +324,7 @@ export const faqData = [
   {
     id: 12,
     question: "How do I get started with Axelis?",
-    answer: "Book a free first call at overseeducation.com/bookings, phone +91 9098522711, or message us on WhatsApp. The office is at WorkFlo Ranka Junction, Property No. 224, 3rd Floor, 80/3, Vijinapur Village, Old Madras Road, KR Puram Hobli, Bengaluru 560016.\n\nBring your transcripts and certificates, any English test scores you already have, your passport copy, a CV, and details of any applications you have made before.\n\nOn the call we go through your academic record, what you want to do afterwards, your budget and your timeline, and what scholarships you might be eligible for. You leave with a shortlist, a dated timeline, the tests you still need to sit, a document checklist and a cost breakdown.\n\nOnly then do you decide whether to work with us and on which plan. The first call is free and there is nothing to sign at the end of it.\n\nIf what you want is not realistic on your marks, your budget or your timeline, we will say so on that call rather than take a fee and tell you later.",
+    answer: "Book a free first call at overseeducation.com/bookings, phone +91 9098522711, or message us on WhatsApp. The office is at No. 224, 3rd Floor, WorkFlo Ranka Junction Property, 80/3, KR Puram Bridge, Krishna Reddy Industrial Estate, Dooravani Nagar, Bengaluru, Karnataka 560016.\n\nBring your transcripts and certificates, any English test scores you already have, your passport copy, a CV, and details of any applications you have made before.\n\nOn the call we go through your academic record, what you want to do afterwards, your budget and your timeline, and what scholarships you might be eligible for. You leave with a shortlist, a dated timeline, the tests you still need to sit, a document checklist and a cost breakdown.\n\nOnly then do you decide whether to work with us and on which plan. The first call is free and there is nothing to sign at the end of it.\n\nIf what you want is not realistic on your marks, your budget or your timeline, we will say so on that call rather than take a fee and tell you later.",
     category: "Getting Started"
   },
 

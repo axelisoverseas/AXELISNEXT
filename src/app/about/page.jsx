@@ -101,7 +101,7 @@ export default function AboutPage() {
                         Scale and scope
                     </h2>
                     <p className="text-lg text-[var(--color-dim)] leading-relaxed">
-                        Axelis operates from a Bengaluru corporate office (WorkFlo, KR Puram Hobli) with a registered
+                        Axelis operates from a Bengaluru corporate office (WorkFlo Ranka Junction, Dooravani Nagar) with a registered
                         office in Bilaspur, and runs its certification programmes across 29 study-abroad destination
                         markets, with an in-house language and application coaching faculty.
                     </p>
