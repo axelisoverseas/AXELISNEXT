@@ -71,6 +71,9 @@ export default function sitemap() {
     ...CORE.map(([path, freq, priority, updatedOn]) => entry(path, freq, priority, updatedOn)),
     ...programs.map((p) => entry(`/certifications/${p.slug}`, 'weekly', 0.85)),
     ...GUIDE_SLUGS.map((slug) => entry(`/guide/${slug}`, 'monthly', 0.8)),
+    // The cost index: original priced data, so it carries the date it was
+    // priced rather than inheriting a build date.
+    entry('/cost-index', 'monthly', 0.9, '2026-07-20'),
     ...LANDING_SLUGS.map((slug) => entry(`/lp/${slug}`, 'monthly', 0.7)),
     ...SESSION_SLUGS.map((slug) => entry(`/sessions/${slug}`, 'monthly', 0.75)),
     // Location pages: one per Business Profile, so each profile's website field
