@@ -98,7 +98,7 @@
 <body>
 <div class="wrap">
   <h1>University Finder</h1>
-  <p class="sub">Search every university we know of. Each one shows the charter it falls under, or tells you to ask.</p>
+  <p class="sub">Type a university to see which charter covers it.</p>
 
   <div class="stats" id="stats" aria-live="polite"></div>
 
@@ -168,9 +168,8 @@
     stats.innerHTML=
       '<div class="stat"><b>'+t.universities.toLocaleString()+'</b><span>Universities</span></div>'+
       '<div class="stat"><b>'+t.destinations+'</b><span>Destinations</span></div>'+
-      '<div class="stat"><b>'+t.gac.toLocaleString()+'</b><span>GAC</span></div>'+
-      '<div class="stat"><b>'+t.epa.toLocaleString()+'</b><span>EPA</span></div>'+
-      '<div class="stat"><b>'+t.routed.toLocaleString()+'</b><span>Routed today</span></div>';
+      '<div class="stat"><b>'+t.gac.toLocaleString()+'</b><span>Commissioned (GAC)</span></div>'+
+      '<div class="stat"><b>'+t.epa.toLocaleString()+'</b><span>Tuition-free Europe (EPA)</span></div>';
   }
 
   function paintCountries(){
@@ -182,8 +181,7 @@
   function setHint(){
     hint.textContent = FULL
       ? 'Type at least two letters. Searching all '+META.totals.universities.toLocaleString()+' universities.'
-      : 'Type at least two letters. Searching '+FLAT.length.toLocaleString()+
-        ' routed universities while the full catalogue loads.';
+      : 'Type at least two letters. Loading the rest of the list.';
   }
 
   // Tier 1: the institutions we can place a student at today. Small, so the
