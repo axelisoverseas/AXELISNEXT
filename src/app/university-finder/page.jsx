@@ -1,19 +1,19 @@
-import UniversityFinder from '@/components/UniversityFinder';
-import universities from '@/data/finder-universities.json';
+import FinderEmbed from '@/components/FinderEmbed';
+import finder from '../../../public/university-finder-widget/finder-covered.json';
 
-// Counted from the data, never typed by hand. The page used to advertise
-// "35,000+ universities" beside a list of 2,795, which is the kind of gap a
-// visitor finds in about four seconds. Deriving both figures means the headline
-// cannot drift away from the list again.
-const TOTAL = universities.epa.length + universities.gac.length;
-const DESTINATIONS = new Set([...universities.epa, ...universities.gac].map((u) => u.country)).size;
+// Counted from the data the page actually serves, never typed by hand. The
+// page once advertised "35,000+ universities" beside a list of 2,795, which is
+// the kind of gap a visitor finds in about four seconds.
+const TOTAL = finder.totals.universities;
+const DESTINATIONS = finder.totals.destinations;
+const ROUTED = finder.totals.routed;
 const TOTAL_LABEL = TOTAL.toLocaleString('en-IN');
 
 
 export const metadata = {
   title: 'University Finder',
   description:
-    `Search a list of ${TOTAL_LABEL} higher-education institutions across ${DESTINATIONS} study destinations, from tuition-free public universities in Europe to full-fee options in the US, Canada and Australia.`,
+    `Search ${TOTAL_LABEL} higher-education institutions across ${DESTINATIONS} study destinations and see which Axelis charter each one falls under, from tuition-free public universities in Europe to full-fee options in the US, Canada and Australia.`,
   alternates: { canonical: '/university-finder' },
 };
 
@@ -38,9 +38,9 @@ export default function UniversityFinderPage() {
               University Finder.
             </h1>
             <p className="mt-4 max-w-2xl text-lg text-[var(--color-navy)]">
-              Every university in this list is a real, currently operating institution with its own
-              official website, checked against Wikidata rather than typed up by us. Tuition-free
-              public universities in Europe, full-fee options in the US, Canada, Australia and beyond.
+              Every university here is a real, currently operating institution with its own official
+              website, checked against Wikidata rather than typed up by us. Search any one of them to
+              see which charter it falls under — and if it is not listed yet, tell us and we will check it.
             </p>
           </div>
 
@@ -56,11 +56,17 @@ export default function UniversityFinderPage() {
               <div className="text-3xl font-bold text-[var(--color-navy)] sm:text-4xl">{DESTINATIONS}</div>
               <div className="mt-1 text-xs font-semibold text-[var(--color-dim)]">Destinations</div>
             </div>
+            <div>
+              <div className="text-3xl font-bold text-[var(--color-navy)] sm:text-4xl">
+                {ROUTED.toLocaleString('en-IN')}
+              </div>
+              <div className="mt-1 text-xs font-semibold text-[var(--color-dim)]">Routed today</div>
+            </div>
           </div>
         </div>
       </section>
 
-      <UniversityFinder />
+      <FinderEmbed />
     </div>
   );
 }
