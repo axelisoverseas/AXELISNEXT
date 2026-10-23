@@ -69,6 +69,14 @@
   @keyframes slide{0%{margin-left:-30%}100%{margin-left:100%}}
   .none{padding:22px;border:1px dashed var(--rule);border-radius:12px;background:var(--ask-bg);color:var(--ask)}
   .none b{color:var(--ink)}
+  .cta{display:inline-block;margin-top:14px;padding:11px 20px;border-radius:10px;
+       background:var(--axelis);color:#fff;text-decoration:none;font-weight:700;font-size:.92rem}
+  .cta:hover{filter:brightness(1.08)}
+  .askbar{margin-top:14px;padding:14px 16px;border:1px solid var(--rule);border-radius:10px;
+          background:var(--tint);font-size:.9rem;color:var(--dim);display:flex;
+          align-items:center;gap:14px;flex-wrap:wrap}
+  .askbar a{color:var(--axelis);font-weight:700;text-decoration:none;white-space:nowrap}
+  .askbar a:hover{text-decoration:underline;text-underline-offset:2px}
   .legend{margin-top:26px;border-top:1px solid var(--rule);padding-top:16px;font-size:.88rem;color:var(--dim)}
   .legend div{margin-bottom:7px}
   .legend .tag{margin-right:8px}
@@ -90,7 +98,7 @@
 <body>
 <div class="wrap">
   <h1>University Finder</h1>
-  <p class="sub">Search every university we know of. Each one shows the charter it falls under, or tells you to ask.</p>
+  <p class="sub">Type a university to see which charter covers it.</p>
 
   <div class="stats" id="stats" aria-live="polite"></div>
 
@@ -126,6 +134,19 @@
   var LABEL={G:'GAC',E:'EPA',I:'ILC',A:'ASK'};
 
   function norm(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
+
+  // The same widget is served from both sites, so the enquiry link has to
+  // follow the audience rather than be hard-coded: a partner asking about a
+  // university should land on the partner form, a student on the student one.
+  // The frame is same-origin with its host page, so the hostname is readable
+  // here without any message passing.
+  function enquiryUrl(uni){
+    var partner = /axelisoverseas\./i.test(location.hostname);
+    var base = partner ? '/partner-with-us' : '/contact';
+    // The university name is carried through so nobody has to retype it, and
+    // so the enquiry arrives already saying which institution it is about.
+    return base + (uni ? '?university=' + encodeURIComponent(uni) : '');
+  }
   function initials(n){
     var w=n.replace(/\(.*?\)/g,'').trim().split(/\s+/).filter(Boolean);
     return (w.slice(0,2).map(function(x){return x[0];}).join('')||'?').toUpperCase();
@@ -147,9 +168,8 @@
     stats.innerHTML=
       '<div class="stat"><b>'+t.universities.toLocaleString()+'</b><span>Universities</span></div>'+
       '<div class="stat"><b>'+t.destinations+'</b><span>Destinations</span></div>'+
-      '<div class="stat"><b>'+t.gac.toLocaleString()+'</b><span>GAC</span></div>'+
-      '<div class="stat"><b>'+t.epa.toLocaleString()+'</b><span>EPA</span></div>'+
-      '<div class="stat"><b>'+t.routed.toLocaleString()+'</b><span>Routed today</span></div>';
+      '<div class="stat"><b>'+t.gac.toLocaleString()+'</b><span>Commissioned (GAC)</span></div>'+
+      '<div class="stat"><b>'+t.epa.toLocaleString()+'</b><span>Tuition-free Europe (EPA)</span></div>';
   }
 
   function paintCountries(){
@@ -161,8 +181,7 @@
   function setHint(){
     hint.textContent = FULL
       ? 'Type at least two letters. Searching all '+META.totals.universities.toLocaleString()+' universities.'
-      : 'Type at least two letters. Searching '+FLAT.length.toLocaleString()+
-        ' routed universities while the full catalogue loads.';
+      : 'Type at least two letters. Loading the rest of the list.';
   }
 
   // Tier 1: the institutions we can place a student at today. Small, so the
@@ -204,10 +223,13 @@
     });
 
     if(!res.length){
-      out.innerHTML='<li class="none">Nothing matching <b>'+esc(q.value||country)+
+      var typed=(q.value||country||'').trim();
+      out.innerHTML='<li class="none">Nothing matching <b>'+esc(typed)+
         '</b> in our catalogue of '+META.totals.universities.toLocaleString()+
         ' institutions'+(FULL?'':' loaded so far')+
-        '. Send it to us and we will check it — a missing name is not a no.</li>';
+        '. A missing name is not a no. Send it to us and we will check it.'+
+        '<br><a class="cta" href="'+esc(enquiryUrl(typed))+'" target="_top">'+
+        'Ask us about this university</a></li>';
       return;
     }
     res.slice(0,shown).forEach(function(u){
@@ -243,6 +265,24 @@
                      '<span class="tag t-'+u.v.toLowerCase()+'">'+LABEL[u.v]+'</span>';
       out.appendChild(li);
     });
+    // A search that returns mostly unrouted results is the same dead end as one
+    // that returns none: the searcher still has no answer and no next step. The
+    // prompt appears whenever any visible result is unrouted, worded to suit
+    // whether some or all of them are.
+    var visible=res.slice(0,shown);
+    var unrouted=visible.filter(function(u){return u.v==='A';});
+    if(unrouted.length){
+      var all=unrouted.length===visible.length;
+      var bar=document.createElement('div');
+      bar.className='askbar';
+      bar.innerHTML='<span>'+
+        (all ? 'We have not routed '+(visible.length===1?'this one':'these')+' yet.'
+             : unrouted.length+' of these are not routed yet.')+
+        ' That usually means we have not added it, not that we cannot reach it.</span>'+
+        '<a href="'+esc(enquiryUrl(unrouted[0].n))+'" target="_top">Ask us about it &rsaquo;</a>';
+      more.appendChild(bar);
+    }
+
     if(res.length>shown){
       var b=document.createElement('button');
       b.className='more-btn'; b.textContent='Show more ('+(res.length-shown).toLocaleString()+' left)';
