@@ -215,16 +215,24 @@
       // Logos are fetched lazily and only for rows actually on screen, so a
       // search never triggers thousands of icon requests. Initials stand in
       // wherever the catalogue has no website or the icon fails to load.
-      // Initials are the base layer and are always drawn; the logo fades in
-      // over them only once it has actually decoded. An icon service that is
-      // slow, rate-limited or blocked (DuckDuckGo has been blocked by Indian
-      // ISPs, and this audience is largely in India) then costs us nothing -
-      // the tile still reads. onerror alone was not enough: the requests hung
-      // rather than failing, so nothing fired and the tile stayed blank.
+      // Initials are the base layer and are always drawn; a logo fades in over
+      // them only once it has actually decoded. Nothing here can leave an empty
+      // tile.
+      //
+      // The institution's OWN favicon is tried first. That is the only source
+      // with no third party in it: nothing to rate-limit us, nothing on a
+      // tracker blocklist, and no request about our visitors sent anywhere.
+      // Google's service is the fallback for the sites that do not serve one.
+      // Relying on that service alone was wrong - it is blocked often enough
+      // that the requests never even reached the network in testing.
       var badge = '<span class="logo">'+esc(initials(u.n))+
         (u.h ? '<img loading="lazy" decoding="async" alt="" '+
-               'src="https://www.google.com/s2/favicons?sz=64&domain='+esc(u.h)+'" '+
-               'onload="this.classList.add(\'on\')" onerror="this.remove()">' : '')+
+               'src="https://'+esc(u.h)+'/favicon.ico" '+
+               'data-h="'+esc(u.h)+'" '+
+               'onload="this.classList.add(\'on\')" '+
+               'onerror="if(!this.dataset.alt){this.dataset.alt=1;'+
+               'this.src=\'https://www.google.com/s2/favicons?sz=64&domain=\'+this.dataset.h}'+
+               'else{this.remove()}">' : '')+
         '</span>';
       var inner = '<span class="t">'+esc(u.n)+'</span><div class="ct">'+esc(u.c)+
                   (u.h?' · <span class="ext">'+esc(u.h)+'</span>':'')+'</div>';
