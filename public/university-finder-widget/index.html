@@ -6,11 +6,18 @@
 <title>University Finder — Axelis Overseas</title>
 <meta name="description" content="Check whether Axelis Overseas can place you at a university, and under which charter.">
 <style>
+  /* Locked Axelis tokens, copied from both sites' globals.css. The widget runs
+     in an iframe so it cannot inherit them, and the B2B DESIGN.md copy is out
+     of date — the stylesheet is the authority. --accent-surface is for
+     surfaces and graphics only: at 2.9:1 on white it must never be a
+     letterform, so links and the domain line use --axelis instead. */
   :root{
-    --navy:#18459E; --azure:#3590F3; --ink:#0F172A; --dim:#64748B;
-    --rule:#E2E8F0; --bg:#FFFFFF; --tint:#F6F9FE;
-    --gac:#1B7A46; --gac-bg:#EAFAF0; --epa:#8A5A00; --epa-bg:#FFF4E5;
-    --ilc:#5B21B6; --ilc-bg:#F3EEFF; --ask:#475569; --ask-bg:#F1F5F9;
+    --navy:#16265C; --axelis:#1D4ED8; --accent-surface:#4F80F0;
+    --axelis-light:#9EC0FF; --azure:#1D4ED8;
+    --ink:#22242B; --dim:#586179;
+    --rule:#DDE3EE; --bg:#FFFFFF; --tint:#F7F9FC;
+    --gac:#126A3E; --gac-bg:#E8F7EF; --epa:#7A4F00; --epa-bg:#FDF3E3;
+    --ilc:#5B21B6; --ilc-bg:#F2ECFF; --ask:#4A5168; --ask-bg:#EEF2F9;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
@@ -20,7 +27,7 @@
   .sub{color:var(--dim);margin:0 0 20px;font-size:.95rem}
   .stats{display:flex;gap:22px;flex-wrap:wrap;margin:0 0 22px;padding:14px 16px;
          background:var(--tint);border:1px solid var(--rule);border-radius:12px}
-  .stat b{display:block;font-size:1.25rem;color:var(--navy);line-height:1.2}
+  .stat b{display:block;font-size:1.25rem;color:var(--axelis);line-height:1.2}
   .stat span{font-size:.72rem;color:var(--dim);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
   .searchrow{display:flex;gap:10px;flex-wrap:wrap;position:sticky;top:0;background:var(--bg);
              padding:10px 0;z-index:5;border-bottom:1px solid transparent}
@@ -39,7 +46,11 @@
   .logo{flex:0 0 auto;width:38px;height:38px;border-radius:8px;border:1px solid var(--rule);
         background:#fff;display:flex;align-items:center;justify-content:center;
         overflow:hidden;font-size:.72rem;font-weight:700;color:#64748B}
-  .logo img{width:26px;height:26px;object-fit:contain;display:block}
+  .logo{position:relative}
+  .logo img{position:absolute;inset:0;margin:auto;width:26px;height:26px;
+            object-fit:contain;display:block;opacity:0;transition:opacity .18s;
+            background:#fff}
+  .logo img.on{opacity:1}
   a.nm{color:inherit;text-decoration:none}
   a.nm:hover .t{text-decoration:underline;text-underline-offset:2px}
   .ext{font-size:.72rem;color:var(--azure);font-weight:600}
@@ -63,12 +74,15 @@
   .legend .tag{margin-right:8px}
   .more{margin-top:12px;text-align:center;color:var(--dim);font-size:.86rem}
   button.more-btn{font:inherit;padding:10px 18px;border:1px solid var(--rule);background:#fff;
-                  border-radius:10px;cursor:pointer;color:var(--navy);font-weight:600}
+                  border-radius:10px;cursor:pointer;color:var(--axelis);font-weight:600}
   button.more-btn:hover{border-color:var(--azure)}
   @media (prefers-color-scheme:dark){
-    :root{--bg:#0B1220;--ink:#E8EEF8;--dim:#94A3B8;--rule:#1E293B;--tint:#111C30;
+    /* On a navy ground the mid blue drops to 1.8:1, so the accent that
+       survives there is --axelis-light, per the sites' ground discipline. */
+    :root{--bg:#0B1220;--ink:#E8EEF8;--dim:#C3CBDD;--rule:#1E293B;--tint:#111C30;
+          --azure:#9EC0FF;--axelis:#9EC0FF;
           --gac:#5DD99A;--gac-bg:#0E2A1B;--epa:#F0B86B;--epa-bg:#2A1F08;
-          --ilc:#C4A9FF;--ilc-bg:#1E1733;--ask:#CBD5E1;--ask-bg:#131C2C}
+          --ilc:#C4A9FF;--ilc-bg:#1E1733;--ask:#C3CBDD;--ask-bg:#131C2C}
     input,select,li,button.more-btn{background:#0F1A2C}
   }
 </style>
@@ -201,12 +215,17 @@
       // Logos are fetched lazily and only for rows actually on screen, so a
       // search never triggers thousands of icon requests. Initials stand in
       // wherever the catalogue has no website or the icon fails to load.
-      var badge = u.h
-        ? '<span class="logo" data-i="'+esc(initials(u.n))+'">'+
-            '<img loading="lazy" decoding="async" alt="" '+
-            'src="https://icons.duckduckgo.com/ip3/'+esc(u.h)+'.ico" '+
-            'onerror="this.remove();this.parentNode.textContent=this.parentNode.dataset.i"></span>'
-        : '<span class="logo">'+esc(initials(u.n))+'</span>';
+      // Initials are the base layer and are always drawn; the logo fades in
+      // over them only once it has actually decoded. An icon service that is
+      // slow, rate-limited or blocked (DuckDuckGo has been blocked by Indian
+      // ISPs, and this audience is largely in India) then costs us nothing -
+      // the tile still reads. onerror alone was not enough: the requests hung
+      // rather than failing, so nothing fired and the tile stayed blank.
+      var badge = '<span class="logo">'+esc(initials(u.n))+
+        (u.h ? '<img loading="lazy" decoding="async" alt="" '+
+               'src="https://www.google.com/s2/favicons?sz=64&domain='+esc(u.h)+'" '+
+               'onload="this.classList.add(\'on\')" onerror="this.remove()">' : '')+
+        '</span>';
       var inner = '<span class="t">'+esc(u.n)+'</span><div class="ct">'+esc(u.c)+
                   (u.h?' · <span class="ext">'+esc(u.h)+'</span>':'')+'</div>';
       var nameEl = u.h
