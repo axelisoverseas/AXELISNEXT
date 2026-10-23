@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>University Finder — Axelis Overseas</title>
+<meta name="description" content="Check whether Axelis Overseas can place you at a university, and under which charter.">
+<style>
+  /* Locked Axelis tokens, copied from both sites' globals.css. The widget runs
+     in an iframe so it cannot inherit them, and the B2B DESIGN.md copy is out
+     of date — the stylesheet is the authority. --accent-surface is for
+     surfaces and graphics only: at 2.9:1 on white it must never be a
+     letterform, so links and the domain line use --axelis instead. */
+  :root{
+    --navy:#16265C; --axelis:#1D4ED8; --accent-surface:#4F80F0;
+    --axelis-light:#9EC0FF; --azure:#1D4ED8;
+    --ink:#22242B; --dim:#586179;
+    --rule:#DDE3EE; --bg:#FFFFFF; --tint:#F7F9FC;
+    --gac:#126A3E; --gac-bg:#E8F7EF; --epa:#7A4F00; --epa-bg:#FDF3E3;
+    --ilc:#5B21B6; --ilc-bg:#F2ECFF; --ask:#4A5168; --ask-bg:#EEF2F9;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.55 "Wix Madefor Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,sans-serif}
+  .wrap{max-width:860px;margin:0 auto;padding:28px 20px 64px}
+  h1{font-size:1.6rem;margin:0 0 6px;letter-spacing:-.02em}
+  .sub{color:var(--dim);margin:0 0 20px;font-size:.95rem}
+  .stats{display:flex;gap:22px;flex-wrap:wrap;margin:0 0 22px;padding:14px 16px;
+         background:var(--tint);border:1px solid var(--rule);border-radius:12px}
+  .stat b{display:block;font-size:1.25rem;color:var(--axelis);line-height:1.2}
+  .stat span{font-size:.72rem;color:var(--dim);font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+  .searchrow{display:flex;gap:10px;flex-wrap:wrap;position:sticky;top:0;background:var(--bg);
+             padding:10px 0;z-index:5;border-bottom:1px solid transparent}
+  .searchrow.stuck{border-bottom-color:var(--rule)}
+  input,select{font:inherit;padding:12px 14px;border:1px solid var(--rule);border-radius:10px;
+               background:#fff;color:var(--ink);outline:none}
+  input{flex:1 1 260px;min-width:0}
+  input:focus,select:focus{border-color:var(--azure);box-shadow:0 0 0 3px rgba(53,144,243,.16)}
+  .hint{font-size:.85rem;color:var(--dim);margin:10px 2px 0}
+  ul{list-style:none;margin:16px 0 0;padding:0}
+  li{display:flex;align-items:center;gap:12px;padding:12px 14px;border:1px solid var(--rule);
+     border-radius:10px;margin-bottom:8px}
+  li:hover{border-color:var(--azure)}
+  /* Always white: favicons are drawn for a white page, and a dark-on-transparent
+     crest disappears entirely on a dark tile. */
+  .logo{flex:0 0 auto;width:38px;height:38px;border-radius:8px;border:1px solid var(--rule);
+        background:#fff;display:flex;align-items:center;justify-content:center;
+        overflow:hidden;font-size:.72rem;font-weight:700;color:#64748B}
+  .logo{position:relative}
+  .logo img{position:absolute;inset:0;margin:auto;width:26px;height:26px;
+            object-fit:contain;display:block;opacity:0;transition:opacity .18s;
+            background:#fff}
+  .logo img.on{opacity:1}
+  a.nm{color:inherit;text-decoration:none}
+  a.nm:hover .t{text-decoration:underline;text-underline-offset:2px}
+  .ext{font-size:.72rem;color:var(--azure);font-weight:600}
+  .nm{flex:1;min-width:0;font-weight:600}
+  .ct{font-size:.8rem;color:var(--dim);font-weight:500}
+  .tag{flex:0 0 auto;font-size:.72rem;font-weight:700;padding:5px 10px;border-radius:999px;
+       letter-spacing:.03em;white-space:nowrap}
+  .t-gac{color:var(--gac);background:var(--gac-bg)}
+  .t-epa{color:var(--epa);background:var(--epa-bg)}
+  .t-ilc{color:var(--ilc);background:var(--ilc-bg)}
+  .t-ask{color:var(--ask);background:var(--ask-bg)}
+  .loading{font-size:.82rem;color:var(--dim);margin:8px 2px 0}
+  .bar{height:3px;background:var(--rule);border-radius:2px;overflow:hidden;margin-top:6px}
+  .bar i{display:block;height:100%;width:30%;background:var(--azure);
+         animation:slide 1.1s ease-in-out infinite}
+  @keyframes slide{0%{margin-left:-30%}100%{margin-left:100%}}
+  .none{padding:22px;border:1px dashed var(--rule);border-radius:12px;background:var(--ask-bg);color:var(--ask)}
+  .none b{color:var(--ink)}
+  .legend{margin-top:26px;border-top:1px solid var(--rule);padding-top:16px;font-size:.88rem;color:var(--dim)}
+  .legend div{margin-bottom:7px}
+  .legend .tag{margin-right:8px}
+  .more{margin-top:12px;text-align:center;color:var(--dim);font-size:.86rem}
+  button.more-btn{font:inherit;padding:10px 18px;border:1px solid var(--rule);background:#fff;
+                  border-radius:10px;cursor:pointer;color:var(--axelis);font-weight:600}
+  button.more-btn:hover{border-color:var(--azure)}
+  @media (prefers-color-scheme:dark){
+    /* On a navy ground the mid blue drops to 1.8:1, so the accent that
+       survives there is --axelis-light, per the sites' ground discipline. */
+    :root{--bg:#0B1220;--ink:#E8EEF8;--dim:#C3CBDD;--rule:#1E293B;--tint:#111C30;
+          --azure:#9EC0FF;--axelis:#9EC0FF;
+          --gac:#5DD99A;--gac-bg:#0E2A1B;--epa:#F0B86B;--epa-bg:#2A1F08;
+          --ilc:#C4A9FF;--ilc-bg:#1E1733;--ask:#C3CBDD;--ask-bg:#131C2C}
+    input,select,li,button.more-btn{background:#0F1A2C}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>University Finder</h1>
+  <p class="sub">Search every university we know of. Each one shows the charter it falls under, or tells you to ask.</p>
+
+  <div class="stats" id="stats" aria-live="polite"></div>
+
+  <div class="searchrow">
+    <input id="q" type="search" placeholder="Search a university…" autocomplete="off"
+           aria-label="Search for a university">
+    <select id="country" aria-label="Filter by destination"><option value="">All destinations</option></select>
+  </div>
+  <p class="hint" id="hint">Type at least two letters.</p>
+  <div class="loading" id="loading" hidden>Loading the full catalogue…<div class="bar"><i></i></div></div>
+
+  <ul id="out"></ul>
+  <div class="more" id="more"></div>
+
+  <div class="legend">
+    <div><span class="tag t-gac">GAC</span> Global Admissions Charter — a commissioned university. We hold a route to it.</div>
+    <div><span class="tag t-epa">EPA</span> European Public Access — tuition-free or low-fee public institution.</div>
+    <div><span class="tag t-ilc">ILC</span> International Language Charter.</div>
+    <div><span class="tag t-ask">ASK</span> A real institution we have not routed yet. Send it to us and we will check — this is not a no.</div>
+    <div style="margin-top:10px">If a name returns nothing at all, it is outside our catalogue entirely. Tell us and we will add it.</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  var META=null, FLAT=[], SEEN=Object.create(null), FULL=false,
+      LIMIT=50, shown=LIMIT, COUNTRIES=[];
+  var q=document.getElementById('q'), sel=document.getElementById('country'),
+      out=document.getElementById('out'), more=document.getElementById('more'),
+      hint=document.getElementById('hint'), stats=document.getElementById('stats'),
+      loading=document.getElementById('loading');
+  var me=document.currentScript, base=(me&&me.dataset.base)||'';
+  var LABEL={G:'GAC',E:'EPA',I:'ILC',A:'ASK'};
+
+  function norm(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,' ').trim();}
+  function initials(n){
+    var w=n.replace(/\(.*?\)/g,'').trim().split(/\s+/).filter(Boolean);
+    return (w.slice(0,2).map(function(x){return x[0];}).join('')||'?').toUpperCase();
+  }
+  function esc(s){return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+  function absorb(rows){
+    for(var i=0;i<rows.length;i++){
+      var r=rows[i], n=r[0], k=n.toLowerCase()+'|'+r[1];
+      if(SEEN[k]) continue;            // tier 1 wins; it carries the routed verdict
+      SEEN[k]=1;
+      FLAT.push({n:n,c:COUNTRIES[r[1]],v:r[2],h:r[3]||'',k:norm(n)});
+    }
+  }
+
+  function paintStats(){
+    var t=META.totals;
+    stats.innerHTML=
+      '<div class="stat"><b>'+t.universities.toLocaleString()+'</b><span>Universities</span></div>'+
+      '<div class="stat"><b>'+t.destinations+'</b><span>Destinations</span></div>'+
+      '<div class="stat"><b>'+t.gac.toLocaleString()+'</b><span>GAC</span></div>'+
+      '<div class="stat"><b>'+t.epa.toLocaleString()+'</b><span>EPA</span></div>'+
+      '<div class="stat"><b>'+t.routed.toLocaleString()+'</b><span>Routed today</span></div>';
+  }
+
+  function paintCountries(){
+    COUNTRIES.slice().sort().forEach(function(c){
+      var o=document.createElement('option'); o.value=c; o.textContent=c; sel.appendChild(o);
+    });
+  }
+
+  function setHint(){
+    hint.textContent = FULL
+      ? 'Type at least two letters. Searching all '+META.totals.universities.toLocaleString()+' universities.'
+      : 'Type at least two letters. Searching '+FLAT.length.toLocaleString()+
+        ' routed universities while the full catalogue loads.';
+  }
+
+  // Tier 1: the institutions we can place a student at today. Small, so the
+  // page is useful in well under a second.
+  fetch(base+'finder-covered.json').then(function(r){return r.json();}).then(function(d){
+    META=d; COUNTRIES=d.countries; paintStats(); paintCountries();
+    absorb(d.rows); setHint(); loading.hidden=false;
+    return fetch(base+'finder-all.json');
+  }).then(function(r){return r.json();}).then(function(d){
+    // Tier 2: everything else. Search already worked; now it is exhaustive.
+    COUNTRIES=d.countries; absorb(d.rows); FULL=true;
+    loading.hidden=true; setHint(); render();
+  }).catch(function(){
+    loading.hidden=true;
+    if(!FLAT.length) hint.textContent='Could not load the university list. Please refresh.';
+    else hint.textContent='Showing routed universities only — the full catalogue did not load.';
+  });
+
+  function render(){
+    if(!META) return;
+    var term=norm(q.value), country=sel.value;
+    out.innerHTML=''; more.innerHTML='';
+    if(term.length<2 && !country){ hint.hidden=false; return; }
+    hint.hidden=false;
+
+    var res=FLAT.filter(function(u){
+      if(country && u.c!==country) return false;
+      if(term.length<2) return true;
+      // Word-prefix, not any-substring: "Arden" must not return "Cardenal".
+      return u.k===term || u.k.indexOf(term)===0 || u.k.indexOf(' '+term)>-1;
+    });
+    // Routed first, then whole-name matches, then alphabetical. Someone
+    // searching a name wants the actionable answer at the top.
+    var ORD={G:0,E:1,I:2,A:3};
+    res.sort(function(a,b){
+      return (ORD[a.v]-ORD[b.v])
+          || ((a.k.indexOf(term)===0?0:1)-(b.k.indexOf(term)===0?0:1))
+          || a.n.localeCompare(b.n);
+    });
+
+    if(!res.length){
+      out.innerHTML='<li class="none">Nothing matching <b>'+esc(q.value||country)+
+        '</b> in our catalogue of '+META.totals.universities.toLocaleString()+
+        ' institutions'+(FULL?'':' loaded so far')+
+        '. Send it to us and we will check it — a missing name is not a no.</li>';
+      return;
+    }
+    res.slice(0,shown).forEach(function(u){
+      var li=document.createElement('li');
+      // Logos are fetched lazily and only for rows actually on screen, so a
+      // search never triggers thousands of icon requests. Initials stand in
+      // wherever the catalogue has no website or the icon fails to load.
+      // Initials are the base layer and are always drawn; the logo fades in
+      // over them only once it has actually decoded. An icon service that is
+      // slow, rate-limited or blocked (DuckDuckGo has been blocked by Indian
+      // ISPs, and this audience is largely in India) then costs us nothing -
+      // the tile still reads. onerror alone was not enough: the requests hung
+      // rather than failing, so nothing fired and the tile stayed blank.
+      var badge = '<span class="logo">'+esc(initials(u.n))+
+        (u.h ? '<img loading="lazy" decoding="async" alt="" '+
+               'src="https://www.google.com/s2/favicons?sz=64&domain='+esc(u.h)+'" '+
+               'onload="this.classList.add(\'on\')" onerror="this.remove()">' : '')+
+        '</span>';
+      var inner = '<span class="t">'+esc(u.n)+'</span><div class="ct">'+esc(u.c)+
+                  (u.h?' · <span class="ext">'+esc(u.h)+'</span>':'')+'</div>';
+      var nameEl = u.h
+        ? '<a class="nm" href="https://'+esc(u.h)+'" target="_blank" rel="noopener noreferrer">'+inner+'</a>'
+        : '<span class="nm">'+inner+'</span>';
+      li.innerHTML = badge + nameEl +
+                     '<span class="tag t-'+u.v.toLowerCase()+'">'+LABEL[u.v]+'</span>';
+      out.appendChild(li);
+    });
+    if(res.length>shown){
+      var b=document.createElement('button');
+      b.className='more-btn'; b.textContent='Show more ('+(res.length-shown).toLocaleString()+' left)';
+      b.onclick=function(){ shown+=LIMIT*4; render(); };
+      more.appendChild(b);
+    } else if(res.length>LIMIT){
+      more.textContent=res.length.toLocaleString()+' results';
+    }
+  }
+
+  function postHeight(){
+    if(location.search.indexOf('embed=1')<0 || parent===window) return;
+    parent.postMessage({axelisFinderHeight:document.documentElement.scrollHeight+8},'*');
+  }
+  new MutationObserver(postHeight).observe(document.body,{subtree:true,childList:true});
+  addEventListener('load',postHeight);
+
+  var t;
+  function debounced(){ shown=LIMIT; clearTimeout(t); t=setTimeout(render,110); }
+  q.addEventListener('input',debounced);
+  sel.addEventListener('change',debounced);
+  addEventListener('scroll',function(){
+    document.querySelector('.searchrow').classList.toggle('stuck',scrollY>8);
+  },{passive:true});
+})();
+</script>
+</body>
+</html>
