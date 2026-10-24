@@ -35,7 +35,7 @@ export default function AboutPage() {
                         </span>
                     </h1>
                     <p className="text-xl md:text-2xl text-[var(--color-dim)] max-w-3xl mx-auto leading-relaxed font-light">
-                        Your trusted partner in making study abroad dreams come true.
+                        We get Indian students into universities abroad, and tell them honestly what each route costs.
                     </p>
                 </div>
             </section>
