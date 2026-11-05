@@ -25,7 +25,7 @@ const CANONICAL = 'https://www.overseeducation.com/start';
 export const metadata = {
   title: 'Study Abroad From India, Priced Upfront',
   description:
-    'Every fee published before you pay, one counsellor from shortlist to arrival, and a refundable first payment on every student plan. Book a free first call.',
+    'Every fee published before you pay, one counsellor from shortlist to arrival, and a refundable first fee on every student plan (the GST is not refunded). Book a free first call.',
   alternates: { canonical: CANONICAL },
   robots: { index: true, follow: true },
   openGraph: {
@@ -40,7 +40,7 @@ export const metadata = {
 const PROOF = [
   { Icon: Receipt, title: 'Every fee published first', body: 'The plan price is on the page before you pay. No agency markup added later.' },
   { Icon: UserRound, title: 'One counsellor throughout', body: 'The person who shortlists with you is the person who sees your visa through.' },
-  { Icon: ShieldCheck, title: 'Refundable deposit', body: 'Both student plans refund the deposit if the visa or the offer does not come.' },
+  { Icon: ShieldCheck, title: 'Refundable first fee', body: 'Every student plan refunds its first fee if no university on your list makes you an offer. The GST is not refunded.' },
   { Icon: Plane, title: '29 destinations', body: 'Tuition-free public Europe through to the UK, USA, Canada and Australia.' },
 ];
 
@@ -84,7 +84,7 @@ export default function StartPage() {
             <p className="mt-5 text-lg leading-relaxed text-[var(--color-dim)] measure">
               Most agencies quote a service fee, then bill for the things they left out.
               We publish the whole fee on the page, put one counsellor on your file from
-              shortlist to arrival, and refund the deposit if the visa does not come.
+              shortlist to arrival, and refund your first fee if no university on your list makes you an offer.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <Link href="#start" className="btn btn-primary btn-lg">

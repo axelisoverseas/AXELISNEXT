@@ -31,6 +31,17 @@
  *     universities. Other US universities on the list carry no success fee.
  *     The list needs at least five universities, at least two of them Ivy.
  *   - 18% GST is added on top of every fee and itemised on the receipt.
+ *   - 5 Nov 2026 (EPC/GAC v2.1, ILC v1.3), per the founder's written
+ *     commitment to a student's family that day:
+ *       * GST is never refunded, on any charter or any refund. Only the base
+ *         fee comes back: ₹19,999 (EPC, ILC), ₹9,999 (GAC), ₹1,80,000 or
+ *         ₹90,000 of a success fee.
+ *       * An EPC student who goes ahead only with GAC universities gets the
+ *         ₹19,999 service fee back within 20 working days of visa granted
+ *         and arrival, with NO tuition-paid condition, and carries on under
+ *         the GAC terms with no ₹9,999 deposit. Not "leaving the process".
+ *       * Older PDFs (EPC/GAC v2.0, ILC v1.2) stay published: they are what
+ *         earlier students accepted.
  *   - Checkout is Cashfree. Razorpay and PayU are no longer used.
  */
 
@@ -49,12 +60,27 @@ export const ILC_LIST_COUNT = ILC_GROUPS.reduce((n, g) => n + g.members.length, 
 export const ILC_US_UNIVERSITIES = ILC_US;
 
 export const CHARTER_DOCS = {
-  // Version 2.0, reissued 26 September 2026. The Razorpay-era PDFs on Drive
-  // are retired and no longer linked from anywhere on the site.
+  // GAC/EPC v2.1 and ILC v1.3, reissued 5 November 2026. The previous
+  // versions stay in public/charters (CHARTER_DOCS_PREVIOUS) because they are
+  // what students signed before that date. Never delete them.
+  gac: '/charters/global-admissions-charter-v2.1.pdf',
+  epc: '/charters/europe-public-charter-v2.1.pdf',
+  ilc: '/charters/ivy-league-charter-v1.3.pdf',
+};
+
+export const CHARTER_DOCS_PREVIOUS = {
   gac: '/charters/global-admissions-charter-v2.0.pdf',
   epc: '/charters/europe-public-charter-v2.0.pdf',
   ilc: '/charters/ivy-league-charter-v1.2.pdf',
 };
+
+/* Effective date of GAC/EPC v2.1 and ILC v1.3. SET TO THE DEPLOY DATE, and set
+   EFFECTIVE in docs/brand/kit/charters/build_charters.py to match, then rebuild
+   the PDFs. Until deploy, checkout still shows v2.0 / v1.2. */
+export const CHARTER_EFFECTIVE = '5 November 2026';
+
+/* Said once, on every refund surface. */
+export const GST_NOT_REFUNDED = 'GST is never refunded, on any plan. Every refund is the fee itself, without the GST.';
 
 /* The eight Ivy League universities, by their usual names. Used only to say
    where we apply; Axelis is not affiliated with the Ivy League or any of them. */
@@ -77,12 +103,12 @@ export const PLANS = [
     formerly: 'Zero Consultation Fee',
     for: 'Global private universities: UK, Ireland, USA, Canada, Australia and more.',
     headline: '₹9,999',
-    headlineNote: 'Refundable deposit. No consultation fee.',
+    headlineNote: 'Refundable deposit (GST is not refunded). No consultation fee.',
     pay: [
-      { what: 'Onboarding deposit', amount: '₹9,999', gst: '+ ₹1,800 GST', when: 'Now, to start', note: 'Refundable. See below.' },
+      { what: 'Onboarding deposit', amount: '₹9,999', gst: '+ ₹1,799.82 GST', when: 'Now, to start', note: 'The ₹9,999 is refundable. The GST is not. See below.' },
       { what: 'Consultation fee', amount: '₹0', when: 'Never', note: 'Axelis charges nothing for the consultancy itself.' },
     ],
-    total: 'Nothing, if you are placed',
+    total: '₹11,798.82. If you are placed, the ₹9,999 comes back and only the ₹1,799.82 GST stays.',
     scope: [
       'Shortlisting in three rounds: your subject, your budget, then the final university list',
       'A live status tracker with every shortlisted university and its deadline',
@@ -94,11 +120,11 @@ export const PLANS = [
     refundYes: [
       {
         title: 'You are placed',
-        body: 'The full ₹9,999 comes back once your visa is granted, you have arrived, and you have paid your university tuition in full. A placed student pays Axelis nothing.',
+        body: 'Your ₹9,999 comes back once your visa is granted, you have arrived, and you have paid your university tuition in full. The ₹1,799.82 GST is not refunded. A placed student pays Axelis no fee.',
       },
       {
         title: 'No university makes you an offer',
-        body: 'The full ₹9,999 comes back if no university on your status tracker makes you any offer, conditional or unconditional.',
+        body: 'Your ₹9,999 comes back if no university on your status tracker makes you any offer, conditional or unconditional. The GST is not refunded.',
       },
     ],
     refundNo: [
@@ -107,25 +133,25 @@ export const PLANS = [
       'You turn down an offer from a university on your shortlist',
       'You leave Axelis after receiving an offer from one of your preferred universities',
     ],
-    timeline: 'Within 20 working days of the refund condition being met.',
+    timeline: 'Within 20 working days of the refund condition being met. GST is never refunded.',
   },
   {
     key: 'epc',
     name: 'Europe Public Charter',
     short: 'EPC',
     formerly: 'Zero Tuition Fee',
-    for: 'Tuition-free public universities in Europe: Germany, Norway, Finland and more. Private universities included free, under the Global Admissions Charter.',
+    for: 'Tuition-free public universities in Europe: Germany, Norway, Finland and more. The Global Admissions Charter is included free for private universities: no deposit, no extra fee.',
     headline: '₹19,999',
     headlineNote: 'Now. ₹1,80,000 only if you accept an offer.',
     pay: [
-      { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,600 GST', when: 'Now, to start', note: 'Refunded if no offer comes.' },
+      { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,599.82 GST', when: 'Now, to start', note: 'The ₹19,999 is refunded if no offer comes, or if you go ahead only with Global Admissions Charter universities. The GST is not.' },
       { what: 'Success fee', amount: '₹1,80,000', gst: '+ ₹32,400 GST', when: 'Only when you accept an offer from a tuition-free public university', note: 'Covers final enrolment and visa processing.' },
     ],
-    total: '₹1,99,999 + GST (₹2,35,999), and only if you accept an offer',
+    total: '₹1,99,999 + GST (₹2,35,998.82), and only if you accept an offer from a tuition-free public university',
     scope: [
       'Profile evaluation: the right subject and the right country for your budget',
       'Shortlisting of tuition-free public universities',
-      'The Global Admissions Charter included free: private universities can go on the same preference list, with no ₹9,999 deposit',
+      'The Global Admissions Charter included free: private universities go on the same preference list, with no ₹9,999 deposit and no extra fee',
       'A live status tracker with applications, statuses and deadlines',
       'A dedicated email ID for your applications, used only for them',
       'Europass CV, Statement of Purpose and Letters of Recommendation',
@@ -137,20 +163,26 @@ export const PLANS = [
     refundYes: [
       {
         title: 'No university on your preference list makes you an offer',
-        body: 'The ₹19,999 service fee comes back in full if no university on your preference list, the one in your status tracker and your portal, makes you an offer.',
-        note: 'Judged across every intake on your list, not one intake at a time, because public universities run more than one.',
+        body: 'Your ₹19,999 service fee comes back if no university on your preference list, the one in your status tracker and your portal, makes you an offer. The GST is not refunded.',
+        note: 'Judged across every intake on your list, not one intake at a time, because public universities run more than one. Paid within 14 days of approval.',
+      },
+      {
+        title: 'You go ahead only with Global Admissions Charter universities',
+        body: 'If you decide to go ahead only with Global Admissions Charter universities (private and paid-tuition) and not with any tuition-free public university, [CUT-OFF], your ₹19,999 service fee comes back. It is paid within 20 working days of your visa being granted and you arriving. You do not need to have paid your tuition first. The GST is not refunded.',
+        note: 'From the switch, your applications continue under the Global Admissions Charter terms and conditions. You pay no ₹9,999 deposit and no other fee for them.',
       },
       {
         title: 'Your visa is refused, and it is not down to you',
-        body: 'The success fee you have paid comes back in full if your visa is refused for a reason not attributable to you.',
+        body: 'The ₹1,80,000 success fee comes back if your visa is refused for a reason not attributable to you. The GST on it is not refunded.',
+        note: 'Paid within 14 days of approval.',
       },
     ],
     refundNo: [
-      'You receive an offer from any university on your preference list, public or private. A private offer carries no success fee.',
-      'You leave the process yourself after the first shortlist has been shared',
+      'You receive an offer from any university on your preference list, public or private. A private offer carries no success fee. Exception: if you go ahead only with Global Admissions Charter universities, the switch refund above applies.',
+      'You leave the process yourself after the first shortlist has been shared. Going ahead only with Global Admissions Charter universities is not leaving the process.',
       'You decline an offer from a university that was not your preference. The ₹19,999 is not refunded, but you owe no success fee either.',
     ],
-    timeline: 'Within 14 days of approval, to the payment method you used.',
+    timeline: 'To the payment method you used: within 14 days of approval, or within 20 working days of visa and arrival if you go ahead only with Global Admissions Charter universities. GST is never refunded.',
   },
   {
     key: 'ilc',
@@ -161,10 +193,10 @@ export const PLANS = [
     headline: '₹19,999',
     headlineNote: "Now. ₹1,80,000 only if you accept an offer from the ILC list.",
     pay: [
-      { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,600 GST', when: 'Now, to start', note: 'Refunded if no offer comes.' },
+      { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,599.82 GST', when: 'Now, to start', note: 'The ₹19,999 is refunded if no offer comes. The GST is not.' },
       { what: 'Success fee', amount: '₹1,80,000', gst: '+ ₹32,400 GST', when: 'Only when you accept an offer from a university on the ILC list: the Ivy League, Ivy Plus, Public Ivies or Little Ivies', note: 'Other US universities on your list: no success fee.' },
     ],
-    total: '₹1,99,999 + GST (₹2,35,999), and only if you accept an offer from the ILC list',
+    total: '₹1,99,999 + GST (₹2,35,998.82), and only if you accept an offer from the ILC list',
     scope: [
       'Profile evaluation against what the Ivy League and other top US programmes actually weigh',
       `A shortlist of programmes across the 49 universities on the ILC list, balanced with ${ILC_US.length} more US universities we work with`,
@@ -180,12 +212,12 @@ export const PLANS = [
     refundYes: [
       {
         title: 'No university on your preference list makes you an offer',
-        body: 'The ₹19,999 service fee comes back in full if no university on your preference list, on the ILC list or not, makes you an offer.',
+        body: 'Your ₹19,999 service fee comes back if no university on your preference list, on the ILC list or not, makes you an offer. The GST is not refunded.',
         note: 'Your list needs at least five universities, at least two of them from the ILC list, so that it is a real application strategy and not a lottery ticket.',
       },
       {
         title: 'Your visa is refused, and it is not down to you',
-        body: 'Half the success fee you have paid, ₹90,000 plus the GST on it, comes back if your F-1 visa is refused for a reason not attributable to you.',
+        body: 'Half the success fee, ₹90,000, comes back if your F-1 visa is refused for a reason not attributable to you. The GST is not refunded.',
         note: 'Half, not all, because US student-visa refusals are common and the admission work is complete by then. None of it comes back if you have deferred the offer to a later intake.',
       },
     ],
@@ -195,7 +227,7 @@ export const PLANS = [
       'You decline an offer from a university on your list. The ₹19,999 is not refunded; you owe a success fee only if you accept an offer from the ILC list.',
       'You defer an accepted offer to a later intake. The success fee stays due and none of it is refunded, even if a later visa is refused.',
     ],
-    timeline: 'Within 14 days of approval, to the payment method you used.',
+    timeline: 'Within 14 days of approval, to the payment method you used. GST is never refunded.',
     notIncluded: 'Test fees (GRE, GMAT, TOEFL, IELTS, Duolingo), university application fees, the SEVIS fee and the visa fee are paid by you directly. Test preparation is sold separately.',
   },
 ];

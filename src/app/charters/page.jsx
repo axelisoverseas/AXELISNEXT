@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { ArrowRight, Check, X, FileText, Scale, Undo2 } from 'lucide-react';
 
-import { PLANS, YOUR_PART, LEGAL, CHARTER_DOCS } from '@/data/charterPromises';
+import { PLANS, YOUR_PART, LEGAL, CHARTER_DOCS, CHARTER_DOCS_PREVIOUS, GST_NOT_REFUNDED, CHARTER_EFFECTIVE } from '@/data/charterPromises';
 
 /**
  * Every promise in the two student charters, on one page.
@@ -100,7 +100,7 @@ export default function ChartersPage() {
       <section className="sec">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHead label="Payment terms" title="What you pay, and exactly when.">
-            Nothing is added later. 18% GST is added on top of every fee and shown on your receipt. Every amount below is on the checkout form before you pay.
+            Nothing is added later. 18% GST is added on top of every fee and shown on your receipt. Every amount below is on the checkout form before you pay. {GST_NOT_REFUNDED}
           </SectionHead>
 
           <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
@@ -149,7 +149,7 @@ export default function ChartersPage() {
       <section className="sec border-t border-[var(--color-rule)] bg-[var(--color-tint)]">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <SectionHead label="Refunds" title="When your money comes back, and when it does not.">
-            Both lists matter equally. Read the second one as carefully as the first.
+            Both lists matter equally. Read the second one as carefully as the first. {GST_NOT_REFUNDED}
           </SectionHead>
 
           <div className="grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
@@ -264,6 +264,12 @@ export default function ChartersPage() {
             </a>
           </div>
           <p className="mt-6 text-sm text-[var(--color-dim)]">
+            Signed before {CHARTER_EFFECTIVE}? Your agreement is the version you accepted:{' '}
+            <a href={CHARTER_DOCS_PREVIOUS.gac} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">GAC v2.0</a>,{' '}
+            <a href={CHARTER_DOCS_PREVIOUS.epc} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">EPC v2.0</a>,{' '}
+            <a href={CHARTER_DOCS_PREVIOUS.ilc} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">ILC v1.2</a>.
+          </p>
+          <p className="mt-3 text-sm text-[var(--color-dim)]">
             Questions before you pay: <a href="mailto:info@overseeducation.com" className="underline underline-offset-4">info@overseeducation.com</a> or +91 88823 20522.
           </p>
         </div>

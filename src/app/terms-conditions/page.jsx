@@ -135,6 +135,17 @@ export default function TermsConditionsPage() {
             items, EMI refund routing and our response timelines. That document controls; these
             terms deliberately do not restate its figures. Where the two differ, it prevails.
           </p>
+          <p>
+            The student charters are the exception. Refunds on the Global Admissions Charter, the
+            Europe Public Charter and the Ivy League Charter are governed only by the charter you
+            accepted at checkout, published on the{' '}
+            <Link href="/charters" className="text-[var(--color-navy)] underline underline-offset-4">
+              charters page
+            </Link>
+            . The cooling-off window and refund tiers of the Cancellation &amp; Refund Policy do
+            not apply to them. GST is never refunded on a charter: every charter refund is the
+            fee itself.
+          </p>
         </Section>
 
         <Section number={6} title="Outcome guarantees">

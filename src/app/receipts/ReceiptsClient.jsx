@@ -17,12 +17,12 @@ import { reviewsSummaryLine } from '@/data/googleReviews';
 const SECTIONS = ['hero', 'proof', 'promise', 'stories', 'charters', 'countries', 'video', 'close'];
 
 const CHARTERS = [
-  { k: 'gac', tag: 'GAC', name: 'Global Admissions Charter', price: '₹9,999', small: '+ GST, refundable', img: '/photos/photo-1513635269975-59663e0ac1ad-1200.jpg', alt: 'London', from: 'left',
-    body: 'Paid-tuition universities: the UK, USA, Canada, Ireland, Australia and more. The deposit comes back once you are placed, or if no university on your list makes you an offer.' },
+  { k: 'gac', tag: 'GAC', name: 'Global Admissions Charter', price: '₹9,999', small: '+ GST; ₹9,999 refundable', img: '/photos/photo-1513635269975-59663e0ac1ad-1200.jpg', alt: 'London', from: 'left',
+    body: 'Paid-tuition universities: the UK, USA, Canada, Ireland, Australia and more. The ₹9,999 comes back once you are placed, or if no university on your list makes you an offer. The GST does not.' },
   { k: 'epc', tag: 'EPC', name: 'Europe Public Charter', price: '₹19,999', small: '+ GST now', img: '/photos/photo-1527866959252-deab85ef7d1b-1200.jpg', alt: 'Germany', from: 'right',
-    body: 'Tuition-free public universities in Germany, France, Italy, the Netherlands and more. Refunded if no university on your list makes an offer. Private universities included free.' },
+    body: 'Tuition-free public universities in Germany, France, Italy, the Netherlands and more. The ₹19,999 is refunded if no university on your list makes an offer; the GST is not. The Global Admissions Charter is included free: no deposit, no extra fee.' },
   { k: 'ilc', tag: 'ILC', name: 'Ivy League Charter', price: '₹19,999', small: '+ GST now', img: '/photos/photo-1485871981521-5b1fd3805eee-1200.jpg', alt: 'New York', from: 'left', href: '/ivy-league',
-    body: "Master's and MBA applications to the Ivy League, Ivy Plus, Public Ivies and Little Ivies. Refunded if no university on your list makes an offer. ₹1,80,000 only if you accept an offer from one of those 49." },
+    body: "Master's and MBA applications to the Ivy League, Ivy Plus, Public Ivies and Little Ivies. The ₹19,999 is refunded if no university on your list makes an offer; the GST is not. ₹1,80,000 only if you accept an offer from one of those 49." },
 ];
 
 export default function ReceiptsClient({ total, destinations, rail }) {

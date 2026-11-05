@@ -65,6 +65,8 @@ export const policySections = [
       },
       { p: 'Where a programme appears under more than one description, this policy covers it under every description. Nothing in how a programme is presented changes the cancellation and refund terms that apply to it.' },
       { p: 'Programme fees range from ₹42,000 to ₹3,00,000. Each programme carries a dedicated page on overseeducation.com, at /certifications or /programmes, with its own fee, duration, syllabus, and outcome deliverables.' },
+
+      { p: 'This policy does not apply to the student charters: the Global Admissions Charter, the Europe Public Charter and the Ivy League Charter. Their refunds are governed only by the charter the student accepted, published at overseeducation.com/charters. GST is never refunded on a charter; every charter refund is the fee itself.' },
     ],
   },
   {

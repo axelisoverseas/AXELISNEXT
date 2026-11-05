@@ -30,7 +30,7 @@ const howItWorks = [
   {
     Icon: FileText,
     title: 'Sign + pay online',
-    body: 'Refundable deposit to start. Every fee that can ever apply is stated on the plan card before you pay, no hidden agency markup later. Receipt arrives in your inbox the same day.',
+    body: 'Refundable deposit to start; the GST on it is not refunded. Every fee that can ever apply is stated on the plan card before you pay, no hidden agency markup later. Receipt arrives in your inbox the same day.',
   },
   {
     Icon: GraduationCap,
@@ -98,7 +98,7 @@ function ProductsContent() {
           </motion.h1>
 
           <motion.p variants={fadeInUp} className="text-lg md:text-xl mb-10 text-white/90 max-w-3xl mx-auto leading-relaxed">
-            Global Admissions Charter (GAC) for global private universities. Europe Public Charter (EPC) for tuition-free public Europe. Both come with a refundable deposit and a dedicated counsellor.
+            Global Admissions Charter (GAC) for global private universities. Europe Public Charter (EPC) for tuition-free public Europe. Both come with a refundable first fee (the GST is not refunded) and a dedicated counsellor.
           </motion.p>
 
           <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -245,7 +245,7 @@ function ProductsContent() {
               Three charters. One destination, yours.
             </h2>
             <p className="text-[var(--color-navy)]/85 text-lg">
-              Pick the route that matches where you want to study. Each comes with a refundable first payment and a dedicated counsellor. Fees and refund conditions differ, and are set out in full on each card below.
+              Pick the route that matches where you want to study. Each comes with a refundable first fee (the GST is not refunded) and a dedicated counsellor. Fees and refund conditions differ, and are set out in full on each card below.
             </p>
             <p className="mt-3">
               <Link href="/charters" className="inline-flex items-center gap-1.5 text-sm font-semibold text-[var(--color-axelis)] underline underline-offset-4">
@@ -318,11 +318,11 @@ function ProductsContent() {
                     <span className="px-2 py-0.5 rounded-md bg-rose-50 border border-rose-200 text-rose-700 text-[10px] font-bold">50% OFF</span>
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-2">₹9,999</div>
-                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Onboarding deposit, <span className="text-emerald-700 font-semibold">100% refundable</span></p>
+                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Onboarding deposit, <span className="text-emerald-700 font-semibold">₹9,999 refundable</span>; the GST is not</p>
                   <p className="text-[var(--color-navy)]/90 text-xs mt-1.5 leading-relaxed">
-                    Refunded in full once your visa is granted, you have arrived, and you have paid your
-                    university tuition in full, so a placed student pays Axelis nothing. Also refunded
-                    if you receive zero offers. Full conditions in the Global Admissions Charter.
+                    The ₹9,999 is refunded once your visa is granted, you have arrived, and you have paid your
+                    university tuition in full, so a placed student pays Axelis no fee. Also refunded
+                    if you receive zero offers. GST is never refunded. Full conditions in the Global Admissions Charter.
                   </p>
                 </div>
 
@@ -418,7 +418,7 @@ function ProductsContent() {
                     <span className="px-2 py-0.5 rounded-md bg-[var(--dawn-glow)]/20 border border-[var(--color-axelis)]/30 text-[var(--color-axelis)] text-[10px] font-bold">50% OFF</span>
                   </div>
                   <div className="text-4xl md:text-5xl font-extrabold text-[var(--color-navy)] mb-2">₹19,999</div>
-                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Service fee, <span className="text-emerald-700 font-semibold">refundable</span> if zero offers received.</p>
+                  <p className="text-[var(--color-navy)]/85 text-sm font-medium">Service fee, <span className="text-emerald-700 font-semibold">₹19,999 refundable</span> if zero offers received. The GST is not.</p>
                   <p className="text-[var(--color-navy)]/90 text-xs mt-1.5 leading-relaxed">
                     Plus a <span className="text-[var(--color-axelis)] font-semibold">₹1,80,000 Success Fee</span>, payable only
                     if and when you accept an offer from a tuition-free public university. Total ₹1,99,999.
@@ -429,7 +429,7 @@ function ProductsContent() {
                 <ul className="space-y-3 mb-8 text-sm">
                   {[
                     'Targeted shortlist of tuition-free public universities',
-                    'Private universities too, with the Global Admissions Charter included free',
+                    'Private universities too, with the Global Admissions Charter included free: no ₹9,999 deposit, no extra fee',
                     'Language certification advisory (DELF, Goethe, IELTS)',
                     'Direct application submission to chosen universities',
                     'Visa file build + financial documentation',
@@ -473,7 +473,7 @@ function ProductsContent() {
               <div className="mt-6 rounded-2xl border border-[var(--color-rule)] bg-[var(--color-tint)] p-5">
                 <p className="text-4xl font-extrabold text-[var(--color-navy)] tabular-nums">&#8377;19,999 <span className="text-base font-semibold text-[var(--color-dim)]">+ GST now</span></p>
                 <p className="mt-2 text-sm text-[var(--color-navy)]/85">
-                  Refunded in full if no university on your preference list makes you an offer. Then a <b>&#8377;1,80,000</b> success fee + GST, payable only if and when you accept an offer from one of the 49 on the ILC list. Other US offers carry no success fee. Total &#8377;1,99,999 + GST.
+                  The &#8377;19,999 is refunded if no university on your preference list makes you an offer; the GST is not. Then a <b>&#8377;1,80,000</b> success fee + GST, payable only if and when you accept an offer from one of the 49 on the ILC list. Other US offers carry no success fee. Total &#8377;1,99,999 + GST.
                 </p>
               </div>
               <div className="mt-6 flex flex-col sm:flex-row gap-3">
@@ -522,7 +522,7 @@ function ProductsContent() {
                   ['Cost of living', 'Higher (UK/US/AU metros)', 'Moderate (most European cities)'],
                   ['Language requirement', 'IELTS / TOEFL / PTE', 'IELTS + local language (DELF / Goethe A1-A2)'],
                   ['Axelis fee', '₹9,999 onboarding', '₹19,999 service fee + ₹1,80,000 success fee on accepting an offer (₹1,99,999 total)'],
-                  ['Refund policy', 'Refunded in full once visa granted, arrived and tuition paid in full, or if zero offers', 'Service fee refunded if zero offers; success fee refunded on visa refusal not attributable to you'],
+                  ['Refund policy', '₹9,999 refunded once visa granted, arrived and tuition paid in full, or if zero offers. GST never refunded', '₹19,999 service fee refunded if zero offers, or if you go ahead only with GAC universities; ₹1,80,000 success fee refunded on visa refusal not attributable to you. GST never refunded'],
                   ['Application timeline', 'Rolling intakes, plan 6-9 months ahead', 'Strict deadlines, plan 9-12 months ahead'],
                   ['Post-study work visa', 'UK 2yr, USA 1-3yr OPT, Canada up to 3yr, AU 2-4yr', 'Germany 18mo job seeker, Norway 1yr, Finland 1yr'],
                   ['Scholarship support', 'Yes, every relevant grant applied for', 'Yes: DAAD, Erasmus+, country-specific'],
@@ -732,7 +732,7 @@ const ROUTES = [
     forWho:
       'For students set on the UK, USA, Canada, Australia, Ireland or New Zealand, who accept that tuition will be paid and want the application run properly.',
     price: '\u20b99,999',
-    priceNote: 'Refunded in full once you are placed, so a placed student pays Axelis nothing.',
+    priceNote: 'The ₹9,999 is refunded once you are placed, so a placed student pays Axelis no fee. The GST is not refunded.',
     facts: [
       { k: 'Tuition', v: '\u20b98 to 35 lakh a year, set by the university' },
       { k: 'Destinations', v: 'UK, USA, Canada, Australia, Ireland, NZ and 23 more' },

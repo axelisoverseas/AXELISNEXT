@@ -31,7 +31,7 @@ const BY_STATE = Object.entries(
 
 const FAQ = [
   { q: 'Does this guarantee an Ivy League admission?',
-    a: 'No. Nobody can, and anyone who says otherwise is selling you something. What the charter does guarantee is the money: if no university on your preference list makes you an offer, the ₹19,999 comes back, and the ₹1,80,000 is only ever due if you accept an offer from a university on the ILC list.' },
+    a: 'No. Nobody can, and anyone who says otherwise is selling you something. What the charter does guarantee is the money: if no university on your preference list makes you an offer, the ₹19,999 comes back (the GST does not), and the ₹1,80,000 is only ever due if you accept an offer from a university on the ILC list.' },
   { q: 'Why does my list need other US universities on it?',
     a: 'Because a list of only the most selective universities is a lottery ticket, not a strategy. The charter asks for at least five universities, at least two of them from the ILC list. The others are US universities that fit your profile, applied to with the same care, and an offer from any of them carries no success fee.' },
   { q: 'Which universities carry the success fee?',
@@ -41,7 +41,7 @@ const FAQ = [
   { q: 'What is not included?',
     a: 'Test fees (GRE, GMAT, TOEFL, IELTS, Duolingo), each university’s application fee, the SEVIS fee and the visa fee. You pay those directly. Test preparation is available separately on our Test Prep page.' },
   { q: 'What if my US visa is refused?',
-    a: 'If it is refused for a reason not down to you, half the success fee you paid comes back: ₹90,000 plus the GST on it. Half, because US student-visa refusals are common and the admission work is done by then. If you defer an accepted offer to a later intake, the success fee stays due and none of it is refunded.' },
+    a: 'If it is refused for a reason not down to you, half the success fee comes back: ₹90,000. The GST is not refunded. Half, because US student-visa refusals are common and the admission work is done by then. If you defer an accepted offer to a later intake, the success fee stays due and none of it is refunded.' },
   { q: 'When should I start?',
     a: 'Most graduate programmes at these universities admit once a year, for the autumn intake, and their deadlines commonly fall between December and February. Starting nine to twelve months ahead leaves time for tests, essays and recommendations.' },
   { q: 'Are you connected to the Ivy League?',
@@ -51,12 +51,12 @@ const FAQ = [
 export const metadata = {
   title: 'Ivy League Charter: Apply to the Ivy League, Pay Only If You Get In',
   description:
-    "Master's and MBA applications to the Ivy League, Ivy Plus, Public Ivies and Little Ivies. ₹19,999 + GST to start, refunded if no offer comes; ₹1,80,000 + GST only when you accept an offer from one of the 49 universities on the ILC list.",
+    "Master's and MBA applications to the Ivy League, Ivy Plus, Public Ivies and Little Ivies. ₹19,999 + GST to start, with the ₹19,999 refunded if no offer comes; ₹1,80,000 + GST only when you accept an offer from one of the 49 universities on the ILC list.",
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
   openGraph: {
     title: 'Ivy League Charter | Axelis Overseas',
-    description: '₹19,999 + GST to start, refunded if no offer comes. ₹1,80,000 + GST only when you accept an offer from the Ivy League, Ivy Plus, a Public Ivy or a Little Ivy.',
+    description: '₹19,999 + GST to start, with the ₹19,999 refunded if no offer comes. ₹1,80,000 + GST only when you accept an offer from the Ivy League, Ivy Plus, a Public Ivy or a Little Ivy.',
     url: URL,
     images: [{ url: SESSION?.poster || '/photos/photo-1485871981521-5b1fd3805eee-1200.jpg', width: 1280, height: 720 }],
   },
@@ -68,7 +68,7 @@ export default function IvyLeaguePage() {
       '@context': 'https://schema.org', '@type': 'Service', name: 'Ivy League Charter', serviceType: 'Study abroad admissions counselling',
       provider: { '@type': 'Organization', name: 'Axelis Overseas Education Pvt Ltd', url: 'https://www.overseeducation.com' },
       areaServed: { '@type': 'Country', name: 'India' }, url: URL,
-      offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'Service fee, plus 18% GST. Refunded if no university on the preference list makes an offer.' },
+      offers: { '@type': 'Offer', price: '19999', priceCurrency: 'INR', description: 'Service fee, plus 18% GST. The ₹19,999 is refunded if no university on the preference list makes an offer; the GST is not.' },
     },
     { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: FAQ.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })) },
   ];
@@ -83,7 +83,7 @@ export default function IvyLeaguePage() {
         <div className={`${s.wrap} ${s.center}`}>
           <h1 className={s.h1}>Apply to the Ivy League. <span className={s.accent}>Pay the big fee only if you get in.</span></h1>
           <p className={s.sub}>
-            {ILC.headline} + GST to start, refunded if no university on your list makes you an offer.
+            {ILC.headline} + GST to start. The {ILC.headline} is refunded if no university on your list makes you an offer; the GST is not.
             ₹1,80,000 + GST only when you accept an offer from the Ivy League, the Ivy Plus, a Public Ivy or a
             Little Ivy. Every other US university on your list, from Northeastern to Johns Hopkins, is included free.
           </p>
@@ -229,14 +229,14 @@ export default function IvyLeaguePage() {
               ))}
               <div className={`${s.priceRow} ${s.priceTotal}`}>
                 <b>The most you ever pay</b>
-                <div className={s.priceAmt}>₹2,35,999<small>incl. GST, only if you accept an offer from the ILC list</small></div>
+                <div className={s.priceAmt}>₹2,35,998.82<small>incl. GST, only if you accept an offer from the ILC list</small></div>
               </div>
               <p className={s.fine}>{ILC.notIncluded}</p>
             </div>
             <div className={`${s.card} ${s.enrol}`}>
               <b>Start your Ivy League Charter</b>
               <p>Read the disclosure, then pay the service fee on Cashfree. Your counsellor calls you within one working day.</p>
-              <CheckoutButton product="ivy-league-charter" label="Enrol for ₹23,599 (incl. GST)" className={`${s.pillBtn} ${s.full}`} />
+              <CheckoutButton product="ivy-league-charter" label="Enrol for ₹23,598.82 (incl. GST)" className={`${s.pillBtn} ${s.full}`} />
               <a href={CHARTER_DOCS.ilc} target="_blank" rel="noopener noreferrer" className={s.pillGhost} style={{ justifyContent: 'center' }}>
                 <FileText size={16} aria-hidden="true" /> Read the charter v1.2 (PDF)
               </a>

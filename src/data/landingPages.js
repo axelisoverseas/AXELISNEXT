@@ -70,7 +70,7 @@ export const LANDING_PAGES = {
     proof: [
       { title: 'Published before you pay', body: 'Europe Public Charter ₹19,999. Global Admissions Charter ₹9,999. Both figures are on the page before you speak to anyone.' },
       { title: 'The success fee waits for a result', body: '\u20b91,80,000, payable only if and when you accept an offer. No offer, nothing to pay.' },
-      { title: 'Refunded on a placement', body: 'The \u20b99,999 Global Admissions Charter deposit is returned in full once your visa is granted, you have arrived and your tuition is paid, so a placed student pays Axelis nothing.' },
+      { title: 'Refunded on a placement', body: 'The \u20b99,999 Global Admissions Charter deposit is returned once your visa is granted, you have arrived and your tuition is paid, so a placed student pays Axelis no fee. The GST is not refunded.' },
       { title: 'No margin on third parties', body: 'Application, apostille, exam and visa charges go to those bodies directly. We add nothing.' },
     ],
     bodyHeading: 'Why Axelis',
@@ -81,8 +81,8 @@ export const LANDING_PAGES = {
     ],
     faqs: [
       { q: 'What does the upfront fee cover?', a: 'Profile assessment, university shortlisting and the application work that follows. The Global Admissions Charter is ₹9,999 and the Europe Public Charter is ₹19,999. Both are published on the Student Plans page.' },
-      { q: 'What is the success fee, and when is it due?', a: 'On the Europe Public Charter it is ₹1,80,000, taking the total to ₹1,99,999, and it is payable only if and when you accept an offer from a tuition-free public university. The Global Admissions Charter carries no success fee: its ₹9,999 deposit is returned in full once you are placed.' },
-      { q: 'What if no offer comes at all?', a: 'The success fee is never charged, and every charter refunds the upfront fee if you receive zero offers. You are out some time, not a six-figure fee.' },
+      { q: 'What is the success fee, and when is it due?', a: 'On the Europe Public Charter it is ₹1,80,000, taking the total to ₹1,99,999, and it is payable only if and when you accept an offer from a tuition-free public university. The Global Admissions Charter carries no success fee: its ₹9,999 deposit is returned once you are placed. The GST is not refunded.' },
+      { q: 'What if no offer comes at all?', a: 'The success fee is never charged, and every charter refunds the upfront fee if you receive zero offers. The GST on it is not refunded. You are out some time and the GST, not a six-figure fee.' },
       { q: 'Are there other costs?', a: 'Yes, and none of them are ours. University application fees, apostille and attestation, English and entrance tests, the visa fee and any health surcharge are paid directly to those bodies. We take no commission on any of them and we list them before you commit.' },
     ],
   },

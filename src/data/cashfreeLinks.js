@@ -27,16 +27,16 @@ export const cashfreeLinks = {
   // not only in the charter they receive afterwards.
   'global-admissions-charter': {
     amount: 9999, url: 'https://payments.cashfree.com/forms/axelis-global-admissions-charter', label: 'Global Admissions Charter (GAC)',
-    disclosure: 'This ₹9,999 is refunded in full once your visa is granted, you have arrived, and you have paid your university tuition in full, or if no university on your preference list makes you an offer. See Section 3 of the Global Admissions Charter v2.0. GAC carries no other Axelis fee.',
+    disclosure: 'This ₹9,999 is refunded once your visa is granted, you have arrived, and you have paid your university tuition in full, or if no university on your preference list makes you an offer. The ₹1,799.82 GST is never refunded. See Section 3 of the Global Admissions Charter v2.1. GAC carries no other Axelis fee. Europe Public Charter students do not pay this deposit.',
   },
   'europe-public-charter': {
     amount: 19999, url: 'https://payments.cashfree.com/forms/axelis-europe-public-charter', label: 'Europe Public Charter (EPC)',
-    disclosure: 'EPC is a two-part fee. This ₹19,999 Service Fee is payable now, and refunded in full if no university on your preference list makes you an offer. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a tuition-free public university. Total ₹1,99,999 plus GST. No offer, or an offer you decline, means no Success Fee.',
+    disclosure: 'EPC is a two-part fee. This ₹19,999 Service Fee is payable now. It is refunded if no university on your preference list makes you an offer, or if you go ahead only with Global Admissions Charter universities, [CUT-OFF] (paid within 20 working days of your visa and arrival). GST is never refunded. The Global Admissions Charter is included free: no deposit, no extra fee. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a tuition-free public university. Total ₹1,99,999 plus GST. No offer, or an offer you decline, means no Success Fee.',
   },
 
   'ivy-league-charter': {
     amount: 19999, url: 'https://payments.cashfree.com/forms/axelis-ivy-league-charter', label: 'Ivy League Charter (ILC)',
-    disclosure: 'ILC is a two-part fee. This ₹19,999 Service Fee is payable now, and refunded in full if no university on your preference list makes you an offer. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a university on the ILC list (the Ivy League, Ivy Plus, Public Ivies and Little Ivies, 49 universities, Annex A of the charter v1.2); other US universities on your list carry no success fee. If your F-1 visa is refused for a reason not down to you, half the success fee is refunded; if you defer an accepted offer to a later intake, none of it is. Total ₹1,99,999 plus GST. No admission, scholarship or visa is guaranteed.',
+    disclosure: 'ILC is a two-part fee. This ₹19,999 Service Fee is payable now, and refunded if no university on your preference list makes you an offer. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a university on the ILC list (the Ivy League, Ivy Plus, Public Ivies and Little Ivies, 49 universities, Annex A of the charter v1.3); other US universities on your list carry no success fee. If your F-1 visa is refused for a reason not down to you, half the success fee (₹90,000) is refunded; if you defer an accepted offer to a later intake, none of it is. GST is never refunded. Total ₹1,99,999 plus GST. No admission, scholarship or visa is guaranteed.',
   },
 
   // --- Certification programmes (/certifications) -------------------------
