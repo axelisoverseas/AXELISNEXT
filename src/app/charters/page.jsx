@@ -264,7 +264,7 @@ export default function ChartersPage() {
             </a>
           </div>
           <p className="mt-6 text-sm text-[var(--color-dim)]">
-            Signed before {CHARTER_EFFECTIVE}? Your agreement is the version you accepted:{' '}
+            Signed before {CHARTER_EFFECTIVE}? The visa-filing refund in the Refunds section above applies to you too, on the same terms. Everything else in your agreement stays as in the version you accepted:{' '}
             <a href={CHARTER_DOCS_PREVIOUS.gac} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">GAC v2.0</a>,{' '}
             <a href={CHARTER_DOCS_PREVIOUS.epc} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">EPC v2.0</a>,{' '}
             <a href={CHARTER_DOCS_PREVIOUS.ilc} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">ILC v1.2</a>.

@@ -77,7 +77,7 @@ export const CHARTER_DOCS_PREVIOUS = {
 /* Effective date of GAC/EPC v2.1 and ILC v1.3. SET TO THE DEPLOY DATE, and set
    EFFECTIVE in docs/brand/kit/charters/build_charters.py to match, then rebuild
    the PDFs. Until deploy, checkout still shows v2.0 / v1.2. */
-export const CHARTER_EFFECTIVE = '5 November 2026';
+export const CHARTER_EFFECTIVE = '9 November 2026';
 
 /* Said once, on every refund surface. */
 export const GST_NOT_REFUNDED = 'GST is never refunded, on any plan. Every refund is the fee itself, without the GST.';
@@ -144,7 +144,7 @@ export const PLANS = [
     headline: '₹19,999',
     headlineNote: 'Now. ₹1,80,000 only if you accept an offer.',
     pay: [
-      { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,599.82 GST', when: 'Now, to start', note: 'The ₹19,999 is refunded if no offer comes, or if you go ahead only with Global Admissions Charter universities. The GST is not.' },
+      { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,599.82 GST', when: 'Now, to start', note: 'The ₹19,999 is refunded if no offer comes, or if your visa is filed for a Global Admissions Charter university. The GST is not.' },
       { what: 'Success fee', amount: '₹1,80,000', gst: '+ ₹32,400 GST', when: 'Only when you accept an offer from a tuition-free public university', note: 'Covers final enrolment and visa processing.' },
     ],
     total: '₹1,99,999 + GST (₹2,35,998.82), and only if you accept an offer from a tuition-free public university',
@@ -167,9 +167,9 @@ export const PLANS = [
         note: 'Judged across every intake on your list, not one intake at a time, because public universities run more than one. Paid within 14 days of approval.',
       },
       {
-        title: 'You go ahead only with Global Admissions Charter universities',
-        body: 'If you decide to go ahead only with Global Admissions Charter universities (private and paid-tuition) and not with any tuition-free public university, [CUT-OFF], your ₹19,999 service fee comes back. It is paid within 20 working days of your visa being granted and you arriving. You do not need to have paid your tuition first. The GST is not refunded.',
-        note: 'From the switch, your applications continue under the Global Admissions Charter terms and conditions. You pay no ₹9,999 deposit and no other fee for them.',
+        title: 'Your visa is filed for a Global Admissions Charter university',
+        body: 'If your student visa is filed for a Global Admissions Charter university (private or paid-tuition) and not for a tuition-free public university, your ₹19,999 service fee comes back. It is paid within 20 working days of your visa being granted and you arriving. You do not need to have paid your tuition first. The GST is not refunded.',
+        note: 'The university named on your visa application decides this, and nothing else. From then on your file continues under the Global Admissions Charter terms and conditions. You pay no ₹9,999 deposit and no other fee for it.',
       },
       {
         title: 'Your visa is refused, and it is not down to you',
@@ -178,11 +178,11 @@ export const PLANS = [
       },
     ],
     refundNo: [
-      'You receive an offer from any university on your preference list, public or private. A private offer carries no success fee. Exception: if you go ahead only with Global Admissions Charter universities, the switch refund above applies.',
-      'You leave the process yourself after the first shortlist has been shared. Going ahead only with Global Admissions Charter universities is not leaving the process.',
+      'You receive an offer from any university on your preference list, public or private. A private offer carries no success fee. Exception: if your visa is filed for a Global Admissions Charter university, the visa-filing refund above applies.',
+      'You leave the process yourself after the first shortlist has been shared. Filing your visa for a Global Admissions Charter university is not leaving the process.',
       'You decline an offer from a university that was not your preference. The ₹19,999 is not refunded, but you owe no success fee either.',
     ],
-    timeline: 'To the payment method you used: within 14 days of approval, or within 20 working days of visa and arrival if you go ahead only with Global Admissions Charter universities. GST is never refunded.',
+    timeline: 'To the payment method you used: within 14 days of approval, or within 20 working days of visa and arrival if your visa is filed for a Global Admissions Charter university. GST is never refunded.',
   },
   {
     key: 'ilc',
@@ -193,7 +193,7 @@ export const PLANS = [
     headline: '₹19,999',
     headlineNote: "Now. ₹1,80,000 only if you accept an offer from the ILC list.",
     pay: [
-      { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,599.82 GST', when: 'Now, to start', note: 'The ₹19,999 is refunded if no offer comes. The GST is not.' },
+      { what: 'Service fee', amount: '₹19,999', gst: '+ ₹3,599.82 GST', when: 'Now, to start', note: 'The ₹19,999 is refunded if no offer comes, or if your visa is filed for a Global Admissions Charter university. The GST is not.' },
       { what: 'Success fee', amount: '₹1,80,000', gst: '+ ₹32,400 GST', when: 'Only when you accept an offer from a university on the ILC list: the Ivy League, Ivy Plus, Public Ivies or Little Ivies', note: 'Other US universities on your list: no success fee.' },
     ],
     total: '₹1,99,999 + GST (₹2,35,998.82), and only if you accept an offer from the ILC list',
@@ -213,7 +213,12 @@ export const PLANS = [
       {
         title: 'No university on your preference list makes you an offer',
         body: 'Your ₹19,999 service fee comes back if no university on your preference list, on the ILC list or not, makes you an offer. The GST is not refunded.',
-        note: 'Your list needs at least five universities, at least two of them from the ILC list, so that it is a real application strategy and not a lottery ticket.',
+        note: 'Your list needs at least five universities, at least two of them from the ILC list, so that it is a real application strategy and not a lottery ticket. Paid within 14 days of approval.',
+      },
+      {
+        title: 'Your visa is filed for a Global Admissions Charter university',
+        body: 'If your student visa is filed for a Global Admissions Charter university, meaning any university that is not on the ILC list, your ₹19,999 service fee comes back. It is paid within 20 working days of your visa being granted and you arriving. You do not need to have paid your tuition first. The GST is not refunded.',
+        note: 'The university named on your visa application decides this, and nothing else. From then on your file continues under the Global Admissions Charter terms and conditions. You pay no ₹9,999 deposit, no success fee and no other fee for it.',
       },
       {
         title: 'Your visa is refused, and it is not down to you',
@@ -222,12 +227,12 @@ export const PLANS = [
       },
     ],
     refundNo: [
-      'You receive an offer from any university on your preference list, on the ILC list or not',
-      'You leave the process yourself after the first shortlist has been shared',
+      'You receive an offer from any university on your preference list, on the ILC list or not. Exception: if your visa is filed for a Global Admissions Charter university, the visa-filing refund above applies.',
+      'You leave the process yourself after the first shortlist has been shared. Filing your visa for a Global Admissions Charter university is not leaving the process.',
       'You decline an offer from a university on your list. The ₹19,999 is not refunded; you owe a success fee only if you accept an offer from the ILC list.',
       'You defer an accepted offer to a later intake. The success fee stays due and none of it is refunded, even if a later visa is refused.',
     ],
-    timeline: 'Within 14 days of approval, to the payment method you used. GST is never refunded.',
+    timeline: 'To the payment method you used: within 14 days of approval, or within 20 working days of visa and arrival if your visa is filed for a Global Admissions Charter university. GST is never refunded.',
     notIncluded: 'Test fees (GRE, GMAT, TOEFL, IELTS, Duolingo), university application fees, the SEVIS fee and the visa fee are paid by you directly. Test preparation is sold separately.',
   },
 ];

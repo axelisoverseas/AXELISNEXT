@@ -522,7 +522,7 @@ function ProductsContent() {
                   ['Cost of living', 'Higher (UK/US/AU metros)', 'Moderate (most European cities)'],
                   ['Language requirement', 'IELTS / TOEFL / PTE', 'IELTS + local language (DELF / Goethe A1-A2)'],
                   ['Axelis fee', '₹9,999 onboarding', '₹19,999 service fee + ₹1,80,000 success fee on accepting an offer (₹1,99,999 total)'],
-                  ['Refund policy', '₹9,999 refunded once visa granted, arrived and tuition paid in full, or if zero offers. GST never refunded', '₹19,999 service fee refunded if zero offers, or if you go ahead only with GAC universities; ₹1,80,000 success fee refunded on visa refusal not attributable to you. GST never refunded'],
+                  ['Refund policy', '₹9,999 refunded once visa granted, arrived and tuition paid in full, or if zero offers. GST never refunded', '₹19,999 service fee refunded if zero offers, or if your visa is filed for a GAC university; ₹1,80,000 success fee refunded on visa refusal not attributable to you. GST never refunded'],
                   ['Application timeline', 'Rolling intakes, plan 6-9 months ahead', 'Strict deadlines, plan 9-12 months ahead'],
                   ['Post-study work visa', 'UK 2yr, USA 1-3yr OPT, Canada up to 3yr, AU 2-4yr', 'Germany 18mo job seeker, Norway 1yr, Finland 1yr'],
                   ['Scholarship support', 'Yes, every relevant grant applied for', 'Yes: DAAD, Erasmus+, country-specific'],
