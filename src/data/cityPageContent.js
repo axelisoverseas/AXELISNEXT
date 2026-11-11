@@ -32,7 +32,7 @@ export const PRODUCTS = [
       'One counsellor from shortlist to arrival',
       'Applications, SOP and document checks',
       'Visa filing included',
-      'Deposit refunded if the offer or visa does not come through',
+      'First fee refunded if no offer comes through (the GST is not)',
     ],
   },
   {
@@ -73,7 +73,7 @@ export const COMPARISON = [
   { claim: 'Price changes by city', us: 'No. Same fee whether you are in Mumbai or Ratlam' },
   { claim: 'Consultation fee', us: 'None. The first call is free' },
   { claim: 'Admission promised', us: 'No. Axelis does not promise admission anywhere' },
-  { claim: 'Refund if the offer or visa fails', us: 'Deposit refunded, committed in writing' },
+  { claim: 'Refund if no offer comes', us: 'First fee refunded, in writing; GST is not' },
   { claim: 'Which universities pay us commission', us: 'Published, so you can weigh any recommendation' },
   { claim: 'Counsellor', us: 'One named counsellor, not a call centre' },
 ];

@@ -11,9 +11,9 @@ How Axelis is paid: the figure on each plan page is the whole Axelis fee. Govern
 ## Student plans
 
 - [Student Plans](https://www.overseeducation.com/products): the two main plans, with prices.
-- Global Admissions Charter (GAC): for full-fee destinations such as the UK, USA, Canada and Australia. ₹9,999 onboarding fee.
+- Global Admissions Charter (GAC): for full-fee destinations such as the UK, USA, Canada and Australia. ₹9,999 refundable onboarding deposit, plus GST.
 - Europe Public Charter (EPC): for tuition-free or low-fee public universities in Europe. ₹19,999 service fee, plus a ₹1,80,000 success fee payable only if the student accepts an offer from a tuition-free public university (₹1,99,999 in total).
-- Both plans refund the deposit if the visa or the offer does not come. Visa filing is included in both.
+- Each plan refunds its first fee if no university on the student's list makes an offer. GST is never refunded. EPC includes the Global Admissions Charter free: no deposit, no extra fee. Visa filing is included in both.
 - [Start here](https://www.overseeducation.com/start): which route fits, and a free call-back.
 
 ## Certification programmes

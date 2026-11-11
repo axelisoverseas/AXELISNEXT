@@ -56,7 +56,7 @@ export default function Home({ universities, destinations }) {
         id="home-hero"
         eyebrow={`For students across India · ${destinations} destinations`}
         title="Study abroad, without guessing at the cost."
-        lede="India’s study-abroad consultancy across 29 destination markets. One counsellor from shortlist to arrival, every fee published before you pay, and a refundable deposit on both student plans."
+        lede="India’s study-abroad consultancy across 29 destination markets. One counsellor from shortlist to arrival, every fee published before you pay, and a refundable first fee on every student plan. The GST is not refunded."
         meta={[reviewsSummaryLine, `${universities.toLocaleString('en-IN')} universities in our finder`]}
         photo={HERO_PHOTO}
         floats={HERO_FLOATS}
@@ -84,7 +84,7 @@ export default function Home({ universities, destinations }) {
               Three charters. <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--color-navy)] to-[var(--dawn-glow)]">Pick your path.</span>
             </h2>
             <p className="text-[var(--color-navy)]/85 text-base md:text-lg">
-              Global Admissions Charter (GAC) for paid global universities. Europe Public Charter (EPC) for tuition-free public Europe. Ivy League Charter (ILC) for the Ivy League, Ivy Plus, Public and Little Ivies. Every first payment refundable.
+              Global Admissions Charter (GAC) for paid global universities. Europe Public Charter (EPC) for tuition-free public Europe. Ivy League Charter (ILC) for the Ivy League, Ivy Plus, Public and Little Ivies. Every first fee refundable; the GST is not.
             </p>
           </div>
 
@@ -101,7 +101,7 @@ export default function Home({ universities, destinations }) {
                 <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹9,999</span>
               </div>
               <p className="text-[var(--color-navy)] text-sm">
-                Paid-tuition universities. <span className="text-emerald-700 font-semibold">Refunded in full</span> once you are placed, or if no offer comes.
+                Paid-tuition universities. <span className="text-emerald-700 font-semibold">₹9,999 refunded</span> once you are placed, or if no offer comes. The GST is not.
               </p>
               <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included
@@ -121,7 +121,7 @@ export default function Home({ universities, destinations }) {
                 <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹19,999</span>
               </div>
               <p className="text-[var(--color-navy)] text-sm">
-                Public tuition-free Europe. <span className="text-emerald-700 font-semibold">Refundable</span> if zero offers.
+                Public tuition-free Europe. <span className="text-emerald-700 font-semibold">₹19,999 refundable</span> if zero offers. The GST is not.
               </p>
               <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included
@@ -141,7 +141,7 @@ export default function Home({ universities, destinations }) {
                 <span className="text-3xl font-extrabold text-[var(--color-navy)]">₹19,999</span>
               </div>
               <p className="text-[var(--color-navy)] text-sm">
-                Ivy League, Ivy Plus, Public and Little Ivies. <span className="text-emerald-700 font-semibold">Refundable</span> if zero offers; the big fee only on one of those 49.
+                Ivy League, Ivy Plus, Public and Little Ivies. <span className="text-emerald-700 font-semibold">₹19,999 refundable</span> if zero offers (the GST is not); the big fee only on one of those 49.
               </p>
               <span className="inline-flex items-center gap-2 text-[var(--color-axelis)] font-semibold text-sm mt-1 group-hover:underline">
                 See what&apos;s included
