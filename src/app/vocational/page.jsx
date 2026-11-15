@@ -8,6 +8,7 @@ import {
 } from '../../data/vocationalPrograms';
 import { formatINR, refundPolicy } from '../../data/certificationPrograms';
 import TrustBand from '../../components/TrustBand';
+import CheckoutButton from '../../components/CheckoutButton';
 
 export const metadata = {
   title: 'Ausbildung & Chancenkarte Germany Programmes',
@@ -226,6 +227,16 @@ export default function VocationalPage() {
                 Cancellation &amp; Refund Policy
               </Link>
               .
+            </p>
+          </div>
+          <div className="mt-6">
+            <CheckoutButton
+              product="ausbildung-charter"
+              label="Enrol in the Ausbildung Charter, ₹19,999"
+              className="btn btn-primary btn-lg w-full sm:w-auto focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-axelis)] focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+            />
+            <p className="text-xs text-[var(--color-dim)] mt-3 flex items-center gap-1.5">
+              <ShieldCheck size={12} aria-hidden="true" /> Secure via Cashfree &middot; + 18% GST
             </p>
           </div>
         </div>

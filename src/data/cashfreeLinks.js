@@ -34,6 +34,15 @@ export const cashfreeLinks = {
     disclosure: 'EPC is a two-part fee. This ₹19,999 Service Fee is payable now. It is refunded if no university on your preference list makes you an offer, or if your visa is filed for a Global Admissions Charter university (paid within 20 working days of your visa and arrival). GST is never refunded. The Global Admissions Charter is included free: no deposit, no extra fee. A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a tuition-free public university. Total ₹1,99,999 plus GST. No offer, or an offer you decline, means no Success Fee.',
   },
 
+  // Ausbildung (Germany) D2C. Same two-part shape as EPC and the same figures
+  // published on /vocational (vocationalFees.d2c): ₹19,999 now, ₹1,80,000 only
+  // on visa completion. Its own form so a candidate is never asked to pay
+  // through a page titled "Europe Public Charter".
+  'ausbildung-charter': {
+    amount: 19999, url: 'https://payments.cashfree.com/forms/axelis-ausbildung-charter', label: 'Ausbildung Charter (Germany)',
+    disclosure: 'The Ausbildung Charter is a two-part fee. This ₹19,999 onboarding fee is payable now. A success fee of ₹1,80,000 becomes payable only on visa completion, meaning your visa has been granted: not on an invitation letter and not on an offer. Total ₹1,99,999 plus GST. Language training, exam fees, APS, translations, blocked account and visa fees are paid to third parties and are listed on overseeducation.com/vocational.',
+  },
+
   'ivy-league-charter': {
     amount: 19999, url: 'https://payments.cashfree.com/forms/axelis-ivy-league-charter', label: 'Ivy League Charter (ILC)',
     disclosure: 'ILC is a two-part fee. This ₹19,999 Service Fee is payable now. It is refunded if no university on your preference list makes you an offer, or if your visa is filed for a university not on the ILC list (paid within 20 working days of your visa and arrival). A Success Fee of ₹1,80,000 becomes payable only if and when you accept an offer from a university on the ILC list (the Ivy League, Ivy Plus, Public Ivies and Little Ivies, 49 universities, Annex A of the charter v1.3); other US universities on your list carry no success fee. If your F-1 visa is refused for a reason not down to you, half the success fee (₹90,000) is refunded; if you defer an accepted offer to a later intake, none of it is. GST is never refunded. Total ₹1,99,999 plus GST. No admission, scholarship or visa is guaranteed.',
